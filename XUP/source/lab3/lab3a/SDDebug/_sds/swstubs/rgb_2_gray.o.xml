@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xd:data xmlns:xd="http://www.xilinx.com/xd">
+  <xd:source name="rgb_2_gray.c" compiler="gcc" objfile="src/rgb_2_gray.o" srcpath="C:/xup/SDSoC/labs/lab3a/src" flags="-IC:/xup/SDSoC/labs/lab3a/src -IC:/xup/SDSoC/labs/lab3a/src -DTIME_SHARPEN -DTIME_EDGE_DETECT -Wall -O0 -g -fmessage-length=0 -MMD -MP -D __SDSCC__"/>
+</xd:data>

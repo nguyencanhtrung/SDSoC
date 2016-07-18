@@ -1,0 +1,40 @@
+<AutoPilot:ProjectResources xmlns:AutoPilot="com.autoesl.autopilot.ui.directiveView">
+<sourceFile name="">
+<directive functionLabel="" functionName="mmult_kernel" label="">
+<pragma name="INLINE">
+<option name="self" positionalBoolean="type" value=""/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="mmult_kernel" label="">
+<pragma name="ARRAY_PARTITION">
+<option name="variable" positionalBoolean="4" value="in_A"/>
+<option name="block" positionalBoolean="type" value=""/>
+<option name="factor" value="16"/>
+<option name="dim" value="2"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="mmult_kernel" label="">
+<pragma name="ARRAY_PARTITION">
+<option name="variable" positionalBoolean="4" value="in_B"/>
+<option name="block" positionalBoolean="type" value=""/>
+<option name="factor" value="16"/>
+<option name="dim" value="1"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="mmult_kernel" label="">
+<pragma name="PIPELINE">
+<option name="II" value="1"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="mmult" label="">
+<pragma name="PIPELINE">
+<option name="II" value="1"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="mmult" label="">
+<pragma name="PIPELINE">
+<option name="II" value="1"/>
+</pragma>
+</directive>
+</sourceFile>
+</AutoPilot:ProjectResources>

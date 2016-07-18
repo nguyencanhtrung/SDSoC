@@ -1,0 +1,62 @@
+SW(2)@69\n   %3 = call i8* @sds_alloc(i32 2073600) #3, !dbg !163
+SW(3)@70\n   %4 = call i8* @sds_alloc(i32 2073600) #3, !dbg !166
+SW(4)@86\n   %12 = call i32 @rgb_2_gray(i32* %2, i8* %3), !dbg !184
+SW(5)@100\n   %14 = call i32 @sobel_filter(i8* %4, i8* %5), !dbg !187
+SW(6)@63\n   call void @llvm.dbg.value(metadata !{i32 %argc}, i64 0, metadata !156), !dbg !157
+SW(7)@63\n   call void @llvm.dbg.value(metadata !{i8** %argv}, i64 0, metadata !158), !dbg !159
+SW(8)@68\n   %1 = call i8* @sds_alloc(i32 8294400) #3, !dbg !160
+SW(9)@68\n   %2 = bitcast i8* %1 to i32*, !dbg !160
+SW(10)@68\n   call void @llvm.dbg.value(metadata !{i32* %2}, i64 0, metadata !161), !dbg !162
+SW(11)@69\n   call void @llvm.dbg.value(metadata !{i8* %3}, i64 0, metadata !164), !dbg !165
+SW(12)@70\n   call void @llvm.dbg.value(metadata !{i8* %4}, i64 0, metadata !167), !dbg !168
+SW(13)@71\n   %5 = call i8* @sds_alloc(i32 2073600) #3, !dbg !169
+SW(14)@71\n   call void @llvm.dbg.value(metadata !{i8* %5}, i64 0, metadata !170), !dbg !171
+SW(15)@74\n   %puts = call i32 @puts(i8* getelementptr inbounds ([28 x i8]* @str, i32 0, i32 0)), !dbg !172
+SW(16)@68\n   call void @llvm.dbg.value(metadata !{null}, i64 0, metadata !161), !dbg !162
+SW(17)@77\n   call void @dummyfill(i32* %2), !dbg !173
+SW(18)@80\n   %6 = call i64 @sds_clock_counter() #3, !dbg !174
+SW(19)@80\n   store i64 %6, i64* getelementptr inbounds ([4 x i64]* @sw_sds_counter, i32 0, i32 3), align 8, !dbg !174
+SW(20)@80\n   %7 = load i32* getelementptr inbounds ([4 x i32]* @sw_sds_counter_num_calls, i32 0, i32 3), align 4, !dbg !174
+SW(21)@80\n   %8 = add i32 %7, 1, !dbg !174
+SW(22)@80\n   store i32 %8, i32* getelementptr inbounds ([4 x i32]* @sw_sds_counter_num_calls, i32 0, i32 3), align 4, !dbg !174
+SW(23)@65\n   call void @llvm.dbg.value(metadata !176, i64 0, metadata !177), !dbg !178
+SW(24)@81\n   br label %9, !dbg !179
+SW(25)@0\n   %storemerge = phi i32 [ 5, %0 ], [ %16, %15 ]
+SW(26)@65\n   call void @llvm.dbg.value(metadata !{null}, i64 0, metadata !177), !dbg !178
+SW(27)@81\n   %10 = icmp eq i32 %storemerge, 0, !dbg !181
+SW(28)@81\n   br i1 %10, label %17, label %11, !dbg !181
+SW(29)@68\n   call void @llvm.dbg.value(metadata !{null}, i64 0, metadata !161), !dbg !162
+SW(30)@69\n   call void @llvm.dbg.value(metadata !{null}, i64 0, metadata !164), !dbg !165
+SW(31)@69\n   call void @llvm.dbg.value(metadata !{null}, i64 0, metadata !164), !dbg !165
+SW(32)@70\n   call void @llvm.dbg.value(metadata !{null}, i64 0, metadata !167), !dbg !168
+SW(33)@70\n   call void @llvm.dbg.value(metadata !{null}, i64 0, metadata !167), !dbg !168
+SW(34)@71\n   call void @llvm.dbg.value(metadata !{null}, i64 0, metadata !170), !dbg !171
+SW(35)@105\n   %puts1 = call i32 @puts(i8* getelementptr inbounds ([2 x i8]* @str1, i32 0, i32 0)), !dbg !188
+SW(36)@106\n   br label %15, !dbg !189
+SW(37)@65\n   call void @llvm.dbg.value(metadata !{null}, i64 0, metadata !177), !dbg !178
+SW(38)@81\n   %16 = add nsw i32 %storemerge, -1, !dbg !190
+SW(39)@65\n   call void @llvm.dbg.value(metadata !{i32 %16}, i64 0, metadata !177), !dbg !178
+SW(40)@81\n   br label %9, !dbg !190
+SW(41)@107\n   %18 = call i64 @sds_clock_counter() #3, !dbg !191
+SW(42)@107\n   call void @llvm.dbg.value(metadata !{i64 %18}, i64 0, metadata !193), !dbg !191
+SW(43)@107\n   call void @llvm.dbg.value(metadata !{null}, i64 0, metadata !193), !dbg !191
+SW(44)@107\n   %19 = load i64* getelementptr inbounds ([4 x i64]* @sw_sds_counter, i32 0, i32 3), align 8, !dbg !191
+SW(45)@107\n   %20 = icmp ult i64 %18, %19, !dbg !191
+SW(46)@107\n   br i1 %20, label %21, label %24, !dbg !191
+SW(47)@107\n   %22 = load i64* getelementptr inbounds ([4 x i64]* @sw_sds_counter, i32 0, i32 3), align 8, !dbg !194
+SW(48)@107\n   call void @llvm.dbg.value(metadata !{null}, i64 0, metadata !193), !dbg !191
+SW(49)@107\n   %23 = sub i64 %22, %18, !dbg !194
+SW(50)@107\n   br label %27, !dbg !194
+SW(51)@107\n   call void @llvm.dbg.value(metadata !{null}, i64 0, metadata !193), !dbg !191
+SW(52)@107\n   %25 = load i64* getelementptr inbounds ([4 x i64]* @sw_sds_counter, i32 0, i32 3), align 8, !dbg !196
+SW(53)@107\n   %26 = sub i64 %18, %25, !dbg !196
+SW(54)@107\n   br label %27, !dbg !196
+SW(55)@107\n   %28 = phi i64 [ %23, %21 ], [ %26, %24 ], !dbg !191
+SW(56)@107\n   %29 = load i64* getelementptr inbounds ([4 x i64]* @sw_sds_counter_total, i32 0, i32 3), align 8, !dbg !198
+SW(57)@107\n   %30 = add i64 %29, %28, !dbg !198
+SW(58)@107\n   store i64 %30, i64* getelementptr inbounds ([4 x i64]* @sw_sds_counter_total, i32 0, i32 3), align 8, !dbg !198
+SW(59)@117\n   %31 = load i32* getelementptr inbounds ([4 x i32]* @sw_sds_counter_num_calls, i32 0, i32 3), align 4, !dbg !201
+SW(60)@117\n   %32 = zext i32 %31 to i64, !dbg !201
+SW(61)@117\n   %33 = udiv i64 %30, %32, !dbg !201
+SW(62)@117\n   %34 = call i32 (i8*, ...)* @printf(i8* getelementptr inbounds ([59 x i8]* @.str2, i32 0, i32 0), i64 %33) #3, !dbg !201
+SW(63)@128\n   ret i32 0, !dbg !202

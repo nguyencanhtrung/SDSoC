@@ -1,0 +1,22 @@
+(c) Copyright 2012-2015 Xilinx, Inc. All Rights Reserved.
+#-----------------------------------------------------------
+# Tool version  : sdscc 2015.4 SW Build on Dec 14 2015 23:02:57
+# Start time    : Fri Jan 01 07:12:52 -0800 2016
+# Command line  : sdscc -Wall -O0 -g -I../src -c -fmessage-length=0 -MTsrc/rgb_2_gray.o -MMD -MP -MFsrc/rgb_2_gray.d -MTsrc/rgb_2_gray.d -o src/rgb_2_gray.o ../src/rgb_2_gray.c -sds-hw sharpen_filter sharpen.c -clkid 1 -sds-end -target-os standalone -sds-pf zed
+# Log file      : C:/xup/SDSoC/labs/lab5/SDDebug/_sds/reports/sds_rgb_2_gray.log
+# Journal file  : C:/xup/SDSoC/labs/lab5/SDDebug/_sds/reports/sds_rgb_2_gray.jou
+# Report file   : C:/xup/SDSoC/labs/lab5/SDDebug/_sds/reports/sds_rgb_2_gray.rpt
+#-----------------------------------------------------------
+
+INFO: [SDSoC 0-0] Create data motion intermediate representation
+clang_wrapper -target arm-xilinx-eabi -mcpu=cortex-a9 -mfpu=vfp -O0 -g     -I C:/Xilinx/SDSoC/2015.4/arm-xilinx-eabi/include  -I C:/Xilinx/SDSoC/2015.4/Vivado_HLS/2015.4/include   -IC:/Xilinx/SDSoC/2015.4/SDK/2015.4/gnu/arm/nt/lib/gcc/arm-xilinx-eabi/4.9.2/include  -IC:/Xilinx/SDSoC/2015.4/SDK/2015.4/gnu/arm/nt/lib/gcc/arm-xilinx-eabi/4.9.2/include-fixed  -IC:/Xilinx/SDSoC/2015.4/SDK/2015.4/gnu/arm/nt/arm-xilinx-eabi/include -I../src -Wall -g -fmessage-length=0 -MMD -MP -D __SDSCC__ -emit-llvm -S C:/xup/SDSoC/labs/lab5/src/rgb_2_gray.c -o C:/xup/SDSoC/labs/lab5/SDDebug/_sds/.llvm/src/rgb_2_gray.s
+
+C:\xup\SDSoC\labs\lab5\SDDebug>C:\Xilinx\SDSoC\2015.4\llvm-clang\win64\llvm\bin\clang.exe -target arm-xilinx-eabi -mcpu=cortex-a9 -mfpu=vfp -O0 -g -I C:/Xilinx/SDSoC/2015.4/arm-xilinx-eabi/include -I C:/Xilinx/SDSoC/2015.4/Vivado_HLS/2015.4/include -IC:/Xilinx/SDSoC/2015.4/SDK/2015.4/gnu/arm/nt/lib/gcc/arm-xilinx-eabi/4.9.2/include -IC:/Xilinx/SDSoC/2015.4/SDK/2015.4/gnu/arm/nt/lib/gcc/arm-xilinx-eabi/4.9.2/include-fixed -IC:/Xilinx/SDSoC/2015.4/SDK/2015.4/gnu/arm/nt/arm-xilinx-eabi/include -I../src -Wall -g -fmessage-length=0 -MMD -MP -D __SDSCC__ -emit-llvm -S C:/xup/SDSoC/labs/lab5/src/rgb_2_gray.c -o C:/xup/SDSoC/labs/lab5/SDDebug/_sds/.llvm/src/rgb_2_gray.s 
+
+C:\xup\SDSoC\labs\lab5\SDDebug>exit /b 0 
+INFO: [SDSoC 0-0] Compiling C:/xup/SDSoC/labs/lab5/src/rgb_2_gray.c
+arm-xilinx-eabi-gcc -c -I../src -Wall -O0 -g -fmessage-length=0 -MMD -MP -D __SDSCC__ -MTC:/xup/SDSoC/labs/lab5/SDDebug/src/rgb_2_gray.o -MFC:/xup/SDSoC/labs/lab5/SDDebug/src/rgb_2_gray.d -MTC:/xup/SDSoC/labs/lab5/SDDebug/src/rgb_2_gray.d   -I C:/Xilinx/SDSoC/2015.4/arm-xilinx-eabi/include  -I C:/Xilinx/SDSoC/2015.4/Vivado_HLS/2015.4/include C:/xup/SDSoC/labs/lab5/src/rgb_2_gray.c -o src/rgb_2_gray.o
+C:/xup/SDSoC/labs/lab5/src/rgb_2_gray.c: In function 'rgb_2_gray':
+arm-xilinx-eabi-objcopy --add-section .xdsdata=C:/xup/SDSoC/labs/lab5/SDDebug/_sds/swstubs/rgb_2_gray.o.xml src/rgb_2_gray.o
+sdscc log file saved as C:/xup/SDSoC/labs/lab5/SDDebug/_sds/reports/sds_rgb_2_gray.log
+sdscc completed at Fri Jan 01 07:12:53 -0800 2016

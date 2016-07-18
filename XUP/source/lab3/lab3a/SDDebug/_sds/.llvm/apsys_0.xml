@@ -1,0 +1,82 @@
+<?xml version="1.0"?>
+<cf:model cf:partition="0" cf:prefix="_p0_" cf:name="top" xd:type="design" xmlns:xd="http://www.xilinx.com/xd" xmlns:cf="http://www.xilinx.com/connections">
+  <cf:block cf:name="hwblk_sharpen_filter">
+    <cf:port cf:name="cmd_sharpen_filter" cf:portType="stream" cf:direction="in"/>
+    <cf:port cf:name="input_r" cf:portType="stream" cf:direction="in"/>
+    <cf:port cf:name="output_r" cf:portType="stream" cf:direction="out"/>
+    <cf:port cf:name="ap_return" cf:portType="stream" cf:direction="out"/>
+  </cf:block>
+  <cf:block cf:name="swblk_sharpen_filter">
+    <cf:port cf:name="cmd_sharpen_filter" cf:portType="stream" cf:direction="out"/>
+    <cf:port cf:name="input_r" cf:portType="stream" cf:direction="out"/>
+    <cf:port cf:name="output_r" cf:portType="stream" cf:direction="in"/>
+    <cf:port cf:name="ap_return" cf:portType="stream" cf:direction="in"/>
+  </cf:block>
+  <cf:block cf:name="hwblk_sobel_filter">
+    <cf:port cf:name="cmd_sobel_filter" cf:portType="stream" cf:direction="in"/>
+    <cf:port cf:name="input_r" cf:portType="stream" cf:direction="in"/>
+    <cf:port cf:name="output_r" cf:portType="stream" cf:direction="out"/>
+    <cf:port cf:name="ap_return" cf:portType="stream" cf:direction="out"/>
+  </cf:block>
+  <cf:block cf:name="swblk_sobel_filter">
+    <cf:port cf:name="cmd_sobel_filter" cf:portType="stream" cf:direction="out"/>
+    <cf:port cf:name="input_r" cf:portType="stream" cf:direction="out"/>
+    <cf:port cf:name="output_r" cf:portType="stream" cf:direction="in"/>
+    <cf:port cf:name="ap_return" cf:portType="stream" cf:direction="in"/>
+  </cf:block>
+  <cf:comp cf:name="dm_0" xd:componentRef="axi_dma" xd:clockId="1"/>
+  <cf:comp cf:name="dm_1" xd:componentRef="axi_dma" xd:clockId="1"/>
+  <cf:comp cf:name="dm_2" xd:componentRef="axi_dma" xd:clockId="1"/>
+  <cf:comp cf:name="dm_3" xd:componentRef="axi_dma" xd:clockId="1"/>
+  <cf:comp cf:name="zed" xd:componentRef="zed" xd:clockId="1"/>
+  <cf:comp cf:name="sharpen_filter_0" xd:componentRef="sharpen_filter" xd:clockId="1"/>
+  <cf:comp cf:name="sobel_filter_0" xd:componentRef="sobel_filter" xd:clockId="1"/>
+  <cf:instance cf:name="hwinst_sharpen_filter_0" cf:blockName="hwblk_sharpen_filter" cf:compName="sharpen_filter_0">
+    <cf:portMap cf:blockPort="cmd_sharpen_filter" cf:compPort="ap_ctrl" xd:register="0x28"/>
+    <cf:portMap cf:blockPort="input_r" cf:compPort="input_r"/>
+    <cf:portMap cf:blockPort="output_r" cf:compPort="output_r"/>
+    <cf:portMap cf:blockPort="ap_return" cf:compPort="ap_return" xd:register="0xC0"/>
+  </cf:instance>
+  <cf:instance cf:name="swinst_sharpen_filter_0" cf:blockName="swblk_sharpen_filter" cf:compName="zed">
+    <cf:portMap cf:blockPort="cmd_sharpen_filter" cf:compPort="ps7_M_AXI_GP0"/>
+    <cf:portMap cf:blockPort="input_r" cf:compPort="ps7_S_AXI_HP0"/>
+    <cf:portMap cf:blockPort="output_r" cf:compPort="ps7_S_AXI_HP0"/>
+    <cf:portMap cf:blockPort="ap_return" cf:compPort="ps7_M_AXI_GP0"/>
+  </cf:instance>
+  <cf:instance cf:name="hwinst_sobel_filter_0" cf:blockName="hwblk_sobel_filter" cf:compName="sobel_filter_0">
+    <cf:portMap cf:blockPort="cmd_sobel_filter" cf:compPort="ap_ctrl" xd:register="0x28"/>
+    <cf:portMap cf:blockPort="input_r" cf:compPort="input_r"/>
+    <cf:portMap cf:blockPort="output_r" cf:compPort="output_r"/>
+    <cf:portMap cf:blockPort="ap_return" cf:compPort="ap_return" xd:register="0xC0"/>
+  </cf:instance>
+  <cf:instance cf:name="swinst_sobel_filter_0" cf:blockName="swblk_sobel_filter" cf:compName="zed">
+    <cf:portMap cf:blockPort="cmd_sobel_filter" cf:compPort="ps7_M_AXI_GP0"/>
+    <cf:portMap cf:blockPort="input_r" cf:compPort="ps7_S_AXI_HP1"/>
+    <cf:portMap cf:blockPort="output_r" cf:compPort="ps7_S_AXI_HP1"/>
+    <cf:portMap cf:blockPort="ap_return" cf:compPort="ps7_M_AXI_GP0"/>
+  </cf:instance>
+  <cf:connection cf:srcInst="swinst_sharpen_filter_0" cf:srcPort="cmd_sharpen_filter" cf:dstInst="hwinst_sharpen_filter_0" cf:dstPort="cmd_sharpen_filter">
+    <cf:dataMover cf:compName="zed" cf:softwareLib="axi_lite"/>
+  </cf:connection>
+  <cf:connection cf:srcInst="swinst_sharpen_filter_0" cf:srcPort="input_r" cf:dstInst="hwinst_sharpen_filter_0" cf:dstPort="input_r">
+    <cf:dataMover cf:compName="dm_0" cf:softwareLib="axi_dma_simple"/>
+  </cf:connection>
+  <cf:connection cf:srcInst="hwinst_sharpen_filter_0" cf:srcPort="output_r" cf:dstInst="swinst_sharpen_filter_0" cf:dstPort="output_r">
+    <cf:dataMover cf:compName="dm_2" cf:softwareLib="axi_dma_simple"/>
+  </cf:connection>
+  <cf:connection cf:srcInst="hwinst_sharpen_filter_0" cf:srcPort="ap_return" cf:dstInst="swinst_sharpen_filter_0" cf:dstPort="ap_return">
+    <cf:dataMover cf:compName="zed" cf:softwareLib="axi_lite"/>
+  </cf:connection>
+  <cf:connection cf:srcInst="swinst_sobel_filter_0" cf:srcPort="cmd_sobel_filter" cf:dstInst="hwinst_sobel_filter_0" cf:dstPort="cmd_sobel_filter">
+    <cf:dataMover cf:compName="zed" cf:softwareLib="axi_lite"/>
+  </cf:connection>
+  <cf:connection cf:srcInst="swinst_sobel_filter_0" cf:srcPort="input_r" cf:dstInst="hwinst_sobel_filter_0" cf:dstPort="input_r">
+    <cf:dataMover cf:compName="dm_1" cf:softwareLib="axi_dma_simple"/>
+  </cf:connection>
+  <cf:connection cf:srcInst="hwinst_sobel_filter_0" cf:srcPort="output_r" cf:dstInst="swinst_sobel_filter_0" cf:dstPort="output_r">
+    <cf:dataMover cf:compName="dm_3" cf:softwareLib="axi_dma_simple"/>
+  </cf:connection>
+  <cf:connection cf:srcInst="hwinst_sobel_filter_0" cf:srcPort="ap_return" cf:dstInst="swinst_sobel_filter_0" cf:dstPort="ap_return">
+    <cf:dataMover cf:compName="zed" cf:softwareLib="axi_lite"/>
+  </cf:connection>
+</cf:model>

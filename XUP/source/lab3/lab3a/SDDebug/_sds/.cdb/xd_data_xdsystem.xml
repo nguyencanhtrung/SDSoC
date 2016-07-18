@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xd:data xmlns:xd="http://www.xilinx.com/xd">
+  <xd:accel name="sobel_filter" platform="zed"/>
+  <xd:accel name="sharpen_filter" platform="zed"/>
+</xd:data>

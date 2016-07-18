@@ -1,0 +1,120 @@
+(c) Copyright 2012-2015 Xilinx, Inc. All Rights Reserved.
+#-----------------------------------------------------------
+# Tool version  : sds++ 2015.4 SW Build on Dec 14 2015 23:02:57
+# Start time    : Sat Jan 02 06:34:39 -0800 2016
+# Command line  : sds++ -Wall -O3 -I../src -c -fmessage-length=0 -MTsrc/madd.o -MMD -MP -MFsrc/madd.d -MTsrc/madd.d -o src/madd.o ../src/madd.cpp -sds-hw madd madd.cpp -clkid 1 -sds-end -sds-hw mmult mmult.cpp -clkid 1 -sds-end -sds-pf zed
+# Log file      : C:/xup/SDSoC/labs/lab1_prebuilt/SDRelease/_sds/reports/sds_madd.log
+# Journal file  : C:/xup/SDSoC/labs/lab1_prebuilt/SDRelease/_sds/reports/sds_madd.jou
+# Report file   : C:/xup/SDSoC/labs/lab1_prebuilt/SDRelease/_sds/reports/sds_madd.rpt
+#-----------------------------------------------------------
+
+INFO: [SDSoC 0-0] Create data motion intermediate representation
+clang_wrapper -target arm-xilinx-linux-gnueabi -mcpu=cortex-a9 -mfpu=vfp -O0 -g     -I C:/Xilinx/SDSoC/2015.4/arm-xilinx-linux-gnueabi/include  -I C:/Xilinx/SDSoC/2015.4/Vivado_HLS/2015.4/include   -IC:/Xilinx/SDSoC/2015.4/SDK/2015.4/gnu/arm/nt/arm-xilinx-linux-gnueabi/include/c++/4.9.2  -IC:/Xilinx/SDSoC/2015.4/SDK/2015.4/gnu/arm/nt/arm-xilinx-linux-gnueabi/include/c++/4.9.2/arm-xilinx-linux-gnueabi  -IC:/Xilinx/SDSoC/2015.4/SDK/2015.4/gnu/arm/nt/arm-xilinx-linux-gnueabi/include/c++/4.9.2/backward   -IC:/Xilinx/SDSoC/2015.4/SDK/2015.4/gnu/arm/nt/lib/gcc/arm-xilinx-linux-gnueabi/4.9.2/include  -IC:/Xilinx/SDSoC/2015.4/SDK/2015.4/gnu/arm/nt/lib/gcc/arm-xilinx-linux-gnueabi/4.9.2/include-fixed  -IC:/Xilinx/SDSoC/2015.4/SDK/2015.4/gnu/arm/nt/arm-xilinx-linux-gnueabi/include  -IC:/Xilinx/SDSoC/2015.4/SDK/2015.4/gnu/arm/nt/arm-xilinx-linux-gnueabi/libc/usr/include -I../src -Wall -fmessage-length=0 -MMD -MP -D __SDSCC__ -emit-llvm -S C:/xup/SDSoC/labs/lab1_prebuilt/src/madd.cpp -o C:/xup/SDSoC/labs/lab1_prebuilt/SDRelease/_sds/.llvm/src/madd.s
+
+C:\xup\SDSoC\labs\lab1_prebuilt\SDRelease>C:\Xilinx\SDSoC\2015.4\llvm-clang\win64\llvm\bin\clang.exe -target arm-xilinx-linux-gnueabi -mcpu=cortex-a9 -mfpu=vfp -O0 -g -I C:/Xilinx/SDSoC/2015.4/arm-xilinx-linux-gnueabi/include -I C:/Xilinx/SDSoC/2015.4/Vivado_HLS/2015.4/include -IC:/Xilinx/SDSoC/2015.4/SDK/2015.4/gnu/arm/nt/arm-xilinx-linux-gnueabi/include/c++/4.9.2 -IC:/Xilinx/SDSoC/2015.4/SDK/2015.4/gnu/arm/nt/arm-xilinx-linux-gnueabi/include/c++/4.9.2/arm-xilinx-linux-gnueabi -IC:/Xilinx/SDSoC/2015.4/SDK/2015.4/gnu/arm/nt/arm-xilinx-linux-gnueabi/include/c++/4.9.2/backward -IC:/Xilinx/SDSoC/2015.4/SDK/2015.4/gnu/arm/nt/lib/gcc/arm-xilinx-linux-gnueabi/4.9.2/include -IC:/Xilinx/SDSoC/2015.4/SDK/2015.4/gnu/arm/nt/lib/gcc/arm-xilinx-linux-gnueabi/4.9.2/include-fixed -IC:/Xilinx/SDSoC/2015.4/SDK/2015.4/gnu/arm/nt/arm-xilinx-linux-gnueabi/include -IC:/Xilinx/SDSoC/2015.4/SDK/2015.4/gnu/arm/nt/arm-xilinx-linux-gnueabi/libc/usr/include -I../src -Wall -fmessage-length=0 -MMD -MP -D __SDSCC__ -emit-llvm -S C:/xup/SDSoC/labs/lab1_prebuilt/src/madd.cpp -o C:/xup/SDSoC/labs/lab1_prebuilt/SDRelease/_sds/.llvm/src/madd.s 
+
+C:\xup\SDSoC\labs\lab1_prebuilt\SDRelease>exit /b 0 
+INFO: [SDSoC 0-0] Performing accelerator source linting for madd
+sdslint -func madd C:/xup/SDSoC/labs/lab1_prebuilt/src/madd.cpp -- -c -target arm-xilinx-linux-gnueabi -mcpu=cortex-a9 -mfpu=vfp -O0 -g -w    -I C:/Xilinx/SDSoC/2015.4/arm-xilinx-linux-gnueabi/include  -I C:/Xilinx/SDSoC/2015.4/Vivado_HLS/2015.4/include   -IC:/Xilinx/SDSoC/2015.4/SDK/2015.4/gnu/arm/nt/arm-xilinx-linux-gnueabi/include/c++/4.9.2  -IC:/Xilinx/SDSoC/2015.4/SDK/2015.4/gnu/arm/nt/arm-xilinx-linux-gnueabi/include/c++/4.9.2/arm-xilinx-linux-gnueabi  -IC:/Xilinx/SDSoC/2015.4/SDK/2015.4/gnu/arm/nt/arm-xilinx-linux-gnueabi/include/c++/4.9.2/backward   -IC:/Xilinx/SDSoC/2015.4/SDK/2015.4/gnu/arm/nt/lib/gcc/arm-xilinx-linux-gnueabi/4.9.2/include  -IC:/Xilinx/SDSoC/2015.4/SDK/2015.4/gnu/arm/nt/lib/gcc/arm-xilinx-linux-gnueabi/4.9.2/include-fixed  -IC:/Xilinx/SDSoC/2015.4/SDK/2015.4/gnu/arm/nt/arm-xilinx-linux-gnueabi/include  -IC:/Xilinx/SDSoC/2015.4/SDK/2015.4/gnu/arm/nt/arm-xilinx-linux-gnueabi/libc/usr/include -I../src -Wall -fmessage-length=0 -MMD -MP -D __SDSCC__
+arm-xilinx-linux-gnueabi-g++ -c C:/xup/SDSoC/labs/lab1_prebuilt/SDRelease/_sds/swstubs/madd.cpp -o C:/xup/SDSoC/labs/lab1_prebuilt/SDRelease/_sds/swstubs/madd.o
+arm-xilinx-linux-gnueabi-objcopy --add-section .xdinfo=C:/xup/SDSoC/labs/lab1_prebuilt/SDRelease/_sds/swstubs/madd.o.xml C:/xup/SDSoC/labs/lab1_prebuilt/SDRelease/_sds/swstubs/madd.o
+INFO: [SDSoC 0-0] Performing pragma generation
+clang_wrapper -E -target arm-xilinx-linux-gnueabi -mcpu=cortex-a9 -mfpu=vfp -O0 -g -w    -I C:/Xilinx/SDSoC/2015.4/arm-xilinx-linux-gnueabi/include  -I C:/Xilinx/SDSoC/2015.4/Vivado_HLS/2015.4/include   -IC:/Xilinx/SDSoC/2015.4/SDK/2015.4/gnu/arm/nt/arm-xilinx-linux-gnueabi/include/c++/4.9.2  -IC:/Xilinx/SDSoC/2015.4/SDK/2015.4/gnu/arm/nt/arm-xilinx-linux-gnueabi/include/c++/4.9.2/arm-xilinx-linux-gnueabi  -IC:/Xilinx/SDSoC/2015.4/SDK/2015.4/gnu/arm/nt/arm-xilinx-linux-gnueabi/include/c++/4.9.2/backward   -IC:/Xilinx/SDSoC/2015.4/SDK/2015.4/gnu/arm/nt/lib/gcc/arm-xilinx-linux-gnueabi/4.9.2/include  -IC:/Xilinx/SDSoC/2015.4/SDK/2015.4/gnu/arm/nt/lib/gcc/arm-xilinx-linux-gnueabi/4.9.2/include-fixed  -IC:/Xilinx/SDSoC/2015.4/SDK/2015.4/gnu/arm/nt/arm-xilinx-linux-gnueabi/include  -IC:/Xilinx/SDSoC/2015.4/SDK/2015.4/gnu/arm/nt/arm-xilinx-linux-gnueabi/libc/usr/include -IC:/xup/SDSoC/labs/lab1_prebuilt/src -Wall -fmessage-length=0 -MMD -MP -D __SDSCC__ -I C:/Xilinx/SDSoC/2015.4/arm-xilinx-linux-gnueabi/include -IC:/xup/SDSoC/labs/lab1_prebuilt/src -D __SDSVHLS__ C:/xup/SDSoC/labs/lab1_prebuilt/src/madd.cpp -o C:/xup/SDSoC/labs/lab1_prebuilt/SDRelease/_sds/vhls/madd_pp.cpp
+
+C:\xup\SDSoC\labs\lab1_prebuilt\SDRelease>C:\Xilinx\SDSoC\2015.4\llvm-clang\win64\llvm\bin\clang.exe -E -target arm-xilinx-linux-gnueabi -mcpu=cortex-a9 -mfpu=vfp -O0 -g -w -I C:/Xilinx/SDSoC/2015.4/arm-xilinx-linux-gnueabi/include -I C:/Xilinx/SDSoC/2015.4/Vivado_HLS/2015.4/include -IC:/Xilinx/SDSoC/2015.4/SDK/2015.4/gnu/arm/nt/arm-xilinx-linux-gnueabi/include/c++/4.9.2 -IC:/Xilinx/SDSoC/2015.4/SDK/2015.4/gnu/arm/nt/arm-xilinx-linux-gnueabi/include/c++/4.9.2/arm-xilinx-linux-gnueabi -IC:/Xilinx/SDSoC/2015.4/SDK/2015.4/gnu/arm/nt/arm-xilinx-linux-gnueabi/include/c++/4.9.2/backward -IC:/Xilinx/SDSoC/2015.4/SDK/2015.4/gnu/arm/nt/lib/gcc/arm-xilinx-linux-gnueabi/4.9.2/include -IC:/Xilinx/SDSoC/2015.4/SDK/2015.4/gnu/arm/nt/lib/gcc/arm-xilinx-linux-gnueabi/4.9.2/include-fixed -IC:/Xilinx/SDSoC/2015.4/SDK/2015.4/gnu/arm/nt/arm-xilinx-linux-gnueabi/include -IC:/Xilinx/SDSoC/2015.4/SDK/2015.4/gnu/arm/nt/arm-xilinx-linux-gnueabi/libc/usr/include -IC:/xup/SDSoC/labs/lab1_prebuilt/src -Wall -fmessage-length=0 -MMD -MP -D __SDSCC__ -I C:/Xilinx/SDSoC/2015.4/arm-xilinx-linux-gnueabi/include -IC:/xup/SDSoC/labs/lab1_prebuilt/src -D __SDSVHLS__ C:/xup/SDSoC/labs/lab1_prebuilt/src/madd.cpp -o C:/xup/SDSoC/labs/lab1_prebuilt/SDRelease/_sds/vhls/madd_pp.cpp 
+
+C:\xup\SDSoC\labs\lab1_prebuilt\SDRelease>exit /b 0 
+pragma_gen  -func madd   -tcl C:/xup/SDSoC/labs/lab1_prebuilt/SDRelease/_sds/vhls/madd.tcl  C:/xup/SDSoC/labs/lab1_prebuilt/SDRelease/_sds/vhls/madd_pp.cpp  --  -c  -target arm-xilinx-linux-gnueabi -mcpu=cortex-a9 -mfpu=vfp -O0 -g -w    -I C:/Xilinx/SDSoC/2015.4/arm-xilinx-linux-gnueabi/include  -I C:/Xilinx/SDSoC/2015.4/Vivado_HLS/2015.4/include   -IC:/Xilinx/SDSoC/2015.4/SDK/2015.4/gnu/arm/nt/arm-xilinx-linux-gnueabi/include/c++/4.9.2  -IC:/Xilinx/SDSoC/2015.4/SDK/2015.4/gnu/arm/nt/arm-xilinx-linux-gnueabi/include/c++/4.9.2/arm-xilinx-linux-gnueabi  -IC:/Xilinx/SDSoC/2015.4/SDK/2015.4/gnu/arm/nt/arm-xilinx-linux-gnueabi/include/c++/4.9.2/backward   -IC:/Xilinx/SDSoC/2015.4/SDK/2015.4/gnu/arm/nt/lib/gcc/arm-xilinx-linux-gnueabi/4.9.2/include  -IC:/Xilinx/SDSoC/2015.4/SDK/2015.4/gnu/arm/nt/lib/gcc/arm-xilinx-linux-gnueabi/4.9.2/include-fixed  -IC:/Xilinx/SDSoC/2015.4/SDK/2015.4/gnu/arm/nt/arm-xilinx-linux-gnueabi/include  -IC:/Xilinx/SDSoC/2015.4/SDK/2015.4/gnu/arm/nt/arm-xilinx-linux-gnueabi/libc/usr/include  -D __SDSVHLS__ -IC:/xup/SDSoC/labs/lab1_prebuilt/src -Wall -O3 -fmessage-length=0 -MMD -MP -D __SDSCC__  -I C:/Xilinx/SDSoC/2015.4/arm-xilinx-linux-gnueabi/include -IC:/xup/SDSoC/labs/lab1_prebuilt/src
+INFO: [SDSoC 0-0] Successfully generated tcl script: C:/xup/SDSoC/labs/lab1_prebuilt/SDRelease/_sds/vhls/madd.tcl
+INFO: [SDSoC 0-0] Moving function madd to Programmable Logic
+C:/Xilinx/SDSoC/2015.4/Vivado_HLS/2015.4/bin/vivado_hls C:/xup/SDSoC/labs/lab1_prebuilt/SDRelease/_sds/vhls/madd_run.tcl
+================================================================
+  Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC
+  Version 2015.4
+  Build 1412921 on Wed Nov 18 09:58:55 AM 2015
+  Copyright (C) 2015 Xilinx Inc. All rights reserved.
+================================================================
+@I [HLS-10] Running 'C:/Xilinx/SDSoC/2015.4/VIVADO~1/2015.4/bin/unwrapped/win64.o/vivado_hls.exe'
+            for user 'parimalp' on host 'xsjparimalp31' (Windows NT_amd64 version 6.1) on Sat Jan 02 06:34:43 -0800 2016
+            in directory 'C:/xup/SDSoC/labs/lab1_prebuilt/SDRelease/_sds/vhls'
+@I [HLS-10] Creating and opening project 'C:/xup/SDSoC/labs/lab1_prebuilt/SDRelease/_sds/vhls/madd'.
+@I [HLS-10] Adding design file 'C:/xup/SDSoC/labs/lab1_prebuilt/src/madd.cpp' to the project
+@I [HLS-10] Creating and opening solution 'C:/xup/SDSoC/labs/lab1_prebuilt/SDRelease/_sds/vhls/madd/solution'.
+@I [HLS-10] Cleaning up the solution database.
+@I [HLS-10] Setting target device to ' xc7z020clg484-1 '
+@I [SYN-201] Setting up clock 'default' with a period of 5.95ns.
+@I [HLS-10] Analyzing design file 'C:/xup/SDSoC/labs/lab1_prebuilt/src/madd.cpp' ... 
+@I [HLS-10] Validating synthesis directives ...
+@I [HLS-10] Starting code transformations ...
+@I [HLS-10] Checking synthesizability ...
+@I [XFORM-541] Flattening a loop nest 'Loop-1' (C:/xup/SDSoC/labs/lab1_prebuilt/src/madd.cpp:8:8) in function 'madd'.
+@I [HLS-111] Elapsed time: 7.171 seconds; current memory usage: 71.3 MB.
+@I [HLS-10] Starting hardware synthesis ...
+@I [HLS-10] Synthesizing 'madd' ...
+@I [HLS-10] ----------------------------------------------------------------
+@I [HLS-10] -- Scheduling module 'madd' 
+@I [HLS-10] ----------------------------------------------------------------
+@I [SCHED-11] Starting scheduling ...
+@I [SCHED-61] Pipelining loop 'Loop 1'.
+@I [SCHED-61] Pipelining result: Target II: 1, Final II: 1, Depth: 12.
+@W [SCHED-71] Latency directive discarded for region madd since it contains subloops.
+@I [SCHED-11] Finished scheduling.
+@I [HLS-111] Elapsed time: 0.141 seconds; current memory usage: 71.8 MB.
+@I [HLS-10] ----------------------------------------------------------------
+@I [HLS-10] -- Exploring micro-architecture for module 'madd' 
+@I [HLS-10] ----------------------------------------------------------------
+@I [BIND-100] Starting micro-architecture generation ...
+@I [BIND-101] Performing variable lifetime analysis.
+@I [BIND-101] Exploring resource sharing.
+@I [BIND-101] Binding ...
+@I [BIND-100] Finished micro-architecture generation.
+@I [HLS-111] Elapsed time: 0.031 seconds; current memory usage: 71.9 MB.
+@I [HLS-10] ----------------------------------------------------------------
+@I [HLS-10] -- Generating RTL for module 'madd' 
+@I [HLS-10] ----------------------------------------------------------------
+@I [RTGEN-500] Setting interface mode on port 'madd/A' to 'ap_fifo'.
+@I [RTGEN-500] Setting interface mode on port 'madd/B' to 'ap_fifo'.
+@I [RTGEN-500] Setting interface mode on port 'madd/C' to 'ap_fifo'.
+@I [RTGEN-500] Setting interface mode on function 'madd' to 'ap_ctrl_hs'.
+@I [RTGEN-100] Generating core module 'madd_fadd_32ns_32ns_32_9_full_dsp': 1 instance(s).
+@I [RTGEN-100] Finished creating RTL model for 'madd'.
+@I [HLS-111] Elapsed time: 0.047 seconds; current memory usage: 71.8 MB.
+@I [HLS-10] Finished generating all RTL models.
+@I [WSYSC-301] Generating RTL SystemC for 'madd'.
+@I [WVHDL-304] Generating RTL VHDL for 'madd'.
+@I [WVLOG-307] Generating RTL Verilog for 'madd'.
+@I [IMPL-8] Exporting RTL as an IP in IP-XACT.
+
+****** Vivado v2015.4 (64-bit)
+  **** SW Build 1412921 on Wed Nov 18 09:43:45 MST 2015
+  **** IP Build 1412968 on Wed Nov 18 10:19:19 MST 2015
+    ** Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
+
+source run_ippack.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/SDSoC/2015.4/Vivado/2015.4/data/ip'.
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'madd_ap_fadd_7_full_dsp_32'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'madd_ap_fadd_7_full_dsp_32'...
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/SDSoC/2015.4/Vivado/2015.4/data/ip'.
+INFO: [Common 17-206] Exiting Vivado at Sat Jan 02 06:35:02 2016...
+@I [HLS-112] Total elapsed time: 38.402 seconds; peak memory usage: 72.1 MB.
+xsltproc --output component.xml  C:/Xilinx/SDSoC/2015.4/scripts/xsd/xdFixAximmAddrSpaceProperty.xsl  component.xml
+zip -u xilinx_com_hls_madd_1_0.zip component.xml
+updating: component.xml (172 bytes security) (deflated 93%)
+sed -i -e {s/xilinx\.com\/xidane/xilinx\.com\/xd/g} C:/xup/SDSoC/labs/lab1_prebuilt/SDRelease/_sds/vhls/madd/solution/impl/ip/auxiliary.xml
+xsltproc  --output C:/xup/SDSoC/labs/lab1_prebuilt/SDRelease/_sds/.llvm/madd.hlsmap1.xml  --stringparam P_CLKID 1  --stringparam P_HLS_TYPE hls  C:/Xilinx/SDSoC/2015.4/scripts/xsd/xdHlsmapRenameAttr.xsl  C:/xup/SDSoC/labs/lab1_prebuilt/SDRelease/_sds/.llvm/madd_auxiliary.xml
+xsltproc  --output C:/xup/SDSoC/labs/lab1_prebuilt/SDRelease/_sds/.llvm/madd.hlsmap.xml  C:/Xilinx/SDSoC/2015.4/scripts/xsd/xdHlsmapAdapter.xsl  C:/xup/SDSoC/labs/lab1_prebuilt/SDRelease/_sds/.llvm/madd.hlsmap1.xml
+xsltproc    --output C:/xup/SDSoC/labs/lab1_prebuilt/SDRelease/_sds/.llvm/madd.fcnmap.xml  C:/Xilinx/SDSoC/2015.4/scripts/xsd/xdHlsmapAxi4.xsl  C:/xup/SDSoC/labs/lab1_prebuilt/SDRelease/_sds/.llvm/madd.hlsmap.xml
+xsltproc  --output C:/xup/SDSoC/labs/lab1_prebuilt/SDRelease/_sds/.llvm/madd_if.xml  C:/Xilinx/SDSoC/2015.4/scripts/xsd/xdHlsAdapterComp.xsl  C:/xup/SDSoC/labs/lab1_prebuilt/SDRelease/_sds/.llvm/madd.fcnmap.xml
+arm-xilinx-linux-gnueabi-objcopy --add-section .xddata=C:/xup/SDSoC/labs/lab1_prebuilt/SDRelease/_sds/swstubs/madd.xml C:/xup/SDSoC/labs/lab1_prebuilt/SDRelease/_sds/swstubs/madd.o
+arm-xilinx-linux-gnueabi-objcopy --add-section .xdasm=C:/xup/SDSoC/labs/lab1_prebuilt/SDRelease/_sds/.llvm/src/madd.s C:/xup/SDSoC/labs/lab1_prebuilt/SDRelease/_sds/swstubs/madd.o
+arm-xilinx-linux-gnueabi-g++ -E -I../src -Wall -O3 -fmessage-length=0 -MMD -MP -D __SDSCC__ -MTC:/xup/SDSoC/labs/lab1_prebuilt/SDRelease/src/madd.o -MFC:/xup/SDSoC/labs/lab1_prebuilt/SDRelease/src/madd.d -MTC:/xup/SDSoC/labs/lab1_prebuilt/SDRelease/src/madd.d   -I C:/Xilinx/SDSoC/2015.4/arm-xilinx-linux-gnueabi/include  -I C:/Xilinx/SDSoC/2015.4/Vivado_HLS/2015.4/include C:/xup/SDSoC/labs/lab1_prebuilt/src/madd.cpp -o C:/xup/SDSoC/labs/lab1_prebuilt/SDRelease/_sds/.pp/madd.ii
+arm-xilinx-linux-gnueabi-objcopy --add-section .xdpp=C:/xup/SDSoC/labs/lab1_prebuilt/SDRelease/_sds/.pp/madd.ii C:/xup/SDSoC/labs/lab1_prebuilt/SDRelease/_sds/swstubs/madd.o
+arm-xilinx-linux-gnueabi-objcopy --add-section .xdfcnmap=C:/xup/SDSoC/labs/lab1_prebuilt/SDRelease/_sds/.llvm/madd.fcnmap.xml C:/xup/SDSoC/labs/lab1_prebuilt/SDRelease/_sds/swstubs/madd.o
+arm-xilinx-linux-gnueabi-objcopy --add-section .xdhlscore=C:/xup/SDSoC/labs/lab1_prebuilt/SDRelease/_sds/vhls/madd/solution/impl/ip/xilinx_com_hls_madd_1_0.zip C:/xup/SDSoC/labs/lab1_prebuilt/SDRelease/_sds/swstubs/madd.o
+arm-xilinx-linux-gnueabi-objcopy --add-section .xdif=C:/xup/SDSoC/labs/lab1_prebuilt/SDRelease/_sds/.llvm/madd_if.xml C:/xup/SDSoC/labs/lab1_prebuilt/SDRelease/_sds/swstubs/madd.o
+sds++ log file saved as C:/xup/SDSoC/labs/lab1_prebuilt/SDRelease/_sds/reports/sds_madd.log
+sds++ completed at Sat Jan 02 06:35:21 -0800 2016

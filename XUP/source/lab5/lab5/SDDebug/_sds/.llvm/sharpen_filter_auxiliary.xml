@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xd:acceleratorMap xmlns:xd="http://www.xilinx.com/xd" xd:functionName="sharpen_filter" xd:componentRef="sharpen_filter" xd:initiationInterval="2076610" xd:clockPeriod="5.950001" xd:sequential="true" xd:hostMachine="64" xd:reset="control">
+  <xd:returnValue xd:interfaceRef="ap_return" xd:busTypeRef="register" xd:dataWidth="32"/>
+  <xd:controlReg xd:name="control" xd:interfaceRef="ap_ctrl" xd:busTypeRef="acc_handshake" xd:type="acc_handshake"/>
+  <xd:arg xd:name="*(input)" xd:originalName="input" xd:direction="in" xd:interfaceRef="input_r" xd:busTypeRef="acc_fifo" xd:arraySize="2073600" xd:dataWidth="8"/>
+  <xd:arg xd:name="*(output)" xd:originalName="output" xd:direction="out" xd:interfaceRef="output_r" xd:busTypeRef="acc_fifo" xd:arraySize="2073600" xd:dataWidth="8"/>
+  <xd:latencyEstimates xd:best-case="2076609" xd:worst-case="2076609" xd:average-case="2076609"/>
+  <xd:resourceEstimates xd:LUT="306" xd:FF="297" xd:BRAM="3" xd:DSP="0"/>
+</xd:acceleratorMap>

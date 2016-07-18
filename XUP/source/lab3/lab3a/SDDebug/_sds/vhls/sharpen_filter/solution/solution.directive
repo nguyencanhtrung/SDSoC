@@ -1,0 +1,10 @@
+<AutoPilot:ProjectResources xmlns:AutoPilot="com.autoesl.autopilot.ui.directiveView">
+    <sourceFile name="">
+        <directive functionName="sharpen_filter" label="" functionLabel="">
+            <pragma name="LATENCY">
+                <option name="min" value="1"/>
+            </pragma>
+        </directive>
+    </sourceFile>
+</AutoPilot:ProjectResources>
+

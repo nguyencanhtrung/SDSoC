@@ -1,0 +1,20 @@
+{
+	"file":	"C:/xup/SDSoC/labs/lab1_prebuilt/src/main.cpp",
+	"callers":	[{
+			"call":	"madd",
+			"line":	100,
+			"repl":	"_p0_madd_0"
+		}, {
+			"call":	"mmult",
+			"line":	98,
+			"repl":	"_p0_mmult_0"
+		}],
+	"parents":	[{
+			"function":	"mmultadd_test",
+			"proto":	"void _p0_madd_0(float A[1024], float B[1024], float C[1024]);\n"
+		}, {
+			"function":	"mmultadd_test",
+			"proto":	"void _p0_mmult_0(float in_A[1024], float in_B[1024], float out_C[1024]);\n"
+		}],
+	"waits":	[]
+}

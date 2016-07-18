@@ -1,0 +1,513 @@
+#-----------------------------------------------------------
+# Vivado v2015.4 (64-bit)
+# SW Build 1412921 on Wed Nov 18 09:43:45 MST 2015
+# IP Build 1412968 on Wed Nov 18 10:19:19 MST 2015
+# Start of session at: Fri Jan 01 07:13:36 2016
+# Process ID: 20316
+# Current directory: C:/xup/SDSoC/labs/lab5/SDDebug/_sds/p0/ipi
+# Command line: vivado.exe -mode batch -source C:/xup/SDSoC/labs/lab5/SDDebug/_sds/p0/ipi/top.ipi.tcl
+# Log file: C:/xup/SDSoC/labs/lab5/SDDebug/_sds/p0/ipi/vivado.log
+# Journal file: C:/xup/SDSoC/labs/lab5/SDDebug/_sds/p0/ipi\vivado.jou
+#-----------------------------------------------------------
+source C:/xup/SDSoC/labs/lab5/SDDebug/_sds/p0/ipi/top.ipi.tcl
+# puts "Running ipi tcl"
+Running ipi tcl
+# open_project C:/xup/SDSoC/labs/lab5/SDDebug/_sds/p0/ipi/zed.xpr
+INFO: [Project 1-313] Project file moved from '/wrk/hdstaff/jece/work1/Rodin/REL/2015.4_sdsoc/src/products/sdsoc/platforms/zed/vivado' since last save.
+Scanning sources...
+Finished scanning sources
+WARNING: [filemgmt 56-2] IPUserFilesDir: Could not find the directory 'C:/xup/SDSoC/labs/lab5/SDDebug/_sds/p0/ipi/zed.ip_user_files', nor could it be found using path 'C:/wrk/hdstaff/jece/work1/Rodin/REL/2015.4_sdsoc/src/products/sdsoc/platforms/zed/vivado/zed.ip_user_files'.
+WARNING: [filemgmt 56-2] IPStaticSourceDir: Could not find the directory 'C:/xup/SDSoC/labs/lab5/SDDebug/_sds/p0/ipi/zed.ip_user_files/ipstatic', nor could it be found using path 'C:/wrk/hdstaff/jece/work1/Rodin/REL/2015.4_sdsoc/src/products/sdsoc/platforms/zed/vivado/zed.ip_user_files/ipstatic'.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/SDSoC/2015.4/Vivado/2015.4/data/ip'.
+# set_param cg.skipHiddenCheck true
+# set_property ip_repo_paths {C:/xup/SDSoC/labs/lab5/SDDebug/_sds/iprepo/repo C:/Xilinx/SDSoC/2015.4/data/ip/xilinx} [current_fileset]
+# set_param bd.skipSupportedIPCheck true
+# update_ip_catalog -rebuild
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/xup/SDSoC/labs/lab5/SDDebug/_sds/iprepo/repo'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Xilinx/SDSoC/2015.4/data/ip/xilinx'.
+# close_project
+# open_project C:/xup/SDSoC/labs/lab5/SDDebug/_sds/p0/ipi/zed.xpr
+Scanning sources...
+Finished scanning sources
+WARNING: [filemgmt 56-3] IPUserFilesDir: Could not find the directory 'C:/xup/SDSoC/labs/lab5/SDDebug/_sds/p0/ipi/zed.ip_user_files'.
+WARNING: [filemgmt 56-3] IPStaticSourceDir: Could not find the directory 'C:/xup/SDSoC/labs/lab5/SDDebug/_sds/p0/ipi/zed.ip_user_files/ipstatic'.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/xup/SDSoC/labs/lab5/SDDebug/_sds/iprepo/repo'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Xilinx/SDSoC/2015.4/data/ip/xilinx'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/SDSoC/2015.4/Vivado/2015.4/data/ip'.
+# set_param bd.get_bd_obj.warning_on_empty_result true
+# set_param bd.propagate.allow_set_readonly_param true
+# source top.bd.tcl
+## if {[llength [get_files *.bd]] == 1} {
+##   set diagram_handle [open_bd_design [get_files *.bd]]
+## } else {
+##   set diagram_handle [open_bd_design [get_files zed.bd]]
+## }
+Adding component instance block -- xilinx.com:ip:proc_sys_reset:5.0 - proc_sys_reset_0
+INFO: [Ipptcl 7-1463] No Compatible Board Interface found. Board Tab not created in customize GUI
+Adding component instance block -- xilinx.com:ip:proc_sys_reset:5.0 - proc_sys_reset_1
+INFO: [Ipptcl 7-1463] No Compatible Board Interface found. Board Tab not created in customize GUI
+Adding component instance block -- xilinx.com:ip:proc_sys_reset:5.0 - proc_sys_reset_2
+INFO: [Ipptcl 7-1463] No Compatible Board Interface found. Board Tab not created in customize GUI
+Adding component instance block -- xilinx.com:ip:proc_sys_reset:5.0 - proc_sys_reset_3
+INFO: [Ipptcl 7-1463] No Compatible Board Interface found. Board Tab not created in customize GUI
+Adding component instance block -- xilinx.com:ip:processing_system7:5.5 - ps7
+Adding component instance block -- xilinx.com:ip:xlconcat:2.1 - xlconcat
+Successfully read diagram <zed> from BD file <C:/xup/SDSoC/labs/lab5/SDDebug/_sds/p0/ipi/zed.srcs/sources_1/bd/zed/zed.bd>
+open_bd_design: Time (s): cpu = 00:00:04 ; elapsed = 00:00:06 . Memory (MB): peak = 306.492 ; gain = 68.316
+## set ps7 [get_bd_cell /ps7]
+## set_property -dict [ list \
+##   CONFIG.PCW_USE_M_AXI_GP0 1 \
+##   CONFIG.PCW_USE_S_AXI_HP0 1 \
+##   ] $ps7
+## set xlconcat [get_bd_cell /xlconcat]
+## set_property -dict [ list \
+##   CONFIG.NUM_PORTS 2 \
+##   ] $xlconcat
+## set dm_0 [create_bd_cell -type ip -vlnv xilinx.com:ip:axi_dma:7.1 dm_0]
+## set_property -dict [ list \
+##   CONFIG.C_DLYTMR_RESOLUTION {1250} \
+##   CONFIG.C_SG_LENGTH_WIDTH {23} \
+##   CONFIG.C_INCLUDE_SG {0} \
+##   CONFIG.C_INCLUDE_MM2S {1} \
+##   CONFIG.C_INCLUDE_S2MM {0} \
+##   CONFIG.C_INCLUDE_MM2S_SF {1} \
+##   CONFIG.C_INCLUDE_MM2S_DRE {1} \
+##   CONFIG.C_MM2S_BURST_SIZE {64} \
+##   CONFIG.C_M_AXI_MM2S_DATA_WIDTH {64} \
+##   CONFIG.C_M_AXIS_MM2S_TDATA_WIDTH {64} \
+##   ] $dm_0
+## set dm_1 [create_bd_cell -type ip -vlnv xilinx.com:ip:axi_dma:7.1 dm_1]
+## set_property -dict [ list \
+##   CONFIG.C_DLYTMR_RESOLUTION {1250} \
+##   CONFIG.C_SG_LENGTH_WIDTH {23} \
+##   CONFIG.C_INCLUDE_SG {0} \
+##   CONFIG.C_INCLUDE_MM2S {0} \
+##   CONFIG.C_INCLUDE_S2MM {1} \
+##   CONFIG.C_INCLUDE_S2MM_SF {1} \
+##   CONFIG.C_INCLUDE_S2MM_DRE {1} \
+##   CONFIG.C_S2MM_BURST_SIZE {64} \
+##   CONFIG.C_M_AXI_S2MM_DATA_WIDTH {64} \
+##   CONFIG.C_S_AXIS_S2MM_TDATA_WIDTH {64} \
+##   ] $dm_1
+## set sharpen_filter_0 [create_bd_cell -type ip -vlnv xilinx.com:hls:sharpen_filter:1.0 sharpen_filter_0]
+## set sharpen_filter_0_if [create_bd_cell -type ip -vlnv xilinx.com:ip:axis_accelerator_adapter:2.1 sharpen_filter_0_if]
+## set_property -dict [ list \
+##   CONFIG.C_OUTPUT_SCALAR_0_WIDTH {32} \
+##   CONFIG.C_AP_IARG_0_WIDTH {8} \
+##   CONFIG.C_AP_IARG_0_TYPE {1} \
+##   CONFIG.C_AP_IARG_0_DWIDTH {8} \
+##   CONFIG.C_AP_IARG_0_DIM_1 {1024} \
+##   CONFIG.C_AP_OARG_0_WIDTH {8} \
+##   CONFIG.C_AP_OARG_0_TYPE {1} \
+##   CONFIG.C_AP_OARG_0_DWIDTH {8} \
+##   CONFIG.C_AP_OARG_0_DIM_1 {1024} \
+##   CONFIG.C_N_OUTPUT_ARGS {1} \
+##   CONFIG.C_N_INPUT_ARGS {1} \
+##   CONFIG.C_N_OUTPUT_SCALARS {1} \
+##   CONFIG.C_M_AXIS_HAS_TKEEP {1} \
+##   CONFIG.C_M_AXIS_HAS_TSTRB {1} \
+##   CONFIG.C_M_AXIS_TDATA_WIDTH {64} \
+##   CONFIG.C_S_AXIS_TDATA_WIDTH {64} \
+##   ] $sharpen_filter_0_if
+## set axi_ic_ps7_M_AXI_GP0 [create_bd_cell -type ip -vlnv xilinx.com:ip:axi_interconnect:2.1 axi_ic_ps7_M_AXI_GP0]
+## set_property -dict [ list \
+##   CONFIG.NUM_MI {3} \
+##   CONFIG.NUM_SI {1} \
+##   CONFIG.STRATEGY {2} \
+##   CONFIG.M00_HAS_REGSLICE {1} \
+##   CONFIG.M01_HAS_REGSLICE {1} \
+##   CONFIG.M02_HAS_REGSLICE {1} \
+##   CONFIG.S00_HAS_REGSLICE {1} \
+##   ] $axi_ic_ps7_M_AXI_GP0
+## set axi_ic_ps7_S_AXI_HP0 [create_bd_cell -type ip -vlnv xilinx.com:ip:axi_interconnect:2.1 axi_ic_ps7_S_AXI_HP0]
+## set_property -dict [ list \
+##   CONFIG.NUM_MI {1} \
+##   CONFIG.NUM_SI {2} \
+##   CONFIG.STRATEGY {2} \
+##   CONFIG.M00_HAS_REGSLICE {1} \
+##   CONFIG.M00_HAS_DATA_FIFO {2} \
+##   CONFIG.S00_HAS_REGSLICE {1} \
+##   CONFIG.S00_HAS_DATA_FIFO {2} \
+##   CONFIG.S01_HAS_REGSLICE {1} \
+##   CONFIG.S01_HAS_DATA_FIFO {2} \
+##   ] $axi_ic_ps7_S_AXI_HP0
+## connect_bd_net  \
+##   [get_bd_pins /sharpen_filter_0_if/aresetn] \
+##   [get_bd_pins /sharpen_filter_0/ap_rst_n] \
+## 
+## connect_bd_net  \
+##   [get_bd_pins /sharpen_filter_0/ap_return] \
+##   [get_bd_pins /sharpen_filter_0_if/ap_oscalar_0_din] \
+## 
+## connect_bd_net  \
+##   [get_bd_pins /ps7/FCLK_CLK1] \
+##   [get_bd_pins /dm_0/s_axi_lite_aclk] \
+##   [get_bd_pins /dm_0/m_axi_mm2s_aclk] \
+##   [get_bd_pins /dm_1/s_axi_lite_aclk] \
+##   [get_bd_pins /dm_1/m_axi_s2mm_aclk] \
+##   [get_bd_pins /ps7/M_AXI_GP0_ACLK] \
+##   [get_bd_pins /ps7/S_AXI_HP0_ACLK] \
+##   [get_bd_pins /sharpen_filter_0/ap_clk] \
+##   [get_bd_pins /sharpen_filter_0_if/s_axi_aclk] \
+##   [get_bd_pins /sharpen_filter_0_if/aclk] \
+##   [get_bd_pins /sharpen_filter_0_if/m_axis_aclk] \
+##   [get_bd_pins /sharpen_filter_0_if/s_axis_aclk] \
+##   [get_bd_pins /axi_ic_ps7_M_AXI_GP0/ACLK] \
+##   [get_bd_pins /axi_ic_ps7_M_AXI_GP0/S00_ACLK] \
+##   [get_bd_pins /axi_ic_ps7_M_AXI_GP0/M00_ACLK] \
+##   [get_bd_pins /axi_ic_ps7_M_AXI_GP0/M01_ACLK] \
+##   [get_bd_pins /axi_ic_ps7_M_AXI_GP0/M02_ACLK] \
+##   [get_bd_pins /axi_ic_ps7_S_AXI_HP0/ACLK] \
+##   [get_bd_pins /axi_ic_ps7_S_AXI_HP0/M00_ACLK] \
+##   [get_bd_pins /axi_ic_ps7_S_AXI_HP0/S00_ACLK] \
+##   [get_bd_pins /axi_ic_ps7_S_AXI_HP0/S01_ACLK] \
+## 
+## connect_bd_net  \
+##   [get_bd_pins /proc_sys_reset_1/interconnect_aresetn] \
+##   [get_bd_pins /axi_ic_ps7_M_AXI_GP0/ARESETN] \
+##   [get_bd_pins /axi_ic_ps7_M_AXI_GP0/S00_ARESETN] \
+##   [get_bd_pins /axi_ic_ps7_M_AXI_GP0/M00_ARESETN] \
+##   [get_bd_pins /axi_ic_ps7_M_AXI_GP0/M01_ARESETN] \
+##   [get_bd_pins /axi_ic_ps7_M_AXI_GP0/M02_ARESETN] \
+##   [get_bd_pins /axi_ic_ps7_S_AXI_HP0/ARESETN] \
+##   [get_bd_pins /axi_ic_ps7_S_AXI_HP0/M00_ARESETN] \
+##   [get_bd_pins /axi_ic_ps7_S_AXI_HP0/S00_ARESETN] \
+##   [get_bd_pins /axi_ic_ps7_S_AXI_HP0/S01_ARESETN] \
+## 
+## connect_bd_net  \
+##   [get_bd_pins /proc_sys_reset_1/peripheral_aresetn] \
+##   [get_bd_pins /dm_0/axi_resetn] \
+##   [get_bd_pins /dm_1/axi_resetn] \
+##   [get_bd_pins /sharpen_filter_0_if/s_axi_aresetn] \
+##   [get_bd_pins /sharpen_filter_0_if/m_axis_aresetn] \
+##   [get_bd_pins /sharpen_filter_0_if/s_axis_aresetn] \
+## 
+## connect_bd_net  \
+##   [get_bd_pins /dm_0/mm2s_introut] \
+##   [get_bd_pins /xlconcat/In0] \
+## 
+## connect_bd_net  \
+##   [get_bd_pins /dm_1/s2mm_introut] \
+##   [get_bd_pins /xlconcat/In1] \
+## 
+## connect_bd_intf_net \
+##   [get_bd_intf_pins /sharpen_filter_0_if/ap_ctrl] \
+##   [get_bd_intf_pins /sharpen_filter_0/ap_ctrl] \
+## 
+## connect_bd_intf_net \
+##   [get_bd_intf_pins /sharpen_filter_0/input_r] \
+##   [get_bd_intf_pins /sharpen_filter_0_if/AP_FIFO_IARG_0] \
+## 
+## connect_bd_intf_net \
+##   [get_bd_intf_pins /sharpen_filter_0/output_r] \
+##   [get_bd_intf_pins /sharpen_filter_0_if/AP_FIFO_OARG_0] \
+## 
+## connect_bd_intf_net \
+##   [get_bd_intf_pins /ps7/M_AXI_GP0] \
+##   [get_bd_intf_pins /axi_ic_ps7_M_AXI_GP0/S00_AXI] \
+## 
+## connect_bd_intf_net \
+##   [get_bd_intf_pins /axi_ic_ps7_S_AXI_HP0/M00_AXI] \
+##   [get_bd_intf_pins /ps7/S_AXI_HP0] \
+## 
+## connect_bd_intf_net \
+##   [get_bd_intf_pins /axi_ic_ps7_M_AXI_GP0/M00_AXI] \
+##   [get_bd_intf_pins /sharpen_filter_0_if/S_AXI] \
+## 
+## connect_bd_intf_net \
+##   [get_bd_intf_pins /axi_ic_ps7_M_AXI_GP0/M01_AXI] \
+##   [get_bd_intf_pins /dm_0/S_AXI_LITE] \
+## 
+## connect_bd_intf_net \
+##   [get_bd_intf_pins /dm_0/M_AXI_MM2S] \
+##   [get_bd_intf_pins /axi_ic_ps7_S_AXI_HP0/S00_AXI] \
+## 
+## connect_bd_intf_net \
+##   [get_bd_intf_pins /dm_0/M_AXIS_MM2S] \
+##   [get_bd_intf_pins /sharpen_filter_0_if/S_AXIS_0] \
+## 
+## connect_bd_intf_net \
+##   [get_bd_intf_pins /axi_ic_ps7_M_AXI_GP0/M02_AXI] \
+##   [get_bd_intf_pins /dm_1/S_AXI_LITE] \
+## 
+## connect_bd_intf_net \
+##   [get_bd_intf_pins /dm_1/M_AXI_S2MM] \
+##   [get_bd_intf_pins /axi_ic_ps7_S_AXI_HP0/S01_AXI] \
+## 
+## connect_bd_intf_net \
+##   [get_bd_intf_pins /sharpen_filter_0_if/M_AXIS_0] \
+##   [get_bd_intf_pins /dm_1/S_AXIS_S2MM] \
+## 
+## assign_bd_address
+</ps7/S_AXI_HP0/HP0_DDR_LOWOCM> is being mapped into </dm_0/Data_MM2S> at <0x00000000 [ 512M ]>
+</ps7/S_AXI_HP0/HP0_DDR_LOWOCM> is being mapped into </dm_1/Data_S2MM> at <0x00000000 [ 512M ]>
+</dm_0/S_AXI_LITE/Reg> is being mapped into </ps7/Data> at <0x40400000 [ 64K ]>
+</dm_1/S_AXI_LITE/Reg> is being mapped into </ps7/Data> at <0x40410000 [ 64K ]>
+</sharpen_filter_0_if/S_AXI/Reg> is being mapped into </ps7/Data> at <0x43C00000 [ 64K ]>
+## include_bd_addr_seg [get_bd_addr_segs -excluded -of_objects [get_bd_addr_segs -of_objects [get_bd_intf_pin -of_objects [get_bd_cells] -filter "Mode==Slave"]]]
+## set xml_file address_map.xml
+## set fp [open ${xml_file} w]
+## set addr_segs [get_bd_addr_segs -hier]
+## puts $fp "<?xml version=\"1.0\" encoding=\"UTF-8\"?>"
+## puts $fp "<xd:addressMap xmlns:xd=\"http://www.xilinx.com/xd\">"
+## foreach addr_seg $addr_segs {
+##   set path [get_property PATH $addr_seg]
+##   set offset [get_property OFFSET $addr_seg]
+##   if {$offset != ""} {
+##     set range [format 0x%X [get_property RANGE $addr_seg]]
+##     set high_addr [format 0x%X [expr $offset + $range - 1]]
+##     set slave [get_bd_addr_segs -of_object $addr_seg]
+##     regexp {([^/]+)/([^/]+)/([^/]+)$} $path match componentRef addressSpace segment
+##     regexp {([^/]+)/([^/]+)/([^/]+)$} $slave match slaveRef slaveMemoryMap slaveSegment  
+##     set slaveIntfPin [get_bd_intf_pins -of_objects $slave]
+##     regexp {([^/]+)$} $slaveIntfPin match slaveInterface
+##     puts $fp "  <xd:addressRange xd:componentRef=\"${componentRef}\" xd:addressSpace=\"${addressSpace}\" xd:segment=\"${segment}\" xd:slaveRef=\"${slaveRef}\" xd:slaveInterface=\"${slaveInterface}\" xd:slaveSegment=\"${slaveSegment}\" xd:baseAddr=\"${offset}\" xd:range=\"${range}\"/>"
+##   }
+## }
+## puts $fp "</xd:addressMap>"
+## close $fp
+# regenerate_bd_layout
+# save_bd_design
+Wrote  : <C:/xup/SDSoC/labs/lab5/SDDebug/_sds/p0/ipi/zed.srcs/sources_1/bd/zed/zed.bd> 
+# report_ip_status
+Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2015.4 (win64) Build 1412921 Wed Nov 18 09:43:45 MST 2015
+| Date         : Fri Jan 01 07:14:13 2016
+| Host         :  running 64-bit Service Pack 1  (build 7601)
+| Command      : report_ip_status
+------------------------------------------------------------------------------------
+
+IP Status Summary
+
+1. Project IP Status
+--------------------
+Your project uses 12 IP. Some of these IP may have undergone changes in this release of the software. Please review the recommended actions.
+
+More information on the Xilinx versioning policy is available at www.xilinx.com.
+
+Project IP Instances
++----------------------------+------------+---------------------+-----------+--------------------+---------+-----------------------+------------+----------------------+
+| Instance Name              | Status     | Recommendation      | Change    | IP Name            | IP      | New Version           | New        | Original Part        |
+|                            |            |                     | Log       |                    | Version |                       | License    |                      |
++----------------------------+------------+---------------------+-----------+--------------------+---------+-----------------------+------------+----------------------+
+| zed_axi_ic_ps7_M_AXI_GP0_0 | Up-to-date | No changes required |  *(1)     | AXI Interconnect   | 2.1     | 2.1 (Rev. 8)          | Included   | xc7z020clg484-1      |
+|                            |            |                     |           |                    | (Rev.   |                       |            |                      |
+|                            |            |                     |           |                    | 8)      |                       |            |                      |
++----------------------------+------------+---------------------+-----------+--------------------+---------+-----------------------+------------+----------------------+
+| zed_axi_ic_ps7_S_AXI_HP0_0 | Up-to-date | No changes required |  *(2)     | AXI Interconnect   | 2.1     | 2.1 (Rev. 8)          | Included   | xc7z020clg484-1      |
+|                            |            |                     |           |                    | (Rev.   |                       |            |                      |
+|                            |            |                     |           |                    | 8)      |                       |            |                      |
++----------------------------+------------+---------------------+-----------+--------------------+---------+-----------------------+------------+----------------------+
+| zed_dm_0_0                 | Up-to-date | No changes required |  *(3)     | AXI Direct Memory  | 7.1     | 7.1 (Rev. 8)          | Included   | xc7z020clg484-1      |
+|                            |            |                     |           | Access             | (Rev.   |                       |            |                      |
+|                            |            |                     |           |                    | 8)      |                       |            |                      |
++----------------------------+------------+---------------------+-----------+--------------------+---------+-----------------------+------------+----------------------+
+| zed_dm_1_0                 | Up-to-date | No changes required |  *(4)     | AXI Direct Memory  | 7.1     | 7.1 (Rev. 8)          | Included   | xc7z020clg484-1      |
+|                            |            |                     |           | Access             | (Rev.   |                       |            |                      |
+|                            |            |                     |           |                    | 8)      |                       |            |                      |
++----------------------------+------------+---------------------+-----------+--------------------+---------+-----------------------+------------+----------------------+
+| zed_proc_sys_reset_0_3     | Up-to-date | No changes required |  *(5)     | Processor System   | 5.0     | 5.0 (Rev. 8)          | Included   | xc7z020clg484-1      |
+|                            |            |                     |           | Reset              | (Rev.   |                       |            |                      |
+|                            |            |                     |           |                    | 8)      |                       |            |                      |
++----------------------------+------------+---------------------+-----------+--------------------+---------+-----------------------+------------+----------------------+
+| zed_proc_sys_reset_1_0     | Up-to-date | No changes required |  *(6)     | Processor System   | 5.0     | 5.0 (Rev. 8)          | Included   | xc7z020clg484-1      |
+|                            |            |                     |           | Reset              | (Rev.   |                       |            |                      |
+|                            |            |                     |           |                    | 8)      |                       |            |                      |
++----------------------------+------------+---------------------+-----------+--------------------+---------+-----------------------+------------+----------------------+
+| zed_proc_sys_reset_2_1     | Up-to-date | No changes required |  *(7)     | Processor System   | 5.0     | 5.0 (Rev. 8)          | Included   | xc7z020clg484-1      |
+|                            |            |                     |           | Reset              | (Rev.   |                       |            |                      |
+|                            |            |                     |           |                    | 8)      |                       |            |                      |
++----------------------------+------------+---------------------+-----------+--------------------+---------+-----------------------+------------+----------------------+
+| zed_proc_sys_reset_3_2     | Up-to-date | No changes required |  *(8)     | Processor System   | 5.0     | 5.0 (Rev. 8)          | Included   | xc7z020clg484-1      |
+|                            |            |                     |           | Reset              | (Rev.   |                       |            |                      |
+|                            |            |                     |           |                    | 8)      |                       |            |                      |
++----------------------------+------------+---------------------+-----------+--------------------+---------+-----------------------+------------+----------------------+
+| zed_ps7_0                  | Up-to-date | No changes required |  *(9)     | ZYNQ7 Processing   | 5.5     | 5.5 (Rev. 3)          | Included   | xc7z020clg484-1      |
+|                            |            |                     |           | System             | (Rev.   |                       |            |                      |
+|                            |            |                     |           |                    | 3)      |                       |            |                      |
++----------------------------+------------+---------------------+-----------+--------------------+---------+-----------------------+------------+----------------------+
+| zed_sharpen_filter_0_0     | Up-to-date | No changes required | Change    | Sharpen_filter     | 1.0     | 1.0 (Rev. 1601010713) | Included   | xc7z020clg484-1      |
+|                            |            |                     | Log not   |                    | (Rev.   |                       |            |                      |
+|                            |            |                     | available |                    | 1601010 |                       |            |                      |
++----------------------------+------------+---------------------+-----------+--------------------+---------+-----------------------+------------+----------------------+
+| zed_sharpen_filter_0_if_0  | Up-to-date | No changes required |  *(10)    | AXI4-Stream        | 2.1     | 2.1 (Rev. 6)          | Included   | xc7z020clg484-1      |
+|                            |            |                     |           | Accelerator        | (Rev.   |                       |            |                      |
+|                            |            |                     |           | Adapter            | 6)      |                       |            |                      |
++----------------------------+------------+---------------------+-----------+--------------------+---------+-----------------------+------------+----------------------+
+| zed_xlconcat_0             | Up-to-date | No changes required |  *(11)    | Concat             | 2.1     | 2.1 (Rev. 2)          | Included   | xc7z020clg484-1      |
+|                            |            |                     |           |                    | (Rev.   |                       |            |                      |
+|                            |            |                     |           |                    | 2)      |                       |            |                      |
++----------------------------+------------+---------------------+-----------+--------------------+---------+-----------------------+------------+----------------------+
+*(1) c:/Xilinx/SDSoC/2015.4/Vivado/2015.4/data/ip/xilinx/axi_interconnect_v2_1/doc/axi_interconnect_v2_1_changelog.txt
+*(2) c:/Xilinx/SDSoC/2015.4/Vivado/2015.4/data/ip/xilinx/axi_interconnect_v2_1/doc/axi_interconnect_v2_1_changelog.txt
+*(3) c:/Xilinx/SDSoC/2015.4/Vivado/2015.4/data/ip/xilinx/axi_dma_v7_1/doc/axi_dma_v7_1_changelog.txt
+*(4) c:/Xilinx/SDSoC/2015.4/Vivado/2015.4/data/ip/xilinx/axi_dma_v7_1/doc/axi_dma_v7_1_changelog.txt
+*(5) c:/Xilinx/SDSoC/2015.4/Vivado/2015.4/data/ip/xilinx/proc_sys_reset_v5_0/doc/proc_sys_reset_v5_0_changelog.txt
+*(6) c:/Xilinx/SDSoC/2015.4/Vivado/2015.4/data/ip/xilinx/proc_sys_reset_v5_0/doc/proc_sys_reset_v5_0_changelog.txt
+*(7) c:/Xilinx/SDSoC/2015.4/Vivado/2015.4/data/ip/xilinx/proc_sys_reset_v5_0/doc/proc_sys_reset_v5_0_changelog.txt
+*(8) c:/Xilinx/SDSoC/2015.4/Vivado/2015.4/data/ip/xilinx/proc_sys_reset_v5_0/doc/proc_sys_reset_v5_0_changelog.txt
+*(9) c:/Xilinx/SDSoC/2015.4/Vivado/2015.4/data/ip/xilinx/processing_system7_v5_5/doc/processing_system7_v5_5_changelog.txt
+*(10) c:/Xilinx/SDSoC/2015.4/Vivado/2015.4/data/ip/xilinx/axis_accelerator_adapter_v2_1/doc/axis_accelerator_adapter_v2_1_changelog.txt
+*(11) c:/Xilinx/SDSoC/2015.4/Vivado/2015.4/data/rsb/iprepos/xilinx.com_ip_xlconcat_2.1/doc/xlconcat_v2_1_changelog.txt
+
+
+# validate_bd_design
+validate_bd_design: Time (s): cpu = 00:00:08 ; elapsed = 00:00:15 . Memory (MB): peak = 475.961 ; gain = 7.605
+# update_compile_order -fileset sim_1
+# update_compile_order -fileset sources_1
+# if {[llength [get_files *.bd]] == 1 } {
+#   set bd_file [get_files *.bd]
+# } else {
+#   set bd_file [get_files zed.bd]
+# }
+# generate_target all [get_files -of_objects [get_fileset {sources_1}] $bd_file]
+INFO: [BD 41-1662] The design 'zed.bd' is already validated. Therefore parameter propagation will not be re-run.
+WARNING: [BD 41-235] Width mismatch when connecting pin: '/axi_ic_ps7_S_AXI_HP0/m00_couplers/m00_regslice/m_axi_rid'(1) to net 'm00_regslice_to_m00_couplers_RID'(6) - Only lower order bits will be connected.
+WARNING: [BD 41-235] Width mismatch when connecting pin: '/axi_ic_ps7_S_AXI_HP0/m00_couplers/m00_regslice/m_axi_bid'(1) to net 'm00_regslice_to_m00_couplers_BID'(6) - Only lower order bits will be connected.
+WARNING: [BD 41-235] Width mismatch when connecting pin: '/ps7/S_AXI_HP0_WID'(6) to net 'axi_ic_ps7_S_AXI_HP0_M00_AXI_WID'(1) - Only lower order bits will be connected.
+WARNING: [BD 41-235] Width mismatch when connecting pin: '/ps7/S_AXI_HP0_ARID'(6) to net 'axi_ic_ps7_S_AXI_HP0_M00_AXI_ARID'(1) - Only lower order bits will be connected.
+WARNING: [BD 41-235] Width mismatch when connecting pin: '/ps7/S_AXI_HP0_AWID'(6) to net 'axi_ic_ps7_S_AXI_HP0_M00_AXI_AWID'(1) - Only lower order bits will be connected.
+Verilog Output written to : C:/xup/SDSoC/labs/lab5/SDDebug/_sds/p0/ipi/zed.srcs/sources_1/bd/zed/hdl/zed.v
+Verilog Output written to : C:/xup/SDSoC/labs/lab5/SDDebug/_sds/p0/ipi/zed.srcs/sources_1/bd/zed/hdl/zed_wrapper.v
+Wrote  : <C:/xup/SDSoC/labs/lab5/SDDebug/_sds/p0/ipi/zed.srcs/sources_1/bd/zed/zed.bd> 
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'zed_ps7_0'...
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'zed_ps7_0'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'zed_ps7_0'...
+WARNING: [xilinx.com:ip:processing_system7:5.5-1] zed_ps7_0: The Zynq BFM requires an AXI BFM license to run. Please ensure that you have purchased and setup the AXI BFM license prior to running simulation with this block. Please contact your Xilinx sales office for more information on purchasing this license
+INFO: [IP_Flow 19-1686] Generating 'Miscellaneous' target for IP 'zed_ps7_0'...
+INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'zed_ps7_0'...
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7 .
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'zed_xlconcat_0'...
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'zed_xlconcat_0'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'zed_xlconcat_0'...
+INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'zed_xlconcat_0'...
+INFO: [BD 41-1029] Generation completed for the IP Integrator block xlconcat .
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'zed_proc_sys_reset_1_0'...
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'zed_proc_sys_reset_1_0'...
+INFO: [Device 21-403] Loading part xc7z020clg484-1
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'zed_proc_sys_reset_1_0'...
+INFO: [IP_Flow 19-1686] Generating 'Implementation' target for IP 'zed_proc_sys_reset_1_0'...
+INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'zed_proc_sys_reset_1_0'...
+INFO: [BD 41-1029] Generation completed for the IP Integrator block proc_sys_reset_1 .
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'zed_proc_sys_reset_2_1'...
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'zed_proc_sys_reset_2_1'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'zed_proc_sys_reset_2_1'...
+INFO: [IP_Flow 19-1686] Generating 'Implementation' target for IP 'zed_proc_sys_reset_2_1'...
+INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'zed_proc_sys_reset_2_1'...
+INFO: [BD 41-1029] Generation completed for the IP Integrator block proc_sys_reset_2 .
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'zed_proc_sys_reset_3_2'...
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'zed_proc_sys_reset_3_2'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'zed_proc_sys_reset_3_2'...
+INFO: [IP_Flow 19-1686] Generating 'Implementation' target for IP 'zed_proc_sys_reset_3_2'...
+INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'zed_proc_sys_reset_3_2'...
+INFO: [BD 41-1029] Generation completed for the IP Integrator block proc_sys_reset_3 .
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'zed_proc_sys_reset_0_3'...
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'zed_proc_sys_reset_0_3'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'zed_proc_sys_reset_0_3'...
+INFO: [IP_Flow 19-1686] Generating 'Implementation' target for IP 'zed_proc_sys_reset_0_3'...
+INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'zed_proc_sys_reset_0_3'...
+INFO: [BD 41-1029] Generation completed for the IP Integrator block proc_sys_reset_0 .
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'zed_dm_0_0'...
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'zed_dm_0_0'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'zed_dm_0_0'...
+INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'zed_dm_0_0'...
+INFO: [BD 41-1029] Generation completed for the IP Integrator block dm_0 .
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'zed_dm_1_0'...
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'zed_dm_1_0'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'zed_dm_1_0'...
+INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'zed_dm_1_0'...
+INFO: [BD 41-1029] Generation completed for the IP Integrator block dm_1 .
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'zed_sharpen_filter_0_0'...
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'zed_sharpen_filter_0_0'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'zed_sharpen_filter_0_0'...
+INFO: [IP_Flow 19-1686] Generating 'Miscellaneous' target for IP 'zed_sharpen_filter_0_0'...
+INFO: [BD 41-1029] Generation completed for the IP Integrator block sharpen_filter_0 .
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'zed_sharpen_filter_0_if_0'...
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'zed_sharpen_filter_0_if_0'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'zed_sharpen_filter_0_if_0'...
+INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'zed_sharpen_filter_0_if_0'...
+INFO: [BD 41-1029] Generation completed for the IP Integrator block sharpen_filter_0_if .
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'zed_xbar_0'...
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'zed_xbar_0'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'zed_xbar_0'...
+INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'zed_xbar_0'...
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_ic_ps7_M_AXI_GP0/xbar .
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'zed_xbar_1'...
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'zed_xbar_1'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'zed_xbar_1'...
+INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'zed_xbar_1'...
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_ic_ps7_S_AXI_HP0/xbar .
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'zed_s00_regslice_0'...
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'zed_s00_regslice_0'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'zed_s00_regslice_0'...
+INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'zed_s00_regslice_0'...
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_ic_ps7_M_AXI_GP0/s00_couplers/s00_regslice .
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'zed_s00_data_fifo_0'...
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'zed_s00_data_fifo_0'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'zed_s00_data_fifo_0'...
+INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'zed_s00_data_fifo_0'...
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_ic_ps7_M_AXI_GP0/s00_couplers/s00_data_fifo .
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'zed_m00_regslice_0'...
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'zed_m00_regslice_0'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'zed_m00_regslice_0'...
+INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'zed_m00_regslice_0'...
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_ic_ps7_M_AXI_GP0/m00_couplers/m00_regslice .
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'zed_m01_regslice_0'...
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'zed_m01_regslice_0'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'zed_m01_regslice_0'...
+INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'zed_m01_regslice_0'...
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_ic_ps7_M_AXI_GP0/m01_couplers/m01_regslice .
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'zed_m02_regslice_0'...
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'zed_m02_regslice_0'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'zed_m02_regslice_0'...
+INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'zed_m02_regslice_0'...
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_ic_ps7_M_AXI_GP0/m02_couplers/m02_regslice .
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'zed_s00_regslice_1'...
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'zed_s00_regslice_1'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'zed_s00_regslice_1'...
+INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'zed_s00_regslice_1'...
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_ic_ps7_S_AXI_HP0/s00_couplers/s00_regslice .
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'zed_s00_data_fifo_1'...
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'zed_s00_data_fifo_1'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'zed_s00_data_fifo_1'...
+INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'zed_s00_data_fifo_1'...
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_ic_ps7_S_AXI_HP0/s00_couplers/s00_data_fifo .
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'zed_s01_regslice_0'...
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'zed_s01_regslice_0'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'zed_s01_regslice_0'...
+INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'zed_s01_regslice_0'...
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_ic_ps7_S_AXI_HP0/s01_couplers/s01_regslice .
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'zed_s01_data_fifo_0'...
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'zed_s01_data_fifo_0'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'zed_s01_data_fifo_0'...
+INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'zed_s01_data_fifo_0'...
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_ic_ps7_S_AXI_HP0/s01_couplers/s01_data_fifo .
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'zed_m00_data_fifo_0'...
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'zed_m00_data_fifo_0'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'zed_m00_data_fifo_0'...
+INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'zed_m00_data_fifo_0'...
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_ic_ps7_S_AXI_HP0/m00_couplers/m00_data_fifo .
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'zed_m00_regslice_1'...
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'zed_m00_regslice_1'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'zed_m00_regslice_1'...
+INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'zed_m00_regslice_1'...
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_ic_ps7_S_AXI_HP0/m00_couplers/m00_regslice .
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'zed_auto_pc_0'...
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'zed_auto_pc_0'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'zed_auto_pc_0'...
+INFO: [Common 17-14] Message 'IP_Flow 19-1686' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_ic_ps7_M_AXI_GP0/s00_couplers/auto_pc .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_ic_ps7_S_AXI_HP0/m00_couplers/auto_pc .
+Exporting to file C:/xup/SDSoC/labs/lab5/SDDebug/_sds/p0/ipi/zed.srcs/sources_1/bd/zed/hw_handoff/zed.hwh
+Generated Block Design Tcl file C:/xup/SDSoC/labs/lab5/SDDebug/_sds/p0/ipi/zed.srcs/sources_1/bd/zed/hw_handoff/zed_bd.tcl
+Generated Hardware Definition File C:/xup/SDSoC/labs/lab5/SDDebug/_sds/p0/ipi/zed.srcs/sources_1/bd/zed/hdl/zed.hwdef
+generate_target: Time (s): cpu = 00:00:34 ; elapsed = 00:00:45 . Memory (MB): peak = 680.313 ; gain = 199.707
+# file mkdir C:/xup/SDSoC/labs/lab5/SDDebug/_sds/p0/ipi/zed.sdk
+# write_hwdef -force -file C:/xup/SDSoC/labs/lab5/SDDebug/_sds/p0/ipi/zed.sdk/zed.hdf
+# close_project
+INFO: [Common 17-206] Exiting Vivado at Fri Jan 01 07:15:15 2016...

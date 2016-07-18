@@ -1,0 +1,13 @@
+{
+	"file":	"C:/xup/SDSoC/labs/lab5/src/SDSoC_lab_design_main.c",
+	"callers":	[{
+			"call":	"sharpen_filter",
+			"line":	93,
+			"repl":	"_p0_sharpen_filter_0"
+		}],
+	"parents":	[{
+			"function":	"main",
+			"proto":	"#ifdef __cplusplus\nextern \"C\" {\n#endif\nint _p0_sharpen_filter_0(uint8_t * input, uint8_t * output);\n#ifdef __cplusplus\n}\n#endif\n"
+		}],
+	"waits":	[]
+}

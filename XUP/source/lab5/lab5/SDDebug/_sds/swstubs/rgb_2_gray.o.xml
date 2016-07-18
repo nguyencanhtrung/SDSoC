@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xd:data xmlns:xd="http://www.xilinx.com/xd">
+  <xd:source name="rgb_2_gray.c" compiler="gcc" objfile="src/rgb_2_gray.o" srcpath="C:/xup/SDSoC/labs/lab5/src" flags="-IC:/xup/SDSoC/labs/lab5/src -IC:/xup/SDSoC/labs/lab5/src -Wall -O0 -g -fmessage-length=0 -MMD -MP -D __SDSCC__"/>
+</xd:data>

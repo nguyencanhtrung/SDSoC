@@ -1,0 +1,28 @@
+(c) Copyright 2012-2015 Xilinx, Inc. All Rights Reserved.
+#-----------------------------------------------------------
+# Tool version  : sdscc 2015.4 SW Build on Dec 14 2015 23:02:57
+# Start time    : Fri Jan 01 08:42:52 -0800 2016
+# Command line  : sdscc -Wall -O0 -g -I../src -c -fmessage-length=0 -MTsrc/edge_detect.o -MMD -MP -MFsrc/edge_detect.d -MTsrc/edge_detect.d -o src/edge_detect.o ../src/edge_detect.c -sds-hw sharpen_filter sharpen.c -clkid 1 -sds-end -sds-pf zed
+# Log file      : C:/xup/SDSoC/labs/lab5a/SDDebug/_sds/reports/sds_edge_detect.log
+# Journal file  : C:/xup/SDSoC/labs/lab5a/SDDebug/_sds/reports/sds_edge_detect.jou
+# Report file   : C:/xup/SDSoC/labs/lab5a/SDDebug/_sds/reports/sds_edge_detect.rpt
+#-----------------------------------------------------------
+
+INFO: [SDSoC 0-0] Create data motion intermediate representation
+clang_wrapper -target arm-xilinx-linux-gnueabi -mcpu=cortex-a9 -mfpu=vfp -O0 -g     -I C:/Xilinx/SDSoC/2015.4/arm-xilinx-linux-gnueabi/include  -I C:/Xilinx/SDSoC/2015.4/Vivado_HLS/2015.4/include   -IC:/Xilinx/SDSoC/2015.4/SDK/2015.4/gnu/arm/nt/lib/gcc/arm-xilinx-linux-gnueabi/4.9.2/include  -IC:/Xilinx/SDSoC/2015.4/SDK/2015.4/gnu/arm/nt/lib/gcc/arm-xilinx-linux-gnueabi/4.9.2/include-fixed  -IC:/Xilinx/SDSoC/2015.4/SDK/2015.4/gnu/arm/nt/arm-xilinx-linux-gnueabi/include  -IC:/Xilinx/SDSoC/2015.4/SDK/2015.4/gnu/arm/nt/arm-xilinx-linux-gnueabi/libc/usr/include -I../src -Wall -g -fmessage-length=0 -MMD -MP -D __SDSCC__ -emit-llvm -S C:/xup/SDSoC/labs/lab5a/src/edge_detect.c -o C:/xup/SDSoC/labs/lab5a/SDDebug/_sds/.llvm/src/edge_detect.s
+
+C:\xup\SDSoC\labs\lab5a\SDDebug>C:\Xilinx\SDSoC\2015.4\llvm-clang\win64\llvm\bin\clang.exe -target arm-xilinx-linux-gnueabi -mcpu=cortex-a9 -mfpu=vfp -O0 -g -I C:/Xilinx/SDSoC/2015.4/arm-xilinx-linux-gnueabi/include -I C:/Xilinx/SDSoC/2015.4/Vivado_HLS/2015.4/include -IC:/Xilinx/SDSoC/2015.4/SDK/2015.4/gnu/arm/nt/lib/gcc/arm-xilinx-linux-gnueabi/4.9.2/include -IC:/Xilinx/SDSoC/2015.4/SDK/2015.4/gnu/arm/nt/lib/gcc/arm-xilinx-linux-gnueabi/4.9.2/include-fixed -IC:/Xilinx/SDSoC/2015.4/SDK/2015.4/gnu/arm/nt/arm-xilinx-linux-gnueabi/include -IC:/Xilinx/SDSoC/2015.4/SDK/2015.4/gnu/arm/nt/arm-xilinx-linux-gnueabi/libc/usr/include -I../src -Wall -g -fmessage-length=0 -MMD -MP -D __SDSCC__ -emit-llvm -S C:/xup/SDSoC/labs/lab5a/src/edge_detect.c -o C:/xup/SDSoC/labs/lab5a/SDDebug/_sds/.llvm/src/edge_detect.s 
+
+C:\xup\SDSoC\labs\lab5a\SDDebug>exit /b 0 
+INFO: [SDSoC 0-0] Compiling C:/xup/SDSoC/labs/lab5a/src/edge_detect.c
+arm-xilinx-linux-gnueabi-gcc -c -I../src -Wall -O0 -g -fmessage-length=0 -MMD -MP -D __SDSCC__ -MTC:/xup/SDSoC/labs/lab5a/SDDebug/src/edge_detect.o -MFC:/xup/SDSoC/labs/lab5a/SDDebug/src/edge_detect.d -MTC:/xup/SDSoC/labs/lab5a/SDDebug/src/edge_detect.d   -I C:/Xilinx/SDSoC/2015.4/arm-xilinx-linux-gnueabi/include  -I C:/Xilinx/SDSoC/2015.4/Vivado_HLS/2015.4/include C:/xup/SDSoC/labs/lab5a/src/edge_detect.c -o src/edge_detect.o
+C:/xup/SDSoC/labs/lab5a/src/edge_detect.c: In function 'sobel_filter':
+C:/xup/SDSoC/labs/lab5a/src/edge_detect.c: In function 'linebuffer_shift_up':
+C:/xup/SDSoC/labs/lab5a/src/edge_detect.c: In function 'linebuffer_getval':
+C:/xup/SDSoC/labs/lab5a/src/edge_detect.c: In function 'linebuffer_insert_bottom':
+C:/xup/SDSoC/labs/lab5a/src/edge_detect.c: In function 'window_shift_right':
+C:/xup/SDSoC/labs/lab5a/src/edge_detect.c: In function 'window_insert':
+C:/xup/SDSoC/labs/lab5a/src/edge_detect.c: In function 'window_getval':
+arm-xilinx-linux-gnueabi-objcopy --add-section .xdsdata=C:/xup/SDSoC/labs/lab5a/SDDebug/_sds/swstubs/edge_detect.o.xml src/edge_detect.o
+sdscc log file saved as C:/xup/SDSoC/labs/lab5a/SDDebug/_sds/reports/sds_edge_detect.log
+sdscc completed at Fri Jan 01 08:42:53 -0800 2016

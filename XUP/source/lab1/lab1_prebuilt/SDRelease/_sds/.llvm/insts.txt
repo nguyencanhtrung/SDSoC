@@ -1,0 +1,114 @@
+SW(2)@127\n   %8 = call i8* @sds_alloc(i32 4096), !dbg !193
+SW(3)@128\n   %10 = call i8* @sds_alloc(i32 4096), !dbg !196
+SW(5)@125\n   %4 = call i8* @sds_alloc(i32 4096), !dbg !187
+SW(6)@126\n   %6 = call i8* @sds_alloc(i32 4096), !dbg !190
+SW(7)@95\n   call void @_ZL13mmultadd_initPfS_S_S_S_(float* %A, float* %B, float* %C, float* %Ds, float* %D), !dbg !205
+SW(8)@104\n   call void @_Z12mmult_goldenPfS_S_(float* %A, float* %B, float* %27), !dbg !223
+SW(9)@105\n   call void @_Z11madd_goldenPfS_S_(float* %28, float* %C, float* %Ds), !dbg !224
+SW(10)@108\n   %42 = call zeroext i1 @_ZL18mmult_result_checkPfS_(float* %D, float* %Ds), !dbg !235
+SW(11)@115\n   ret i1 %storemerge1, !dbg !243
+SW(12)@0\n   %tmp1 = alloca [1024 x float], align 4
+SW(13)@0\n   %tmp2 = alloca [1024 x float], align 4
+SW(14)@88\n   call void @llvm.dbg.value(metadata !{float* %A}, i64 0, metadata !179), !dbg !180
+SW(15)@88\n   call void @llvm.dbg.value(metadata !{float* %B}, i64 0, metadata !181), !dbg !182
+SW(16)@88\n   call void @llvm.dbg.value(metadata !{float* %C}, i64 0, metadata !183), !dbg !184
+SW(17)@88\n   call void @llvm.dbg.value(metadata !{float* %Ds}, i64 0, metadata !185), !dbg !186
+SW(18)@88\n   call void @llvm.dbg.value(metadata !{float* %D}, i64 0, metadata !187), !dbg !188
+SW(19)@90\n   %1 = call dereferenceable(140) %"class.std::basic_ostream"* @_ZStlsISt11char_traitsIcEERSt13basic_ostreamIcT_ES5_PKc(%"class.std::basic_ostream"* dereferenceable(140) @_ZSt4cout, i8* getelementptr inbounds ([17 x i8]* @.str, i32 0, i32 0)), !dbg !189
+SW(20)@90\n   %2 = call dereferenceable(140) %"class.std::basic_ostream"* @_ZNSolsEPFRSoS_E(%"class.std::basic_ostream"* %1, %"class.std::basic_ostream"* (%"class.std::basic_ostream"*)* @_ZSt4endlIcSt11char_traitsIcEERSt13basic_ostreamIT_T0_ES6_), !dbg !189
+SW(21)@92\n   call void @llvm.dbg.declare(metadata !{[1024 x float]* %tmp1}, metadata !190), !dbg !194
+SW(22)@92\n   call void @llvm.dbg.declare(metadata !{[1024 x float]* %tmp2}, metadata !195), !dbg !196
+SW(23)@94\n   call void @llvm.dbg.value(metadata !197, i64 0, metadata !198), !dbg !200
+SW(24)@94\n   br label %3, !dbg !201
+SW(25)@0\n   %storemerge = phi i32 [ 0, %0 ], [ %46, %45 ]
+SW(26)@94\n   call void @llvm.dbg.value(metadata !{null}, i64 0, metadata !198), !dbg !200
+SW(27)@94\n   %4 = icmp slt i32 %storemerge, 1024, !dbg !202
+SW(28)@94\n   br i1 %4, label %5, label %47, !dbg !202
+SW(29)@88\n   call void @llvm.dbg.value(metadata !{null}, i64 0, metadata !179), !dbg !180
+SW(30)@88\n   call void @llvm.dbg.value(metadata !{null}, i64 0, metadata !181), !dbg !182
+SW(31)@88\n   call void @llvm.dbg.value(metadata !{null}, i64 0, metadata !183), !dbg !184
+SW(32)@88\n   call void @llvm.dbg.value(metadata !{null}, i64 0, metadata !185), !dbg !186
+SW(33)@88\n   call void @llvm.dbg.value(metadata !{null}, i64 0, metadata !187), !dbg !188
+SW(34)@97\n   %6 = call i64 @sds_clock_counter(), !dbg !207
+SW(35)@97\n   store i64 %6, i64* @hw_sds_counter, align 8, !dbg !207
+SW(36)@97\n   %7 = load i32* @hw_sds_counter_num_calls, align 4, !dbg !207
+SW(37)@97\n   %8 = add i32 %7, 1, !dbg !207
+SW(38)@97\n   store i32 %8, i32* @hw_sds_counter_num_calls, align 4, !dbg !207
+SW(39)@88\n   call void @llvm.dbg.value(metadata !{null}, i64 0, metadata !179), !dbg !180
+SW(40)@88\n   call void @llvm.dbg.value(metadata !{null}, i64 0, metadata !181), !dbg !182
+SW(41)@98\n   %9 = getelementptr inbounds [1024 x float]* %tmp1, i32 0, i32 0, !dbg !209
+SW(42)@100\n   %10 = getelementptr inbounds [1024 x float]* %tmp1, i32 0, i32 0, !dbg !210
+SW(43)@88\n   call void @llvm.dbg.value(metadata !{null}, i64 0, metadata !183), !dbg !184
+SW(44)@88\n   call void @llvm.dbg.value(metadata !{null}, i64 0, metadata !187), !dbg !188
+SW(45)@101\n   %11 = call i64 @sds_clock_counter(), !dbg !211
+SW(46)@101\n   call void @llvm.dbg.value(metadata !{i64 %11}, i64 0, metadata !213), !dbg !211
+SW(47)@101\n   call void @llvm.dbg.value(metadata !{null}, i64 0, metadata !213), !dbg !211
+SW(48)@101\n   %12 = load i64* @hw_sds_counter, align 8, !dbg !211
+SW(49)@101\n   %13 = icmp ult i64 %11, %12, !dbg !211
+SW(50)@101\n   br i1 %13, label %14, label %17, !dbg !211
+SW(51)@101\n   %15 = load i64* @hw_sds_counter, align 8, !dbg !214
+SW(52)@101\n   call void @llvm.dbg.value(metadata !{null}, i64 0, metadata !213), !dbg !211
+SW(53)@101\n   %16 = sub i64 %15, %11, !dbg !214
+SW(54)@101\n   br label %20, !dbg !214
+SW(55)@101\n   call void @llvm.dbg.value(metadata !{null}, i64 0, metadata !213), !dbg !211
+SW(56)@101\n   %18 = load i64* @hw_sds_counter, align 8, !dbg !216
+SW(57)@101\n   %19 = sub i64 %11, %18, !dbg !216
+SW(58)@101\n   br label %20, !dbg !216
+SW(59)@101\n   %21 = phi i64 [ %16, %14 ], [ %19, %17 ], !dbg !211
+SW(60)@101\n   %22 = load i64* @hw_sds_counter_total, align 8, !dbg !218
+SW(61)@101\n   %23 = add i64 %22, %21, !dbg !218
+SW(62)@101\n   store i64 %23, i64* @hw_sds_counter_total, align 8, !dbg !218
+SW(63)@103\n   %24 = call i64 @sds_clock_counter(), !dbg !221
+SW(64)@103\n   store i64 %24, i64* @sw_sds_counter, align 8, !dbg !221
+SW(65)@103\n   %25 = load i32* @sw_sds_counter_num_calls, align 4, !dbg !221
+SW(66)@103\n   %26 = add i32 %25, 1, !dbg !221
+SW(67)@103\n   store i32 %26, i32* @sw_sds_counter_num_calls, align 4, !dbg !221
+SW(68)@88\n   call void @llvm.dbg.value(metadata !{null}, i64 0, metadata !179), !dbg !180
+SW(69)@88\n   call void @llvm.dbg.value(metadata !{null}, i64 0, metadata !181), !dbg !182
+SW(70)@104\n   %27 = getelementptr inbounds [1024 x float]* %tmp2, i32 0, i32 0, !dbg !223
+SW(71)@105\n   %28 = getelementptr inbounds [1024 x float]* %tmp2, i32 0, i32 0, !dbg !224
+SW(72)@88\n   call void @llvm.dbg.value(metadata !{null}, i64 0, metadata !183), !dbg !184
+SW(73)@88\n   call void @llvm.dbg.value(metadata !{null}, i64 0, metadata !185), !dbg !186
+SW(74)@106\n   %29 = call i64 @sds_clock_counter(), !dbg !225
+SW(75)@106\n   call void @llvm.dbg.value(metadata !{i64 %29}, i64 0, metadata !227), !dbg !225
+SW(76)@106\n   call void @llvm.dbg.value(metadata !{null}, i64 0, metadata !227), !dbg !225
+SW(77)@106\n   %30 = load i64* @sw_sds_counter, align 8, !dbg !225
+SW(78)@106\n   %31 = icmp ult i64 %29, %30, !dbg !225
+SW(79)@106\n   br i1 %31, label %32, label %35, !dbg !225
+SW(80)@106\n   %33 = load i64* @sw_sds_counter, align 8, !dbg !228
+SW(81)@106\n   call void @llvm.dbg.value(metadata !{null}, i64 0, metadata !227), !dbg !225
+SW(82)@106\n   %34 = sub i64 %33, %29, !dbg !228
+SW(83)@106\n   br label %38, !dbg !228
+SW(84)@106\n   call void @llvm.dbg.value(metadata !{null}, i64 0, metadata !227), !dbg !225
+SW(85)@106\n   %36 = load i64* @sw_sds_counter, align 8, !dbg !230
+SW(86)@106\n   %37 = sub i64 %29, %36, !dbg !230
+SW(87)@106\n   br label %38, !dbg !230
+SW(88)@106\n   %39 = phi i64 [ %34, %32 ], [ %37, %35 ], !dbg !225
+SW(89)@106\n   %40 = load i64* @sw_sds_counter_total, align 8, !dbg !232
+SW(90)@106\n   %41 = add i64 %40, %39, !dbg !232
+SW(91)@106\n   store i64 %41, i64* @sw_sds_counter_total, align 8, !dbg !232
+SW(92)@88\n   call void @llvm.dbg.value(metadata !{null}, i64 0, metadata !187), !dbg !188
+SW(93)@88\n   call void @llvm.dbg.value(metadata !{null}, i64 0, metadata !185), !dbg !186
+SW(94)@108\n   br i1 %42, label %44, label %43, !dbg !235
+SW(95)@109\n   br label %62, !dbg !237
+SW(96)@110\n   br label %45, !dbg !238
+SW(97)@94\n   call void @llvm.dbg.value(metadata !{null}, i64 0, metadata !198), !dbg !200
+SW(98)@94\n   %46 = add nsw i32 %storemerge, 1, !dbg !239
+SW(99)@94\n   call void @llvm.dbg.value(metadata !{i32 %46}, i64 0, metadata !198), !dbg !200
+SW(100)@94\n   br label %3, !dbg !239
+SW(101)@111\n   %48 = call dereferenceable(140) %"class.std::basic_ostream"* @_ZStlsISt11char_traitsIcEERSt13basic_ostreamIcT_ES5_PKc(%"class.std::basic_ostream"* dereferenceable(140) @_ZSt4cout, i8* getelementptr inbounds ([20 x i8]* @.str1, i32 0, i32 0)), !dbg !240
+SW(102)@111\n   %49 = load i64* @sw_sds_counter_total, align 8, !dbg !240
+SW(103)@111\n   %50 = load i32* @sw_sds_counter_num_calls, align 4, !dbg !240
+SW(104)@111\n   %51 = zext i32 %50 to i64, !dbg !240
+SW(105)@111\n   %52 = udiv i64 %49, %51, !dbg !240
+SW(106)@111\n   %53 = call dereferenceable(140) %"class.std::basic_ostream"* @_ZNSolsEy(%"class.std::basic_ostream"* %48, i64 %52), !dbg !240
+SW(107)@111\n   %54 = call dereferenceable(140) %"class.std::basic_ostream"* @_ZNSolsEPFRSoS_E(%"class.std::basic_ostream"* %53, %"class.std::basic_ostream"* (%"class.std::basic_ostream"*)* @_ZSt4endlIcSt11char_traitsIcEERSt13basic_ostreamIT_T0_ES6_), !dbg !240
+SW(108)@112\n   %55 = call dereferenceable(140) %"class.std::basic_ostream"* @_ZStlsISt11char_traitsIcEERSt13basic_ostreamIcT_ES5_PKc(%"class.std::basic_ostream"* dereferenceable(140) @_ZSt4cout, i8* getelementptr inbounds ([20 x i8]* @.str2, i32 0, i32 0)), !dbg !241
+SW(109)@112\n   %56 = load i64* @hw_sds_counter_total, align 8, !dbg !241
+SW(110)@112\n   %57 = load i32* @hw_sds_counter_num_calls, align 4, !dbg !241
+SW(111)@112\n   %58 = zext i32 %57 to i64, !dbg !241
+SW(112)@112\n   %59 = udiv i64 %56, %58, !dbg !241
+SW(113)@112\n   %60 = call dereferenceable(140) %"class.std::basic_ostream"* @_ZNSolsEy(%"class.std::basic_ostream"* %55, i64 %59), !dbg !241
+SW(114)@112\n   %61 = call dereferenceable(140) %"class.std::basic_ostream"* @_ZNSolsEPFRSoS_E(%"class.std::basic_ostream"* %60, %"class.std::basic_ostream"* (%"class.std::basic_ostream"*)* @_ZSt4endlIcSt11char_traitsIcEERSt13basic_ostreamIT_T0_ES6_), !dbg !241
+SW(115)@114\n   br label %62, !dbg !242
+SW(116)@0\n   %storemerge1 = phi i1 [ false, %43 ], [ true, %47 ]

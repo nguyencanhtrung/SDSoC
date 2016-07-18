@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xd:data xmlns:xd="http://www.xilinx.com/xd">
+  <xd:source name="edge_detect.c" compiler="gcc" objfile="src/edge_detect.o" srcpath="C:/xup/SDSoC/labs/lab5a/src" flags="-IC:/xup/SDSoC/labs/lab5a/src -IC:/xup/SDSoC/labs/lab5a/src -Wall -O0 -g -fmessage-length=0 -MMD -MP -D __SDSCC__"/>
+</xd:data>

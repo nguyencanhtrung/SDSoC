@@ -1,0 +1,12 @@
+/* C:/xup/SDSoC/labs/lab5a/SDDebug/_sds/p0/.boot/boot.bif */
+/* Command to create bitstream .bin file:       */
+/*   bootgen -image <bif_file> -split bin -w    */
+/* Command to create BOOT.BIN file:             */
+/*   bootgen -image <bif_file> -w -o i BOOT.BIN */
+/* linux */
+the_ROM_image:
+{
+  [bootloader]C:/Xilinx/SDSoC/2015.4/platforms/zed/boot/fsbl.elf
+  C:/xup/SDSoC/labs/lab5a/SDDebug/lab5a.elf.bit
+  C:/Xilinx/SDSoC/2015.4/platforms/zed/boot/u-boot.elf
+}

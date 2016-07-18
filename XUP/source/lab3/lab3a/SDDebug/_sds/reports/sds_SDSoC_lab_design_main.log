@@ -1,0 +1,39 @@
+(c) Copyright 2012-2015 Xilinx, Inc. All Rights Reserved.
+#-----------------------------------------------------------
+# Tool version  : sdscc 2015.4 SW Build on Dec 14 2015 23:02:57
+# Start time    : Fri Jan 01 05:49:58 -0800 2016
+# Command line  : sdscc -DTIME_SHARPEN -DTIME_EDGE_DETECT -Wall -O0 -g -I../src -c -fmessage-length=0 -MTsrc/SDSoC_lab_design_main.o -MMD -MP -MFsrc/SDSoC_lab_design_main.d -MTsrc/SDSoC_lab_design_main.d -o src/SDSoC_lab_design_main.o ../src/SDSoC_lab_design_main.c -sds-hw sharpen_filter sharpen.c -clkid 1 -sds-end -sds-hw sobel_filter edge_detect.c -clkid 1 -sds-end -target-os standalone -sds-pf zed
+# Log file      : C:/xup/SDSoC/labs/lab3a/SDDebug/_sds/reports/sds_SDSoC_lab_design_main.log
+# Journal file  : C:/xup/SDSoC/labs/lab3a/SDDebug/_sds/reports/sds_SDSoC_lab_design_main.jou
+# Report file   : C:/xup/SDSoC/labs/lab3a/SDDebug/_sds/reports/sds_SDSoC_lab_design_main.rpt
+#-----------------------------------------------------------
+
+INFO: [SDSoC 0-0] Create data motion intermediate representation
+clang_wrapper -target arm-xilinx-eabi -mcpu=cortex-a9 -mfpu=vfp -O0 -g     -I C:/Xilinx/SDSoC/2015.4/arm-xilinx-eabi/include  -I C:/Xilinx/SDSoC/2015.4/Vivado_HLS/2015.4/include   -IC:/Xilinx/SDSoC/2015.4/SDK/2015.4/gnu/arm/nt/lib/gcc/arm-xilinx-eabi/4.9.2/include  -IC:/Xilinx/SDSoC/2015.4/SDK/2015.4/gnu/arm/nt/lib/gcc/arm-xilinx-eabi/4.9.2/include-fixed  -IC:/Xilinx/SDSoC/2015.4/SDK/2015.4/gnu/arm/nt/arm-xilinx-eabi/include -I../src -DTIME_SHARPEN -DTIME_EDGE_DETECT -Wall -g -fmessage-length=0 -MMD -MP -D __SDSCC__ -emit-llvm -S C:/xup/SDSoC/labs/lab3a/src/SDSoC_lab_design_main.c -o C:/xup/SDSoC/labs/lab3a/SDDebug/_sds/.llvm/src/SDSoC_lab_design_main.s
+
+C:\xup\SDSoC\labs\lab3a\SDDebug>C:\Xilinx\SDSoC\2015.4\llvm-clang\win64\llvm\bin\clang.exe -target arm-xilinx-eabi -mcpu=cortex-a9 -mfpu=vfp -O0 -g -I C:/Xilinx/SDSoC/2015.4/arm-xilinx-eabi/include -I C:/Xilinx/SDSoC/2015.4/Vivado_HLS/2015.4/include -IC:/Xilinx/SDSoC/2015.4/SDK/2015.4/gnu/arm/nt/lib/gcc/arm-xilinx-eabi/4.9.2/include -IC:/Xilinx/SDSoC/2015.4/SDK/2015.4/gnu/arm/nt/lib/gcc/arm-xilinx-eabi/4.9.2/include-fixed -IC:/Xilinx/SDSoC/2015.4/SDK/2015.4/gnu/arm/nt/arm-xilinx-eabi/include -I../src -DTIME_SHARPEN -DTIME_EDGE_DETECT -Wall -g -fmessage-length=0 -MMD -MP -D __SDSCC__ -emit-llvm -S C:/xup/SDSoC/labs/lab3a/src/SDSoC_lab_design_main.c -o C:/xup/SDSoC/labs/lab3a/SDDebug/_sds/.llvm/src/SDSoC_lab_design_main.s 
+C:/Xilinx/SDSoC/2015.4/SDK/2015.4/gnu/arm/nt/arm-xilinx-eabi/include\stdlib.h:124:44: warning: unknown attribute '__warning__' ignored [-Wunknown-attributes]
+char *  _EXFUN(mktemp,(char *) _ATTRIBUTE ((__warning__ ("the use of `mktemp' is dangerous; use `mkstemp' instead"))));
+                                            ^
+C:/Xilinx/SDSoC/2015.4/SDK/2015.4/gnu/arm/nt/arm-xilinx-eabi/include/_ansi.h:105:42: note: expanded from macro '_ATTRIBUTE'
+#define _ATTRIBUTE(attrs) __attribute__ (attrs)
+                                         ^
+C:/Xilinx/SDSoC/2015.4/SDK/2015.4/gnu/arm/nt/arm-xilinx-eabi/include/_ansi.h:65:35: note: expanded from macro '_EXFUN'
+#define _EXFUN(name, proto)             name proto
+                                             ^
+C:/Xilinx/SDSoC/2015.4/SDK/2015.4/gnu/arm/nt/arm-xilinx-eabi/include\stdlib.h:131:65: warning: unknown attribute '__warning__' ignored [-Wunknown-attributes]
+char *  _EXFUN(_mktemp_r, (struct _reent *, char *) _ATTRIBUTE ((__warning__ ("the use of `mktemp' is dangerous; use `mkstemp' instead"))));
+                                                                 ^
+C:/Xilinx/SDSoC/2015.4/SDK/2015.4/gnu/arm/nt/arm-xilinx-eabi/include/_ansi.h:105:42: note: expanded from macro '_ATTRIBUTE'
+#define _ATTRIBUTE(attrs) __attribute__ (attrs)
+                                         ^
+C:/Xilinx/SDSoC/2015.4/SDK/2015.4/gnu/arm/nt/arm-xilinx-eabi/include/_ansi.h:65:35: note: expanded from macro '_EXFUN'
+#define _EXFUN(name, proto)             name proto
+                                             ^
+
+C:\xup\SDSoC\labs\lab3a\SDDebug>exit /b 0 
+INFO: [SDSoC 0-0] Compiling C:/xup/SDSoC/labs/lab3a/src/SDSoC_lab_design_main.c
+arm-xilinx-eabi-gcc -c -I../src -DTIME_SHARPEN -DTIME_EDGE_DETECT -Wall -O0 -g -fmessage-length=0 -MMD -MP -D __SDSCC__ -MTC:/xup/SDSoC/labs/lab3a/SDDebug/src/SDSoC_lab_design_main.o -MFC:/xup/SDSoC/labs/lab3a/SDDebug/src/SDSoC_lab_design_main.d -MTC:/xup/SDSoC/labs/lab3a/SDDebug/src/SDSoC_lab_design_main.d   -I C:/Xilinx/SDSoC/2015.4/arm-xilinx-eabi/include  -I C:/Xilinx/SDSoC/2015.4/Vivado_HLS/2015.4/include C:/xup/SDSoC/labs/lab3a/src/SDSoC_lab_design_main.c -o src/SDSoC_lab_design_main.o
+arm-xilinx-eabi-objcopy --add-section .xdsdata=C:/xup/SDSoC/labs/lab3a/SDDebug/_sds/swstubs/SDSoC_lab_design_main.o.xml src/SDSoC_lab_design_main.o
+sdscc log file saved as C:/xup/SDSoC/labs/lab3a/SDDebug/_sds/reports/sds_SDSoC_lab_design_main.log
+sdscc completed at Fri Jan 01 05:50:00 -0800 2016

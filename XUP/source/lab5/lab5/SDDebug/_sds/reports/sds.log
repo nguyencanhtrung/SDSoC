@@ -1,0 +1,331 @@
+(c) Copyright 2012-2015 Xilinx, Inc. All Rights Reserved.
+#-----------------------------------------------------------
+# Tool version  : sds++ 2015.4 SW Build on Dec 14 2015 23:02:57
+# Start time    : Fri Jan 01 07:13:31 -0800 2016
+# Command line  : sds++ -o lab5.elf ./src/SDSoC_lab_design_main.o ./src/edge_detect.o ./src/rgb_2_gray.o ./src/sharpen.o -dmclkid 1 -target-os standalone -sds-pf zed
+# Log file      : C:/xup/SDSoC/labs/lab5/SDDebug/_sds/reports/sds.log
+# Journal file  : C:/xup/SDSoC/labs/lab5/SDDebug/_sds/reports/sds.jou
+# Report file   : C:/xup/SDSoC/labs/lab5/SDDebug/_sds/reports/sds.rpt
+#-----------------------------------------------------------
+
+Libraries: 
+Library Paths C:/Xilinx/SDSoC/2015.4/platforms/zed/arm-xilinx-eabi/lib
+INFO: [SDSoC 0-0] Analyzing object files
+arm-xilinx-eabi-objcopy -O binary --set-section-flags .xdinfo=alloc --only-section=.xdinfo C:/xup/SDSoC/labs/lab5/SDDebug/src/SDSoC_lab_design_main.o C:/xup/SDSoC/labs/lab5/SDDebug/_sds/.data/xdinfo.xml
+arm-xilinx-eabi-objcopy -O binary --set-section-flags .xddata=alloc --only-section=.xddata C:/xup/SDSoC/labs/lab5/SDDebug/src/SDSoC_lab_design_main.o C:/xup/SDSoC/labs/lab5/SDDebug/_sds/.data/xddata.xml
+arm-xilinx-eabi-objcopy -O binary --set-section-flags .xdinfo=alloc --only-section=.xdinfo C:/xup/SDSoC/labs/lab5/SDDebug/src/edge_detect.o C:/xup/SDSoC/labs/lab5/SDDebug/_sds/.data/xdinfo.xml
+arm-xilinx-eabi-objcopy -O binary --set-section-flags .xddata=alloc --only-section=.xddata C:/xup/SDSoC/labs/lab5/SDDebug/src/edge_detect.o C:/xup/SDSoC/labs/lab5/SDDebug/_sds/.data/xddata.xml
+arm-xilinx-eabi-objcopy -O binary --set-section-flags .xdinfo=alloc --only-section=.xdinfo C:/xup/SDSoC/labs/lab5/SDDebug/src/rgb_2_gray.o C:/xup/SDSoC/labs/lab5/SDDebug/_sds/.data/xdinfo.xml
+arm-xilinx-eabi-objcopy -O binary --set-section-flags .xddata=alloc --only-section=.xddata C:/xup/SDSoC/labs/lab5/SDDebug/src/rgb_2_gray.o C:/xup/SDSoC/labs/lab5/SDDebug/_sds/.data/xddata.xml
+arm-xilinx-eabi-objcopy -O binary --set-section-flags .xdinfo=alloc --only-section=.xdinfo C:/xup/SDSoC/labs/lab5/SDDebug/src/sharpen.o C:/xup/SDSoC/labs/lab5/SDDebug/_sds/.data/xdinfo.xml
+arm-xilinx-eabi-objcopy -O binary --set-section-flags .xddata=alloc --only-section=.xddata C:/xup/SDSoC/labs/lab5/SDDebug/src/sharpen.o C:/xup/SDSoC/labs/lab5/SDDebug/_sds/.data/sharpen_filter.xml
+arm-xilinx-eabi-objcopy -O binary --set-section-flags .xdpp=alloc --only-section=.xdpp C:/xup/SDSoC/labs/lab5/SDDebug/src/sharpen.o C:/xup/SDSoC/labs/lab5/SDDebug/_sds/.pp/sharpen.i
+arm-xilinx-eabi-objcopy -O binary --set-section-flags .xdfcnmap=alloc --only-section=.xdfcnmap C:/xup/SDSoC/labs/lab5/SDDebug/src/sharpen.o C:/xup/SDSoC/labs/lab5/SDDebug/_sds/.cdb/sharpen_filter.fcnmap.xml
+arm-xilinx-eabi-objcopy -O binary --set-section-flags .xdhlscore=alloc --only-section=.xdhlscore C:/xup/SDSoC/labs/lab5/SDDebug/src/sharpen.o C:/xup/SDSoC/labs/lab5/SDDebug/_sds/iprepo/repo/xilinx_com_hls_sharpen_filter_1_0/xilinx_com_hls_sharpen_filter_1_0.zip
+unzip -u -o C:/xup/SDSoC/labs/lab5/SDDebug/_sds/iprepo/repo/xilinx_com_hls_sharpen_filter_1_0/xilinx_com_hls_sharpen_filter_1_0.zip -d C:/xup/SDSoC/labs/lab5/SDDebug/_sds/iprepo/repo/xilinx_com_hls_sharpen_filter_1_0
+Archive:  C:/xup/SDSoC/labs/lab5/SDDebug/_sds/iprepo/repo/xilinx_com_hls_sharpen_filter_1_0/xilinx_com_hls_sharpen_filter_1_0.zip
+  inflating: C:/xup/SDSoC/labs/lab5/SDDebug/_sds/iprepo/repo/xilinx_com_hls_sharpen_filter_1_0/component.xml  
+  inflating: C:/xup/SDSoC/labs/lab5/SDDebug/_sds/iprepo/repo/xilinx_com_hls_sharpen_filter_1_0/constraints/sharpen_filter_ooc.xdc  
+  inflating: C:/xup/SDSoC/labs/lab5/SDDebug/_sds/iprepo/repo/xilinx_com_hls_sharpen_filter_1_0/hdl/verilog/sharpen_filter.v  
+  inflating: C:/xup/SDSoC/labs/lab5/SDDebug/_sds/iprepo/repo/xilinx_com_hls_sharpen_filter_1_0/hdl/verilog/sharpen_filter_buff_A_0.v  
+  inflating: C:/xup/SDSoC/labs/lab5/SDDebug/_sds/iprepo/repo/xilinx_com_hls_sharpen_filter_1_0/hdl/verilog/sharpen_filter_buff_A_2.v  
+  inflating: C:/xup/SDSoC/labs/lab5/SDDebug/_sds/iprepo/repo/xilinx_com_hls_sharpen_filter_1_0/hdl/vhdl/sharpen_filter.vhd  
+  inflating: C:/xup/SDSoC/labs/lab5/SDDebug/_sds/iprepo/repo/xilinx_com_hls_sharpen_filter_1_0/hdl/vhdl/sharpen_filter_buff_A_0.vhd  
+  inflating: C:/xup/SDSoC/labs/lab5/SDDebug/_sds/iprepo/repo/xilinx_com_hls_sharpen_filter_1_0/hdl/vhdl/sharpen_filter_buff_A_2.vhd  
+  inflating: C:/xup/SDSoC/labs/lab5/SDDebug/_sds/iprepo/repo/xilinx_com_hls_sharpen_filter_1_0/doc/ReleaseNotes.txt  
+  inflating: C:/xup/SDSoC/labs/lab5/SDDebug/_sds/iprepo/repo/xilinx_com_hls_sharpen_filter_1_0/misc/logo.png  
+  inflating: C:/xup/SDSoC/labs/lab5/SDDebug/_sds/iprepo/repo/xilinx_com_hls_sharpen_filter_1_0/xgui/sharpen_filter_v1_0.tcl  
+arm-xilinx-eabi-objcopy -O binary --set-section-flags .xdif=alloc --only-section=.xdif C:/xup/SDSoC/labs/lab5/SDDebug/src/sharpen.o C:/xup/SDSoC/labs/lab5/SDDebug/_sds/.cdb/sharpen_filter_if.xml
+build_xd_ip_db  -sds-pf C:/Xilinx/SDSoC/2015.4/platforms/zed/zed_hw.pfm  -ip C:/xup/SDSoC/labs/lab5/SDDebug/_sds/iprepo/repo/xilinx_com_hls_sharpen_filter_1_0  -o C:/xup/SDSoC/labs/lab5/SDDebug/_sds/.cdb/xd_ip_db.xml  
+INFO: Using user-defined path for XILINX_XD environment variable C:/Xilinx/SDSoC/2015.4
+processing accelerators: C:/xup/SDSoC/labs/lab5/SDDebug/_sds/iprepo/repo/xilinx_com_hls_sharpen_filter_1_0
+ip_dir: C:/xup/SDSoC/labs/lab5/SDDebug/_sds/iprepo/repo/xilinx_com_hls_sharpen_filter_1_0
+xsltproc --stringparam xpath "spirit:component/spirit:name/text()" C:/Xilinx/SDSoC/2015.4/scripts/xdcc/xpathValueOf.xsl C:/xup/SDSoC/labs/lab5/SDDebug/_sds/iprepo/repo/xilinx_com_hls_sharpen_filter_1_0/component.xml
+ip_name: sharpen_filter
+INFO: [SDSoC 0-0] Generating data motion network
+llvm-link -o C:/xup/SDSoC/labs/lab5/SDDebug/_sds/.llvm/sds_all.o C:/xup/SDSoC/labs/lab5/SDDebug/_sds/.llvm/./src/SDSoC_lab_design_main.s C:/xup/SDSoC/labs/lab5/SDDebug/_sds/.llvm/./src/edge_detect.s C:/xup/SDSoC/labs/lab5/SDDebug/_sds/.llvm/./src/rgb_2_gray.s C:/xup/SDSoC/labs/lab5/SDDebug/_sds/.llvm/./src/sharpen.s
+
+C:\xup\SDSoC\labs\lab5\SDDebug>C:\Xilinx\SDSoC\2015.4\llvm-clang\win64\llvm\bin\llvm-link.exe -o C:/xup/SDSoC/labs/lab5/SDDebug/_sds/.llvm/sds_all.o C:/xup/SDSoC/labs/lab5/SDDebug/_sds/.llvm/./src/SDSoC_lab_design_main.s C:/xup/SDSoC/labs/lab5/SDDebug/_sds/.llvm/./src/edge_detect.s C:/xup/SDSoC/labs/lab5/SDDebug/_sds/.llvm/./src/rgb_2_gray.s C:/xup/SDSoC/labs/lab5/SDDebug/_sds/.llvm/./src/sharpen.s 
+
+C:\xup\SDSoC\labs\lab5\SDDebug>exit /b 0 
+XidanePass  --platform zed  --dmclkid 1  --repo C:/xup/SDSoC/labs/lab5/SDDebug/_sds/.cdb/xd_ip_db.xml  --dmdb C:/Xilinx/SDSoC/2015.4/data/DM.db   -os standalone 
+
+C:\xup\SDSoC\labs\lab5\SDDebug\_sds\.llvm>opt -disable-output -instcombine -mem2reg -basicaa -XidanePass --platform zed --dmclkid 1 --repo C:/xup/SDSoC/labs/lab5/SDDebug/_sds/.cdb/xd_ip_db.xml --dmdb C:/Xilinx/SDSoC/2015.4/data/DM.db -os standalone  0<sds_all.o 
+INFO: [SDSoC 0-0] Analyzing hardware accelerators...
+INFO: [SDSoC 0-0] Analyzing callers to hardware accelerators...
+INFO: [SDSoC 0-0] Scheduling data transfer graph for partition 0
+INFO: [SDSoC 0-0] Creating data motion network hardware for partition 0
+INFO: [SDSoC 0-0] Creating software stub functions for partition 0
+INFO: [SDSoC 0-0] Generating data motion network report for partition 0
+INFO: [SDSoC 0-0] Rewriting caller code
+xsltproc  -o C:/xup/SDSoC/labs/lab5/SDDebug/_sds/p0/ipi/apsys_acc_info.xml  --stringparam P_XD_IP_REPOS C:/xup/SDSoC/labs/lab5/SDDebug/_sds/.cdb/xd_ip_db.xml  C:/Xilinx/SDSoC/2015.4/scripts/xsd/genAdapterPackagedIpInfo.xsl 
+      C:/xup/SDSoC/labs/lab5/SDDebug/_sds/.llvm/apsys_0.xml
+INFO: [SDSoC 0-0] Creating block diagram (BD), address map, port information and device registration for partition 0 (this may take a few minutes)
+system_linker -cf-input C:/xup/SDSoC/labs/lab5/SDDebug/_sds/.llvm/apsys_0.xml -cf-output-dir _sds/p0 -ip-db C:/xup/SDSoC/labs/lab5/SDDebug/_sds/.cdb/xd_ip_db.xml -ip-repo C:/xup/SDSoC/labs/lab5/SDDebug/_sds/iprepo/repo -sds-pf C:/Xilinx/SDSoC/2015.4/platforms/zed:standalone -software-only   -target-os standalone -sdsoc
+system_linker started at Fri Jan 01 07:13:34 -0800 2016
+INFO: [SDSoC 0-0] Copying address map
+INFO: [SDSoC 0-0] Creating port and device registration data
+system_linker completed at Fri Jan 01 07:15:16 -0800 2016
+INFO: [SDSoC 0-0] Rewrite caller functions
+arm-xilinx-eabi-objcopy -O binary --set-section-flags .xdinfo=alloc --only-section=.xdinfo C:/xup/SDSoC/labs/lab5/SDDebug/src/SDSoC_lab_design_main.o C:/xup/SDSoC/labs/lab5/SDDebug/_sds/.data/xdinfo.xml
+arm-xilinx-eabi-objcopy -O binary --set-section-flags .xddata=alloc --only-section=.xddata C:/xup/SDSoC/labs/lab5/SDDebug/src/SDSoC_lab_design_main.o C:/xup/SDSoC/labs/lab5/SDDebug/_sds/.data/xddata.xml
+arm-xilinx-eabi-objcopy -O binary --set-section-flags .xdsdata=alloc --only-section=.xdsdata C:/xup/SDSoC/labs/lab5/SDDebug/src/SDSoC_lab_design_main.o C:/xup/SDSoC/labs/lab5/SDDebug/_sds/.data/SDSoC_lab_design_main.o.xml
+caller_rewrite  -rewrite C:/xup/SDSoC/labs/lab5/SDDebug/_sds/.llvm/caller0.cfrewrite  -o C:/xup/SDSoC/labs/lab5/SDDebug/_sds/swstubs/SDSoC_lab_design_main.c  C:/xup/SDSoC/labs/lab5/SDDebug/_sds/swstubs/unix_SDSoC_lab_design_main.c  --  -c  -target arm-xilinx-eabi -mcpu=cortex-a9 -mfpu=vfp -O0 -g -w    -I C:/Xilinx/SDSoC/2015.4/arm-xilinx-eabi/include  -I C:/Xilinx/SDSoC/2015.4/Vivado_HLS/2015.4/include   -IC:/Xilinx/SDSoC/2015.4/SDK/2015.4/gnu/arm/nt/lib/gcc/arm-xilinx-eabi/4.9.2/include  -IC:/Xilinx/SDSoC/2015.4/SDK/2015.4/gnu/arm/nt/lib/gcc/arm-xilinx-eabi/4.9.2/include-fixed  -IC:/Xilinx/SDSoC/2015.4/SDK/2015.4/gnu/arm/nt/arm-xilinx-eabi/include  -IC:/xup/SDSoC/labs/lab5/src -IC:/xup/SDSoC/labs/lab5/src -Wall -O0 -g -fmessage-length=0 -MMD -MP -D __SDSCC__
+INFO: [SDSoC 0-0] Compile caller rewrite file C:/xup/SDSoC/labs/lab5/SDDebug/_sds/swstubs/SDSoC_lab_design_main.c
+arm-xilinx-eabi-gcc  -c C:/xup/SDSoC/labs/lab5/SDDebug/_sds/swstubs/SDSoC_lab_design_main.c  -IC:/xup/SDSoC/labs/lab5/src -IC:/xup/SDSoC/labs/lab5/src -Wall -O0 -g -fmessage-length=0 -MMD -MP -D __SDSCC__    -I C:/Xilinx/SDSoC/2015.4/arm-xilinx-eabi/include  -I C:/Xilinx/SDSoC/2015.4/Vivado_HLS/2015.4/include  -o C:/xup/SDSoC/labs/lab5/SDDebug/_sds/swstubs/SDSoC_lab_design_main.o
+INFO: [SDSoC 0-0] Prepare hardware access API functions
+INFO: [SDSoC 0-0] Create accelerator stub functions
+stub_gen  -func sharpen_filter  -stub C:/xup/SDSoC/labs/lab5/SDDebug/_sds/.llvm/sharpen_filter.cfrewrite  -o C:/xup/SDSoC/labs/lab5/SDDebug/_sds/swstubs/sharpen.c  C:/xup/SDSoC/labs/lab5/SDDebug/_sds/swstubs/unix_sharpen.c  --  -c  -target arm-xilinx-eabi -mcpu=cortex-a9 -mfpu=vfp -O0 -g -w    -I C:/Xilinx/SDSoC/2015.4/arm-xilinx-eabi/include  -I C:/Xilinx/SDSoC/2015.4/Vivado_HLS/2015.4/include   -IC:/Xilinx/SDSoC/2015.4/SDK/2015.4/gnu/arm/nt/lib/gcc/arm-xilinx-eabi/4.9.2/include  -IC:/Xilinx/SDSoC/2015.4/SDK/2015.4/gnu/arm/nt/lib/gcc/arm-xilinx-eabi/4.9.2/include-fixed  -IC:/Xilinx/SDSoC/2015.4/SDK/2015.4/gnu/arm/nt/arm-xilinx-eabi/include  -IC:/xup/SDSoC/labs/lab5/src -IC:/xup/SDSoC/labs/lab5/src -Wall -O0 -g -fmessage-length=0 -MMD -MP -D __SDSCC__
+INFO: [SDSoC 0-0] Compile hardware access API functions
+arm-xilinx-eabi-gcc   -I C:/Xilinx/SDSoC/2015.4/arm-xilinx-eabi/include  -I C:/Xilinx/SDSoC/2015.4/Vivado_HLS/2015.4/include  -c  C:/xup/SDSoC/labs/lab5/SDDebug/_sds/swstubs/devreg.c
+arm-xilinx-eabi-gcc   -I C:/Xilinx/SDSoC/2015.4/arm-xilinx-eabi/include  -I C:/Xilinx/SDSoC/2015.4/Vivado_HLS/2015.4/include   -c  C:/xup/SDSoC/labs/lab5/SDDebug/_sds/swstubs/portinfo.c
+arm-xilinx-eabi-g++   -I C:/Xilinx/SDSoC/2015.4/arm-xilinx-eabi/include  -I C:/Xilinx/SDSoC/2015.4/Vivado_HLS/2015.4/include  -c  C:/xup/SDSoC/labs/lab5/SDDebug/_sds/swstubs/cf_stub.c
+arm-xilinx-eabi-ar crs C:/xup/SDSoC/labs/lab5/SDDebug/_sds/swstubs/libxlnk_stub.a C:/xup/SDSoC/labs/lab5/SDDebug/_sds/swstubs/devreg.o C:/xup/SDSoC/labs/lab5/SDDebug/_sds/swstubs/portinfo.o C:/xup/SDSoC/labs/lab5/SDDebug/_sds/swstubs/cf_stub.o
+INFO: [SDSoC 0-0] Compile accelerator stub functions
+arm-xilinx-eabi-gcc -c sharpen.c   -I C:/Xilinx/SDSoC/2015.4/arm-xilinx-eabi/include  -I C:/Xilinx/SDSoC/2015.4/Vivado_HLS/2015.4/include -IC:/xup/SDSoC/labs/lab5/src -IC:/xup/SDSoC/labs/lab5/src -Wall -O0 -g -fmessage-length=0 -MMD -MP -D __SDSCC__  -o sharpen.o
+sharpen.c: In function 'sharpen_filter':
+sharpen.c: In function 'linebuffer_shift_up':
+sharpen.c: In function 'linebuffer_getval':
+sharpen.c: In function 'linebuffer_insert_bottom':
+sharpen.c: In function 'window_shift_right':
+sharpen.c: In function 'window_insert':
+sharpen.c: In function 'window_getval':
+arm-xilinx-eabi-ar crs C:/xup/SDSoC/labs/lab5/SDDebug/_sds/swstubs/liblab5.a C:/xup/SDSoC/labs/lab5/SDDebug/_sds/swstubs/devreg.o C:/xup/SDSoC/labs/lab5/SDDebug/_sds/swstubs/portinfo.o C:/xup/SDSoC/labs/lab5/SDDebug/_sds/swstubs/cf_stub.o C:/xup/SDSoC/labs/lab5/SDDebug/_sds/swstubs/sharpen.o
+hsi -mode batch -notrace -quiet -source C:/xup/SDSoC/labs/lab5/SDDebug/_sds/swstubs/standalone_bsp/create_bsp.tcl
+INFO: [Hsi 55-1698] elapsed time for repository loading 1 seconds
+INFO: [SDSoC 0-0] Create board support package library
+hsi -mode batch -notrace -quiet -source C:/xup/SDSoC/labs/lab5/SDDebug/_sds/swstubs/standalone_bsp/create_bsp_post.tcl
+INFO: [Hsi 55-1698] elapsed time for repository loading 0 seconds
+"Running Make include in ps7_cortexa9_0/libsrc/axidma_v9_0/src"
+
+"Running Make include in ps7_cortexa9_0/libsrc/coresightps_dcc_v1_2/src"
+
+"Running Make include in ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_1/src"
+
+"Running Make include in ps7_cortexa9_0/libsrc/ddrps_v1_0/src"
+
+"Running Make include in ps7_cortexa9_0/libsrc/devcfg_v3_3/src"
+
+"Running Make include in ps7_cortexa9_0/libsrc/dmaps_v2_1/src"
+
+"Running Make include in ps7_cortexa9_0/libsrc/emacps_v3_1/src"
+
+"Running Make include in ps7_cortexa9_0/libsrc/gpiops_v3_1/src"
+
+"Running Make include in ps7_cortexa9_0/libsrc/scugic_v3_1/src"
+
+"Running Make include in ps7_cortexa9_0/libsrc/scutimer_v2_1/src"
+
+"Running Make include in ps7_cortexa9_0/libsrc/scuwdt_v2_1/src"
+
+"Running Make include in ps7_cortexa9_0/libsrc/sdps_v2_6/src"
+
+"Running Make include in ps7_cortexa9_0/libsrc/standalone_v5_3/src"
+
+"Running Make include in ps7_cortexa9_0/libsrc/uartps_v3_1/src"
+
+"Running Make include in ps7_cortexa9_0/libsrc/usbps_v2_2/src"
+
+"Running Make include in ps7_cortexa9_0/libsrc/xadcps_v2_2/src"
+
+"Running Make include in ps7_cortexa9_0/libsrc/xilffs_v2_2/src"
+
+"Running Make libs in ps7_cortexa9_0/libsrc/axidma_v9_0/src"
+
+"Compiling axidma"
+
+In file included from xaxidma.h:470:0,
+
+                 from xaxidma.c:83:
+
+xaxidma.c: In function 'XAxiDma_Reset':
+
+xaxidma_bdring.h:238:26: warning: assignment makes pointer from integer without a cast
+
+    (RingPtr)->BdaRestart =      \
+
+                          ^
+
+xaxidma.c:313:3: note: in expansion of macro 'XAxiDma_BdRingSnapShotCurrBd'
+
+   XAxiDma_BdRingSnapShotCurrBd(TxRingPtr);
+
+   ^
+
+xaxidma_bdring.h:243:27: warning: assignment makes pointer from integer without a cast
+
+     (RingPtr)->BdaRestart =     \
+
+                           ^
+
+xaxidma.c:313:3: note: in expansion of macro 'XAxiDma_BdRingSnapShotCurrBd'
+
+   XAxiDma_BdRingSnapShotCurrBd(TxRingPtr);
+
+   ^
+
+xaxidma_bdring.h:248:27: warning: assignment makes pointer from integer without a cast
+
+     (RingPtr)->BdaRestart =     \
+
+                           ^
+
+xaxidma.c:313:3: note: in expansion of macro 'XAxiDma_BdRingSnapShotCurrBd'
+
+   XAxiDma_BdRingSnapShotCurrBd(TxRingPtr);
+
+   ^
+
+xaxidma_bdring.h:238:26: warning: assignment makes pointer from integer without a cast
+
+    (RingPtr)->BdaRestart =      \
+
+                          ^
+
+xaxidma.c:319:4: note: in expansion of macro 'XAxiDma_BdRingSnapShotCurrBd'
+
+    XAxiDma_BdRingSnapShotCurrBd(RxRingPtr);
+
+    ^
+
+xaxidma_bdring.h:243:27: warning: assignment makes pointer from integer without a cast
+
+     (RingPtr)->BdaRestart =     \
+
+                           ^
+
+xaxidma.c:319:4: note: in expansion of macro 'XAxiDma_BdRingSnapShotCurrBd'
+
+    XAxiDma_BdRingSnapShotCurrBd(RxRingPtr);
+
+    ^
+
+xaxidma_bdring.h:248:27: warning: assignment makes pointer from integer without a cast
+
+     (RingPtr)->BdaRestart =     \
+
+                           ^
+
+xaxidma.c:319:4: note: in expansion of macro 'XAxiDma_BdRingSnapShotCurrBd'
+
+    XAxiDma_BdRingSnapShotCurrBd(RxRingPtr);
+
+    ^
+
+arm-xilinx-eabi-ar: creating ../../../lib/libxil.a
+
+"Running Make libs in ps7_cortexa9_0/libsrc/coresightps_dcc_v1_2/src"
+
+"Compiling coresightps_dcc"
+
+"Running Make libs in ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_1/src"
+
+"Compiling cpu_cortexa9"
+
+"Running Make libs in ps7_cortexa9_0/libsrc/ddrps_v1_0/src"
+
+"Compiling ddrps"
+
+"Running Make libs in ps7_cortexa9_0/libsrc/devcfg_v3_3/src"
+
+"Compiling devcfg"
+
+"Running Make libs in ps7_cortexa9_0/libsrc/dmaps_v2_1/src"
+
+"Compiling dmaps"
+
+"Running Make libs in ps7_cortexa9_0/libsrc/emacps_v3_1/src"
+
+"Compiling emacps"
+
+"Running Make libs in ps7_cortexa9_0/libsrc/gpiops_v3_1/src"
+
+"Compiling gpiops"
+
+"Running Make libs in ps7_cortexa9_0/libsrc/scugic_v3_1/src"
+
+"Compiling scugic"
+
+"Running Make libs in ps7_cortexa9_0/libsrc/scutimer_v2_1/src"
+
+"Compiling scutimer"
+
+"Running Make libs in ps7_cortexa9_0/libsrc/scuwdt_v2_1/src"
+
+"Compiling scuwdt"
+
+"Running Make libs in ps7_cortexa9_0/libsrc/sdps_v2_6/src"
+
+"Compiling sdps"
+
+"Running Make libs in ps7_cortexa9_0/libsrc/standalone_v5_3/src"
+
+"Compiling standalone"
+
+"Running Make libs in ps7_cortexa9_0/libsrc/uartps_v3_1/src"
+
+"Compiling uartps"
+
+"Running Make libs in ps7_cortexa9_0/libsrc/usbps_v2_2/src"
+
+"Compiling usbps"
+
+"Running Make libs in ps7_cortexa9_0/libsrc/xadcps_v2_2/src"
+
+"Compiling xadcps"
+
+"Running Make libs in ps7_cortexa9_0/libsrc/xilffs_v2_2/src"
+
+"Compiling XilFFs Library"
+
+"Creating archive libxilffs.a"
+
+'Finished building libraries'
+
+generate_bsp: Time (s): cpu = 00:00:00 ; elapsed = 00:00:27 . Memory (MB): peak = 111.996 ; gain = 0.000
+INFO: [SDSoC 0-0] Link application ELF file
+arm-xilinx-eabi-g++ -Wl,-T -Wl,C:/Xilinx/SDSoC/2015.4/platforms/zed/arm-xilinx-eabi/lscript.ld  C:/xup/SDSoC/labs/lab5/SDDebug/src/edge_detect.o C:/xup/SDSoC/labs/lab5/SDDebug/src/rgb_2_gray.o C:/xup/SDSoC/labs/lab5/SDDebug/_sds/swstubs/SDSoC_lab_design_main.o C:/xup/SDSoC/labs/lab5/SDDebug/_sds/swstubs/sharpen.o   -L C:/xup/SDSoC/labs/lab5/SDDebug/_sds/swstubs/standalone_bsp/ps7_cortexa9_0/lib  -L C:/Xilinx/SDSoC/2015.4/platforms/zed/arm-xilinx-eabi/lib -L C:/Xilinx/SDSoC/2015.4/arm-xilinx-eabi/lib -LC:/xup/SDSoC/labs/lab5/SDDebug/_sds/swstubs -Wl,--start-group -lxilffs -lgcc -lc -lstdc++ -Wl,--end-group -Wl,--start-group   -lxilffs -lxil -lgcc -lc  -lsds_lib -lxlnk_stub -lgcc -lc -Wl,--end-group -o C:/xup/SDSoC/labs/lab5/SDDebug/_sds/swstubs/lab5.elf
+arm-xilinx-eabi-objcopy -R .xdinfo -R .xddata -R .xdasm -R .xdfcnmap -R .xdhlscore -R .xdif -R .xdparams -R .xdcore -R .xdsdata -R .xdpp C:/xup/SDSoC/labs/lab5/SDDebug/_sds/swstubs/lab5.elf
+INFO: [SDSoC 0-0] Enable generation of hardware programming files
+INFO: [SDSoC 0-0] Enable generation of boot files
+INFO: [SDSoC 0-0] Calling system_linker for partition 0
+system_linker -cf-input C:/xup/SDSoC/labs/lab5/SDDebug/_sds/.llvm/apsys_0.xml -cf-output-dir _sds/p0 -ip-db C:/xup/SDSoC/labs/lab5/SDDebug/_sds/.cdb/xd_ip_db.xml -ip-repo C:/xup/SDSoC/labs/lab5/SDDebug/_sds/iprepo/repo -sds-pf C:/Xilinx/SDSoC/2015.4/platforms/zed:standalone -bitstream -bit-name lab5.elf.bit -boot-files   -target-os standalone -mdev-no-swgen -mdev-no-xsd -sdsoc -sd-output-dir _sds/p0/sd_card -bit-binary -elf C:/xup/SDSoC/labs/lab5/SDDebug/_sds/swstubs/lab5.elf
+system_linker started at Fri Jan 01 07:15:58 -0800 2016
+INFO: [SDSoC 0-0] Generating bitstream for platform zed.
+      This may take some time to complete
+... [07:16:30] Starting synth_design
+... [07:16:35] Starting RTL Elaboration : Time (s): cpu = 00:00:14 ; elapsed = 00:00:18 . Memory (MB): peak = 394.473 ; gain = 221.746
+... [07:32:23] Start Loading Part and Timing Information
+... [07:32:23] Start Applying 'set_property' XDC Constraints
+... [07:32:48] Start RTL Component Statistics 
+... [07:32:48] Start RTL Hierarchical Component Statistics 
+... [07:32:48] Start Part Resource Summary
+... [07:32:48] Start Parallel Synthesis Optimization  : Time (s): cpu = 00:16:09 ; elapsed = 00:16:29 . Memory (MB): peak = 1061.152 ; gain = 888.426
+... [07:32:48] Start Cross Boundary Optimization
+... [07:32:58] Start ROM, RAM, DSP and Shift Register Reporting
+... [07:32:58] Start Area Optimization
+... [07:33:18] Start Timing Optimization
+... [07:33:28] Start Applying XDC Timing Constraints
+... [07:33:38] Start Technology Mapping
+... [07:33:53] Start IO Insertion
+... [07:33:53] Start Flattening Before IO Insertion
+... [07:33:53] Start Final Netlist Cleanup
+... [07:33:53] Start Renaming Generated Instances
+... [07:33:58] Start Rebuilding User Hierarchy
+... [07:33:58] Start Renaming Generated Ports
+... [07:34:03] Start Handling Custom Attributes
+... [07:34:03] Start Renaming Generated Nets
+... [07:34:03] Start ROM, RAM, DSP and Shift Register Reporting
+... [07:34:03] Start Writing Synthesis Report
+... [07:35:02] Starting DRC Task
+... [07:35:07] Starting Logic Optimization Task
+... [07:35:12] Starting Connectivity Check Task
+... [07:35:12] Starting Power Optimization Task
+... [07:35:22] Starting PowerOpt Patch Enables Task
+... [07:35:27] Starting Placer Task
+... [07:36:12] Starting Routing Task
+INFO: [SDSoC 0-0] Creating boot files
+system_linker completed at Fri Jan 01 07:38:00 -0800 2016
+All user specified timing constraints are met.
+sds++ log file saved as C:/xup/SDSoC/labs/lab5/SDDebug/_sds/reports/sds.log
+sds++ completed at Fri Jan 01 07:38:00 -0800 2016

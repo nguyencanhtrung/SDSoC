@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="ASCII"?>
+<sdsproject:Project xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:sdsproject="http://www.xilinx.com/sdsproject" name="lab1_prebuilt" platform="zed" os="Linux" ConfigType="SDRelease">
+  <options insertapm="false" genbitstream="true" gensdcard="true" dmclkid="1" enableHwSwTrace="false" traceApplication="false">
+    <accelerator name="madd" filepath="src/madd.cpp" clkid="1"/>
+    <accelerator name="mmult" filepath="src/mmult.cpp" clkid="1"/>
+  </options>
+</sdsproject:Project>

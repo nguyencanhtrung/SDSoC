@@ -1,0 +1,237 @@
+(c) Copyright 2012-2015 Xilinx, Inc. All Rights Reserved.
+#-----------------------------------------------------------
+# Tool version  : sdscc 2015.4 SW Build on Dec 14 2015 23:02:57
+# Start time    : Fri Jan 01 07:12:54 -0800 2016
+# Command line  : sdscc -Wall -O0 -g -I../src -c -fmessage-length=0 -MTsrc/sharpen.o -MMD -MP -MFsrc/sharpen.d -MTsrc/sharpen.d -o src/sharpen.o ../src/sharpen.c -sds-hw sharpen_filter sharpen.c -clkid 1 -sds-end -target-os standalone -sds-pf zed
+# Log file      : C:/xup/SDSoC/labs/lab5/SDDebug/_sds/reports/sds_sharpen.log
+# Journal file  : C:/xup/SDSoC/labs/lab5/SDDebug/_sds/reports/sds_sharpen.jou
+# Report file   : C:/xup/SDSoC/labs/lab5/SDDebug/_sds/reports/sds_sharpen.rpt
+#-----------------------------------------------------------
+
+High-Level Synthesis
+--------------------
+
+  Vivado HLS Report : C:/xup/SDSoC/labs/lab5/SDDebug/_sds/vhls/sharpen_filter/solution/syn/report/sharpen_filter_csynth.rpt
+
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |   5.95|      5.05|        0.74|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +---------+---------+---------+---------+---------+
+    |      Latency      |      Interval     | Pipeline|
+    |   min   |   max   |   min   |   max   |   Type  |
+    +---------+---------+---------+---------+---------+
+    |  2076609|  2076609|  2076610|  2076610|   none  |
+    +---------+---------+---------+---------+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +----------+---------+---------+----------+-----------+-----------+---------+----------+
+        |          |      Latency      | Iteration|  Initiation Interval  |   Trip  |          |
+        | Loop Name|   min   |   max   |  Latency |  achieved |   target  |  Count  | Pipelined|
+        +----------+---------+---------+----------+-----------+-----------+---------+----------+
+        |- Loop 1  |  2076607|  2076607|         8|          1|          1|  2076601|    yes   |
+        +----------+---------+---------+----------+-----------+-----------+---------+----------+
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-------+--------+-------+
+|       Name      | BRAM_18K| DSP48E|   FF   |  LUT  |
++-----------------+---------+-------+--------+-------+
+|DSP              |        -|      -|       -|      -|
+|Expression       |        -|      -|       0|    190|
+|FIFO             |        -|      -|       -|      -|
+|Instance         |        -|      -|       -|      -|
+|Memory           |        3|      -|       0|      0|
+|Multiplexer      |        -|      -|       -|     93|
+|Register         |        -|      -|     297|     23|
++-----------------+---------+-------+--------+-------+
+|Total            |        3|      0|     297|    306|
++-----------------+---------+-------+--------+-------+
+|Available        |      280|    220|  106400|  53200|
++-----------------+---------+-------+--------+-------+
+|Utilization (%)  |        1|      0|   ~0   |   ~0  |
++-----------------+---------+-------+--------+-------+
+
++ Detail: 
+    * Instance: 
+    N/A
+
+    * DSP48: 
+    N/A
+
+    * Memory: 
+    +------------+-------------------------+---------+---+----+------+-----+------+-------------+
+    |   Memory   |          Module         | BRAM_18K| FF| LUT| Words| Bits| Banks| W*Bits*Banks|
+    +------------+-------------------------+---------+---+----+------+-----+------+-------------+
+    |buff_A_0_U  |sharpen_filter_buff_A_0  |        1|  0|   0|  1920|    8|     1|        15360|
+    |buff_A_1_U  |sharpen_filter_buff_A_0  |        1|  0|   0|  1920|    8|     1|        15360|
+    |buff_A_2_U  |sharpen_filter_buff_A_2  |        1|  0|   0|  1920|    8|     1|        15360|
+    +------------+-------------------------+---------+---+----+------+-----+------+-------------+
+    |Total       |                         |        3|  0|   0|  5760|   24|     3|        46080|
+    +------------+-------------------------+---------+---+----+------+-----+------+-------------+
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +-------------------------------+----------+-------+---+----+------------+------------+
+    |         Variable Name         | Operation| DSP48E| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +-------------------------------+----------+-------+---+----+------------+------------+
+    |col_fu_299_p2                  |     +    |      0|  0|  11|          11|           1|
+    |indvar_flatten_next_fu_228_p2  |     +    |      0|  0|  21|          21|           1|
+    |row_s_fu_248_p2                |     +    |      0|  0|  11|          11|           1|
+    |sum_i_fu_365_p2                |     +    |      0|  0|   9|           9|           9|
+    |tmp_7_1_1_i_fu_389_p2          |     +    |      0|  0|  11|          11|          11|
+    |tmp_2_i_fu_442_p2              |     -    |      0|  0|   8|           1|           8|
+    |x_weight_2_1_1_i_fu_399_p2     |     -    |      0|  0|  12|          12|          12|
+    |x_weight_2_1_2_i_fu_418_p2     |     -    |      0|  0|   4|          12|          12|
+    |x_weight_2_2_1_i_fu_426_p2     |     -    |      0|  0|   4|          12|          12|
+    |buff_C_0_2_1_fu_344_p3         |  Select  |      0|  0|   8|           1|           8|
+    |buff_C_1_2_fu_318_p3           |  Select  |      0|  0|   8|           1|           8|
+    |buff_C_2_2_1_fu_351_p3         |  Select  |      0|  0|   8|           1|           8|
+    |col_assign_mid2_fu_240_p3      |  Select  |      0|  0|  11|           1|           1|
+    |output_r_din                   |  Select  |      0|  0|   8|           1|           8|
+    |row_mid2_fu_254_p3             |  Select  |      0|  0|  11|           1|          11|
+    |ap_sig_bdd_156                 |    and   |      0|  0|   1|           1|           1|
+    |ap_sig_bdd_160                 |    and   |      0|  0|   1|           1|           1|
+    |ap_sig_bdd_164                 |    and   |      0|  0|   1|           1|           1|
+    |ap_sig_bdd_251                 |    and   |      0|  0|   1|           1|           1|
+    |ap_sig_bdd_255                 |    and   |      0|  0|   1|           1|           1|
+    |ap_sig_bdd_260                 |    and   |      0|  0|   1|           1|           1|
+    |ap_sig_bdd_267                 |    and   |      0|  0|   1|           1|           1|
+    |ap_sig_bdd_72                  |    and   |      0|  0|   1|           1|           1|
+    |ap_sig_bdd_88                  |    and   |      0|  0|   1|           1|           1|
+    |or_cond_fu_293_p2              |    and   |      0|  0|   1|           1|           1|
+    |tmp_7_fu_282_p2                |    and   |      0|  0|   1|           1|           1|
+    |exitcond4_fu_234_p2            |   icmp   |      0|  0|   4|          11|           8|
+    |exitcond_flatten_fu_222_p2     |   icmp   |      0|  0|   8|          21|          16|
+    |tmp_1_fu_267_p2                |   icmp   |      0|  0|   4|          11|           1|
+    |tmp_2_fu_272_p2                |   icmp   |      0|  0|   4|          11|           9|
+    |tmp_5_fu_288_p2                |   icmp   |      0|  0|   4|          11|           1|
+    |tmp_fu_262_p2                  |   icmp   |      0|  0|   4|          11|          11|
+    |tmp_i_fu_432_p2                |   icmp   |      0|  0|   5|          12|           1|
+    +-------------------------------+----------+-------+---+----+------------+------------+
+    |Total                          |          |      0|  0| 190|         205|         169|
+    +-------------------------------+----------+-------+---+----+------------+------------+
+
+    * Multiplexer: 
+    +----------------------------------------------+----+-----------+-----+-----------+
+    |                     Name                     | LUT| Input Size| Bits| Total Bits|
+    +----------------------------------------------+----+-----------+-----+-----------+
+    |ap_NS_fsm                                     |   1|          4|    1|          4|
+    |ap_reg_phiprechg_buff_C_1_2_1_reg_200pp0_it3  |   8|          3|    8|         24|
+    |ap_reg_phiprechg_buff_C_2_2_reg_211pp0_it2    |   8|          2|    8|         16|
+    |ap_reg_phiprechg_buff_C_2_2_reg_211pp0_it5    |   8|          2|    8|         16|
+    |ap_reg_ppiten_pp0_it1                         |   1|          2|    1|          2|
+    |ap_reg_ppiten_pp0_it4                         |   1|          2|    1|          2|
+    |ap_reg_ppiten_pp0_it7                         |   1|          2|    1|          2|
+    |col_assign_phi_fu_193_p4                      |  11|          2|   11|         22|
+    |col_assign_reg_189                            |  11|          2|   11|         22|
+    |indvar_flatten_reg_167                        |  21|          2|   21|         42|
+    |row_phi_fu_182_p4                             |  11|          2|   11|         22|
+    |row_reg_178                                   |  11|          2|   11|         22|
+    +----------------------------------------------+----+-----------+-----+-----------+
+    |Total                                         |  93|         27|   93|        196|
+    +----------------------------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +----------------------------------------------+----+----+-----+-----------+
+    |                     Name                     | FF | LUT| Bits| Const Bits|
+    +----------------------------------------------+----+----+-----+-----------+
+    |ap_CS_fsm                                     |   3|   0|    3|          0|
+    |ap_reg_phiprechg_buff_C_1_2_1_reg_200pp0_it3  |   8|   0|    8|          0|
+    |ap_reg_phiprechg_buff_C_2_2_reg_211pp0_it2    |   8|   0|    8|          0|
+    |ap_reg_phiprechg_buff_C_2_2_reg_211pp0_it3    |   8|   0|    8|          0|
+    |ap_reg_phiprechg_buff_C_2_2_reg_211pp0_it4    |   8|   0|    8|          0|
+    |ap_reg_phiprechg_buff_C_2_2_reg_211pp0_it5    |   8|   0|    8|          0|
+    |ap_reg_ppiten_pp0_it0                         |   1|   0|    1|          0|
+    |ap_reg_ppiten_pp0_it1                         |   1|   0|    1|          0|
+    |ap_reg_ppiten_pp0_it2                         |   1|   0|    1|          0|
+    |ap_reg_ppiten_pp0_it3                         |   1|   0|    1|          0|
+    |ap_reg_ppiten_pp0_it4                         |   1|   0|    1|          0|
+    |ap_reg_ppiten_pp0_it5                         |   1|   0|    1|          0|
+    |ap_reg_ppiten_pp0_it6                         |   1|   0|    1|          0|
+    |ap_reg_ppiten_pp0_it7                         |   1|   0|    1|          0|
+    |ap_reg_ppstg_buff_A_1_addr_reg_517_pp0_it2    |  11|   0|   11|          0|
+    |ap_reg_ppstg_buff_C_1_0_load_reg_552_pp0_it4  |   8|   0|    8|          0|
+    |ap_reg_ppstg_buff_C_1_1_load_reg_563_pp0_it4  |   8|   0|    8|          0|
+    |ap_reg_ppstg_tmp_3_reg_512_pp0_it2            |  11|   0|   64|         53|
+    |buff_A_1_addr_reg_517                         |  11|   0|   11|          0|
+    |buff_A_1_load_reg_541                         |   8|   0|    8|          0|
+    |buff_C_0_1_fu_74                              |   8|   0|    8|          0|
+    |buff_C_1_0_fu_78                              |   8|   0|    8|          0|
+    |buff_C_1_0_load_reg_552                       |   8|   0|    8|          0|
+    |buff_C_1_1_fu_82                              |   8|   0|    8|          0|
+    |buff_C_1_1_load_reg_563                       |   8|   0|    8|          0|
+    |buff_C_1_2_reg_569                            |   8|   0|    8|          0|
+    |buff_C_2_1_fu_70                              |   8|   0|    8|          0|
+    |buff_C_2_1_load_reg_579                       |   8|   0|    8|          0|
+    |col_assign_mid2_reg_488                       |  11|   0|   11|          0|
+    |col_assign_reg_189                            |  11|   0|   11|          0|
+    |exitcond_flatten_reg_479                      |   1|   0|    1|          0|
+    |indvar_flatten_reg_167                        |  21|   0|   21|          0|
+    |or_cond_reg_532                               |   1|   0|    1|          0|
+    |return_value_reg_546                          |   8|   0|    8|          0|
+    |row_mid2_reg_498                              |  11|   0|   11|          0|
+    |row_reg_178                                   |  11|   0|   11|          0|
+    |tmp_2_i_reg_599                               |   8|   0|    8|          0|
+    |tmp_2_reg_505                                 |   1|   0|    1|          0|
+    |tmp_3_reg_512                                 |  11|   0|   64|         53|
+    |tmp_7_reg_528                                 |   1|   0|    1|          0|
+    |tmp_8_reg_594                                 |   8|   0|    8|          0|
+    |tmp_i_reg_589                                 |   1|   0|    1|          0|
+    |x_weight_2_1_1_i_reg_584                      |  12|   0|   12|          0|
+    |y_reg_557                                     |   8|   0|    8|          0|
+    |buff_C_1_2_reg_569                            |   0|   8|    8|          0|
+    |col_assign_mid2_reg_488                       |   0|  11|   11|          0|
+    |exitcond_flatten_reg_479                      |   0|   1|    1|          0|
+    |or_cond_reg_532                               |   0|   1|    1|          0|
+    |tmp_2_reg_505                                 |   0|   1|    1|          0|
+    |tmp_7_reg_528                                 |   0|   1|    1|          0|
+    +----------------------------------------------+----+----+-----+-----------+
+    |Total                                         | 297|  23|  426|        106|
+    +----------------------------------------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++-----------------+-----+-----+------------+----------------+--------------+
+|    RTL Ports    | Dir | Bits|  Protocol  |  Source Object |    C Type    |
++-----------------+-----+-----+------------+----------------+--------------+
+|ap_clk           |  in |    1| ap_ctrl_hs | sharpen_filter | return value |
+|ap_rst_n         |  in |    1| ap_ctrl_hs | sharpen_filter | return value |
+|ap_start         |  in |    1| ap_ctrl_hs | sharpen_filter | return value |
+|ap_done          | out |    1| ap_ctrl_hs | sharpen_filter | return value |
+|ap_idle          | out |    1| ap_ctrl_hs | sharpen_filter | return value |
+|ap_ready         | out |    1| ap_ctrl_hs | sharpen_filter | return value |
+|ap_return        | out |   32| ap_ctrl_hs | sharpen_filter | return value |
+|input_r_dout     |  in |    8|   ap_fifo  |     input_r    |    pointer   |
+|input_r_empty_n  |  in |    1|   ap_fifo  |     input_r    |    pointer   |
+|input_r_read     | out |    1|   ap_fifo  |     input_r    |    pointer   |
+|output_r_din     | out |    8|   ap_fifo  |    output_r    |    pointer   |
+|output_r_full_n  |  in |    1|   ap_fifo  |    output_r    |    pointer   |
+|output_r_write   | out |    1|   ap_fifo  |    output_r    |    pointer   |
++-----------------+-----+-----+------------+----------------+--------------+
+

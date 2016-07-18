@@ -1,0 +1,146 @@
+(c) Copyright 2012-2015 Xilinx, Inc. All Rights Reserved.
+#-----------------------------------------------------------
+# Tool version  : sdscc 2015.4 SW Build on Dec 14 2015 23:02:57
+# Start time    : Fri Jan 01 05:50:37 -0800 2016
+# Command line  : sdscc -DTIME_SHARPEN -DTIME_EDGE_DETECT -Wall -O0 -g -I../src -c -fmessage-length=0 -MTsrc/sharpen.o -MMD -MP -MFsrc/sharpen.d -MTsrc/sharpen.d -o src/sharpen.o ../src/sharpen.c -sds-hw sharpen_filter sharpen.c -clkid 1 -sds-end -sds-hw sobel_filter edge_detect.c -clkid 1 -sds-end -target-os standalone -sds-pf zed
+# Log file      : C:/xup/SDSoC/labs/lab3a/SDDebug/_sds/reports/sds_sharpen.log
+# Journal file  : C:/xup/SDSoC/labs/lab3a/SDDebug/_sds/reports/sds_sharpen.jou
+# Report file   : C:/xup/SDSoC/labs/lab3a/SDDebug/_sds/reports/sds_sharpen.rpt
+#-----------------------------------------------------------
+
+INFO: [SDSoC 0-0] Create data motion intermediate representation
+clang_wrapper -target arm-xilinx-eabi -mcpu=cortex-a9 -mfpu=vfp -O0 -g     -I C:/Xilinx/SDSoC/2015.4/arm-xilinx-eabi/include  -I C:/Xilinx/SDSoC/2015.4/Vivado_HLS/2015.4/include   -IC:/Xilinx/SDSoC/2015.4/SDK/2015.4/gnu/arm/nt/lib/gcc/arm-xilinx-eabi/4.9.2/include  -IC:/Xilinx/SDSoC/2015.4/SDK/2015.4/gnu/arm/nt/lib/gcc/arm-xilinx-eabi/4.9.2/include-fixed  -IC:/Xilinx/SDSoC/2015.4/SDK/2015.4/gnu/arm/nt/arm-xilinx-eabi/include -I../src -DTIME_SHARPEN -DTIME_EDGE_DETECT -Wall -g -fmessage-length=0 -MMD -MP -D __SDSCC__ -emit-llvm -S C:/xup/SDSoC/labs/lab3a/src/sharpen.c -o C:/xup/SDSoC/labs/lab3a/SDDebug/_sds/.llvm/src/sharpen.s
+
+C:\xup\SDSoC\labs\lab3a\SDDebug>C:\Xilinx\SDSoC\2015.4\llvm-clang\win64\llvm\bin\clang.exe -target arm-xilinx-eabi -mcpu=cortex-a9 -mfpu=vfp -O0 -g -I C:/Xilinx/SDSoC/2015.4/arm-xilinx-eabi/include -I C:/Xilinx/SDSoC/2015.4/Vivado_HLS/2015.4/include -IC:/Xilinx/SDSoC/2015.4/SDK/2015.4/gnu/arm/nt/lib/gcc/arm-xilinx-eabi/4.9.2/include -IC:/Xilinx/SDSoC/2015.4/SDK/2015.4/gnu/arm/nt/lib/gcc/arm-xilinx-eabi/4.9.2/include-fixed -IC:/Xilinx/SDSoC/2015.4/SDK/2015.4/gnu/arm/nt/arm-xilinx-eabi/include -I../src -DTIME_SHARPEN -DTIME_EDGE_DETECT -Wall -g -fmessage-length=0 -MMD -MP -D __SDSCC__ -emit-llvm -S C:/xup/SDSoC/labs/lab3a/src/sharpen.c -o C:/xup/SDSoC/labs/lab3a/SDDebug/_sds/.llvm/src/sharpen.s 
+
+C:\xup\SDSoC\labs\lab3a\SDDebug>exit /b 0 
+INFO: [SDSoC 0-0] Performing accelerator source linting for sharpen_filter
+sdslint -func sharpen_filter C:/xup/SDSoC/labs/lab3a/src/sharpen.c -- -c -target arm-xilinx-eabi -mcpu=cortex-a9 -mfpu=vfp -O0 -g -w    -I C:/Xilinx/SDSoC/2015.4/arm-xilinx-eabi/include  -I C:/Xilinx/SDSoC/2015.4/Vivado_HLS/2015.4/include   -IC:/Xilinx/SDSoC/2015.4/SDK/2015.4/gnu/arm/nt/lib/gcc/arm-xilinx-eabi/4.9.2/include  -IC:/Xilinx/SDSoC/2015.4/SDK/2015.4/gnu/arm/nt/lib/gcc/arm-xilinx-eabi/4.9.2/include-fixed  -IC:/Xilinx/SDSoC/2015.4/SDK/2015.4/gnu/arm/nt/arm-xilinx-eabi/include -I../src -DTIME_SHARPEN -DTIME_EDGE_DETECT -Wall -g -fmessage-length=0 -MMD -MP -D __SDSCC__
+arm-xilinx-eabi-gcc -c C:/xup/SDSoC/labs/lab3a/SDDebug/_sds/swstubs/sharpen.cpp -o C:/xup/SDSoC/labs/lab3a/SDDebug/_sds/swstubs/sharpen.o
+arm-xilinx-eabi-objcopy --add-section .xdinfo=C:/xup/SDSoC/labs/lab3a/SDDebug/_sds/swstubs/sharpen.o.xml C:/xup/SDSoC/labs/lab3a/SDDebug/_sds/swstubs/sharpen.o
+INFO: [SDSoC 0-0] Performing pragma generation
+clang_wrapper -E -target arm-xilinx-eabi -mcpu=cortex-a9 -mfpu=vfp -O0 -g -w    -I C:/Xilinx/SDSoC/2015.4/arm-xilinx-eabi/include  -I C:/Xilinx/SDSoC/2015.4/Vivado_HLS/2015.4/include   -IC:/Xilinx/SDSoC/2015.4/SDK/2015.4/gnu/arm/nt/lib/gcc/arm-xilinx-eabi/4.9.2/include  -IC:/Xilinx/SDSoC/2015.4/SDK/2015.4/gnu/arm/nt/lib/gcc/arm-xilinx-eabi/4.9.2/include-fixed  -IC:/Xilinx/SDSoC/2015.4/SDK/2015.4/gnu/arm/nt/arm-xilinx-eabi/include -IC:/xup/SDSoC/labs/lab3a/src -DTIME_SHARPEN -DTIME_EDGE_DETECT -Wall -g -fmessage-length=0 -MMD -MP -D __SDSCC__ -I C:/Xilinx/SDSoC/2015.4/arm-xilinx-eabi/include -IC:/xup/SDSoC/labs/lab3a/src -D __SDSVHLS__ C:/xup/SDSoC/labs/lab3a/src/sharpen.c -o C:/xup/SDSoC/labs/lab3a/SDDebug/_sds/vhls/sharpen_pp.c
+
+C:\xup\SDSoC\labs\lab3a\SDDebug>C:\Xilinx\SDSoC\2015.4\llvm-clang\win64\llvm\bin\clang.exe -E -target arm-xilinx-eabi -mcpu=cortex-a9 -mfpu=vfp -O0 -g -w -I C:/Xilinx/SDSoC/2015.4/arm-xilinx-eabi/include -I C:/Xilinx/SDSoC/2015.4/Vivado_HLS/2015.4/include -IC:/Xilinx/SDSoC/2015.4/SDK/2015.4/gnu/arm/nt/lib/gcc/arm-xilinx-eabi/4.9.2/include -IC:/Xilinx/SDSoC/2015.4/SDK/2015.4/gnu/arm/nt/lib/gcc/arm-xilinx-eabi/4.9.2/include-fixed -IC:/Xilinx/SDSoC/2015.4/SDK/2015.4/gnu/arm/nt/arm-xilinx-eabi/include -IC:/xup/SDSoC/labs/lab3a/src -DTIME_SHARPEN -DTIME_EDGE_DETECT -Wall -g -fmessage-length=0 -MMD -MP -D __SDSCC__ -I C:/Xilinx/SDSoC/2015.4/arm-xilinx-eabi/include -IC:/xup/SDSoC/labs/lab3a/src -D __SDSVHLS__ C:/xup/SDSoC/labs/lab3a/src/sharpen.c -o C:/xup/SDSoC/labs/lab3a/SDDebug/_sds/vhls/sharpen_pp.c 
+
+C:\xup\SDSoC\labs\lab3a\SDDebug>exit /b 0 
+pragma_gen  -func sharpen_filter   -tcl C:/xup/SDSoC/labs/lab3a/SDDebug/_sds/vhls/sharpen_filter.tcl  C:/xup/SDSoC/labs/lab3a/SDDebug/_sds/vhls/sharpen_pp.c  --  -c  -target arm-xilinx-eabi -mcpu=cortex-a9 -mfpu=vfp -O0 -g -w    -I C:/Xilinx/SDSoC/2015.4/arm-xilinx-eabi/include  -I C:/Xilinx/SDSoC/2015.4/Vivado_HLS/2015.4/include   -IC:/Xilinx/SDSoC/2015.4/SDK/2015.4/gnu/arm/nt/lib/gcc/arm-xilinx-eabi/4.9.2/include  -IC:/Xilinx/SDSoC/2015.4/SDK/2015.4/gnu/arm/nt/lib/gcc/arm-xilinx-eabi/4.9.2/include-fixed  -IC:/Xilinx/SDSoC/2015.4/SDK/2015.4/gnu/arm/nt/arm-xilinx-eabi/include  -D __SDSVHLS__ -IC:/xup/SDSoC/labs/lab3a/src -DTIME_SHARPEN -DTIME_EDGE_DETECT -Wall -O0 -g -fmessage-length=0 -MMD -MP -D __SDSCC__  -I C:/Xilinx/SDSoC/2015.4/arm-xilinx-eabi/include -IC:/xup/SDSoC/labs/lab3a/src
+WARNING: [SDSoC 0-0] VHLS interface pragma "ap_fifo" has been specified for argument: "input", no directives will be generated by SDSoC!
+WARNING: [SDSoC 0-0] VHLS interface pragma "ap_fifo" has been specified for argument: "output", no directives will be generated by SDSoC!
+INFO: [SDSoC 0-0] Successfully generated tcl script: C:/xup/SDSoC/labs/lab3a/SDDebug/_sds/vhls/sharpen_filter.tcl
+INFO: [SDSoC 0-0] Moving function sharpen_filter to Programmable Logic
+C:/Xilinx/SDSoC/2015.4/Vivado_HLS/2015.4/bin/vivado_hls C:/xup/SDSoC/labs/lab3a/SDDebug/_sds/vhls/sharpen_filter_run.tcl
+================================================================
+  Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC
+  Version 2015.4
+  Build 1412921 on Wed Nov 18 09:58:55 AM 2015
+  Copyright (C) 2015 Xilinx Inc. All rights reserved.
+================================================================
+@I [HLS-10] Running 'C:/Xilinx/SDSoC/2015.4/VIVADO~1/2015.4/bin/unwrapped/win64.o/vivado_hls.exe'
+            for user 'parimalp' on host 'xsjparimalp31' (Windows NT_amd64 version 6.1) on Fri Jan 01 05:50:40 -0800 2016
+            in directory 'C:/xup/SDSoC/labs/lab3a/SDDebug/_sds/vhls'
+@I [HLS-10] Creating and opening project 'C:/xup/SDSoC/labs/lab3a/SDDebug/_sds/vhls/sharpen_filter'.
+@I [HLS-10] Adding design file 'C:/xup/SDSoC/labs/lab3a/src/sharpen.c' to the project
+@I [HLS-10] Creating and opening solution 'C:/xup/SDSoC/labs/lab3a/SDDebug/_sds/vhls/sharpen_filter/solution'.
+@I [HLS-10] Cleaning up the solution database.
+@I [HLS-10] Setting target device to ' xc7z020clg484-1 '
+@I [SYN-201] Setting up clock 'default' with a period of 5.95ns.
+@I [HLS-10] Analyzing design file 'C:/xup/SDSoC/labs/lab3a/src/sharpen.c' ... 
+@I [HLS-10] Validating synthesis directives ...
+@I [HLS-10] Starting code transformations ...
+@I [XFORM-603] Inlining function 'linebuffer_shift_up' into 'sharpen_filter' (C:/xup/SDSoC/labs/lab3a/src/sharpen.c:87).
+@I [XFORM-603] Inlining function 'linebuffer_getval' into 'sharpen_filter' (C:/xup/SDSoC/labs/lab3a/src/sharpen.c:108).
+@I [XFORM-603] Inlining function 'linebuffer_getval' into 'sharpen_filter' (C:/xup/SDSoC/labs/lab3a/src/sharpen.c:88).
+@I [XFORM-603] Inlining function 'linebuffer_insert_bottom' into 'sharpen_filter' (C:/xup/SDSoC/labs/lab3a/src/sharpen.c:99).
+@I [XFORM-603] Inlining function 'window_shift_right' into 'sharpen_filter' (C:/xup/SDSoC/labs/lab3a/src/sharpen.c:103).
+@I [XFORM-603] Inlining function 'window_insert' into 'sharpen_filter' (C:/xup/SDSoC/labs/lab3a/src/sharpen.c:108).
+@I [XFORM-603] Inlining function 'window_insert' into 'sharpen_filter' (C:/xup/SDSoC/labs/lab3a/src/sharpen.c:109).
+@I [XFORM-603] Inlining function 'window_insert' into 'sharpen_filter' (C:/xup/SDSoC/labs/lab3a/src/sharpen.c:110).
+@I [XFORM-603] Inlining function 'window_getval' into 'sharpen_operator' (C:/xup/SDSoC/labs/lab3a/src/sharpen.c:50).
+@I [HLS-10] Checking synthesizability ...
+@I [XFORM-602] Inlining function 'sharpen_operator' into 'sharpen_filter' (C:/xup/SDSoC/labs/lab3a/src/sharpen.c:117) automatically.
+@I [XFORM-502] Unrolling all sub-loops inside loop 'Loop-1.1' (C:/xup/SDSoC/labs/lab3a/src/sharpen.c:76) in function 'sharpen_filter' for pipelining.
+@I [XFORM-502] Unrolling all loops for pipelining in function 'sharpen_operator' (C:/xup/SDSoC/labs/lab3a/src/sharpen.c:34).
+@I [XFORM-501] Unrolling loop 'Loop-1.1.1' (C:/xup/SDSoC/labs/lab3a/src/sharpen.c:137) in function 'sharpen_filter' completely.
+@I [XFORM-501] Unrolling loop 'Loop-1.1.2' (C:/xup/SDSoC/labs/lab3a/src/sharpen.c:171) in function 'sharpen_filter' completely.
+@I [XFORM-501] Unrolling loop 'Loop-1.1.2.1' (C:/xup/SDSoC/labs/lab3a/src/sharpen.c:173) in function 'sharpen_filter' completely.
+@I [XFORM-501] Unrolling loop 'Loop-1' (C:/xup/SDSoC/labs/lab3a/src/sharpen.c:47) in function 'sharpen_operator' completely.
+@I [XFORM-501] Unrolling loop 'Loop-1.1' (C:/xup/SDSoC/labs/lab3a/src/sharpen.c:48) in function 'sharpen_operator' completely.
+@I [XFORM-102] Partitioning array 'window.0' automatically.
+@I [XFORM-102] Partitioning array 'window.1' automatically.
+@I [XFORM-102] Partitioning array 'window.2' automatically.
+@I [XFORM-102] Partitioning array 'buff_A' (C:/xup/SDSoC/labs/lab3a/src/sharpen.c:72) in dimension 1 automatically.
+@I [XFORM-102] Partitioning array 'buff_C' (C:/xup/SDSoC/labs/lab3a/src/sharpen.c:73) in dimension 1 automatically.
+@I [XFORM-102] Partitioning array 'buff_C.0' (C:/xup/SDSoC/labs/lab3a/src/sharpen.c:73) automatically.
+@I [XFORM-102] Partitioning array 'buff_C.1' (C:/xup/SDSoC/labs/lab3a/src/sharpen.c:73) automatically.
+@I [XFORM-102] Partitioning array 'buff_C.2' (C:/xup/SDSoC/labs/lab3a/src/sharpen.c:73) automatically.
+@I [XFORM-602] Inlining function 'sharpen_operator' into 'sharpen_filter' (C:/xup/SDSoC/labs/lab3a/src/sharpen.c:117) automatically.
+@I [XFORM-401] Performing if-conversion on hyperblock from (C:/xup/SDSoC/labs/lab3a/src/sharpen.c:175:2) to (C:/xup/SDSoC/labs/lab3a/src/sharpen.c:121:4) in function 'sharpen_filter'... converting 3 basic blocks.
+@I [XFORM-541] Flattening a loop nest 'Loop-1' (C:/xup/SDSoC/labs/lab3a/src/sharpen.c:75:7) in function 'sharpen_filter'.
+@I [HLS-111] Elapsed time: 5.791 seconds; current memory usage: 71.7 MB.
+@I [HLS-10] Starting hardware synthesis ...
+@I [HLS-10] Synthesizing 'sharpen_filter' ...
+@W [SYN-107] Renaming port name 'sharpen_filter/input' to 'sharpen_filter/input_r' to avoid the conflict with HDL keywords or other object names.
+@W [SYN-107] Renaming port name 'sharpen_filter/output' to 'sharpen_filter/output_r' to avoid the conflict with HDL keywords or other object names.
+@I [HLS-10] ----------------------------------------------------------------
+@I [HLS-10] -- Scheduling module 'sharpen_filter' 
+@I [HLS-10] ----------------------------------------------------------------
+@I [SCHED-11] Starting scheduling ...
+@I [SCHED-61] Pipelining loop 'Loop 1'.
+@I [SCHED-61] Pipelining result: Target II: 1, Final II: 1, Depth: 8.
+@W [SCHED-71] Latency directive discarded for region sharpen_filter since it contains subloops.
+@I [SCHED-11] Finished scheduling.
+@I [HLS-111] Elapsed time: 0.094 seconds; current memory usage: 73.5 MB.
+@I [HLS-10] ----------------------------------------------------------------
+@I [HLS-10] -- Exploring micro-architecture for module 'sharpen_filter' 
+@I [HLS-10] ----------------------------------------------------------------
+@I [BIND-100] Starting micro-architecture generation ...
+@I [BIND-101] Performing variable lifetime analysis.
+@I [BIND-101] Exploring resource sharing.
+@I [BIND-101] Binding ...
+@I [BIND-100] Finished micro-architecture generation.
+@I [HLS-111] Elapsed time: 0.047 seconds; current memory usage: 73.5 MB.
+@I [HLS-10] ----------------------------------------------------------------
+@I [HLS-10] -- Generating RTL for module 'sharpen_filter' 
+@I [HLS-10] ----------------------------------------------------------------
+@I [RTGEN-500] Setting interface mode on port 'sharpen_filter/input_r' to 'ap_fifo'.
+@I [RTGEN-500] Setting interface mode on port 'sharpen_filter/output_r' to 'ap_fifo'.
+@I [RTGEN-500] Setting interface mode on function 'sharpen_filter' to 'ap_ctrl_hs'.
+@I [RTGEN-100] Finished creating RTL model for 'sharpen_filter'.
+@I [HLS-111] Elapsed time: 0.078 seconds; current memory usage: 73.5 MB.
+@I [RTMG-278] Implementing memory 'sharpen_filter_buff_A_0_ram' using block RAMs.
+@I [RTMG-278] Implementing memory 'sharpen_filter_buff_A_2_ram' using block RAMs.
+@I [HLS-10] Finished generating all RTL models.
+@I [WSYSC-301] Generating RTL SystemC for 'sharpen_filter'.
+@I [WVHDL-304] Generating RTL VHDL for 'sharpen_filter'.
+@I [WVLOG-307] Generating RTL Verilog for 'sharpen_filter'.
+@I [IMPL-8] Exporting RTL as an IP in IP-XACT.
+
+****** Vivado v2015.4 (64-bit)
+  **** SW Build 1412921 on Wed Nov 18 09:43:45 MST 2015
+  **** IP Build 1412968 on Wed Nov 18 10:19:19 MST 2015
+    ** Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
+
+source run_ippack.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/SDSoC/2015.4/Vivado/2015.4/data/ip'.
+INFO: [Common 17-206] Exiting Vivado at Fri Jan 01 05:50:51 2016...
+@I [HLS-112] Total elapsed time: 25.137 seconds; peak memory usage: 73.5 MB.
+xsltproc --output component.xml  C:/Xilinx/SDSoC/2015.4/scripts/xsd/xdFixAximmAddrSpaceProperty.xsl  component.xml
+zip -u xilinx_com_hls_sharpen_filter_1_0.zip component.xml
+updating: component.xml (172 bytes security) (deflated 92%)
+sed -i -e {s/xilinx\.com\/xidane/xilinx\.com\/xd/g} C:/xup/SDSoC/labs/lab3a/SDDebug/_sds/vhls/sharpen_filter/solution/impl/ip/auxiliary.xml
+xsltproc  --output C:/xup/SDSoC/labs/lab3a/SDDebug/_sds/.llvm/sharpen_filter.hlsmap1.xml  --stringparam P_CLKID 1  --stringparam P_HLS_TYPE hls  C:/Xilinx/SDSoC/2015.4/scripts/xsd/xdHlsmapRenameAttr.xsl  C:/xup/SDSoC/labs/lab3a/SDDebug/_sds/.llvm/sharpen_filter_auxiliary.xml
+xsltproc  --output C:/xup/SDSoC/labs/lab3a/SDDebug/_sds/.llvm/sharpen_filter.hlsmap.xml  C:/Xilinx/SDSoC/2015.4/scripts/xsd/xdHlsmapAdapter.xsl  C:/xup/SDSoC/labs/lab3a/SDDebug/_sds/.llvm/sharpen_filter.hlsmap1.xml
+xsltproc    --output C:/xup/SDSoC/labs/lab3a/SDDebug/_sds/.llvm/sharpen_filter.fcnmap.xml  C:/Xilinx/SDSoC/2015.4/scripts/xsd/xdHlsmapAxi4.xsl  C:/xup/SDSoC/labs/lab3a/SDDebug/_sds/.llvm/sharpen_filter.hlsmap.xml
+xsltproc  --output C:/xup/SDSoC/labs/lab3a/SDDebug/_sds/.llvm/sharpen_filter_if.xml  C:/Xilinx/SDSoC/2015.4/scripts/xsd/xdHlsAdapterComp.xsl  C:/xup/SDSoC/labs/lab3a/SDDebug/_sds/.llvm/sharpen_filter.fcnmap.xml
+arm-xilinx-eabi-objcopy --add-section .xddata=C:/xup/SDSoC/labs/lab3a/SDDebug/_sds/swstubs/sharpen_filter.xml C:/xup/SDSoC/labs/lab3a/SDDebug/_sds/swstubs/sharpen.o
+arm-xilinx-eabi-objcopy --add-section .xdasm=C:/xup/SDSoC/labs/lab3a/SDDebug/_sds/.llvm/src/sharpen.s C:/xup/SDSoC/labs/lab3a/SDDebug/_sds/swstubs/sharpen.o
+arm-xilinx-eabi-gcc -E -I../src -DTIME_SHARPEN -DTIME_EDGE_DETECT -Wall -O0 -g -fmessage-length=0 -MMD -MP -D __SDSCC__ -MTC:/xup/SDSoC/labs/lab3a/SDDebug/src/sharpen.o -MFC:/xup/SDSoC/labs/lab3a/SDDebug/src/sharpen.d -MTC:/xup/SDSoC/labs/lab3a/SDDebug/src/sharpen.d   -I C:/Xilinx/SDSoC/2015.4/arm-xilinx-eabi/include  -I C:/Xilinx/SDSoC/2015.4/Vivado_HLS/2015.4/include C:/xup/SDSoC/labs/lab3a/src/sharpen.c -o C:/xup/SDSoC/labs/lab3a/SDDebug/_sds/.pp/sharpen.i
+arm-xilinx-eabi-objcopy --add-section .xdpp=C:/xup/SDSoC/labs/lab3a/SDDebug/_sds/.pp/sharpen.i C:/xup/SDSoC/labs/lab3a/SDDebug/_sds/swstubs/sharpen.o
+arm-xilinx-eabi-objcopy --add-section .xdfcnmap=C:/xup/SDSoC/labs/lab3a/SDDebug/_sds/.llvm/sharpen_filter.fcnmap.xml C:/xup/SDSoC/labs/lab3a/SDDebug/_sds/swstubs/sharpen.o
+arm-xilinx-eabi-objcopy --add-section .xdhlscore=C:/xup/SDSoC/labs/lab3a/SDDebug/_sds/vhls/sharpen_filter/solution/impl/ip/xilinx_com_hls_sharpen_filter_1_0.zip C:/xup/SDSoC/labs/lab3a/SDDebug/_sds/swstubs/sharpen.o
+arm-xilinx-eabi-objcopy --add-section .xdif=C:/xup/SDSoC/labs/lab3a/SDDebug/_sds/.llvm/sharpen_filter_if.xml C:/xup/SDSoC/labs/lab3a/SDDebug/_sds/swstubs/sharpen.o
+sdscc log file saved as C:/xup/SDSoC/labs/lab3a/SDDebug/_sds/reports/sds_sharpen.log
+sdscc completed at Fri Jan 01 05:51:05 -0800 2016

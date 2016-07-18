@@ -1,0 +1,21 @@
+(c) Copyright 2012-2015 Xilinx, Inc. All Rights Reserved.
+#-----------------------------------------------------------
+# Tool version  : sds++ 2015.4 SW Build on Dec 14 2015 23:02:57
+# Start time    : Sat Jan 02 06:35:21 -0800 2016
+# Command line  : sds++ -Wall -O3 -I../src -c -fmessage-length=0 -MTsrc/main.o -MMD -MP -MFsrc/main.d -MTsrc/main.d -o src/main.o ../src/main.cpp -sds-hw madd madd.cpp -clkid 1 -sds-end -sds-hw mmult mmult.cpp -clkid 1 -sds-end -sds-pf zed
+# Log file      : C:/xup/SDSoC/labs/lab1_prebuilt/SDRelease/_sds/reports/sds_main.log
+# Journal file  : C:/xup/SDSoC/labs/lab1_prebuilt/SDRelease/_sds/reports/sds_main.jou
+# Report file   : C:/xup/SDSoC/labs/lab1_prebuilt/SDRelease/_sds/reports/sds_main.rpt
+#-----------------------------------------------------------
+
+INFO: [SDSoC 0-0] Create data motion intermediate representation
+clang_wrapper -target arm-xilinx-linux-gnueabi -mcpu=cortex-a9 -mfpu=vfp -O0 -g     -I C:/Xilinx/SDSoC/2015.4/arm-xilinx-linux-gnueabi/include  -I C:/Xilinx/SDSoC/2015.4/Vivado_HLS/2015.4/include   -IC:/Xilinx/SDSoC/2015.4/SDK/2015.4/gnu/arm/nt/arm-xilinx-linux-gnueabi/include/c++/4.9.2  -IC:/Xilinx/SDSoC/2015.4/SDK/2015.4/gnu/arm/nt/arm-xilinx-linux-gnueabi/include/c++/4.9.2/arm-xilinx-linux-gnueabi  -IC:/Xilinx/SDSoC/2015.4/SDK/2015.4/gnu/arm/nt/arm-xilinx-linux-gnueabi/include/c++/4.9.2/backward   -IC:/Xilinx/SDSoC/2015.4/SDK/2015.4/gnu/arm/nt/lib/gcc/arm-xilinx-linux-gnueabi/4.9.2/include  -IC:/Xilinx/SDSoC/2015.4/SDK/2015.4/gnu/arm/nt/lib/gcc/arm-xilinx-linux-gnueabi/4.9.2/include-fixed  -IC:/Xilinx/SDSoC/2015.4/SDK/2015.4/gnu/arm/nt/arm-xilinx-linux-gnueabi/include  -IC:/Xilinx/SDSoC/2015.4/SDK/2015.4/gnu/arm/nt/arm-xilinx-linux-gnueabi/libc/usr/include -I../src -Wall -fmessage-length=0 -MMD -MP -D __SDSCC__ -emit-llvm -S C:/xup/SDSoC/labs/lab1_prebuilt/src/main.cpp -o C:/xup/SDSoC/labs/lab1_prebuilt/SDRelease/_sds/.llvm/src/main.s
+
+C:\xup\SDSoC\labs\lab1_prebuilt\SDRelease>C:\Xilinx\SDSoC\2015.4\llvm-clang\win64\llvm\bin\clang.exe -target arm-xilinx-linux-gnueabi -mcpu=cortex-a9 -mfpu=vfp -O0 -g -I C:/Xilinx/SDSoC/2015.4/arm-xilinx-linux-gnueabi/include -I C:/Xilinx/SDSoC/2015.4/Vivado_HLS/2015.4/include -IC:/Xilinx/SDSoC/2015.4/SDK/2015.4/gnu/arm/nt/arm-xilinx-linux-gnueabi/include/c++/4.9.2 -IC:/Xilinx/SDSoC/2015.4/SDK/2015.4/gnu/arm/nt/arm-xilinx-linux-gnueabi/include/c++/4.9.2/arm-xilinx-linux-gnueabi -IC:/Xilinx/SDSoC/2015.4/SDK/2015.4/gnu/arm/nt/arm-xilinx-linux-gnueabi/include/c++/4.9.2/backward -IC:/Xilinx/SDSoC/2015.4/SDK/2015.4/gnu/arm/nt/lib/gcc/arm-xilinx-linux-gnueabi/4.9.2/include -IC:/Xilinx/SDSoC/2015.4/SDK/2015.4/gnu/arm/nt/lib/gcc/arm-xilinx-linux-gnueabi/4.9.2/include-fixed -IC:/Xilinx/SDSoC/2015.4/SDK/2015.4/gnu/arm/nt/arm-xilinx-linux-gnueabi/include -IC:/Xilinx/SDSoC/2015.4/SDK/2015.4/gnu/arm/nt/arm-xilinx-linux-gnueabi/libc/usr/include -I../src -Wall -fmessage-length=0 -MMD -MP -D __SDSCC__ -emit-llvm -S C:/xup/SDSoC/labs/lab1_prebuilt/src/main.cpp -o C:/xup/SDSoC/labs/lab1_prebuilt/SDRelease/_sds/.llvm/src/main.s 
+
+C:\xup\SDSoC\labs\lab1_prebuilt\SDRelease>exit /b 0 
+INFO: [SDSoC 0-0] Compiling C:/xup/SDSoC/labs/lab1_prebuilt/src/main.cpp
+arm-xilinx-linux-gnueabi-g++ -c -I../src -Wall -O3 -fmessage-length=0 -MMD -MP -D __SDSCC__ -MTC:/xup/SDSoC/labs/lab1_prebuilt/SDRelease/src/main.o -MFC:/xup/SDSoC/labs/lab1_prebuilt/SDRelease/src/main.d -MTC:/xup/SDSoC/labs/lab1_prebuilt/SDRelease/src/main.d   -I C:/Xilinx/SDSoC/2015.4/arm-xilinx-linux-gnueabi/include  -I C:/Xilinx/SDSoC/2015.4/Vivado_HLS/2015.4/include C:/xup/SDSoC/labs/lab1_prebuilt/src/main.cpp -o src/main.o
+arm-xilinx-linux-gnueabi-objcopy --add-section .xdsdata=C:/xup/SDSoC/labs/lab1_prebuilt/SDRelease/_sds/swstubs/main.o.xml src/main.o
+sds++ log file saved as C:/xup/SDSoC/labs/lab1_prebuilt/SDRelease/_sds/reports/sds_main.log
+sds++ completed at Sat Jan 02 06:35:23 -0800 2016

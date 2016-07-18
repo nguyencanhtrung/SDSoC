@@ -1,0 +1,1055 @@
+@I [HLS-0] Workspace C:/xup/SDSoC/labs/lab5a/SDDebug/_sds/vhls/sharpen_filter/solution opened at Fri Jan 01 08:43:01 -0800 2016
+@I [HLS-100] Command 'open_solution' returned 0; elapsed 0.031Total elapsed time: 2.228 sec.
+@I [HLS-100] Command "set_part  xc7z020clg484-1  "
+@I [HLS-100] Command "add_library xilinx/zynq/zynq:xc7z020:clg484:-1 "
+@I [HLS-100] Command "get_default_platform "
+@I [HLS-100] Command 'get_default_platform' returned 0; elapsed 0Total elapsed time: 2.228 sec.
+@I [HLS-100] Command "license_isbetapart xc7z020 "
+@I [HLS-100] Command 'license_isbetapart' returned 1; elapsed 0.075Total elapsed time: 2.303 sec.
+@I [HLS-100] Command "open_platform DefaultPlatform "
+@I [HLS-100] Command 'open_platform' returned 0; elapsed 0Total elapsed time: 2.303 sec.
+@I [HLS-100] Command "import_lib C:/Xilinx/SDSoC/2015.4/VIVADO~1/2015.4/common/technology/xilinx/zynq/zynq "
+@I [HLS-100] Command "source C:/Xilinx/SDSoC/2015.4/VIVADO~1/2015.4/common/technology/xilinx/common/xilinx.lib "
+@I [HLS-100] Command "source C:/Xilinx/SDSoC/2015.4/VIVADO~1/2015.4/common/technology/xilinx/interface/xilinx_interface.lib "
+@I [HLS-100] Command "source C:/Xilinx/SDSoC/2015.4/VIVADO~1/2015.4/common/technology/xilinx/interface/plb46.lib "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.016Total elapsed time: 2.319 sec.
+@I [HLS-100] Command "source C:/Xilinx/SDSoC/2015.4/VIVADO~1/2015.4/common/technology/xilinx/interface/fsl.lib "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 2.319 sec.
+@I [HLS-100] Command "source C:/Xilinx/SDSoC/2015.4/VIVADO~1/2015.4/common/technology/xilinx/interface/axi4.lib "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 2.319 sec.
+@I [HLS-100] Command "source C:/Xilinx/SDSoC/2015.4/VIVADO~1/2015.4/common/technology/xilinx/interface/maxi.lib "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 2.319 sec.
+@I [HLS-100] Command "source C:/Xilinx/SDSoC/2015.4/VIVADO~1/2015.4/common/technology/xilinx/interface/saxilite.lib "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 2.319 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.016Total elapsed time: 2.319 sec.
+@I [HLS-100] Command "source C:/Xilinx/SDSoC/2015.4/VIVADO~1/2015.4/common/technology/xilinx/common/dsp48.lib "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 2.319 sec.
+@I [HLS-100] Command "source C:/Xilinx/SDSoC/2015.4/VIVADO~1/2015.4/common/technology/xilinx/ip/dds_compiler.lib "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 2.334 sec.
+@I [HLS-100] Command "source C:/Xilinx/SDSoC/2015.4/VIVADO~1/2015.4/common/technology/xilinx/ip/xfft.lib "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 2.334 sec.
+@I [HLS-100] Command "source C:/Xilinx/SDSoC/2015.4/VIVADO~1/2015.4/common/technology/xilinx/ip/xfir.lib "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 2.334 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.031Total elapsed time: 2.334 sec.
+@I [HLS-100] Command "source C:/Xilinx/SDSoC/2015.4/VIVADO~1/2015.4/common/technology/xilinx/common/xilinx_old.lib "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.016Total elapsed time: 2.350 sec.
+@I [HLS-100] Command "source C:/Xilinx/SDSoC/2015.4/VIVADO~1/2015.4/common/technology/xilinx/common/xilinx_vivado.lib "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 2.350 sec.
+@I [HLS-100] Command "source C:/Xilinx/SDSoC/2015.4/VIVADO~1/2015.4/common/technology/xilinx/common/xilinx.hlp "
+@I [HLS-100] Command "source C:/Xilinx/SDSoC/2015.4/VIVADO~1/2015.4/common/technology/xilinx/common/target_info.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 2.350 sec.
+@I [HLS-100] Command "source C:/Xilinx/SDSoC/2015.4/VIVADO~1/2015.4/common/technology/xilinx/interface/xilinx_interface.hlp "
+@I [HLS-100] Command "source C:/Xilinx/SDSoC/2015.4/VIVADO~1/2015.4/common/technology/xilinx/interface/maxi.hlp "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.016Total elapsed time: 2.366 sec.
+@I [HLS-100] Command "source C:/Xilinx/SDSoC/2015.4/VIVADO~1/2015.4/common/technology/xilinx/interface/saxilite.hlp "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 2.366 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.016Total elapsed time: 2.366 sec.
+@I [HLS-100] Command "source C:/Xilinx/SDSoC/2015.4/VIVADO~1/2015.4/common/technology/xilinx/common/dsp48.hlp "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 2.366 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.016Total elapsed time: 2.366 sec.
+@I [HLS-100] Command "source C:/Xilinx/SDSoC/2015.4/VIVADO~1/2015.4/common/technology/xilinx/zynq/dsp48e1.hlp "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 2.366 sec.
+@I [HLS-100] Command "get_default_platform "
+@I [HLS-100] Command 'get_default_platform' returned 0; elapsed 0Total elapsed time: 2.366 sec.
+@I [HLS-100] Command "config_chip_info -quiet -resource  {SLICE 13300}  {LUT 53200}     {FF 106400} {DSP48E 220}   {BRAM 280}  "
+@I [HLS-100] Command 'config_chip_info' returned 0; elapsed 0Total elapsed time: 2.366 sec.
+@I [HLS-100] Command "config_chip_info -quiet -speed medium "
+@I [HLS-100] Command 'config_chip_info' returned 0; elapsed 0Total elapsed time: 2.366 sec.
+@I [HLS-100] Command 'import_lib' returned 0; elapsed 0.063Total elapsed time: 2.366 sec.
+@I [HLS-100] Command "source C:/Xilinx/SDSoC/2015.4/VIVADO~1/2015.4/common/technology/xilinx/zynq/zynq.gen "
+@I [HLS-100] Command "source C:/Xilinx/SDSoC/2015.4/VIVADO~1/2015.4/common/technology/xilinx/common/virtex.gen "
+@I [HLS-100] Command "source C:/Xilinx/SDSoC/2015.4/VIVADO~1/2015.4/common/technology/xilinx/common/xilinx.gen "
+@I [HLS-100] Command "source C:/Xilinx/SDSoC/2015.4/VIVADO~1/2015.4/common/technology/xilinx/interface/plb46.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.005Total elapsed time: 2.390 sec.
+@I [HLS-100] Command "source C:/Xilinx/SDSoC/2015.4/VIVADO~1/2015.4/common/technology/xilinx/interface/fsl.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.004Total elapsed time: 2.394 sec.
+@I [HLS-100] Command "source C:/Xilinx/SDSoC/2015.4/VIVADO~1/2015.4/common/technology/xilinx/interface/axi4.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.007Total elapsed time: 2.401 sec.
+@I [HLS-100] Command "source C:/Xilinx/SDSoC/2015.4/VIVADO~1/2015.4/common/technology/xilinx/interface/nativeAXI4.gen "
+@I [HLS-100] Command "source C:/Xilinx/SDSoC/2015.4/VIVADO~1/2015.4/common/technology/xilinx/interface/saxilite.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.009Total elapsed time: 2.414 sec.
+@I [HLS-100] Command "source C:/Xilinx/SDSoC/2015.4/VIVADO~1/2015.4/common/technology/xilinx/interface/maxi.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.017Total elapsed time: 2.431 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.028Total elapsed time: 2.431 sec.
+@I [HLS-100] Command "source C:/Xilinx/SDSoC/2015.4/VIVADO~1/2015.4/common/technology/xilinx/scripts/xilinxcoregen.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.015Total elapsed time: 2.446 sec.
+@I [HLS-100] Command "source C:/Xilinx/SDSoC/2015.4/VIVADO~1/2015.4/common/technology/xilinx/interface/XilEDKCoreGen.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.011Total elapsed time: 2.457 sec.
+@I [HLS-100] Command "source C:/Xilinx/SDSoC/2015.4/VIVADO~1/2015.4/common/technology/xilinx/ip/dds_compiler.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.005Total elapsed time: 2.464 sec.
+@I [HLS-100] Command "source C:/Xilinx/SDSoC/2015.4/VIVADO~1/2015.4/common/technology/xilinx/ip/util.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.001Total elapsed time: 2.465 sec.
+@I [HLS-100] Command "source C:/Xilinx/SDSoC/2015.4/VIVADO~1/2015.4/common/technology/xilinx/ip/xfft.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.142Total elapsed time: 2.607 sec.
+@I [HLS-100] Command "source C:/Xilinx/SDSoC/2015.4/VIVADO~1/2015.4/common/technology/xilinx/ip/xfir.gen "
+@I [HLS-100] Command "source C:/Xilinx/SDSoC/2015.4/VIVADO~1/2015.4/tps/tcl/tcllib1.11.1/struct/list.tcl "
+@I [HLS-100] Command "source C:/Xilinx/SDSoC/2015.4/VIVADO~1/2015.4/tps/tcl/tcllib1.11.1/cmdline/cmdline.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 2.639 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.016Total elapsed time: 2.639 sec.
+@I [HLS-100] Command "source C:/Xilinx/SDSoC/2015.4/VIVADO~1/2015.4/tps/tcl/tcllib1.11.1/math/bignum.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 2.655 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.048Total elapsed time: 2.655 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.289Total elapsed time: 2.655 sec.
+@I [HLS-100] Command "source C:/Xilinx/SDSoC/2015.4/VIVADO~1/2015.4/common/technology/xilinx/common/dsp48.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 2.671 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.305Total elapsed time: 2.671 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.305Total elapsed time: 2.671 sec.
+@I [HLS-100] Command "get_default_platform "
+@I [HLS-100] Command 'get_default_platform' returned 0; elapsed 0Total elapsed time: 2.671 sec.
+@I [HLS-100] Command "config_chip_info -quiet -resource  {SLICE 13300}  {LUT 53200}     {FF 106400} {DSP48E 220}   {BRAM 280}  "
+@I [HLS-100] Command 'config_chip_info' returned 0; elapsed 0Total elapsed time: 2.671 sec.
+@I [HLS-100] Command "config_chip_info -quiet -speed slow "
+@I [HLS-100] Command 'config_chip_info' returned 0; elapsed 0Total elapsed time: 2.671 sec.
+@I [HLS-100] Command 'add_library' returned 0; elapsed 0.443Total elapsed time: 2.671 sec.
+@I [HLS-100] Command "add_library xilinx/zynq/zynq_fpv6 "
+@I [HLS-100] Command "get_default_platform "
+@I [HLS-100] Command 'get_default_platform' returned 0; elapsed 0Total elapsed time: 2.671 sec.
+@I [HLS-100] Command "open_platform DefaultPlatform "
+@I [HLS-100] Command 'open_platform' returned 0; elapsed 0Total elapsed time: 2.686 sec.
+@I [HLS-100] Command "import_lib C:/Xilinx/SDSoC/2015.4/VIVADO~1/2015.4/common/technology/xilinx/zynq/zynq_fpv6 "
+@I [HLS-100] Command "source C:/Xilinx/SDSoC/2015.4/VIVADO~1/2015.4/common/technology/xilinx/common/xilinx_fpv7.lib "
+@I [HLS-100] Command "source C:/Xilinx/SDSoC/2015.4/VIVADO~1/2015.4/common/technology/xilinx/common/xilinx_hp.lib "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.002Total elapsed time: 2.692 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.006Total elapsed time: 2.694 sec.
+@I [HLS-100] Command "source C:/Xilinx/SDSoC/2015.4/VIVADO~1/2015.4/common/technology/xilinx/common/xilinx_fpv.hlp "
+@I [HLS-100] Command "source C:/Xilinx/SDSoC/2015.4/VIVADO~1/2015.4/common/technology/xilinx/common/xilinx.hlp "
+@I [HLS-100] Command "source C:/Xilinx/SDSoC/2015.4/VIVADO~1/2015.4/common/technology/xilinx/common/target_info.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.005Total elapsed time: 2.713 sec.
+@I [HLS-100] Command "source C:/Xilinx/SDSoC/2015.4/VIVADO~1/2015.4/common/technology/xilinx/interface/xilinx_interface.hlp "
+@I [HLS-100] Command "source C:/Xilinx/SDSoC/2015.4/VIVADO~1/2015.4/common/technology/xilinx/interface/maxi.hlp "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.001Total elapsed time: 2.715 sec.
+@I [HLS-100] Command "source C:/Xilinx/SDSoC/2015.4/VIVADO~1/2015.4/common/technology/xilinx/interface/saxilite.hlp "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.001Total elapsed time: 2.716 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.003Total elapsed time: 2.716 sec.
+@I [HLS-100] Command "source C:/Xilinx/SDSoC/2015.4/VIVADO~1/2015.4/common/technology/xilinx/common/dsp48.hlp "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.002Total elapsed time: 2.718 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.012Total elapsed time: 2.718 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.014Total elapsed time: 2.719 sec.
+@I [HLS-100] Command "source C:/Xilinx/SDSoC/2015.4/VIVADO~1/2015.4/common/technology/xilinx/zynq/zynq_hp.hlp "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.003Total elapsed time: 2.722 sec.
+@I [HLS-100] Command 'import_lib' returned 0; elapsed 0.042Total elapsed time: 2.728 sec.
+@I [HLS-100] Command "source C:/Xilinx/SDSoC/2015.4/VIVADO~1/2015.4/common/technology/xilinx/zynq/zynq_fpv6.gen "
+@I [HLS-100] Command "source C:/Xilinx/SDSoC/2015.4/VIVADO~1/2015.4/common/technology/xilinx/common/xilinx_fpv6.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.004Total elapsed time: 2.734 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.005Total elapsed time: 2.734 sec.
+@I [HLS-100] Command 'add_library' returned 0; elapsed 0.065Total elapsed time: 2.736 sec.
+@I [HLS-10] Setting target device to ' xc7z020clg484-1 '
+@I [HLS-100] Command 'set_part' returned 0; elapsed 0.508Total elapsed time: 2.736 sec.
+@I [HLS-100] Command "create_clock -period 5.95000085 "
+@I [HLS-100] Command "config_clock -quiet -name default -period 5.95000085 -default=false "
+@I [SYN-201] Setting up clock 'default' with a period of 5.95ns.
+@I [HLS-100] Command 'config_clock' returned 0; elapsed 0Total elapsed time: 2.744 sec.
+@I [HLS-100] Command 'create_clock' returned 0; elapsed 0.008Total elapsed time: 2.744 sec.
+@I [HLS-100] Command "config_rtl -reset_level low "
+@I [HLS-100] Command 'config_rtl' returned 0; elapsed 0.007Total elapsed time: 2.751 sec.
+@I [HLS-100] Command "source C:/xup/SDSoC/labs/lab5a/SDDebug/_sds/vhls/sharpen_filter.tcl "
+@I [HLS-100] Command "set_directive_latency -min 1 sharpen_filter "
+@I [HLS-100] Command 'set_directive_latency' returned 0; elapsed 0.001Total elapsed time: 2.755 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.004Total elapsed time: 2.755 sec.
+@I [HLS-100] Command "csynth_design "
+@I [HLS-100] Command "elaborate -effort=medium -skip_syncheck=0 -keep_printf=0 -lm=0 -skip_cdt=0 -skip_transform=0 -ng=0 -g=0 -opt_fp=0 "
+@I [HLS-10] Analyzing design file 'C:/xup/SDSoC/labs/lab5a/src/sharpen.c' ... 
+@0 [HLS-0] Analyzing design file 'C:/xup/SDSoC/labs/lab5a/src/sharpen.c' ... 
+@I [HLS-0] Compiling one TU...
+@I [HLS-0] 
+Checking before pre-process: exec clang -fno-limit-debug-info -gcc-toolchain "C:/Xilinx/SDSoC/2015.4/VIVADO~1/2015.4/msys" -hls  -IC:/xup/SDSoC/labs/lab5a/src -Wall -O0 -g -fmessage-length=0 -MMD -MP -D__SDSCC__ -IC:/Xilinx/SDSoC/2015.4/arm-xilinx-linux-gnueabi/include -IC:/xup/SDSoC/labs/lab5a/src -D__SDSVHLS__ -IC:/xup/SDSoC/labs/lab5a/SDDebug -w  -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -std=gnu89   -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "C:/Xilinx/SDSoC/2015.4/VIVADO~1/2015.4/common/technology/autopilot" -I "C:/Xilinx/SDSoC/2015.4/VIVADO~1/2015.4/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__cdecl=  "C:/xup/SDSoC/labs/lab5a/src/sharpen.c"  -o "C:/xup/SDSoC/labs/lab5a/SDDebug/_sds/vhls/sharpen_filter/solution/.autopilot/db/sharpen.pp.00.o"
+
+@I [HLS-100] Command "is_encrypted C:/xup/SDSoC/labs/lab5a/SDDebug/_sds/vhls/sharpen_filter/solution/.autopilot/db/sharpen.pp.00.o "
+@I [HLS-100] Command 'is_encrypted' returned 0; elapsed 0Total elapsed time: 3.372 sec.
+@I [HLS-0] Syntax Checker time: 0 seconds per iteration
+@I [HLS-0] 
+Source preprocessing: exec clang -fno-limit-debug-info -gcc-toolchain "C:/Xilinx/SDSoC/2015.4/VIVADO~1/2015.4/msys" -hls -fno-exceptions  -D__llvm__  -CC -E "C:/xup/SDSoC/labs/lab5a/src/sharpen.c"   -IC:/xup/SDSoC/labs/lab5a/src -Wall -O0 -g -fmessage-length=0 -MMD -MP -D__SDSCC__ -IC:/Xilinx/SDSoC/2015.4/arm-xilinx-linux-gnueabi/include -IC:/xup/SDSoC/labs/lab5a/src -D__SDSVHLS__ -IC:/xup/SDSoC/labs/lab5a/SDDebug -w  -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -std=gnu89   -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "C:/Xilinx/SDSoC/2015.4/VIVADO~1/2015.4/common/technology/autopilot" -I "C:/Xilinx/SDSoC/2015.4/VIVADO~1/2015.4/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__cdecl=  -o "C:/xup/SDSoC/labs/lab5a/SDDebug/_sds/vhls/sharpen_filter/solution/.autopilot/db/sharpen.pp.0.c"
+
+@I [HLS-0] GCC PP time: 0 seconds per iteration
+@I [HLS-0] Setting directive 'LATENCY' min=1 
+@I [HLS-100] Command "list_core -type functional_unit "
+@I [HLS-100] Command 'list_core' returned 0; elapsed 0Total elapsed time: 3.849 sec.
+@I [HLS-0] Marker-Pragma convertor: C:/xup/SDSoC/labs/lab5a/SDDebug/_sds/vhls/sharpen_filter/solution/.autopilot/db/sharpen.pp.0.c C:/xup/SDSoC/labs/lab5a/SDDebug/_sds/vhls/sharpen_filter/solution/.autopilot/db/sharpen.pp.0.c.ap-line.c C:/xup/SDSoC/labs/lab5a/SDDebug/_sds/vhls/sharpen_filter/solution/.autopilot/db/sharpen.pp.0.c.ap-line.c.CXX 1
+@I [HLS-0] 
+Source processor: exec C:/Xilinx/SDSoC/2015.4/VIVADO~1/2015.4/tps/win64/jre/bin/java -Xmx512m -classpath   "C:/Xilinx/SDSoC/2015.4/VIVADO~1/2015.4/lib/classes/autopilot.sourceprocessor.jar;C:/Xilinx/SDSoC/2015.4/VIVADO~1/2015.4/lib/classes/org.eclipse.cdt.core_5.3.0.xilinx_patch.jar;C:/Xilinx/SDSoC/2015.4/VIVADO~1/2015.4/lib/classes/org.eclipse.core.runtime_3.7.0.v20110110.jar;C:/Xilinx/SDSoC/2015.4/VIVADO~1/2015.4/lib/classes/org.eclipse.equinox.common_3.6.0.v20110523.jar;C:/Xilinx/SDSoC/2015.4/VIVADO~1/2015.4/lib/classes/com.ibm.icu_4.4.2.v20110208.jar;C:/Xilinx/SDSoC/2015.4/VIVADO~1/2015.4/lib/classes/jargs.jar;C:/Xilinx/SDSoC/2015.4/VIVADO~1/2015.4/win64/tools/eclipse/plugins/org.eclipse.emf.common_2.10.1.v20150123-0348.jar;C:/Xilinx/SDSoC/2015.4/VIVADO~1/2015.4/win64/tools/eclipse/plugins/org.eclipse.emf.ecore_2.10.2.v20150123-0348.jar;C:/Xilinx/SDSoC/2015.4/VIVADO~1/2015.4/win64/tools/eclipse/plugins/org.eclipse.emf.ecore.xmi_2.10.2.v20150123-0348.jar;C:/Xilinx/SDSoC/2015.4/VIVADO~1/2015.4/win64/tools/eclipse/plugins/com.autoesl.autopilot.ui.directiveFileModel_1.0.0.jar;C:/Xilinx/SDSoC/2015.4/VIVADO~1/2015.4/win64/tools/eclipse/plugins/com.autoesl.autopilot.ui.common_1.0.0.jar"  autopilot.sourceprocessor.CParser  "C:/xup/SDSoC/labs/lab5a/SDDebug/_sds/vhls/sharpen_filter/solution/.autopilot/db/sharpen.pp.0.c.ap-line.c"  -m "sharpen_filter" -o "C:/xup/SDSoC/labs/lab5a/SDDebug/_sds/vhls/sharpen_filter/solution/.autopilot/db/sharpen.pp.0.c.ap-cdt.c" -c --pp --directive C:/xup/SDSoC/labs/lab5a/SDDebug/_sds/vhls/sharpen_filter/solution/solution.directive --source C:/xup/SDSoC/labs/lab5a/src/sharpen.c --error C:/xup/SDSoC/labs/lab5a/SDDebug/_sds/vhls/sharpen_filter/solution/.autopilot/db --funcunit "AddSub AddSub_DSP AddSubnS DAddSub_fulldsp DAddSub_nodsp DDiv DExp_fulldsp DExp_meddsp DExp_nodsp DLog_fulldsp DLog_meddsp DLog_nodsp DMul_fulldsp DMul_maxdsp DMul_meddsp DMul_nodsp DRSqrt DRecip DSqrt DivnS FAddSub_fulldsp FAddSub_nodsp FDiv FExp_fulldsp FExp_meddsp FExp_nodsp FLog_fulldsp FLog_meddsp FLog_nodsp FMul_fulldsp FMul_maxdsp FMul_meddsp FMul_nodsp FRSqrt_fulldsp FRSqrt_nodsp FRecip_fulldsp FRecip_nodsp FSqrt HAddSub_nodsp HDiv HMul_fulldsp HMul_maxdsp HMul_nodsp HSqrt Mul Mul2S Mul3S Mul4S Mul5S Mul6S Mul_LUT MulnS MuxnS" --ca --gf --df --pd --p2d C:/xup/SDSoC/labs/lab5a/SDDebug/_sds/vhls/sharpen_filter/solution/.autopilot/db --sd --scff C:/xup/SDSoC/labs/lab5a/SDDebug/_sds/vhls/sharpen_filter/solution/.autopilot/db/.systemc_flag --ad
+
+@I [HLS-0] Marker-Pragma convertor: C:/xup/SDSoC/labs/lab5a/SDDebug/_sds/vhls/sharpen_filter/solution/.autopilot/db/sharpen.pp.0.c.ap-cdt.c C:/xup/SDSoC/labs/lab5a/SDDebug/_sds/vhls/sharpen_filter/solution/.autopilot/db/sharpen.pragma.0.c C:/xup/SDSoC/labs/lab5a/SDDebug/_sds/vhls/sharpen_filter/solution/.autopilot/db/sharpen.pragma.0.c.ap-line.CXX 0
+@I [HLS-100] Command "source C:/xup/SDSoC/labs/lab5a/SDDebug/_sds/vhls/sharpen_filter/solution/.autopilot/db/pragma.status.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 5.782 sec.
+@I [HLS-0] CDT processor time: 1 seconds per iteration
+@I [HLS-0] Pragma handling time: 0 seconds per iteration
+@I [HLS-0] 
+Source preprocessing: exec clang -fno-limit-debug-info -gcc-toolchain "C:/Xilinx/SDSoC/2015.4/VIVADO~1/2015.4/msys" -hls -fno-exceptions  -D__llvm__  -CC -E "C:/xup/SDSoC/labs/lab5a/SDDebug/_sds/vhls/sharpen_filter/solution/.autopilot/db/sharpen.pragma.1.c"   -IC:/xup/SDSoC/labs/lab5a/src -Wall -O0 -g -fmessage-length=0 -MMD -MP -D__SDSCC__ -IC:/Xilinx/SDSoC/2015.4/arm-xilinx-linux-gnueabi/include -IC:/xup/SDSoC/labs/lab5a/src -D__SDSVHLS__ -IC:/xup/SDSoC/labs/lab5a/SDDebug -w  -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -std=gnu89   -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "C:/Xilinx/SDSoC/2015.4/VIVADO~1/2015.4/common/technology/autopilot" -I "C:/Xilinx/SDSoC/2015.4/VIVADO~1/2015.4/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__cdecl=  -o "C:/xup/SDSoC/labs/lab5a/SDDebug/_sds/vhls/sharpen_filter/solution/.autopilot/db/sharpen.pragma.2.c"
+
+@I [HLS-0] exec clang -fno-limit-debug-info -gcc-toolchain C:/Xilinx/SDSoC/2015.4/VIVADO~1/2015.4/msys -hls -hls-analyze-label -hls-analyze-pragma -fno-exceptions  -D__llvm__  -w  "C:/xup/SDSoC/labs/lab5a/SDDebug/_sds/vhls/sharpen_filter/solution/.autopilot/db/sharpen.pragma.2.c"  -IC:/xup/SDSoC/labs/lab5a/src -Wall -O0 -g -fmessage-length=0 -MMD -MP -D__SDSCC__ -IC:/Xilinx/SDSoC/2015.4/arm-xilinx-linux-gnueabi/include -IC:/xup/SDSoC/labs/lab5a/src -D__SDSVHLS__ -IC:/xup/SDSoC/labs/lab5a/SDDebug -w  -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -std=gnu89  -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "C:/Xilinx/SDSoC/2015.4/VIVADO~1/2015.4/common/technology/autopilot" -I "C:/Xilinx/SDSoC/2015.4/VIVADO~1/2015.4/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -g -o "C:/xup/SDSoC/labs/lab5a/SDDebug/_sds/vhls/sharpen_filter/solution/.autopilot/db/sharpen.g.bc"
+@I [HLS-10] Validating synthesis directives ...
+@0 [HLS-0] Validating synthesis directives ...
+@I [HLS-100] Command "source C:/xup/SDSoC/labs/lab5a/SDDebug/_sds/vhls/sharpen_filter/solution/.autopilot/db/pragma.status.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 7.315 sec.
+@I [HLS-0] Linking all ...
+@I [HLS-0] exec llvm-ld  "C:/xup/SDSoC/labs/lab5a/SDDebug/_sds/vhls/sharpen_filter/solution/.autopilot/db/sharpen.bc"  -disable-opt  -LC:/Xilinx/SDSoC/2015.4/VIVADO~1/2015.4/win64/lib -lm_basic -o "C:/xup/SDSoC/labs/lab5a/SDDebug/_sds/vhls/sharpen_filter/solution/.autopilot/db/a.o.pre"
+@I [HLS-0] Link time: 0 seconds per iteration
+@I [HLS-0] Linking all ...
+@I [HLS-0] exec llvm-ld  "C:/xup/SDSoC/labs/lab5a/SDDebug/_sds/vhls/sharpen_filter/solution/.autopilot/db/sharpen.g.bc"  -disable-opt  -LC:/Xilinx/SDSoC/2015.4/VIVADO~1/2015.4/win64/lib -lm_basic -o "C:/xup/SDSoC/labs/lab5a/SDDebug/_sds/vhls/sharpen_filter/solution/.autopilot/db/a.g.pre"
+@I [HLS-0] Link time: 0 seconds per iteration
+@I [HLS-100] Command "opt_and_import_c a -opt_level=2 -skip_syncheck=0 -ng=0 -keep_printf=0 "
+@I [HLS-100] Command "cleanup_all_models "
+@I [HLS-100] Command 'cleanup_all_models' returned 0; elapsed 0Total elapsed time: 8.597 sec.
+@I [HLS-10] Starting code transformations ...
+@0 [HLS-0] Starting code transformations ...
+@I [HLS-0] std xform: transform -hls -share-std-xform -always-inline -promote-dbg-pointer  -interface-preproc  -scalarrepl -mem2reg -keep-read-access -instcombine -dce  -promote-dbg-pointer  -bitop-raise  -indvars -loop-simplify -xunroll  -constprop -instcombine -simplifycfg -indvars  -simplifycfg -dce -globaldce  -basicaa  -simplifycfg -mem2reg -globalopt  -global-constprop -deadargelim -instcombine -simplifycfg  -prune-eh -simplifycfg  -scalarrepl -instcombine -reassociate -licm  -simplifycfg -loop-simplify -indvars -instcombine  -simplifycfg -mem2reg -loop-simplify -indvars -instcombine  -gvn -gvn -instcombine -adce  -break-crit-edges  -simplifycfg -loop-delete  -global-array-opt -dce -dse -adce  -find-syn-modules -top sharpen_filter  -deadargelim  -mem2reg -instcombine -dce  -presyn-prepare -auto-rom-infer  -interface-preproc  -syn-check -check-rec-only  -find-region -simplifycfg -func-extr -function-inline  -globaldce -mem2reg -instcombine -dce   -gvn -globaldce -adce -adse  -constprop -instcombine -bit-constprop  -instcombine -dce -simplifycfg -bitop-raise  -simplifycfg -dce -loop-delete -reassociate  -globalopt -global-privatize -mem2reg -dce  -global-constprop -pointer-simplify -constprop -dce  -func-inst -deadargelim  -promote-dbg-pointer  -norm-name   C:/xup/SDSoC/labs/lab5a/SDDebug/_sds/vhls/sharpen_filter/solution/.autopilot/db/a.g.0.bc -o C:/xup/SDSoC/labs/lab5a/SDDebug/_sds/vhls/sharpen_filter/solution/.autopilot/db/a.g.1.bc -f  -phase std-opt
+@I [XFORM-603] Inlining function 'linebuffer_shift_up' into 'sharpen_filter' (C:/xup/SDSoC/labs/lab5a/src/sharpen.c:87).
+@I [XFORM-603] Inlining function 'linebuffer_getval' into 'sharpen_filter' (C:/xup/SDSoC/labs/lab5a/src/sharpen.c:108).
+@I [XFORM-603] Inlining function 'linebuffer_getval' into 'sharpen_filter' (C:/xup/SDSoC/labs/lab5a/src/sharpen.c:88).
+@I [XFORM-603] Inlining function 'linebuffer_insert_bottom' into 'sharpen_filter' (C:/xup/SDSoC/labs/lab5a/src/sharpen.c:99).
+@I [XFORM-603] Inlining function 'window_shift_right' into 'sharpen_filter' (C:/xup/SDSoC/labs/lab5a/src/sharpen.c:103).
+@I [XFORM-603] Inlining function 'window_insert' into 'sharpen_filter' (C:/xup/SDSoC/labs/lab5a/src/sharpen.c:108).
+@I [XFORM-603] Inlining function 'window_insert' into 'sharpen_filter' (C:/xup/SDSoC/labs/lab5a/src/sharpen.c:109).
+@I [XFORM-603] Inlining function 'window_insert' into 'sharpen_filter' (C:/xup/SDSoC/labs/lab5a/src/sharpen.c:110).
+@I [XFORM-603] Inlining function 'window_getval' into 'sharpen_operator' (C:/xup/SDSoC/labs/lab5a/src/sharpen.c:50).
+@I [HLS-0] Std xform time: 0 seconds per iteration
+@I [HLS-100] Command "is_encrypted C:/xup/SDSoC/labs/lab5a/SDDebug/_sds/vhls/sharpen_filter/solution/.autopilot/db/a.g.1.bc "
+@I [HLS-100] Command 'is_encrypted' returned 0; elapsed 0.004Total elapsed time: 9.53 sec.
+@I [HLS-10] Checking synthesizability ...
+@0 [HLS-0] Checking synthesizability ...
+@I [HLS-0] syn check 1/2: transform -hls -syn-check -check-rec-only -disaggr -scalarrepl -norm-name -dce  -mem2reg -instcombine  -function-uniquify -directive-preproc -mem2reg -dse -dce -auto-rom-infer -dce  -array-normalize -instcombine -dce  -array-seg-normalize -instcombine -dce  -array-flatten -instcombine -dce  -array-burst -dce  -deadargelim -promote-global-argument  -function-inline -globaldce -dce  -doublePtrSimplify -doublePtrElim -dce  -doublePtrSimplify -promote-dbg-pointer  -dce -scalarrepl -dse -adse -instcombine  -ptrLegalization  -simplifycfg -dce -instcombine  -pointer-simplify -ptrArgReplace -dce -instcombine   -disaggr -scalarrepl -norm-name -dce  -mem2reg -instcombine -ptrLegalization   -simplifycfg -deadargelim  -instcombine -dce -inst-simplify  -function-uniquify -directive-preproc -mem2reg -dse -dce  -globaldce    C:/xup/SDSoC/labs/lab5a/SDDebug/_sds/vhls/sharpen_filter/solution/.autopilot/db/a.g.1.bc -o C:/xup/SDSoC/labs/lab5a/SDDebug/_sds/vhls/sharpen_filter/solution/.autopilot/db/a.g.2.prechk.bc -f
+@I [XFORM-602] Inlining function 'sharpen_operator' into 'sharpen_filter' (C:/xup/SDSoC/labs/lab5a/src/sharpen.c:117) automatically.
+@I [HLS-0] Syn check 1/2 time: 0 seconds per iteration
+@I [HLS-0] syn check 2/2: transform -syn-check   C:/xup/SDSoC/labs/lab5a/SDDebug/_sds/vhls/sharpen_filter/solution/.autopilot/db/a.g.2.prechk.bc -o C:/xup/SDSoC/labs/lab5a/SDDebug/_sds/vhls/sharpen_filter/solution/.autopilot/db/a.g.2.bc -f  -phase syn-check
+@I [HLS-0] Syn check 2/2 time: 0 seconds per iteration
+@I [HLS-0] Compiler optimizing ...
+@I [HLS-0] Share syncheck's 1.bc for syn flow: copy C:/xup/SDSoC/labs/lab5a/SDDebug/_sds/vhls/sharpen_filter/solution/.autopilot/db/a.g.1.bc to C:/xup/SDSoC/labs/lab5a/SDDebug/_sds/vhls/sharpen_filter/solution/.autopilot/db/a.o.1.bc
+@I [HLS-0] presyn 1: transform -hls -tmp C:/xup/SDSoC/labs/lab5a/SDDebug/_sds/vhls/sharpen_filter/solution/.autopilot/db -type-info  -function-uniquify -directive-preproc -mem2reg -dse -dce  -disaggr -scalarrepl -norm-name -deadargelim  -mem2reg -instcombine -dce -auto-rom-infer -dce -function-uniquify  -resource-proc  -clib-intrinsic-prepare -dce  -func-buffer -dce -array-normalize  -func-legal -instcombine -gvn -constprop -dce   -ptrArgReplace -mem2reg -instcombine -dce  -array-seg-normalize -deadargelim  -instcombine -dce  -pointer-simplify -dce  -port-alignment -dce  -interface-preproc  -data-pack -instcombine -dce   -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn  -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce  -loop-simplify -indvars -instcombine  -gvn -loop-simplify -mem2reg -dce -simplifycfg  -find-region -instcombine  -auto-loop-pipeline  -inst-simplify  -interface-preproc  -indvars -auto-loop-unroll -loop-simplify -loop-bound -xunroll  -constprop -instcombine -simplifycfg -indvars  -simplifycfg -dce -globaldce  -attach-range  -gvn -inst-simplify  -constprop -simplifycfg -dce  -pointer-simplify -dce  -globalopt -constprop -dce  -array-promote -constprop -instcombine -dce  -ptrArgReplace -mem2reg  -instcombine -simplifycfg -dce  -auto-par -instcombine -dce  -array-transform-check  -array-reshape -instcombine -simplifycfg -dce  -ptrArgReplace -deadargelim -mem2reg  -instcombine -simplifycfg -dce   -duplicate-dataflow-processes -globaldce  -array-partition -instcombine -simplifycfg -dce  -ptrArgReplace -global-constprop -deadargelim -mem2reg  -func-legal -instcombine -dce -global-constprop -deadargelim -mem2reg  -instcombine -simplifycfg -dce   -globalopt -constprop -dce  -array-promote -constprop -instcombine -dce  -ptrArgReplace -mem2reg  -instcombine -simplifycfg -dce   -mem-intrinsic-preproc -dce  -global-privatize  -mem2reg -globaldce  -promote-global-argument  -ptrArgReplace -mem2reg -instcombine -dce  -globalopt -mergereturn -simplify-global-access -mem2reg -dce  -pointer-simplify -dce  -functionattrs  -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn  -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce  -inst-simplify -dce -norm-name  -function-inline -globaldce  -func-inst -constprop -instcombine -simplifycfg -dce  -func-legal -dce   -loop-bound  -arraycheck -bitwidthmin -on-by-dataflow  -loop-delete -instcombine -simplifycfg  -globaldce -dce -gvn -deadargelim -dce -loop-simplify -clean-region -simplifycfg -propagate-stable-arguments  -loop-stream -instcombine -simplifycfg -dce -globaldce  -stream-intrinsic-preproc -dce  -check-ap-stream -loop-simplify -eliminate-keepreads  -extract-dataflow-in-loop -loop-simplify -dce -gvn -deadargelim  -check-dataflow-syntax  -legalize-stream-variable -legalize-global -legalize-global-1  -extract-subproc -dce -dead-channel-elimination  -canonicalize-gep -globaldce -dce -gvn -deadargelim  -scalar-propagation -deadargelim -globaldce -mem2reg  -check-dataflow-channels -function-stream -dce -globaldce  -prop-fifo-spec -internal-stream-gen  -canonicalize-gep -globaldce -dce -gvn -deadargelim   -mergereturn -indvars -loop-simplify  -array-stream -instcombine -simplifycfg -dce  -bundle-memfifo-ops -deadargelim    -function-uniquify -directive-preproc -mem2reg -dse -dce  -group-axi-access    -licm -simplifycfg -dce -loop-delete  -norm-name  C:/xup/SDSoC/labs/lab5a/SDDebug/_sds/vhls/sharpen_filter/solution/.autopilot/db/a.o.1.bc -o C:/xup/SDSoC/labs/lab5a/SDDebug/_sds/vhls/sharpen_filter/solution/.autopilot/db/a.o.1.tmp.bc -f
+@I [XFORM-502] Unrolling all sub-loops inside loop 'Loop-1.1' (C:/xup/SDSoC/labs/lab5a/src/sharpen.c:76) in function 'sharpen_filter' for pipelining.
+@I [XFORM-502] Unrolling all loops for pipelining in function 'sharpen_operator' (C:/xup/SDSoC/labs/lab5a/src/sharpen.c:34).
+@I [XFORM-501] Unrolling loop 'Loop-1.1.1' (C:/xup/SDSoC/labs/lab5a/src/sharpen.c:137) in function 'sharpen_filter' completely.
+@I [XFORM-501] Unrolling loop 'Loop-1.1.2' (C:/xup/SDSoC/labs/lab5a/src/sharpen.c:171) in function 'sharpen_filter' completely.
+@I [XFORM-501] Unrolling loop 'Loop-1.1.2.1' (C:/xup/SDSoC/labs/lab5a/src/sharpen.c:173) in function 'sharpen_filter' completely.
+@I [XFORM-501] Unrolling loop 'Loop-1' (C:/xup/SDSoC/labs/lab5a/src/sharpen.c:47) in function 'sharpen_operator' completely.
+@I [XFORM-501] Unrolling loop 'Loop-1.1' (C:/xup/SDSoC/labs/lab5a/src/sharpen.c:48) in function 'sharpen_operator' completely.
+@I [XFORM-102] Partitioning array 'window.0' automatically.
+@I [XFORM-102] Partitioning array 'window.1' automatically.
+@I [XFORM-102] Partitioning array 'window.2' automatically.
+@I [XFORM-102] Partitioning array 'buff_A' (C:/xup/SDSoC/labs/lab5a/src/sharpen.c:72) in dimension 1 automatically.
+@I [XFORM-102] Partitioning array 'buff_C' (C:/xup/SDSoC/labs/lab5a/src/sharpen.c:73) in dimension 1 automatically.
+@I [XFORM-102] Partitioning array 'buff_C.0' (C:/xup/SDSoC/labs/lab5a/src/sharpen.c:73) automatically.
+@I [XFORM-102] Partitioning array 'buff_C.1' (C:/xup/SDSoC/labs/lab5a/src/sharpen.c:73) automatically.
+@I [XFORM-102] Partitioning array 'buff_C.2' (C:/xup/SDSoC/labs/lab5a/src/sharpen.c:73) automatically.
+@I [XFORM-602] Inlining function 'sharpen_operator' into 'sharpen_filter' (C:/xup/SDSoC/labs/lab5a/src/sharpen.c:117) automatically.
+@I [HLS-0] Presyn 1 time: 0 seconds per iteration
+@I [HLS-0] presyn 2: transform -hls -keep-callgraph -scalarrepl -mem2reg  -port-alignment -attach-range -dce  -pipe-mux-gen  -indvars -loop-bound  -inst-simplify -instcombine -dce  -merge-array-access -mem2reg -dce  -clean-region -mergereturn -if-conv  -instcombine -dce -constprop  -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn  -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce  -scalarrepl -mem2reg  -global-constprop -deadargelim -deadargelim  -instcombine -dce -simplifycfg    -ptrArgReplace -mem2reg -function-inline  -globaldce -mem2reg -instcombine -dce -expr-balance  -instcombine -dce  -bitwidthmin  -directive-preproc  -inst-rectify -instcombine -dce  -functionattrs  -constprop -instcombine -bit-constprop  -simplify-global-access  -globalopt -globaldce  -inst-simplify -instcombine -elimdeaddata -dce  -loop-delete -simplifycfg   -norm-name C:/xup/SDSoC/labs/lab5a/SDDebug/_sds/vhls/sharpen_filter/solution/.autopilot/db/a.o.1.tmp.bc -o C:/xup/SDSoC/labs/lab5a/SDDebug/_sds/vhls/sharpen_filter/solution/.autopilot/db/a.o.2.bc -f  -phase presyn
+@I [XFORM-401] Performing if-conversion on hyperblock from (C:/xup/SDSoC/labs/lab5a/src/sharpen.c:175:2) to (C:/xup/SDSoC/labs/lab5a/src/sharpen.c:121:4) in function 'sharpen_filter'... converting 3 basic blocks.
+@I [HLS-0] Presyn 2 time: 0 seconds per iteration
+@I [HLS-100] Command "is_encrypted C:/xup/SDSoC/labs/lab5a/SDDebug/_sds/vhls/sharpen_filter/solution/.autopilot/db/a.o.2.bc "
+@I [HLS-100] Command 'is_encrypted' returned 0; elapsed 0.015Total elapsed time: 9.383 sec.
+@I [HLS-0] build ssdm: transform -hls  -function-uniquify -auto-function-inline -globaldce  -ptrArgReplace -mem2reg -instcombine -dce  -reset-lda  -loop-simplify -indvars -licm -loop-dep  -loop-bound -licm -loop-simplify -flattenloopnest  -array-flatten -gvn -instcombine -dce  -array-map -dce -func-legal  -gvn -adce -instcombine -cfgopt -simplifycfg -loop-simplify   -array-burst -promote-global-argument -dce  -axi4-lower -array-seg-normalize  -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -gvn -gvn  -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -dse -adse -adce -licm  -inst-simplify -dce  -globaldce -array-stream -eliminate-keepreads -instcombine  -dce   -deadargelim -doublePtrSimplify  -doublePtrElim -dce -doublePtrSimplify -promote-dbg-pointer  -dce -scalarrepl -mem2reg -disaggr -norm-name -mem2reg  -instcombine  -dse -adse -adce -ptrLegalization -dce -auto-rom-infer -array-flatten -dce -instcombine  -loop-rot -constprop -cfgopt -simplifycfg -loop-simplify -indvars -pointer-simplify -dce -loop-bound  -loop-simplify -loop-preproc  -constprop -global-constprop -gvn -mem2reg -instcombine -dce  -loop-merge -dce  -bitwidthmin  -deadargelim -dce  -scalar-propagation -deadargelim -globaldce -mem2reg  -interface-preproc -interface-gen  -deadargelim -directive-preproc -inst-simplify -dce  -gvn -mem2reg -instcombine -dce -adse  -loop-bound  -instcombine -cfgopt -simplifycfg -loop-simplify  -clean-region -io-protocol  -find-region -mem2reg  -bitop-raise  -inst-simplify -inst-rectify -instcombine -adce -deadargelim  -loop-simplify -phi-opt -bitop-raise  -cfgopt -simplifycfg -strip-dead-prototypes  -interface-lower -bitop-lower -intrinsic-lower -auto-function-inline  -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa  -inst-simplify -simplifycfg   -mergereturn -inst-simplify -inst-rectify  -dce -bitop-lower  -loop-rewind -pointer-simplify -dce -cfgopt  -read-loop-dep -dce -bitwidth -norm-name -legalize    -cdfg-build  C:/xup/SDSoC/labs/lab5a/SDDebug/_sds/vhls/sharpen_filter/solution/.autopilot/db/a.o.2.bc -o C:/xup/SDSoC/labs/lab5a/SDDebug/_sds/vhls/sharpen_filter/solution/.autopilot/db/a.o.3.bc -f  -phase build-ssdm
+@I [XFORM-541] Flattening a loop nest 'Loop-1' (C:/xup/SDSoC/labs/lab5a/src/sharpen.c:75:7) in function 'sharpen_filter'.
+@I [HLS-0] Build ssdm time: 0 seconds per iteration
+@I [HLS-100] Command "is_encrypted C:/xup/SDSoC/labs/lab5a/SDDebug/_sds/vhls/sharpen_filter/solution/.autopilot/db/a.o.3.bc "
+@I [HLS-100] Command 'is_encrypted' returned 0; elapsed 0Total elapsed time: 9.514 sec.
+@I [HLS-0] Finish building internal data model.
+@I [HLS-100] Command 'opt_and_import_c' returned 0; elapsed 0.982Total elapsed time: 9.579 sec.
+@I [HLS-111] Elapsed time: 9.62 seconds; current memory usage: 72.1 MB.
+@I [HLS-100] Command 'elaborate' returned 0; elapsed 6.83Total elapsed time: 9.585 sec.
+@I [HLS-100] Command "autosyn "
+@I [HLS-10] Starting hardware synthesis ...
+@0 [HLS-0] Starting hardware synthesis ...
+@I [HLS-0] Synthesizing C/C++ design ...
+@I [HLS-10] Synthesizing 'sharpen_filter' ...
+@0 [HLS-0] Synthesizing 'sharpen_filter' ...
+@I [HLS-100] Command "ap_set_top_model sharpen_filter "
+@I [HLS-100] Command 'ap_set_top_model' returned 0; elapsed 0Total elapsed time: 9.585 sec.
+@I [HLS-100] Command "get_model_list sharpen_filter -filter all-wo-channel -topdown "
+@I [HLS-100] Command 'get_model_list' returned 0; elapsed 0Total elapsed time: 9.585 sec.
+@I [HLS-100] Command "preproc_iomode -model sharpen_filter "
+@I [HLS-100] Command 'preproc_iomode' returned 0; elapsed 0Total elapsed time: 9.585 sec.
+@I [HLS-100] Command "get_model_list sharpen_filter -filter all-wo-channel "
+@I [HLS-100] Command 'get_model_list' returned 0; elapsed 0Total elapsed time: 9.585 sec.
+@I [HLS-0] Model list for configure: sharpen_filter
+@I [HLS-0] Configuring Module : sharpen_filter ...
+@I [HLS-100] Command "set_default_model sharpen_filter "
+@I [HLS-100] Command 'set_default_model' returned 0; elapsed 0Total elapsed time: 9.585 sec.
+@I [HLS-100] Command "apply_spec_resource_limit sharpen_filter "
+@I [HLS-100] Command 'apply_spec_resource_limit' returned 0; elapsed 0Total elapsed time: 9.585 sec.
+@I [HLS-0] Model list for preprocess: sharpen_filter
+@I [HLS-0] Preprocessing Module: sharpen_filter ...
+@I [HLS-100] Command "set_default_model sharpen_filter "
+@I [HLS-100] Command 'set_default_model' returned 0; elapsed 0Total elapsed time: 9.585 sec.
+@I [HLS-100] Command "cdfg_preprocess -model sharpen_filter "
+@I [HLS-100] Command 'cdfg_preprocess' returned 0; elapsed 0Total elapsed time: 9.585 sec.
+@I [HLS-100] Command "rtl_gen_preprocess sharpen_filter "
+@W [SYN-107] Renaming port name 'sharpen_filter/input' to 'sharpen_filter/input_r' to avoid the conflict with HDL keywords or other object names.
+@W [SYN-107] Renaming port name 'sharpen_filter/output' to 'sharpen_filter/output_r' to avoid the conflict with HDL keywords or other object names.
+@I [HLS-100] Command 'rtl_gen_preprocess' returned 0; elapsed 0Total elapsed time: 9.585 sec.
+@I [HLS-0] Model list for synthesis: sharpen_filter
+@I [HLS-10] ----------------------------------------------------------------
+@0 [HLS-0] ----------------------------------------------------------------
+@I [HLS-10] -- Scheduling module 'sharpen_filter' 
+@0 [HLS-0] -- Scheduling module 'sharpen_filter' 
+@I [HLS-10] ----------------------------------------------------------------
+@0 [HLS-0] ----------------------------------------------------------------
+@I [HLS-100] Command "set_default_model sharpen_filter "
+@I [HLS-100] Command 'set_default_model' returned 0; elapsed 0Total elapsed time: 9.585 sec.
+@I [HLS-100] Command "schedule -model sharpen_filter "
+@I [SCHED-11] Starting scheduling ...
+@I [SCHED-61] Pipelining loop 'Loop 1'.
+@I [SCHED-61] Pipelining result: Target II: 1, Final II: 1, Depth: 8.
+@W [SCHED-71] Latency directive discarded for region sharpen_filter since it contains subloops.
+@I [SCHED-11] Finished scheduling.
+@I [HLS-100] Command 'schedule' returned 0; elapsed 0.145Total elapsed time: 9.730 sec.
+@I [HLS-111] Elapsed time: 0.16 seconds; current memory usage: 74 MB.
+@I [HLS-100] Command "report -o C:/xup/SDSoC/labs/lab5a/SDDebug/_sds/vhls/sharpen_filter/solution/.autopilot/db/sharpen_filter.verbose.sched.rpt -verbose -f "
+@I [HLS-100] Command 'report' returned 0; elapsed 0.016Total elapsed time: 9.761 sec.
+@I [HLS-100] Command "db_write -o C:/xup/SDSoC/labs/lab5a/SDDebug/_sds/vhls/sharpen_filter/solution/.autopilot/db/sharpen_filter.sched.adb -f "
+@I [HLS-100] Command 'db_write' returned 0; elapsed 0.028Total elapsed time: 9.788 sec.
+@I [HLS-0] Finish scheduling sharpen_filter.
+@I [HLS-10] ----------------------------------------------------------------
+@0 [HLS-0] ----------------------------------------------------------------
+@I [HLS-10] -- Exploring micro-architecture for module 'sharpen_filter' 
+@0 [HLS-0] -- Exploring micro-architecture for module 'sharpen_filter' 
+@I [HLS-10] ----------------------------------------------------------------
+@0 [HLS-0] ----------------------------------------------------------------
+@I [HLS-100] Command "set_default_model sharpen_filter "
+@I [HLS-100] Command 'set_default_model' returned 0; elapsed 0Total elapsed time: 9.793 sec.
+@I [HLS-100] Command "bind -model sharpen_filter "
+@I [BIND-110] clear=
+@I [BIND-110] debug=
+@I [BIND-110] drf=
+@I [BIND-110] effort=
+@I [BIND-110] fast_refine=
+@I [BIND-110] fu_weight=[ 0.0 -- 1.0 ]
+@I [BIND-110] global_opt=
+@I [BIND-110] gsearch=
+@I [BIND-110] help=
+@I [BIND-110] help-hidden=
+@I [BIND-110] min_mem_port=
+@I [BIND-110] min_op=
+@I [BIND-110] minreg=
+@I [BIND-110] ml=
+@I [BIND-110] model=sharpen_filter
+@I [BIND-110] no_false_path=
+@I [BIND-110] no_min_op=
+@I [BIND-110] normalize=
+@I [BIND-110] quiet=
+@I [BIND-110] refine=
+@I [BIND-110] reg_weight=[ 0.0 -- 1.0 ]
+@I [BIND-110] search=
+@I [BIND-110] tight_delay=
+@I [BIND-110] verbose=
+@I [BIND-110] wFF=
+@I [BIND-110] wFU=
+@I [BIND-110] wMUX=
+@I [BIND-110] wNET=
+@I [BIND-100] Starting micro-architecture generation ...
+@I [BIND-101] Performing variable lifetime analysis.
+@I [BIND-101] Exploring resource sharing.
+@I [BIND-101] Binding ...
+@I [BIND-100] Finished micro-architecture generation.
+@I [HLS-100] Command 'bind' returned 0; elapsed 0.006Total elapsed time: 9.799 sec.
+@I [HLS-111] Elapsed time: 0.07 seconds; current memory usage: 74.1 MB.
+@I [HLS-100] Command "report -o C:/xup/SDSoC/labs/lab5a/SDDebug/_sds/vhls/sharpen_filter/solution/.autopilot/db/sharpen_filter.verbose.bind.rpt -verbose -f "
+@I [HLS-100] Command 'report' returned 0; elapsed 0.031Total elapsed time: 9.846 sec.
+@I [HLS-100] Command "db_write -o C:/xup/SDSoC/labs/lab5a/SDDebug/_sds/vhls/sharpen_filter/solution/.autopilot/db/sharpen_filter.bind.adb -f "
+@I [HLS-100] Command 'db_write' returned 0; elapsed 0.032Total elapsed time: 9.877 sec.
+@I [HLS-0] Finish binding sharpen_filter.
+@I [HLS-100] Command "get_model_list sharpen_filter -filter all-wo-channel "
+@I [HLS-100] Command 'get_model_list' returned 0; elapsed 0Total elapsed time: 9.877 sec.
+@I [HLS-0] Preprocessing for RTLGen ...
+@I [HLS-100] Command "rtl_gen_preprocess sharpen_filter "
+@I [HLS-100] Command 'rtl_gen_preprocess' returned 0; elapsed 0Total elapsed time: 9.877 sec.
+@I [HLS-0] Model list for RTL generation: sharpen_filter
+@I [HLS-10] ----------------------------------------------------------------
+@0 [HLS-0] ----------------------------------------------------------------
+@I [HLS-10] -- Generating RTL for module 'sharpen_filter' 
+@0 [HLS-0] -- Generating RTL for module 'sharpen_filter' 
+@I [HLS-10] ----------------------------------------------------------------
+@0 [HLS-0] ----------------------------------------------------------------
+@I [HLS-100] Command "create_rtl_model sharpen_filter -vendor xilinx -mg_file C:/xup/SDSoC/labs/lab5a/SDDebug/_sds/vhls/sharpen_filter/solution/.autopilot/db/sharpen_filter.compgen.tcl "
+@I [RTGEN-500] Setting interface mode on port 'sharpen_filter/input_r' to 'ap_fifo'.
+@I [RTGEN-500] Setting interface mode on port 'sharpen_filter/output_r' to 'ap_fifo'.
+@I [RTGEN-500] Setting interface mode on function 'sharpen_filter' to 'ap_ctrl_hs'.
+@I [RTGEN-100] Finished creating RTL model for 'sharpen_filter'.
+@I [HLS-100] Command 'create_rtl_model' returned 0; elapsed 0.031Total elapsed time: 9.909 sec.
+@I [HLS-111] Elapsed time: 0.109 seconds; current memory usage: 74 MB.
+@I [HLS-100] Command "source C:/xup/SDSoC/labs/lab5a/SDDebug/_sds/vhls/sharpen_filter/solution/.autopilot/db/sharpen_filter.rtl_wrap.cfg.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 9.924 sec.
+@I [HLS-100] Command "gen_rtl sharpen_filter -istop -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o C:/xup/SDSoC/labs/lab5a/SDDebug/_sds/vhls/sharpen_filter/solution/syn/systemc/sharpen_filter -synmodules sharpen_filter "
+@I [HLS-100] Command 'gen_rtl' returned 0; elapsed 0.027Total elapsed time: 9.951 sec.
+@I [HLS-100] Command "gen_rtl sharpen_filter -istop -style xilinx -f -lang vhdl -o C:/xup/SDSoC/labs/lab5a/SDDebug/_sds/vhls/sharpen_filter/solution/syn/vhdl/sharpen_filter "
+@I [HLS-100] Command 'gen_rtl' returned 0; elapsed 0.031Total elapsed time: 9.982 sec.
+@I [HLS-100] Command "gen_rtl sharpen_filter -istop -style xilinx -f -lang vlog -o C:/xup/SDSoC/labs/lab5a/SDDebug/_sds/vhls/sharpen_filter/solution/syn/verilog/sharpen_filter "
+@I [HLS-100] Command 'gen_rtl' returned 0; elapsed 0.016Total elapsed time: 9.997 sec.
+@I [HLS-100] Command "export_constraint_db -o C:/xup/SDSoC/labs/lab5a/SDDebug/_sds/vhls/sharpen_filter/solution/.autopilot/db/sharpen_filter.constraint.tcl -f -tool general "
+@I [HLS-100] Command 'export_constraint_db' returned 0; elapsed 0Total elapsed time: 9.997 sec.
+@I [HLS-100] Command "report -model sharpen_filter -o C:/xup/SDSoC/labs/lab5a/SDDebug/_sds/vhls/sharpen_filter/solution/.autopilot/db/sharpen_filter.design.xml -verbose -f -dv "
+@I [HLS-100] Command 'report' returned 0; elapsed 0.031Total elapsed time: 10.29 sec.
+@I [HLS-100] Command "report -model sharpen_filter -o C:/xup/SDSoC/labs/lab5a/SDDebug/_sds/vhls/sharpen_filter/solution/.autopilot/db/sharpen_filter.sdaccel.xml -verbose -f -sdaccel "
+@I [HLS-100] Command 'report' returned 0; elapsed 0.049Total elapsed time: 10.77 sec.
+@I [HLS-100] Command "gen_tb_info sharpen_filter -o C:/xup/SDSoC/labs/lab5a/SDDebug/_sds/vhls/sharpen_filter/solution/.autopilot/db/sharpen_filter -p C:/xup/SDSoC/labs/lab5a/SDDebug/_sds/vhls/sharpen_filter/solution/.autopilot/db "
+@I [HLS-100] Command 'gen_tb_info' returned 0; elapsed 0.012Total elapsed time: 10.90 sec.
+@I [HLS-100] Command "report -model sharpen_filter -o C:/xup/SDSoC/labs/lab5a/SDDebug/_sds/vhls/sharpen_filter/solution/syn/report/sharpen_filter_csynth.rpt -f "
+@I [HLS-100] Command 'report' returned 0; elapsed 0.02Total elapsed time: 10.110 sec.
+@I [HLS-100] Command "report -model sharpen_filter -o C:/xup/SDSoC/labs/lab5a/SDDebug/_sds/vhls/sharpen_filter/solution/syn/report/sharpen_filter_csynth.xml -f -x "
+@I [HLS-100] Command 'report' returned 0; elapsed 0.015Total elapsed time: 10.126 sec.
+@I [HLS-100] Command "report -model sharpen_filter -o C:/xup/SDSoC/labs/lab5a/SDDebug/_sds/vhls/sharpen_filter/solution/.autopilot/db/sharpen_filter.verbose.rpt -verbose -f "
+@I [HLS-100] Command 'report' returned 0; elapsed 0.047Total elapsed time: 10.173 sec.
+@I [HLS-100] Command "db_write -model sharpen_filter -o C:/xup/SDSoC/labs/lab5a/SDDebug/_sds/vhls/sharpen_filter/solution/.autopilot/db/sharpen_filter.adb -f "
+@I [HLS-100] Command 'db_write' returned 0; elapsed 0.047Total elapsed time: 10.220 sec.
+@I [HLS-100] Command "sc_get_clocks sharpen_filter "
+@I [HLS-100] Command 'sc_get_clocks' returned 0; elapsed 0Total elapsed time: 10.617 sec.
+@I [HLS-100] Command "sc_get_portdomain sharpen_filter "
+@I [HLS-100] Command 'sc_get_portdomain' returned 0; elapsed 0Total elapsed time: 10.617 sec.
+@I [HLS-0] Model list for RTL component generation: sharpen_filter
+@I [HLS-0] Handling components in module [sharpen_filter] ... 
+@I [HLS-100] Command "source C:/xup/SDSoC/labs/lab5a/SDDebug/_sds/vhls/sharpen_filter/solution/.autopilot/db/sharpen_filter.compgen.tcl "
+@I [HLS-0] Found component sharpen_filter_buff_A_0.
+@I [HLS-0] Append model sharpen_filter_buff_A_0
+@I [HLS-0] Found component sharpen_filter_buff_A_2.
+@I [HLS-0] Append model sharpen_filter_buff_A_2
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.016Total elapsed time: 10.663 sec.
+@I [HLS-0] Append model sharpen_filter
+@I [HLS-0] Generating RTL model list ...
+@I [HLS-0] All models in this session: sharpen_filter_buff_A_0 sharpen_filter_buff_A_2 sharpen_filter
+@I [HLS-0] To file: write model sharpen_filter_buff_A_0
+@I [HLS-0] To file: write model sharpen_filter_buff_A_2
+@I [HLS-0] To file: write model sharpen_filter
+@I [HLS-0] Finished generating RTL model list.
+
+
+@I [HLS-0] RTL Generation done.
+@I [HLS-0] CAS Generation done.
+@I [HLS-0] CBC Generation done.
+@I [HLS-100] Command "export_ssdm C:/xup/SDSoC/labs/lab5a/SDDebug/_sds/vhls/sharpen_filter/solution/.autopilot/db/a.export.ll "
+@I [HLS-100] Command 'export_ssdm' returned 0; elapsed 0Total elapsed time: 10.663 sec.
+@I [HLS-100] Command "source C:/xup/SDSoC/labs/lab5a/SDDebug/_sds/vhls/sharpen_filter/solution/.autopilot/db/global.setting.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 10.679 sec.
+@I [HLS-100] Command "source C:/Xilinx/SDSoC/2015.4/VIVADO~1/2015.4/common/technology/generic/autopilot/common.gen "
+@I [HLS-100] Command "source C:/Xilinx/SDSoC/2015.4/VIVADO~1/2015.4/common/technology/generic/autopilot/APCoreGen.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 10.695 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 10.695 sec.
+@I [HLS-100] Command "source C:/Xilinx/SDSoC/2015.4/VIVADO~1/2015.4/common/technology/generic/autopilot/op.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 10.695 sec.
+@I [HLS-100] Command "source C:/Xilinx/SDSoC/2015.4/VIVADO~1/2015.4/common/technology/generic/autopilot/op_simcore.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.015Total elapsed time: 10.710 sec.
+@I [HLS-100] Command "source C:/Xilinx/SDSoC/2015.4/VIVADO~1/2015.4/common/technology/generic/autopilot/interface.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 10.710 sec.
+@I [HLS-100] Command "source C:/xup/SDSoC/labs/lab5a/SDDebug/_sds/vhls/sharpen_filter/solution/.autopilot/db/global.setting.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 10.710 sec.
+@I [HLS-100] Command "source C:/Xilinx/SDSoC/2015.4/VIVADO~1/2015.4/common/technology/xilinx/zynq/zynq.gen "
+@I [HLS-100] Command "source C:/Xilinx/SDSoC/2015.4/VIVADO~1/2015.4/common/technology/xilinx/common/virtex.gen "
+@I [HLS-100] Command "source C:/Xilinx/SDSoC/2015.4/VIVADO~1/2015.4/common/technology/xilinx/common/xilinx.gen "
+@I [HLS-100] Command "source C:/Xilinx/SDSoC/2015.4/VIVADO~1/2015.4/common/technology/xilinx/interface/plb46.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 10.710 sec.
+@I [HLS-100] Command "source C:/Xilinx/SDSoC/2015.4/VIVADO~1/2015.4/common/technology/xilinx/interface/fsl.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 10.710 sec.
+@I [HLS-100] Command "source C:/Xilinx/SDSoC/2015.4/VIVADO~1/2015.4/common/technology/xilinx/interface/axi4.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.016Total elapsed time: 10.726 sec.
+@I [HLS-100] Command "source C:/Xilinx/SDSoC/2015.4/VIVADO~1/2015.4/common/technology/xilinx/interface/nativeAXI4.gen "
+@I [HLS-100] Command "source C:/Xilinx/SDSoC/2015.4/VIVADO~1/2015.4/common/technology/xilinx/interface/saxilite.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 10.726 sec.
+@I [HLS-100] Command "source C:/Xilinx/SDSoC/2015.4/VIVADO~1/2015.4/common/technology/xilinx/interface/maxi.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.016Total elapsed time: 10.741 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.016Total elapsed time: 10.741 sec.
+@I [HLS-100] Command "source C:/Xilinx/SDSoC/2015.4/VIVADO~1/2015.4/common/technology/xilinx/scripts/xilinxcoregen.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.015Total elapsed time: 10.757 sec.
+@I [HLS-100] Command "source C:/Xilinx/SDSoC/2015.4/VIVADO~1/2015.4/common/technology/xilinx/interface/XilEDKCoreGen.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.016Total elapsed time: 10.773 sec.
+@I [HLS-100] Command "source C:/Xilinx/SDSoC/2015.4/VIVADO~1/2015.4/common/technology/xilinx/ip/dds_compiler.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 10.773 sec.
+@I [HLS-100] Command "source C:/Xilinx/SDSoC/2015.4/VIVADO~1/2015.4/common/technology/xilinx/ip/util.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 10.773 sec.
+@I [HLS-100] Command "source C:/Xilinx/SDSoC/2015.4/VIVADO~1/2015.4/common/technology/xilinx/ip/xfft.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.173Total elapsed time: 10.946 sec.
+@I [HLS-100] Command "source C:/Xilinx/SDSoC/2015.4/VIVADO~1/2015.4/common/technology/xilinx/ip/xfir.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.037Total elapsed time: 10.983 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.273Total elapsed time: 10.983 sec.
+@I [HLS-100] Command "source C:/Xilinx/SDSoC/2015.4/VIVADO~1/2015.4/common/technology/xilinx/common/dsp48.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 10.983 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.273Total elapsed time: 10.983 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.273Total elapsed time: 10.983 sec.
+@I [HLS-100] Command "source C:/Xilinx/SDSoC/2015.4/VIVADO~1/2015.4/common/technology/xilinx/zynq/zynq_fpv6.gen "
+@I [HLS-100] Command "source C:/Xilinx/SDSoC/2015.4/VIVADO~1/2015.4/common/technology/xilinx/common/xilinx_fpv6.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 10.983 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 10.983 sec.
+@I [HLS-100] Command "source C:/xup/SDSoC/labs/lab5a/SDDebug/_sds/vhls/sharpen_filter/solution/.autopilot/db/global.setting.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 10.983 sec.
+@I [HLS-100] Command "source C:/xup/SDSoC/labs/lab5a/SDDebug/_sds/vhls/sharpen_filter/solution/.autopilot/db/global.setting.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.016Total elapsed time: 10.999 sec.
+@I [HLS-100] Command "source C:/xup/SDSoC/labs/lab5a/SDDebug/_sds/vhls/sharpen_filter/solution/.autopilot/db/global.setting.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 10.999 sec.
+@I [HLS-100] Command "source C:/xup/SDSoC/labs/lab5a/SDDebug/_sds/vhls/sharpen_filter/solution/.autopilot/db/global.setting.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 10.999 sec.
+@I [HLS-100] Command "source C:/xup/SDSoC/labs/lab5a/SDDebug/_sds/vhls/sharpen_filter/solution/.autopilot/db/sharpen_filter.compgen.tcl "
+@I [RTMG-278] Implementing memory 'sharpen_filter_buff_A_0_ram' using block RAMs.
+@I [RTMG-278] Implementing memory 'sharpen_filter_buff_A_2_ram' using block RAMs.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.078Total elapsed time: 11.92 sec.
+@I [HLS-10] Finished generating all RTL models.
+@0 [HLS-0] Finished generating all RTL models.
+@I [WSYSC-301] Generating RTL SystemC for 'sharpen_filter'.
+@I [WVHDL-304] Generating RTL VHDL for 'sharpen_filter'.
+@I [WVLOG-307] Generating RTL Verilog for 'sharpen_filter'.
+@I [HLS-100] Command 'autosyn' returned 0; elapsed 1.633Total elapsed time: 11.217 sec.
+@I [HLS-100] Command 'csynth_design' returned 0; elapsed 8.463Total elapsed time: 11.217 sec.
+@I [HLS-100] Command "export_design -acc "
+@I [HLS-100] Command "source C:/xup/SDSoC/labs/lab5a/SDDebug/_sds/vhls/sharpen_filter/solution/.autopilot/db/global.setting.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 11.233 sec.
+@I [HLS-100] Command "source C:/Xilinx/SDSoC/2015.4/VIVADO~1/2015.4/common/technology/generic/autopilot/common.gen "
+@I [HLS-100] Command "source C:/Xilinx/SDSoC/2015.4/VIVADO~1/2015.4/common/technology/generic/autopilot/APCoreGen.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 11.249 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 11.249 sec.
+@I [HLS-100] Command "source C:/Xilinx/SDSoC/2015.4/VIVADO~1/2015.4/common/technology/generic/autopilot/op.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 11.249 sec.
+@I [HLS-100] Command "source C:/Xilinx/SDSoC/2015.4/VIVADO~1/2015.4/common/technology/generic/autopilot/op_simcore.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 11.249 sec.
+@I [HLS-100] Command "source C:/Xilinx/SDSoC/2015.4/VIVADO~1/2015.4/common/technology/generic/autopilot/interface.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 11.249 sec.
+@I [HLS-100] Command "source C:/xup/SDSoC/labs/lab5a/SDDebug/_sds/vhls/sharpen_filter/solution/.autopilot/db/global.setting.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.018Total elapsed time: 11.267 sec.
+@I [HLS-100] Command "source C:/Xilinx/SDSoC/2015.4/VIVADO~1/2015.4/common/technology/xilinx/zynq/zynq.gen "
+@I [HLS-100] Command "source C:/Xilinx/SDSoC/2015.4/VIVADO~1/2015.4/common/technology/xilinx/common/virtex.gen "
+@I [HLS-100] Command "source C:/Xilinx/SDSoC/2015.4/VIVADO~1/2015.4/common/technology/xilinx/common/xilinx.gen "
+@I [HLS-100] Command "source C:/Xilinx/SDSoC/2015.4/VIVADO~1/2015.4/common/technology/xilinx/interface/plb46.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.002Total elapsed time: 11.273 sec.
+@I [HLS-100] Command "source C:/Xilinx/SDSoC/2015.4/VIVADO~1/2015.4/common/technology/xilinx/interface/fsl.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.001Total elapsed time: 11.274 sec.
+@I [HLS-100] Command "source C:/Xilinx/SDSoC/2015.4/VIVADO~1/2015.4/common/technology/xilinx/interface/axi4.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.009Total elapsed time: 11.283 sec.
+@I [HLS-100] Command "source C:/Xilinx/SDSoC/2015.4/VIVADO~1/2015.4/common/technology/xilinx/interface/nativeAXI4.gen "
+@I [HLS-100] Command "source C:/Xilinx/SDSoC/2015.4/VIVADO~1/2015.4/common/technology/xilinx/interface/saxilite.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.008Total elapsed time: 11.292 sec.
+@I [HLS-100] Command "source C:/Xilinx/SDSoC/2015.4/VIVADO~1/2015.4/common/technology/xilinx/interface/maxi.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.012Total elapsed time: 11.304 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.021Total elapsed time: 11.304 sec.
+@I [HLS-100] Command "source C:/Xilinx/SDSoC/2015.4/VIVADO~1/2015.4/common/technology/xilinx/scripts/xilinxcoregen.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.014Total elapsed time: 11.318 sec.
+@I [HLS-100] Command "source C:/Xilinx/SDSoC/2015.4/VIVADO~1/2015.4/common/technology/xilinx/interface/XilEDKCoreGen.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.013Total elapsed time: 11.331 sec.
+@I [HLS-100] Command "source C:/Xilinx/SDSoC/2015.4/VIVADO~1/2015.4/common/technology/xilinx/ip/dds_compiler.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.007Total elapsed time: 11.341 sec.
+@I [HLS-100] Command "source C:/Xilinx/SDSoC/2015.4/VIVADO~1/2015.4/common/technology/xilinx/ip/util.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.002Total elapsed time: 11.343 sec.
+@I [HLS-100] Command "source C:/Xilinx/SDSoC/2015.4/VIVADO~1/2015.4/common/technology/xilinx/ip/xfft.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.147Total elapsed time: 11.490 sec.
+@I [HLS-100] Command "source C:/Xilinx/SDSoC/2015.4/VIVADO~1/2015.4/common/technology/xilinx/ip/xfir.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.043Total elapsed time: 11.533 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.263Total elapsed time: 11.534 sec.
+@I [HLS-100] Command "source C:/Xilinx/SDSoC/2015.4/VIVADO~1/2015.4/common/technology/xilinx/common/dsp48.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.001Total elapsed time: 11.537 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.269Total elapsed time: 11.538 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.269Total elapsed time: 11.538 sec.
+@I [HLS-100] Command "source C:/Xilinx/SDSoC/2015.4/VIVADO~1/2015.4/common/technology/xilinx/zynq/zynq_fpv6.gen "
+@I [HLS-100] Command "source C:/Xilinx/SDSoC/2015.4/VIVADO~1/2015.4/common/technology/xilinx/common/xilinx_fpv6.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.002Total elapsed time: 11.541 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.004Total elapsed time: 11.542 sec.
+@I [HLS-100] Command "source C:/xup/SDSoC/labs/lab5a/SDDebug/_sds/vhls/sharpen_filter/solution/.autopilot/db/global.setting.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.002Total elapsed time: 11.545 sec.
+@I [IMPL-8] Exporting RTL as an IP in IP-XACT.
+@I [HLS-100] Command "source C:/xup/SDSoC/labs/lab5a/SDDebug/_sds/vhls/sharpen_filter/solution/.autopilot/db/global.setting.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.004Total elapsed time: 11.552 sec.
+@I [HLS-100] Command "source C:/xup/SDSoC/labs/lab5a/SDDebug/_sds/vhls/sharpen_filter/solution/.autopilot/db/global.setting.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.003Total elapsed time: 11.573 sec.
+@I [HLS-100] Command "source C:/Xilinx/SDSoC/2015.4/VIVADO~1/2015.4/common/technology/generic/autopilot/common.gen "
+@I [HLS-100] Command "source C:/Xilinx/SDSoC/2015.4/VIVADO~1/2015.4/common/technology/generic/autopilot/APCoreGen.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.002Total elapsed time: 11.577 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.003Total elapsed time: 11.577 sec.
+@I [HLS-100] Command "source C:/Xilinx/SDSoC/2015.4/VIVADO~1/2015.4/common/technology/generic/autopilot/op.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.001Total elapsed time: 11.579 sec.
+@I [HLS-100] Command "source C:/Xilinx/SDSoC/2015.4/VIVADO~1/2015.4/common/technology/generic/autopilot/op_simcore.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.003Total elapsed time: 11.582 sec.
+@I [HLS-100] Command "source C:/Xilinx/SDSoC/2015.4/VIVADO~1/2015.4/common/technology/generic/autopilot/interface.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.001Total elapsed time: 11.583 sec.
+@I [HLS-100] Command "source C:/xup/SDSoC/labs/lab5a/SDDebug/_sds/vhls/sharpen_filter/solution/.autopilot/db/global.setting.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.004Total elapsed time: 11.587 sec.
+@I [HLS-100] Command "source C:/Xilinx/SDSoC/2015.4/VIVADO~1/2015.4/common/technology/xilinx/zynq/zynq.gen "
+@I [HLS-100] Command "source C:/Xilinx/SDSoC/2015.4/VIVADO~1/2015.4/common/technology/xilinx/common/virtex.gen "
+@I [HLS-100] Command "source C:/Xilinx/SDSoC/2015.4/VIVADO~1/2015.4/common/technology/xilinx/common/xilinx.gen "
+@I [HLS-100] Command "source C:/Xilinx/SDSoC/2015.4/VIVADO~1/2015.4/common/technology/xilinx/interface/plb46.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.002Total elapsed time: 11.593 sec.
+@I [HLS-100] Command "source C:/Xilinx/SDSoC/2015.4/VIVADO~1/2015.4/common/technology/xilinx/interface/fsl.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.001Total elapsed time: 11.594 sec.
+@I [HLS-100] Command "source C:/Xilinx/SDSoC/2015.4/VIVADO~1/2015.4/common/technology/xilinx/interface/axi4.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.003Total elapsed time: 11.597 sec.
+@I [HLS-100] Command "source C:/Xilinx/SDSoC/2015.4/VIVADO~1/2015.4/common/technology/xilinx/interface/nativeAXI4.gen "
+@I [HLS-100] Command "source C:/Xilinx/SDSoC/2015.4/VIVADO~1/2015.4/common/technology/xilinx/interface/saxilite.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.007Total elapsed time: 11.605 sec.
+@I [HLS-100] Command "source C:/Xilinx/SDSoC/2015.4/VIVADO~1/2015.4/common/technology/xilinx/interface/maxi.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.012Total elapsed time: 11.617 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.02Total elapsed time: 11.617 sec.
+@I [HLS-100] Command "source C:/Xilinx/SDSoC/2015.4/VIVADO~1/2015.4/common/technology/xilinx/scripts/xilinxcoregen.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.013Total elapsed time: 11.630 sec.
+@I [HLS-100] Command "source C:/Xilinx/SDSoC/2015.4/VIVADO~1/2015.4/common/technology/xilinx/interface/XilEDKCoreGen.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.012Total elapsed time: 11.642 sec.
+@I [HLS-100] Command "source C:/Xilinx/SDSoC/2015.4/VIVADO~1/2015.4/common/technology/xilinx/ip/dds_compiler.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.01Total elapsed time: 11.655 sec.
+@I [HLS-100] Command "source C:/Xilinx/SDSoC/2015.4/VIVADO~1/2015.4/common/technology/xilinx/ip/util.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 11.655 sec.
+@I [HLS-100] Command "source C:/Xilinx/SDSoC/2015.4/VIVADO~1/2015.4/common/technology/xilinx/ip/xfft.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.124Total elapsed time: 11.779 sec.
+@I [HLS-100] Command "source C:/Xilinx/SDSoC/2015.4/VIVADO~1/2015.4/common/technology/xilinx/ip/xfir.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.047Total elapsed time: 11.826 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.235Total elapsed time: 11.826 sec.
+@I [HLS-100] Command "source C:/Xilinx/SDSoC/2015.4/VIVADO~1/2015.4/common/technology/xilinx/common/dsp48.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 11.826 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.236Total elapsed time: 11.826 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.238Total elapsed time: 11.826 sec.
+@I [HLS-100] Command "source C:/Xilinx/SDSoC/2015.4/VIVADO~1/2015.4/common/technology/xilinx/zynq/zynq_fpv6.gen "
+@I [HLS-100] Command "source C:/Xilinx/SDSoC/2015.4/VIVADO~1/2015.4/common/technology/xilinx/common/xilinx_fpv6.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 11.826 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 11.826 sec.
+@I [HLS-100] Command "source C:/xup/SDSoC/labs/lab5a/SDDebug/_sds/vhls/sharpen_filter/solution/.autopilot/db/global.setting.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 11.826 sec.
+@I [HLS-100] Command "source C:/xup/SDSoC/labs/lab5a/SDDebug/_sds/vhls/sharpen_filter/solution/.autopilot/db/global.setting.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 11.826 sec.
+@I [HLS-100] Command "source C:/xup/SDSoC/labs/lab5a/SDDebug/_sds/vhls/sharpen_filter/solution/.autopilot/db/sharpen_filter.compgen.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 11.842 sec.
+@I [HLS-100] Command "source C:/xup/SDSoC/labs/lab5a/SDDebug/_sds/vhls/sharpen_filter/solution/.autopilot/db/global.setting.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 11.935 sec.
+@I [HLS-100] Command "source C:/xup/SDSoC/labs/lab5a/SDDebug/_sds/vhls/sharpen_filter/solution/.autopilot/db/global.setting.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 11.935 sec.
+@I [HLS-100] Command "source C:/xup/SDSoC/labs/lab5a/SDDebug/_sds/vhls/sharpen_filter/solution/.autopilot/db/sharpen_filter.compgen.tcl "
+@I [HLS-100] Command "source C:/xup/SDSoC/labs/lab5a/SDDebug/_sds/vhls/sharpen_filter/solution/.autopilot/db/sharpen_filter.rtl_wrap.cfg.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.016Total elapsed time: 11.951 sec.
+@I [HLS-100] Command "source C:/xup/SDSoC/labs/lab5a/SDDebug/_sds/vhls/sharpen_filter/solution/.autopilot/db/sharpen_filter.rtl_wrap.cfg.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 11.951 sec.
+@I [HLS-100] Command "source C:/xup/SDSoC/labs/lab5a/SDDebug/_sds/vhls/sharpen_filter/solution/.autopilot/db/sharpen_filter.rtl_wrap.cfg.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 11.951 sec.
+@I [HLS-100] Command "source C:/xup/SDSoC/labs/lab5a/SDDebug/_sds/vhls/sharpen_filter/solution/.autopilot/db/sharpen_filter.tbgen.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 11.951 sec.
+@I [HLS-100] Command "source C:/xup/SDSoC/labs/lab5a/SDDebug/_sds/vhls/sharpen_filter/solution/.autopilot/db/sharpen_filter.tbgen.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.015Total elapsed time: 11.966 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.063Total elapsed time: 11.998 sec.
+@I [HLS-100] Command "source C:/xup/SDSoC/labs/lab5a/SDDebug/_sds/vhls/sharpen_filter/solution/.autopilot/db/global.setting.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 12.76 sec.
+@I [HLS-100] Command "source C:/xup/SDSoC/labs/lab5a/SDDebug/_sds/vhls/sharpen_filter/solution/.autopilot/db/global.setting.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 12.76 sec.
+@I [HLS-100] Command "source C:/xup/SDSoC/labs/lab5a/SDDebug/_sds/vhls/sharpen_filter/solution/.autopilot/db/sharpen_filter.compgen.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.015Total elapsed time: 12.91 sec.
+@I [HLS-100] Command "source C:/xup/SDSoC/labs/lab5a/SDDebug/_sds/vhls/sharpen_filter/solution/.autopilot/db/global.setting.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 12.443 sec.
+@I [HLS-100] Command "source C:/xup/SDSoC/labs/lab5a/SDDebug/_sds/vhls/sharpen_filter/solution/.autopilot/db/sharpen_filter.constraint.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.015Total elapsed time: 12.458 sec.
+@I [HLS-100] Command "source C:/xup/SDSoC/labs/lab5a/SDDebug/_sds/vhls/sharpen_filter/solution/.autopilot/db/sharpen_filter.rtl_wrap.cfg.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 12.599 sec.
+@I [HLS-100] Command "source C:/xup/SDSoC/labs/lab5a/SDDebug/_sds/vhls/sharpen_filter/solution/.autopilot/db/sharpen_filter.rtl_wrap.cfg.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 12.599 sec.
+@I [HLS-100] Command "source C:/xup/SDSoC/labs/lab5a/SDDebug/_sds/vhls/sharpen_filter/solution/.autopilot/db/sharpen_filter.rtl_wrap.cfg.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 12.599 sec.
+@I [HLS-100] Command "source C:/xup/SDSoC/labs/lab5a/SDDebug/_sds/vhls/sharpen_filter/solution/.autopilot/db/sharpen_filter.tbgen.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.015Total elapsed time: 12.614 sec.
+@I [HLS-100] Command "source C:/xup/SDSoC/labs/lab5a/SDDebug/_sds/vhls/sharpen_filter/solution/.autopilot/db/sharpen_filter.tbgen.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 12.614 sec.
+@I [HLS-100] Command "source C:/xup/SDSoC/labs/lab5a/SDDebug/_sds/vhls/sharpen_filter/solution/.autopilot/db/global.setting.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 12.646 sec.
+@I [HLS-100] Command "source C:/xup/SDSoC/labs/lab5a/SDDebug/_sds/vhls/sharpen_filter/solution/.autopilot/db/global.setting.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.003Total elapsed time: 12.687 sec.
+@I [HLS-100] Command "source C:/xup/SDSoC/labs/lab5a/SDDebug/_sds/vhls/sharpen_filter/solution/.autopilot/db/global.setting.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 12.700 sec.
+@I [HLS-100] Command "source C:/xup/SDSoC/labs/lab5a/SDDebug/_sds/vhls/sharpen_filter/solution/.autopilot/db/sharpen_filter.rtl_wrap.cfg.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 12.700 sec.
+@I [HLS-100] Command "source C:/xup/SDSoC/labs/lab5a/SDDebug/_sds/vhls/sharpen_filter/solution/.autopilot/db/sharpen_filter.rtl_wrap.cfg.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 12.700 sec.
+@I [HLS-100] Command "source C:/xup/SDSoC/labs/lab5a/SDDebug/_sds/vhls/sharpen_filter/solution/.autopilot/db/sharpen_filter.tbgen.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.016Total elapsed time: 12.716 sec.
+@I [HLS-100] Command "source C:/xup/SDSoC/labs/lab5a/SDDebug/_sds/vhls/sharpen_filter/solution/.autopilot/db/sharpen_filter.tbgen.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 12.716 sec.
+@I [HLS-100] Command "source C:/xup/SDSoC/labs/lab5a/SDDebug/_sds/vhls/sharpen_filter/solution/.autopilot/db/sharpen_filter.rtl_wrap.cfg.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 12.731 sec.
+@I [HLS-100] Command "source C:/xup/SDSoC/labs/lab5a/SDDebug/_sds/vhls/sharpen_filter/solution/.autopilot/db/sharpen_filter.rtl_wrap.cfg.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.016Total elapsed time: 12.747 sec.
+@I [HLS-100] Command "source C:/xup/SDSoC/labs/lab5a/SDDebug/_sds/vhls/sharpen_filter/solution/.autopilot/db/sharpen_filter.tbgen.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 12.747 sec.
+@I [HLS-100] Command "source C:/xup/SDSoC/labs/lab5a/SDDebug/_sds/vhls/sharpen_filter/solution/.autopilot/db/sharpen_filter.tbgen.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 12.747 sec.
+@I [HLS-100] Command "source C:/xup/SDSoC/labs/lab5a/SDDebug/_sds/vhls/sharpen_filter/solution/.autopilot/db/sharpen_filter.rtl_wrap.cfg.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.015Total elapsed time: 12.778 sec.
+@I [HLS-100] Command "source C:/xup/SDSoC/labs/lab5a/SDDebug/_sds/vhls/sharpen_filter/solution/.autopilot/db/sharpen_filter.rtl_wrap.cfg.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 12.778 sec.
+@I [HLS-100] Command "source C:/xup/SDSoC/labs/lab5a/SDDebug/_sds/vhls/sharpen_filter/solution/.autopilot/db/sharpen_filter.tbgen.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 12.778 sec.
+@I [HLS-100] Command "source C:/xup/SDSoC/labs/lab5a/SDDebug/_sds/vhls/sharpen_filter/solution/.autopilot/db/sharpen_filter.tbgen.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 12.778 sec.
+@I [HLS-100] Command "source C:/xup/SDSoC/labs/lab5a/SDDebug/_sds/vhls/sharpen_filter/solution/.autopilot/db/sharpen_filter.constraint.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 12.794 sec.
+@I [HLS-100] Command "source C:/xup/SDSoC/labs/lab5a/SDDebug/_sds/vhls/sharpen_filter/solution/.autopilot/db/global.setting.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 12.841 sec.
+@I [HLS-100] Command "source C:/xup/SDSoC/labs/lab5a/SDDebug/_sds/vhls/sharpen_filter/solution/.autopilot/db/global.setting.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 12.889 sec.
+@I [HLS-100] Command "source C:/xup/SDSoC/labs/lab5a/SDDebug/_sds/vhls/sharpen_filter/solution/.autopilot/db/sharpen_filter.constraint.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.016Total elapsed time: 12.905 sec.
+@I [HLS-100] Command "source C:/xup/SDSoC/labs/lab5a/SDDebug/_sds/vhls/sharpen_filter/solution/.autopilot/db/sharpen_filter.constraint.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 12.905 sec.
+@I [HLS-100] Command "source C:/Xilinx/SDSoC/2015.4/VIVADO~1/2015.4/common/technology/generic/autopilot/common.gen "
+@I [HLS-100] Command "source C:/Xilinx/SDSoC/2015.4/VIVADO~1/2015.4/common/technology/generic/autopilot/APCoreGen.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.016Total elapsed time: 12.952 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.016Total elapsed time: 12.952 sec.
+@I [HLS-100] Command "source C:/Xilinx/SDSoC/2015.4/VIVADO~1/2015.4/common/technology/generic/autopilot/op.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 12.952 sec.
+@I [HLS-100] Command "source C:/Xilinx/SDSoC/2015.4/VIVADO~1/2015.4/common/technology/generic/autopilot/op_simcore.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 12.952 sec.
+@I [HLS-100] Command "source C:/Xilinx/SDSoC/2015.4/VIVADO~1/2015.4/common/technology/generic/autopilot/interface.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 12.952 sec.
+@I [HLS-100] Command "source C:/xup/SDSoC/labs/lab5a/SDDebug/_sds/vhls/sharpen_filter/solution/.autopilot/db/global.setting.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 12.952 sec.
+@I [HLS-100] Command "source C:/Xilinx/SDSoC/2015.4/VIVADO~1/2015.4/common/technology/xilinx/zynq/zynq.gen "
+@I [HLS-100] Command "source C:/Xilinx/SDSoC/2015.4/VIVADO~1/2015.4/common/technology/xilinx/common/virtex.gen "
+@I [HLS-100] Command "source C:/Xilinx/SDSoC/2015.4/VIVADO~1/2015.4/common/technology/xilinx/common/xilinx.gen "
+@I [HLS-100] Command "source C:/Xilinx/SDSoC/2015.4/VIVADO~1/2015.4/common/technology/xilinx/interface/plb46.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.015Total elapsed time: 12.967 sec.
+@I [HLS-100] Command "source C:/Xilinx/SDSoC/2015.4/VIVADO~1/2015.4/common/technology/xilinx/interface/fsl.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 12.967 sec.
+@I [HLS-100] Command "source C:/Xilinx/SDSoC/2015.4/VIVADO~1/2015.4/common/technology/xilinx/interface/axi4.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 12.967 sec.
+@I [HLS-100] Command "source C:/Xilinx/SDSoC/2015.4/VIVADO~1/2015.4/common/technology/xilinx/interface/nativeAXI4.gen "
+@I [HLS-100] Command "source C:/Xilinx/SDSoC/2015.4/VIVADO~1/2015.4/common/technology/xilinx/interface/saxilite.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 12.967 sec.
+@I [HLS-100] Command "source C:/Xilinx/SDSoC/2015.4/VIVADO~1/2015.4/common/technology/xilinx/interface/maxi.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.022Total elapsed time: 12.989 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.022Total elapsed time: 12.989 sec.
+@I [HLS-100] Command "source C:/Xilinx/SDSoC/2015.4/VIVADO~1/2015.4/common/technology/xilinx/scripts/xilinxcoregen.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.008Total elapsed time: 12.997 sec.
+@I [HLS-100] Command "source C:/Xilinx/SDSoC/2015.4/VIVADO~1/2015.4/common/technology/xilinx/interface/XilEDKCoreGen.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.016Total elapsed time: 13.13 sec.
+@I [HLS-100] Command "source C:/Xilinx/SDSoC/2015.4/VIVADO~1/2015.4/common/technology/xilinx/ip/dds_compiler.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 13.13 sec.
+@I [HLS-100] Command "source C:/Xilinx/SDSoC/2015.4/VIVADO~1/2015.4/common/technology/xilinx/ip/util.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 13.13 sec.
+@I [HLS-100] Command "source C:/Xilinx/SDSoC/2015.4/VIVADO~1/2015.4/common/technology/xilinx/ip/xfft.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.124Total elapsed time: 13.137 sec.
+@I [HLS-100] Command "source C:/Xilinx/SDSoC/2015.4/VIVADO~1/2015.4/common/technology/xilinx/ip/xfir.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.053Total elapsed time: 13.190 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.238Total elapsed time: 13.190 sec.
+@I [HLS-100] Command "source C:/Xilinx/SDSoC/2015.4/VIVADO~1/2015.4/common/technology/xilinx/common/dsp48.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.001Total elapsed time: 13.192 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.24Total elapsed time: 13.192 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.24Total elapsed time: 13.192 sec.
+@I [HLS-100] Command "source C:/Xilinx/SDSoC/2015.4/VIVADO~1/2015.4/common/technology/xilinx/zynq/zynq_fpv6.gen "
+@I [HLS-100] Command "source C:/Xilinx/SDSoC/2015.4/VIVADO~1/2015.4/common/technology/xilinx/common/xilinx_fpv6.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.004Total elapsed time: 13.197 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.004Total elapsed time: 13.197 sec.
+@I [HLS-100] Command "source C:/xup/SDSoC/labs/lab5a/SDDebug/_sds/vhls/sharpen_filter/solution/.autopilot/db/global.setting.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.003Total elapsed time: 21.80 sec.
+@I [HLS-100] Command "source C:/Xilinx/SDSoC/2015.4/VIVADO~1/2015.4/common/technology/generic/autopilot/common.gen "
+@I [HLS-100] Command "source C:/Xilinx/SDSoC/2015.4/VIVADO~1/2015.4/common/technology/generic/autopilot/APCoreGen.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.001Total elapsed time: 21.91 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.002Total elapsed time: 21.91 sec.
+@I [HLS-100] Command "source C:/Xilinx/SDSoC/2015.4/VIVADO~1/2015.4/common/technology/generic/autopilot/op.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.001Total elapsed time: 21.93 sec.
+@I [HLS-100] Command "source C:/Xilinx/SDSoC/2015.4/VIVADO~1/2015.4/common/technology/generic/autopilot/op_simcore.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.002Total elapsed time: 21.95 sec.
+@I [HLS-100] Command "source C:/Xilinx/SDSoC/2015.4/VIVADO~1/2015.4/common/technology/generic/autopilot/interface.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.001Total elapsed time: 21.97 sec.
+@I [HLS-100] Command "source C:/xup/SDSoC/labs/lab5a/SDDebug/_sds/vhls/sharpen_filter/solution/.autopilot/db/global.setting.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.002Total elapsed time: 21.99 sec.
+@I [HLS-100] Command "source C:/Xilinx/SDSoC/2015.4/VIVADO~1/2015.4/common/technology/xilinx/zynq/zynq.gen "
+@I [HLS-100] Command "source C:/Xilinx/SDSoC/2015.4/VIVADO~1/2015.4/common/technology/xilinx/common/virtex.gen "
+@I [HLS-100] Command "source C:/Xilinx/SDSoC/2015.4/VIVADO~1/2015.4/common/technology/xilinx/common/xilinx.gen "
+@I [HLS-100] Command "source C:/Xilinx/SDSoC/2015.4/VIVADO~1/2015.4/common/technology/xilinx/interface/plb46.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.001Total elapsed time: 21.103 sec.
+@I [HLS-100] Command "source C:/Xilinx/SDSoC/2015.4/VIVADO~1/2015.4/common/technology/xilinx/interface/fsl.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.001Total elapsed time: 21.104 sec.
+@I [HLS-100] Command "source C:/Xilinx/SDSoC/2015.4/VIVADO~1/2015.4/common/technology/xilinx/interface/axi4.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.003Total elapsed time: 21.108 sec.
+@I [HLS-100] Command "source C:/Xilinx/SDSoC/2015.4/VIVADO~1/2015.4/common/technology/xilinx/interface/nativeAXI4.gen "
+@I [HLS-100] Command "source C:/Xilinx/SDSoC/2015.4/VIVADO~1/2015.4/common/technology/xilinx/interface/saxilite.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.004Total elapsed time: 21.113 sec.
+@I [HLS-100] Command "source C:/Xilinx/SDSoC/2015.4/VIVADO~1/2015.4/common/technology/xilinx/interface/maxi.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.008Total elapsed time: 21.121 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.013Total elapsed time: 21.121 sec.
+@I [HLS-100] Command "source C:/Xilinx/SDSoC/2015.4/VIVADO~1/2015.4/common/technology/xilinx/scripts/xilinxcoregen.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.013Total elapsed time: 21.134 sec.
+@I [HLS-100] Command "source C:/Xilinx/SDSoC/2015.4/VIVADO~1/2015.4/common/technology/xilinx/interface/XilEDKCoreGen.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.012Total elapsed time: 21.146 sec.
+@I [HLS-100] Command "source C:/Xilinx/SDSoC/2015.4/VIVADO~1/2015.4/common/technology/xilinx/ip/dds_compiler.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.004Total elapsed time: 21.151 sec.
+@I [HLS-100] Command "source C:/Xilinx/SDSoC/2015.4/VIVADO~1/2015.4/common/technology/xilinx/ip/util.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.001Total elapsed time: 21.152 sec.
+@I [HLS-100] Command "source C:/Xilinx/SDSoC/2015.4/VIVADO~1/2015.4/common/technology/xilinx/ip/xfft.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.132Total elapsed time: 21.284 sec.
+@I [HLS-100] Command "source C:/Xilinx/SDSoC/2015.4/VIVADO~1/2015.4/common/technology/xilinx/ip/xfir.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.038Total elapsed time: 21.322 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.221Total elapsed time: 21.322 sec.
+@I [HLS-100] Command "source C:/Xilinx/SDSoC/2015.4/VIVADO~1/2015.4/common/technology/xilinx/common/dsp48.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.001Total elapsed time: 21.325 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.225Total elapsed time: 21.325 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.226Total elapsed time: 21.325 sec.
+@I [HLS-100] Command "source C:/Xilinx/SDSoC/2015.4/VIVADO~1/2015.4/common/technology/xilinx/zynq/zynq_fpv6.gen "
+@I [HLS-100] Command "source C:/Xilinx/SDSoC/2015.4/VIVADO~1/2015.4/common/technology/xilinx/common/xilinx_fpv6.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.003Total elapsed time: 21.330 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.004Total elapsed time: 21.330 sec.
+@I [HLS-100] Command "source C:/xup/SDSoC/labs/lab5a/SDDebug/_sds/vhls/sharpen_filter/solution/.autopilot/db/global.setting.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.003Total elapsed time: 21.335 sec.
+@I [HLS-100] Command "source C:/xup/SDSoC/labs/lab5a/SDDebug/_sds/vhls/sharpen_filter/solution/.autopilot/db/global.setting.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.004Total elapsed time: 21.341 sec.
+@I [HLS-100] Command "source C:/xup/SDSoC/labs/lab5a/SDDebug/_sds/vhls/sharpen_filter/solution/.autopilot/db/global.setting.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.003Total elapsed time: 21.353 sec.
+@I [HLS-100] Command "source C:/Xilinx/SDSoC/2015.4/VIVADO~1/2015.4/common/technology/generic/autopilot/common.gen "
+@I [HLS-100] Command "source C:/Xilinx/SDSoC/2015.4/VIVADO~1/2015.4/common/technology/generic/autopilot/APCoreGen.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.001Total elapsed time: 21.358 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.003Total elapsed time: 21.358 sec.
+@I [HLS-100] Command "source C:/Xilinx/SDSoC/2015.4/VIVADO~1/2015.4/common/technology/generic/autopilot/op.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.001Total elapsed time: 21.360 sec.
+@I [HLS-100] Command "source C:/Xilinx/SDSoC/2015.4/VIVADO~1/2015.4/common/technology/generic/autopilot/op_simcore.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.002Total elapsed time: 21.362 sec.
+@I [HLS-100] Command "source C:/Xilinx/SDSoC/2015.4/VIVADO~1/2015.4/common/technology/generic/autopilot/interface.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.001Total elapsed time: 21.363 sec.
+@I [HLS-100] Command "source C:/xup/SDSoC/labs/lab5a/SDDebug/_sds/vhls/sharpen_filter/solution/.autopilot/db/global.setting.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.003Total elapsed time: 21.366 sec.
+@I [HLS-100] Command "source C:/Xilinx/SDSoC/2015.4/VIVADO~1/2015.4/common/technology/xilinx/zynq/zynq.gen "
+@I [HLS-100] Command "source C:/Xilinx/SDSoC/2015.4/VIVADO~1/2015.4/common/technology/xilinx/common/virtex.gen "
+@I [HLS-100] Command "source C:/Xilinx/SDSoC/2015.4/VIVADO~1/2015.4/common/technology/xilinx/common/xilinx.gen "
+@I [HLS-100] Command "source C:/Xilinx/SDSoC/2015.4/VIVADO~1/2015.4/common/technology/xilinx/interface/plb46.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.002Total elapsed time: 21.372 sec.
+@I [HLS-100] Command "source C:/Xilinx/SDSoC/2015.4/VIVADO~1/2015.4/common/technology/xilinx/interface/fsl.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.001Total elapsed time: 21.373 sec.
+@I [HLS-100] Command "source C:/Xilinx/SDSoC/2015.4/VIVADO~1/2015.4/common/technology/xilinx/interface/axi4.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.003Total elapsed time: 21.376 sec.
+@I [HLS-100] Command "source C:/Xilinx/SDSoC/2015.4/VIVADO~1/2015.4/common/technology/xilinx/interface/nativeAXI4.gen "
+@I [HLS-100] Command "source C:/Xilinx/SDSoC/2015.4/VIVADO~1/2015.4/common/technology/xilinx/interface/saxilite.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.005Total elapsed time: 21.383 sec.
+@I [HLS-100] Command "source C:/Xilinx/SDSoC/2015.4/VIVADO~1/2015.4/common/technology/xilinx/interface/maxi.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.009Total elapsed time: 21.392 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.015Total elapsed time: 21.392 sec.
+@I [HLS-100] Command "source C:/Xilinx/SDSoC/2015.4/VIVADO~1/2015.4/common/technology/xilinx/scripts/xilinxcoregen.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.012Total elapsed time: 21.404 sec.
+@I [HLS-100] Command "source C:/Xilinx/SDSoC/2015.4/VIVADO~1/2015.4/common/technology/xilinx/interface/XilEDKCoreGen.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.011Total elapsed time: 21.415 sec.
+@I [HLS-100] Command "source C:/Xilinx/SDSoC/2015.4/VIVADO~1/2015.4/common/technology/xilinx/ip/dds_compiler.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.004Total elapsed time: 21.420 sec.
+@I [HLS-100] Command "source C:/Xilinx/SDSoC/2015.4/VIVADO~1/2015.4/common/technology/xilinx/ip/util.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.001Total elapsed time: 21.421 sec.
+@I [HLS-100] Command "source C:/Xilinx/SDSoC/2015.4/VIVADO~1/2015.4/common/technology/xilinx/ip/xfft.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.132Total elapsed time: 21.553 sec.
+@I [HLS-100] Command "source C:/Xilinx/SDSoC/2015.4/VIVADO~1/2015.4/common/technology/xilinx/ip/xfir.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.035Total elapsed time: 21.588 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.219Total elapsed time: 21.588 sec.
+@I [HLS-100] Command "source C:/Xilinx/SDSoC/2015.4/VIVADO~1/2015.4/common/technology/xilinx/common/dsp48.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.001Total elapsed time: 21.590 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.223Total elapsed time: 21.591 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.224Total elapsed time: 21.591 sec.
+@I [HLS-100] Command "source C:/Xilinx/SDSoC/2015.4/VIVADO~1/2015.4/common/technology/xilinx/zynq/zynq_fpv6.gen "
+@I [HLS-100] Command "source C:/Xilinx/SDSoC/2015.4/VIVADO~1/2015.4/common/technology/xilinx/common/xilinx_fpv6.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.003Total elapsed time: 21.595 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.003Total elapsed time: 21.595 sec.
+@I [HLS-100] Command "source C:/xup/SDSoC/labs/lab5a/SDDebug/_sds/vhls/sharpen_filter/solution/.autopilot/db/global.setting.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.003Total elapsed time: 21.600 sec.
+@I [HLS-100] Command "source C:/xup/SDSoC/labs/lab5a/SDDebug/_sds/vhls/sharpen_filter/solution/.autopilot/db/global.setting.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.002Total elapsed time: 21.602 sec.
+@I [HLS-100] Command "source C:/xup/SDSoC/labs/lab5a/SDDebug/_sds/vhls/sharpen_filter/solution/.autopilot/db/sharpen_filter.compgen.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.004Total elapsed time: 21.610 sec.
+@I [HLS-100] Command "source C:/xup/SDSoC/labs/lab5a/SDDebug/_sds/vhls/sharpen_filter/solution/.autopilot/db/global.setting.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.004Total elapsed time: 21.725 sec.
+@I [HLS-100] Command "source C:/xup/SDSoC/labs/lab5a/SDDebug/_sds/vhls/sharpen_filter/solution/.autopilot/db/sharpen_filter.constraint.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.003Total elapsed time: 21.731 sec.
+@I [HLS-100] Command "source C:/Xilinx/SDSoC/2015.4/VIVADO~1/2015.4/common/technology/generic/autopilot/common.gen "
+@I [HLS-100] Command "source C:/Xilinx/SDSoC/2015.4/VIVADO~1/2015.4/common/technology/generic/autopilot/APCoreGen.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.002Total elapsed time: 21.755 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.004Total elapsed time: 21.756 sec.
+@I [HLS-100] Command "source C:/Xilinx/SDSoC/2015.4/VIVADO~1/2015.4/common/technology/generic/autopilot/op.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.002Total elapsed time: 21.759 sec.
+@I [HLS-100] Command "source C:/Xilinx/SDSoC/2015.4/VIVADO~1/2015.4/common/technology/generic/autopilot/op_simcore.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.003Total elapsed time: 21.762 sec.
+@I [HLS-100] Command "source C:/Xilinx/SDSoC/2015.4/VIVADO~1/2015.4/common/technology/generic/autopilot/interface.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 21.763 sec.
+@I [HLS-100] Command "source C:/xup/SDSoC/labs/lab5a/SDDebug/_sds/vhls/sharpen_filter/solution/.autopilot/db/global.setting.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.002Total elapsed time: 21.766 sec.
+@I [HLS-100] Command "source C:/Xilinx/SDSoC/2015.4/VIVADO~1/2015.4/common/technology/xilinx/zynq/zynq.gen "
+@I [HLS-100] Command "source C:/Xilinx/SDSoC/2015.4/VIVADO~1/2015.4/common/technology/xilinx/common/virtex.gen "
+@I [HLS-100] Command "source C:/Xilinx/SDSoC/2015.4/VIVADO~1/2015.4/common/technology/xilinx/common/xilinx.gen "
+@I [HLS-100] Command "source C:/Xilinx/SDSoC/2015.4/VIVADO~1/2015.4/common/technology/xilinx/interface/plb46.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.002Total elapsed time: 21.771 sec.
+@I [HLS-100] Command "source C:/Xilinx/SDSoC/2015.4/VIVADO~1/2015.4/common/technology/xilinx/interface/fsl.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.001Total elapsed time: 21.772 sec.
+@I [HLS-100] Command "source C:/Xilinx/SDSoC/2015.4/VIVADO~1/2015.4/common/technology/xilinx/interface/axi4.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.004Total elapsed time: 21.776 sec.
+@I [HLS-100] Command "source C:/Xilinx/SDSoC/2015.4/VIVADO~1/2015.4/common/technology/xilinx/interface/nativeAXI4.gen "
+@I [HLS-100] Command "source C:/Xilinx/SDSoC/2015.4/VIVADO~1/2015.4/common/technology/xilinx/interface/saxilite.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.005Total elapsed time: 21.782 sec.
+@I [HLS-100] Command "source C:/Xilinx/SDSoC/2015.4/VIVADO~1/2015.4/common/technology/xilinx/interface/maxi.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.009Total elapsed time: 21.791 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.015Total elapsed time: 21.791 sec.
+@I [HLS-100] Command "source C:/Xilinx/SDSoC/2015.4/VIVADO~1/2015.4/common/technology/xilinx/scripts/xilinxcoregen.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.012Total elapsed time: 21.803 sec.
+@I [HLS-100] Command "source C:/Xilinx/SDSoC/2015.4/VIVADO~1/2015.4/common/technology/xilinx/interface/XilEDKCoreGen.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.009Total elapsed time: 21.812 sec.
+@I [HLS-100] Command "source C:/Xilinx/SDSoC/2015.4/VIVADO~1/2015.4/common/technology/xilinx/ip/dds_compiler.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.007Total elapsed time: 21.821 sec.
+@I [HLS-100] Command "source C:/Xilinx/SDSoC/2015.4/VIVADO~1/2015.4/common/technology/xilinx/ip/util.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 21.821 sec.
+@I [HLS-100] Command "source C:/Xilinx/SDSoC/2015.4/VIVADO~1/2015.4/common/technology/xilinx/ip/xfft.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.133Total elapsed time: 21.954 sec.
+@I [HLS-100] Command "source C:/Xilinx/SDSoC/2015.4/VIVADO~1/2015.4/common/technology/xilinx/ip/xfir.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.039Total elapsed time: 21.993 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.225Total elapsed time: 21.993 sec.
+@I [HLS-100] Command "source C:/Xilinx/SDSoC/2015.4/VIVADO~1/2015.4/common/technology/xilinx/common/dsp48.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 21.994 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.228Total elapsed time: 21.995 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.228Total elapsed time: 21.995 sec.
+@I [HLS-100] Command "source C:/Xilinx/SDSoC/2015.4/VIVADO~1/2015.4/common/technology/xilinx/zynq/zynq_fpv6.gen "
+@I [HLS-100] Command "source C:/Xilinx/SDSoC/2015.4/VIVADO~1/2015.4/common/technology/xilinx/common/xilinx_fpv6.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.003Total elapsed time: 21.999 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.004Total elapsed time: 21.999 sec.
+@I [HLS-100] Command "source C:/xup/SDSoC/labs/lab5a/SDDebug/_sds/vhls/sharpen_filter/solution/.autopilot/db/global.setting.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.002Total elapsed time: 22.71 sec.
+@I [HLS-100] Command "source C:/xup/SDSoC/labs/lab5a/SDDebug/_sds/vhls/sharpen_filter/solution/.autopilot/db/global.setting.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 29.516 sec.
+@I [HLS-100] Command "source C:/Xilinx/SDSoC/2015.4/VIVADO~1/2015.4/common/technology/generic/autopilot/common.gen "
+@I [HLS-100] Command "source C:/Xilinx/SDSoC/2015.4/VIVADO~1/2015.4/common/technology/generic/autopilot/APCoreGen.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 29.516 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 29.516 sec.
+@I [HLS-100] Command "source C:/Xilinx/SDSoC/2015.4/VIVADO~1/2015.4/common/technology/generic/autopilot/op.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.015Total elapsed time: 29.531 sec.
+@I [HLS-100] Command "source C:/Xilinx/SDSoC/2015.4/VIVADO~1/2015.4/common/technology/generic/autopilot/op_simcore.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 29.531 sec.
+@I [HLS-100] Command "source C:/Xilinx/SDSoC/2015.4/VIVADO~1/2015.4/common/technology/generic/autopilot/interface.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 29.531 sec.
+@I [HLS-100] Command "source C:/xup/SDSoC/labs/lab5a/SDDebug/_sds/vhls/sharpen_filter/solution/.autopilot/db/global.setting.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 29.531 sec.
+@I [HLS-100] Command "source C:/Xilinx/SDSoC/2015.4/VIVADO~1/2015.4/common/technology/xilinx/zynq/zynq.gen "
+@I [HLS-100] Command "source C:/Xilinx/SDSoC/2015.4/VIVADO~1/2015.4/common/technology/xilinx/common/virtex.gen "
+@I [HLS-100] Command "source C:/Xilinx/SDSoC/2015.4/VIVADO~1/2015.4/common/technology/xilinx/common/xilinx.gen "
+@I [HLS-100] Command "source C:/Xilinx/SDSoC/2015.4/VIVADO~1/2015.4/common/technology/xilinx/interface/plb46.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 29.531 sec.
+@I [HLS-100] Command "source C:/Xilinx/SDSoC/2015.4/VIVADO~1/2015.4/common/technology/xilinx/interface/fsl.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 29.531 sec.
+@I [HLS-100] Command "source C:/Xilinx/SDSoC/2015.4/VIVADO~1/2015.4/common/technology/xilinx/interface/axi4.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 29.531 sec.
+@I [HLS-100] Command "source C:/Xilinx/SDSoC/2015.4/VIVADO~1/2015.4/common/technology/xilinx/interface/nativeAXI4.gen "
+@I [HLS-100] Command "source C:/Xilinx/SDSoC/2015.4/VIVADO~1/2015.4/common/technology/xilinx/interface/saxilite.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.016Total elapsed time: 29.547 sec.
+@I [HLS-100] Command "source C:/Xilinx/SDSoC/2015.4/VIVADO~1/2015.4/common/technology/xilinx/interface/maxi.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 29.547 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.016Total elapsed time: 29.547 sec.
+@I [HLS-100] Command "source C:/Xilinx/SDSoC/2015.4/VIVADO~1/2015.4/common/technology/xilinx/scripts/xilinxcoregen.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.015Total elapsed time: 29.562 sec.
+@I [HLS-100] Command "source C:/Xilinx/SDSoC/2015.4/VIVADO~1/2015.4/common/technology/xilinx/interface/XilEDKCoreGen.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.016Total elapsed time: 29.578 sec.
+@I [HLS-100] Command "source C:/Xilinx/SDSoC/2015.4/VIVADO~1/2015.4/common/technology/xilinx/ip/dds_compiler.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 29.578 sec.
+@I [HLS-100] Command "source C:/Xilinx/SDSoC/2015.4/VIVADO~1/2015.4/common/technology/xilinx/ip/util.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 29.578 sec.
+@I [HLS-100] Command "source C:/Xilinx/SDSoC/2015.4/VIVADO~1/2015.4/common/technology/xilinx/ip/xfft.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.126Total elapsed time: 29.704 sec.
+@I [HLS-100] Command "source C:/Xilinx/SDSoC/2015.4/VIVADO~1/2015.4/common/technology/xilinx/ip/xfir.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.031Total elapsed time: 29.735 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.204Total elapsed time: 29.735 sec.
+@I [HLS-100] Command "source C:/Xilinx/SDSoC/2015.4/VIVADO~1/2015.4/common/technology/xilinx/common/dsp48.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 29.751 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.22Total elapsed time: 29.751 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.22Total elapsed time: 29.751 sec.
+@I [HLS-100] Command "source C:/Xilinx/SDSoC/2015.4/VIVADO~1/2015.4/common/technology/xilinx/zynq/zynq_fpv6.gen "
+@I [HLS-100] Command "source C:/Xilinx/SDSoC/2015.4/VIVADO~1/2015.4/common/technology/xilinx/common/xilinx_fpv6.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 29.751 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 29.751 sec.
+@I [HLS-100] Command "source C:/xup/SDSoC/labs/lab5a/SDDebug/_sds/vhls/sharpen_filter/solution/.autopilot/db/global.setting.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 29.751 sec.
+@I [HLS-100] Command "source C:/xup/SDSoC/labs/lab5a/SDDebug/_sds/vhls/sharpen_filter/solution/.autopilot/db/global.setting.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.015Total elapsed time: 29.766 sec.
+@I [HLS-100] Command "source C:/xup/SDSoC/labs/lab5a/SDDebug/_sds/vhls/sharpen_filter/solution/.autopilot/db/global.setting.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 29.766 sec.
+@I [HLS-100] Command "source C:/Xilinx/SDSoC/2015.4/VIVADO~1/2015.4/common/technology/generic/autopilot/common.gen "
+@I [HLS-100] Command "source C:/Xilinx/SDSoC/2015.4/VIVADO~1/2015.4/common/technology/generic/autopilot/APCoreGen.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.016Total elapsed time: 29.782 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.016Total elapsed time: 29.782 sec.
+@I [HLS-100] Command "source C:/Xilinx/SDSoC/2015.4/VIVADO~1/2015.4/common/technology/generic/autopilot/op.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 29.782 sec.
+@I [HLS-100] Command "source C:/Xilinx/SDSoC/2015.4/VIVADO~1/2015.4/common/technology/generic/autopilot/op_simcore.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 29.782 sec.
+@I [HLS-100] Command "source C:/Xilinx/SDSoC/2015.4/VIVADO~1/2015.4/common/technology/generic/autopilot/interface.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 29.782 sec.
+@I [HLS-100] Command "source C:/xup/SDSoC/labs/lab5a/SDDebug/_sds/vhls/sharpen_filter/solution/.autopilot/db/global.setting.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 29.782 sec.
+@I [HLS-100] Command "source C:/Xilinx/SDSoC/2015.4/VIVADO~1/2015.4/common/technology/xilinx/zynq/zynq.gen "
+@I [HLS-100] Command "source C:/Xilinx/SDSoC/2015.4/VIVADO~1/2015.4/common/technology/xilinx/common/virtex.gen "
+@I [HLS-100] Command "source C:/Xilinx/SDSoC/2015.4/VIVADO~1/2015.4/common/technology/xilinx/common/xilinx.gen "
+@I [HLS-100] Command "source C:/Xilinx/SDSoC/2015.4/VIVADO~1/2015.4/common/technology/xilinx/interface/plb46.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.015Total elapsed time: 29.797 sec.
+@I [HLS-100] Command "source C:/Xilinx/SDSoC/2015.4/VIVADO~1/2015.4/common/technology/xilinx/interface/fsl.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 29.797 sec.
+@I [HLS-100] Command "source C:/Xilinx/SDSoC/2015.4/VIVADO~1/2015.4/common/technology/xilinx/interface/axi4.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 29.797 sec.
+@I [HLS-100] Command "source C:/Xilinx/SDSoC/2015.4/VIVADO~1/2015.4/common/technology/xilinx/interface/nativeAXI4.gen "
+@I [HLS-100] Command "source C:/Xilinx/SDSoC/2015.4/VIVADO~1/2015.4/common/technology/xilinx/interface/saxilite.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 29.797 sec.
+@I [HLS-100] Command "source C:/Xilinx/SDSoC/2015.4/VIVADO~1/2015.4/common/technology/xilinx/interface/maxi.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.016Total elapsed time: 29.813 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.016Total elapsed time: 29.813 sec.
+@I [HLS-100] Command "source C:/Xilinx/SDSoC/2015.4/VIVADO~1/2015.4/common/technology/xilinx/scripts/xilinxcoregen.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.016Total elapsed time: 29.829 sec.
+@I [HLS-100] Command "source C:/Xilinx/SDSoC/2015.4/VIVADO~1/2015.4/common/technology/xilinx/interface/XilEDKCoreGen.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.015Total elapsed time: 29.844 sec.
+@I [HLS-100] Command "source C:/Xilinx/SDSoC/2015.4/VIVADO~1/2015.4/common/technology/xilinx/ip/dds_compiler.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 29.844 sec.
+@I [HLS-100] Command "source C:/Xilinx/SDSoC/2015.4/VIVADO~1/2015.4/common/technology/xilinx/ip/util.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 29.844 sec.
+@I [HLS-100] Command "source C:/Xilinx/SDSoC/2015.4/VIVADO~1/2015.4/common/technology/xilinx/ip/xfft.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.141Total elapsed time: 29.985 sec.
+@I [HLS-100] Command "source C:/Xilinx/SDSoC/2015.4/VIVADO~1/2015.4/common/technology/xilinx/ip/xfir.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.031Total elapsed time: 30.16 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.234Total elapsed time: 30.16 sec.
+@I [HLS-100] Command "source C:/Xilinx/SDSoC/2015.4/VIVADO~1/2015.4/common/technology/xilinx/common/dsp48.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 30.16 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.249Total elapsed time: 30.31 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.249Total elapsed time: 30.31 sec.
+@I [HLS-100] Command "source C:/Xilinx/SDSoC/2015.4/VIVADO~1/2015.4/common/technology/xilinx/zynq/zynq_fpv6.gen "
+@I [HLS-100] Command "source C:/Xilinx/SDSoC/2015.4/VIVADO~1/2015.4/common/technology/xilinx/common/xilinx_fpv6.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 30.31 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 30.31 sec.
+@I [HLS-100] Command "source C:/xup/SDSoC/labs/lab5a/SDDebug/_sds/vhls/sharpen_filter/solution/.autopilot/db/global.setting.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 30.31 sec.
+@I [HLS-100] Command "source C:/xup/SDSoC/labs/lab5a/SDDebug/_sds/vhls/sharpen_filter/solution/.autopilot/db/global.setting.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 30.31 sec.
+@I [HLS-100] Command "source C:/xup/SDSoC/labs/lab5a/SDDebug/_sds/vhls/sharpen_filter/solution/.autopilot/db/sharpen_filter.compgen.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 30.47 sec.
+@I [HLS-100] Command "source C:/xup/SDSoC/labs/lab5a/SDDebug/_sds/vhls/sharpen_filter/solution/.autopilot/db/global.setting.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 30.156 sec.
+@I [HLS-100] Command "source C:/xup/SDSoC/labs/lab5a/SDDebug/_sds/vhls/sharpen_filter/solution/.autopilot/db/sharpen_filter.constraint.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 30.156 sec.
+@I [HLS-100] Command "source C:/Xilinx/SDSoC/2015.4/VIVADO~1/2015.4/common/technology/generic/autopilot/common.gen "
+@I [HLS-100] Command "source C:/Xilinx/SDSoC/2015.4/VIVADO~1/2015.4/common/technology/generic/autopilot/APCoreGen.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 30.172 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 30.172 sec.
+@I [HLS-100] Command "source C:/Xilinx/SDSoC/2015.4/VIVADO~1/2015.4/common/technology/generic/autopilot/op.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 30.172 sec.
+@I [HLS-100] Command "source C:/Xilinx/SDSoC/2015.4/VIVADO~1/2015.4/common/technology/generic/autopilot/op_simcore.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 30.172 sec.
+@I [HLS-100] Command "source C:/Xilinx/SDSoC/2015.4/VIVADO~1/2015.4/common/technology/generic/autopilot/interface.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 30.172 sec.
+@I [HLS-100] Command "source C:/xup/SDSoC/labs/lab5a/SDDebug/_sds/vhls/sharpen_filter/solution/.autopilot/db/global.setting.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 30.172 sec.
+@I [HLS-100] Command "source C:/Xilinx/SDSoC/2015.4/VIVADO~1/2015.4/common/technology/xilinx/zynq/zynq.gen "
+@I [HLS-100] Command "source C:/Xilinx/SDSoC/2015.4/VIVADO~1/2015.4/common/technology/xilinx/common/virtex.gen "
+@I [HLS-100] Command "source C:/Xilinx/SDSoC/2015.4/VIVADO~1/2015.4/common/technology/xilinx/common/xilinx.gen "
+@I [HLS-100] Command "source C:/Xilinx/SDSoC/2015.4/VIVADO~1/2015.4/common/technology/xilinx/interface/plb46.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 30.187 sec.
+@I [HLS-100] Command "source C:/Xilinx/SDSoC/2015.4/VIVADO~1/2015.4/common/technology/xilinx/interface/fsl.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 30.187 sec.
+@I [HLS-100] Command "source C:/Xilinx/SDSoC/2015.4/VIVADO~1/2015.4/common/technology/xilinx/interface/axi4.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 30.187 sec.
+@I [HLS-100] Command "source C:/Xilinx/SDSoC/2015.4/VIVADO~1/2015.4/common/technology/xilinx/interface/nativeAXI4.gen "
+@I [HLS-100] Command "source C:/Xilinx/SDSoC/2015.4/VIVADO~1/2015.4/common/technology/xilinx/interface/saxilite.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.016Total elapsed time: 30.203 sec.
+@I [HLS-100] Command "source C:/Xilinx/SDSoC/2015.4/VIVADO~1/2015.4/common/technology/xilinx/interface/maxi.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 30.203 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.016Total elapsed time: 30.203 sec.
+@I [HLS-100] Command "source C:/Xilinx/SDSoC/2015.4/VIVADO~1/2015.4/common/technology/xilinx/scripts/xilinxcoregen.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.016Total elapsed time: 30.219 sec.
+@I [HLS-100] Command "source C:/Xilinx/SDSoC/2015.4/VIVADO~1/2015.4/common/technology/xilinx/interface/XilEDKCoreGen.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.015Total elapsed time: 30.234 sec.
+@I [HLS-100] Command "source C:/Xilinx/SDSoC/2015.4/VIVADO~1/2015.4/common/technology/xilinx/ip/dds_compiler.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 30.234 sec.
+@I [HLS-100] Command "source C:/Xilinx/SDSoC/2015.4/VIVADO~1/2015.4/common/technology/xilinx/ip/util.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 30.234 sec.
+@I [HLS-100] Command "source C:/Xilinx/SDSoC/2015.4/VIVADO~1/2015.4/common/technology/xilinx/ip/xfft.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.141Total elapsed time: 30.375 sec.
+@I [HLS-100] Command "source C:/Xilinx/SDSoC/2015.4/VIVADO~1/2015.4/common/technology/xilinx/ip/xfir.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.046Total elapsed time: 30.421 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.234Total elapsed time: 30.421 sec.
+@I [HLS-100] Command "source C:/Xilinx/SDSoC/2015.4/VIVADO~1/2015.4/common/technology/xilinx/common/dsp48.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 30.421 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.234Total elapsed time: 30.421 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.234Total elapsed time: 30.421 sec.
+@I [HLS-100] Command "source C:/Xilinx/SDSoC/2015.4/VIVADO~1/2015.4/common/technology/xilinx/zynq/zynq_fpv6.gen "
+@I [HLS-100] Command "source C:/Xilinx/SDSoC/2015.4/VIVADO~1/2015.4/common/technology/xilinx/common/xilinx_fpv6.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 30.421 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 30.421 sec.
+@I [HLS-100] Command "source C:/xup/SDSoC/labs/lab5a/SDDebug/_sds/vhls/sharpen_filter/solution/.autopilot/db/global.setting.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 30.484 sec.
+@I [HLS-100] Command 'export_design' returned 0; elapsed 26.727Total elapsed time: 37.945 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 35.78Total elapsed time: 37.945 sec.
+@I [HLS-100] Command "cleanup_all "
+@I [HLS-100] Command 'cleanup_all' returned 0; elapsed 0Total elapsed time: 37.945 sec.

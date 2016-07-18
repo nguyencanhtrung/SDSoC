@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2015.4 (64-bit)
+# SW Build 1412921 on Wed Nov 18 09:43:45 MST 2015
+# IP Build 1412968 on Wed Nov 18 10:19:19 MST 2015
+# Start of session at: Fri Jan 01 05:54:02 2016
+# Process ID: 14352
+# Current directory: C:/xup/SDSoC/labs/lab3a/SDDebug/_sds/p0/ipi/zed.runs/synth_1
+# Command line: vivado.exe -log zed_wrapper.vds -mode batch -messageDb vivado.pb -notrace -source zed_wrapper.tcl
+# Log file: C:/xup/SDSoC/labs/lab3a/SDDebug/_sds/p0/ipi/zed.runs/synth_1/zed_wrapper.vds
+# Journal file: C:/xup/SDSoC/labs/lab3a/SDDebug/_sds/p0/ipi/zed.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source zed_wrapper.tcl -notrace

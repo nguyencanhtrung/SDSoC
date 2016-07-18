@@ -1,0 +1,28 @@
+<AutoPilot:ProjectResources xmlns:AutoPilot="com.autoesl.autopilot.ui.directiveView">
+    <sourceFile name="">
+        <directive functionName="mmult" label="" functionLabel="">
+            <pragma name="INTERFACE">
+                <option name="ap_fifo" value="" positionalBoolean="mode"/>
+                <option name="port" value="in_A" positionalBoolean="4"/>
+            </pragma>
+        </directive>
+        <directive functionName="mmult" label="" functionLabel="">
+            <pragma name="INTERFACE">
+                <option name="ap_fifo" value="" positionalBoolean="mode"/>
+                <option name="port" value="in_B" positionalBoolean="4"/>
+            </pragma>
+        </directive>
+        <directive functionName="mmult" label="" functionLabel="">
+            <pragma name="INTERFACE">
+                <option name="ap_fifo" value="" positionalBoolean="mode"/>
+                <option name="port" value="out_C" positionalBoolean="4"/>
+            </pragma>
+        </directive>
+        <directive functionName="mmult" label="" functionLabel="">
+            <pragma name="LATENCY">
+                <option name="min" value="1"/>
+            </pragma>
+        </directive>
+    </sourceFile>
+</AutoPilot:ProjectResources>
+

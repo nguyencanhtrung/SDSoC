@@ -1,0 +1,22 @@
+digraph dm_graph {
+v0 [label = "v0:main" ,style=filled];
+v1 [label = "v1:XFER(IN):input @93, ARRAY\nCPU\nAXIDMA_SIMPLE(mm2s) on AFI(PS to ACC)\n" ,style=filled,fillcolor = green];
+v2 [label = "v2:call 'sharpen_filter' in 'SDSoC_lab_design_main.c' @93\nACC\n" ,style=filled,fillcolor = red];
+v3 [label = "v3:XFER(OUT):v_return @93, SCALAR\nAXILITE(s2mm) on GP(PS to ACC)\n" ,style=filled,fillcolor = yellow];
+v4 [label = "v4:XFER(OUT):output @93, ARRAY\nCPU\nAXIDMA_SIMPLE(s2mm) on AFI(ACC to PS)\n" ,style=filled,fillcolor = yellow];
+v5 [label = "v5:cf_wait(): \nXFER(OUT):v_return @93, SCALAR\nAXILITE(s2mm) on GP(PS to ACC)\nXFER(OUT):output @93, ARRAY\nCPU\nAXIDMA_SIMPLE(s2mm) on AFI(ACC to PS)\nXFER(IN):input @93, ARRAY\nCPU\nAXIDMA_SIMPLE(mm2s) on AFI(PS to ACC)\n\nCPU\nCPU\nCPU\n" ,style=filled,fillcolor = cyan];
+subgraph cluster0 {
+v1;
+v2;
+v3;
+v4;
+v5;
+label = "call 'sharpen_filter' in 'SDSoC_lab_design_main.c' @93\nACC\n";
+}
+v1 -> v2 [label = "0"];
+v2 -> v3 [label = "0"];
+v2 -> v4 [label = "0"];
+v3 -> v5 [label = "", style = dotted];
+v4 -> v5 [label = "", style = dotted];
+v0 -> v1 [label = "", style = dotted];
+}

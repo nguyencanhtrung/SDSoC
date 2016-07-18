@@ -1,0 +1,9 @@
+digraph defuse_graph {
+v0 [label = "def: (bb2),sw(6)@86"];
+v1 [label = "use: (bb2),hw, call:sharpen_filter"];
+v2 [label = "def: (bb2),hw, call:sharpen_filter"];
+v3 [label = "use: (bb5),hw, call:sobel_filter"];
+v4 [label = "def: (bb5),hw, call:sobel_filter"];
+v0 -> v1;
+v2 -> v3;
+}

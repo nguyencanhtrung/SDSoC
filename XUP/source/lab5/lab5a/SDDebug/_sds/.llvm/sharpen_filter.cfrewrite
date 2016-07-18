@@ -1,0 +1,30 @@
+#ifdef __cplusplus
+extern "C" {
+#endif
+int _p0_sharpen_filter_0(uint8_t * input, uint8_t * output);
+#ifdef __cplusplus
+}
+#endif
+int _p0_sharpen_filter_0(uint8_t * input, uint8_t * output)
+{
+  switch_to_next_partition(0);
+  int start_seq[3];
+  start_seq[0] = 0x00000000;
+  start_seq[1] = 0x00010100;
+  start_seq[2] = 0x00020000;
+  cf_request_handle_t _p0_swinst_sharpen_filter_0_cmd;
+  cf_send_i(&(_p0_swinst_sharpen_filter_0.cmd_sharpen_filter), start_seq, 3*sizeof(int), &_p0_swinst_sharpen_filter_0_cmd);
+  cf_wait(_p0_swinst_sharpen_filter_0_cmd);
+
+  cf_send_i(&(_p0_swinst_sharpen_filter_0.input_r), input, 2073600 * 1, &_p0_request_0);
+
+  int _p0_sharpen_filter_0_v_return;
+  cf_receive_i(&(_p0_swinst_sharpen_filter_0.output_r), output, 2073600 * 1, &_p0_sharpen_filter_0_num_output_r, &_p0_request_1);
+  cf_receive_i(&(_p0_swinst_sharpen_filter_0.ap_return), &_p0_sharpen_filter_0_v_return, 4, &_p0_sharpen_filter_0_num_ap_return, &_p0_request_2);
+
+  cf_wait(_p0_request_0);
+  cf_wait(_p0_request_1);
+  cf_wait(_p0_request_2);
+  return _p0_sharpen_filter_0_v_return;
+}
+

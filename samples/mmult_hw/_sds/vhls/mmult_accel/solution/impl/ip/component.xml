@@ -843,11 +843,11 @@
     <spirit:fileSet>
       <spirit:name>xilinx_verilogsynthesis_view_fileset</spirit:name>
       <spirit:file>
-        <spirit:name>hdl/ip/mmult_accel_ap_fadd_3_full_dsp_32.vhd</spirit:name>
+        <spirit:name>hdl/ip/mmult_accel_ap_fmul_3_max_dsp_32.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/ip/mmult_accel_ap_fmul_2_max_dsp_32.vhd</spirit:name>
+        <spirit:name>hdl/ip/mmult_accel_ap_fadd_7_full_dsp_32.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
@@ -858,7 +858,7 @@
         <spirit:userFileType>USED_IN_implementation</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/mmult_accel_fadd_32ns_32ns_32_5_full_dsp.v</spirit:name>
+        <spirit:name>hdl/verilog/mmult_accel_fmul_32ns_32ns_32_5_max_dsp.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
@@ -866,7 +866,7 @@
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/mmult_accel_fmul_32ns_32ns_32_4_max_dsp.v</spirit:name>
+        <spirit:name>hdl/verilog/mmult_accel_fadd_32ns_32ns_32_9_full_dsp.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
     </spirit:fileSet>
@@ -883,7 +883,7 @@
     <spirit:fileSet>
       <spirit:name>xilinx_verilogbehavioralsimulation_view_fileset</spirit:name>
       <spirit:file>
-        <spirit:name>hdl/verilog/mmult_accel_fadd_32ns_32ns_32_5_full_dsp.v</spirit:name>
+        <spirit:name>hdl/verilog/mmult_accel_fmul_32ns_32ns_32_5_max_dsp.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
@@ -891,15 +891,15 @@
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/mmult_accel_fmul_32ns_32ns_32_4_max_dsp.v</spirit:name>
+        <spirit:name>hdl/verilog/mmult_accel_fadd_32ns_32ns_32_9_full_dsp.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/ip/mmult_accel_ap_fadd_3_full_dsp_32.vhd</spirit:name>
+        <spirit:name>hdl/ip/mmult_accel_ap_fmul_3_max_dsp_32.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/ip/mmult_accel_ap_fmul_2_max_dsp_32.vhd</spirit:name>
+        <spirit:name>hdl/ip/mmult_accel_ap_fadd_7_full_dsp_32.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
     </spirit:fileSet>
@@ -916,11 +916,11 @@
     <spirit:fileSet>
       <spirit:name>xilinx_vhdlsynthesis_view_fileset</spirit:name>
       <spirit:file>
-        <spirit:name>hdl/ip/mmult_accel_ap_fadd_3_full_dsp_32.vhd</spirit:name>
+        <spirit:name>hdl/ip/mmult_accel_ap_fmul_3_max_dsp_32.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/ip/mmult_accel_ap_fmul_2_max_dsp_32.vhd</spirit:name>
+        <spirit:name>hdl/ip/mmult_accel_ap_fadd_7_full_dsp_32.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
@@ -935,13 +935,13 @@
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/mmult_accel_fmul_32ns_32ns_32_4_max_dsp.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/mmult_accel_fadd_32ns_32ns_32_9_full_dsp.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/mmult_accel_fadd_32ns_32ns_32_5_full_dsp.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/mmult_accel_fmul_32ns_32ns_32_5_max_dsp.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
-        <spirit:userFileType>CHECKSUM_4be53bb7</spirit:userFileType>
+        <spirit:userFileType>CHECKSUM_b3b7c24a</spirit:userFileType>
       </spirit:file>
     </spirit:fileSet>
     <spirit:fileSet>
@@ -961,19 +961,19 @@
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/mmult_accel_fmul_32ns_32ns_32_4_max_dsp.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/mmult_accel_fadd_32ns_32ns_32_9_full_dsp.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/mmult_accel_fadd_32ns_32ns_32_5_full_dsp.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/mmult_accel_fmul_32ns_32ns_32_5_max_dsp.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/ip/mmult_accel_ap_fadd_3_full_dsp_32.vhd</spirit:name>
+        <spirit:name>hdl/ip/mmult_accel_ap_fmul_3_max_dsp_32.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/ip/mmult_accel_ap_fmul_2_max_dsp_32.vhd</spirit:name>
+        <spirit:name>hdl/ip/mmult_accel_ap_fadd_7_full_dsp_32.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
     </spirit:fileSet>
@@ -1027,7 +1027,7 @@
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>clk_period</spirit:name>
-      <spirit:value spirit:resolve="immediate" spirit:id="PARAM_VALUE.clk_period" spirit:order="2">8.500000</spirit:value>
+      <spirit:value spirit:resolve="immediate" spirit:id="PARAM_VALUE.clk_period" spirit:order="2">5.950000</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>machine</spirit:name>
@@ -1039,7 +1039,7 @@
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>latency</spirit:name>
-      <spirit:value spirit:resolve="immediate" spirit:id="PARAM_VALUE.latency" spirit:order="5">362561</spirit:value>
+      <spirit:value spirit:resolve="immediate" spirit:id="PARAM_VALUE.latency" spirit:order="5">526401</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>II</spirit:name>
@@ -1055,8 +1055,8 @@
         <xilinx:taxonomy>/VIVADO_HLS_IP</xilinx:taxonomy>
       </xilinx:taxonomies>
       <xilinx:displayName>Mmult_accel</xilinx:displayName>
-      <xilinx:coreRevision>1607272007</xilinx:coreRevision>
-      <xilinx:coreCreationDateTime>2016-07-27T18:07:29Z</xilinx:coreCreationDateTime>
+      <xilinx:coreRevision>1607272024</xilinx:coreRevision>
+      <xilinx:coreCreationDateTime>2016-07-27T18:25:03Z</xilinx:coreCreationDateTime>
     </xilinx:coreExtensions>
     <xilinx:packagingInfo>
       <xilinx:xilinxVersion>2014.4</xilinx:xilinxVersion>

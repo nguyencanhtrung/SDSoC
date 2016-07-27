@@ -1,2 +1,2 @@
-set design_latency 362561
-set design_II 362561
+set design_latency 526401
+set design_II 526401

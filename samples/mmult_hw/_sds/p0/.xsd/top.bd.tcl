@@ -7,7 +7,7 @@ current_bd_design $diagram_name
 #---------------------------
 
 #---------------------------
-# Platform Parameters for zc702
+# Platform Parameters for zed
 #---------------------------
 set ps7 [get_bd_cell /ps7]
     
@@ -159,7 +159,7 @@ connect_bd_net  \
   [get_bd_pins /mmult_accel_0/ap_rst_n] \
 
 connect_bd_net  \
-  [get_bd_pins /ps7/FCLK_CLK2] \
+  [get_bd_pins /ps7/FCLK_CLK1] \
   [get_bd_pins /datamover_0/s_axi_lite_aclk] \
   [get_bd_pins /datamover_0/m_axi_sg_aclk] \
   [get_bd_pins /datamover_0/m_axi_mm2s_aclk] \
@@ -189,7 +189,7 @@ connect_bd_net  \
   [get_bd_pins /axis_rtr_datamover_0/m_axis_rxs_aclk] \
 
 connect_bd_net  \
-  [get_bd_pins /proc_sys_reset_2/interconnect_aresetn] \
+  [get_bd_pins /proc_sys_reset_1/interconnect_aresetn] \
   [get_bd_pins /axi_interconnect_M_AXI_GP0/ARESETN] \
   [get_bd_pins /axi_interconnect_M_AXI_GP0/S00_ARESETN] \
   [get_bd_pins /axi_interconnect_M_AXI_GP0/M00_ARESETN] \
@@ -201,7 +201,7 @@ connect_bd_net  \
   [get_bd_pins /axi_interconnect_S_AXI_ACP/S02_ARESETN] \
 
 connect_bd_net  \
-  [get_bd_pins /proc_sys_reset_2/peripheral_aresetn] \
+  [get_bd_pins /proc_sys_reset_1/peripheral_aresetn] \
   [get_bd_pins /datamover_0/axi_resetn] \
   [get_bd_pins /mmult_accel_0_if/s_axi_aresetn] \
   [get_bd_pins /mmult_accel_0_if/m_axis_aresetn] \

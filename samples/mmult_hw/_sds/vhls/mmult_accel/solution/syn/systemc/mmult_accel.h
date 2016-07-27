@@ -11,8 +11,8 @@
 #include "systemc.h"
 #include "AESL_pkg.h"
 
-#include "mmult_accel_fadd_32ns_32ns_32_5_full_dsp.h"
-#include "mmult_accel_fmul_32ns_32ns_32_4_max_dsp.h"
+#include "mmult_accel_fadd_32ns_32ns_32_9_full_dsp.h"
+#include "mmult_accel_fmul_32ns_32ns_32_5_max_dsp.h"
 
 namespace ap_rtl {
 
@@ -57,41 +57,41 @@ struct mmult_accel : public sc_module {
 
     ofstream mHdltvinHandle;
     ofstream mHdltvoutHandle;
-    mmult_accel_fadd_32ns_32ns_32_5_full_dsp<1,5,32,32,32>* mmult_accel_fadd_32ns_32ns_32_5_full_dsp_U1;
-    mmult_accel_fmul_32ns_32ns_32_4_max_dsp<1,4,32,32,32>* mmult_accel_fmul_32ns_32ns_32_4_max_dsp_U2;
+    mmult_accel_fadd_32ns_32ns_32_9_full_dsp<1,9,32,32,32>* mmult_accel_fadd_32ns_32ns_32_9_full_dsp_U1;
+    mmult_accel_fmul_32ns_32ns_32_5_max_dsp<1,5,32,32,32>* mmult_accel_fmul_32ns_32ns_32_5_max_dsp_U2;
     sc_signal< sc_logic > ap_rst_n_inv;
-    sc_signal< sc_lv<14> > ap_CS_fsm;
+    sc_signal< sc_lv<19> > ap_CS_fsm;
     sc_signal< sc_logic > ap_sig_cseq_ST_st1_fsm_0;
-    sc_signal< bool > ap_sig_bdd_32;
+    sc_signal< bool > ap_sig_bdd_37;
     sc_signal< sc_lv<6> > row_1_fu_148_p2;
     sc_signal< sc_lv<6> > row_1_reg_242;
     sc_signal< sc_logic > ap_sig_cseq_ST_st2_fsm_1;
-    sc_signal< bool > ap_sig_bdd_73;
+    sc_signal< bool > ap_sig_bdd_78;
     sc_signal< sc_lv<10> > tmp_fu_158_p3;
     sc_signal< sc_lv<10> > tmp_reg_247;
     sc_signal< sc_lv<1> > exitcond2_fu_142_p2;
     sc_signal< sc_lv<10> > col_cast2_fu_166_p1;
     sc_signal< sc_lv<10> > col_cast2_reg_253;
     sc_signal< sc_logic > ap_sig_cseq_ST_st3_fsm_2;
-    sc_signal< bool > ap_sig_bdd_88;
+    sc_signal< bool > ap_sig_bdd_93;
     sc_signal< sc_lv<6> > col_1_fu_176_p2;
     sc_signal< sc_lv<6> > col_1_reg_262;
     sc_signal< sc_lv<6> > k_1_fu_192_p2;
     sc_signal< sc_lv<6> > k_1_reg_270;
     sc_signal< sc_logic > ap_sig_cseq_ST_st4_fsm_3;
-    sc_signal< bool > ap_sig_bdd_99;
+    sc_signal< bool > ap_sig_bdd_104;
     sc_signal< sc_lv<1> > exitcond_fu_186_p2;
     sc_signal< sc_lv<32> > in_A_load_reg_285;
     sc_signal< sc_logic > ap_sig_cseq_ST_st5_fsm_4;
-    sc_signal< bool > ap_sig_bdd_114;
+    sc_signal< bool > ap_sig_bdd_119;
     sc_signal< sc_lv<32> > in_B_load_reg_290;
     sc_signal< sc_lv<32> > grp_fu_138_p2;
     sc_signal< sc_lv<32> > tmp_s_reg_295;
-    sc_signal< sc_logic > ap_sig_cseq_ST_st9_fsm_8;
-    sc_signal< bool > ap_sig_bdd_124;
+    sc_signal< sc_logic > ap_sig_cseq_ST_st10_fsm_9;
+    sc_signal< bool > ap_sig_bdd_129;
     sc_signal< sc_lv<32> > grp_fu_133_p2;
-    sc_signal< sc_logic > ap_sig_cseq_ST_st14_fsm_13;
-    sc_signal< bool > ap_sig_bdd_133;
+    sc_signal< sc_logic > ap_sig_cseq_ST_st19_fsm_18;
+    sc_signal< bool > ap_sig_bdd_138;
     sc_signal< sc_lv<6> > row_reg_86;
     sc_signal< sc_lv<1> > exitcond1_fu_170_p2;
     sc_signal< sc_lv<6> > col_reg_97;
@@ -105,12 +105,12 @@ struct mmult_accel : public sc_module {
     sc_signal< sc_lv<32> > out_C_Addr_A_orig;
     sc_signal< sc_lv<32> > grp_fu_133_p0;
     sc_signal< sc_lv<32> > grp_fu_133_p1;
-    sc_signal< sc_logic > ap_sig_cseq_ST_st10_fsm_9;
-    sc_signal< bool > ap_sig_bdd_174;
+    sc_signal< sc_logic > ap_sig_cseq_ST_st11_fsm_10;
+    sc_signal< bool > ap_sig_bdd_179;
     sc_signal< sc_lv<32> > grp_fu_138_p0;
     sc_signal< sc_lv<32> > grp_fu_138_p1;
     sc_signal< sc_logic > ap_sig_cseq_ST_st6_fsm_5;
-    sc_signal< bool > ap_sig_bdd_183;
+    sc_signal< bool > ap_sig_bdd_188;
     sc_signal< sc_lv<5> > tmp_1_fu_154_p1;
     sc_signal< sc_lv<10> > k_cast1_fu_182_p1;
     sc_signal< sc_lv<10> > tmp_5_fu_198_p2;
@@ -120,23 +120,28 @@ struct mmult_accel : public sc_module {
     sc_signal< sc_lv<10> > tmp_2_fu_230_p2;
     sc_signal< sc_logic > grp_fu_133_ce;
     sc_signal< sc_logic > grp_fu_138_ce;
-    sc_signal< sc_lv<14> > ap_NS_fsm;
+    sc_signal< sc_lv<19> > ap_NS_fsm;
     static const sc_logic ap_const_logic_1;
     static const sc_logic ap_const_logic_0;
-    static const sc_lv<14> ap_ST_st1_fsm_0;
-    static const sc_lv<14> ap_ST_st2_fsm_1;
-    static const sc_lv<14> ap_ST_st3_fsm_2;
-    static const sc_lv<14> ap_ST_st4_fsm_3;
-    static const sc_lv<14> ap_ST_st5_fsm_4;
-    static const sc_lv<14> ap_ST_st6_fsm_5;
-    static const sc_lv<14> ap_ST_st7_fsm_6;
-    static const sc_lv<14> ap_ST_st8_fsm_7;
-    static const sc_lv<14> ap_ST_st9_fsm_8;
-    static const sc_lv<14> ap_ST_st10_fsm_9;
-    static const sc_lv<14> ap_ST_st11_fsm_10;
-    static const sc_lv<14> ap_ST_st12_fsm_11;
-    static const sc_lv<14> ap_ST_st13_fsm_12;
-    static const sc_lv<14> ap_ST_st14_fsm_13;
+    static const sc_lv<19> ap_ST_st1_fsm_0;
+    static const sc_lv<19> ap_ST_st2_fsm_1;
+    static const sc_lv<19> ap_ST_st3_fsm_2;
+    static const sc_lv<19> ap_ST_st4_fsm_3;
+    static const sc_lv<19> ap_ST_st5_fsm_4;
+    static const sc_lv<19> ap_ST_st6_fsm_5;
+    static const sc_lv<19> ap_ST_st7_fsm_6;
+    static const sc_lv<19> ap_ST_st8_fsm_7;
+    static const sc_lv<19> ap_ST_st9_fsm_8;
+    static const sc_lv<19> ap_ST_st10_fsm_9;
+    static const sc_lv<19> ap_ST_st11_fsm_10;
+    static const sc_lv<19> ap_ST_st12_fsm_11;
+    static const sc_lv<19> ap_ST_st13_fsm_12;
+    static const sc_lv<19> ap_ST_st14_fsm_13;
+    static const sc_lv<19> ap_ST_st15_fsm_14;
+    static const sc_lv<19> ap_ST_st16_fsm_15;
+    static const sc_lv<19> ap_ST_st17_fsm_16;
+    static const sc_lv<19> ap_ST_st18_fsm_17;
+    static const sc_lv<19> ap_ST_st19_fsm_18;
     static const sc_lv<32> ap_const_lv32_0;
     static const sc_lv<1> ap_const_lv1_1;
     static const sc_lv<32> ap_const_lv32_1;
@@ -144,12 +149,12 @@ struct mmult_accel : public sc_module {
     static const sc_lv<32> ap_const_lv32_2;
     static const sc_lv<32> ap_const_lv32_3;
     static const sc_lv<32> ap_const_lv32_4;
-    static const sc_lv<32> ap_const_lv32_8;
-    static const sc_lv<32> ap_const_lv32_D;
+    static const sc_lv<32> ap_const_lv32_9;
+    static const sc_lv<32> ap_const_lv32_12;
     static const sc_lv<6> ap_const_lv6_0;
     static const sc_lv<4> ap_const_lv4_0;
     static const sc_lv<4> ap_const_lv4_F;
-    static const sc_lv<32> ap_const_lv32_9;
+    static const sc_lv<32> ap_const_lv32_A;
     static const sc_lv<32> ap_const_lv32_5;
     static const sc_lv<6> ap_const_lv6_20;
     static const sc_lv<6> ap_const_lv6_1;
@@ -160,24 +165,24 @@ struct mmult_accel : public sc_module {
     void thread_ap_idle();
     void thread_ap_ready();
     void thread_ap_rst_n_inv();
-    void thread_ap_sig_bdd_114();
-    void thread_ap_sig_bdd_124();
-    void thread_ap_sig_bdd_133();
-    void thread_ap_sig_bdd_174();
-    void thread_ap_sig_bdd_183();
-    void thread_ap_sig_bdd_32();
-    void thread_ap_sig_bdd_73();
-    void thread_ap_sig_bdd_88();
-    void thread_ap_sig_bdd_99();
+    void thread_ap_sig_bdd_104();
+    void thread_ap_sig_bdd_119();
+    void thread_ap_sig_bdd_129();
+    void thread_ap_sig_bdd_138();
+    void thread_ap_sig_bdd_179();
+    void thread_ap_sig_bdd_188();
+    void thread_ap_sig_bdd_37();
+    void thread_ap_sig_bdd_78();
+    void thread_ap_sig_bdd_93();
     void thread_ap_sig_cseq_ST_st10_fsm_9();
-    void thread_ap_sig_cseq_ST_st14_fsm_13();
+    void thread_ap_sig_cseq_ST_st11_fsm_10();
+    void thread_ap_sig_cseq_ST_st19_fsm_18();
     void thread_ap_sig_cseq_ST_st1_fsm_0();
     void thread_ap_sig_cseq_ST_st2_fsm_1();
     void thread_ap_sig_cseq_ST_st3_fsm_2();
     void thread_ap_sig_cseq_ST_st4_fsm_3();
     void thread_ap_sig_cseq_ST_st5_fsm_4();
     void thread_ap_sig_cseq_ST_st6_fsm_5();
-    void thread_ap_sig_cseq_ST_st9_fsm_8();
     void thread_col_1_fu_176_p2();
     void thread_col_cast2_fu_166_p1();
     void thread_exitcond1_fu_170_p2();

@@ -6,7 +6,7 @@
 <Project Version="7" Minor="2" Path="/home/trungnguyen/SDSoC/samples/mmult_hw/_sds/vhls/mmult_accel/solution/impl/verilog/project.xpr">
   <DefaultLaunch Dir="$PRUNDIR"/>
   <Configuration>
-    <Option Name="Id" Val="14a0466d8d9740fdad300cb9caf69e72"/>
+    <Option Name="Id" Val="f6700ae592594df789e36406ca1cf7a1"/>
     <Option Name="Part" Val="xc7z020clg484-1"/>
     <Option Name="CompiledLibDir" Val="$PCACHEDIR/compile_simlib"/>
     <Option Name="BoardPart" Val=""/>
@@ -16,7 +16,7 @@
   <FileSets Version="1" Minor="31">
     <FileSet Name="sources_1" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
       <Filter Type="Srcs"/>
-      <File Path="$PPRDIR/mmult_accel_fadd_32ns_32ns_32_5_full_dsp.v">
+      <File Path="$PPRDIR/mmult_accel_fmul_32ns_32ns_32_5_max_dsp.v">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
@@ -30,21 +30,21 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/mmult_accel_fmul_32ns_32ns_32_4_max_dsp.v">
+      <File Path="$PPRDIR/mmult_accel_fadd_32ns_32ns_32_9_full_dsp.v">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/ip/mmult_accel_ap_fadd_3_full_dsp_32/mmult_accel_ap_fadd_3_full_dsp_32.xci">
+      <File Path="$PSRCDIR/sources_1/ip/mmult_accel_ap_fmul_3_max_dsp_32/mmult_accel_ap_fmul_3_max_dsp_32.xci">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/ip/mmult_accel_ap_fmul_2_max_dsp_32/mmult_accel_ap_fmul_2_max_dsp_32.xci">
+      <File Path="$PSRCDIR/sources_1/ip/mmult_accel_ap_fadd_7_full_dsp_32/mmult_accel_ap_fadd_7_full_dsp_32.xci">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>

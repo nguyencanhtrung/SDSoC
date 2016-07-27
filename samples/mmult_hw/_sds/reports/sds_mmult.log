@@ -1,8 +1,8 @@
 (c) Copyright 2012-2015 Xilinx, Inc. All Rights Reserved.
 #-----------------------------------------------------------
 # Tool version  : sds++ 2014.4 20150228
-# Start time    : Wed Jul 27 08:06:52 PM CEST 2016
-# Command line  : sds++ -sds-pf zc702 -sds-hw mmult_accel mmult_accel.cpp -sds-end -Wall -O3 -c mmult.cpp -o mmult.o
+# Start time    : Wed Jul 27 08:24:55 PM CEST 2016
+# Command line  : sds++ -sds-pf zed -sds-hw mmult_accel mmult_accel.cpp -sds-end -Wall -O3 -c mmult.cpp -o mmult.o
 # Log file      : /home/trungnguyen/SDSoC/samples/mmult_hw/_sds/reports/sds_mmult.log
 # Journal file  : /home/trungnguyen/SDSoC/samples/mmult_hw/_sds/reports/sds_mmult.jou
 # Report file   : /home/trungnguyen/SDSoC/samples/mmult_hw/_sds/reports/sds_mmult.rpt
@@ -14,4 +14,4 @@ INFO: [SDSoC 0-0] Compiling /home/trungnguyen/SDSoC/samples/mmult_hw/mmult.cpp
 arm-xilinx-linux-gnueabi-g++ -c  -Wall -O3 -D __SDSCC__  -I /opt/Xilinx/SDSoC/2014.4/arm-xilinx-linux-gnueabi/include  -I /opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/include   /home/trungnguyen/SDSoC/samples/mmult_hw/mmult.cpp -o mmult.o
 arm-xilinx-linux-gnueabi-objcopy --add-section .xdsdata=/home/trungnguyen/SDSoC/samples/mmult_hw/_sds/swstubs/mmult.xml mmult.o
 sds++ log file saved as /home/trungnguyen/SDSoC/samples/mmult_hw/_sds/reports/sds_mmult.log
-sds++ completed at Wed Jul 27 08:06:52 PM CEST 2016
+sds++ completed at Wed Jul 27 08:24:55 PM CEST 2016

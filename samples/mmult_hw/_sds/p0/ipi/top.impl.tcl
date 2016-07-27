@@ -1,4 +1,4 @@
-open_project /home/trungnguyen/SDSoC/samples/mmult_hw/_sds/p0/ipi/zc702.xpr
+open_project /home/trungnguyen/SDSoC/samples/mmult_hw/_sds/p0/ipi/zed.xpr
 reset_run synth_1
 launch_runs synth_1
 wait_on_run synth_1

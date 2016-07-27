@@ -1,0 +1,7 @@
+/* linux */
+the_ROM_image:
+{
+  [bootloader]/proj/xbuilds/2014.4_SDSoC_0226_1/installs/lin64/SDSoC/2014.4/platforms/zc702/boot/fsbl.elf
+  /wrk/hdstaff/xd-relman/work/XIDANE_DEV/regression/products/xidane/samples/mmult_optimized_2d/TEST_WORK_lnx64/mmult_optimized_2d/mmult.elf.bit
+  /proj/xbuilds/2014.4_SDSoC_0226_1/installs/lin64/SDSoC/2014.4/platforms/zc702/boot/u-boot.elf
+}

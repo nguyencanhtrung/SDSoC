@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Product Version: Vivado v2014.4 (64-bit)              -->
+<!--                                                         -->
+<!-- Copyright 1986-2014 Xilinx, Inc. All Rights Reserved.   -->
+
+<Project Version="7" Minor="2" Path="/wrk/hdstaff/jece/work1/XIDANE_DEV/src/products/xidane/platforms/zc702_hdmi/vivado/zc702_hdmi.xpr">
+  <DefaultLaunch Dir="$PRUNDIR"/>
+  <Configuration>
+    <Option Name="Id" Val="f49b52c32bd4495ba6c7504fbd31fffb"/>
+    <Option Name="Part" Val="xc7z020clg484-1"/>
+    <Option Name="CompiledLibDir" Val="$PCACHEDIR/compile_simlib"/>
+    <Option Name="BoardPart" Val="xilinx.com:zc702:part0:0.9"/>
+    <Option Name="ActiveSimSet" Val="sim_1"/>
+    <Option Name="DefaultLib" Val="xil_defaultlib"/>
+    <Option Name="IPRepoPath" Val="$PPRDIR/zc702_hdmi.ipdefs/xilinx"/>
+  </Configuration>
+  <FileSets Version="1" Minor="31">
+    <FileSet Name="sources_1" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
+      <Filter Type="Srcs"/>
+      <File Path="$PSRCDIR/sources_1/bd/top/top.bd">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+        <CompFileExtendedInfo CompFileName="top.bd" FileRelPathName="ip/top_xlslice_15downto8_3/top_xlslice_15downto8_3.xci"/>
+        <CompFileExtendedInfo CompFileName="top.bd" FileRelPathName="ip/top_xlconcat_2_2/top_xlconcat_2_2.xci"/>
+        <CompFileExtendedInfo CompFileName="top.bd" FileRelPathName="ip/top_v_vid_in_axi4s_1_0/top_v_vid_in_axi4s_1_0.xci"/>
+        <CompFileExtendedInfo CompFileName="top.bd" FileRelPathName="ip/top_v_tpg_1_0/top_v_tpg_1_0.xci"/>
+        <CompFileExtendedInfo CompFileName="top.bd" FileRelPathName="ip/top_xlconstant_one_0/top_xlconstant_one_0.xci"/>
+        <CompFileExtendedInfo CompFileName="top.bd" FileRelPathName="ip/top_proc_sys_reset_3_2/top_proc_sys_reset_3_2.xci"/>
+        <CompFileExtendedInfo CompFileName="top.bd" FileRelPathName="ip/top_processing_system7_1_0/top_processing_system7_1_0.xci"/>
+        <CompFileExtendedInfo CompFileName="top.bd" FileRelPathName="ip/top_xlconstant_4_4/top_xlconstant_4_4.xci"/>
+        <CompFileExtendedInfo CompFileName="top.bd" FileRelPathName="ip/top_axis_subset_converter_0_0/top_axis_subset_converter_0_0.xci"/>
+        <CompFileExtendedInfo CompFileName="top.bd" FileRelPathName="ip/top_TPG_VDMA_0/top_TPG_VDMA_0.xci"/>
+        <CompFileExtendedInfo CompFileName="top.bd" FileRelPathName="ip/top_xlconstant_zero_1/top_xlconstant_zero_1.xci"/>
+        <CompFileExtendedInfo CompFileName="top.bd" FileRelPathName="ip/top_fmc_imageon_hdmi_in_1_0/top_fmc_imageon_hdmi_in_1_0.xci"/>
+        <CompFileExtendedInfo CompFileName="top.bd" FileRelPathName="ip/top_vsrc_sel_1_0/top_vsrc_sel_1_0.xci"/>
+        <CompFileExtendedInfo CompFileName="top.bd" FileRelPathName="ip/top_v_tc_1_0/top_v_tc_1_0.xci"/>
+        <CompFileExtendedInfo CompFileName="top.bd" FileRelPathName="ip/top_binary_to_grey_1_0/top_binary_to_grey_1_0.xci"/>
+        <CompFileExtendedInfo CompFileName="top.bd" FileRelPathName="ip/top_proc_sys_reset_2_1/top_proc_sys_reset_2_1.xci"/>
+        <CompFileExtendedInfo CompFileName="top.bd" FileRelPathName="ip/top_xlslice_2_9/top_xlslice_2_9.xci"/>
+        <CompFileExtendedInfo CompFileName="top.bd" FileRelPathName="ip/top_clk_wiz_2_0/top_clk_wiz_2_0.xci"/>
+        <CompFileExtendedInfo CompFileName="top.bd" FileRelPathName="ip/top_xlconstant_5_5/top_xlconstant_5_5.xci"/>
+        <CompFileExtendedInfo CompFileName="top.bd" FileRelPathName="ip/top_xlslice_7downto0_4/top_xlslice_7downto0_4.xci"/>
+        <CompFileExtendedInfo CompFileName="top.bd" FileRelPathName="ip/top_xlslice_1_8/top_xlslice_1_8.xci"/>
+        <CompFileExtendedInfo CompFileName="top.bd" FileRelPathName="ip/top_xlconcat_1_3/top_xlconcat_1_3.xci"/>
+        <CompFileExtendedInfo CompFileName="top.bd" FileRelPathName="ip/top_xlconstant_3_3/top_xlconstant_3_3.xci"/>
+        <CompFileExtendedInfo CompFileName="top.bd" FileRelPathName="ip/top_proc_sys_reset_1_3/top_proc_sys_reset_1_3.xci"/>
+        <CompFileExtendedInfo CompFileName="top.bd" FileRelPathName="ip/top_vbuff_1/top_vbuff_1.xci"/>
+        <CompFileExtendedInfo CompFileName="top.bd" FileRelPathName="ip/top_axi4_0_0/top_axi4_0_0.xci"/>
+        <CompFileExtendedInfo CompFileName="top.bd" FileRelPathName="ip/top_proc_sys_reset_0_0/top_proc_sys_reset_0_0.xci"/>
+        <CompFileExtendedInfo CompFileName="top.bd" FileRelPathName="ip/top_tpg_rst_2/top_tpg_rst_2.xci"/>
+        <CompFileExtendedInfo CompFileName="top.bd" FileRelPathName="ip/top_v_ycrcb2rgb_1_0/top_v_ycrcb2rgb_1_0.xci"/>
+        <CompFileExtendedInfo CompFileName="top.bd" FileRelPathName="ip/top_axi4_lite_1/top_axi4_lite_1.xci"/>
+        <CompFileExtendedInfo CompFileName="top.bd" FileRelPathName="ip/top_vid_sel_0/top_vid_sel_0.xci"/>
+        <CompFileExtendedInfo CompFileName="top.bd" FileRelPathName="ip/top_util_reduced_logic_1_0/top_util_reduced_logic_1_0.xci"/>
+        <CompFileExtendedInfo CompFileName="top.bd" FileRelPathName="ip/top_xbar_0/top_xbar_0.xci"/>
+        <CompFileExtendedInfo CompFileName="top.bd" FileRelPathName="ip/top_logicvc_1_0/top_logicvc_1_0.xci"/>
+        <CompFileExtendedInfo CompFileName="top.bd" FileRelPathName="ip/top_s00_data_fifo_0_1/top_s00_data_fifo_0.xci"/>
+        <CompFileExtendedInfo CompFileName="top.bd" FileRelPathName="ip/top_xlconstant_0_0/top_xlconstant_0_0.xci"/>
+        <CompFileExtendedInfo CompFileName="top.bd" FileRelPathName="ip/top_xlconcat_3_0/top_xlconcat_3_0.xci"/>
+        <CompFileExtendedInfo CompFileName="top.bd" FileRelPathName="ip/top_v_cresample_1_0/top_v_cresample_1_0.xci"/>
+        <CompFileExtendedInfo CompFileName="top.bd" FileRelPathName="ip/top_tpg_rst1_1/top_tpg_rst1_1.xci"/>
+        <CompFileExtendedInfo CompFileName="top.bd" FileRelPathName="ip/top_tpg_util_flipflop_1_0/top_tpg_util_flipflop_1_0.xci"/>
+        <CompFileExtendedInfo CompFileName="top.bd" FileRelPathName="ip/top_xlconstant_6_6/top_xlconstant_6_6.xci"/>
+        <CompFileExtendedInfo CompFileName="top.bd" FileRelPathName="ip/top_util_vector_logic_1_0/top_util_vector_logic_1_0.xci"/>
+        <CompFileExtendedInfo CompFileName="top.bd" FileRelPathName="ip/top_xbar_1/top_xbar_1.xci"/>
+        <CompFileExtendedInfo CompFileName="top.bd" FileRelPathName="ip/top_m00_regslice_0/top_m00_regslice_0.xci"/>
+        <CompFileExtendedInfo CompFileName="top.bd" FileRelPathName="ip/top_auto_pc_0_1/top_auto_pc_0.xci"/>
+        <CompFileExtendedInfo CompFileName="top.bd" FileRelPathName="ip/top_s01_data_fifo_0/top_s01_data_fifo_0.xci"/>
+        <CompFileExtendedInfo CompFileName="top.bd" FileRelPathName="ip/top_m00_data_fifo_0/top_m00_data_fifo_0.xci"/>
+        <CompFileExtendedInfo CompFileName="top.bd" FileRelPathName="ip/top_auto_pc_1_1/top_auto_pc_1.xci"/>
+        <CompFileExtendedInfo CompFileName="top.bd" FileRelPathName="ip/top_s01_regslice_0/top_s01_regslice_0.xci"/>
+        <CompFileExtendedInfo CompFileName="top.bd" FileRelPathName="ip/top_s00_regslice_0/top_s00_regslice_0.xci"/>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/wrapper/zc702_hdmi_wrapper.v">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <Config>
+        <Option Name="DesignMode" Val="RTL"/>
+        <Option Name="TopModule" Val="top_wrapper"/>
+        <Option Name="TopAutoSet" Val="TRUE"/>
+      </Config>
+    </FileSet>
+    <FileSet Name="constrs_1" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
+      <Filter Type="Constrs"/>
+      <File Path="$PSRCDIR/constrs_1/imports/xdc/zc702_hdmi.xdc">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+        </FileInfo>
+      </File>
+      <Config>
+        <Option Name="TargetConstrsFile" Val="$PSRCDIR/constrs_1/imports/xdc/zc702_hdmi.xdc"/>
+        <Option Name="ConstrsType" Val="XDC"/>
+      </Config>
+    </FileSet>
+    <FileSet Name="sim_1" Type="SimulationSrcs" RelSrcDir="$PSRCDIR/sim_1">
+      <Filter Type="Srcs"/>
+      <Config>
+        <Option Name="DesignMode" Val="RTL"/>
+        <Option Name="TopModule" Val="top_wrapper"/>
+        <Option Name="TopLib" Val="xil_defaultlib"/>
+        <Option Name="TopAutoSet" Val="TRUE"/>
+        <Option Name="SimMode" Val="post-implementation"/>
+        <Option Name="SrcSet" Val="sources_1"/>
+      </Config>
+    </FileSet>
+  </FileSets>
+  <Simulators>
+    <Simulator Name="XSim">
+      <Option Name="Description" Val="Vivado Simulator"/>
+      <Option Name="CompiledLib" Val="0"/>
+    </Simulator>
+    <Simulator Name="ModelSim">
+      <Option Name="Description" Val="QuestaSim/ModelSim Simulator"/>
+    </Simulator>
+    <Simulator Name="IES">
+      <Option Name="Description" Val="Incisive Enterprise Simulator (IES)"/>
+    </Simulator>
+    <Simulator Name="VCS">
+      <Option Name="Description" Val="Verilog Compiler Simulator (VCS)"/>
+    </Simulator>
+  </Simulators>
+  <Runs Version="1" Minor="9">
+    <Run Id="synth_1" Type="Ft3:Synth" SrcSet="sources_1" Part="xc7z020clg484-1" ConstrsSet="constrs_1" Description="Vivado Synthesis Defaults" State="current">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2013"/>
+        <Step Id="synth_design"/>
+      </Strategy>
+    </Run>
+    <Run Id="impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg484-1" ConstrsSet="constrs_1" Description="Vivado Implementation Defaults" State="current" SynthRun="synth_1">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2013"/>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design">
+          <Option Id="Directive">10</Option>
+        </Step>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design"/>
+        <Step Id="route_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+    </Run>
+  </Runs>
+</Project>

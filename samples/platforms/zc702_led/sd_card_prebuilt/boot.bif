@@ -1,0 +1,7 @@
+/* linux */
+the_ROM_image:
+{
+  [bootloader]/wrk/hdstaff/xd-relman/work/XIDANE_DEV/regression/products/xidane/samples/zc702_led/TEST_WORK_lnx64/zc702_led/test/../zc702_led/boot/fsbl.elf
+  /wrk/hdstaff/xd-relman/work/XIDANE_DEV/regression/products/xidane/samples/zc702_led/TEST_WORK_lnx64/zc702_led/test/zc702_led_test.elf.bit
+  /wrk/hdstaff/xd-relman/work/XIDANE_DEV/regression/products/xidane/samples/zc702_led/TEST_WORK_lnx64/zc702_led/test/../zc702_led/boot/u-boot.elf
+}

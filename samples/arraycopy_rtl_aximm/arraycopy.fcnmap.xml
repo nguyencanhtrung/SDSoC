@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xd:repository xmlns:xd="http://www.xilinx.com/xd">
+    <!-- 
+         For more information, refer to 
+         UG1027 - Introduction to SDSoC, Chapter 16
+         UG1146 - SDSoC Platforms and Libraries, Chapter 2
+    -->
+    <xd:fcnMap xd:fcnName="arraycopy" xd:componentRef="arraycopy">
+        <xd:returnValue xd:busInterfaceRef="s_axi_AXILiteS" 
+                        xd:hwName="s_axi_AXILiteS" 
+                        xd:portInterfaceType="axilite" 
+                        xd:offset="0x10" 
+                        xd:dataWidth="32"/>
+        <xd:ctrlReg xd:name="control" 
+                    xd:busInterfaceRef="s_axi_AXILiteS" 
+                    xd:portInterfaceType="axilite" 
+                    xd:type="generic_axi_lite" 
+                    xd:offset="0x0"/>
+        <xd:arg xd:name="a" 
+                xd:hwName="a" 
+                xd:direction="in" 
+                xd:busInterfaceRef="s_axi_AXILiteS" 
+                xd:portInterfaceType="axilite" 
+                xd:aximmMasterRef="m_axi_gmem32" 
+                xd:aximmMasterDataWidth="32"
+                xd:aximmMasterArraySize="32"
+                xd:aximmMasterDirection="in"
+                xd:dataWidth="32" 
+                xd:offset="0x18" />
+        <xd:arg xd:name="b" 
+                xd:hwName="b" 
+                xd:direction="in" 
+                xd:busInterfaceRef="s_axi_AXILiteS" 
+                xd:portInterfaceType="axilite"
+                xd:aximmMasterRef="m_axi_gmem32" 
+                xd:dataWidth="32" 
+                xd:aximmMasterDataWidth="32"
+                xd:aximmMasterArraySize="32"
+                xd:aximmMasterDirection="out"
+                xd:offset="0x20" />
+        <xd:arg xd:name="n" 
+                xd:hwName="n" 
+                xd:direction="in" 
+                xd:busInterfaceRef="s_axi_AXILiteS" 
+                xd:portInterfaceType="axilite"
+                xd:dataWidth="32" 
+                xd:offset="0x28" />
+        <xd:latencyEstimates xd:best-case="7" xd:worst-case="183" xd:average-case="undef"/>
+        <xd:resourceEstimates xd:LUT="1447" xd:FF="1328" xd:BRAM="0" xd:DSP="0"/>
+    </xd:fcnMap>
+</xd:repository>

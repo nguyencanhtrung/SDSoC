@@ -1,0 +1,30 @@
+This linux kernel (uImage) and the associated device tree (devicetree.dtb) are based on
+the 3.10 version of the linux kernel
+To build the kernel:
+
+Clone/pull from the master branch of the Xilinx/linux-xlnx tree at github, and 
+ git checkout -b apf-ea-hdmi 81cc122c82a9fefed854f433ee38eb85b2f0fa1e
+ git cherry-pick c491a966ef007a34ba6d9aff0cb3d77e58cd45a3
+ git cherry-pick 6b5507e4e53da84b96836c14db1ee6bd5dad9eb9
+ git cherry-pick 418f210872f9ca6e63b44f0b5db7a74a2d51a7cb
+ git cherry-pick a8d40e1ed38decd749d01b8e075f050aa6dc0cc0
+ git cherry-pick 93f1d37c13b6afd0852616b12d64a74a2dc6c602
+
+ 
+Add the following CONFIGs to xilinx_zynq_base_trd_defconfig and then configure
+the kernel
+CONFIG_STAGING=y
+CONFIG_XILINX_APF=y
+CONFIG_XILINX_DMA_APF=y
+CONFIG_DMA_CMA=y
+CONFIG_CMA=y
+CONFIG_CMA_SIZE_MBYTES=256
+CONFIG_LOCALVERSION="-xilinx-apf-ea-hdmi"
+One way to do this is to 
+ cp arch/arm/configs/xilinx_zynq_base_trd_defconfig arch/arm/configs/tmp_defconfig
+Edit arch/arm/configs/tmp_defconfig using a text editor and add the above
+config lines to the bottom of the file
+ make ARCH=arm tmp_defconfig
+
+Build the kernel using
+make ARCH=arm CROSS_COMPILE=arm-xilinx-linux-gnueabi- UIMAGE_LOADADDR=0x8000 uImage

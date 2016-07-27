@@ -1,0 +1,7 @@
+/* linux */
+the_ROM_image:
+{
+  [bootloader]/opt/Xilinx/SDSoC/2014.4/platforms/zed/boot/fsbl.elf
+  /home/trungnguyen/SDSoC/samples/mmult_sw/mmult.elf.bit
+  /opt/Xilinx/SDSoC/2014.4/platforms/zed/boot/u-boot.elf
+}

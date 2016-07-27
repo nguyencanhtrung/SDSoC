@@ -1,0 +1,54 @@
+<templates>
+	<template location="colorflip" name="Color Flip" description="Color Flip application">
+		<supportedPlatforms>
+			<platform>
+				<os name="Linux"/>
+			</platform>
+		</supportedPlatforms>
+		<include-paths>
+			<include>src</include>
+			<include>hw</include>
+		</include-paths>
+		<libraries>
+			<lib>zc702hdmi</lib>
+		</libraries>
+		<exclude-filters>
+			<directory>Release</directory>
+			<directory>DebugSw</directory>
+		</exclude-filters>
+	</template>
+	<template location="manr_sobel" name="manr sobel" description="Manr Sobel application">
+		<supportedPlatforms>
+			<platform>
+				<os name="Linux"/>
+			</platform>
+		</supportedPlatforms>
+		<include-paths>
+			<include>src</include>
+			<include>hw</include>
+		</include-paths>
+		<libraries>
+			<lib>zc702hdmi</lib>
+		</libraries>
+		<exclude-filters>
+			<directory>Release</directory>
+		</exclude-filters>
+	</template>
+	<template location="motion_demo" name="motion detect" description="Motion Detection application">
+		<supportedPlatforms>
+			<platform>
+				<os name="Linux"/>
+			</platform>
+		</supportedPlatforms>
+		<include-paths>
+			<include>src</include>
+			<include>hw</include>
+		</include-paths>
+		<libraries>
+			<lib>zc702hdmi</lib>
+		</libraries>
+		<exclude-filters>
+			<directory>Release</directory>
+		</exclude-filters>
+	</template>
+</templates>

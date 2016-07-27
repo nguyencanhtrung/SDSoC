@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xd:repository xmlns:xd="http://www.xilinx.com/xd">
+  <xd:fcnMap xd:fcnName="fir" xd:componentRef="fir_compiler" xd:type="hdl" xd:clockId="2">
+    <xd:ctrlReg xd:type="none"/>
+    <xd:arg xd:name="X" 
+            xd:direction="in" 
+            xd:portInterfaceType="axis" 
+            xd:dataWidth="8" 
+            xd:busInterfaceRef="S_AXIS_DATA" 
+            xd:hasTlast="true"
+            xd:arraySize="32"/>
+    <xd:arg xd:name="Y" 
+            xd:direction="out" 
+            xd:portInterfaceType="axis" 
+            xd:dataWidth="16" 
+            xd:busInterfaceRef="M_AXIS_DATA"
+            xd:hasTlast="true"
+            xd:arraySize="32"/>
+    <!-- the following are placeholders, not real estimates -->
+    <xd:latencyEstimates xd:worst-case="200" xd:average-case="200" xd:best-case="200"/>
+    <xd:resourceEstimates xd:BRAM="4" xd:DSP="24" xd:FF="5000" xd:LUT="4000"/>
+  </xd:fcnMap>
+</xd:repository>

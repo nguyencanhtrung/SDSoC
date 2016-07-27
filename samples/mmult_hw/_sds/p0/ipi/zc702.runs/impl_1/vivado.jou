@@ -1,0 +1,10 @@
+#-----------------------------------------------------------
+# Vivado v2014.4 (64-bit)
+# SW Build 1071353 on Tue Nov 18 16:48:31 MST 2014
+# IP Build 1071914 on Wed Nov 19 05:30:59 MST 2014
+# Start of session at: Wed Jul 27 20:15:25 2016
+# Process ID: 14196
+# Log file: /home/trungnguyen/SDSoC/samples/mmult_hw/_sds/p0/ipi/zc702.runs/impl_1/zc702_wrapper.vdi
+# Journal file: /home/trungnguyen/SDSoC/samples/mmult_hw/_sds/p0/ipi/zc702.runs/impl_1/vivado.jou
+#-----------------------------------------------------------
+source zc702_wrapper.tcl -notrace

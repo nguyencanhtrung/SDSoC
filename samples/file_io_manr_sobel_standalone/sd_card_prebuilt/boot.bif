@@ -1,0 +1,7 @@
+/* standalone */
+the_ROM_image:
+{
+  [bootloader]/wrk/hdstaff/xd-relman/work/XIDANE_DEV/prep/rdi/xidane/platforms/zc702/boot/fsbl.elf
+  /wrk/hdstaff/xd-relman/work/XIDANE_DEV/regression/products/xidane/samples/file_io_manr_sobel_standalone/TEST_WORK_lnx64/file_io_manr_sobel_standalone/manr_sobel_fio.elf.bit
+  /wrk/hdstaff/xd-relman/work/XIDANE_DEV/regression/products/xidane/samples/file_io_manr_sobel_standalone/TEST_WORK_lnx64/file_io_manr_sobel_standalone/manr_sobel_fio.elf
+}

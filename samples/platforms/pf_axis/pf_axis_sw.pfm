@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xd:repository xd:vendor="xilinx.com" 
+               xd:library="xd" 
+               xd:name="pf_axis" 
+               xd:version="1.0" 
+               xmlns:xd="http://www.xilinx.com/xd">
+
+    <xd:description>Basic direct I/O platform targeting the ZC702 board</xd:description>
+    <xd:libraryFiles xd:os="linux" 
+                     xd:includeDir="arm-xilinx-linux-gnueabi/include" 
+                     xd:libDir="arm-xilinx-linux-gnueabi/lib"
+                     xd:libName="pf_axis" />
+
+    <xd:bootFiles xd:os="linux" 
+                  xd:bif="boot/linux.bif" 
+                  xd:readme="boot/generic.readme" 
+                  xd:devicetree="boot/devicetree.dtb" 
+                  xd:linuxImage="boot/uImage" 
+                  xd:ramdisk="boot/uramdisk.image.gz" />
+
+    <xd:bootFiles xd:os="petalinux" 
+                  xd:bif="boot/petalinux.bif" 
+                  xd:readme="boot/generic.readme" 
+                  xd:linuxImage="boot/image.ub" />
+
+</xd:repository>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xd:repository xmlns:xd="http://www.xilinx.com/xd">
+
+  <xd:fcnMap xd:fcnName="fir" xd:componentRef="fir_compiler">
+    <xd:arg xd:name="X"
+            xd:direction="in"
+            xd:portInterfaceType="axis"
+            xd:dataWidth="8"
+            xd:busInterfaceRef="S_AXIS_DATA"
+            xd:arraySize="32"/>
+    <xd:arg xd:name="Y"
+            xd:direction="out"
+            xd:portInterfaceType="axis"
+            xd:dataWidth="16"
+            xd:busInterfaceRef="M_AXIS_DATA"
+            xd:arraySize="32"/>
+    <xd:latencyEstimates xd:worst-case="17" xd:average-case="17" xd:best-case="17"/>
+    <xd:resourceEstimates xd:BRAM="0" xd:DSP="1" xd:FF="200" xd:LUT="200"/>   
+  </xd:fcnMap>
+
+  <xd:fcnMap xd:fcnName="fir_reload" xd:componentRef="fir_compiler">
+    <xd:arg xd:name="H"
+            xd:direction="in"
+            xd:portInterfaceType="axis"
+            xd:dataWidth="8"
+            xd:busInterfaceRef="S_AXIS_RELOAD"
+            xd:arraySize="11"/>
+    <xd:latencyEstimates xd:worst-case="17" xd:average-case="17" xd:best-case="17"/>
+    <xd:resourceEstimates xd:BRAM="0" xd:DSP="1" xd:FF="200" xd:LUT="200"/>
+  </xd:fcnMap>
+
+  <xd:fcnMap xd:fcnName="fir_config" xd:componentRef="fir_compiler">
+    <xd:arg xd:name="H"
+            xd:direction="in"
+            xd:portInterfaceType="axis"
+            xd:dataWidth="8"
+            xd:busInterfaceRef="S_AXIS_CONFIG"
+            xd:arraySize="1"/>
+    <xd:latencyEstimates xd:worst-case="17" xd:average-case="17" xd:best-case="17"/>
+    <xd:resourceEstimates xd:BRAM="0" xd:DSP="1" xd:FF="200" xd:LUT="200"/>
+  </xd:fcnMap>
+
+</xd:repository>

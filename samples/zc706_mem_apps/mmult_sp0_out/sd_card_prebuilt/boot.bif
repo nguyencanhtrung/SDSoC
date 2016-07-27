@@ -1,0 +1,7 @@
+/* linux */
+the_ROM_image:
+{
+  [bootloader]/wrk/hdstaff/xd-relman/work/XIDANE_DEV/prep/rdi/xidane/platforms/zc706_mem/boot/fsbl.elf
+  /wrk/hdstaff/xd-relman/work/XIDANE_DEV/regression/products/xidane/samples/zc706_mem_apps/mmult_sp0_out/TEST_WORK_lnx64/mmult_sp0_out/mmult.elf.bit
+  /wrk/hdstaff/xd-relman/work/XIDANE_DEV/prep/rdi/xidane/platforms/zc706_mem/boot/u-boot.elf
+}

@@ -1,0 +1,5 @@
+<?xml version="1.0"?>
+<cf:model cf:name="top" xmlns:cf="http://www.xilinx.com/connections" xd:type="design" xmlns:xd="http://www.xilinx.com/xidane">
+  <xd:function xd:function_name="main" xd:cycleCount="363686748" xd:entryCount="1" xd:isRoot="1"/>
+  <xd:function xd:function_name="mmult_accel" xd:cycleCount="183026654" xd:entryCount="1024" xd:isRoot="0"/>
+</cf:model>

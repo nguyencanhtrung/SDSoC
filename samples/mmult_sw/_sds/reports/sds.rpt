@@ -1,0 +1,23 @@
+(c) Copyright 2012-2015 Xilinx, Inc. All Rights Reserved.
+#-----------------------------------------------------------
+# Tool version  : sds++ 2014.4 20150228
+# Start time    : Wed Jul 27 03:27:56 PM CEST 2016
+# Command line  : sds++ -sds-pf zed -O3 -sds-pf zed mmult.o mmult_accel.o -o mmult.elf
+# Log file      : /home/trungnguyen/SDSoC/samples/mmult_sw/_sds/reports/sds.log
+# Journal file  : /home/trungnguyen/SDSoC/samples/mmult_sw/_sds/reports/sds.jou
+# Report file   : /home/trungnguyen/SDSoC/samples/mmult_sw/_sds/reports/sds.rpt
+#-----------------------------------------------------------
+
+-------------------
+Data Motion Network
+-------------------
+
+Data motion network report generated in /home/trungnguyen/SDSoC/samples/mmult_sw/_sds/reports
+
+-------------------
+Design Utilization
+-------------------
+
+  Partition 0
+  Utilization Summary : file not found : /home/trungnguyen/SDSoC/samples/mmult_sw/_sds/p0/ipi/zed.runs/impl_1/zed_wrapper_utilization_placed.rpt
+

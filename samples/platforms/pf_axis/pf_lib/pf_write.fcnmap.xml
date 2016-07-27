@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xd:repository xmlns:xd="http://www.xilinx.com/xd">
+    <xd:fcnMap xd:fcnName="pf_write" xd:componentRef="pf_axis">
+        <xd:arg 
+	    xd:name="wbuf" 
+	    xd:direction="in" 
+	    xd:busInterfaceRef="axis2io_0_wbuf" 
+	    xd:portInterfaceType="axis" 
+	    xd:arraySize="128" 
+	    xd:dataWidth="64"
+	/>
+        <xd:latencyEstimates xd:best-case="258" xd:worst-case="258" xd:average-case="258"/>
+        <xd:resourceEstimates xd:LUT="94" xd:FF="79" xd:BRAM="0" xd:DSP="0"/>
+    </xd:fcnMap>
+</xd:repository>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xd:repository xmlns:xd="http://www.xilinx.com/xd">
+    <!-- 
+         For more information, refer to 
+         UG1027 - Introduction to SDSoC, Chapter 16
+         UG1146 - SDSoC Platforms and Libraries, Chapter 2
+    -->
+    <xd:fcnMap xd:fcnName="arraycopy" xd:componentRef="arraycopy">
+        <xd:ctrlReg xd:name="control" 
+                    xd:busInterfaceRef="s_axi_s_axilite" 
+                    xd:portInterfaceType="axilite" 
+                    xd:type="generic_axi_lite" 
+                    xd:offset="0x0"/>
+        <xd:arg xd:name="A" 
+                xd:direction="in" 
+                xd:busInterfaceRef="A" 
+                xd:hwName="A" 
+                xd:portInterfaceType="axis" 
+                xd:arraySize="64" 
+                xd:dataWidth="64"/>
+        <xd:arg xd:name="B" 
+                xd:direction="out" 
+                xd:busInterfaceRef="B"
+                xd:hwName="B" 
+                xd:portInterfaceType="axis"
+                xd:arraySize="64" 
+                xd:dataWidth="64"/>
+        <xd:arg xd:name="M" 
+                xd:direction="in" 
+                xd:busInterfaceRef="s_axi_s_axilite" 
+                xd:hwName="M" 
+                xd:portInterfaceType="axilite" 
+                xd:offset="0x10"
+                xd:dataWidth="32"/>
+        <xd:latencyEstimates xd:best-case="undef" xd:worst-case="undef" xd:average-case="undef"/>
+        <xd:resourceEstimates xd:LUT="807" xd:FF="670" xd:BRAM="0" xd:DSP="0"/>
+    </xd:fcnMap>
+</xd:repository>

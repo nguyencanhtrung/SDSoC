@@ -1,0 +1,7 @@
+/* linux */
+the_ROM_image:
+{
+  [bootloader]/wrk/hdstaff/xd-relman/work/XIDANE_DEV/regression/products/xidane/samples/zc702_acp/TEST_WORK_lnx64/zc702_acp/pf_test/../zc702_acp/boot/fsbl.elf
+  /wrk/hdstaff/xd-relman/work/XIDANE_DEV/regression/products/xidane/samples/zc702_acp/TEST_WORK_lnx64/zc702_acp/pf_test/zc702_acp_test.elf.bit
+  /wrk/hdstaff/xd-relman/work/XIDANE_DEV/regression/products/xidane/samples/zc702_acp/TEST_WORK_lnx64/zc702_acp/pf_test/../zc702_acp/boot/u-boot.elf
+}

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xd:component xmlns:xd="http://www.xilinx.com/xd" xd:name="fir_compiler">
+  <xd:parameter xd:name="DATA_Has_TLAST" xd:value="Packet_Framing"/>
+  <xd:parameter xd:name="M_DATA_Has_TREADY" xd:value="true"/>
+  <xd:parameter xd:name="Coefficient_Width" xd:value="8"/>
+  <xd:parameter xd:name="Data_Width" xd:value="8"/>
+  <xd:parameter xd:name="Quantization" xd:value="Integer_Coefficients"/>
+  <xd:parameter xd:name="Output_Rounding_Mode" xd:value="Full_Precision"/>
+<!--  <xd:parameter xd:name="CoefficientVector" xd:value="6,0,-4,-3,5,6,-6,-13,7,44,64,44,7,-13,-6,6,5,-3,-4,0,6"/>-->
+  <xd:parameter xd:name="Coefficient_Reload" xd:value="true"/>
+</xd:component>

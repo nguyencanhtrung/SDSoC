@@ -1,0 +1,7 @@
+/* standalone */
+the_ROM_image:
+{
+  [bootloader]/wrk/hdstaff/xd-relman/work/XIDANE_DEV/prep/rdi/xidane/platforms/zc702/boot/fsbl.elf
+  /wrk/hdstaff/xd-relman/work/XIDANE_DEV/regression/products/xidane/samples/mmult_optimized_sds_freertos/TEST_WORK_lnx64/mmult_optimized_sds_freertos/mmult.elf.bit
+  /wrk/hdstaff/xd-relman/work/XIDANE_DEV/regression/products/xidane/samples/mmult_optimized_sds_freertos/TEST_WORK_lnx64/mmult_optimized_sds_freertos/mmult.elf
+}

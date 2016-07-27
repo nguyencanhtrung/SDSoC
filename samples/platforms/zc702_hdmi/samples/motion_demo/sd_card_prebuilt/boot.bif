@@ -1,0 +1,7 @@
+/* linux */
+the_ROM_image:
+{
+  [bootloader]/wrk/hdstaff/xd-relman/work/XIDANE_DEV/prep/rdi/xidane/bin/../samples/platforms/zc702_hdmi/boot/fsbl.elf
+  /wrk/hdstaff/xd-relman/work/XIDANE_DEV/regression/products/xidane/samples/zc702_hdmi_apps/motion_demo/TEST_WORK_lnx64/Release/motion_demo.elf.bit
+  /wrk/hdstaff/xd-relman/work/XIDANE_DEV/prep/rdi/xidane/bin/../samples/platforms/zc702_hdmi/boot/u-boot.elf
+}

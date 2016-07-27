@@ -1,0 +1,21 @@
+#-----------------------------------------------------------
+# Vivado v2014.4 (64-bit)
+# SW Build 1071353 on Tue Nov 18 16:48:31 MST 2014
+# IP Build 1071914 on Wed Nov 19 05:30:59 MST 2014
+# Start of session at: Wed Jul 27 20:07:08 2016
+# Process ID: 13612
+# Log file: /home/trungnguyen/SDSoC/samples/mmult_hw/_sds/vhls/mmult_accel/solution/impl/ip/vivado.log
+# Journal file: /home/trungnguyen/SDSoC/samples/mmult_hw/_sds/vhls/mmult_accel/solution/impl/ip/vivado.jou
+#-----------------------------------------------------------
+source run_ippack.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/opt/Xilinx/SDSoC/2014.4/Vivado/2014.4/data/ip'.
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'mmult_accel_ap_fadd_3_full_dsp_32'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'mmult_accel_ap_fadd_3_full_dsp_32'...
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'mmult_accel_ap_fmul_2_max_dsp_32'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'mmult_accel_ap_fmul_2_max_dsp_32'...
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/opt/Xilinx/SDSoC/2014.4/Vivado/2014.4/data/ip'.
+INFO: [Common 17-206] Exiting Vivado at Wed Jul 27 20:07:29 2016...

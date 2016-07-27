@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xd:data xmlns:xd="http://www.xilinx.com/xd">
+  <xd:accel name="mmult_accel" platform="zc702" aem="false" compiler="g++" srcfile="mmult_accel.cpp" srcpath="/home/trungnguyen/SDSoC/samples/mmult_hw" flags="-I/home/trungnguyen/SDSoC/samples/mmult_hw  -Wall -O3 -D __SDSCC__" clk_id="2" ip_requires_adapter="1" ip_is_rtl="0" vlnv="" is_opencl="0" asmfile="mmult_accel.s"/>
+</xd:data>

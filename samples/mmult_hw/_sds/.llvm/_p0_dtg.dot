@@ -1,0 +1,22 @@
+digraph dm_graph {
+v0 [label = "v0:mmult_test" ,style=filled];
+v1 [label = "v1:XFER(IN):in_A @78, ARRAY\nCPU\nAXIDMA_SG(mm2s) on ACP(PS to ACC)\n" ,style=filled,fillcolor = green];
+v2 [label = "v2:XFER(IN):in_B @78, ARRAY\nCPU\nAXIDMA_SG(mm2s) on ACP(PS to ACC)\n" ,style=filled,fillcolor = green];
+v3 [label = "v3:call 'mmult_accel' in 'mmult.cpp' @78\nACC\n" ,style=filled,fillcolor = red];
+v4 [label = "v4:XFER(OUT):out_C @78, ARRAY\nCPU\nAXIDMA_SG(s2mm) on ACP(ACC to PS)\n" ,style=filled,fillcolor = yellow];
+v5 [label = "v5:cf_wait(): \nXFER(IN):in_A @78, ARRAY\nCPU\nAXIDMA_SG(mm2s) on ACP(PS to ACC)\nXFER(IN):in_B @78, ARRAY\nCPU\nAXIDMA_SG(mm2s) on ACP(PS to ACC)\nXFER(OUT):out_C @78, ARRAY\nCPU\nAXIDMA_SG(s2mm) on ACP(ACC to PS)\n\nCPU\nCPU\nCPU\n" ,style=filled,fillcolor = cyan];
+subgraph cluster0 {
+v1;
+v2;
+v3;
+v4;
+v5;
+label = "call 'mmult_accel' in 'mmult.cpp' @78\nACC\n";
+}
+v1 -> v3 [label = "0"];
+v2 -> v3 [label = "0"];
+v3 -> v4 [label = "0"];
+v4 -> v5 [label = "", style = dotted];
+v0 -> v1 [label = "", style = dotted];
+v0 -> v2 [label = "", style = dotted];
+}

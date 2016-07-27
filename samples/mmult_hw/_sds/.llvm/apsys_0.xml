@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<cf:model cf:partition="0" cf:prefix="_p0_" cf:name="top" xd:type="design" xmlns:xd="http://www.xilinx.com/xd" xmlns:cf="http://www.xilinx.com/connections">
+  <cf:block cf:name="hwblk_mmult_accel">
+    <cf:port cf:name="cmd_mmult_accel" cf:portType="stream" cf:direction="in"/>
+    <cf:port cf:name="in_A_PORTA" cf:portType="stream" cf:direction="in"/>
+    <cf:port cf:name="in_B_PORTA" cf:portType="stream" cf:direction="in"/>
+    <cf:port cf:name="out_C_PORTA" cf:portType="stream" cf:direction="out"/>
+  </cf:block>
+  <cf:block cf:name="swblk_mmult_accel">
+    <cf:port cf:name="cmd_mmult_accel" cf:portType="stream" cf:direction="out"/>
+    <cf:port cf:name="in_A_PORTA" cf:portType="stream" cf:direction="out"/>
+    <cf:port cf:name="in_B_PORTA" cf:portType="stream" cf:direction="out"/>
+    <cf:port cf:name="out_C_PORTA" cf:portType="stream" cf:direction="in"/>
+  </cf:block>
+  <cf:comp cf:name="datamover_0" xd:componentRef="axi_dma" xd:clockId="2"/>
+  <cf:comp cf:name="zc702" xd:componentRef="zc702" xd:clockId="2"/>
+  <cf:comp cf:name="mmult_accel_0" xd:componentRef="mmult_accel" xd:clockId="2"/>
+  <cf:instance cf:name="hwinst_mmult_accel_0" cf:blockName="hwblk_mmult_accel" cf:compName="mmult_accel_0">
+    <cf:portMap cf:blockPort="cmd_mmult_accel" cf:compPort="ap_ctrl" xd:register="0x28"/>
+    <cf:portMap cf:blockPort="in_A_PORTA" cf:compPort="in_A_PORTA"/>
+    <cf:portMap cf:blockPort="in_B_PORTA" cf:compPort="in_B_PORTA"/>
+    <cf:portMap cf:blockPort="out_C_PORTA" cf:compPort="out_C_PORTA"/>
+  </cf:instance>
+  <cf:instance cf:name="swinst_mmult_accel_0" cf:blockName="swblk_mmult_accel" cf:compName="zc702">
+    <cf:portMap cf:blockPort="cmd_mmult_accel" cf:compPort="M_AXI_GP0"/>
+    <cf:portMap cf:blockPort="in_A_PORTA" cf:compPort="S_AXI_ACP"/>
+    <cf:portMap cf:blockPort="in_B_PORTA" cf:compPort="S_AXI_ACP"/>
+    <cf:portMap cf:blockPort="out_C_PORTA" cf:compPort="S_AXI_ACP"/>
+  </cf:instance>
+  <cf:connection cf:srcInst="swinst_mmult_accel_0" cf:srcPort="cmd_mmult_accel" cf:dstInst="hwinst_mmult_accel_0" cf:dstPort="cmd_mmult_accel">
+    <cf:dataMover cf:compName="zc702" cf:softwareLib="axi_lite"/>
+  </cf:connection>
+  <cf:connection cf:srcInst="swinst_mmult_accel_0" cf:srcPort="in_A_PORTA" cf:dstInst="hwinst_mmult_accel_0" cf:dstPort="in_A_PORTA">
+    <cf:dataMover cf:compName="datamover_0" cf:softwareLib="axi_dma_sg"/>
+  </cf:connection>
+  <cf:connection cf:srcInst="swinst_mmult_accel_0" cf:srcPort="in_B_PORTA" cf:dstInst="hwinst_mmult_accel_0" cf:dstPort="in_B_PORTA">
+    <cf:dataMover cf:compName="datamover_0" cf:softwareLib="axi_dma_sg"/>
+  </cf:connection>
+  <cf:connection cf:srcInst="hwinst_mmult_accel_0" cf:srcPort="out_C_PORTA" cf:dstInst="swinst_mmult_accel_0" cf:dstPort="out_C_PORTA">
+    <cf:dataMover cf:compName="datamover_0" cf:softwareLib="axi_dma_sg"/>
+  </cf:connection>
+</cf:model>

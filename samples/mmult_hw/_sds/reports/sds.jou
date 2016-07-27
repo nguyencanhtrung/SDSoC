@@ -1,8 +1,8 @@
 (c) Copyright 2012-2015 Xilinx, Inc. All Rights Reserved.
 #-----------------------------------------------------------
 # Tool version  : sds++ 2014.4 20150228
-# Start time    : Wed Jul 27 08:07:42 PM CEST 2016
-# Command line  : sds++ -sds-pf zc702 -sds-hw mmult_accel mmult_accel.cpp -sds-end -O3 mmult.o mmult_accel.o -o mmult.elf
+# Start time    : Wed Jul 27 08:25:14 PM CEST 2016
+# Command line  : sds++ -sds-pf zed -sds-hw mmult_accel mmult_accel.cpp -sds-end -O3 mmult.o mmult_accel.o -o mmult.elf
 # Log file      : /home/trungnguyen/SDSoC/samples/mmult_hw/_sds/reports/sds.log
 # Journal file  : /home/trungnguyen/SDSoC/samples/mmult_hw/_sds/reports/sds.jou
 # Report file   : /home/trungnguyen/SDSoC/samples/mmult_hw/_sds/reports/sds.rpt
@@ -16,12 +16,12 @@ arm-xilinx-linux-gnueabi-objcopy -O binary --set-section-flags .xdfcnmap=alloc -
 arm-xilinx-linux-gnueabi-objcopy -O binary --set-section-flags .xdhlscore=alloc --only-section=.xdhlscore /home/trungnguyen/SDSoC/samples/mmult_hw/mmult_accel.o /home/trungnguyen/SDSoC/samples/mmult_hw/_sds/iprepo/repo/xilinx_com_hls_mmult_accel_1_0/xilinx_com_hls_mmult_accel_1_0.zip
 unzip -u -o /home/trungnguyen/SDSoC/samples/mmult_hw/_sds/iprepo/repo/xilinx_com_hls_mmult_accel_1_0/xilinx_com_hls_mmult_accel_1_0.zip -d /home/trungnguyen/SDSoC/samples/mmult_hw/_sds/iprepo/repo/xilinx_com_hls_mmult_accel_1_0
 arm-xilinx-linux-gnueabi-objcopy -O binary --set-section-flags .xdif=alloc --only-section=.xdif /home/trungnguyen/SDSoC/samples/mmult_hw/mmult_accel.o /home/trungnguyen/SDSoC/samples/mmult_hw/_sds/.cdb/mmult_accel_if.xml
-build_xd_ip_db  -sdsoc  -sds-pf /opt/Xilinx/SDSoC/2014.4/platforms/zc702/zc702_hw.pfm  -clkid 2 -ip /home/trungnguyen/SDSoC/samples/mmult_hw/_sds/iprepo/repo/xilinx_com_hls_mmult_accel_1_0  -o /home/trungnguyen/SDSoC/samples/mmult_hw/_sds/.cdb/xd_ip_db.xml  
+build_xd_ip_db  -sdsoc  -sds-pf /opt/Xilinx/SDSoC/2014.4/platforms/zed/zed_hw.pfm  -clkid 1 -ip /home/trungnguyen/SDSoC/samples/mmult_hw/_sds/iprepo/repo/xilinx_com_hls_mmult_accel_1_0  -o /home/trungnguyen/SDSoC/samples/mmult_hw/_sds/.cdb/xd_ip_db.xml  
 # INFO: [SDSoC 0-0] Generating data motion network
 llvm-link -o /home/trungnguyen/SDSoC/samples/mmult_hw/_sds/.llvm/sdi_all.o /home/trungnguyen/SDSoC/samples/mmult_hw/_sds/.llvm/mmult.s /home/trungnguyen/SDSoC/samples/mmult_hw/_sds/.llvm/mmult_accel.s
 cd /home/trungnguyen/SDSoC/samples/mmult_hw/_sds/.llvm
 cd /home/trungnguyen/SDSoC/samples/mmult_hw/_sds/.llvm
-XidanePass  --platform zc702  --dmclkid 2  --repo /home/trungnguyen/SDSoC/samples/mmult_hw/_sds/.cdb/xd_ip_db.xml  --dmdb /opt/Xilinx/SDSoC/2014.4/data/DM.db   -os linux 
+XidanePass  --platform zed  --dmclkid 1  --repo /home/trungnguyen/SDSoC/samples/mmult_hw/_sds/.cdb/xd_ip_db.xml  --dmdb /opt/Xilinx/SDSoC/2014.4/data/DM.db   -os linux 
 cd /home/trungnguyen/SDSoC/samples/mmult_hw
 # INFO: [SDSoC 0-0] Create accelerator stub functions
 cd /home/trungnguyen/SDSoC/samples/mmult_hw/_sds/swstubs
@@ -32,7 +32,7 @@ xsltproc  -o /home/trungnguyen/SDSoC/samples/mmult_hw/_sds/p0/ipi/apsys_acc_info
 cd /home/trungnguyen/SDSoC/samples/mmult_hw
 cd /home/trungnguyen/SDSoC/samples/mmult_hw
 # INFO: [SDSoC 0-0] Creating block diagram (BD), address map, port information and device registration for partition 0 (this may take a few minutes)
-system_linker -cf-input /home/trungnguyen/SDSoC/samples/mmult_hw/_sds/.llvm/apsys_0.xml -cf-output-dir _sds/p0 -ip-db /home/trungnguyen/SDSoC/samples/mmult_hw/_sds/.cdb/xd_ip_db.xml -ip-repo /home/trungnguyen/SDSoC/samples/mmult_hw/_sds/iprepo/repo -sds-pf /opt/Xilinx/SDSoC/2014.4/platforms/zc702:linux -software-only   -sdsoc
+system_linker -cf-input /home/trungnguyen/SDSoC/samples/mmult_hw/_sds/.llvm/apsys_0.xml -cf-output-dir _sds/p0 -ip-db /home/trungnguyen/SDSoC/samples/mmult_hw/_sds/.cdb/xd_ip_db.xml -ip-repo /home/trungnguyen/SDSoC/samples/mmult_hw/_sds/iprepo/repo -sds-pf /opt/Xilinx/SDSoC/2014.4/platforms/zed:linux -software-only   -sdsoc
 # INFO: [SDSoC 0-0] Prepare hardware access API functions
 cd /home/trungnguyen/SDSoC/samples/mmult_hw
 cd /home/trungnguyen/SDSoC/samples/mmult_hw
@@ -60,6 +60,6 @@ cd /home/trungnguyen/SDSoC/samples/mmult_hw
 # INFO: [SDSoC 0-0] Enable generation of hardware programming files
 # INFO: [SDSoC 0-0] Enable generation of boot files
 # INFO: [SDSoC 0-0] Calling system_linker for partition 0
-system_linker -cf-input /home/trungnguyen/SDSoC/samples/mmult_hw/_sds/.llvm/apsys_0.xml -cf-output-dir _sds/p0 -ip-db /home/trungnguyen/SDSoC/samples/mmult_hw/_sds/.cdb/xd_ip_db.xml -ip-repo /home/trungnguyen/SDSoC/samples/mmult_hw/_sds/iprepo/repo -sds-pf /opt/Xilinx/SDSoC/2014.4/platforms/zc702:linux -bitstream -bit-name mmult.elf.bit -boot-files   -mdev-no-swgen -mdev-no-xsd -sdsoc -sd-output-dir _sds/p0/sd_card -bit-binary -elf /home/trungnguyen/SDSoC/samples/mmult_hw/_sds/swstubs/mmult.elf
-# All user specified timing constraints are met.
-# sds++ completed at Wed Jul 27 08:17:12 PM CEST 2016
+system_linker -cf-input /home/trungnguyen/SDSoC/samples/mmult_hw/_sds/.llvm/apsys_0.xml -cf-output-dir _sds/p0 -ip-db /home/trungnguyen/SDSoC/samples/mmult_hw/_sds/.cdb/xd_ip_db.xml -ip-repo /home/trungnguyen/SDSoC/samples/mmult_hw/_sds/iprepo/repo -sds-pf /opt/Xilinx/SDSoC/2014.4/platforms/zed:linux -bitstream -bit-name mmult.elf.bit -boot-files   -mdev-no-swgen -mdev-no-xsd -sdsoc -sd-output-dir _sds/p0/sd_card -bit-binary -elf /home/trungnguyen/SDSoC/samples/mmult_hw/_sds/swstubs/mmult.elf
+# Timing constraints are not met.
+# sds++ completed at Wed Jul 27 08:34:38 PM CEST 2016

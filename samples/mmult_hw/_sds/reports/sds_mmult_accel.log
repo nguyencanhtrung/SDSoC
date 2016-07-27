@@ -1,8 +1,8 @@
 (c) Copyright 2012-2015 Xilinx, Inc. All Rights Reserved.
 #-----------------------------------------------------------
 # Tool version  : sds++ 2014.4 20150228
-# Start time    : Wed Jul 27 08:06:53 PM CEST 2016
-# Command line  : sds++ -sds-pf zc702 -sds-hw mmult_accel mmult_accel.cpp -sds-end -Wall -O3 -c mmult_accel.cpp -o mmult_accel.o
+# Start time    : Wed Jul 27 08:24:56 PM CEST 2016
+# Command line  : sds++ -sds-pf zed -sds-hw mmult_accel mmult_accel.cpp -sds-end -Wall -O3 -c mmult_accel.cpp -o mmult_accel.o
 # Log file      : /home/trungnguyen/SDSoC/samples/mmult_hw/_sds/reports/sds_mmult_accel.log
 # Journal file  : /home/trungnguyen/SDSoC/samples/mmult_hw/_sds/reports/sds_mmult_accel.jou
 # Report file   : /home/trungnguyen/SDSoC/samples/mmult_hw/_sds/reports/sds_mmult_accel.rpt
@@ -24,19 +24,19 @@ INFO: [SDSoC 0-0] Moving function mmult_accel to Programmable Logic
 ================================================================
 @I [LIC-101] Checked out feature [HLS]
 @I [HLS-10] Running '/opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/bin/unwrapped/lnx64.o/vivado_hls'
-            for user 'trungnguyen' on host 'verratnix.zmk.uni-kl.de' (Linux_x86_64 version 2.6.32-573.18.1.el6.x86_64) on Wed Jul 27 20:06:58 CEST 2016
+            for user 'trungnguyen' on host 'verratnix.zmk.uni-kl.de' (Linux_x86_64 version 2.6.32-573.18.1.el6.x86_64) on Wed Jul 27 20:24:56 CEST 2016
             in directory '/home/trungnguyen/SDSoC/samples/mmult_hw/_sds/vhls'
 @I [HLS-10] Creating and opening project '/home/trungnguyen/SDSoC/samples/mmult_hw/_sds/vhls/mmult_accel'.
 @I [HLS-10] Adding design file '/home/trungnguyen/SDSoC/samples/mmult_hw/_sds/vhls/src/mmult_accel.cpp' to the project
 @I [HLS-10] Creating and opening solution '/home/trungnguyen/SDSoC/samples/mmult_hw/_sds/vhls/mmult_accel/solution'.
 @I [HLS-10] Cleaning up the solution database.
 @I [HLS-10] Setting target device to ' xc7z020clg484-1 '
-@I [SYN-201] Setting up clock 'default' with a period of 8.5ns.
+@I [SYN-201] Setting up clock 'default' with a period of 5.95ns.
 @I [HLS-10] Analyzing design file '/home/trungnguyen/SDSoC/samples/mmult_hw/_sds/vhls/src/mmult_accel.cpp' ... 
 @I [HLS-10] Validating synthesis directives ...
 @I [HLS-10] Starting code transformations ...
 @I [HLS-10] Checking synthesizability ...
-@I [HLS-111] Elapsed time: 0.63 seconds; current memory usage: 49.8 MB.
+@I [HLS-111] Elapsed time: 0.61 seconds; current memory usage: 49.8 MB.
 @I [HLS-10] Starting hardware synthesis ...
 @I [HLS-10] Synthesizing 'mmult_accel' ...
 @I [HLS-10] ----------------------------------------------------------------
@@ -45,7 +45,7 @@ INFO: [SDSoC 0-0] Moving function mmult_accel to Programmable Logic
 @I [SCHED-11] Starting scheduling ...
 @W [SCHED-71] Latency directive discarded for region mmult_accel since it contains subloops.
 @I [SCHED-11] Finished scheduling.
-@I [HLS-111] Elapsed time: 0.04 seconds; current memory usage: 50.3 MB.
+@I [HLS-111] Elapsed time: 0.03 seconds; current memory usage: 50.2 MB.
 @I [HLS-10] ----------------------------------------------------------------
 @I [HLS-10] -- Exploring micro-architecture for module 'mmult_accel' 
 @I [HLS-10] ----------------------------------------------------------------
@@ -66,10 +66,10 @@ INFO: [SDSoC 0-0] Moving function mmult_accel to Programmable Logic
 @W [RTGEN-101] Setting dangling out port 'mmult_accel/in_A_Din_A' to 0.
 @W [RTGEN-101] Setting dangling out port 'mmult_accel/in_B_WEN_A' to 0.
 @W [RTGEN-101] Setting dangling out port 'mmult_accel/in_B_Din_A' to 0.
-@I [RTGEN-100] Generating core module 'mmult_accel_fadd_32ns_32ns_32_5_full_dsp': 1 instance(s).
-@I [RTGEN-100] Generating core module 'mmult_accel_fmul_32ns_32ns_32_4_max_dsp': 1 instance(s).
+@I [RTGEN-100] Generating core module 'mmult_accel_fadd_32ns_32ns_32_9_full_dsp': 1 instance(s).
+@I [RTGEN-100] Generating core module 'mmult_accel_fmul_32ns_32ns_32_5_max_dsp': 1 instance(s).
 @I [RTGEN-100] Finished creating RTL model for 'mmult_accel'.
-@I [HLS-111] Elapsed time: 0.01 seconds; current memory usage: 50.9 MB.
+@I [HLS-111] Elapsed time: 0.02 seconds; current memory usage: 50.9 MB.
 @I [HLS-10] Finished generating all RTL models.
 @I [WSYSC-301] Generating RTL SystemC for 'mmult_accel'.
 @I [WVHDL-304] Generating RTL VHDL for 'mmult_accel'.
@@ -85,21 +85,21 @@ source run_ippack.tcl -notrace
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1704] No user IP repositories specified
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/opt/Xilinx/SDSoC/2014.4/Vivado/2014.4/data/ip'.
-INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'mmult_accel_ap_fadd_3_full_dsp_32'...
-INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'mmult_accel_ap_fadd_3_full_dsp_32'...
-INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'mmult_accel_ap_fmul_2_max_dsp_32'...
-INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'mmult_accel_ap_fmul_2_max_dsp_32'...
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'mmult_accel_ap_fmul_3_max_dsp_32'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'mmult_accel_ap_fmul_3_max_dsp_32'...
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'mmult_accel_ap_fadd_7_full_dsp_32'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'mmult_accel_ap_fadd_7_full_dsp_32'...
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1704] No user IP repositories specified
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/opt/Xilinx/SDSoC/2014.4/Vivado/2014.4/data/ip'.
-INFO: [Common 17-206] Exiting Vivado at Wed Jul 27 20:07:29 2016...
-@I [HLS-112] Total elapsed time: 43.428 seconds; peak memory usage: 50.9 MB.
+INFO: [Common 17-206] Exiting Vivado at Wed Jul 27 20:25:03 2016...
+@I [HLS-112] Total elapsed time: 17.32 seconds; peak memory usage: 50.9 MB.
 @I [LIC-101] Checked in feature [HLS]
 xsltproc --output component.xml  /opt/Xilinx/SDSoC/2014.4/scripts/xsd/xdFixAximmAddrSpaceProperty.xsl  component.xml
 zip -u xilinx_com_hls_mmult_accel_1_0.zip component.xml
 updating: component.xml (deflated 94%)
 sed -i -e {s/xilinx\.com\/xidane/xilinx\.com\/xd/g} /home/trungnguyen/SDSoC/samples/mmult_hw/_sds/vhls/mmult_accel/solution/impl/ip/auxiliary.xml
-xsltproc  --output /home/trungnguyen/SDSoC/samples/mmult_hw/_sds/.llvm/mmult_accel.hlsmap1.xml  --stringparam P_CLKID 2  --stringparam P_HLS_TYPE hls  /opt/Xilinx/SDSoC/2014.4/scripts/xsd/xdHlsmapRenameAttr.xsl  /home/trungnguyen/SDSoC/samples/mmult_hw/_sds/.llvm/mmult_accel_auxiliary.xml
+xsltproc  --output /home/trungnguyen/SDSoC/samples/mmult_hw/_sds/.llvm/mmult_accel.hlsmap1.xml  --stringparam P_CLKID 1  --stringparam P_HLS_TYPE hls  /opt/Xilinx/SDSoC/2014.4/scripts/xsd/xdHlsmapRenameAttr.xsl  /home/trungnguyen/SDSoC/samples/mmult_hw/_sds/.llvm/mmult_accel_auxiliary.xml
 xsltproc  --output /home/trungnguyen/SDSoC/samples/mmult_hw/_sds/.llvm/mmult_accel.hlsmap.xml  /opt/Xilinx/SDSoC/2014.4/scripts/xsd/xdHlsmapAdapter.xsl  /home/trungnguyen/SDSoC/samples/mmult_hw/_sds/.llvm/mmult_accel.hlsmap1.xml
 xsltproc    --output /home/trungnguyen/SDSoC/samples/mmult_hw/_sds/.llvm/mmult_accel.fcnmap.xml  /opt/Xilinx/SDSoC/2014.4/scripts/xsd/xdHlsmapAxi4.xsl  /home/trungnguyen/SDSoC/samples/mmult_hw/_sds/.llvm/mmult_accel.hlsmap.xml
 xsltproc  --output /home/trungnguyen/SDSoC/samples/mmult_hw/_sds/.llvm/mmult_accel_if.xml  /opt/Xilinx/SDSoC/2014.4/scripts/xsd/xdHlsAdapterComp.xsl  /home/trungnguyen/SDSoC/samples/mmult_hw/_sds/.llvm/mmult_accel.fcnmap.xml
@@ -112,4 +112,4 @@ arm-xilinx-linux-gnueabi-objcopy --add-section .xdfcnmap=/home/trungnguyen/SDSoC
 arm-xilinx-linux-gnueabi-objcopy --add-section .xdhlscore=/home/trungnguyen/SDSoC/samples/mmult_hw/_sds/vhls/mmult_accel/solution/impl/ip/xilinx_com_hls_mmult_accel_1_0.zip /home/trungnguyen/SDSoC/samples/mmult_hw/_sds/swstubs/mmult_accel.o
 arm-xilinx-linux-gnueabi-objcopy --add-section .xdif=/home/trungnguyen/SDSoC/samples/mmult_hw/_sds/.llvm/mmult_accel_if.xml /home/trungnguyen/SDSoC/samples/mmult_hw/_sds/swstubs/mmult_accel.o
 sds++ log file saved as /home/trungnguyen/SDSoC/samples/mmult_hw/_sds/reports/sds_mmult_accel.log
-sds++ completed at Wed Jul 27 08:07:41 PM CEST 2016
+sds++ completed at Wed Jul 27 08:25:13 PM CEST 2016

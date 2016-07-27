@@ -6,7 +6,7 @@
 <Project Version="7" Minor="2" Path="/home/trungnguyen/SDSoC/samples/mmult_hw/_sds/vhls/mmult_accel/solution/impl/vhdl/project.xpr">
   <DefaultLaunch Dir="$PRUNDIR"/>
   <Configuration>
-    <Option Name="Id" Val="5a9918bc5b7c4a28bf53d2d5c9374ca9"/>
+    <Option Name="Id" Val="ff96a625ee844b88909203b29fe59711"/>
     <Option Name="Part" Val="xc7z020clg484-1"/>
     <Option Name="CompiledLibDir" Val="$PCACHEDIR/compile_simlib"/>
     <Option Name="TargetLanguage" Val="VHDL"/>
@@ -23,26 +23,26 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/mmult_accel_fmul_32ns_32ns_32_4_max_dsp.vhd">
+      <File Path="$PPRDIR/mmult_accel_fadd_32ns_32ns_32_9_full_dsp.vhd">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/mmult_accel_fadd_32ns_32ns_32_5_full_dsp.vhd">
+      <File Path="$PPRDIR/mmult_accel_fmul_32ns_32ns_32_5_max_dsp.vhd">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/ip/mmult_accel_ap_fadd_3_full_dsp_32/mmult_accel_ap_fadd_3_full_dsp_32.xci">
+      <File Path="$PSRCDIR/sources_1/ip/mmult_accel_ap_fmul_3_max_dsp_32/mmult_accel_ap_fmul_3_max_dsp_32.xci">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/ip/mmult_accel_ap_fmul_2_max_dsp_32/mmult_accel_ap_fmul_2_max_dsp_32.xci">
+      <File Path="$PSRCDIR/sources_1/ip/mmult_accel_ap_fadd_7_full_dsp_32/mmult_accel_ap_fadd_7_full_dsp_32.xci">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>

@@ -4,7 +4,7 @@ add_files /home/trungnguyen/SDSoC/samples/mmult_hw/_sds/vhls/src/mmult_accel.cpp
 open_solution "solution" -reset
 set_part { xc7z020clg484-1 }
 # synthesis directives
-create_clock -period 8.5
+create_clock -period 5.95
 config_rtl -reset_level low
 # end synthesis directives
 csynth_design

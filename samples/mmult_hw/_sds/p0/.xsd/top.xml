@@ -22,7 +22,7 @@
     <xd:parameter xd:name="C_M_AXI_S2MM_DATA_WIDTH" xd:value="64"/>
     <xd:parameter xd:name="C_S_AXIS_S2MM_TDATA_WIDTH" xd:value="64"/>
   </xd:instance>
-  <xd:instance xd:name="zc702" xd:componentRef="zc702"/>
+  <xd:instance xd:name="zed" xd:componentRef="zed"/>
   <xd:instance xd:name="mmult_accel_0" xd:componentRef="mmult_accel"/>
   <xd:instance xd:name="mmult_accel_0_if" xd:componentRef="axis_accelerator_adapter">
     <xd:parameter xd:name="C_AP_IARG_0_WIDTH" xd:value="32"/>
@@ -105,12 +105,12 @@
     <xd:busInterface xd:name="AP_BRAM_OARG_0" xd:instanceRef="mmult_accel_0_if"/>
   </xd:connection>
   <xd:connection>
-    <xd:busInterface xd:name="M_AXI_GP0" xd:instanceRef="zc702"/>
+    <xd:busInterface xd:name="M_AXI_GP0" xd:instanceRef="zed"/>
     <xd:busInterface xd:name="S00_AXI" xd:instanceRef="axi_interconnect_M_AXI_GP0"/>
   </xd:connection>
   <xd:connection>
     <xd:busInterface xd:name="M00_AXI" xd:instanceRef="axi_interconnect_S_AXI_ACP"/>
-    <xd:busInterface xd:name="S_AXI_ACP" xd:instanceRef="zc702"/>
+    <xd:busInterface xd:name="S_AXI_ACP" xd:instanceRef="zed"/>
   </xd:connection>
   <xd:connection>
     <xd:busInterface xd:name="M00_AXI" xd:instanceRef="axi_interconnect_M_AXI_GP0"/>
@@ -161,13 +161,13 @@
     <xd:busInterface xd:name="S_AXIS_0" xd:instanceRef="axis_rtr_datamover_0"/>
   </xd:connection>
   <xd:connection>
-    <xd:port xd:name="ps7_FCLK_CLK2" xd:instanceRef="zc702"/>
+    <xd:port xd:name="ps7_FCLK_CLK1" xd:instanceRef="zed"/>
     <xd:port xd:name="s_axi_lite_aclk" xd:instanceRef="datamover_0"/>
     <xd:port xd:name="m_axi_sg_aclk" xd:instanceRef="datamover_0"/>
     <xd:port xd:name="m_axi_mm2s_aclk" xd:instanceRef="datamover_0"/>
     <xd:port xd:name="m_axi_s2mm_aclk" xd:instanceRef="datamover_0"/>
-    <xd:port xd:name="M_AXI_GP0_ACLK" xd:instanceRef="zc702"/>
-    <xd:port xd:name="S_AXI_ACP_ACLK" xd:instanceRef="zc702"/>
+    <xd:port xd:name="M_AXI_GP0_ACLK" xd:instanceRef="zed"/>
+    <xd:port xd:name="S_AXI_ACP_ACLK" xd:instanceRef="zed"/>
     <xd:port xd:name="ap_clk" xd:instanceRef="mmult_accel_0"/>
     <xd:port xd:name="s_axi_aclk" xd:instanceRef="mmult_accel_0_if"/>
     <xd:port xd:name="aclk" xd:instanceRef="mmult_accel_0_if"/>
@@ -191,7 +191,7 @@
     <xd:port xd:name="m_axis_rxs_aclk" xd:instanceRef="axis_rtr_datamover_0"/>
   </xd:connection>
   <xd:connection>
-    <xd:port xd:name="proc_sys_reset_2_interconnect_aresetn" xd:instanceRef="zc702"/>
+    <xd:port xd:name="proc_sys_reset_1_interconnect_aresetn" xd:instanceRef="zed"/>
     <xd:port xd:name="ARESETN" xd:instanceRef="axi_interconnect_M_AXI_GP0"/>
     <xd:port xd:name="S00_ARESETN" xd:instanceRef="axi_interconnect_M_AXI_GP0"/>
     <xd:port xd:name="M00_ARESETN" xd:instanceRef="axi_interconnect_M_AXI_GP0"/>
@@ -203,7 +203,7 @@
     <xd:port xd:name="S02_ARESETN" xd:instanceRef="axi_interconnect_S_AXI_ACP"/>
   </xd:connection>
   <xd:connection>
-    <xd:port xd:name="proc_sys_reset_2_peripheral_aresetn" xd:instanceRef="zc702"/>
+    <xd:port xd:name="proc_sys_reset_1_peripheral_aresetn" xd:instanceRef="zed"/>
     <xd:port xd:name="axi_resetn" xd:instanceRef="datamover_0"/>
     <xd:port xd:name="s_axi_aresetn" xd:instanceRef="mmult_accel_0_if"/>
     <xd:port xd:name="m_axis_aresetn" xd:instanceRef="mmult_accel_0_if"/>
@@ -215,11 +215,11 @@
   </xd:connection>
   <xd:connection>
     <xd:port xd:name="mm2s_introut" xd:instanceRef="datamover_0"/>
-    <xd:port xd:name="In0" xd:instanceRef="zc702"/>
+    <xd:port xd:name="In0" xd:instanceRef="zed"/>
   </xd:connection>
   <xd:connection>
     <xd:port xd:name="s2mm_introut" xd:instanceRef="datamover_0"/>
-    <xd:port xd:name="In1" xd:instanceRef="zc702"/>
+    <xd:port xd:name="In1" xd:instanceRef="zed"/>
   </xd:connection>
   <xd:connection>
     <xd:port xd:name="dout" xd:instanceRef="acp_axcache_0xF"/>

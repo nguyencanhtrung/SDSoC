@@ -1,8 +1,8 @@
 (c) Copyright 2012-2015 Xilinx, Inc. All Rights Reserved.
 #-----------------------------------------------------------
 # Tool version  : sds++ 2014.4 20150228
-# Start time    : Wed Jul 27 08:06:53 PM CEST 2016
-# Command line  : sds++ -sds-pf zc702 -sds-hw mmult_accel mmult_accel.cpp -sds-end -Wall -O3 -c mmult_accel.cpp -o mmult_accel.o
+# Start time    : Wed Jul 27 08:24:56 PM CEST 2016
+# Command line  : sds++ -sds-pf zed -sds-hw mmult_accel mmult_accel.cpp -sds-end -Wall -O3 -c mmult_accel.cpp -o mmult_accel.o
 # Log file      : /home/trungnguyen/SDSoC/samples/mmult_hw/_sds/reports/sds_mmult_accel.log
 # Journal file  : /home/trungnguyen/SDSoC/samples/mmult_hw/_sds/reports/sds_mmult_accel.jou
 # Report file   : /home/trungnguyen/SDSoC/samples/mmult_hw/_sds/reports/sds_mmult_accel.rpt
@@ -23,7 +23,7 @@ High-Level Synthesis
     +---------+-------+----------+------------+
     |  Clock  | Target| Estimated| Uncertainty|
     +---------+-------+----------+------------+
-    |default  |   8.50|      7.26|        1.06|
+    |default  |   5.95|      4.35|        0.74|
     +---------+-------+----------+------------+
 
 + Latency (clock cycles): 
@@ -32,7 +32,7 @@ High-Level Synthesis
     |     Latency     |     Interval    | Pipeline|
     |   min  |   max  |   min  |   max  |   Type  |
     +--------+--------+--------+--------+---------+
-    |  362561|  362561|  362562|  362562|   none  |
+    |  526401|  526401|  526402|  526402|   none  |
     +--------+--------+--------+--------+---------+
 
     + Detail: 
@@ -44,9 +44,9 @@ High-Level Synthesis
         |                 |     Latency     | Iteration|  Initiation Interval  | Trip |          |
         |    Loop Name    |   min  |   max  |  Latency |  achieved |   target  | Count| Pipelined|
         +-----------------+--------+--------+----------+-----------+-----------+------+----------+
-        |- Loop 1         |  362560|  362560|     11330|          -|          -|    32|    no    |
-        | + Loop 1.1      |   11328|   11328|       354|          -|          -|    32|    no    |
-        |  ++ Loop 1.1.1  |     352|     352|        11|          -|          -|    32|    no    |
+        |- Loop 1         |  526400|  526400|     16450|          -|          -|    32|    no    |
+        | + Loop 1.1      |   16448|   16448|       514|          -|          -|    32|    no    |
+        |  ++ Loop 1.1.1  |     512|     512|        16|          -|          -|    32|    no    |
         +-----------------+--------+--------+----------+-----------+-----------+------+----------+
 
 
@@ -60,12 +60,12 @@ High-Level Synthesis
 +-----------------+---------+-------+--------+-------+
 |Expression       |        -|      -|       0|     69|
 |FIFO             |        -|      -|       -|      -|
-|Instance         |        -|      5|     348|    711|
+|Instance         |        -|      5|     475|    749|
 |Memory           |        -|      -|       -|      -|
-|Multiplexer      |        -|      -|       -|     60|
-|Register         |        -|      -|     189|      -|
+|Multiplexer      |        -|      -|       -|     72|
+|Register         |        -|      -|     194|      -|
 +-----------------+---------+-------+--------+-------+
-|Total            |        0|      5|     537|    840|
+|Total            |        0|      5|     669|    890|
 +-----------------+---------+-------+--------+-------+
 |Available        |      280|    220|  106400|  53200|
 +-----------------+---------+-------+--------+-------+
@@ -77,10 +77,10 @@ High-Level Synthesis
     +---------------------------------------------+------------------------------------------+---------+-------+-----+-----+
     |                   Instance                  |                  Module                  | BRAM_18K| DSP48E|  FF | LUT |
     +---------------------------------------------+------------------------------------------+---------+-------+-----+-----+
-    |mmult_accel_fadd_32ns_32ns_32_5_full_dsp_U1  |mmult_accel_fadd_32ns_32ns_32_5_full_dsp  |        0|      2|  205|  390|
-    |mmult_accel_fmul_32ns_32ns_32_4_max_dsp_U2   |mmult_accel_fmul_32ns_32ns_32_4_max_dsp   |        0|      3|  143|  321|
+    |mmult_accel_fadd_32ns_32ns_32_9_full_dsp_U1  |mmult_accel_fadd_32ns_32ns_32_9_full_dsp  |        0|      2|  324|  424|
+    |mmult_accel_fmul_32ns_32ns_32_5_max_dsp_U2   |mmult_accel_fmul_32ns_32ns_32_5_max_dsp   |        0|      3|  151|  325|
     +---------------------------------------------+------------------------------------------+---------+-------+-----+-----+
-    |Total                                        |                                          |        0|      5|  348|  711|
+    |Total                                        |                                          |        0|      5|  475|  749|
     +---------------------------------------------+------------------------------------------+---------+-------+-----+-----+
 
     * Memory: 
@@ -110,21 +110,21 @@ High-Level Synthesis
     +----------------+----+-----------+-----+-----------+
     |      Name      | LUT| Input Size| Bits| Total Bits|
     +----------------+----+-----------+-----+-----------+
-    |ap_NS_fsm       |   6|         15|    1|         15|
+    |ap_NS_fsm       |  18|         20|    1|         20|
     |col_reg_97      |   6|          2|    6|         12|
     |k_reg_121       |   6|          2|    6|         12|
     |out_C_WEN_A     |   4|          2|    4|          8|
     |result_reg_108  |  32|          2|   32|         64|
     |row_reg_86      |   6|          2|    6|         12|
     +----------------+----+-----------+-----+-----------+
-    |Total           |  60|         25|   55|        123|
+    |Total           |  72|         30|   55|        128|
     +----------------+----+-----------+-----+-----------+
 
     * Register: 
     +-------------------+----+----+-----+-----------+
     |        Name       | FF | LUT| Bits| Const Bits|
     +-------------------+----+----+-----+-----------+
-    |ap_CS_fsm          |  14|   0|   14|          0|
+    |ap_CS_fsm          |  19|   0|   19|          0|
     |col_1_reg_262      |   6|   0|    6|          0|
     |col_cast2_reg_253  |   6|   0|   10|          4|
     |col_reg_97         |   6|   0|    6|          0|
@@ -138,7 +138,7 @@ High-Level Synthesis
     |tmp_reg_247        |   5|   0|   10|          5|
     |tmp_s_reg_295      |  32|   0|   32|          0|
     +-------------------+----+----+-----+-----------+
-    |Total              | 189|   0|  198|          9|
+    |Total              | 194|   0|  203|          9|
     +-------------------+----+----+-----+-----------+
 
 

@@ -1,10 +1,10 @@
 # This script segment is generated automatically by AutoPilot
 
 set id 1
-set name mmult_accel_fadd_32ns_32ns_32_5_full_dsp
+set name mmult_accel_fadd_32ns_32ns_32_9_full_dsp
 set corename simcore_fadd
 set op fadd
-set stage_num 5
+set stage_num 9
 set max_latency -1
 set registered_input 1
 set impl_style full_dsp
@@ -71,10 +71,10 @@ puts "@W \[IMPL-101\] Cannot find ::AESL_LIB_XILINX_FPV6::fpv6_gen, check your p
 
 
 set id 2
-set name mmult_accel_fmul_32ns_32ns_32_4_max_dsp
+set name mmult_accel_fmul_32ns_32ns_32_5_max_dsp
 set corename simcore_fmul
 set op fmul
-set stage_num 4
+set stage_num 5
 set max_latency -1
 set registered_input 1
 set impl_style max_dsp

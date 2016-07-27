@@ -14,7 +14,7 @@
     <xd:file xd:name="axi_stream_router_v1_0.xml"/>
     <xd:file xd:name="axis_interconnect_v2_1.xml"/>
     <xd:file xd:name="axi_fifo_mm_s_v4_1.xml"/>
-    <xd:file xd:name="zc702_hw.pfm"/>
+    <xd:file xd:name="zed_hw.pfm"/>
     <xd:file xd:name="mmult_accel.xml"/>
     <xd:file xd:name="mmult_accel_if.xml"/>
     <xd:file xd:name="mmult_accel.fcnmap.xml"/>

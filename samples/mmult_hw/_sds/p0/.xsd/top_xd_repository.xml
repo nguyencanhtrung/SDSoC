@@ -575,11 +575,11 @@
         <xd:busInterface xd:name="s2mm_prmry_reset_out_n" xd:busTypeRef="reset" xd:mode="master" xd:direction="out" xd:library="signal"/>
         <xd:busInterface xd:name="interrupt" xd:busTypeRef="interrupt" xd:mode="master" xd:direction="out" xd:library="signal"/>
     </xd:component>
-  <xd:component xd:BRAM="140" xd:DSP="220" xd:FF="106400" xd:LUT="53200" xd:library="xd" xd:name="zc702" xd:type="platform" xd:vendor="xilinx.com" xd:version="1.0">
+  <xd:component xd:BRAM="140" xd:DSP="220" xd:FF="106400" xd:LUT="53200" xd:library="xd" xd:name="zed" xd:type="platform" xd:vendor="xilinx.com" xd:version="1.0">
     <xd:platformInfo>
       <xd:deviceInfo xd:architecture="zynq" xd:device="xc7z020" xd:package="clg484" xd:speedGrade="-1"/>
       <xd:registeredDevices xd:kio="0" xd:uio="0"/>
-      <xd:systemClocks xd:defaultClock="2">
+      <xd:systemClocks xd:defaultClock="1">
         <xd:clock xd:frequency="666.666687" xd:instanceRef="ps7" xd:name="CPU" xd:period="1" xd:status="reserved"/>
         <xd:clock xd:frequency="166.666672" xd:id="0" xd:instanceRef="ps7" xd:name="ps7_FCLK_CLK0" xd:normalizedPeriod="4.000" xd:period="6" xd:status="changeable"/>
         <xd:clock xd:frequency="142.857132" xd:id="1" xd:instanceRef="ps7" xd:name="ps7_FCLK_CLK1" xd:normalizedPeriod="4.667" xd:period="7" xd:status="changeable"/>
@@ -674,12 +674,12 @@
     <xd:busInterface xd:name="S_AXIS_1" xd:busTypeRef="axis" xd:portInterfaceType="bram" xd:direction="in" xd:mode="master" xd:hasTlast="true" xd:clockRef="s_axis_1_aclk" xd:resetRef="s_axis_1_aresetn" xd:dataWidth="32" xd:hlsname="in_B_PORTA"/>
     <xd:busInterface xd:name="M_AXIS_0" xd:busTypeRef="axis" xd:portInterfaceType="bram" xd:direction="out" xd:mode="master" xd:hasTlast="true" xd:clockRef="m_axis_0_aclk" xd:resetRef="m_axis_0_aresetn" xd:dataWidth="32" xd:hlsname="out_C_PORTA"/>
   </xd:component>
-  <xd:fcnMap xd:fcnName="mmult_accel" xd:type="hls_adapter" xd:adapterCompRef="mmult_accel_if" xd:clockId="2" xd:componentRef="mmult_accel" xd:initiationInterval="362562" xd:clockPeriod="8.500000" xd:sequential="true" xd:hostMachine="64">
+  <xd:fcnMap xd:fcnName="mmult_accel" xd:type="hls_adapter" xd:adapterCompRef="mmult_accel_if" xd:clockId="1" xd:componentRef="mmult_accel" xd:initiationInterval="526402" xd:clockPeriod="5.950000" xd:sequential="true" xd:hostMachine="64">
     <xd:ctrlReg xd:name="control" xd:busInterfaceRef="ap_ctrl" xd:portInterfaceType="acc_handshake" xd:type="axis_acc_adapter" xd:offset="0x28" xd:bufferDepth="16" xd:dataWidth="4"/>
     <xd:arg xd:name="in_A" xd:swRootName="in_A" xd:direction="in" xd:busInterfaceRef="in_A_PORTA" xd:hwName="in_A_PORTA" xd:portInterfaceType="bram" xd:arraySize="1024" xd:dataWidth="32" xd:mode="master" xd:index="0" xd:instanceRef="mmult_accel_if" xd:bufferDepth="1024" xd:multibufferDepth="4"/>
     <xd:arg xd:name="in_B" xd:swRootName="in_B" xd:direction="in" xd:busInterfaceRef="in_B_PORTA" xd:hwName="in_B_PORTA" xd:portInterfaceType="bram" xd:arraySize="1024" xd:dataWidth="32" xd:mode="master" xd:index="1" xd:instanceRef="mmult_accel_if" xd:bufferDepth="1024" xd:multibufferDepth="4"/>
     <xd:arg xd:name="out_C" xd:swRootName="out_C" xd:direction="out" xd:busInterfaceRef="out_C_PORTA" xd:hwName="out_C_PORTA" xd:portInterfaceType="bram" xd:arraySize="1024" xd:dataWidth="32" xd:mode="master" xd:index="0" xd:instanceRef="mmult_accel_if" xd:bufferDepth="1024" xd:multibufferDepth="4"/>
-    <xd:latencyEstimates xd:best-case="362561" xd:worst-case="362561" xd:average-case="362561"/>
-    <xd:resourceEstimates xd:LUT="840" xd:FF="537" xd:BRAM="0" xd:DSP="5"/>
+    <xd:latencyEstimates xd:best-case="526401" xd:worst-case="526401" xd:average-case="526401"/>
+    <xd:resourceEstimates xd:LUT="890" xd:FF="669" xd:BRAM="0" xd:DSP="5"/>
   </xd:fcnMap>
 </xd:repository>

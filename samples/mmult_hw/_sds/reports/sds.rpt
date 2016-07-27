@@ -1,8 +1,8 @@
 (c) Copyright 2012-2015 Xilinx, Inc. All Rights Reserved.
 #-----------------------------------------------------------
 # Tool version  : sds++ 2014.4 20150228
-# Start time    : Wed Jul 27 08:07:42 PM CEST 2016
-# Command line  : sds++ -sds-pf zc702 -sds-hw mmult_accel mmult_accel.cpp -sds-end -O3 mmult.o mmult_accel.o -o mmult.elf
+# Start time    : Wed Jul 27 08:25:14 PM CEST 2016
+# Command line  : sds++ -sds-pf zed -sds-hw mmult_accel mmult_accel.cpp -sds-end -O3 mmult.o mmult_accel.o -o mmult.elf
 # Log file      : /home/trungnguyen/SDSoC/samples/mmult_hw/_sds/reports/sds.log
 # Journal file  : /home/trungnguyen/SDSoC/samples/mmult_hw/_sds/reports/sds.jou
 # Report file   : /home/trungnguyen/SDSoC/samples/mmult_hw/_sds/reports/sds.rpt
@@ -14,9 +14,9 @@ Design Timing Check
 
   Partition 0
   Vivado Log     : /home/trungnguyen/SDSoC/samples/mmult_hw/_sds/p0/ipi/vivado.log
-  Timing Summary : /home/trungnguyen/SDSoC/samples/mmult_hw/_sds/p0/ipi/zc702.runs/impl_1/zc702_wrapper_timing_summary_routed.rpt
+  Timing Summary : /home/trungnguyen/SDSoC/samples/mmult_hw/_sds/p0/ipi/zed.runs/impl_1/zed_wrapper_timing_summary_routed.rpt
 
-  All user specified timing constraints are met.
+  Timing constraints are not met.
 
 Timing Summary Report
 
@@ -121,10 +121,10 @@ Design Timing Summary
 
     WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
     -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
-      1.778        0.000                      0                32067        0.017        0.000                      0                32067        3.750        0.000                       0                 12062  
+     -0.264       -0.264                      1                32293        0.051        0.000                      0                32293        2.250        0.000                       0                 12207  
 
 
-All user specified timing constraints are met.
+Timing constraints are not met.
 
 
 Clock Summary
@@ -150,7 +150,7 @@ Design Utilization
 -------------------
 
   Partition 0
-  Utilization Summary : /home/trungnguyen/SDSoC/samples/mmult_hw/_sds/p0/ipi/zc702.runs/impl_1/zc702_wrapper_utilization_placed.rpt
+  Utilization Summary : /home/trungnguyen/SDSoC/samples/mmult_hw/_sds/p0/ipi/zed.runs/impl_1/zed_wrapper_utilization_placed.rpt
 
 Utilization Design Information
 
@@ -174,13 +174,13 @@ Table of Contents
 +----------------------------+-------+-------+-----------+-------+
 |          Site Type         |  Used | Fixed | Available | Util% |
 +----------------------------+-------+-------+-----------+-------+
-| Slice LUTs                 |  7535 |     0 |     53200 | 14.16 |
-|   LUT as Logic             |  6972 |     0 |     53200 | 13.10 |
-|   LUT as Memory            |   563 |     0 |     17400 |  3.23 |
+| Slice LUTs                 |  7513 |     0 |     53200 | 14.12 |
+|   LUT as Logic             |  6942 |     0 |     53200 | 13.04 |
+|   LUT as Memory            |   571 |     0 |     17400 |  3.28 |
 |     LUT as Distributed RAM |   378 |     0 |           |       |
-|     LUT as Shift Register  |   185 |     0 |           |       |
-| Slice Registers            | 11057 |     0 |    106400 | 10.39 |
-|   Register as Flip Flop    | 11057 |     0 |    106400 | 10.39 |
+|     LUT as Shift Register  |   193 |     0 |           |       |
+| Slice Registers            | 11189 |     0 |    106400 | 10.51 |
+|   Register as Flip Flop    | 11189 |     0 |    106400 | 10.51 |
 |   Register as Latch        |     0 |     0 |    106400 |  0.00 |
 | F7 Muxes                   |    73 |     0 |     26600 |  0.27 |
 | F8 Muxes                   |     0 |     0 |     13300 |  0.00 |
@@ -202,7 +202,7 @@ Table of Contents
 | 214   |          Yes |           - |          Set |
 | 573   |          Yes |           - |        Reset |
 | 206   |          Yes |         Set |            - |
-| 10064 |          Yes |       Reset |            - |
+| 10196 |          Yes |       Reset |            - |
 +-------+--------------+-------------+--------------+
 
 
@@ -212,28 +212,28 @@ Table of Contents
 +-------------------------------------------------------------+------------+-------+-----------+-------+
 |                          Site Type                          |    Used    | Fixed | Available | Util% |
 +-------------------------------------------------------------+------------+-------+-----------+-------+
-| Slice                                                       |       3475 |     0 |     13300 | 26.12 |
-|   SLICEL                                                    |       2349 |     0 |           |       |
-|   SLICEM                                                    |       1126 |     0 |           |       |
-| LUT as Logic                                                |       6972 |     0 |     53200 | 13.10 |
+| Slice                                                       |       3487 |     0 |     13300 | 26.21 |
+|   SLICEL                                                    |       2356 |     0 |           |       |
+|   SLICEM                                                    |       1131 |     0 |           |       |
+| LUT as Logic                                                |       6942 |     0 |     53200 | 13.04 |
 |   using O5 output only                                      |          0 |       |           |       |
-|   using O6 output only                                      |       5545 |       |           |       |
-|   using O5 and O6                                           |       1427 |       |           |       |
-| LUT as Memory                                               |        563 |     0 |     17400 |  3.23 |
+|   using O6 output only                                      |       5486 |       |           |       |
+|   using O5 and O6                                           |       1456 |       |           |       |
+| LUT as Memory                                               |        571 |     0 |     17400 |  3.28 |
 |   LUT as Distributed RAM                                    |        378 |     0 |           |       |
 |     using O5 output only                                    |          0 |       |           |       |
 |     using O6 output only                                    |         50 |       |           |       |
 |     using O5 and O6                                         |        328 |       |           |       |
-|   LUT as Shift Register                                     |        185 |     0 |           |       |
-|     using O5 output only                                    |          2 |       |           |       |
-|     using O6 output only                                    |        106 |       |           |       |
-|     using O5 and O6                                         |         77 |       |           |       |
-| LUT Flip Flop Pairs                                         |      10833 |     0 |     53200 | 20.36 |
-|   fully used LUT-FF pairs                                   |       5130 |       |           |       |
-|   LUT-FF pairs with unused LUT                              |       3300 |       |           |       |
-|   LUT-FF pairs with unused Flip Flop                        |       2403 |       |           |       |
-| Unique Control Sets                                         |        568 |       |           |       |
-| Minimum number of registers lost to control set restriction | 2215(Lost) |       |           |       |
+|   LUT as Shift Register                                     |        193 |     0 |           |       |
+|     using O5 output only                                    |          4 |       |           |       |
+|     using O6 output only                                    |        108 |       |           |       |
+|     using O5 and O6                                         |         81 |       |           |       |
+| LUT Flip Flop Pairs                                         |      10855 |     0 |     53200 | 20.40 |
+|   fully used LUT-FF pairs                                   |       5154 |       |           |       |
+|   LUT-FF pairs with unused LUT                              |       3346 |       |           |       |
+|   LUT-FF pairs with unused Flip Flop                        |       2355 |       |           |       |
+| Unique Control Sets                                         |        566 |       |           |       |
+| Minimum number of registers lost to control set restriction | 2203(Lost) |       |           |       |
 +-------------------------------------------------------------+------------+-------+-----------+-------+
 
 
@@ -325,19 +325,19 @@ Table of Contents
 +----------+-------+----------------------+
 | Ref Name |  Used |  Functional Category |
 +----------+-------+----------------------+
-| FDRE     | 10064 |         Flop & Latch |
-| LUT6     |  2261 |                  LUT |
-| LUT3     |  2200 |                  LUT |
-| LUT5     |  1400 |                  LUT |
-| LUT4     |  1302 |                  LUT |
-| LUT2     |  1025 |                  LUT |
+| FDRE     | 10196 |         Flop & Latch |
+| LUT6     |  2228 |                  LUT |
+| LUT3     |  2224 |                  LUT |
+| LUT5     |  1415 |                  LUT |
+| LUT4     |  1308 |                  LUT |
+| LUT2     |  1016 |                  LUT |
 | FDCE     |   573 |         Flop & Latch |
 | RAMD32   |   494 |   Distributed Memory |
+| SRL16E   |   216 |   Distributed Memory |
 | FDPE     |   214 |         Flop & Latch |
-| LUT1     |   211 |                  LUT |
-| CARRY4   |   211 |           CarryLogic |
+| CARRY4   |   212 |           CarryLogic |
+| LUT1     |   207 |                  LUT |
 | FDSE     |   206 |         Flop & Latch |
-| SRL16E   |   204 |   Distributed Memory |
 | RAMS32   |   164 |   Distributed Memory |
 | BIBUF    |   130 |                   IO |
 | MUXF7    |    73 |                MuxFx |

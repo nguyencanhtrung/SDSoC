@@ -1,0 +1,150 @@
+(c) Copyright 2012-2015 Xilinx, Inc. All Rights Reserved.
+#-----------------------------------------------------------
+# Tool version  : sds++ PA2 v1.0 20150115
+# Start time    : Thu Feb 05 1:12:11 PM Pacific Standard Time 2015
+# Command line  : sds++ -o lab1_prebuilt.elf ./src/madd.o ./src/main.o ./src/mmult.o -sds-pf zc702
+# Log file      : C:/labs/lab1_prebuilt/SDRelease/_sds/reports/sds.log
+# Journal file  : C:/labs/lab1_prebuilt/SDRelease/_sds/reports/sds.jou
+# Report file   : C:/labs/lab1_prebuilt/SDRelease/_sds/reports/sds.rpt
+#-----------------------------------------------------------
+
+Libraries: 
+Library Paths {}
+INFO: [SDSoC 0-0] Analyzing object files
+arm-xilinx-linux-gnueabi-objcopy -O binary --set-section-flags .xddata=alloc --only-section=.xddata C:/labs/lab1_prebuilt/SDRelease/src/madd.o C:/labs/lab1_prebuilt/SDRelease/_sds/.data/madd.o.xml
+arm-xilinx-linux-gnueabi-objcopy -O binary --set-section-flags .xdpp=alloc --only-section=.xdpp C:/labs/lab1_prebuilt/SDRelease/src/madd.o C:/labs/lab1_prebuilt/SDRelease/_sds/.pp/madd.ii
+arm-xilinx-linux-gnueabi-objcopy -O binary --set-section-flags .xdfcnmap=alloc --only-section=.xdfcnmap C:/labs/lab1_prebuilt/SDRelease/src/madd.o C:/labs/lab1_prebuilt/SDRelease/_sds/.cdb/madd.fcnmap.xml
+arm-xilinx-linux-gnueabi-objcopy -O binary --set-section-flags .xdhlscore=alloc --only-section=.xdhlscore C:/labs/lab1_prebuilt/SDRelease/src/madd.o C:/labs/lab1_prebuilt/SDRelease/_sds/iprepo/repo/xilinx_com_hls_madd_1_0/xilinx_com_hls_madd_1_0.zip
+unzip -u -o C:/labs/lab1_prebuilt/SDRelease/_sds/iprepo/repo/xilinx_com_hls_madd_1_0/xilinx_com_hls_madd_1_0.zip -d C:/labs/lab1_prebuilt/SDRelease/_sds/iprepo/repo/xilinx_com_hls_madd_1_0
+Archive:  C:/labs/lab1_prebuilt/SDRelease/_sds/iprepo/repo/xilinx_com_hls_madd_1_0/xilinx_com_hls_madd_1_0.zip
+  inflating: C:/labs/lab1_prebuilt/SDRelease/_sds/iprepo/repo/xilinx_com_hls_madd_1_0/component.xml  
+  inflating: C:/labs/lab1_prebuilt/SDRelease/_sds/iprepo/repo/xilinx_com_hls_madd_1_0/hdl/ip/madd_ap_fadd_3_full_dsp_32.vhd  
+  inflating: C:/labs/lab1_prebuilt/SDRelease/_sds/iprepo/repo/xilinx_com_hls_madd_1_0/constraints/madd_ooc.xdc  
+  inflating: C:/labs/lab1_prebuilt/SDRelease/_sds/iprepo/repo/xilinx_com_hls_madd_1_0/hdl/verilog/madd.v  
+  inflating: C:/labs/lab1_prebuilt/SDRelease/_sds/iprepo/repo/xilinx_com_hls_madd_1_0/hdl/verilog/madd_fadd_32ns_32ns_32_5_full_dsp.v  
+  inflating: C:/labs/lab1_prebuilt/SDRelease/_sds/iprepo/repo/xilinx_com_hls_madd_1_0/hdl/vhdl/madd.vhd  
+  inflating: C:/labs/lab1_prebuilt/SDRelease/_sds/iprepo/repo/xilinx_com_hls_madd_1_0/hdl/vhdl/madd_fadd_32ns_32ns_32_5_full_dsp.vhd  
+  inflating: C:/labs/lab1_prebuilt/SDRelease/_sds/iprepo/repo/xilinx_com_hls_madd_1_0/doc/ReleaseNotes.txt  
+  inflating: C:/labs/lab1_prebuilt/SDRelease/_sds/iprepo/repo/xilinx_com_hls_madd_1_0/misc/logo.png  
+  inflating: C:/labs/lab1_prebuilt/SDRelease/_sds/iprepo/repo/xilinx_com_hls_madd_1_0/xgui/madd_v1_0.tcl  
+arm-xilinx-linux-gnueabi-objcopy -O binary --set-section-flags .xdif=alloc --only-section=.xdif C:/labs/lab1_prebuilt/SDRelease/src/madd.o C:/labs/lab1_prebuilt/SDRelease/_sds/.cdb/madd_if.xml
+arm-xilinx-linux-gnueabi-objcopy -O binary --set-section-flags .xddata=alloc --only-section=.xddata C:/labs/lab1_prebuilt/SDRelease/src/main.o C:/labs/lab1_prebuilt/SDRelease/_sds/.data/main.o.xml
+arm-xilinx-linux-gnueabi-objcopy -O binary --set-section-flags .xddata=alloc --only-section=.xddata C:/labs/lab1_prebuilt/SDRelease/src/mmult.o C:/labs/lab1_prebuilt/SDRelease/_sds/.data/mmult.o.xml
+arm-xilinx-linux-gnueabi-objcopy -O binary --set-section-flags .xdpp=alloc --only-section=.xdpp C:/labs/lab1_prebuilt/SDRelease/src/mmult.o C:/labs/lab1_prebuilt/SDRelease/_sds/.pp/mmult.ii
+arm-xilinx-linux-gnueabi-objcopy -O binary --set-section-flags .xdfcnmap=alloc --only-section=.xdfcnmap C:/labs/lab1_prebuilt/SDRelease/src/mmult.o C:/labs/lab1_prebuilt/SDRelease/_sds/.cdb/mmult.fcnmap.xml
+arm-xilinx-linux-gnueabi-objcopy -O binary --set-section-flags .xdhlscore=alloc --only-section=.xdhlscore C:/labs/lab1_prebuilt/SDRelease/src/mmult.o C:/labs/lab1_prebuilt/SDRelease/_sds/iprepo/repo/xilinx_com_hls_mmult_1_0/xilinx_com_hls_mmult_1_0.zip
+unzip -u -o C:/labs/lab1_prebuilt/SDRelease/_sds/iprepo/repo/xilinx_com_hls_mmult_1_0/xilinx_com_hls_mmult_1_0.zip -d C:/labs/lab1_prebuilt/SDRelease/_sds/iprepo/repo/xilinx_com_hls_mmult_1_0
+Archive:  C:/labs/lab1_prebuilt/SDRelease/_sds/iprepo/repo/xilinx_com_hls_mmult_1_0/xilinx_com_hls_mmult_1_0.zip
+  inflating: C:/labs/lab1_prebuilt/SDRelease/_sds/iprepo/repo/xilinx_com_hls_mmult_1_0/component.xml  
+  inflating: C:/labs/lab1_prebuilt/SDRelease/_sds/iprepo/repo/xilinx_com_hls_mmult_1_0/hdl/ip/mmult_ap_fadd_3_full_dsp_32.vhd  
+  inflating: C:/labs/lab1_prebuilt/SDRelease/_sds/iprepo/repo/xilinx_com_hls_mmult_1_0/hdl/ip/mmult_ap_fmul_2_max_dsp_32.vhd  
+  inflating: C:/labs/lab1_prebuilt/SDRelease/_sds/iprepo/repo/xilinx_com_hls_mmult_1_0/constraints/mmult_ooc.xdc  
+  inflating: C:/labs/lab1_prebuilt/SDRelease/_sds/iprepo/repo/xilinx_com_hls_mmult_1_0/hdl/verilog/mmult.v  
+  inflating: C:/labs/lab1_prebuilt/SDRelease/_sds/iprepo/repo/xilinx_com_hls_mmult_1_0/hdl/verilog/mmult_a_buf_0.v  
+  inflating: C:/labs/lab1_prebuilt/SDRelease/_sds/iprepo/repo/xilinx_com_hls_mmult_1_0/hdl/verilog/mmult_fadd_32ns_32ns_32_5_full_dsp.v  
+  inflating: C:/labs/lab1_prebuilt/SDRelease/_sds/iprepo/repo/xilinx_com_hls_mmult_1_0/hdl/verilog/mmult_fmul_32ns_32ns_32_4_max_dsp.v  
+  inflating: C:/labs/lab1_prebuilt/SDRelease/_sds/iprepo/repo/xilinx_com_hls_mmult_1_0/hdl/vhdl/mmult.vhd  
+  inflating: C:/labs/lab1_prebuilt/SDRelease/_sds/iprepo/repo/xilinx_com_hls_mmult_1_0/hdl/vhdl/mmult_a_buf_0.vhd  
+  inflating: C:/labs/lab1_prebuilt/SDRelease/_sds/iprepo/repo/xilinx_com_hls_mmult_1_0/hdl/vhdl/mmult_fadd_32ns_32ns_32_5_full_dsp.vhd  
+  inflating: C:/labs/lab1_prebuilt/SDRelease/_sds/iprepo/repo/xilinx_com_hls_mmult_1_0/hdl/vhdl/mmult_fmul_32ns_32ns_32_4_max_dsp.vhd  
+  inflating: C:/labs/lab1_prebuilt/SDRelease/_sds/iprepo/repo/xilinx_com_hls_mmult_1_0/doc/ReleaseNotes.txt  
+  inflating: C:/labs/lab1_prebuilt/SDRelease/_sds/iprepo/repo/xilinx_com_hls_mmult_1_0/misc/logo.png  
+  inflating: C:/labs/lab1_prebuilt/SDRelease/_sds/iprepo/repo/xilinx_com_hls_mmult_1_0/xgui/mmult_v1_0.tcl  
+arm-xilinx-linux-gnueabi-objcopy -O binary --set-section-flags .xdif=alloc --only-section=.xdif C:/labs/lab1_prebuilt/SDRelease/src/mmult.o C:/labs/lab1_prebuilt/SDRelease/_sds/.cdb/mmult_if.xml
+build_xd_ip_db  -sdsoc  -sds-pf C:/Xilinx/SDSoC/2014.4/platforms/zc702/zc702_hw.pfm  -clkid 2 -clkid 2 -ip C:/labs/lab1_prebuilt/SDRelease/_sds/iprepo/repo/xilinx_com_hls_madd_1_0 -ip C:/labs/lab1_prebuilt/SDRelease/_sds/iprepo/repo/xilinx_com_hls_mmult_1_0  -o C:/labs/lab1_prebuilt/SDRelease/_sds/.cdb/xd_ip_db.xml  
+INFO: Using user-defined path for XILINX_XD environment variable C:/Xilinx/SDSoC/2014.4
+processing accelerators: C:/labs/lab1_prebuilt/SDRelease/_sds/iprepo/repo/xilinx_com_hls_madd_1_0
+ip_dir: C:/labs/lab1_prebuilt/SDRelease/_sds/iprepo/repo/xilinx_com_hls_madd_1_0
+xsltproc --stringparam xpath "spirit:component/spirit:name/text()" C:/Xilinx/SDSoC/2014.4/scripts/xdcc/xpathValueOf.xsl C:/labs/lab1_prebuilt/SDRelease/_sds/iprepo/repo/xilinx_com_hls_madd_1_0/component.xml
+ip_name: madd
+processing accelerators: C:/labs/lab1_prebuilt/SDRelease/_sds/iprepo/repo/xilinx_com_hls_mmult_1_0
+ip_dir: C:/labs/lab1_prebuilt/SDRelease/_sds/iprepo/repo/xilinx_com_hls_mmult_1_0
+xsltproc --stringparam xpath "spirit:component/spirit:name/text()" C:/Xilinx/SDSoC/2014.4/scripts/xdcc/xpathValueOf.xsl C:/labs/lab1_prebuilt/SDRelease/_sds/iprepo/repo/xilinx_com_hls_mmult_1_0/component.xml
+ip_name: mmult
+INFO: [SDSoC 0-0] Generating data motion network
+llvm-link -o C:/labs/lab1_prebuilt/SDRelease/_sds/.llvm/sdi_all.o C:/labs/lab1_prebuilt/SDRelease/_sds/.llvm/./src/madd.s C:/labs/lab1_prebuilt/SDRelease/_sds/.llvm/./src/main.s C:/labs/lab1_prebuilt/SDRelease/_sds/.llvm/./src/mmult.s
+
+C:\labs\lab1_prebuilt\SDRelease>C:\Xilinx\SDSoC\2014.4\llvm-clang\win64\llvm\bin\llvm-link.exe -o C:/labs/lab1_prebuilt/SDRelease/_sds/.llvm/sdi_all.o C:/labs/lab1_prebuilt/SDRelease/_sds/.llvm/./src/madd.s C:/labs/lab1_prebuilt/SDRelease/_sds/.llvm/./src/main.s C:/labs/lab1_prebuilt/SDRelease/_sds/.llvm/./src/mmult.s 
+
+C:\labs\lab1_prebuilt\SDRelease>exit /b 0 
+XidanePass  --platform zc702  --dmclkid 2  --repo C:/labs/lab1_prebuilt/SDRelease/_sds/.cdb/xd_ip_db.xml  --dmdb C:/Xilinx/SDSoC/2014.4/data/DM.db   -os linux 
+
+C:\labs\lab1_prebuilt\SDRelease\_sds\.llvm>opt -disable-output -instcombine -mem2reg -basicaa -XidanePass --platform zc702 --dmclkid 2 --repo C:/labs/lab1_prebuilt/SDRelease/_sds/.cdb/xd_ip_db.xml --dmdb C:/Xilinx/SDSoC/2014.4/data/DM.db -os linux  0<sdi_all.o 
+INFO: [SDSoC 0-0] Analyzing hardware accelerators...
+INFO: [SDSoC 0-0] Analyzing callers to hardware accelerators...
+INFO: [SDSoC 0-0] Scheduling data transfer graph for partition 0
+INFO: [SDSoC 0-0] Creating data motion network hardware for partition 0
+INFO: [SDSoC 0-0] Creating software stub functions for partition 0
+INFO: [SDSoC 0-0] Generating data motion network report for partition 0
+INFO: [SDSoC 0-0] Rewriting caller code
+INFO: [SDSoC 0-0] Rewrite C:/labs/lab1_prebuilt/src/main.cpp
+INFO: [SDSoC 0-0] Create accelerator stub functions
+stub_gen  -func madd  -stub C:/labs/lab1_prebuilt/SDRelease/_sds/.llvm/madd.cfrewrite  -o C:/labs/lab1_prebuilt/SDRelease/_sds/swstubs/madd.cpp  C:/labs/lab1_prebuilt/src/madd.cpp  --  -c  -target arm-xilinx-linux-gnueabi -mcpu=cortex-a9 -O0 -g   -IC:/Xilinx/SDSoC/2014.4/SDK/2014.4/gnu/arm/nt/arm-xilinx-linux-gnueabi/include/c++/4.8.3  -IC:/Xilinx/SDSoC/2014.4/SDK/2014.4/gnu/arm/nt/arm-xilinx-linux-gnueabi/include/c++/4.8.3/arm-xilinx-linux-gnueabi  -IC:/Xilinx/SDSoC/2014.4/SDK/2014.4/gnu/arm/nt/arm-xilinx-linux-gnueabi/include/c++/4.8.3/backward   -IC:/Xilinx/SDSoC/2014.4/SDK/2014.4/gnu/arm/nt/lib/gcc/arm-xilinx-linux-gnueabi/4.8.3/include  -IC:/Xilinx/SDSoC/2014.4/SDK/2014.4/gnu/arm/nt/lib/gcc/arm-xilinx-linux-gnueabi/4.8.3/include-fixed  -IC:/Xilinx/SDSoC/2014.4/SDK/2014.4/gnu/arm/nt/arm-xilinx-linux-gnueabi/include  -IC:/Xilinx/SDSoC/2014.4/SDK/2014.4/gnu/arm/nt/arm-xilinx-linux-gnueabi/libc/usr/include  -I C:/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/include  -I C:/Xilinx/SDSoC/2014.4/arm-xilinx-linux-gnueabi/include    -IC:/labs/lab1_prebuilt/src -IC:/labs/lab1_prebuilt/src -Wall -O3 -I../src -fmessage-length=0 -MMD -MP -D __SDSCC__
+INFO: [SDSoC 0-0] Successfully performed stub generation on file: 
+stub_gen  -func mmult  -stub C:/labs/lab1_prebuilt/SDRelease/_sds/.llvm/mmult.cfrewrite  -o C:/labs/lab1_prebuilt/SDRelease/_sds/swstubs/mmult.cpp  C:/labs/lab1_prebuilt/src/mmult.cpp  --  -c  -target arm-xilinx-linux-gnueabi -mcpu=cortex-a9 -O0 -g   -IC:/Xilinx/SDSoC/2014.4/SDK/2014.4/gnu/arm/nt/arm-xilinx-linux-gnueabi/include/c++/4.8.3  -IC:/Xilinx/SDSoC/2014.4/SDK/2014.4/gnu/arm/nt/arm-xilinx-linux-gnueabi/include/c++/4.8.3/arm-xilinx-linux-gnueabi  -IC:/Xilinx/SDSoC/2014.4/SDK/2014.4/gnu/arm/nt/arm-xilinx-linux-gnueabi/include/c++/4.8.3/backward   -IC:/Xilinx/SDSoC/2014.4/SDK/2014.4/gnu/arm/nt/lib/gcc/arm-xilinx-linux-gnueabi/4.8.3/include  -IC:/Xilinx/SDSoC/2014.4/SDK/2014.4/gnu/arm/nt/lib/gcc/arm-xilinx-linux-gnueabi/4.8.3/include-fixed  -IC:/Xilinx/SDSoC/2014.4/SDK/2014.4/gnu/arm/nt/arm-xilinx-linux-gnueabi/include  -IC:/Xilinx/SDSoC/2014.4/SDK/2014.4/gnu/arm/nt/arm-xilinx-linux-gnueabi/libc/usr/include  -I C:/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/include  -I C:/Xilinx/SDSoC/2014.4/arm-xilinx-linux-gnueabi/include    -IC:/labs/lab1_prebuilt/src -IC:/labs/lab1_prebuilt/src -Wall -O3 -I../src -fmessage-length=0 -MMD -MP -D __SDSCC__
+INFO: [SDSoC 0-0] Successfully performed stub generation on file: 
+xsltproc  -o C:/labs/lab1_prebuilt/SDRelease/_sds/p0/ipi/apsys_acc_info.xml  --stringparam P_XD_IP_REPOS C:/labs/lab1_prebuilt/SDRelease/_sds/.cdb/xd_ip_db.xml  C:/Xilinx/SDSoC/2014.4/scripts/xsd/genAdapterPackagedIpInfo.xsl 
+         C:/labs/lab1_prebuilt/SDRelease/_sds/.llvm/apsys_0.xml
+INFO: [SDSoC 0-0] Creating block diagram (BD), address map, port information and device registration for partition 0 (this may take a few minutes)
+system_linker -cf-input C:/labs/lab1_prebuilt/SDRelease/_sds/.llvm/apsys_0.xml -cf-output-dir _sds/p0 -ip-db C:/labs/lab1_prebuilt/SDRelease/_sds/.cdb/xd_ip_db.xml -ip-repo C:/labs/lab1_prebuilt/SDRelease/_sds/iprepo/repo -sds-pf C:/Xilinx/SDSoC/2014.4/platforms/zc702:linux -software-only   -sdsoc
+system_linker started at Thu Feb 05 1:12:22 PM Pacific Standard Time 2015
+INFO: [SDSoC 0-0] Creating hardware project files
+INFO: [SDSoC 0-0] Creating Vivado block design
+INFO: [SDSoC 0-0] Creating block diagram (BD) and address map
+INFO: [SDSoC 0-0] Copying address map
+INFO: [SDSoC 0-0] Creating port and device registration data
+C:/Xilinx/SDSoC/2014.4/bin/cf2sw -i apsys_0.xml -r C:/labs/lab1_prebuilt/SDRelease/_sds/.cdb/xd_ip_db.xml -a address_map.xml -pollMode 0    -n
+system_linker completed at Thu Feb 05 1:16:39 PM Pacific Standard Time 2015
+INFO: [SDSoC 0-0] Prepare hardware access API functions
+INFO: [SDSoC 0-0] Compile hardware access API functions
+INFO: [SDSoC 0-0] Compile accelerator stub functions
+arm-xilinx-linux-gnueabi-gcc -I C:/Xilinx/SDSoC/2014.4/arm-xilinx-linux-gnueabi/include  -I C:/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/include    -c  C:/labs/lab1_prebuilt/SDRelease/_sds/swstubs/devreg.c
+arm-xilinx-linux-gnueabi-gcc -I C:/Xilinx/SDSoC/2014.4/arm-xilinx-linux-gnueabi/include  -I C:/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/include    -c  C:/labs/lab1_prebuilt/SDRelease/_sds/swstubs/portinfo.c
+arm-xilinx-linux-gnueabi-g++ -I C:/Xilinx/SDSoC/2014.4/arm-xilinx-linux-gnueabi/include  -I C:/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/include    -c  C:/labs/lab1_prebuilt/SDRelease/_sds/swstubs/cf_stub.cpp
+arm-xilinx-linux-gnueabi-ar crs C:/labs/lab1_prebuilt/SDRelease/_sds/swstubs/libxlnk_stub.a C:/labs/lab1_prebuilt/SDRelease/_sds/swstubs/devreg.o C:/labs/lab1_prebuilt/SDRelease/_sds/swstubs/portinfo.o C:/labs/lab1_prebuilt/SDRelease/_sds/swstubs/cf_stub.o
+arm-xilinx-linux-gnueabi-g++ -c madd.cpp -I C:/Xilinx/SDSoC/2014.4/arm-xilinx-linux-gnueabi/include  -I C:/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/include   -IC:/labs/lab1_prebuilt/src -IC:/labs/lab1_prebuilt/src -Wall -O3 -I../src -fmessage-length=0 -MMD -MP -D __SDSCC__  -o madd.o
+arm-xilinx-linux-gnueabi-g++ -c mmult.cpp -I C:/Xilinx/SDSoC/2014.4/arm-xilinx-linux-gnueabi/include  -I C:/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/include   -IC:/labs/lab1_prebuilt/src -IC:/labs/lab1_prebuilt/src -Wall -O3 -I../src -fmessage-length=0 -MMD -MP -D __SDSCC__  -o mmult.o
+INFO: [SDSoC 0-0] Compile rewritten caller functions
+arm-xilinx-linux-gnueabi-objcopy -O binary --set-section-flags .xdsdata=alloc --only-section=.xdsdata C:/labs/lab1_prebuilt/SDRelease/src/main.o C:/labs/lab1_prebuilt/SDRelease/_sds/.data/main.xml
+arm-xilinx-linux-gnueabi-g++ -c C:/labs/lab1_prebuilt/SDRelease/_sds/swstubs/main.cpp -IC:/labs/lab1_prebuilt/src -IC:/labs/lab1_prebuilt/src -Wall -O3 -I../src -fmessage-length=0 -MMD -MP -D __SDSCC__ -I C:/Xilinx/SDSoC/2014.4/arm-xilinx-linux-gnueabi/include  -I C:/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/include   -o C:/labs/lab1_prebuilt/SDRelease/_sds/swstubs/main.o
+arm-xilinx-linux-gnueabi-ar crs C:/labs/lab1_prebuilt/SDRelease/_sds/swstubs/liblab1_prebuilt.a C:/labs/lab1_prebuilt/SDRelease/_sds/swstubs/devreg.o C:/labs/lab1_prebuilt/SDRelease/_sds/swstubs/portinfo.o C:/labs/lab1_prebuilt/SDRelease/_sds/swstubs/cf_stub.o C:/labs/lab1_prebuilt/SDRelease/_sds/swstubs/madd.o C:/labs/lab1_prebuilt/SDRelease/_sds/swstubs/mmult.o
+INFO: [SDSoC 0-0] Link application ELF file
+arm-xilinx-linux-gnueabi-g++   C:/labs/lab1_prebuilt/SDRelease/src/madd.o C:/labs/lab1_prebuilt/SDRelease/_sds/swstubs/main.o C:/labs/lab1_prebuilt/SDRelease/src/mmult.o C:/labs/lab1_prebuilt/SDRelease/_sds/swstubs/madd.o C:/labs/lab1_prebuilt/SDRelease/_sds/swstubs/mmult.o     -L C:/Xilinx/SDSoC/2014.4/arm-xilinx-linux-gnueabi/lib -LC:/labs/lab1_prebuilt/SDRelease/_sds/swstubs -Wl,--start-group  -Wl,--end-group -Wl,--start-group    -lpthread -lsds_lib -lxlnk_stub  -Wl,--end-group -o lab1_prebuilt.elf
+arm-xilinx-linux-gnueabi-objcopy -R .xddata -R .xdfcnmap -R .xdhlscore -R .xdcore -R .xdbdtcl -R .xdsdata -R .xdpp lab1_prebuilt.elf
+INFO: [SDSoC 0-0] Enable generation of hardware programming files
+INFO: [SDSoC 0-0] Enable generation of boot files
+INFO: [SDSoC 0-0] Calling system_linker for partition 0
+system_linker -cf-input C:/labs/lab1_prebuilt/SDRelease/_sds/.llvm/apsys_0.xml -cf-output-dir _sds/p0 -ip-db C:/labs/lab1_prebuilt/SDRelease/_sds/.cdb/xd_ip_db.xml -ip-repo C:/labs/lab1_prebuilt/SDRelease/_sds/iprepo/repo -sds-pf C:/Xilinx/SDSoC/2014.4/platforms/zc702:linux -bitstream -bit-name lab1_prebuilt.elf.bit -boot-files   -mdev-no-swgen -mdev-no-xsd -sdsoc -sd-output-dir _sds/p0/sd_card -bit-binary
+system_linker started at Thu Feb 05 1:16:42 PM Pacific Standard Time 2015
+INFO: [SDSoC 0-0] Generating bitstream for platform zc702.
+      This may take some time to complete
+... [13:17:51] Starting synth_design
+... [13:18:36] Starting RTL Elaboration : Time (s): cpu = 00:01:01 ; elapsed = 00:01:05 . Memory (MB): peak = 379.582 ; gain = 195.988
+... [13:35:52] Start Loading Part and Timing Information
+... [13:35:52] Start Applying 'set_property' XDC Constraints
+... [13:36:32] Start RTL Component Statistics 
+... [13:36:32] Start RTL Hierarchical Component Statistics 
+... [13:36:32] Start Part Resource Summary
+... [13:36:32] Start Parallel Synthesis Optimization  : Time (s): cpu = 00:18:48 ; elapsed = 00:19:01 . Memory (MB): peak = 1581.793 ; gain = 1398.199
+... [13:36:32] Start Cross Boundary Optimization
+... [13:36:57] Start Area Optimization
+... [13:39:03] Start Timing Optimization
+... [13:39:28] Start Applying XDC Timing Constraints
+... [13:39:58] Start Technology Mapping
+... [13:42:03] Start IO Insertion
+... [13:42:03] Start Flattening Before IO Insertion
+... [13:42:03] Start Final Netlist Cleanup
+... [13:42:13] Start Renaming Generated Instances
+... [13:42:23] Start Rebuilding User Hierarchy
+... [13:42:33] Start Writing Synthesis Report
+... [13:44:34] Starting DRC Task
+... [13:44:59] Starting Logic Optimization Task
+... [13:45:24] Starting Power Optimization Task
+... [13:45:54] Starting PowerOpt Patch Enables Task
+... [13:46:19] Starting Placer Task
+... [13:48:59] Starting Routing Task
+INFO: [SDSoC 0-0] Creating boot files
+system_linker completed at Thu Feb 05 1:52:41 PM Pacific Standard Time 2015
+All user specified timing constraints are met.
+sds++ log file saved as C:/labs/lab1_prebuilt/SDRelease/_sds/reports/sds.log
+sds++ completed at Thu Feb 05 1:52:41 PM Pacific Standard Time 2015

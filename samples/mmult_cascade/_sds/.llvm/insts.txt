@@ -1,0 +1,63 @@
+SW(3)@72\n   %puts = call i32 @puts(i8* getelementptr inbounds ([18 x i8]* @str, i32 0, i32 0)), !dbg !82
+SW(4)@74\n   call void @_ZL10mmult_initv(), !dbg !83
+SW(5)@76\n   %1 = call i64 @sds_clock_counter(), !dbg !84
+SW(6)@76\n   call void @llvm.dbg.value(metadata !{i64 %1}, i64 0, metadata !85), !dbg !84
+SW(7)@70\n   call void @llvm.dbg.value(metadata !87, i64 0, metadata !88), !dbg !89
+SW(8)@78\n   br label %2, !dbg !90
+SW(9)@0\n   %storemerge = phi i32 [ 0, %0 ], [ %12, %11 ]
+SW(10)@70\n   call void @llvm.dbg.value(metadata !{null}, i64 0, metadata !88), !dbg !89
+SW(11)@78\n   %3 = icmp slt i32 %storemerge, 1024, !dbg !92
+SW(12)@78\n   br i1 %3, label %4, label %13, !dbg !92
+SW(13)@79\n   %5 = load float** @tin1Buf, align 4, !dbg !95
+SW(14)@79\n   %6 = load float** @tin2Buf, align 4, !dbg !95
+SW(15)@79\n   %7 = load float** @toutBufSwInter, align 4, !dbg !95
+SW(16)@79\n   call void @_Z12mmult_goldenPfS_S_(float* %5, float* %6, float* %7), !dbg !95
+SW(17)@80\n   %8 = load float** @toutBufSwInter, align 4, !dbg !97
+SW(18)@80\n   %9 = load float** @tin3Buf, align 4, !dbg !97
+SW(19)@80\n   %10 = load float** @toutBufSw, align 4, !dbg !97
+SW(20)@80\n   call void @_Z12mmult_goldenPfS_S_(float* %8, float* %9, float* %10), !dbg !97
+SW(21)@81\n   br label %11, !dbg !98
+SW(22)@70\n   call void @llvm.dbg.value(metadata !{null}, i64 0, metadata !88), !dbg !89
+SW(23)@78\n   %12 = add nsw i32 %storemerge, 1, !dbg !99
+SW(24)@70\n   call void @llvm.dbg.value(metadata !{i32 %12}, i64 0, metadata !88), !dbg !89
+SW(25)@78\n   br label %2, !dbg !99
+SW(26)@83\n   %14 = call i64 @sds_clock_counter(), !dbg !100
+SW(27)@76\n   call void @llvm.dbg.value(metadata !{i64 %14}, i64 0, metadata !102), !dbg !84
+SW(28)@76\n   call void @llvm.dbg.value(metadata !{null}, i64 0, metadata !85), !dbg !84
+SW(29)@83\n   %15 = sub i64 %14, %1, !dbg !100
+SW(30)@83\n   %16 = lshr i64 %15, 10, !dbg !100
+SW(31)@83\n   %17 = call i32 (i8*, ...)* @printf(i8* getelementptr inbounds ([62 x i8]* @.str1, i32 0, i32 0), i64 %16), !dbg !100
+SW(32)@83\n   %18 = call i64 @sds_clock_counter(), !dbg !100
+SW(33)@76\n   call void @llvm.dbg.value(metadata !{i64 %18}, i64 0, metadata !85), !dbg !84
+SW(34)@70\n   call void @llvm.dbg.value(metadata !87, i64 0, metadata !88), !dbg !89
+SW(35)@85\n   br label %19, !dbg !103
+SW(36)@0\n   %storemerge1 = phi i32 [ 0, %13 ], [ %29, %28 ]
+SW(37)@70\n   call void @llvm.dbg.value(metadata !{null}, i64 0, metadata !88), !dbg !89
+SW(38)@85\n   %20 = icmp slt i32 %storemerge1, 1024, !dbg !105
+SW(39)@85\n   br i1 %20, label %21, label %30, !dbg !105
+SW(40)@86\n   %22 = load float** @tin1Buf, align 4, !dbg !108
+SW(41)@86\n   %23 = load float** @tin2Buf, align 4, !dbg !108
+SW(42)@86\n   %24 = load float** @toutBufHwInter, align 4, !dbg !108
+SW(43)@87\n   %25 = load float** @toutBufHwInter, align 4, !dbg !110
+SW(44)@87\n   %26 = load float** @tin3Buf, align 4, !dbg !110
+SW(45)@87\n   %27 = load float** @toutBufHw, align 4, !dbg !110
+SW(46)@88\n   br label %28, !dbg !111
+SW(47)@70\n   call void @llvm.dbg.value(metadata !{null}, i64 0, metadata !88), !dbg !89
+SW(48)@85\n   %29 = add nsw i32 %storemerge1, 1, !dbg !112
+SW(49)@70\n   call void @llvm.dbg.value(metadata !{i32 %29}, i64 0, metadata !88), !dbg !89
+SW(50)@85\n   br label %19, !dbg !112
+SW(51)@90\n   %31 = call i64 @sds_clock_counter(), !dbg !113
+SW(52)@76\n   call void @llvm.dbg.value(metadata !{i64 %31}, i64 0, metadata !102), !dbg !84
+SW(53)@76\n   call void @llvm.dbg.value(metadata !{null}, i64 0, metadata !85), !dbg !84
+SW(54)@90\n   %32 = sub i64 %31, %18, !dbg !113
+SW(55)@90\n   %33 = lshr i64 %32, 10, !dbg !113
+SW(56)@90\n   %34 = call i32 (i8*, ...)* @printf(i8* getelementptr inbounds ([64 x i8]* @.str2, i32 0, i32 0), i64 %33), !dbg !113
+SW(57)@92\n   %35 = call i32 @_ZL18mmult_result_checkv(), !dbg !115
+SW(58)@70\n   call void @llvm.dbg.value(metadata !{i32 %35}, i64 0, metadata !116), !dbg !117
+SW(59)@93\n   %36 = icmp eq i32 %35, 0, !dbg !118
+SW(60)@93\n   br i1 %36, label %38, label %37, !dbg !118
+SW(61)@95\n   br label %39, !dbg !120
+SW(62)@0\n   br label %39
+SW(63)@0\n   %storemerge2 = phi i32 [ 1, %38 ], [ 0, %37 ]
+SW(64)@94\n   store i32 %storemerge2, i32* @test_passed, align 4, !dbg !122
+SW(65)@99\n   ret void, !dbg !123

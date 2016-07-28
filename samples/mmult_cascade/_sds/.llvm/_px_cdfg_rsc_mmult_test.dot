@@ -1,0 +1,29 @@
+digraph CDFG {
+node [shape=record];
+bb0 [shape=record, label = "{bb0|<x0x2e72a30>SW(3)@72\nCPU\n|<x0x2e74240>SW(4)@74\nCPU\n|<x0x2e76dc0>SW(5)@76\nCPU\n|<x0x2e76fb0>SW(6)@76\nCPU\n|<x0x2e74420>SW(7)@70\nCPU\n|<x0x2e74630>SW(8)@78\nCPU\n}"];
+bb1 [shape=record, label = "{bb1|<x0x2e74950>SW(9)@0\nCPU\n|<x0x2e74b10>SW(10)@70\nCPU\n|<x0x2e73110>SW(11)@78\nCPU\n|<x0x2e73300>SW(12)@78\nCPU\n}"];
+bb2 [shape=record, label = "{bb2|<x0x2e74830>SW(13)@79\nCPU\n|<x0x2e73870>SW(14)@79\nCPU\n|<x0x2e73a60>SW(15)@79\nCPU\n|<x0x2e74ca0>SW(16)@79\nCPU\n|<x0x2e74e70>SW(17)@80\nCPU\n|<x0x2e75070>SW(18)@80\nCPU\n|<x0x2e75260>SW(19)@80\nCPU\n|<x0x2e75460>SW(20)@80\nCPU\n|<x0x2e75670>SW(21)@81\nCPU\n}"];
+bb3 [shape=record, label = "{bb3|<x0x2e75930>SW(22)@70\nCPU\n|<x0x2e75ba0>SW(23)@78\nCPU\n|<x0x2e75d90>SW(24)@70\nCPU\n|<x0x2e75fa0>SW(25)@78\nCPU\n}"];
+bb4 [shape=record, label = "{bb4|<x0x2e76330>SW(26)@83\nCPU\n|<x0x2e76560>SW(27)@76\nCPU\n|<x0x2e76780>SW(28)@76\nCPU\n|<x0x2e76990>SW(29)@83\nCPU\n|<x0x2e76b80>SW(30)@83\nCPU\n|<x0x2e77d50>SW(31)@83\nCPU\n|<x0x2e77ef0>SW(32)@83\nCPU\n|<x0x2e780f0>SW(33)@76\nCPU\n|<x0x2e78300>SW(34)@70\nCPU\n|<x0x2e78510>SW(35)@85\nCPU\n}"];
+bb5 [shape=record, label = "{bb5|<x0x2e787d0>SW(36)@0\nCPU\n|<x0x2e789d0>SW(37)@70\nCPU\n|<x0x2e78be0>SW(38)@85\nCPU\n|<x0x2e78de0>SW(39)@85\nCPU\n}"];
+bb6 [shape=record, label = "{bb6|<x0x2e790b0>SW(40)@86\nCPU\n|<x0x2e79310>SW(41)@86\nCPU\n|<x0x2e79510>SW(42)@86\nCPU\n|<x0x2e7d420>XFER(IN):in_A @86, ARRAY\nCPU\nAXIDMA_SG(mm2s) on ACP(PS to ACC)\n|<x0x2e7d500>XFER(IN):in_B @86, ARRAY\nCPU\nAXIDMA_SG(mm2s) on ACP(PS to ACC)\n|<x0x2e6e8b0>call 'mmult_accel' in 'mmult.cpp' @86\nACC\n|<x0x2e7d5e0>XFER(OUT):out_C @86, DIRECT_SOURCE\nFIFO2FIFO(ACC to ACC)\n\n--(DIRECT)RAW--\>XFER(IN):in_A @87, DIRECT_SINK\nFIFO2FIFO(ACC to ACC)\n\n|<x0x2e79730>SW(43)@87\nCPU\n|<x0x2e79930>SW(44)@87\nCPU\n|<x0x2e79b30>SW(45)@87\nCPU\n|<x0x2e7e230>XFER(IN):in_A @87, DIRECT_SINK\nFIFO2FIFO(ACC to ACC)\n|<x0x2e7e340>XFER(IN):in_B @87, ARRAY\nCPU\nAXIDMA_SG(mm2s) on ACP(PS to ACC)\n|<x0x2e6a6f0>call 'mmult_accel' in 'mmult.cpp' @87\nACC\n|<x0x2e7e450>XFER(OUT):out_C @87, ARRAY\nCPU\nAXIDMA_SG(s2mm) on ACP(ACC to PS)\n|<x0x2e6f590>cf_wait(): \nXFER(IN):in_B @87, ARRAY\nCPU\nAXIDMA_SG(mm2s) on ACP(PS to ACC)\nXFER(OUT):out_C @87, ARRAY\nCPU\nAXIDMA_SG(s2mm) on ACP(ACC to PS)\nXFER(IN):in_A @86, ARRAY\nCPU\nAXIDMA_SG(mm2s) on ACP(PS to ACC)\nXFER(IN):in_B @86, ARRAY\nCPU\nAXIDMA_SG(mm2s) on ACP(PS to ACC)\n\nCPU\nCPU\nCPU\nCPU\n|<x0x2e79d50>SW(46)@88\nCPU\n}"];
+bb7 [shape=record, label = "{bb7|<x0x2e7a080>SW(47)@70\nCPU\n|<x0x2e7a2f0>SW(48)@85\nCPU\n|<x0x2e7a4e0>SW(49)@70\nCPU\n|<x0x2e7a6f0>SW(50)@85\nCPU\n}"];
+bb8 [shape=record, label = "{bb8|<x0x2e76260>SW(51)@90\nCPU\n|<x0x2e7ad60>SW(52)@76\nCPU\n|<x0x2e7af80>SW(53)@76\nCPU\n|<x0x2e7b190>SW(54)@90\nCPU\n|<x0x2e7b380>SW(55)@90\nCPU\n|<x0x2e7b570>SW(56)@90\nCPU\n|<x0x2e7b7b0>SW(57)@92\nCPU\n|<x0x2e7b9b0>SW(58)@70\nCPU\n|<x0x2e7bbd0>SW(59)@93\nCPU\n|<x0x2e7bdc0>SW(60)@93\nCPU\n}"];
+bb9 [shape=record, label = "{bb9|<x0x2e7c0d0>SW(61)@95\nCPU\n}"];
+bb10 [shape=record, label = "{bb10|<x0x2e7c3b0>SW(62)@0\nCPU\n}"];
+bb11 [shape=record, label = "{bb11|<x0x2e7c660>SW(63)@0\nCPU\n|<x0x2e7c850>SW(64)@94\nCPU\n|<x0x2e7ca50>SW(65)@99\nCPU\n}"];
+bb0 -> bb1
+bb1 -> bb2
+bb1 -> bb4
+bb2 -> bb3
+bb3 -> bb1
+bb4 -> bb5
+bb5 -> bb6
+bb5 -> bb8
+bb6 -> bb7
+bb7 -> bb5
+bb8 -> bb10
+bb8 -> bb9
+bb9 -> bb11
+bb10 -> bb11
+}

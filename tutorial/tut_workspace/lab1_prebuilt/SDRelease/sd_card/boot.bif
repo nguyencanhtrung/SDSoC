@@ -1,0 +1,7 @@
+/* linux */
+the_ROM_image:
+{
+  [bootloader]C:/Xilinx/SDSoC/2014.4/platforms/zc702/boot/fsbl.elf
+  C:/labs/lab1_prebuilt/SDRelease/lab1_prebuilt.elf.bit
+  C:/Xilinx/SDSoC/2014.4/platforms/zc702/boot/u-boot.elf
+}

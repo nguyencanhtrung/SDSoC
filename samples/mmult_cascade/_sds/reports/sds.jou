@@ -1,0 +1,65 @@
+(c) Copyright 2012-2015 Xilinx, Inc. All Rights Reserved.
+#-----------------------------------------------------------
+# Tool version  : sds++ 2014.4 20150228
+# Start time    : Thu Jul 28 06:51:19 PM CEST 2016
+# Command line  : sds++ -sds-pf zed -sds-hw mmult_accel mmult_accel.cpp -sds-end -poll-mode 1 -O3 mmult.o mmult_accel.o -o mmult.elf
+# Log file      : /home/trungnguyen/SDSoC/samples/mmult_cascade/_sds/reports/sds.log
+# Journal file  : /home/trungnguyen/SDSoC/samples/mmult_cascade/_sds/reports/sds.jou
+# Report file   : /home/trungnguyen/SDSoC/samples/mmult_cascade/_sds/reports/sds.rpt
+#-----------------------------------------------------------
+
+# INFO: [SDSoC 0-0] Analyzing object files
+arm-xilinx-linux-gnueabi-objcopy -O binary --set-section-flags .xddata=alloc --only-section=.xddata /home/trungnguyen/SDSoC/samples/mmult_cascade/mmult.o /home/trungnguyen/SDSoC/samples/mmult_cascade/_sds/.data/mmult.o.xml
+arm-xilinx-linux-gnueabi-objcopy -O binary --set-section-flags .xddata=alloc --only-section=.xddata /home/trungnguyen/SDSoC/samples/mmult_cascade/mmult_accel.o /home/trungnguyen/SDSoC/samples/mmult_cascade/_sds/.data/mmult_accel.o.xml
+arm-xilinx-linux-gnueabi-objcopy -O binary --set-section-flags .xdpp=alloc --only-section=.xdpp /home/trungnguyen/SDSoC/samples/mmult_cascade/mmult_accel.o /home/trungnguyen/SDSoC/samples/mmult_cascade/_sds/.pp/mmult_accel.ii
+arm-xilinx-linux-gnueabi-objcopy -O binary --set-section-flags .xdfcnmap=alloc --only-section=.xdfcnmap /home/trungnguyen/SDSoC/samples/mmult_cascade/mmult_accel.o /home/trungnguyen/SDSoC/samples/mmult_cascade/_sds/.cdb/mmult_accel.fcnmap.xml
+arm-xilinx-linux-gnueabi-objcopy -O binary --set-section-flags .xdhlscore=alloc --only-section=.xdhlscore /home/trungnguyen/SDSoC/samples/mmult_cascade/mmult_accel.o /home/trungnguyen/SDSoC/samples/mmult_cascade/_sds/iprepo/repo/xilinx_com_hls_mmult_accel_1_0/xilinx_com_hls_mmult_accel_1_0.zip
+unzip -u -o /home/trungnguyen/SDSoC/samples/mmult_cascade/_sds/iprepo/repo/xilinx_com_hls_mmult_accel_1_0/xilinx_com_hls_mmult_accel_1_0.zip -d /home/trungnguyen/SDSoC/samples/mmult_cascade/_sds/iprepo/repo/xilinx_com_hls_mmult_accel_1_0
+arm-xilinx-linux-gnueabi-objcopy -O binary --set-section-flags .xdif=alloc --only-section=.xdif /home/trungnguyen/SDSoC/samples/mmult_cascade/mmult_accel.o /home/trungnguyen/SDSoC/samples/mmult_cascade/_sds/.cdb/mmult_accel_if.xml
+build_xd_ip_db  -sdsoc  -sds-pf /opt/Xilinx/SDSoC/2014.4/platforms/zed/zed_hw.pfm  -clkid 1 -ip /home/trungnguyen/SDSoC/samples/mmult_cascade/_sds/iprepo/repo/xilinx_com_hls_mmult_accel_1_0  -o /home/trungnguyen/SDSoC/samples/mmult_cascade/_sds/.cdb/xd_ip_db.xml  
+# INFO: [SDSoC 0-0] Generating data motion network
+llvm-link -o /home/trungnguyen/SDSoC/samples/mmult_cascade/_sds/.llvm/sdi_all.o /home/trungnguyen/SDSoC/samples/mmult_cascade/_sds/.llvm/mmult.s /home/trungnguyen/SDSoC/samples/mmult_cascade/_sds/.llvm/mmult_accel.s
+cd /home/trungnguyen/SDSoC/samples/mmult_cascade/_sds/.llvm
+cd /home/trungnguyen/SDSoC/samples/mmult_cascade/_sds/.llvm
+XidanePass  --platform zed  --dmclkid 1  --repo /home/trungnguyen/SDSoC/samples/mmult_cascade/_sds/.cdb/xd_ip_db.xml  --dmdb /opt/Xilinx/SDSoC/2014.4/data/DM.db   -os linux 
+cd /home/trungnguyen/SDSoC/samples/mmult_cascade
+# INFO: [SDSoC 0-0] Create accelerator stub functions
+cd /home/trungnguyen/SDSoC/samples/mmult_cascade/_sds/swstubs
+stub_gen  -func mmult_accel  -stub /home/trungnguyen/SDSoC/samples/mmult_cascade/_sds/.llvm/mmult_accel.cfrewrite  -o /home/trungnguyen/SDSoC/samples/mmult_cascade/_sds/swstubs/mmult_accel.cpp  /home/trungnguyen/SDSoC/samples/mmult_cascade/mmult_accel.cpp  --  -c  -target arm-xilinx-linux-gnueabi -mcpu=cortex-a9 -O0 -g -w   -I/opt/Xilinx/SDSoC/2014.4/SDK/2014.4/gnu/arm/lin/arm-xilinx-linux-gnueabi/include/c++/4.8.3  -I/opt/Xilinx/SDSoC/2014.4/SDK/2014.4/gnu/arm/lin/arm-xilinx-linux-gnueabi/include/c++/4.8.3/arm-xilinx-linux-gnueabi  -I/opt/Xilinx/SDSoC/2014.4/SDK/2014.4/gnu/arm/lin/arm-xilinx-linux-gnueabi/include/c++/4.8.3/backward   -I/opt/Xilinx/SDSoC/2014.4/SDK/2014.4/gnu/arm/lin/lib/gcc/arm-xilinx-linux-gnueabi/4.8.3/include  -I/opt/Xilinx/SDSoC/2014.4/SDK/2014.4/gnu/arm/lin/lib/gcc/arm-xilinx-linux-gnueabi/4.8.3/include-fixed  -I/opt/Xilinx/SDSoC/2014.4/SDK/2014.4/gnu/arm/lin/arm-xilinx-linux-gnueabi/include  -I/opt/Xilinx/SDSoC/2014.4/SDK/2014.4/gnu/arm/lin/arm-xilinx-linux-gnueabi/libc/usr/include  -I /opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/include  -I /opt/Xilinx/SDSoC/2014.4/arm-xilinx-linux-gnueabi/include    -I/home/trungnguyen/SDSoC/samples/mmult_cascade  -Wall -O3 -D __SDSCC__
+cd /home/trungnguyen/SDSoC/samples/mmult_cascade
+xsltproc  -o /home/trungnguyen/SDSoC/samples/mmult_cascade/_sds/p0/ipi/apsys_acc_info.xml  --stringparam P_XD_IP_REPOS /home/trungnguyen/SDSoC/samples/mmult_cascade/_sds/.cdb/xd_ip_db.xml  /opt/Xilinx/SDSoC/2014.4/scripts/xsd/genAdapterPackagedIpInfo.xsl 
+         /home/trungnguyen/SDSoC/samples/mmult_cascade/_sds/.llvm/apsys_0.xml
+cd /home/trungnguyen/SDSoC/samples/mmult_cascade
+cd /home/trungnguyen/SDSoC/samples/mmult_cascade
+# INFO: [SDSoC 0-0] Creating block diagram (BD), address map, port information and device registration for partition 0 (this may take a few minutes)
+system_linker -cf-input /home/trungnguyen/SDSoC/samples/mmult_cascade/_sds/.llvm/apsys_0.xml -cf-output-dir _sds/p0 -ip-db /home/trungnguyen/SDSoC/samples/mmult_cascade/_sds/.cdb/xd_ip_db.xml -ip-repo /home/trungnguyen/SDSoC/samples/mmult_cascade/_sds/iprepo/repo -sds-pf /opt/Xilinx/SDSoC/2014.4/platforms/zed:linux -software-only   -poll-mode 1 -sdsoc
+# INFO: [SDSoC 0-0] Prepare hardware access API functions
+cd /home/trungnguyen/SDSoC/samples/mmult_cascade
+cd /home/trungnguyen/SDSoC/samples/mmult_cascade
+# INFO: [SDSoC 0-0] Compile hardware access API functions
+# INFO: [SDSoC 0-0] Compile accelerator stub functions
+cd /home/trungnguyen/SDSoC/samples/mmult_cascade/_sds/swstubs
+arm-xilinx-linux-gnueabi-gcc -I /opt/Xilinx/SDSoC/2014.4/arm-xilinx-linux-gnueabi/include  -I /opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/include    -c  /home/trungnguyen/SDSoC/samples/mmult_cascade/_sds/swstubs/devreg.c
+arm-xilinx-linux-gnueabi-gcc -I /opt/Xilinx/SDSoC/2014.4/arm-xilinx-linux-gnueabi/include  -I /opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/include    -c  /home/trungnguyen/SDSoC/samples/mmult_cascade/_sds/swstubs/portinfo.c
+arm-xilinx-linux-gnueabi-g++ -I /opt/Xilinx/SDSoC/2014.4/arm-xilinx-linux-gnueabi/include  -I /opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/include    -c  /home/trungnguyen/SDSoC/samples/mmult_cascade/_sds/swstubs/cf_stub.c
+arm-xilinx-linux-gnueabi-ar crs /home/trungnguyen/SDSoC/samples/mmult_cascade/_sds/swstubs/libxlnk_stub.a /home/trungnguyen/SDSoC/samples/mmult_cascade/_sds/swstubs/devreg.o /home/trungnguyen/SDSoC/samples/mmult_cascade/_sds/swstubs/portinfo.o /home/trungnguyen/SDSoC/samples/mmult_cascade/_sds/swstubs/cf_stub.o
+arm-xilinx-linux-gnueabi-g++ -c mmult_accel.cpp -I /opt/Xilinx/SDSoC/2014.4/arm-xilinx-linux-gnueabi/include  -I /opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/include   -I/home/trungnguyen/SDSoC/samples/mmult_cascade  -Wall -O3 -D __SDSCC__  -o mmult_accel.o
+cd /home/trungnguyen/SDSoC/samples/mmult_cascade
+# INFO: [SDSoC 0-0] Compile rewritten caller functions
+cd /home/trungnguyen/SDSoC/samples/mmult_cascade/_sds/swstubs
+arm-xilinx-linux-gnueabi-objcopy -O binary --set-section-flags .xdsdata=alloc --only-section=.xdsdata /home/trungnguyen/SDSoC/samples/mmult_cascade/mmult.o /home/trungnguyen/SDSoC/samples/mmult_cascade/_sds/.data/mmult.xml
+arm-xilinx-linux-gnueabi-g++ -c /home/trungnguyen/SDSoC/samples/mmult_cascade/_sds/swstubs/mmult.cpp -I/home/trungnguyen/SDSoC/samples/mmult_cascade  -Wall -O3 -D __SDSCC__ -I /opt/Xilinx/SDSoC/2014.4/arm-xilinx-linux-gnueabi/include  -I /opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/include   -o /home/trungnguyen/SDSoC/samples/mmult_cascade/_sds/swstubs/mmult.o
+cd /home/trungnguyen/SDSoC/samples/mmult_cascade
+cd /home/trungnguyen/SDSoC/samples/mmult_cascade/_sds/swstubs
+arm-xilinx-linux-gnueabi-ar crs /home/trungnguyen/SDSoC/samples/mmult_cascade/_sds/swstubs/libmmult.a /home/trungnguyen/SDSoC/samples/mmult_cascade/_sds/swstubs/devreg.o /home/trungnguyen/SDSoC/samples/mmult_cascade/_sds/swstubs/portinfo.o /home/trungnguyen/SDSoC/samples/mmult_cascade/_sds/swstubs/cf_stub.o /home/trungnguyen/SDSoC/samples/mmult_cascade/_sds/swstubs/mmult_accel.o
+cd /home/trungnguyen/SDSoC/samples/mmult_cascade
+# INFO: [SDSoC 0-0] Link application ELF file
+arm-xilinx-linux-gnueabi-g++   /home/trungnguyen/SDSoC/samples/mmult_cascade/_sds/swstubs/mmult.o /home/trungnguyen/SDSoC/samples/mmult_cascade/mmult_accel.o /home/trungnguyen/SDSoC/samples/mmult_cascade/_sds/swstubs/mmult_accel.o  -O3   -L /opt/Xilinx/SDSoC/2014.4/arm-xilinx-linux-gnueabi/lib -L/home/trungnguyen/SDSoC/samples/mmult_cascade/_sds/swstubs -Wl,--start-group  -Wl,--end-group -Wl,--start-group    -lpthread -lsds_lib -lxlnk_stub  -Wl,--end-group -o /home/trungnguyen/SDSoC/samples/mmult_cascade/_sds/swstubs/mmult.elf
+arm-xilinx-linux-gnueabi-objcopy -R .xddata -R .xdfcnmap -R .xdhlscore -R .xdcore -R .xdbdtcl -R .xdsdata -R .xdpp /home/trungnguyen/SDSoC/samples/mmult_cascade/_sds/swstubs/mmult.elf
+cd /home/trungnguyen/SDSoC/samples/mmult_cascade
+# INFO: [SDSoC 0-0] Enable generation of hardware programming files
+# INFO: [SDSoC 0-0] Enable generation of boot files
+# INFO: [SDSoC 0-0] Calling system_linker for partition 0
+system_linker -cf-input /home/trungnguyen/SDSoC/samples/mmult_cascade/_sds/.llvm/apsys_0.xml -cf-output-dir _sds/p0 -ip-db /home/trungnguyen/SDSoC/samples/mmult_cascade/_sds/.cdb/xd_ip_db.xml -ip-repo /home/trungnguyen/SDSoC/samples/mmult_cascade/_sds/iprepo/repo -sds-pf /opt/Xilinx/SDSoC/2014.4/platforms/zed:linux -bitstream -bit-name mmult.elf.bit -boot-files   -poll-mode 1 -mdev-no-swgen -mdev-no-xsd -sdsoc -sd-output-dir _sds/p0/sd_card -bit-binary -elf /home/trungnguyen/SDSoC/samples/mmult_cascade/_sds/swstubs/mmult.elf
+# All user specified timing constraints are met.
+# sds++ completed at Thu Jul 28 07:03:11 PM CEST 2016

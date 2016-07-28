@@ -1,0 +1,62 @@
+19:02:19 **** Build of configuration SDRelease for project lab1 ****
+make all 
+Building file: ../src/madd.cpp
+Invoking: SDS++ Linux Compiler
+sds++ -Wall -O3 -I"../src" -c -fmessage-length=0 -MT"src/madd.o" -sds-hw madd madd.cpp -sds-end -MMD -MP -MF"src/madd.d" -MT"src/madd.d" -o "src/madd.o" "../src/madd.cpp" -sds-pf zed
+INFO: [SDSoC 0-0] processing -sds-hw block for madd
+INFO: [SDSoC 0-0] Performing accelerator source linting
+INFO: [SDSoC 0-0] Create data motion intermediate representation
+INFO: [SDSoC 0-0] Performing pragma generation
+INFO: [SDSoC 0-0] Moving function madd to Programmable Logic
+sds++ log file saved as /home/trungnguyen/SDSoC/tutorial/tut_workspace/lab1/SDRelease/_sds/reports/sds_madd.log
+
+Finished building: ../src/madd.cpp
+ 
+Building file: ../src/main.cpp
+Invoking: SDS++ Linux Compiler
+sds++ -Wall -O3 -I"../src" -c -fmessage-length=0 -MT"src/main.o" -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cpp" -sds-pf zed
+INFO: [SDSoC 0-0] Create data motion intermediate representation
+INFO: [SDSoC 0-0] Compiling /home/trungnguyen/SDSoC/tutorial/tut_workspace/lab1/src/main.cpp
+sds++ log file saved as /home/trungnguyen/SDSoC/tutorial/tut_workspace/lab1/SDRelease/_sds/reports/sds_main.log
+
+Finished building: ../src/main.cpp
+ 
+Building file: ../src/mmult.cpp
+Invoking: SDS++ Linux Compiler
+sds++ -Wall -O3 -I"../src" -c -fmessage-length=0 -MT"src/mmult.o" -sds-hw mmult mmult.cpp -sds-end -MMD -MP -MF"src/mmult.d" -MT"src/mmult.d" -o "src/mmult.o" "../src/mmult.cpp" -sds-pf zed
+INFO: [SDSoC 0-0] processing -sds-hw block for mmult
+INFO: [SDSoC 0-0] Performing accelerator source linting
+INFO: [SDSoC 0-0] Create data motion intermediate representation
+INFO: [SDSoC 0-0] Performing pragma generation
+INFO: [SDSoC 0-0] Moving function mmult to Programmable Logic
+sds++ log file saved as /home/trungnguyen/SDSoC/tutorial/tut_workspace/lab1/SDRelease/_sds/reports/sds_mmult.log
+
+Finished building: ../src/mmult.cpp
+ 
+Building target: lab1.elf
+Invoking: SDS++ Linux Linker
+sds++  -o "lab1.elf"  ./src/madd.o ./src/main.o ./src/mmult.o    -sds-pf zed
+INFO: [SDSoC 0-0] Analyzing object files
+... /home/trungnguyen/SDSoC/tutorial/tut_workspace/lab1/SDRelease/src/madd.o
+... /home/trungnguyen/SDSoC/tutorial/tut_workspace/lab1/SDRelease/src/main.o
+... /home/trungnguyen/SDSoC/tutorial/tut_workspace/lab1/SDRelease/src/mmult.o
+INFO: [SDSoC 0-0] Generating data motion network
+INFO: [SDSoC 0-0] Analyzing hardware accelerators...
+INFO: [SDSoC 0-0] Analyzing callers to hardware accelerators...
+INFO: [SDSoC 0-0] Scheduling data transfer graph for partition 0
+INFO: [SDSoC 0-0] Creating data motion network hardware for partition 0
+INFO: [SDSoC 0-0] Creating software stub functions for partition 0
+INFO: [SDSoC 0-0] Generating data motion network report for partition 0
+INFO: [SDSoC 0-0] Rewriting caller code
+INFO: [SDSoC 0-0] Rewrite /home/trungnguyen/SDSoC/tutorial/tut_workspace/lab1/src/main.cpp
+INFO: [SDSoC 0-0] Create accelerator stub functions
+INFO: [SDSoC 0-0] Creating block diagram (BD), address map, port information and device registration for partition 0 (this may take a few minutes)
+system_linker started at Thu Jul 28 07:03:06 PM CEST 2016
+INFO: [SDSoC 0-0] Creating hardware project files
+INFO: [SDSoC 0-0] Creating Vivado block design
+INFO: [SDSoC 0-0] Creating block diagram (BD) and address map
+make: *** [lab1.elf] Terminated
+Command canceled
+
+19:03:15 Build Cancelled (took 55s.916ms)
+

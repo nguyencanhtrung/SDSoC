@@ -1,0 +1,19 @@
+#-----------------------------------------------------------
+# Vivado v2014.4 (64-bit)
+# SW Build 1071353 on Tue Nov 18 18:29:27 MST 2014
+# IP Build 1071914 on Wed Nov 19 05:30:59 MST 2014
+# Start of session at: Thu Feb 05 13:09:39 2015
+# Process ID: 5764
+# Log file: C:/labs/lab1_prebuilt/SDRelease/_sds/vhls/madd/solution/impl/ip/vivado.log
+# Journal file: C:/labs/lab1_prebuilt/SDRelease/_sds/vhls/madd/solution/impl/ip\vivado.jou
+#-----------------------------------------------------------
+source run_ippack.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'c:/Xilinx/SDSoC/2014.4/Vivado/2014.4/data/ip'.
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'madd_ap_fadd_3_full_dsp_32'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'madd_ap_fadd_3_full_dsp_32'...
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'c:/Xilinx/SDSoC/2014.4/Vivado/2014.4/data/ip'.
+INFO: [Common 17-206] Exiting Vivado at Thu Feb 05 13:09:43 2015...

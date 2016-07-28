@@ -1,0 +1,10 @@
+#-----------------------------------------------------------
+# Vivado v2014.4 (64-bit)
+# SW Build 1071353 on Tue Nov 18 18:29:27 MST 2014
+# IP Build 1071914 on Wed Nov 19 05:30:59 MST 2014
+# Start of session at: Thu Feb 05 13:17:28 2015
+# Process ID: 9828
+# Log file: C:/labs/lab1_prebuilt/SDRelease/_sds/p0/ipi/zc702.runs/synth_1/zc702_wrapper.vds
+# Journal file: C:/labs/lab1_prebuilt/SDRelease/_sds/p0/ipi/zc702.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source zc702_wrapper.tcl

@@ -1,0 +1,16 @@
+(c) Copyright 2012-2015 Xilinx, Inc. All Rights Reserved.
+#-----------------------------------------------------------
+# Tool version  : sds++ PA2 v1.0 20150115
+# Start time    : Thu Feb 05 1:10:30 PM Pacific Standard Time 2015
+# Command line  : sds++ -Wall -O3 -I../src -c -fmessage-length=0 -MTsrc/main.o -MMD -MP -MFsrc/main.d -MTsrc/main.d -o src/main.o ../src/main.cpp -sds-pf zc702
+# Log file      : C:/labs/lab1_prebuilt/SDRelease/_sds/reports/sds_main.log
+# Journal file  : C:/labs/lab1_prebuilt/SDRelease/_sds/reports/sds_main.jou
+# Report file   : C:/labs/lab1_prebuilt/SDRelease/_sds/reports/sds_main.rpt
+#-----------------------------------------------------------
+
+# INFO: [SDSoC 0-0] Create data motion intermediate representation
+clang_wrapper -target arm-xilinx-linux-gnueabi -mcpu=cortex-a9 -O0 -g   -IC:/Xilinx/SDSoC/2014.4/SDK/2014.4/gnu/arm/nt/arm-xilinx-linux-gnueabi/include/c++/4.8.3  -IC:/Xilinx/SDSoC/2014.4/SDK/2014.4/gnu/arm/nt/arm-xilinx-linux-gnueabi/include/c++/4.8.3/arm-xilinx-linux-gnueabi  -IC:/Xilinx/SDSoC/2014.4/SDK/2014.4/gnu/arm/nt/arm-xilinx-linux-gnueabi/include/c++/4.8.3/backward   -IC:/Xilinx/SDSoC/2014.4/SDK/2014.4/gnu/arm/nt/lib/gcc/arm-xilinx-linux-gnueabi/4.8.3/include  -IC:/Xilinx/SDSoC/2014.4/SDK/2014.4/gnu/arm/nt/lib/gcc/arm-xilinx-linux-gnueabi/4.8.3/include-fixed  -IC:/Xilinx/SDSoC/2014.4/SDK/2014.4/gnu/arm/nt/arm-xilinx-linux-gnueabi/include  -IC:/Xilinx/SDSoC/2014.4/SDK/2014.4/gnu/arm/nt/arm-xilinx-linux-gnueabi/libc/usr/include  -I C:/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/include  -I C:/Xilinx/SDSoC/2014.4/arm-xilinx-linux-gnueabi/include   -I../src -Wall -I../src -fmessage-length=0 -MMD -MP -D __SDSCC__ -emit-llvm -S C:/labs/lab1_prebuilt/src/main.cpp -o C:/labs/lab1_prebuilt/SDRelease/_sds/.llvm/src/main.s
+# INFO: [SDSoC 0-0] Compiling C:/labs/lab1_prebuilt/src/main.cpp
+arm-xilinx-linux-gnueabi-g++ -c -I../src -Wall -O3 -I../src -fmessage-length=0 -MMD -MP -D __SDSCC__ -MTC:/labs/lab1_prebuilt/SDRelease/src/main.o -MFC:/labs/lab1_prebuilt/SDRelease/src/main.d -MTC:/labs/lab1_prebuilt/SDRelease/src/main.d -I C:/Xilinx/SDSoC/2014.4/arm-xilinx-linux-gnueabi/include  -I C:/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/include   C:/labs/lab1_prebuilt/src/main.cpp -o src/main.o
+arm-xilinx-linux-gnueabi-objcopy --add-section .xdsdata=C:/labs/lab1_prebuilt/SDRelease/_sds/swstubs/main.xml src/main.o
+# sds++ completed at Thu Feb 05 1:10:35 PM Pacific Standard Time 2015

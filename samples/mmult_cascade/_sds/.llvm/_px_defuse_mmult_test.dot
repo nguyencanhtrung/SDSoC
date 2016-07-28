@@ -1,0 +1,9 @@
+digraph defuse_graph {
+v0 [label = "use: tin1Buf(bb6),hw, call:mmult_accel"];
+v1 [label = "use: tin2Buf(bb6),hw, call:mmult_accel"];
+v2 [label = "def: toutBufHwInter(bb6),hw, call:mmult_accel"];
+v3 [label = "use: toutBufHwInter(bb6),hw, call:mmult_accel"];
+v4 [label = "use: tin3Buf(bb6),hw, call:mmult_accel"];
+v5 [label = "def: toutBufHw(bb6),hw, call:mmult_accel"];
+v2 -> v3;
+}

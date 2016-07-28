@@ -1,0 +1,10 @@
+#-----------------------------------------------------------
+# Vivado v2014.4 (64-bit)
+# SW Build 1071353 on Tue Nov 18 16:48:31 MST 2014
+# IP Build 1071914 on Wed Nov 19 05:30:59 MST 2014
+# Start of session at: Thu Jul 28 18:10:42 2016
+# Process ID: 3941
+# Log file: /home/trungnguyen/SDSoC/samples/mmult_pipelined/_sds/p0/ipi/vivado.log
+# Journal file: /home/trungnguyen/SDSoC/samples/mmult_pipelined/_sds/p0/ipi/vivado.jou
+#-----------------------------------------------------------
+source /home/trungnguyen/SDSoC/samples/mmult_pipelined/_sds/p0/ipi/top.ipi.tcl

@@ -1,0 +1,16 @@
+digraph defuse_graph {
+v0 [label = "use: call 'mmult_accel' in 'mmult.cpp' @92 (async_id:1)\n:0: (array:cannot trace)(bb12),hw, call:mmult_accel"];
+v1 [label = "use: call 'mmult_accel' in 'mmult.cpp' @92 (async_id:1)\n:1: (array:cannot trace)(bb12),hw, call:mmult_accel"];
+v2 [label = "def: call 'mmult_accel' in 'mmult.cpp' @92 (async_id:1)\n:2: (array:cannot trace)(bb12),hw, call:mmult_accel"];
+v3 [label = "use: call 'mmult_accel' in 'mmult.cpp' @92 (async_id:1)\n:0: (array:cannot trace)(bb16),sw(3)@96#pragma (sds_wait(1))"];
+v4 [label = "use: call 'mmult_accel' in 'mmult.cpp' @92 (async_id:1)\n:1: (array:cannot trace)(bb16),sw(3)@96#pragma (sds_wait(1))"];
+v5 [label = "use: call 'mmult_accel' in 'mmult.cpp' @92 (async_id:1)\n:2: (array:cannot trace)(bb16),sw(3)@96#pragma (sds_wait(1))"];
+v6 [label = "use: call 'mmult_accel' in 'mmult.cpp' @98 (async_id:1)\n:0: (array:cannot trace)(bb16),hw, call:mmult_accel"];
+v7 [label = "use: call 'mmult_accel' in 'mmult.cpp' @98 (async_id:1)\n:1: (array:cannot trace)(bb16),hw, call:mmult_accel"];
+v8 [label = "def: call 'mmult_accel' in 'mmult.cpp' @98 (async_id:1)\n:2: (array:cannot trace)(bb16),hw, call:mmult_accel"];
+v9 [label = "use: call 'mmult_accel' in 'mmult.cpp' @92 (async_id:1)\n:0: (array:cannot trace)(bb20),sw(4)@102#pragma (sds_wait(1))"];
+v10 [label = "use: call 'mmult_accel' in 'mmult.cpp' @92 (async_id:1)\n:1: (array:cannot trace)(bb20),sw(4)@102#pragma (sds_wait(1))"];
+v11 [label = "use: call 'mmult_accel' in 'mmult.cpp' @92 (async_id:1)\n:2: (array:cannot trace)(bb20),sw(4)@102#pragma (sds_wait(1))"];
+v2 -> v5;
+v2 -> v11;
+}

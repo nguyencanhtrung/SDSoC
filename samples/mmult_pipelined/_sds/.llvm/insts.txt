@@ -1,0 +1,139 @@
+SW(3)@96#pragma (sds_wait:1)\n   call void @sds_wait(i32 1), !dbg !139, !Xidane.Wait !141
+SW(4)@102#pragma (sds_wait:1)\n   call void @sds_wait(i32 1), !dbg !150, !Xidane.Wait !141
+SW(5)@70\n   call void @llvm.dbg.value(metadata !{float** %tin1Buf}, i64 0, metadata !78), !dbg !79
+SW(6)@70\n   call void @llvm.dbg.value(metadata !{float** %tin2Buf}, i64 0, metadata !80), !dbg !81
+SW(7)@70\n   call void @llvm.dbg.value(metadata !{float** %toutBufSw}, i64 0, metadata !82), !dbg !83
+SW(8)@70\n   call void @llvm.dbg.value(metadata !{float** %toutBufHw}, i64 0, metadata !84), !dbg !85
+SW(9)@70\n   call void @llvm.dbg.value(metadata !{i32 %pipeline_depth}, i64 0, metadata !86), !dbg !87
+SW(10)@74\n   %puts = call i32 @puts(i8* getelementptr inbounds ([18 x i8]* @str, i32 0, i32 0)), !dbg !88
+SW(11)@70\n   call void @llvm.dbg.value(metadata !{null}, i64 0, metadata !78), !dbg !79
+SW(12)@70\n   call void @llvm.dbg.value(metadata !{null}, i64 0, metadata !80), !dbg !81
+SW(13)@70\n   call void @llvm.dbg.value(metadata !{null}, i64 0, metadata !82), !dbg !83
+SW(14)@70\n   call void @llvm.dbg.value(metadata !{null}, i64 0, metadata !84), !dbg !85
+SW(15)@76\n   call void @_ZL10mmult_initPPfS0_S0_S0_(float** %tin1Buf, float** %tin2Buf, float** %toutBufSw, float** %toutBufHw), !dbg !89
+SW(16)@78\n   %1 = call i64 @sds_clock_counter(), !dbg !90
+SW(17)@78\n   call void @llvm.dbg.value(metadata !{i64 %1}, i64 0, metadata !91), !dbg !90
+SW(18)@72\n   call void @llvm.dbg.value(metadata !93, i64 0, metadata !94), !dbg !95
+SW(19)@80\n   br label %2, !dbg !96
+SW(20)@0\n   %storemerge = phi i32 [ 0, %0 ], [ %18, %17 ]
+SW(21)@72\n   call void @llvm.dbg.value(metadata !{null}, i64 0, metadata !94), !dbg !95
+SW(22)@80\n   %3 = icmp slt i32 %storemerge, 256, !dbg !98
+SW(23)@80\n   br i1 %3, label %4, label %19, !dbg !98
+SW(24)@72\n   call void @llvm.dbg.value(metadata !93, i64 0, metadata !101), !dbg !102
+SW(25)@81\n   br label %5, !dbg !103
+SW(26)@0\n   %storemerge5 = phi i32 [ 0, %4 ], [ %15, %14 ]
+SW(27)@72\n   call void @llvm.dbg.value(metadata !{null}, i64 0, metadata !101), !dbg !102
+SW(28)@81\n   %6 = icmp slt i32 %storemerge5, 4, !dbg !106
+SW(29)@81\n   br i1 %6, label %7, label %16, !dbg !106
+SW(30)@72\n   call void @llvm.dbg.value(metadata !{null}, i64 0, metadata !101), !dbg !102
+SW(31)@70\n   call void @llvm.dbg.value(metadata !{null}, i64 0, metadata !78), !dbg !79
+SW(32)@82\n   %8 = getelementptr inbounds float** %tin1Buf, i32 %storemerge5, !dbg !109
+SW(33)@82\n   %9 = load float** %8, align 4, !dbg !109
+SW(34)@72\n   call void @llvm.dbg.value(metadata !{null}, i64 0, metadata !101), !dbg !102
+SW(35)@70\n   call void @llvm.dbg.value(metadata !{null}, i64 0, metadata !80), !dbg !81
+SW(36)@82\n   %10 = getelementptr inbounds float** %tin2Buf, i32 %storemerge5, !dbg !109
+SW(37)@82\n   %11 = load float** %10, align 4, !dbg !109
+SW(38)@72\n   call void @llvm.dbg.value(metadata !{null}, i64 0, metadata !101), !dbg !102
+SW(39)@70\n   call void @llvm.dbg.value(metadata !{null}, i64 0, metadata !82), !dbg !83
+SW(40)@82\n   %12 = getelementptr inbounds float** %toutBufSw, i32 %storemerge5, !dbg !109
+SW(41)@82\n   %13 = load float** %12, align 4, !dbg !109
+SW(42)@82\n   call void @_Z12mmult_goldenPfS_S_(float* %9, float* %11, float* %13), !dbg !109
+SW(43)@83\n   br label %14, !dbg !111
+SW(44)@72\n   call void @llvm.dbg.value(metadata !{null}, i64 0, metadata !101), !dbg !102
+SW(45)@81\n   %15 = add nsw i32 %storemerge5, 1, !dbg !112
+SW(46)@72\n   call void @llvm.dbg.value(metadata !{i32 %15}, i64 0, metadata !101), !dbg !102
+SW(47)@81\n   br label %5, !dbg !112
+SW(48)@84\n   br label %17, !dbg !113
+SW(49)@72\n   call void @llvm.dbg.value(metadata !{null}, i64 0, metadata !94), !dbg !95
+SW(50)@80\n   %18 = add nsw i32 %storemerge, 1, !dbg !114
+SW(51)@72\n   call void @llvm.dbg.value(metadata !{i32 %18}, i64 0, metadata !94), !dbg !95
+SW(52)@80\n   br label %2, !dbg !114
+SW(53)@86\n   %20 = call i64 @sds_clock_counter(), !dbg !115
+SW(54)@78\n   call void @llvm.dbg.value(metadata !{i64 %20}, i64 0, metadata !117), !dbg !90
+SW(55)@78\n   call void @llvm.dbg.value(metadata !{null}, i64 0, metadata !91), !dbg !90
+SW(56)@86\n   %21 = sub i64 %20, %1, !dbg !115
+SW(57)@86\n   %22 = lshr i64 %21, 10, !dbg !115
+SW(58)@86\n   %23 = call i32 (i8*, ...)* @printf(i8* getelementptr inbounds ([62 x i8]* @.str1, i32 0, i32 0), i64 %22), !dbg !115
+SW(59)@86\n   %24 = call i64 @sds_clock_counter(), !dbg !115
+SW(60)@78\n   call void @llvm.dbg.value(metadata !{i64 %24}, i64 0, metadata !91), !dbg !90
+SW(61)@72\n   call void @llvm.dbg.value(metadata !93, i64 0, metadata !94), !dbg !95
+SW(62)@88\n   br label %25, !dbg !118
+SW(63)@0\n   %storemerge1 = phi i32 [ 0, %19 ], [ %59, %58 ]
+SW(64)@72\n   call void @llvm.dbg.value(metadata !{null}, i64 0, metadata !94), !dbg !95
+SW(65)@88\n   %26 = icmp slt i32 %storemerge1, 256, !dbg !120
+SW(66)@88\n   br i1 %26, label %27, label %60, !dbg !120
+SW(67)@72\n   call void @llvm.dbg.value(metadata !93, i64 0, metadata !101), !dbg !102
+SW(68)@90\n   br label %28, !dbg !123
+SW(69)@0\n   %storemerge2 = phi i32 [ 0, %27 ], [ %38, %37 ]
+SW(70)@72\n   call void @llvm.dbg.value(metadata !{null}, i64 0, metadata !101), !dbg !102
+SW(71)@70\n   call void @llvm.dbg.value(metadata !{null}, i64 0, metadata !86), !dbg !87
+SW(72)@90\n   %29 = icmp slt i32 %storemerge2, %pipeline_depth, !dbg !126
+SW(73)@90\n   br i1 %29, label %30, label %39, !dbg !126
+SW(74)@72\n   call void @llvm.dbg.value(metadata !{null}, i64 0, metadata !101), !dbg !102
+SW(75)@70\n   call void @llvm.dbg.value(metadata !{null}, i64 0, metadata !78), !dbg !79
+SW(76)@92\n   %31 = getelementptr inbounds float** %tin1Buf, i32 %storemerge2, !dbg !129
+SW(77)@92\n   %32 = load float** %31, align 4, !dbg !129
+SW(78)@72\n   call void @llvm.dbg.value(metadata !{null}, i64 0, metadata !101), !dbg !102
+SW(79)@70\n   call void @llvm.dbg.value(metadata !{null}, i64 0, metadata !80), !dbg !81
+SW(80)@92\n   %33 = getelementptr inbounds float** %tin2Buf, i32 %storemerge2, !dbg !129
+SW(81)@92\n   %34 = load float** %33, align 4, !dbg !129
+SW(82)@72\n   call void @llvm.dbg.value(metadata !{null}, i64 0, metadata !101), !dbg !102
+SW(83)@70\n   call void @llvm.dbg.value(metadata !{null}, i64 0, metadata !84), !dbg !85
+SW(84)@92\n   %35 = getelementptr inbounds float** %toutBufHw, i32 %storemerge2, !dbg !129
+SW(85)@92\n   %36 = load float** %35, align 4, !dbg !129
+SW(86)@93\n   br label %37, !dbg !132
+SW(87)@72\n   call void @llvm.dbg.value(metadata !{null}, i64 0, metadata !101), !dbg !102
+SW(88)@90\n   %38 = add nsw i32 %storemerge2, 1, !dbg !133
+SW(89)@72\n   call void @llvm.dbg.value(metadata !{i32 %38}, i64 0, metadata !101), !dbg !102
+SW(90)@90\n   br label %28, !dbg !133
+SW(91)@70\n   call void @llvm.dbg.value(metadata !{null}, i64 0, metadata !86), !dbg !87
+SW(92)@72\n   call void @llvm.dbg.value(metadata !{i32 %pipeline_depth}, i64 0, metadata !101), !dbg !102
+SW(93)@95\n   br label %40, !dbg !134
+SW(94)@0\n   %storemerge3 = phi i32 [ %pipeline_depth, %39 ], [ %50, %49 ]
+SW(95)@72\n   call void @llvm.dbg.value(metadata !{null}, i64 0, metadata !101), !dbg !102
+SW(96)@95\n   %41 = icmp slt i32 %storemerge3, 4, !dbg !136
+SW(97)@95\n   br i1 %41, label %42, label %51, !dbg !136
+SW(98)@72\n   call void @llvm.dbg.value(metadata !{null}, i64 0, metadata !101), !dbg !102
+SW(99)@70\n   call void @llvm.dbg.value(metadata !{null}, i64 0, metadata !78), !dbg !79
+SW(100)@98\n   %43 = getelementptr inbounds float** %tin1Buf, i32 %storemerge3, !dbg !142
+SW(101)@98\n   %44 = load float** %43, align 4, !dbg !142
+SW(102)@72\n   call void @llvm.dbg.value(metadata !{null}, i64 0, metadata !101), !dbg !102
+SW(103)@70\n   call void @llvm.dbg.value(metadata !{null}, i64 0, metadata !80), !dbg !81
+SW(104)@98\n   %45 = getelementptr inbounds float** %tin2Buf, i32 %storemerge3, !dbg !142
+SW(105)@98\n   %46 = load float** %45, align 4, !dbg !142
+SW(106)@72\n   call void @llvm.dbg.value(metadata !{null}, i64 0, metadata !101), !dbg !102
+SW(107)@70\n   call void @llvm.dbg.value(metadata !{null}, i64 0, metadata !84), !dbg !85
+SW(108)@98\n   %47 = getelementptr inbounds float** %toutBufHw, i32 %storemerge3, !dbg !142
+SW(109)@98\n   %48 = load float** %47, align 4, !dbg !142
+SW(110)@99\n   br label %49, !dbg !143
+SW(111)@72\n   call void @llvm.dbg.value(metadata !{null}, i64 0, metadata !101), !dbg !102
+SW(112)@95\n   %50 = add nsw i32 %storemerge3, 1, !dbg !144
+SW(113)@72\n   call void @llvm.dbg.value(metadata !{i32 %50}, i64 0, metadata !101), !dbg !102
+SW(114)@95\n   br label %40, !dbg !144
+SW(115)@72\n   call void @llvm.dbg.value(metadata !93, i64 0, metadata !101), !dbg !102
+SW(116)@101\n   br label %52, !dbg !145
+SW(117)@0\n   %storemerge4 = phi i32 [ 0, %51 ], [ %56, %55 ]
+SW(118)@72\n   call void @llvm.dbg.value(metadata !{null}, i64 0, metadata !101), !dbg !102
+SW(119)@70\n   call void @llvm.dbg.value(metadata !{null}, i64 0, metadata !86), !dbg !87
+SW(120)@101\n   %53 = icmp slt i32 %storemerge4, %pipeline_depth, !dbg !147
+SW(121)@101\n   br i1 %53, label %54, label %57, !dbg !147
+SW(122)@103\n   br label %55, !dbg !152
+SW(123)@72\n   call void @llvm.dbg.value(metadata !{null}, i64 0, metadata !101), !dbg !102
+SW(124)@101\n   %56 = add nsw i32 %storemerge4, 1, !dbg !153
+SW(125)@72\n   call void @llvm.dbg.value(metadata !{i32 %56}, i64 0, metadata !101), !dbg !102
+SW(126)@101\n   br label %52, !dbg !153
+SW(127)@104\n   br label %58, !dbg !154
+SW(128)@72\n   call void @llvm.dbg.value(metadata !{null}, i64 0, metadata !94), !dbg !95
+SW(129)@88\n   %59 = add nsw i32 %storemerge1, 1, !dbg !155
+SW(130)@72\n   call void @llvm.dbg.value(metadata !{i32 %59}, i64 0, metadata !94), !dbg !95
+SW(131)@88\n   br label %25, !dbg !155
+SW(132)@106\n   %61 = call i64 @sds_clock_counter(), !dbg !156
+SW(133)@78\n   call void @llvm.dbg.value(metadata !{i64 %61}, i64 0, metadata !117), !dbg !90
+SW(134)@78\n   call void @llvm.dbg.value(metadata !{null}, i64 0, metadata !91), !dbg !90
+SW(135)@106\n   %62 = sub i64 %61, %24, !dbg !156
+SW(136)@106\n   %63 = lshr i64 %62, 10, !dbg !156
+SW(137)@106\n   %64 = call i32 (i8*, ...)* @printf(i8* getelementptr inbounds ([64 x i8]* @.str2, i32 0, i32 0), i64 %63), !dbg !156
+SW(138)@70\n   call void @llvm.dbg.value(metadata !{null}, i64 0, metadata !82), !dbg !83
+SW(139)@70\n   call void @llvm.dbg.value(metadata !{null}, i64 0, metadata !84), !dbg !85
+SW(140)@108\n   %65 = call i32 @_ZL18mmult_result_checkPPfS0_(float** %toutBufSw, float** %toutBufHw), !dbg !158
+SW(141)@108\n   ret i32 %65, !dbg !158

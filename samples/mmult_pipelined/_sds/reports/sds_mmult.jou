@@ -1,0 +1,16 @@
+(c) Copyright 2012-2015 Xilinx, Inc. All Rights Reserved.
+#-----------------------------------------------------------
+# Tool version  : sds++ 2014.4 20150228
+# Start time    : Thu Jul 28 06:10:17 PM CEST 2016
+# Command line  : sds++ -sds-pf zed -sds-hw mmult_accel mmult_accel.cpp -sds-end -poll-mode 1 -Wall -O3 -c mmult.cpp -o mmult.o
+# Log file      : /home/trungnguyen/SDSoC/samples/mmult_pipelined/_sds/reports/sds_mmult.log
+# Journal file  : /home/trungnguyen/SDSoC/samples/mmult_pipelined/_sds/reports/sds_mmult.jou
+# Report file   : /home/trungnguyen/SDSoC/samples/mmult_pipelined/_sds/reports/sds_mmult.rpt
+#-----------------------------------------------------------
+
+# INFO: [SDSoC 0-0] Create data motion intermediate representation
+clang_wrapper -target arm-xilinx-linux-gnueabi -mcpu=cortex-a9 -O0 -g -w   -I/opt/Xilinx/SDSoC/2014.4/SDK/2014.4/gnu/arm/lin/arm-xilinx-linux-gnueabi/include/c++/4.8.3  -I/opt/Xilinx/SDSoC/2014.4/SDK/2014.4/gnu/arm/lin/arm-xilinx-linux-gnueabi/include/c++/4.8.3/arm-xilinx-linux-gnueabi  -I/opt/Xilinx/SDSoC/2014.4/SDK/2014.4/gnu/arm/lin/arm-xilinx-linux-gnueabi/include/c++/4.8.3/backward   -I/opt/Xilinx/SDSoC/2014.4/SDK/2014.4/gnu/arm/lin/lib/gcc/arm-xilinx-linux-gnueabi/4.8.3/include  -I/opt/Xilinx/SDSoC/2014.4/SDK/2014.4/gnu/arm/lin/lib/gcc/arm-xilinx-linux-gnueabi/4.8.3/include-fixed  -I/opt/Xilinx/SDSoC/2014.4/SDK/2014.4/gnu/arm/lin/arm-xilinx-linux-gnueabi/include  -I/opt/Xilinx/SDSoC/2014.4/SDK/2014.4/gnu/arm/lin/arm-xilinx-linux-gnueabi/libc/usr/include  -I /opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/include  -I /opt/Xilinx/SDSoC/2014.4/arm-xilinx-linux-gnueabi/include    -Wall -D __SDSCC__ -emit-llvm -S /home/trungnguyen/SDSoC/samples/mmult_pipelined/mmult.cpp -o /home/trungnguyen/SDSoC/samples/mmult_pipelined/_sds/.llvm/mmult.s
+# INFO: [SDSoC 0-0] Compiling /home/trungnguyen/SDSoC/samples/mmult_pipelined/mmult.cpp
+arm-xilinx-linux-gnueabi-g++ -c  -Wall -O3 -D __SDSCC__  -I /opt/Xilinx/SDSoC/2014.4/arm-xilinx-linux-gnueabi/include  -I /opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/include   /home/trungnguyen/SDSoC/samples/mmult_pipelined/mmult.cpp -o mmult.o
+arm-xilinx-linux-gnueabi-objcopy --add-section .xdsdata=/home/trungnguyen/SDSoC/samples/mmult_pipelined/_sds/swstubs/mmult.xml mmult.o
+# sds++ completed at Thu Jul 28 06:10:17 PM CEST 2016

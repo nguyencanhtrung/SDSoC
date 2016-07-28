@@ -1,0 +1,60 @@
+digraph CDFG {
+node [shape=record];
+bb0 [shape=record, label = "{bb0|<x0x3834820>SW(5)@70\n|<x0x3834690>SW(6)@70\n|<x0x38319d0>SW(7)@70\n|<x0x3831bf0>SW(8)@70\n|<x0x3831e10>SW(9)@70\n|<x0x3832030>SW(10)@74\n|<x0x3832250>SW(11)@70\n|<x0x3832460>SW(12)@70\n|<x0x3832670>SW(13)@70\n|<x0x3832880>SW(14)@70\n|<x0x3832a90>SW(15)@76\n|<x0x3832cd0>SW(16)@78\n|<x0x3832ed0>SW(17)@78\n|<x0x38330e0>SW(18)@72\n|<x0x38332f0>SW(19)@80\n}"];
+bb1 [shape=record, label = "{bb1|<x0x3833630>SW(20)@0\n|<x0x382d7f0>SW(21)@72\n|<x0x382d9d0>SW(22)@80\n|<x0x382dbd0>SW(23)@80\n}"];
+bb2 [shape=record, label = "{bb2|<x0x3833550>SW(24)@72\n|<x0x382e170>SW(25)@81\n}"];
+bb3 [shape=record, label = "{bb3|<x0x382e450>SW(26)@0\n|<x0x382e600>SW(27)@72\n|<x0x382e840>SW(28)@81\n|<x0x382ea40>SW(29)@81\n}"];
+bb4 [shape=record, label = "{bb4|<x0x382ee10>SW(30)@72\n|<x0x382f040>SW(31)@70\n|<x0x382f250>SW(32)@82\n|<x0x382f460>SW(33)@82\n|<x0x382f660>SW(34)@72\n|<x0x382f870>SW(35)@70\n|<x0x3835e40>SW(36)@82\n|<x0x3836050>SW(37)@82\n|<x0x3836250>SW(38)@72\n|<x0x3836460>SW(39)@70\n|<x0x3836670>SW(40)@82\n|<x0x3836880>SW(41)@82\n|<x0x3836a80>SW(42)@82\n|<x0x3836cb0>SW(43)@83\n}"];
+bb5 [shape=record, label = "{bb5|<x0x3836f90>SW(44)@72\n|<x0x3837170>SW(45)@81\n|<x0x3837370>SW(46)@72\n|<x0x38375a0>SW(47)@81\n}"];
+bb6 [shape=record, label = "{bb6|<x0x3837880>SW(48)@84\n}"];
+bb7 [shape=record, label = "{bb7|<x0x3837bb0>SW(49)@72\n|<x0x3837e00>SW(50)@80\n|<x0x3838000>SW(51)@72\n|<x0x3838210>SW(52)@80\n}"];
+bb8 [shape=record, label = "{bb8|<x0x382ed40>SW(53)@86\n|<x0x3838880>SW(54)@78\n|<x0x3838ab0>SW(55)@78\n|<x0x3838cc0>SW(56)@86\n|<x0x3838ec0>SW(57)@86\n|<x0x3838fc0>SW(58)@86\n|<x0x38392e0>SW(59)@86\n|<x0x38394e0>SW(60)@78\n|<x0x38396f0>SW(61)@72\n|<x0x3839900>SW(62)@88\n}"];
+bb9 [shape=record, label = "{bb9|<x0x3839be0>SW(63)@0\n|<x0x3839d90>SW(64)@72\n|<x0x3839fd0>SW(65)@88\n|<x0x383a1d0>SW(66)@88\n}"];
+bb10 [shape=record, label = "{bb10|<x0x383a4d0>SW(67)@72\n|<x0x383a720>SW(68)@90\n}"];
+bb11 [shape=record, label = "{bb11|<x0x383aa00>SW(69)@0\n|<x0x383abb0>SW(70)@72\n|<x0x383adf0>SW(71)@70\n|<x0x383b000>SW(72)@90\n|<x0x383b2a0>SW(73)@90\n}"];
+bb12 [shape=record, label = "{bb12|<x0x383b5a0>SW(74)@72\n|<x0x383b780>SW(75)@70\n|<x0x383b990>SW(76)@92\n|<x0x383bba0>SW(77)@92\n|<x0x383bda0>SW(78)@72\n|<x0x383bfb0>SW(79)@70\n|<x0x383c1c0>SW(80)@92\n|<x0x383c3d0>SW(81)@92\n|<x0x383c5d0>SW(82)@72\n|<x0x383c7e0>SW(83)@70\n|<x0x383c9f0>SW(84)@92\n|<x0x383cc00>SW(85)@92\n|<x0x3846260>XFER(IN):in_A @92, ARRAY\n|<x0x3846340>XFER(IN):in_B @92, ARRAY\n|<x0x3826290>call 'mmult_accel' in 'mmult.cpp' @92 (async_id:1)\n|<x0x3846420>XFER(OUT):out_C @92, ARRAY\n\n--RAW--\>SW(3)@96#pragma (sds_wait:1)\n\n--RAW--\>SW(4)@102#pragma (sds_wait:1)\n\n|<x0x38285e0>cf_wait(): \nXFER(IN):in_A @92, ARRAY\nXFER(IN):in_B @92, ARRAY\nXFER(OUT):out_C @92, ARRAY\n\n|<x0x383ce20>SW(86)@93\n}"];
+bb13 [shape=record, label = "{bb13|<x0x383d100>SW(87)@72\n|<x0x383d350>SW(88)@90\n|<x0x383d550>SW(89)@72\n|<x0x383d7f0>SW(90)@90\n}"];
+bb14 [shape=record, label = "{bb14|<x0x383dad0>SW(91)@70\n|<x0x383dcb0>SW(92)@72\n|<x0x383dee0>SW(93)@95\n}"];
+bb15 [shape=record, label = "{bb15|<x0x383e1c0>SW(94)@0\n|<x0x383e370>SW(95)@72\n|<x0x383e5b0>SW(96)@95\n|<x0x383e7b0>SW(97)@95\n}"];
+bb16 [shape=record, label = "{bb16|<x0x382d2e0>SW(3)@96#pragma (sds_wait:1)\n|<x0x38384d0>SW(98)@72\n|<x0x383eff0>SW(99)@70\n|<x0x383f1c0>SW(100)@98\n|<x0x383f3d0>SW(101)@98\n|<x0x383f5d0>SW(102)@72\n|<x0x383f7e0>SW(103)@70\n|<x0x383f9f0>SW(104)@98\n|<x0x383fc80>SW(105)@98\n|<x0x383fe80>SW(106)@72\n|<x0x3840090>SW(107)@70\n|<x0x38402a0>SW(108)@98\n|<x0x38404b0>SW(109)@98\n|<x0x3846530>XFER(IN):in_A @98, ARRAY\n|<x0x3846640>XFER(IN):in_B @98, ARRAY\n|<x0x3823170>call 'mmult_accel' in 'mmult.cpp' @98 (async_id:1)\n|<x0x3846750>XFER(OUT):out_C @98, ARRAY\n|<x0x38286d0>cf_wait(): \nXFER(IN):in_A @98, ARRAY\nXFER(IN):in_B @98, ARRAY\nXFER(OUT):out_C @98, ARRAY\n\n|<x0x38406d0>SW(110)@99\n}"];
+bb17 [shape=record, label = "{bb17|<x0x38409b0>SW(111)@72\n|<x0x3840b90>SW(112)@95\n|<x0x3840d90>SW(113)@72\n|<x0x3840fc0>SW(114)@95\n}"];
+bb18 [shape=record, label = "{bb18|<x0x38412a0>SW(115)@72\n|<x0x38414f0>SW(116)@101\n}"];
+bb19 [shape=record, label = "{bb19|<x0x38417d0>SW(117)@0\n|<x0x3841980>SW(118)@72\n|<x0x3841bc0>SW(119)@70\n|<x0x3841dd0>SW(120)@101\n|<x0x3841fd0>SW(121)@101\n}"];
+bb20 [shape=record, label = "{bb20|<x0x382ff50>SW(4)@102#pragma (sds_wait:1)\n|<x0x38422f0>SW(122)@103\n}"];
+bb21 [shape=record, label = "{bb21|<x0x3842620>SW(123)@72\n|<x0x3842870>SW(124)@101\n|<x0x3842ae0>SW(125)@72\n|<x0x3842d10>SW(126)@101\n}"];
+bb22 [shape=record, label = "{bb22|<x0x3842ff0>SW(127)@104\n}"];
+bb23 [shape=record, label = "{bb23|<x0x3843320>SW(128)@72\n|<x0x3843500>SW(129)@88\n|<x0x3843700>SW(130)@72\n|<x0x3843910>SW(131)@88\n}"];
+bb24 [shape=record, label = "{bb24|<x0x3843bf0>SW(132)@106\n|<x0x3843e30>SW(133)@78\n|<x0x3844060>SW(134)@78\n|<x0x3844270>SW(135)@106\n|<x0x3844470>SW(136)@106\n|<x0x3844670>SW(137)@106\n|<x0x38448b0>SW(138)@70\n|<x0x3844ac0>SW(139)@70\n|<x0x3844cd0>SW(140)@108\n|<x0x3844f00>SW(141)@108\n}"];
+bb0 -> bb1
+bb1 -> bb2
+bb1 -> bb8
+bb2 -> bb3
+bb3 -> bb4
+bb3 -> bb6
+bb4 -> bb5
+bb5 -> bb3
+bb6 -> bb7
+bb7 -> bb1
+bb8 -> bb9
+bb9 -> bb10
+bb9 -> bb24
+bb10 -> bb11
+bb11 -> bb12
+bb11 -> bb14
+bb12 -> bb13
+bb13 -> bb11
+bb14 -> bb15
+bb15 -> bb16
+bb15 -> bb18
+bb16 -> bb17
+bb17 -> bb15
+bb18 -> bb19
+bb19 -> bb20
+bb19 -> bb22
+bb20 -> bb21
+bb21 -> bb19
+bb22 -> bb23
+bb23 -> bb9
+bb12:x0x3846420 -> bb16:x0x382d2e0[color=blue]
+bb12:x0x3846420 -> bb20:x0x382ff50[color=blue]
+}

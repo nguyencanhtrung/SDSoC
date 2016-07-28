@@ -17,17 +17,17 @@
 				<configuration artifactExtension="elf" artifactName="${ProjName}" buildProperties="org.eclipse.cdt.build.core.buildType=com.xilinx.sdk.apf.linux.toolchain.configuration.debug" cleanCommand="rm -rf _sds sd_card" description="" id="com.xilinx.sdk.apf.linux.toolchain.configuration.debug.712474020" name="SDDebug" parent="com.xilinx.sdk.apf.linux.toolchain.configuration.debug">
 					<folderInfo id="com.xilinx.sdk.apf.linux.toolchain.configuration.debug.712474020." name="/" resourcePath="">
 						<toolChain id="com.xilinx.sdk.apf.linux.toolchain.debug.617045268" name="Xilinx SDSoC Linux Toolchain" superClass="com.xilinx.sdk.apf.linux.toolchain.debug">
-							<option id="com.xilinx.sdk.apf.linux.common.option.platform.1304437451" superClass="com.xilinx.sdk.apf.linux.common.option.platform" value="zc702" valueType="string"/>
+							<option id="com.xilinx.sdk.apf.linux.common.option.platform.1304437451" name="SDSoC Platform" superClass="com.xilinx.sdk.apf.linux.common.option.platform" value="zed" valueType="string"/>
 							<targetPlatform binaryParser="com.xilinx.sdk.managedbuilder.XELF.armlinux" id="com.xilinx.sdk.apf.linux.toolchain.targetplatform.245509222" isAbstract="false" name="SDSoC Linux Target Platform" superClass="com.xilinx.sdk.apf.linux.toolchain.targetplatform"/>
-							<builder buildPath="${workspace_loc:/lab1_prebuilt}/SDDebug" enableAutoBuild="true" id="com.xilinx.sdk.apf.linux.toolchain.builder.1389307111" managedBuildOn="true" name="GNU make.SDDebug" superClass="com.xilinx.sdk.apf.linux.toolchain.builder"/>
+							<builder buildPath="${workspace_loc:/lab1_prebuilt}/SDDebug" enableAutoBuild="true" id="com.xilinx.sdk.apf.linux.toolchain.builder.1389307111" keepEnvironmentInBuildfile="false" managedBuildOn="true" name="GNU make" superClass="com.xilinx.sdk.apf.linux.toolchain.builder"/>
 							<tool id="com.xilinx.sdk.apf.linux.toolchain.c.compiler.637109124" name="SDSCC Linux Compiler" superClass="com.xilinx.sdk.apf.linux.toolchain.c.compiler">
-								<option id="xilinx.gnu.compiler.dircategory.includes.546078094" superClass="xilinx.gnu.compiler.dircategory.includes" valueType="includePath">
+								<option id="xilinx.gnu.compiler.dircategory.includes.546078094" name="Include Paths" superClass="xilinx.gnu.compiler.dircategory.includes" valueType="includePath">
 									<listOptionValue builtIn="false" value="&quot;../src&quot;"/>
 								</option>
 								<inputType id="com.xilinx.sdk.apf.linux.c.compiler.input.770267565" name="C source files" superClass="com.xilinx.sdk.apf.linux.c.compiler.input"/>
 							</tool>
 							<tool id="com.xilinx.sdk.apf.linux.toolchain.cxx.compiler.739198866" name="SDS++ Linux Compiler" superClass="com.xilinx.sdk.apf.linux.toolchain.cxx.compiler">
-								<option id="xilinx.gnu.compiler.dircategory.includes.962869004" superClass="xilinx.gnu.compiler.dircategory.includes" valueType="includePath">
+								<option id="xilinx.gnu.compiler.dircategory.includes.962869004" name="Include Paths" superClass="xilinx.gnu.compiler.dircategory.includes" valueType="includePath">
 									<listOptionValue builtIn="false" value="&quot;../src&quot;"/>
 								</option>
 								<inputType id="com.xilinx.sdk.apf.linux.cxx.compiler.input.1669417453" name="C++ source files" superClass="com.xilinx.sdk.apf.linux.cxx.compiler.input"/>
@@ -43,7 +43,7 @@
 					</folderInfo>
 					<fileInfo id="com.xilinx.sdk.apf.linux.toolchain.configuration.debug.712474020.src/madd.cpp" name="madd.cpp" rcbsApplicability="disable" resourcePath="src/madd.cpp" toolsToInvoke="com.xilinx.sdk.apf.linux.toolchain.cxx.compiler.739198866.538387133">
 						<tool id="com.xilinx.sdk.apf.linux.toolchain.cxx.compiler.739198866.538387133" name="SDS++ Linux Compiler" superClass="com.xilinx.sdk.apf.linux.toolchain.cxx.compiler.739198866">
-							<option id="com.xilinx.sdk.apf.linux.accel.functions.1393463740" superClass="com.xilinx.sdk.apf.linux.accel.functions" valueType="stringList">
+							<option id="com.xilinx.sdk.apf.linux.accel.functions.1393463740" name="Accelerated Functions" superClass="com.xilinx.sdk.apf.linux.accel.functions" valueType="stringList">
 								<listOptionValue builtIn="false" value="madd madd.cpp"/>
 							</option>
 							<inputType id="com.xilinx.sdk.apf.linux.cxx.compiler.input.1809251246" name="C++ source files" superClass="com.xilinx.sdk.apf.linux.cxx.compiler.input"/>
@@ -51,7 +51,7 @@
 					</fileInfo>
 					<fileInfo id="com.xilinx.sdk.apf.linux.toolchain.configuration.debug.712474020.src/mmult.cpp" name="mmult.cpp" rcbsApplicability="disable" resourcePath="src/mmult.cpp" toolsToInvoke="com.xilinx.sdk.apf.linux.toolchain.cxx.compiler.739198866.394011204">
 						<tool id="com.xilinx.sdk.apf.linux.toolchain.cxx.compiler.739198866.394011204" name="SDS++ Linux Compiler" superClass="com.xilinx.sdk.apf.linux.toolchain.cxx.compiler.739198866">
-							<option id="com.xilinx.sdk.apf.linux.accel.functions.646721587" superClass="com.xilinx.sdk.apf.linux.accel.functions" valueType="stringList">
+							<option id="com.xilinx.sdk.apf.linux.accel.functions.646721587" name="Accelerated Functions" superClass="com.xilinx.sdk.apf.linux.accel.functions" valueType="stringList">
 								<listOptionValue builtIn="false" value="mmult mmult.cpp"/>
 							</option>
 							<inputType id="com.xilinx.sdk.apf.linux.cxx.compiler.input.1339744356" name="C++ source files" superClass="com.xilinx.sdk.apf.linux.cxx.compiler.input"/>
@@ -80,17 +80,17 @@
 				<configuration artifactExtension="elf" artifactName="${ProjName}" buildProperties="org.eclipse.cdt.build.core.buildType=com.xilinx.sdk.apf.linux.toolchain.configuration.release" cleanCommand="rm -rf _sds sd_card" description="" id="com.xilinx.sdk.apf.linux.toolchain.configuration.release.34774036" name="SDRelease" parent="com.xilinx.sdk.apf.linux.toolchain.configuration.release">
 					<folderInfo id="com.xilinx.sdk.apf.linux.toolchain.configuration.release.34774036." name="/" resourcePath="">
 						<toolChain id="com.xilinx.sdk.apf.linux.toolchain.release.1892231408" name="Xilinx SDSoC Linux Toolchain" superClass="com.xilinx.sdk.apf.linux.toolchain.release">
-							<option id="com.xilinx.sdk.apf.linux.common.option.platform.1330951327" superClass="com.xilinx.sdk.apf.linux.common.option.platform" value="zc702" valueType="string"/>
+							<option id="com.xilinx.sdk.apf.linux.common.option.platform.1330951327" name="SDSoC Platform" superClass="com.xilinx.sdk.apf.linux.common.option.platform" value="zc702" valueType="string"/>
 							<targetPlatform binaryParser="com.xilinx.sdk.managedbuilder.XELF.armlinux" id="com.xilinx.sdk.apf.linux.toolchain.targetplatform.90125488" isAbstract="false" name="SDSoC Linux Target Platform" superClass="com.xilinx.sdk.apf.linux.toolchain.targetplatform"/>
-							<builder buildPath="${workspace_loc:/lab1_prebuilt}/SDRelease" enableAutoBuild="true" id="com.xilinx.sdk.apf.linux.toolchain.builder.1268657082" managedBuildOn="true" name="GNU make.SDRelease" superClass="com.xilinx.sdk.apf.linux.toolchain.builder"/>
+							<builder buildPath="${workspace_loc:/lab1_prebuilt}/SDRelease" enableAutoBuild="true" id="com.xilinx.sdk.apf.linux.toolchain.builder.1268657082" keepEnvironmentInBuildfile="false" managedBuildOn="true" name="GNU make" superClass="com.xilinx.sdk.apf.linux.toolchain.builder"/>
 							<tool id="com.xilinx.sdk.apf.linux.toolchain.release.c.compiler.1758275466" name="SDSCC Linux Compiler" superClass="com.xilinx.sdk.apf.linux.toolchain.release.c.compiler">
-								<option id="xilinx.gnu.compiler.dircategory.includes.140069545" superClass="xilinx.gnu.compiler.dircategory.includes" valueType="includePath">
+								<option id="xilinx.gnu.compiler.dircategory.includes.140069545" name="Include Paths" superClass="xilinx.gnu.compiler.dircategory.includes" valueType="includePath">
 									<listOptionValue builtIn="false" value="&quot;../src&quot;"/>
 								</option>
 								<inputType id="com.xilinx.sdk.apf.linux.c.compiler.input.25126102" name="C source files" superClass="com.xilinx.sdk.apf.linux.c.compiler.input"/>
 							</tool>
 							<tool id="com.xilinx.sdk.apf.linux.toolchain.release.cxx.compiler.1547496025" name="SDS++ Linux Compiler" superClass="com.xilinx.sdk.apf.linux.toolchain.release.cxx.compiler">
-								<option id="xilinx.gnu.compiler.dircategory.includes.1792609633" superClass="xilinx.gnu.compiler.dircategory.includes" valueType="includePath">
+								<option id="xilinx.gnu.compiler.dircategory.includes.1792609633" name="Include Paths" superClass="xilinx.gnu.compiler.dircategory.includes" valueType="includePath">
 									<listOptionValue builtIn="false" value="&quot;../src&quot;"/>
 								</option>
 								<inputType id="com.xilinx.sdk.apf.linux.cxx.compiler.input.2069044755" name="C++ source files" superClass="com.xilinx.sdk.apf.linux.cxx.compiler.input"/>
@@ -106,7 +106,7 @@
 					</folderInfo>
 					<fileInfo id="com.xilinx.sdk.apf.linux.toolchain.configuration.release.34774036.src/madd.cpp" name="madd.cpp" rcbsApplicability="disable" resourcePath="src/madd.cpp" toolsToInvoke="com.xilinx.sdk.apf.linux.toolchain.release.cxx.compiler.1547496025.1659160075">
 						<tool id="com.xilinx.sdk.apf.linux.toolchain.release.cxx.compiler.1547496025.1659160075" name="SDS++ Linux Compiler" superClass="com.xilinx.sdk.apf.linux.toolchain.release.cxx.compiler.1547496025">
-							<option id="com.xilinx.sdk.apf.linux.accel.functions.1531509171" superClass="com.xilinx.sdk.apf.linux.accel.functions" valueType="stringList">
+							<option id="com.xilinx.sdk.apf.linux.accel.functions.1531509171" name="Accelerated Functions" superClass="com.xilinx.sdk.apf.linux.accel.functions" valueType="stringList">
 								<listOptionValue builtIn="false" value="madd madd.cpp"/>
 							</option>
 							<inputType id="com.xilinx.sdk.apf.linux.cxx.compiler.input.2064905363" name="C++ source files" superClass="com.xilinx.sdk.apf.linux.cxx.compiler.input"/>
@@ -114,7 +114,7 @@
 					</fileInfo>
 					<fileInfo id="com.xilinx.sdk.apf.linux.toolchain.configuration.release.34774036.src/mmult.cpp" name="mmult.cpp" rcbsApplicability="disable" resourcePath="src/mmult.cpp" toolsToInvoke="com.xilinx.sdk.apf.linux.toolchain.release.cxx.compiler.1547496025.1495680488">
 						<tool id="com.xilinx.sdk.apf.linux.toolchain.release.cxx.compiler.1547496025.1495680488" name="SDS++ Linux Compiler" superClass="com.xilinx.sdk.apf.linux.toolchain.release.cxx.compiler.1547496025">
-							<option id="com.xilinx.sdk.apf.linux.accel.functions.1892403486" superClass="com.xilinx.sdk.apf.linux.accel.functions" valueType="stringList">
+							<option id="com.xilinx.sdk.apf.linux.accel.functions.1892403486" name="Accelerated Functions" superClass="com.xilinx.sdk.apf.linux.accel.functions" valueType="stringList">
 								<listOptionValue builtIn="false" value="mmult mmult.cpp"/>
 							</option>
 							<inputType id="com.xilinx.sdk.apf.linux.cxx.compiler.input.1831462257" name="C++ source files" superClass="com.xilinx.sdk.apf.linux.cxx.compiler.input"/>
@@ -143,23 +143,23 @@
 				<configuration artifactExtension="elf" artifactName="${ProjName}" buildProperties="org.eclipse.cdt.build.core.buildType=com.xilinx.sdk.apf.linux.toolchain.configuration.estimate" cleanCommand="rm -rf _sds sd_card" description="" id="com.xilinx.sdk.apf.linux.toolchain.configuration.estimate.942363008" name="SDEstimate" parent="com.xilinx.sdk.apf.linux.toolchain.configuration.estimate">
 					<folderInfo id="com.xilinx.sdk.apf.linux.toolchain.configuration.estimate.942363008." name="/" resourcePath="">
 						<toolChain id="com.xilinx.sdk.apf.linux.toolchain.estimate.327641957" name="Xilinx SDSoC Linux Toolchain" superClass="com.xilinx.sdk.apf.linux.toolchain.estimate">
-							<option id="com.xilinx.sdk.apf.linux.common.option.platform.9778291" superClass="com.xilinx.sdk.apf.linux.common.option.platform" value="zc702" valueType="string"/>
+							<option id="com.xilinx.sdk.apf.linux.common.option.platform.9778291" name="SDSoC Platform" superClass="com.xilinx.sdk.apf.linux.common.option.platform" value="zc702" valueType="string"/>
 							<targetPlatform binaryParser="com.xilinx.sdk.managedbuilder.XELF.armlinux" id="com.xilinx.sdk.apf.linux.toolchain.targetplatform.1445307746" isAbstract="false" name="SDSoC Linux Target Platform" superClass="com.xilinx.sdk.apf.linux.toolchain.targetplatform"/>
-							<builder buildPath="${workspace_loc:/lab1_prebuilt}/SDEstimate" enableAutoBuild="true" id="com.xilinx.sdk.apf.linux.toolchain.builder.991687027" managedBuildOn="true" name="GNU make.SDEstimate" superClass="com.xilinx.sdk.apf.linux.toolchain.builder"/>
+							<builder buildPath="${workspace_loc:/lab1_prebuilt}/SDEstimate" enableAutoBuild="true" id="com.xilinx.sdk.apf.linux.toolchain.builder.991687027" keepEnvironmentInBuildfile="false" managedBuildOn="true" name="GNU make" superClass="com.xilinx.sdk.apf.linux.toolchain.builder"/>
 							<tool id="com.xilinx.sdk.apf.linux.toolchain.estimate.c.compiler.1940200937" name="SDSCC Linux Compiler" superClass="com.xilinx.sdk.apf.linux.toolchain.estimate.c.compiler">
-								<option id="xilinx.gnu.compiler.dircategory.includes.1652115141" superClass="xilinx.gnu.compiler.dircategory.includes" valueType="includePath">
+								<option id="xilinx.gnu.compiler.dircategory.includes.1652115141" name="Include Paths" superClass="xilinx.gnu.compiler.dircategory.includes" valueType="includePath">
 									<listOptionValue builtIn="false" value="&quot;../src&quot;"/>
 								</option>
 								<inputType id="com.xilinx.sdk.apf.linux.c.compiler.input.899775182" name="C source files" superClass="com.xilinx.sdk.apf.linux.c.compiler.input"/>
 							</tool>
 							<tool id="com.xilinx.sdk.apf.linux.toolchain.estimate.cxx.compiler.950988308" name="SDS++ Linux Compiler" superClass="com.xilinx.sdk.apf.linux.toolchain.estimate.cxx.compiler">
-								<option id="xilinx.gnu.compiler.dircategory.includes.1328936569" superClass="xilinx.gnu.compiler.dircategory.includes" valueType="includePath">
+								<option id="xilinx.gnu.compiler.dircategory.includes.1328936569" name="Include Paths" superClass="xilinx.gnu.compiler.dircategory.includes" valueType="includePath">
 									<listOptionValue builtIn="false" value="&quot;../src&quot;"/>
 								</option>
 								<inputType id="com.xilinx.sdk.apf.linux.cxx.compiler.input.527330444" name="C++ source files" superClass="com.xilinx.sdk.apf.linux.cxx.compiler.input"/>
 							</tool>
 							<tool id="com.xilinx.sdk.apf.linux.toolchain.linker.1416117210" name="SDS++ Linux Linker" superClass="com.xilinx.sdk.apf.linux.toolchain.linker">
-								<option id="com.xilinx.sdk.apf.linux.linker.instrument.functions.137800477" superClass="com.xilinx.sdk.apf.linux.linker.instrument.functions" valueType="stringList">
+								<option id="com.xilinx.sdk.apf.linux.linker.instrument.functions.137800477" name="Instrumented Functions" superClass="com.xilinx.sdk.apf.linux.linker.instrument.functions" valueType="stringList">
 									<listOptionValue builtIn="false" value=" madd"/>
 									<listOptionValue builtIn="false" value=" mmult"/>
 								</option>
@@ -173,7 +173,7 @@
 					</folderInfo>
 					<fileInfo id="com.xilinx.sdk.apf.linux.toolchain.configuration.estimate.942363008.src/madd.cpp" name="madd.cpp" rcbsApplicability="disable" resourcePath="src/madd.cpp" toolsToInvoke="com.xilinx.sdk.apf.linux.toolchain.estimate.cxx.compiler.950988308.24132994">
 						<tool id="com.xilinx.sdk.apf.linux.toolchain.estimate.cxx.compiler.950988308.24132994" name="SDS++ Linux Compiler" superClass="com.xilinx.sdk.apf.linux.toolchain.estimate.cxx.compiler.950988308">
-							<option id="com.xilinx.sdk.apf.linux.accel.functions.1245585944" superClass="com.xilinx.sdk.apf.linux.accel.functions" valueType="stringList">
+							<option id="com.xilinx.sdk.apf.linux.accel.functions.1245585944" name="Accelerated Functions" superClass="com.xilinx.sdk.apf.linux.accel.functions" valueType="stringList">
 								<listOptionValue builtIn="false" value="madd madd.cpp"/>
 							</option>
 							<inputType id="com.xilinx.sdk.apf.linux.cxx.compiler.input.1870612549" name="C++ source files" superClass="com.xilinx.sdk.apf.linux.cxx.compiler.input"/>
@@ -181,7 +181,7 @@
 					</fileInfo>
 					<fileInfo id="com.xilinx.sdk.apf.linux.toolchain.configuration.estimate.942363008.src/mmult.cpp" name="mmult.cpp" rcbsApplicability="disable" resourcePath="src/mmult.cpp" toolsToInvoke="com.xilinx.sdk.apf.linux.toolchain.estimate.cxx.compiler.950988308.208143422">
 						<tool id="com.xilinx.sdk.apf.linux.toolchain.estimate.cxx.compiler.950988308.208143422" name="SDS++ Linux Compiler" superClass="com.xilinx.sdk.apf.linux.toolchain.estimate.cxx.compiler.950988308">
-							<option id="com.xilinx.sdk.apf.linux.accel.functions.261056008" superClass="com.xilinx.sdk.apf.linux.accel.functions" valueType="stringList">
+							<option id="com.xilinx.sdk.apf.linux.accel.functions.261056008" name="Accelerated Functions" superClass="com.xilinx.sdk.apf.linux.accel.functions" valueType="stringList">
 								<listOptionValue builtIn="false" value="mmult mmult.cpp"/>
 							</option>
 							<inputType id="com.xilinx.sdk.apf.linux.cxx.compiler.input.1212753344" name="C++ source files" superClass="com.xilinx.sdk.apf.linux.cxx.compiler.input"/>
@@ -202,4 +202,5 @@
 	<storageModule moduleId="scannerConfiguration">
 		<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId=""/>
 	</storageModule>
+	<storageModule moduleId="refreshScope"/>
 </cproject>

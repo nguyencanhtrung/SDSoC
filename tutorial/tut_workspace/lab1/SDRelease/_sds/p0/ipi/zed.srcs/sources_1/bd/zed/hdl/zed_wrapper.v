@@ -1,8 +1,8 @@
 //Copyright 1986-2014 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
-//Tool Version: Vivado v.2014.4 (lin64) Build 1063567 Fri Nov  7 17:36:24 MST 2014
-//Date        : Wed Nov 12 10:46:31 2014
-//Host        : xsjjece40 running 64-bit Red Hat Enterprise Linux Client release 5.9 (Tikanga)
+//Tool Version: Vivado v.2014.4 (lin64) Build 1071353 Tue Nov 18 16:48:31 MST 2014
+//Date        : Thu Jul 28 19:35:43 2016
+//Host        : verratnix.zmk.uni-kl.de running 64-bit CentOS release 6.7 (Final)
 //Command     : generate_target zed_wrapper.bd
 //Design      : zed_wrapper
 //Purpose     : IP block netlist

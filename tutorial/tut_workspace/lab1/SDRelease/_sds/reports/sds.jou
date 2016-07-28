@@ -1,13 +1,14 @@
 (c) Copyright 2012-2015 Xilinx, Inc. All Rights Reserved.
 #-----------------------------------------------------------
 # Tool version  : sds++ 2014.4 20150228
-# Start time    : Thu Jul 28 07:03:04 PM CEST 2016
+# Start time    : Thu Jul 28 07:35:01 PM CEST 2016
 # Command line  : sds++ -o lab1.elf ./src/madd.o ./src/main.o ./src/mmult.o -sds-pf zed
 # Log file      : /home/trungnguyen/SDSoC/tutorial/tut_workspace/lab1/SDRelease/_sds/reports/sds.log
 # Journal file  : /home/trungnguyen/SDSoC/tutorial/tut_workspace/lab1/SDRelease/_sds/reports/sds.jou
 # Report file   : /home/trungnguyen/SDSoC/tutorial/tut_workspace/lab1/SDRelease/_sds/reports/sds.rpt
 #-----------------------------------------------------------
 
+# INFO: [SDSoC 0-0] Removing implementation files from previous run
 # INFO: [SDSoC 0-0] Analyzing object files
 arm-xilinx-linux-gnueabi-objcopy -O binary --set-section-flags .xddata=alloc --only-section=.xddata /home/trungnguyen/SDSoC/tutorial/tut_workspace/lab1/SDRelease/src/madd.o /home/trungnguyen/SDSoC/tutorial/tut_workspace/lab1/SDRelease/_sds/.data/madd.o.xml
 arm-xilinx-linux-gnueabi-objcopy -O binary --set-section-flags .xdpp=alloc --only-section=.xdpp /home/trungnguyen/SDSoC/tutorial/tut_workspace/lab1/SDRelease/src/madd.o /home/trungnguyen/SDSoC/tutorial/tut_workspace/lab1/SDRelease/_sds/.pp/madd.ii
@@ -33,4 +34,42 @@ cd /home/trungnguyen/SDSoC/tutorial/tut_workspace/lab1/SDRelease
 cd /home/trungnguyen/SDSoC/tutorial/tut_workspace/lab1/SDRelease/_sds/swstubs
 stub_gen  -func madd  -stub /home/trungnguyen/SDSoC/tutorial/tut_workspace/lab1/SDRelease/_sds/.llvm/madd.cfrewrite  -o /home/trungnguyen/SDSoC/tutorial/tut_workspace/lab1/SDRelease/_sds/swstubs/madd.cpp  /home/trungnguyen/SDSoC/tutorial/tut_workspace/lab1/src/madd.cpp  --  -c  -target arm-xilinx-linux-gnueabi -mcpu=cortex-a9 -O0 -g -w   -I/opt/Xilinx/SDSoC/2014.4/SDK/2014.4/gnu/arm/lin/arm-xilinx-linux-gnueabi/include/c++/4.8.3  -I/opt/Xilinx/SDSoC/2014.4/SDK/2014.4/gnu/arm/lin/arm-xilinx-linux-gnueabi/include/c++/4.8.3/arm-xilinx-linux-gnueabi  -I/opt/Xilinx/SDSoC/2014.4/SDK/2014.4/gnu/arm/lin/arm-xilinx-linux-gnueabi/include/c++/4.8.3/backward   -I/opt/Xilinx/SDSoC/2014.4/SDK/2014.4/gnu/arm/lin/lib/gcc/arm-xilinx-linux-gnueabi/4.8.3/include  -I/opt/Xilinx/SDSoC/2014.4/SDK/2014.4/gnu/arm/lin/lib/gcc/arm-xilinx-linux-gnueabi/4.8.3/include-fixed  -I/opt/Xilinx/SDSoC/2014.4/SDK/2014.4/gnu/arm/lin/arm-xilinx-linux-gnueabi/include  -I/opt/Xilinx/SDSoC/2014.4/SDK/2014.4/gnu/arm/lin/arm-xilinx-linux-gnueabi/libc/usr/include  -I /opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/include  -I /opt/Xilinx/SDSoC/2014.4/arm-xilinx-linux-gnueabi/include    -I/home/trungnguyen/SDSoC/tutorial/tut_workspace/lab1/src -I/home/trungnguyen/SDSoC/tutorial/tut_workspace/lab1/src -Wall -O3 -fmessage-length=0 -MMD -MP -D __SDSCC__
 stub_gen  -func mmult  -stub /home/trungnguyen/SDSoC/tutorial/tut_workspace/lab1/SDRelease/_sds/.llvm/mmult.cfrewrite  -o /home/trungnguyen/SDSoC/tutorial/tut_workspace/lab1/SDRelease/_sds/swstubs/mmult.cpp  /home/trungnguyen/SDSoC/tutorial/tut_workspace/lab1/src/mmult.cpp  --  -c  -target arm-xilinx-linux-gnueabi -mcpu=cortex-a9 -O0 -g -w   -I/opt/Xilinx/SDSoC/2014.4/SDK/2014.4/gnu/arm/lin/arm-xilinx-linux-gnueabi/include/c++/4.8.3  -I/opt/Xilinx/SDSoC/2014.4/SDK/2014.4/gnu/arm/lin/arm-xilinx-linux-gnueabi/include/c++/4.8.3/arm-xilinx-linux-gnueabi  -I/opt/Xilinx/SDSoC/2014.4/SDK/2014.4/gnu/arm/lin/arm-xilinx-linux-gnueabi/include/c++/4.8.3/backward   -I/opt/Xilinx/SDSoC/2014.4/SDK/2014.4/gnu/arm/lin/lib/gcc/arm-xilinx-linux-gnueabi/4.8.3/include  -I/opt/Xilinx/SDSoC/2014.4/SDK/2014.4/gnu/arm/lin/lib/gcc/arm-xilinx-linux-gnueabi/4.8.3/include-fixed  -I/opt/Xilinx/SDSoC/2014.4/SDK/2014.4/gnu/arm/lin/arm-xilinx-linux-gnueabi/include  -I/opt/Xilinx/SDSoC/2014.4/SDK/2014.4/gnu/arm/lin/arm-xilinx-linux-gnueabi/libc/usr/include  -I /opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/include  -I /opt/Xilinx/SDSoC/2014.4/arm-xilinx-linux-gnueabi/include    -I/home/trungnguyen/SDSoC/tutorial/tut_workspace/lab1/src -I/home/trungnguyen/SDSoC/tutorial/tut_workspace/lab1/src -Wall -O3 -fmessage-length=0 -MMD -MP -D __SDSCC__
-cd /home/trungnguyen/SDSoC/tutorial/tut_workspace/l
+cd /home/trungnguyen/SDSoC/tutorial/tut_workspace/lab1/SDRelease
+# INFO: [SDSoC 0-0] Removing implementation files from previous run /home/trungnguyen/SDSoC/tutorial/tut_workspace/lab1/SDRelease/_sds/p0/ipi
+xsltproc  -o /home/trungnguyen/SDSoC/tutorial/tut_workspace/lab1/SDRelease/_sds/p0/ipi/apsys_acc_info.xml  --stringparam P_XD_IP_REPOS /home/trungnguyen/SDSoC/tutorial/tut_workspace/lab1/SDRelease/_sds/.cdb/xd_ip_db.xml  /opt/Xilinx/SDSoC/2014.4/scripts/xsd/genAdapterPackagedIpInfo.xsl 
+         /home/trungnguyen/SDSoC/tutorial/tut_workspace/lab1/SDRelease/_sds/.llvm/apsys_0.xml
+cd /home/trungnguyen/SDSoC/tutorial/tut_workspace/lab1/SDRelease
+cd /home/trungnguyen/SDSoC/tutorial/tut_workspace/lab1/SDRelease
+# INFO: [SDSoC 0-0] Creating block diagram (BD), address map, port information and device registration for partition 0 (this may take a few minutes)
+system_linker -cf-input /home/trungnguyen/SDSoC/tutorial/tut_workspace/lab1/SDRelease/_sds/.llvm/apsys_0.xml -cf-output-dir _sds/p0 -ip-db /home/trungnguyen/SDSoC/tutorial/tut_workspace/lab1/SDRelease/_sds/.cdb/xd_ip_db.xml -ip-repo /home/trungnguyen/SDSoC/tutorial/tut_workspace/lab1/SDRelease/_sds/iprepo/repo -sds-pf /opt/Xilinx/SDSoC/2014.4/platforms/zed:linux -software-only   -sdsoc
+# INFO: [SDSoC 0-0] Prepare hardware access API functions
+cd /home/trungnguyen/SDSoC/tutorial/tut_workspace/lab1/SDRelease
+cd /home/trungnguyen/SDSoC/tutorial/tut_workspace/lab1/SDRelease
+# INFO: [SDSoC 0-0] Compile hardware access API functions
+# INFO: [SDSoC 0-0] Compile accelerator stub functions
+cd /home/trungnguyen/SDSoC/tutorial/tut_workspace/lab1/SDRelease/_sds/swstubs
+arm-xilinx-linux-gnueabi-gcc -I /opt/Xilinx/SDSoC/2014.4/arm-xilinx-linux-gnueabi/include  -I /opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/include    -c  /home/trungnguyen/SDSoC/tutorial/tut_workspace/lab1/SDRelease/_sds/swstubs/devreg.c
+arm-xilinx-linux-gnueabi-gcc -I /opt/Xilinx/SDSoC/2014.4/arm-xilinx-linux-gnueabi/include  -I /opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/include    -c  /home/trungnguyen/SDSoC/tutorial/tut_workspace/lab1/SDRelease/_sds/swstubs/portinfo.c
+arm-xilinx-linux-gnueabi-g++ -I /opt/Xilinx/SDSoC/2014.4/arm-xilinx-linux-gnueabi/include  -I /opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/include    -c  /home/trungnguyen/SDSoC/tutorial/tut_workspace/lab1/SDRelease/_sds/swstubs/cf_stub.c
+arm-xilinx-linux-gnueabi-ar crs /home/trungnguyen/SDSoC/tutorial/tut_workspace/lab1/SDRelease/_sds/swstubs/libxlnk_stub.a /home/trungnguyen/SDSoC/tutorial/tut_workspace/lab1/SDRelease/_sds/swstubs/devreg.o /home/trungnguyen/SDSoC/tutorial/tut_workspace/lab1/SDRelease/_sds/swstubs/portinfo.o /home/trungnguyen/SDSoC/tutorial/tut_workspace/lab1/SDRelease/_sds/swstubs/cf_stub.o
+arm-xilinx-linux-gnueabi-g++ -c madd.cpp -I /opt/Xilinx/SDSoC/2014.4/arm-xilinx-linux-gnueabi/include  -I /opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/include   -I/home/trungnguyen/SDSoC/tutorial/tut_workspace/lab1/src -I/home/trungnguyen/SDSoC/tutorial/tut_workspace/lab1/src -Wall -O3 -fmessage-length=0 -MMD -MP -D __SDSCC__  -o madd.o
+arm-xilinx-linux-gnueabi-g++ -c mmult.cpp -I /opt/Xilinx/SDSoC/2014.4/arm-xilinx-linux-gnueabi/include  -I /opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/include   -I/home/trungnguyen/SDSoC/tutorial/tut_workspace/lab1/src -I/home/trungnguyen/SDSoC/tutorial/tut_workspace/lab1/src -Wall -O3 -fmessage-length=0 -MMD -MP -D __SDSCC__  -o mmult.o
+cd /home/trungnguyen/SDSoC/tutorial/tut_workspace/lab1/SDRelease
+# INFO: [SDSoC 0-0] Compile rewritten caller functions
+cd /home/trungnguyen/SDSoC/tutorial/tut_workspace/lab1/SDRelease/_sds/swstubs
+arm-xilinx-linux-gnueabi-objcopy -O binary --set-section-flags .xdsdata=alloc --only-section=.xdsdata /home/trungnguyen/SDSoC/tutorial/tut_workspace/lab1/SDRelease/src/main.o /home/trungnguyen/SDSoC/tutorial/tut_workspace/lab1/SDRelease/_sds/.data/main.xml
+arm-xilinx-linux-gnueabi-g++ -c /home/trungnguyen/SDSoC/tutorial/tut_workspace/lab1/SDRelease/_sds/swstubs/main.cpp -I/home/trungnguyen/SDSoC/tutorial/tut_workspace/lab1/src -I/home/trungnguyen/SDSoC/tutorial/tut_workspace/lab1/src -Wall -O3 -fmessage-length=0 -MMD -MP -D __SDSCC__ -I /opt/Xilinx/SDSoC/2014.4/arm-xilinx-linux-gnueabi/include  -I /opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/include   -o /home/trungnguyen/SDSoC/tutorial/tut_workspace/lab1/SDRelease/_sds/swstubs/main.o
+cd /home/trungnguyen/SDSoC/tutorial/tut_workspace/lab1/SDRelease
+cd /home/trungnguyen/SDSoC/tutorial/tut_workspace/lab1/SDRelease/_sds/swstubs
+arm-xilinx-linux-gnueabi-ar crs /home/trungnguyen/SDSoC/tutorial/tut_workspace/lab1/SDRelease/_sds/swstubs/liblab1.a /home/trungnguyen/SDSoC/tutorial/tut_workspace/lab1/SDRelease/_sds/swstubs/devreg.o /home/trungnguyen/SDSoC/tutorial/tut_workspace/lab1/SDRelease/_sds/swstubs/portinfo.o /home/trungnguyen/SDSoC/tutorial/tut_workspace/lab1/SDRelease/_sds/swstubs/cf_stub.o /home/trungnguyen/SDSoC/tutorial/tut_workspace/lab1/SDRelease/_sds/swstubs/madd.o /home/trungnguyen/SDSoC/tutorial/tut_workspace/lab1/SDRelease/_sds/swstubs/mmult.o
+cd /home/trungnguyen/SDSoC/tutorial/tut_workspace/lab1/SDRelease
+# INFO: [SDSoC 0-0] Link application ELF file
+arm-xilinx-linux-gnueabi-g++   /home/trungnguyen/SDSoC/tutorial/tut_workspace/lab1/SDRelease/src/madd.o /home/trungnguyen/SDSoC/tutorial/tut_workspace/lab1/SDRelease/_sds/swstubs/main.o /home/trungnguyen/SDSoC/tutorial/tut_workspace/lab1/SDRelease/src/mmult.o /home/trungnguyen/SDSoC/tutorial/tut_workspace/lab1/SDRelease/_sds/swstubs/madd.o /home/trungnguyen/SDSoC/tutorial/tut_workspace/lab1/SDRelease/_sds/swstubs/mmult.o     -L /opt/Xilinx/SDSoC/2014.4/arm-xilinx-linux-gnueabi/lib -L/home/trungnguyen/SDSoC/tutorial/tut_workspace/lab1/SDRelease/_sds/swstubs -Wl,--start-group  -Wl,--end-group -Wl,--start-group    -lpthread -lsds_lib -lxlnk_stub  -Wl,--end-group -o /home/trungnguyen/SDSoC/tutorial/tut_workspace/lab1/SDRelease/_sds/swstubs/lab1.elf
+arm-xilinx-linux-gnueabi-objcopy -R .xddata -R .xdfcnmap -R .xdhlscore -R .xdcore -R .xdbdtcl -R .xdsdata -R .xdpp /home/trungnguyen/SDSoC/tutorial/tut_workspace/lab1/SDRelease/_sds/swstubs/lab1.elf
+cd /home/trungnguyen/SDSoC/tutorial/tut_workspace/lab1/SDRelease
+# INFO: [SDSoC 0-0] Enable generation of hardware programming files
+# INFO: [SDSoC 0-0] Enable generation of boot files
+# INFO: [SDSoC 0-0] Calling system_linker for partition 0
+system_linker -cf-input /home/trungnguyen/SDSoC/tutorial/tut_workspace/lab1/SDRelease/_sds/.llvm/apsys_0.xml -cf-output-dir _sds/p0 -ip-db /home/trungnguyen/SDSoC/tutorial/tut_workspace/lab1/SDRelease/_sds/.cdb/xd_ip_db.xml -ip-repo /home/trungnguyen/SDSoC/tutorial/tut_workspace/lab1/SDRelease/_sds/iprepo/repo -sds-pf /opt/Xilinx/SDSoC/2014.4/platforms/zed:linux -bitstream -bit-name lab1.elf.bit -boot-files   -mdev-no-swgen -mdev-no-xsd -sdsoc -sd-output-dir _sds/p0/sd_card -bit-binary -elf /home/trungnguyen/SDSoC/tutorial/tut_workspace/lab1/SDRelease/_sds/swstubs/lab1.elf
+# All user specified timing constraints are met.
+# sds++ completed at Thu Jul 28 07:51:00 PM CEST 2016

@@ -1,0 +1,9 @@
+<AutoPilot:project xmlns:AutoPilot="com.autoesl.autopilot.project" projectType="C/C++" name="madd" top="madd">
+    <files>
+        <file name="/home/trungnguyen/SDSoC/tutorial/tut_workspace/lab1_prebuilt/SDDebug/_sds/vhls/src/madd.cpp" sc="0" tb="false" cflags="-I/home/trungnguyen/SDSoC/tutorial/tut_workspace/lab1_prebuilt/src -Wall -O0 -g -fmessage-length=0 -MMD -MP -D__SDSCC__ -I/home/trungnguyen/SDSoC/tutorial/tut_workspace/lab1_prebuilt/src -D__SDSVHLS__ -I/home/trungnguyen/SDSoC/tutorial/tut_workspace/lab1_prebuilt/SDDebug -w"/>
+    </files>
+    <solutions>
+        <solution name="solution" status=""/>
+    </solutions>
+</AutoPilot:project>
+

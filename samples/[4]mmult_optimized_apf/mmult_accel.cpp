@@ -32,9 +32,9 @@ void mmult_accel (float in_A[A_NROWS*A_NCOLS],
                   float in_B[A_NCOLS*B_NCOLS],
                   float out_C[A_NROWS*B_NCOLS]) 
 {
-#pragma HLS INTERFACE ap_fifo port=in_A
-#pragma HLS INTERFACE ap_fifo port=in_B
-#pragma HLS INTERFACE ap_fifo port=out_C
+//#pragma HLS INTERFACE ap_fifo port=in_A
+//#pragma HLS INTERFACE ap_fifo port=in_B
+//#pragma HLS INTERFACE ap_fifo port=out_C
 
   int i, j;
   float a_buf[A_NROWS][A_NCOLS];

@@ -1,0 +1,41 @@
+(c) Copyright 2012-2015 Xilinx, Inc. All Rights Reserved.
+#-----------------------------------------------------------
+# Tool version  : sds++ 2014.4 20150228
+# Start time    : Thu Jul 28 05:00:29 PM CEST 2016
+# Command line  : sds++ -sds-pf zed -sds-hw mmult_accel mmult_accel.cpp -sds-end -poll-mode 1 -Wall -O3 -c mmult_accel.cpp -o mmult_accel.o
+# Log file      : /home/trungnguyen/SDSoC/samples/mmult_optimized_apf/_sds/reports/sds_mmult_accel.log
+# Journal file  : /home/trungnguyen/SDSoC/samples/mmult_optimized_apf/_sds/reports/sds_mmult_accel.jou
+# Report file   : /home/trungnguyen/SDSoC/samples/mmult_optimized_apf/_sds/reports/sds_mmult_accel.rpt
+#-----------------------------------------------------------
+
+# INFO: [SDSoC 0-0] Performing accelerator source linting
+sdslint -func mmult_accel /home/trungnguyen/SDSoC/samples/mmult_optimized_apf/mmult_accel.cpp -- -c -target arm-xilinx-linux-gnueabi -mcpu=cortex-a9 -O0 -g -w   -I/opt/Xilinx/SDSoC/2014.4/SDK/2014.4/gnu/arm/lin/arm-xilinx-linux-gnueabi/include/c++/4.8.3  -I/opt/Xilinx/SDSoC/2014.4/SDK/2014.4/gnu/arm/lin/arm-xilinx-linux-gnueabi/include/c++/4.8.3/arm-xilinx-linux-gnueabi  -I/opt/Xilinx/SDSoC/2014.4/SDK/2014.4/gnu/arm/lin/arm-xilinx-linux-gnueabi/include/c++/4.8.3/backward   -I/opt/Xilinx/SDSoC/2014.4/SDK/2014.4/gnu/arm/lin/lib/gcc/arm-xilinx-linux-gnueabi/4.8.3/include  -I/opt/Xilinx/SDSoC/2014.4/SDK/2014.4/gnu/arm/lin/lib/gcc/arm-xilinx-linux-gnueabi/4.8.3/include-fixed  -I/opt/Xilinx/SDSoC/2014.4/SDK/2014.4/gnu/arm/lin/arm-xilinx-linux-gnueabi/include  -I/opt/Xilinx/SDSoC/2014.4/SDK/2014.4/gnu/arm/lin/arm-xilinx-linux-gnueabi/libc/usr/include  -I /opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/include  -I /opt/Xilinx/SDSoC/2014.4/arm-xilinx-linux-gnueabi/include    -Wall -D __SDSCC__
+# INFO: [SDSoC 0-0] Create data motion intermediate representation
+clang_wrapper -target arm-xilinx-linux-gnueabi -mcpu=cortex-a9 -O0 -g -w   -I/opt/Xilinx/SDSoC/2014.4/SDK/2014.4/gnu/arm/lin/arm-xilinx-linux-gnueabi/include/c++/4.8.3  -I/opt/Xilinx/SDSoC/2014.4/SDK/2014.4/gnu/arm/lin/arm-xilinx-linux-gnueabi/include/c++/4.8.3/arm-xilinx-linux-gnueabi  -I/opt/Xilinx/SDSoC/2014.4/SDK/2014.4/gnu/arm/lin/arm-xilinx-linux-gnueabi/include/c++/4.8.3/backward   -I/opt/Xilinx/SDSoC/2014.4/SDK/2014.4/gnu/arm/lin/lib/gcc/arm-xilinx-linux-gnueabi/4.8.3/include  -I/opt/Xilinx/SDSoC/2014.4/SDK/2014.4/gnu/arm/lin/lib/gcc/arm-xilinx-linux-gnueabi/4.8.3/include-fixed  -I/opt/Xilinx/SDSoC/2014.4/SDK/2014.4/gnu/arm/lin/arm-xilinx-linux-gnueabi/include  -I/opt/Xilinx/SDSoC/2014.4/SDK/2014.4/gnu/arm/lin/arm-xilinx-linux-gnueabi/libc/usr/include  -I /opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/include  -I /opt/Xilinx/SDSoC/2014.4/arm-xilinx-linux-gnueabi/include    -Wall -D __SDSCC__ -emit-llvm -S /home/trungnguyen/SDSoC/samples/mmult_optimized_apf/mmult_accel.cpp -o /home/trungnguyen/SDSoC/samples/mmult_optimized_apf/_sds/.llvm/mmult_accel.s
+# INFO: [SDSoC 0-0] Performing pragma generation
+pragma_gen  -func mmult_accel  -o /home/trungnguyen/SDSoC/samples/mmult_optimized_apf/_sds/vhls/src/mmult_accel.cpp  /home/trungnguyen/SDSoC/samples/mmult_optimized_apf/mmult_accel.cpp  --  -c  -target arm-xilinx-linux-gnueabi -mcpu=cortex-a9 -O0 -g -w   -I/opt/Xilinx/SDSoC/2014.4/SDK/2014.4/gnu/arm/lin/arm-xilinx-linux-gnueabi/include/c++/4.8.3  -I/opt/Xilinx/SDSoC/2014.4/SDK/2014.4/gnu/arm/lin/arm-xilinx-linux-gnueabi/include/c++/4.8.3/arm-xilinx-linux-gnueabi  -I/opt/Xilinx/SDSoC/2014.4/SDK/2014.4/gnu/arm/lin/arm-xilinx-linux-gnueabi/include/c++/4.8.3/backward   -I/opt/Xilinx/SDSoC/2014.4/SDK/2014.4/gnu/arm/lin/lib/gcc/arm-xilinx-linux-gnueabi/4.8.3/include  -I/opt/Xilinx/SDSoC/2014.4/SDK/2014.4/gnu/arm/lin/lib/gcc/arm-xilinx-linux-gnueabi/4.8.3/include-fixed  -I/opt/Xilinx/SDSoC/2014.4/SDK/2014.4/gnu/arm/lin/arm-xilinx-linux-gnueabi/include  -I/opt/Xilinx/SDSoC/2014.4/SDK/2014.4/gnu/arm/lin/arm-xilinx-linux-gnueabi/libc/usr/include  -I /opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/include  -I /opt/Xilinx/SDSoC/2014.4/arm-xilinx-linux-gnueabi/include     -Wall -O3 -D __SDSCC__ -I/home/trungnguyen/SDSoC/samples/mmult_optimized_apf
+# INFO: [SDSoC 0-0] Moving function mmult_accel to Programmable Logic
+cd /home/trungnguyen/SDSoC/samples/mmult_optimized_apf/_sds/vhls
+/opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/bin/vivado_hls /home/trungnguyen/SDSoC/samples/mmult_optimized_apf/_sds/vhls/mmult_accel_run.tcl
+cd /home/trungnguyen/SDSoC/samples/mmult_optimized_apf
+cd /home/trungnguyen/SDSoC/samples/mmult_optimized_apf/_sds/vhls/mmult_accel/solution/impl/ip
+xsltproc --output component.xml  /opt/Xilinx/SDSoC/2014.4/scripts/xsd/xdFixAximmAddrSpaceProperty.xsl  component.xml
+zip -u xilinx_com_hls_mmult_accel_1_0.zip component.xml
+cd /home/trungnguyen/SDSoC/samples/mmult_optimized_apf/_sds/vhls
+sed -i -e {s/xilinx\.com\/xidane/xilinx\.com\/xd/g} /home/trungnguyen/SDSoC/samples/mmult_optimized_apf/_sds/vhls/mmult_accel/solution/impl/ip/auxiliary.xml
+cd /home/trungnguyen/SDSoC/samples/mmult_optimized_apf
+cd /home/trungnguyen/SDSoC/samples/mmult_optimized_apf/_sds/.llvm
+xsltproc  --output /home/trungnguyen/SDSoC/samples/mmult_optimized_apf/_sds/.llvm/mmult_accel.hlsmap1.xml  --stringparam P_CLKID 1  --stringparam P_HLS_TYPE hls  /opt/Xilinx/SDSoC/2014.4/scripts/xsd/xdHlsmapRenameAttr.xsl  /home/trungnguyen/SDSoC/samples/mmult_optimized_apf/_sds/.llvm/mmult_accel_auxiliary.xml
+xsltproc  --output /home/trungnguyen/SDSoC/samples/mmult_optimized_apf/_sds/.llvm/mmult_accel.hlsmap.xml  /opt/Xilinx/SDSoC/2014.4/scripts/xsd/xdHlsmapAdapter.xsl  /home/trungnguyen/SDSoC/samples/mmult_optimized_apf/_sds/.llvm/mmult_accel.hlsmap1.xml
+xsltproc    --output /home/trungnguyen/SDSoC/samples/mmult_optimized_apf/_sds/.llvm/mmult_accel.fcnmap.xml  /opt/Xilinx/SDSoC/2014.4/scripts/xsd/xdHlsmapAxi4.xsl  /home/trungnguyen/SDSoC/samples/mmult_optimized_apf/_sds/.llvm/mmult_accel.hlsmap.xml
+xsltproc  --output /home/trungnguyen/SDSoC/samples/mmult_optimized_apf/_sds/.llvm/mmult_accel_if.xml  /opt/Xilinx/SDSoC/2014.4/scripts/xsd/xdHlsAdapterComp.xsl  /home/trungnguyen/SDSoC/samples/mmult_optimized_apf/_sds/.llvm/mmult_accel.fcnmap.xml
+cd /home/trungnguyen/SDSoC/samples/mmult_optimized_apf
+arm-xilinx-linux-gnueabi-g++ -c  -Wall -O3 -D __SDSCC__   /home/trungnguyen/SDSoC/samples/mmult_optimized_apf/_sds/swstubs/mmult_accel.cpp -o /home/trungnguyen/SDSoC/samples/mmult_optimized_apf/_sds/swstubs/mmult_accel.o
+arm-xilinx-linux-gnueabi-objcopy --add-section .xdasm=/home/trungnguyen/SDSoC/samples/mmult_optimized_apf/_sds/.llvm/mmult_accel.s /home/trungnguyen/SDSoC/samples/mmult_optimized_apf/_sds/swstubs/mmult_accel.o
+arm-xilinx-linux-gnueabi-objcopy --add-section .xddata=/home/trungnguyen/SDSoC/samples/mmult_optimized_apf/_sds/swstubs/mmult_accel.xml /home/trungnguyen/SDSoC/samples/mmult_optimized_apf/_sds/swstubs/mmult_accel.o
+arm-xilinx-linux-gnueabi-g++ -E  -Wall -O3 -D __SDSCC__  -I /opt/Xilinx/SDSoC/2014.4/arm-xilinx-linux-gnueabi/include  -I /opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/include   /home/trungnguyen/SDSoC/samples/mmult_optimized_apf/mmult_accel.cpp -o /home/trungnguyen/SDSoC/samples/mmult_optimized_apf/_sds/.pp/mmult_accel.ii
+arm-xilinx-linux-gnueabi-objcopy --add-section .xdpp=/home/trungnguyen/SDSoC/samples/mmult_optimized_apf/_sds/.pp/mmult_accel.ii /home/trungnguyen/SDSoC/samples/mmult_optimized_apf/_sds/swstubs/mmult_accel.o
+arm-xilinx-linux-gnueabi-objcopy --add-section .xdfcnmap=/home/trungnguyen/SDSoC/samples/mmult_optimized_apf/_sds/.llvm/mmult_accel.fcnmap.xml /home/trungnguyen/SDSoC/samples/mmult_optimized_apf/_sds/swstubs/mmult_accel.o
+arm-xilinx-linux-gnueabi-objcopy --add-section .xdhlscore=/home/trungnguyen/SDSoC/samples/mmult_optimized_apf/_sds/vhls/mmult_accel/solution/impl/ip/xilinx_com_hls_mmult_accel_1_0.zip /home/trungnguyen/SDSoC/samples/mmult_optimized_apf/_sds/swstubs/mmult_accel.o
+arm-xilinx-linux-gnueabi-objcopy --add-section .xdif=/home/trungnguyen/SDSoC/samples/mmult_optimized_apf/_sds/.llvm/mmult_accel_if.xml /home/trungnguyen/SDSoC/samples/mmult_optimized_apf/_sds/swstubs/mmult_accel.o
+# sds++ completed at Thu Jul 28 05:00:50 PM CEST 2016

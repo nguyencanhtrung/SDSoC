@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xd:data xmlns:xd="http://www.xilinx.com/xd">
+  <xd:source name="mmult.cpp" compiler="g++" objfile="mmult.o" srcpath="/home/trungnguyen/SDSoC/samples/mmult_optimized_apf" flags="-I/home/trungnguyen/SDSoC/samples/mmult_optimized_apf  -Wall -O3 -D __SDSCC__"/>
+</xd:data>

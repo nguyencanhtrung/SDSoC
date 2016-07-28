@@ -3,6 +3,7 @@
 
 #include "mmult_accel.h"
 
+// Each time testing 4 vectors, 2 are pipeline => number of test = 1024
 #define NUM_VECTORS 4
 #define NUM_TESTS 256
 
@@ -85,11 +86,12 @@ int mmult_test(float *tin1Buf[NUM_VECTORS],  float *tin2Buf[NUM_VECTORS], float 
   TIME_STAMP_SW
 
   for (i = 0; i < NUM_TESTS; i++) {
+    /*< Fill up the pipeline stage */
     for (vec = 0; vec < pipeline_depth; vec++) {
 #pragma SDS async(1)
       mmult_accel(tin1Buf[vec], tin2Buf[vec], toutBufHw[vec]);
     }
-    
+    /*< */
     for (vec = pipeline_depth; vec < NUM_VECTORS; vec++) {
 #pragma SDS wait(1)
 #pragma SDS async(1)

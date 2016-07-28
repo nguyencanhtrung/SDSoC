@@ -1,7 +1,7 @@
 APPSOURCES = mmult.cpp mmult_accel.cpp 
 EXECUTABLE = mmult.elf
 
-PLATFORM = zc702
+PLATFORM = zed
 SDSFLAGS = -sds-pf ${PLATFORM} \
 	-sds-hw mmult_accel mmult_accel.cpp -sds-end \
 	-poll-mode 1

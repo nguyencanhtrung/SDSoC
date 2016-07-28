@@ -1,4 +1,0 @@
-11:11:49 INFO  : Launching XSDB server: xsdb -s /opt/Xilinx/SDSoC/2014.4/SDK/2014.4/scripts/xsdb/xsdb/xsdb-server.tcl 2450
-14:34:17 INFO  : Launching XSDB server: xsdb -s /opt/Xilinx/SDSoC/2014.4/SDK/2014.4/scripts/xsdb/xsdb/xsdb-server.tcl 2450
-14:44:15 WARN  : Unable to obtain port 2450 for use by XSDB Server, java.net.BindException: Address already in use
-14:44:15 INFO  : Launching XSDB server: xsdb -s /opt/Xilinx/SDSoC/2014.4/SDK/2014.4/scripts/xsdb/xsdb/xsdb-server.tcl 2457

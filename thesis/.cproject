@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?fileVersion 4.0.0?><cproject storage_type_id="org.eclipse.cdt.core.XmlProjectDescriptionStorage">
+	<storageModule moduleId="org.eclipse.cdt.core.settings">
+		<cconfiguration id="com.xilinx.sdk.apf.linux.toolchain.configuration.debug.332124132">
+			<storageModule buildSystemId="org.eclipse.cdt.managedbuilder.core.configurationDataProvider" id="com.xilinx.sdk.apf.linux.toolchain.configuration.debug.332124132" moduleId="org.eclipse.cdt.core.settings" name="SDDebug">
+				<externalSettings/>
+				<extensions>
+					<extension id="com.xilinx.sdk.managedbuilder.XELF.armlinux" point="org.eclipse.cdt.core.BinaryParser"/>
+					<extension id="org.eclipse.cdt.core.GmakeErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="org.eclipse.cdt.core.GLDErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="org.eclipse.cdt.core.CWDLocator" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="com.xilinx.sdk.apf.XilinxErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="org.eclipse.cdt.core.GCCErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+				</extensions>
+			</storageModule>
+			<storageModule moduleId="cdtBuildSystem" version="4.0.0">
+				<configuration artifactExtension="elf" artifactName="${ProjName}" buildProperties="org.eclipse.cdt.build.core.buildType=com.xilinx.sdk.apf.linux.toolchain.configuration.debug" cleanCommand="rm -rf _sds sd_card" description="" id="com.xilinx.sdk.apf.linux.toolchain.configuration.debug.332124132" name="SDDebug" parent="com.xilinx.sdk.apf.linux.toolchain.configuration.debug">
+					<folderInfo id="com.xilinx.sdk.apf.linux.toolchain.configuration.debug.332124132." name="/" resourcePath="">
+						<toolChain id="com.xilinx.sdk.apf.linux.toolchain.debug.1925295235" name="Xilinx SDSoC Linux Toolchain" superClass="com.xilinx.sdk.apf.linux.toolchain.debug">
+							<option id="com.xilinx.sdk.apf.linux.common.option.platform.1047941353" superClass="com.xilinx.sdk.apf.linux.common.option.platform" value="zed" valueType="string"/>
+							<targetPlatform binaryParser="com.xilinx.sdk.managedbuilder.XELF.armlinux" id="com.xilinx.sdk.apf.linux.toolchain.targetplatform.850141942" isAbstract="false" name="SDSoC Linux Target Platform" superClass="com.xilinx.sdk.apf.linux.toolchain.targetplatform"/>
+							<builder buildPath="${workspace_loc:/correlation_comp_sys}/SDDebug" enableAutoBuild="true" id="com.xilinx.sdk.apf.linux.toolchain.builder.84535363" managedBuildOn="true" name="GNU make.SDDebug" superClass="com.xilinx.sdk.apf.linux.toolchain.builder"/>
+							<tool id="com.xilinx.sdk.apf.linux.toolchain.c.compiler.872978344" name="SDSCC Linux Compiler" superClass="com.xilinx.sdk.apf.linux.toolchain.c.compiler">
+								<option id="xilinx.gnu.compiler.dircategory.includes.1696793507" superClass="xilinx.gnu.compiler.dircategory.includes" valueType="includePath">
+									<listOptionValue builtIn="false" value="&quot;../src&quot;"/>
+								</option>
+								<inputType id="com.xilinx.sdk.apf.linux.c.compiler.input.85613710" name="C source files" superClass="com.xilinx.sdk.apf.linux.c.compiler.input"/>
+							</tool>
+							<tool id="com.xilinx.sdk.apf.linux.toolchain.cxx.compiler.763054321" name="SDS++ Linux Compiler" superClass="com.xilinx.sdk.apf.linux.toolchain.cxx.compiler">
+								<option id="xilinx.gnu.compiler.dircategory.includes.501977142" superClass="xilinx.gnu.compiler.dircategory.includes" valueType="includePath">
+									<listOptionValue builtIn="false" value="&quot;../src&quot;"/>
+								</option>
+								<inputType id="com.xilinx.sdk.apf.linux.cxx.compiler.input.1609830139" name="C++ source files" superClass="com.xilinx.sdk.apf.linux.cxx.compiler.input"/>
+							</tool>
+							<tool id="com.xilinx.sdk.apf.linux.toolchain.linker.394744099" name="SDS++ Linux Linker" superClass="com.xilinx.sdk.apf.linux.toolchain.linker">
+								<inputType id="xilinx.gnu.linker.input.1886864851" superClass="xilinx.gnu.linker.input">
+									<additionalInput kind="additionalinputdependency" paths="$(USER_OBJS)"/>
+									<additionalInput kind="additionalinput" paths="$(LIBS)"/>
+								</inputType>
+								<inputType id="xilinx.gnu.linker.input.lscript.590241643" name="Linker Script" superClass="xilinx.gnu.linker.input.lscript"/>
+							</tool>
+						</toolChain>
+					</folderInfo>
+					<sourceEntries>
+						<entry excluding="**/_sds/iprepo/|**/_sds/p0/|**/_sds/vhls/" flags="VALUE_WORKSPACE_PATH" kind="sourcePath" name=""/>
+					</sourceEntries>
+				</configuration>
+			</storageModule>
+			<storageModule moduleId="org.eclipse.cdt.core.externalSettings"/>
+		</cconfiguration>
+		<cconfiguration id="com.xilinx.sdk.apf.linux.toolchain.configuration.release.2138114345">
+			<storageModule buildSystemId="org.eclipse.cdt.managedbuilder.core.configurationDataProvider" id="com.xilinx.sdk.apf.linux.toolchain.configuration.release.2138114345" moduleId="org.eclipse.cdt.core.settings" name="SDRelease">
+				<externalSettings/>
+				<extensions>
+					<extension id="com.xilinx.sdk.managedbuilder.XELF.armlinux" point="org.eclipse.cdt.core.BinaryParser"/>
+					<extension id="org.eclipse.cdt.core.GmakeErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="org.eclipse.cdt.core.GLDErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="org.eclipse.cdt.core.CWDLocator" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="com.xilinx.sdk.apf.XilinxErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="org.eclipse.cdt.core.GCCErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+				</extensions>
+			</storageModule>
+			<storageModule moduleId="cdtBuildSystem" version="4.0.0">
+				<configuration artifactExtension="elf" artifactName="${ProjName}" buildProperties="org.eclipse.cdt.build.core.buildType=com.xilinx.sdk.apf.linux.toolchain.configuration.release" cleanCommand="rm -rf _sds sd_card" description="" id="com.xilinx.sdk.apf.linux.toolchain.configuration.release.2138114345" name="SDRelease" parent="com.xilinx.sdk.apf.linux.toolchain.configuration.release">
+					<folderInfo id="com.xilinx.sdk.apf.linux.toolchain.configuration.release.2138114345." name="/" resourcePath="">
+						<toolChain id="com.xilinx.sdk.apf.linux.toolchain.release.380218264" name="Xilinx SDSoC Linux Toolchain" superClass="com.xilinx.sdk.apf.linux.toolchain.release">
+							<option id="com.xilinx.sdk.apf.linux.common.option.platform.1069981091" superClass="com.xilinx.sdk.apf.linux.common.option.platform" value="zed" valueType="string"/>
+							<targetPlatform binaryParser="com.xilinx.sdk.managedbuilder.XELF.armlinux" id="com.xilinx.sdk.apf.linux.toolchain.targetplatform.1092161672" isAbstract="false" name="SDSoC Linux Target Platform" superClass="com.xilinx.sdk.apf.linux.toolchain.targetplatform"/>
+							<builder buildPath="${workspace_loc:/correlation_comp_sys}/SDRelease" enableAutoBuild="true" id="com.xilinx.sdk.apf.linux.toolchain.builder.78814213" managedBuildOn="true" name="GNU make.SDRelease" superClass="com.xilinx.sdk.apf.linux.toolchain.builder"/>
+							<tool id="com.xilinx.sdk.apf.linux.toolchain.release.c.compiler.432225510" name="SDSCC Linux Compiler" superClass="com.xilinx.sdk.apf.linux.toolchain.release.c.compiler">
+								<option id="xilinx.gnu.compiler.dircategory.includes.185669938" superClass="xilinx.gnu.compiler.dircategory.includes" valueType="includePath">
+									<listOptionValue builtIn="false" value="&quot;../src&quot;"/>
+								</option>
+								<inputType id="com.xilinx.sdk.apf.linux.c.compiler.input.974081863" name="C source files" superClass="com.xilinx.sdk.apf.linux.c.compiler.input"/>
+							</tool>
+							<tool id="com.xilinx.sdk.apf.linux.toolchain.release.cxx.compiler.772666857" name="SDS++ Linux Compiler" superClass="com.xilinx.sdk.apf.linux.toolchain.release.cxx.compiler">
+								<option id="xilinx.gnu.compiler.dircategory.includes.1532347973" superClass="xilinx.gnu.compiler.dircategory.includes" valueType="includePath">
+									<listOptionValue builtIn="false" value="&quot;../src&quot;"/>
+								</option>
+								<inputType id="com.xilinx.sdk.apf.linux.cxx.compiler.input.1536854722" name="C++ source files" superClass="com.xilinx.sdk.apf.linux.cxx.compiler.input"/>
+							</tool>
+							<tool id="com.xilinx.sdk.apf.linux.toolchain.linker.583566206" name="SDS++ Linux Linker" superClass="com.xilinx.sdk.apf.linux.toolchain.linker">
+								<inputType id="xilinx.gnu.linker.input.50910572" superClass="xilinx.gnu.linker.input">
+									<additionalInput kind="additionalinputdependency" paths="$(USER_OBJS)"/>
+									<additionalInput kind="additionalinput" paths="$(LIBS)"/>
+								</inputType>
+								<inputType id="xilinx.gnu.linker.input.lscript.8495586" name="Linker Script" superClass="xilinx.gnu.linker.input.lscript"/>
+							</tool>
+						</toolChain>
+					</folderInfo>
+					<sourceEntries>
+						<entry excluding="**/_sds/iprepo/|**/_sds/p0/|**/_sds/vhls/" flags="VALUE_WORKSPACE_PATH" kind="sourcePath" name=""/>
+					</sourceEntries>
+				</configuration>
+			</storageModule>
+			<storageModule moduleId="org.eclipse.cdt.core.externalSettings"/>
+		</cconfiguration>
+		<cconfiguration id="com.xilinx.sdk.apf.linux.toolchain.configuration.estimate.221392863">
+			<storageModule buildSystemId="org.eclipse.cdt.managedbuilder.core.configurationDataProvider" id="com.xilinx.sdk.apf.linux.toolchain.configuration.estimate.221392863" moduleId="org.eclipse.cdt.core.settings" name="SDEstimate">
+				<externalSettings/>
+				<extensions>
+					<extension id="com.xilinx.sdk.managedbuilder.XELF.armlinux" point="org.eclipse.cdt.core.BinaryParser"/>
+					<extension id="org.eclipse.cdt.core.GmakeErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="org.eclipse.cdt.core.GLDErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="org.eclipse.cdt.core.CWDLocator" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="com.xilinx.sdk.apf.XilinxErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="org.eclipse.cdt.core.GCCErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+				</extensions>
+			</storageModule>
+			<storageModule moduleId="cdtBuildSystem" version="4.0.0">
+				<configuration artifactExtension="elf" artifactName="${ProjName}" buildProperties="org.eclipse.cdt.build.core.buildType=com.xilinx.sdk.apf.linux.toolchain.configuration.estimate" cleanCommand="rm -rf _sds sd_card" description="" id="com.xilinx.sdk.apf.linux.toolchain.configuration.estimate.221392863" name="SDEstimate" parent="com.xilinx.sdk.apf.linux.toolchain.configuration.estimate">
+					<folderInfo id="com.xilinx.sdk.apf.linux.toolchain.configuration.estimate.221392863." name="/" resourcePath="">
+						<toolChain id="com.xilinx.sdk.apf.linux.toolchain.estimate.215643306" name="Xilinx SDSoC Linux Toolchain" superClass="com.xilinx.sdk.apf.linux.toolchain.estimate">
+							<option id="com.xilinx.sdk.apf.linux.common.option.platform.1669326126" superClass="com.xilinx.sdk.apf.linux.common.option.platform" value="zed" valueType="string"/>
+							<targetPlatform binaryParser="com.xilinx.sdk.managedbuilder.XELF.armlinux" id="com.xilinx.sdk.apf.linux.toolchain.targetplatform.1064800735" isAbstract="false" name="SDSoC Linux Target Platform" superClass="com.xilinx.sdk.apf.linux.toolchain.targetplatform"/>
+							<builder buildPath="${workspace_loc:/correlation_comp_sys}/SDEstimate" enableAutoBuild="true" id="com.xilinx.sdk.apf.linux.toolchain.builder.1507474404" managedBuildOn="true" name="GNU make.SDEstimate" superClass="com.xilinx.sdk.apf.linux.toolchain.builder"/>
+							<tool id="com.xilinx.sdk.apf.linux.toolchain.estimate.c.compiler.1532569996" name="SDSCC Linux Compiler" superClass="com.xilinx.sdk.apf.linux.toolchain.estimate.c.compiler">
+								<option id="xilinx.gnu.compiler.dircategory.includes.626599858" superClass="xilinx.gnu.compiler.dircategory.includes" valueType="includePath">
+									<listOptionValue builtIn="false" value="&quot;../src&quot;"/>
+								</option>
+								<inputType id="com.xilinx.sdk.apf.linux.c.compiler.input.2061839943" name="C source files" superClass="com.xilinx.sdk.apf.linux.c.compiler.input"/>
+							</tool>
+							<tool id="com.xilinx.sdk.apf.linux.toolchain.estimate.cxx.compiler.634363405" name="SDS++ Linux Compiler" superClass="com.xilinx.sdk.apf.linux.toolchain.estimate.cxx.compiler">
+								<option id="xilinx.gnu.compiler.dircategory.includes.433705549" superClass="xilinx.gnu.compiler.dircategory.includes" valueType="includePath">
+									<listOptionValue builtIn="false" value="&quot;../src&quot;"/>
+								</option>
+								<inputType id="com.xilinx.sdk.apf.linux.cxx.compiler.input.917641586" name="C++ source files" superClass="com.xilinx.sdk.apf.linux.cxx.compiler.input"/>
+							</tool>
+							<tool id="com.xilinx.sdk.apf.linux.toolchain.linker.604270940" name="SDS++ Linux Linker" superClass="com.xilinx.sdk.apf.linux.toolchain.linker">
+								<inputType id="xilinx.gnu.linker.input.64377735" superClass="xilinx.gnu.linker.input">
+									<additionalInput kind="additionalinputdependency" paths="$(USER_OBJS)"/>
+									<additionalInput kind="additionalinput" paths="$(LIBS)"/>
+								</inputType>
+								<inputType id="xilinx.gnu.linker.input.lscript.443882140" name="Linker Script" superClass="xilinx.gnu.linker.input.lscript"/>
+							</tool>
+						</toolChain>
+					</folderInfo>
+					<sourceEntries>
+						<entry excluding="**/_sds/iprepo/|**/_sds/p0/|**/_sds/vhls/" flags="VALUE_WORKSPACE_PATH" kind="sourcePath" name=""/>
+					</sourceEntries>
+				</configuration>
+			</storageModule>
+			<storageModule moduleId="org.eclipse.cdt.core.externalSettings"/>
+		</cconfiguration>
+	</storageModule>
+	<storageModule moduleId="org.eclipse.cdt.core.LanguageSettingsProviders"/>
+	<storageModule moduleId="cdtBuildSystem" version="4.0.0">
+		<project id="correlation_comp_sys.com.xilinx.sdk.apf.linux.project.1461005535" name="Xilinx SDSoC Linux Project" projectType="com.xilinx.sdk.apf.linux.project"/>
+	</storageModule>
+	<storageModule moduleId="scannerConfiguration">
+		<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId=""/>
+	</storageModule>
+</cproject>

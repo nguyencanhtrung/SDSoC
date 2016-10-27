@@ -86,18 +86,22 @@ int mmult_test(float *tin1Buf[NUM_VECTORS],  float *tin2Buf[NUM_VECTORS], float 
   TIME_STAMP_SW
 
   for (i = 0; i < NUM_TESTS; i++) {
-    /*< Fill up the pipeline stage */
+    /*< Step 1: Fill up the pipeline stage        */
     for (vec = 0; vec < pipeline_depth; vec++) {
-#pragma SDS async(1)
+    #pragma SDS async(1)
       mmult_accel(tin1Buf[vec], tin2Buf[vec], toutBufHw[vec]);
     }
-    /*< */
+
+    /*< Step 2: A new task is issued when an      *
+     *          earlier task has finished         */
     for (vec = pipeline_depth; vec < NUM_VECTORS; vec++) {
-#pragma SDS wait(1)
-#pragma SDS async(1)
+    #pragma SDS wait(1)
+    #pragma SDS async(1)
       mmult_accel(tin1Buf[vec], tin2Buf[vec], toutBufHw[vec]);
     }
-      
+
+    /*< Step 3: Wait for all calls in the pipeline *
+      *         to complete                        */  
     for (vec = 0; vec < pipeline_depth; vec++) {
 #pragma SDS wait(1)
     }

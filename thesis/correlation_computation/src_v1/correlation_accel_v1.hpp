@@ -50,6 +50,10 @@ static void weight_rom_init(
 		float 	weightRom[BRAM_ROM_SIZE],
 		int 	NUMBER_OF_DAYS);
 
+#pragma SDS data copy(in_indices[0: number_of_indices * number_of_days])
+#pragma SDS data copy(out_correlation[0: number_of_indices * (number_of_indices - 1)/2])
+#pragma SDS data sys_port(in_indices:AFI, out_correlation:AFI)
+//#pragma SDS data data_mover(in_indices: AXIDMA_SIMPLE, out_correlation: AXIDMA_SIMPLE)
 void correlation_accel_v1(
 	const int number_of_days,						/* CPU in*/
 	const int number_of_indices,					/* CPU in*/

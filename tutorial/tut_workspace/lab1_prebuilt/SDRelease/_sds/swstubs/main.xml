@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<xd:data xmlns:xd="http://www.xilinx.com/xd">
-  <xd:source name="main.cpp" compiler="g++" objfile="src/main.o" srcpath="C:/labs/lab1_prebuilt/src" flags="-IC:/labs/lab1_prebuilt/src -IC:/labs/lab1_prebuilt/src -Wall -O3 -I../src -fmessage-length=0 -MMD -MP -D __SDSCC__"/>
-</xd:data>

@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<xd:data xmlns:xd="http://www.xilinx.com/xd">
-  <xd:accel name="madd" platform="zc702" aem="false"/>
-  <xd:accel name="mmult" platform="zc702" aem="false"/>
-</xd:data>

@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<xd:data xmlns:xd="http://www.xilinx.com/xd">
-  <xd:accel name="mmult" platform="zc702" aem="false" compiler="g++" srcfile="mmult.cpp" srcpath="C:/labs/lab1_prebuilt/src" flags="-IC:/labs/lab1_prebuilt/src -IC:/labs/lab1_prebuilt/src -Wall -O3 -I../src -fmessage-length=0 -MMD -MP -D __SDSCC__" clk_id="2" ip_requires_adapter="1" ip_is_rtl="0" vlnv="" is_opencl="0"/>
-</xd:data>

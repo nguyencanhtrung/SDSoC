@@ -1,0 +1,64 @@
+#-----------------------------------------------------------
+# Vivado v2014.4 (64-bit)
+# SW Build 1071353 on Tue Nov 18 16:48:31 MST 2014
+# IP Build 1071914 on Wed Nov 19 05:30:59 MST 2014
+# Start of session at: Mon Oct 24 18:46:06 2016
+# Process ID: 14603
+# Log file: /home/trungnguyen/SDSoC/tutorial/tut_workspace/matrix_mult_lab1/SDRelease/_sds/p0/ipi/vivado.log
+# Journal file: /home/trungnguyen/SDSoC/tutorial/tut_workspace/matrix_mult_lab1/SDRelease/_sds/p0/ipi/vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project /home/trungnguyen/SDSoC/tutorial/tut_workspace/matrix_mult_lab1/SDRelease/_sds/p0/ipi/zed.xpr
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/trungnguyen/SDSoC/tutorial/tut_workspace/matrix_mult_lab1/SDRelease/_sds/iprepo/repo'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/opt/Xilinx/SDSoC/2014.4/data/ip/xilinx'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/opt/Xilinx/SDSoC/2014.4/Vivado/2014.4/data/ip'.
+open_project: Time (s): cpu = 00:00:31 ; elapsed = 00:00:12 . Memory (MB): peak = 5940.922 ; gain = 210.238 ; free physical = 11543 ; free virtual = 21847
+open_bd_design {/home/trungnguyen/SDSoC/tutorial/tut_workspace/matrix_mult_lab1/SDRelease/_sds/p0/ipi/zed.srcs/sources_1/bd/zed/zed.bd}
+Adding component instance block -- xilinx.com:ip:proc_sys_reset:5.0 - proc_sys_reset_0
+Adding component instance block -- xilinx.com:ip:proc_sys_reset:5.0 - proc_sys_reset_1
+Adding component instance block -- xilinx.com:ip:proc_sys_reset:5.0 - proc_sys_reset_2
+Adding component instance block -- xilinx.com:ip:proc_sys_reset:5.0 - proc_sys_reset_3
+Adding component instance block -- xilinx.com:ip:processing_system7:5.5 - ps7
+Adding component instance block -- xilinx.com:ip:xlconcat:2.1 - xlconcat
+Adding component instance block -- xilinx.com:ip:axi_dma:7.1 - datamover_0
+Adding component instance block -- xilinx.com:ip:axi_dma:7.1 - datamover_1
+Adding component instance block -- xilinx.com:ip:axi_dma:7.1 - datamover_2
+Adding component instance block -- xilinx.com:ip:axi_dma:7.1 - datamover_3
+Adding component instance block -- xilinx.com:hls:madd:1.0 - madd_0
+Adding component instance block -- xilinx.com:hls:mmult:1.0 - mmult_0
+Adding component instance block -- xilinx.com:ip:axis_accelerator_adapter:2.1 - madd_0_if
+Adding component instance block -- xilinx.com:ip:axis_accelerator_adapter:2.1 - mmult_0_if
+Adding component instance block -- xilinx.com:ip:xlconstant:1.1 - acp_axcache_0xF
+Adding component instance block -- xilinx.com:ip:axi_crossbar:2.1 - xbar
+Adding component instance block -- xilinx.com:ip:axi_mmu:2.1 - s00_mmu
+Adding component instance block -- xilinx.com:ip:axi_mmu:2.1 - s02_mmu
+Adding component instance block -- xilinx.com:ip:axi_mmu:2.1 - s01_mmu
+Adding component instance block -- xilinx.com:ip:axi_mmu:2.1 - s03_mmu
+Adding component instance block -- xilinx.com:ip:axi_data_fifo:2.1 - m00_data_fifo
+Adding component instance block -- xilinx.com:ip:axi_register_slice:2.1 - m00_regslice
+Adding component instance block -- xilinx.com:ip:axi_protocol_converter:2.1 - auto_pc
+Adding component instance block -- xilinx.com:ip:axi_register_slice:2.1 - s03_regslice
+Adding component instance block -- xilinx.com:ip:axi_data_fifo:2.1 - s03_data_fifo
+Adding component instance block -- xilinx.com:ip:axi_register_slice:2.1 - s02_regslice
+Adding component instance block -- xilinx.com:ip:axi_data_fifo:2.1 - s02_data_fifo
+Adding component instance block -- xilinx.com:ip:axi_register_slice:2.1 - s01_regslice
+Adding component instance block -- xilinx.com:ip:axi_data_fifo:2.1 - s01_data_fifo
+Adding component instance block -- xilinx.com:ip:axi_register_slice:2.1 - s00_regslice
+Adding component instance block -- xilinx.com:ip:axi_data_fifo:2.1 - s00_data_fifo
+Adding component instance block -- xilinx.com:ip:axi_crossbar:2.1 - xbar
+Adding component instance block -- xilinx.com:ip:axi_register_slice:2.1 - m05_regslice
+Adding component instance block -- xilinx.com:ip:axi_register_slice:2.1 - m04_regslice
+Adding component instance block -- xilinx.com:ip:axi_register_slice:2.1 - m03_regslice
+Adding component instance block -- xilinx.com:ip:axi_register_slice:2.1 - m02_regslice
+Adding component instance block -- xilinx.com:ip:axi_register_slice:2.1 - m01_regslice
+Adding component instance block -- xilinx.com:ip:axi_register_slice:2.1 - m00_regslice
+Adding component instance block -- xilinx.com:ip:axi_register_slice:2.1 - s00_regslice
+Adding component instance block -- xilinx.com:ip:axi_data_fifo:2.1 - s00_data_fifo
+Adding component instance block -- xilinx.com:ip:axi_protocol_converter:2.1 - auto_pc
+Successfully read diagram <zed> from BD file </home/trungnguyen/SDSoC/tutorial/tut_workspace/matrix_mult_lab1/SDRelease/_sds/p0/ipi/zed.srcs/sources_1/bd/zed/zed.bd>
+open_bd_design: Time (s): cpu = 00:00:13 ; elapsed = 00:00:11 . Memory (MB): peak = 5976.973 ; gain = 36.051 ; free physical = 11475 ; free virtual = 21791
+exit
+INFO: [Common 17-206] Exiting Vivado at Mon Oct 24 18:52:20 2016...

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xd:data xmlns:xd="http://www.xilinx.com/xd">
+  <xd:accel name="madd" platform="zed" aem="false" compiler="g++" srcfile="madd.cpp" srcpath="/home/trungnguyen/SDSoC/tutorial/tut_workspace/matrix_mult_lab1/src" flags="-I/home/trungnguyen/SDSoC/tutorial/tut_workspace/matrix_mult_lab1/src -I/home/trungnguyen/SDSoC/tutorial/tut_workspace/matrix_mult_lab1/src -Wall -O3 -fmessage-length=0 -MMD -MP -D __SDSCC__" clk_id="1" ip_requires_adapter="1" ip_is_rtl="0" vlnv="" is_opencl="0" asmfile="madd.s"/>
+</xd:data>

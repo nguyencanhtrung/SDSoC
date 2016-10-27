@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xd:repository xmlns:xd="http://www.xilinx.com/xd">
+  <xd:fcnMap xd:fcnName="madd" xd:type="hls_adapter" xd:adapterCompRef="madd_if" xd:clockId="1" xd:componentRef="madd" xd:initiationInterval="1038" xd:clockPeriod="5.950000" xd:sequential="true" xd:hostMachine="64">
+    <xd:ctrlReg xd:name="control" xd:busInterfaceRef="ap_ctrl" xd:portInterfaceType="acc_handshake" xd:type="axis_acc_adapter" xd:offset="0x28" xd:bufferDepth="16" xd:dataWidth="4"/>
+    <xd:arg xd:name="A" xd:swRootName="A" xd:direction="in" xd:busInterfaceRef="A_PORTA" xd:hwName="A_PORTA" xd:portInterfaceType="bram" xd:arraySize="1024" xd:dataWidth="32" xd:mode="master" xd:index="0" xd:instanceRef="madd_if" xd:bufferDepth="1024" xd:multibufferDepth="4"/>
+    <xd:arg xd:name="B" xd:swRootName="B" xd:direction="in" xd:busInterfaceRef="B_PORTA" xd:hwName="B_PORTA" xd:portInterfaceType="bram" xd:arraySize="1024" xd:dataWidth="32" xd:mode="master" xd:index="1" xd:instanceRef="madd_if" xd:bufferDepth="1024" xd:multibufferDepth="4"/>
+    <xd:arg xd:name="C" xd:swRootName="C" xd:direction="out" xd:busInterfaceRef="C_PORTA" xd:hwName="C_PORTA" xd:portInterfaceType="bram" xd:arraySize="1024" xd:dataWidth="32" xd:mode="master" xd:index="0" xd:instanceRef="madd_if" xd:bufferDepth="1024" xd:multibufferDepth="4"/>
+    <xd:latencyEstimates xd:best-case="1037" xd:worst-case="1037" xd:average-case="1037"/>
+    <xd:resourceEstimates xd:LUT="536" xd:FF="486" xd:BRAM="0" xd:DSP="2"/>
+  </xd:fcnMap>
+</xd:repository>

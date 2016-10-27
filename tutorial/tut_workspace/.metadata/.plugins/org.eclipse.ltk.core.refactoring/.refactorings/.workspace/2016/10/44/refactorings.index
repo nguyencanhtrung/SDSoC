@@ -1,3 +1,6 @@
 1477322006666	Delete resource 'lab1'
 1477322014231	Delete resource 'lab1_prebuilt'
 1477573961513	Delete resource 'correlation_comp_sys/correlation_computation'
+1477575259799	Delete resource 'correlation_comp_sys/src/correlation_accel_v1_tb.cpp'
+1477575303138	Delete resource 'correlation_comp_sys/src/mmult.cpp'
+1477575307868	Delete resource 'correlation_comp_sys/src/mmult.h'

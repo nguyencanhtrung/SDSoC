@@ -1,0 +1,16 @@
+(c) Copyright 2012-2015 Xilinx, Inc. All Rights Reserved.
+#-----------------------------------------------------------
+# Tool version  : sdscc 2014.4 20150228
+# Start time    : Thu Oct 27 07:04:32 PM CEST 2016
+# Command line  : sdscc -Wall -O3 -I../src -c -fmessage-length=0 -MT.metadata/.plugins/org.eclipse.cdt.make.core/specs.o -MMD -MP -MF.metadata/.plugins/org.eclipse.cdt.make.core/specs.d -MT.metadata/.plugins/org.eclipse.cdt.make.core/specs.d -o .metadata/.plugins/org.eclipse.cdt.make.core/specs.o ../.metadata/.plugins/org.eclipse.cdt.make.core/specs.c -sds-pf zed
+# Log file      : /home/trungnguyen/SDSoC/thesis/SDRelease/_sds/reports/sds_specs.log
+# Journal file  : /home/trungnguyen/SDSoC/thesis/SDRelease/_sds/reports/sds_specs.jou
+# Report file   : /home/trungnguyen/SDSoC/thesis/SDRelease/_sds/reports/sds_specs.rpt
+#-----------------------------------------------------------
+
+# INFO: [SDSoC 0-0] Create data motion intermediate representation
+clang_wrapper -target arm-xilinx-linux-gnueabi -mcpu=cortex-a9 -O0 -g -w   -I/opt/Xilinx/SDSoC/2014.4/SDK/2014.4/gnu/arm/lin/lib/gcc/arm-xilinx-linux-gnueabi/4.8.3/include  -I/opt/Xilinx/SDSoC/2014.4/SDK/2014.4/gnu/arm/lin/lib/gcc/arm-xilinx-linux-gnueabi/4.8.3/include-fixed  -I/opt/Xilinx/SDSoC/2014.4/SDK/2014.4/gnu/arm/lin/arm-xilinx-linux-gnueabi/include  -I/opt/Xilinx/SDSoC/2014.4/SDK/2014.4/gnu/arm/lin/arm-xilinx-linux-gnueabi/libc/usr/include  -I /opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/include  -I /opt/Xilinx/SDSoC/2014.4/arm-xilinx-linux-gnueabi/include   -I../src -Wall -fmessage-length=0 -MMD -MP -D __SDSCC__ -emit-llvm -S /home/trungnguyen/SDSoC/thesis/.metadata/.plugins/org.eclipse.cdt.make.core/specs.c -o /home/trungnguyen/SDSoC/thesis/SDRelease/_sds/.llvm/.metadata/.plugins/org.eclipse.cdt.make.core/specs.s
+# INFO: [SDSoC 0-0] Compiling /home/trungnguyen/SDSoC/thesis/.metadata/.plugins/org.eclipse.cdt.make.core/specs.c
+arm-xilinx-linux-gnueabi-gcc -c -I../src -Wall -O3 -fmessage-length=0 -MMD -MP -D __SDSCC__ -MT/home/trungnguyen/SDSoC/thesis/SDRelease/.metadata/.plugins/org.eclipse.cdt.make.core/specs.o -MF/home/trungnguyen/SDSoC/thesis/SDRelease/.metadata/.plugins/org.eclipse.cdt.make.core/specs.d -MT/home/trungnguyen/SDSoC/thesis/SDRelease/.metadata/.plugins/org.eclipse.cdt.make.core/specs.d -I /opt/Xilinx/SDSoC/2014.4/arm-xilinx-linux-gnueabi/include  -I /opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/include   /home/trungnguyen/SDSoC/thesis/.metadata/.plugins/org.eclipse.cdt.make.core/specs.c -o .metadata/.plugins/org.eclipse.cdt.make.core/specs.o
+arm-xilinx-linux-gnueabi-objcopy --add-section .xdsdata=/home/trungnguyen/SDSoC/thesis/SDRelease/_sds/swstubs/specs.xml .metadata/.plugins/org.eclipse.cdt.make.core/specs.o
+# sdscc completed at Thu Oct 27 07:04:32 PM CEST 2016

@@ -1,0 +1,30 @@
+digraph dm_graph {
+v0 [label = "v0:main" ,style=filled];
+v1 [label = "v1:XFER(IN):number_of_days @335, SCALAR\nAXILITE(mm2s) on GP(PS to ACC)\n" ,style=filled,fillcolor = green];
+v2 [label = "v2:XFER(IN):number_of_indices @335, SCALAR\nAXILITE(mm2s) on GP(PS to ACC)\n" ,style=filled,fillcolor = green];
+v3 [label = "v3:XFER(IN):in_indices @335, ARRAY\nCPU\nAXIMM(mm2s) on AFI(PS to ACC)\n" ,style=filled,fillcolor = green];
+v4 [label = "v4:call 'correlation_accel_v1' in 'main.cpp' @335\nACC\n" ,style=filled,fillcolor = red];
+v5 [label = "v5:XFER(OUT):v_return @335, SCALAR\nAXILITE(s2mm) on GP(PS to ACC)\n" ,style=filled,fillcolor = yellow];
+v6 [label = "v6:XFER(OUT):out_correlation @335, ARRAY\nCPU\nAXIMM(s2mm) on AFI(ACC to PS)\n" ,style=filled,fillcolor = yellow];
+v7 [label = "v7:cf_wait(): \nXFER(OUT):v_return @335, SCALAR\nAXILITE(s2mm) on GP(PS to ACC)\nXFER(IN):in_indices @335, ARRAY\nCPU\nAXIMM(mm2s) on AFI(PS to ACC)\nXFER(IN):number_of_days @335, SCALAR\nAXILITE(mm2s) on GP(PS to ACC)\nXFER(OUT):out_correlation @335, ARRAY\nCPU\nAXIMM(s2mm) on AFI(ACC to PS)\nXFER(IN):number_of_indices @335, SCALAR\nAXILITE(mm2s) on GP(PS to ACC)\n\nCPU\nCPU\nCPU\nCPU\nCPU\n" ,style=filled,fillcolor = cyan];
+subgraph cluster0 {
+v1;
+v2;
+v3;
+v4;
+v5;
+v6;
+v7;
+label = "call 'correlation_accel_v1' in 'main.cpp' @335\nACC\n";
+}
+v1 -> v4 [label = "0"];
+v2 -> v4 [label = "0"];
+v3 -> v4 [label = "0"];
+v4 -> v5 [label = "0"];
+v4 -> v6 [label = "0"];
+v5 -> v7 [label = "", style = dotted];
+v6 -> v7 [label = "", style = dotted];
+v0 -> v1 [label = "", style = dotted];
+v0 -> v2 [label = "", style = dotted];
+v0 -> v3 [label = "", style = dotted];
+}

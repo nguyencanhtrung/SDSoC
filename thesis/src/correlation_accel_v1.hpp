@@ -19,47 +19,56 @@
  *																		*
  * 		- v1.00: 	Move to SDSoC										*
  ************************************************************************/
+#ifndef CORRELATION_ACCL_H_
+#define CORRELATION_ACCL_H_
+/*==================================================================*/
 /*-------------------------- Libraries -----------------------------*/
+/*==================================================================*/
 #include "hls_stream.h"
 #include "hls_math.h"		/*< Math lib for synthesize - Co-Sim */
 #include <cmath>			/*< Math lib for C-simulation */
-#include <ap_int.h>			/*< Will use ap_ufixed for floating point
-							 	* after using float*/
+
 #include <iostream>
 #include <fstream>			/*< Stream class to both read and write
 								* from/to files*/
-#include <string>
+#include <string.h>
 #include <stdlib.h>			/*< atof */
-using namespace std;
-
-/*-------------------------- Parameters -----------------------------*/
+#include <stdio.h>
+/*==================================================================*/
+/*-------------------------- Parameters ----------------------------*/
+/*==================================================================*/
 #ifndef BRAM_ROM_SIZE
-#define BRAM_ROM_SIZE 	252				/*< Default*/
+#define BRAM_ROM_SIZE 		252				/*< Default*/
 #endif
 
 #define ALLOW_ERR_THRES 	0.00001f
 
-/*-------------------------- Type definition ------------------------*/
-typedef struct {
-	float 		data;
-	ap_uint<1>	last;
-} axis_t;
+#define MAX_NUM_INDICES 	10000
+#define MAX_NUM_DAYS 		252
 
-/****************** FUNCTION PROTOTYPES ******************************/
+#define ACUM_PARTITION  	6
+/*==================================================================*/
+/*-------------------------- Type definition -----------------------*/
+/*==================================================================*/
+//typedef struct {
+//	float 		data;
+//	ap_uint<1>	last;
+//} axis_t;
+/*==================================================================*/
+/****************** FUNCTION PROTOTYPES *****************************/
+/*==================================================================*/
 static void weight_rom_init(
 		float 	weightRom[BRAM_ROM_SIZE],
 		int 	NUMBER_OF_DAYS);
 
-#pragma SDS data copy(in_indices[0: number_of_indices * number_of_days])
-#pragma SDS data copy(out_correlation[0: number_of_indices * (number_of_indices - 1)/2])
+//#pragma SDS data copy(in_indices[0: number_of_indices * number_of_days])
+//#pragma SDS data copy(out_correlation[0: number_of_indices * (number_of_indices - 1)/2])
 #pragma SDS data sys_port(in_indices:AFI, out_correlation:AFI)
 //#pragma SDS data data_mover(in_indices: AXIDMA_SIMPLE, out_correlation: AXIDMA_SIMPLE)
-void correlation_accel_v1(
-	const int number_of_days,						/* CPU in*/
-	const int number_of_indices,					/* CPU in*/
-	volatile float		*in_indices,				/*  Input*/
-	const int			tx_offset,				   	/* Offset of TX buffer*/
-
-	volatile float      *out_correlation, 			/* Output*/
-	const int			rx_offset				 	/* Offset of RX buffer*/
+int correlation_accel_v1(
+	int 	number_of_days,						/* CPU in*/
+	int 	number_of_indices,					/* CPU in*/
+	float	in_indices[MAX_NUM_INDICES * MAX_NUM_DAYS],			/*  Input*/
+	float   out_correlation[MAX_NUM_INDICES / 2 * (MAX_NUM_INDICES - 1)]
 );
+#endif /* CORRELATION_ACCL_H */_

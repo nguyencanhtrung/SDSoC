@@ -1,0 +1,17 @@
+(c) Copyright 2012-2015 Xilinx, Inc. All Rights Reserved.
+#-----------------------------------------------------------
+# Tool version  : sds++ 2014.4 20150228
+# Start time    : Mon Oct 24 07:04:50 PM CEST 2016
+# Command line  : sds++ -Wall -O0 -g -I../src -c -fmessage-length=0 -MTsrc/madd.o -MMD -MP -MFsrc/madd.d -MTsrc/madd.d -o src/madd.o ../src/madd.cpp -sds-pf zed
+# Log file      : /home/trungnguyen/SDSoC/tutorial/tut_workspace/matrix_mult_lab2/SDDebug/_sds/reports/sds_madd.log
+# Journal file  : /home/trungnguyen/SDSoC/tutorial/tut_workspace/matrix_mult_lab2/SDDebug/_sds/reports/sds_madd.jou
+# Report file   : /home/trungnguyen/SDSoC/tutorial/tut_workspace/matrix_mult_lab2/SDDebug/_sds/reports/sds_madd.rpt
+#-----------------------------------------------------------
+
+INFO: [SDSoC 0-0] Create data motion intermediate representation
+clang_wrapper -target arm-xilinx-linux-gnueabi -mcpu=cortex-a9 -O0 -g -w   -I/opt/Xilinx/SDSoC/2014.4/SDK/2014.4/gnu/arm/lin/arm-xilinx-linux-gnueabi/include/c++/4.8.3  -I/opt/Xilinx/SDSoC/2014.4/SDK/2014.4/gnu/arm/lin/arm-xilinx-linux-gnueabi/include/c++/4.8.3/arm-xilinx-linux-gnueabi  -I/opt/Xilinx/SDSoC/2014.4/SDK/2014.4/gnu/arm/lin/arm-xilinx-linux-gnueabi/include/c++/4.8.3/backward   -I/opt/Xilinx/SDSoC/2014.4/SDK/2014.4/gnu/arm/lin/lib/gcc/arm-xilinx-linux-gnueabi/4.8.3/include  -I/opt/Xilinx/SDSoC/2014.4/SDK/2014.4/gnu/arm/lin/lib/gcc/arm-xilinx-linux-gnueabi/4.8.3/include-fixed  -I/opt/Xilinx/SDSoC/2014.4/SDK/2014.4/gnu/arm/lin/arm-xilinx-linux-gnueabi/include  -I/opt/Xilinx/SDSoC/2014.4/SDK/2014.4/gnu/arm/lin/arm-xilinx-linux-gnueabi/libc/usr/include  -I /opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/include  -I /opt/Xilinx/SDSoC/2014.4/arm-xilinx-linux-gnueabi/include   -I../src -Wall -g -fmessage-length=0 -MMD -MP -D __SDSCC__ -emit-llvm -S /home/trungnguyen/SDSoC/tutorial/tut_workspace/matrix_mult_lab2/src/madd.cpp -o /home/trungnguyen/SDSoC/tutorial/tut_workspace/matrix_mult_lab2/SDDebug/_sds/.llvm/src/madd.s
+INFO: [SDSoC 0-0] Compiling /home/trungnguyen/SDSoC/tutorial/tut_workspace/matrix_mult_lab2/src/madd.cpp
+arm-xilinx-linux-gnueabi-g++ -c -I../src -Wall -O0 -g -fmessage-length=0 -MMD -MP -D __SDSCC__ -MT/home/trungnguyen/SDSoC/tutorial/tut_workspace/matrix_mult_lab2/SDDebug/src/madd.o -MF/home/trungnguyen/SDSoC/tutorial/tut_workspace/matrix_mult_lab2/SDDebug/src/madd.d -MT/home/trungnguyen/SDSoC/tutorial/tut_workspace/matrix_mult_lab2/SDDebug/src/madd.d -I /opt/Xilinx/SDSoC/2014.4/arm-xilinx-linux-gnueabi/include  -I /opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/include   /home/trungnguyen/SDSoC/tutorial/tut_workspace/matrix_mult_lab2/src/madd.cpp -o src/madd.o
+arm-xilinx-linux-gnueabi-objcopy --add-section .xdsdata=/home/trungnguyen/SDSoC/tutorial/tut_workspace/matrix_mult_lab2/SDDebug/_sds/swstubs/madd.xml src/madd.o
+sds++ log file saved as /home/trungnguyen/SDSoC/tutorial/tut_workspace/matrix_mult_lab2/SDDebug/_sds/reports/sds_madd.log
+sds++ completed at Mon Oct 24 07:04:50 PM CEST 2016

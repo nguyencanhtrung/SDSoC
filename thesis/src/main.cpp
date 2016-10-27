@@ -18,40 +18,23 @@
  * 				:___:___:																	*
  *																							*
  * 	RX_BUFFER_STORE_CORRELATION_BASE	=>	RX_BUFFER_BASE									*
- * 	TX_BUFFER_STORE_INDICES_BASE		=>	TX_BUFFER_BASE									*
- *******************************************************************************************/
+ * 	TX_BUFFER_STORE_INDICES_BASE		=>	TX_BUFFER_BASE					*
+ **************************************************************************/
 
-/********************************************************************************************/
-/*	Including files																			*
- * -----------------------------------------------------------------------------------------*/
+/**************************************************************************/
+/*	Including files														  *
+ * -----------------------------------------------------------------------*/
  #include <stdio.h>
  #include <stdlib.h>
 
- #include "correlation_comp_ver1.hpp"
+ #include "correlation_accel_v1.hpp"
  #include "sds_lib.h"
-/* -----------------------------------------------------------------------------------------*
- * Parameters - Need to change if using different input Data								*
- * -----------------------------------------------------------------------------------------*/
-#define NUM_OF_INDICES			10000
-#define NUM_OF_DAYS_PER_INDEX	252
-
-#define NUM_OF_INDICES_IN_MEM	10000
 /*-----------------------------------
  * API for Timing       			*
  * ---------------------------------*/
- #define TIME_STAMP_INIT    unsigned long long clock_start, clock_end;  \
-                            clock_start = sds_clock_counter();
-
- #define TIME_STAMP_SW {    clock_end = sds_clock_counter(); \
-                            printf("Average number of processor cycles for golden version: %llu \n", (clock_end - clock_start)/NUM_TESTS); \
-                            clock_start = sds_clock_counter();}
-
-#define TIME_STAMP_ACCEL { clock_end = sds_clock_counter(); \
-                            printf("Average number of processor cycles for hardware version: %llu \n", (clock_end - clock_start)/NUM_TESTS);}
-
-/********************************************************************************************
-*                               HELPER programs                                             *
-*********************************************************************************************/
+/*************************************************************************
+*                               HELPER FUNCTIONS                         *
+**************************************************************************/
 /*************************************************************************
  * INDICES INITIALIZATION                                                *
  * @param                                                                *
@@ -67,11 +50,11 @@
 static bool indices_init( uint32_t TX_BUFFER_BASE){
 
     /* Importants variables */
-    int     NUM_OF_INDICES_IN_MEM   = 10000;   // Fixed - try to initiate 10000 indices in memory
-    int     NUM_OF_DAYS_PER_INDEX   = 252;     // Fixed
-    int     UPPER_BOUND             = NUM_OF_INDICES_IN_MEM/10;
+    int NUM_OF_INDICES_IN_MEM   = 10000;   // Fixed - try to initiate 10000 indices in memory
+    int NUM_OF_DAYS_PER_INDEX   = 252;     // Fixed
+    int UPPER_BOUND             = NUM_OF_INDICES_IN_MEM/10;
 
-    float   inputData[5 * NUM_OF_DAYS_PER_INDEX] ={              // 5 indices
+    float inputData[1260] ={              // 5 indices
         #include "data.txt"
     };
 
@@ -90,6 +73,7 @@ static bool indices_init( uint32_t TX_BUFFER_BASE){
     }
    // Compare memories region
     int errorCount = 0;
+    int status;
     for(int j = 0; j < UPPER_BOUND * 2; j ++){
         status =  memcmp((float *)(TX_BUFFER_BASE) + NUM_OF_DAYS_PER_INDEX * 5*j, (float *)(inputData), 5040);
         if(status != 0){
@@ -304,12 +288,15 @@ static bool checkResult(   float *hw_result, float *sw_result,
 
         if(abs( sw_result_temp - hw_result_temp) > allowErrorThreshold) {
             ++errorCount_in;
+            printf("hw: %.6f - sw: %.6f\r\n", hw_result_temp, sw_result_temp);
         }
     }
     if(errorCount_in > 0){
+    	printf("TEST FAILED !!!\r\n");
         return false;
     } else {
-        return true;
+    	printf("TEST PASSED !!!\r\n");
+    	return true;
     }
 }
 /********************************************************************************************
@@ -321,7 +308,6 @@ int main(int argc, char* argv[])
      *	 	Step 1: Writing Sample Data into DRAM 				*
      *----------------------------------------------------------*/
     int number_of_days_per_index    = 252;                  
-    int number_of_indices           = 1000;
     float *indices_buff             = NULL;
     indices_buff                    = (float *)sds_mmap((void *) 0x11000000, 
                                             10000 * number_of_days_per_index * sizeof(float),
@@ -331,29 +317,42 @@ int main(int argc, char* argv[])
                                                         49995000 * sizeof(float),
                                                         correlation_buff);
     
-    indices_init((uint32_t)indices_buff);    
+    float *correlation_sw 			= NULL;
+    correlation_sw 					= (float *)sds_mmap((void *) 0x14000000,
+            							499500 * sizeof(float),
+            							correlation_sw);
+
+    indices_init((uint32_t)indices_buff);
+
+    int number_of_indices;
+    printf("Number of indices: \r\n");
+    scanf("%d" , &number_of_indices);
+    printf("\r\n");
     /************************************************************
 	*	 	Step 2: Hardware computation       					*
 	*----------------------------------------------------------*/
     for(int i = number_of_indices; i > 1; --i){
         correlation_accel_v1( 
-                                number_of_days_per_index,                                                           /* CPU in*/
-                                number_of_indices,                                                                  /* CPU in*/
-                                indices_buff,                                                                       /*  Input*/
-                                0x11000000 + (number_of_indices - i) * number_of_days_per_index * sizeof(float),    /* Offset of TX buffer*/
-
-                                correlation_buff,                                       /* Output*/
-                                0x01000000 + (i * (i - 1)) / 2 *  sizeof(float)         /* Offset of RX buffer*/
+                                number_of_days_per_index,   /* CPU in*/
+                                number_of_indices,          /* CPU in*/
+                                (float *)(indices_buff + (number_of_indices - i) * number_of_days_per_index),  /*  Input*/
+                                correlation_buff        	/* Output*/
         );
     }
 	/************************************************************
 	 *		Step 3: Software computation					  	*
 	 *----------------------------------------------------------*/
-
+    correlation_golden(		indices_buff,
+                            number_of_indices,
+                            number_of_days_per_index,
+                            correlation_sw);
 
      /************************************************************
      *      Step 4: Compare results                             *
      *----------------------------------------------------------*/
-
+    bool status;
+    status = checkResult(   	correlation_buff, correlation_sw,
+    				number_of_days_per_index,
+    				(float)ALLOW_ERR_THRES);
     return 0;
 }

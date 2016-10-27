@@ -1,0 +1,60 @@
+19:06:31 **** Incremental Build of configuration SDDebug for project matrix_mult_lab2 ****
+make all 
+Building file: ../src/mmult.cpp
+Invoking: SDS++ Linux Compiler
+sds++ -Wall -O0 -g -I"../src" -c -fmessage-length=0 -MT"src/mmult.o" -sds-hw mmult mmult.cpp -sds-end -MMD -MP -MF"src/mmult.d" -MT"src/mmult.d" -o "src/mmult.o" "../src/mmult.cpp" -sds-pf zed
+INFO: [SDSoC 0-0] processing -sds-hw block for mmult
+INFO: [SDSoC 0-0] Performing accelerator source linting
+INFO: [SDSoC 0-0] Create data motion intermediate representation
+INFO: [SDSoC 0-0] Performing pragma generation
+INFO: [SDSoC 0-0] Moving function mmult to Programmable Logic
+sds++ log file saved as /home/trungnguyen/SDSoC/tutorial/tut_workspace/matrix_mult_lab2/SDDebug/_sds/reports/sds_mmult.log
+
+Finished building: ../src/mmult.cpp
+ 
+Building target: matrix_mult_lab2.elf
+Invoking: SDS++ Linux Linker
+sds++ -mno-bitstream -mno-boot-files -o "matrix_mult_lab2.elf"  ./src/madd.o ./src/main.o ./src/mmult.o    -sds-pf zed
+INFO: [SDSoC 0-0] Analyzing object files
+... /home/trungnguyen/SDSoC/tutorial/tut_workspace/matrix_mult_lab2/SDDebug/src/madd.o
+... /home/trungnguyen/SDSoC/tutorial/tut_workspace/matrix_mult_lab2/SDDebug/src/main.o
+... /home/trungnguyen/SDSoC/tutorial/tut_workspace/matrix_mult_lab2/SDDebug/src/mmult.o
+INFO: [SDSoC 0-0] Generating data motion network
+INFO: [SDSoC 0-0] Analyzing hardware accelerators...
+INFO: [SDSoC 0-0] Analyzing callers to hardware accelerators...
+INFO: [SDSoC 0-0] Scheduling data transfer graph for partition 0
+INFO: [SDSoC 0-0] Creating data motion network hardware for partition 0
+INFO: [SDSoC 0-0] Creating software stub functions for partition 0
+INFO: [SDSoC 0-0] Generating data motion network report for partition 0
+INFO: [SDSoC 0-0] Rewriting caller code
+INFO: [SDSoC 0-0] Rewrite /home/trungnguyen/SDSoC/tutorial/tut_workspace/matrix_mult_lab2/src/main.cpp
+INFO: [SDSoC 0-0] Create accelerator stub functions
+INFO: [SDSoC 0-0] Removing implementation files from previous run /home/trungnguyen/SDSoC/tutorial/tut_workspace/matrix_mult_lab2/SDDebug/_sds/p0/ipi
+INFO: [SDSoC 0-0] Creating block diagram (BD), address map, port information and device registration for partition 0 (this may take a few minutes)
+system_linker started at Mon Oct 24 07:06:55 PM CEST 2016
+INFO: [SDSoC 0-0] Creating hardware project files
+INFO: [SDSoC 0-0] Creating Vivado block design
+INFO: [SDSoC 0-0] Creating block diagram (BD) and address map
+CRITICAL WARNING: [BD 41-759] The input pins (listed below) are either not connected or do not have a source port, and they don't have a tie-off specified. 
+CRITICAL WARNING: [BD 41-759] The input pins (listed below) are either not connected or do not have a source port, and they don't have a tie-off specified. 
+INFO: [SDSoC 0-0] Copying address map
+INFO: [SDSoC 0-0] Creating port and device registration data
+/opt/Xilinx/SDSoC/2014.4/bin/cf2sw -i apsys_0.xml -r /home/trungnguyen/SDSoC/tutorial/tut_workspace/matrix_mult_lab2/SDDebug/_sds/.cdb/xd_ip_db.xml -a address_map.xml -pollMode 0    -n
+system_linker completed at Mon Oct 24 07:07:51 PM CEST 2016
+INFO: [SDSoC 0-0] Prepare hardware access API functions
+INFO: [SDSoC 0-0] Compile hardware access API functions
+INFO: [SDSoC 0-0] Compile accelerator stub functions
+INFO: [SDSoC 0-0] Compile rewritten caller functions
+caller rewrite for /home/trungnguyen/SDSoC/tutorial/tut_workspace/matrix_mult_lab2/SDDebug/src/main.o
+INFO: [SDSoC 0-0] Link application ELF file
+INFO: [SDSoC 0-0] Not creating bitstream due to the -mno-bitstream switch
+INFO: [SDSoC 0-0] Calling system_linker for partition 0
+system_linker started at Mon Oct 24 07:07:52 PM CEST 2016
+system_linker completed at Mon Oct 24 07:07:53 PM CEST 2016
+sds++ log file saved as /home/trungnguyen/SDSoC/tutorial/tut_workspace/matrix_mult_lab2/SDDebug/_sds/reports/sds.log
+
+Finished building target: matrix_mult_lab2.elf
+ 
+
+19:07:53 Build Finished (took 1m:21s.631ms)
+

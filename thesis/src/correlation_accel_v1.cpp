@@ -18,46 +18,26 @@
  *		- v0.04.1	Same as v0.04 but using nested loop					*
  *																		*
  ************************************************************************/
-#include "correlationComp.h"
-#include "string.h"				// for memcpy
-
-#define ACUM_PARTITION  6
-
+#include "correlation_accel_v1.hpp"
 /*=======================================================================*/
 /****************** 	TOP FUNCTION - CORE 	**************************/
 /*=======================================================================*/
-void correlation_accel_v1(
-	const int 			number_of_days,							/* CPU in*/
-	const int 			number_of_indices,						/* CPU in*/
+int correlation_accel_v1(
+	int 	number_of_days,										/* CPU in*/
+	int 	number_of_indices,									/* CPU in*/
 
-	volatile float		*in_indices,							/*  Input*/
-	const int			tx_offset,				   /* Offset of TX buffer*/
-
-	volatile float      *out_correlation, 						/* Output*/
-	const int			rx_offset				   /* Offset of RX buffer*/
+	float	in_indices[MAX_NUM_INDICES * MAX_NUM_DAYS],			/*  Input*/
+	float   out_correlation[MAX_NUM_INDICES / 2 * (MAX_NUM_INDICES - 1)]
 )
 {
-#pragma HLS INTERFACE m_axi 	port=in_indices				/* AXI Master*/
-#pragma HLS INTERFACE m_axi 	port=out_correlation
-															/* AXI LITE  */
-#pragma HLS INTERFACE s_axilite port=return 			bundle=cpuControl
-#pragma HLS INTERFACE s_axilite port=rx_offset 			bundle=cpuControl
-#pragma HLS INTERFACE s_axilite port=tx_offset 			bundle=cpuControl
+	/* AXI Master*/
+	#pragma HLS INTERFACE m_axi depth=2520000 	offset=direct port=in_indices
+	#pragma HLS INTERFACE m_axi depth=49995000 	offset=direct port=out_correlation
+	/* AXI LITE  */
+	#pragma HLS INTERFACE ap_ctrl_hs port=return
 
-#pragma HLS INTERFACE s_axilite port=number_of_indices 	bundle=cpuControl
-#pragma HLS INTERFACE s_axilite port=number_of_days 	bundle=cpuControl
-
-	const int NUMBER_OF_DAYS 			= number_of_days;
-	const int NUMBER_OF_INDICES 		= number_of_indices;
-
-	/*---------------------------------------------------------------
-	 * If having NUMBER_OF_INDICES = N, total number of correlation	-
-	 * can be computed is:											-
-	 * 		(N-1) + (N-2) + ... + 1          (N-1 elements)			-
-	 * 		total = N * (N-1)/2										-
-	 *--------------------------------------------------------------*/
-	int NUMBER_OF_CALCULATION;
-	NUMBER_OF_CALCULATION  = NUMBER_OF_INDICES*(NUMBER_OF_INDICES-1)/2;
+	int NUMBER_OF_DAYS 		= number_of_days;
+	int NUMBER_OF_INDICES 	= number_of_indices;
 
 	/*----------------------------------------------------------*
 	 * PART 1: WEIGHT ROOM Initialization 			    		*
@@ -65,164 +45,125 @@ void correlation_accel_v1(
 	static float weight_rom[BRAM_ROM_SIZE];
 	weight_rom_init(weight_rom, NUMBER_OF_DAYS);
 
-	// Checking content of WEIGHT ROM in C-Simulation
-	#ifndef __SYNTHESIS__
-		ofstream weight_rom_file ("weight_rom.dat", ios::out |
-									ios::app);
-		if(!weight_rom_file.is_open()){
-			cout << "FAILED TO OPEN WEIGHT_ROM FILE!" << endl;
-		}
-		for(int i = 0; i < BRAM_ROM_SIZE; i++){
-			weight_rom_file << weight_rom[i] << endl;
-		}
-		weight_rom_file.close();
-	#endif
-
 	/*----------------------------------------------------------*
 	 * PART 2: Correlation Comp. Core 			    			*
 	 * ---------------------------------------------------------*/
 	OUTER_LOOP:
-	for(int row_index = 0; row_index < NUMBER_OF_INDICES - 1; row_index++){
-		// BRAM Declaration to store lnReturn of the first index of a row
-		static float bramA[BRAM_ROM_SIZE];
-		static float bramB[BRAM_ROM_SIZE];
-		// Step 0.1: copy data into BramA
-		memcpy(	bramA,
-				(float *)(in_indices + tx_offset/sizeof(float) + NUMBER_OF_DAYS * row_index),
-				NUMBER_OF_DAYS * sizeof(float));
-		INNER_LOOP:
-			for(int column_index = row_index + 1; column_index < NUMBER_OF_INDICES; column_index++){
-				// Step 0.2: copy data into BramB
-				memcpy(	bramB,
-						(float *)(in_indices + tx_offset/sizeof(float) + NUMBER_OF_DAYS * column_index),
-						NUMBER_OF_DAYS * sizeof(float));
+		for(int row_index = 0; row_index < NUMBER_OF_INDICES - 1; row_index++){
+			// BRAM Declaration to store lnReturn of the first index of a row
+			static float bramA[BRAM_ROM_SIZE];
+			static float bramB[BRAM_ROM_SIZE];
+			// Step 0.1: copy data into BramA
+			memcpy(	bramA,
+					&in_indices[NUMBER_OF_DAYS * row_index],
+					NUMBER_OF_DAYS * sizeof(float));
 
-				static int counter = 0;
-				// Step 0.3: Checking BRAM A and BRAM B content
-				#ifndef __SYNTHESIS__
-					ofstream bramA_file ("bramA.dat", ios::out | ios::app);
-					ofstream bramB_file ("bramB.dat", ios::out | ios::app);
+			INNER_LOOP:
+				for(int column_index = row_index + 1; column_index < NUMBER_OF_INDICES; column_index++){
+					// Step 0.2: copy data into BramB
+					memcpy(	bramB,
+							&in_indices[NUMBER_OF_DAYS * column_index],
+							NUMBER_OF_DAYS * sizeof(float));
 
-					if((!bramA_file.is_open()) || (!bramB_file.is_open())){
-						cout << "FAILED TO OPEN bramA.dat or bramB.dat!" << endl;
+					static int counter = 0;
+
+					// Channels to store accumulation
+					float acc_returnA[ACUM_PARTITION];
+					float acc_returnB[ACUM_PARTITION];
+					float acc_weight_returnSquareA[ACUM_PARTITION];
+					float acc_weight_returnA[ACUM_PARTITION];
+					float acc_weight_returnSquareB[ACUM_PARTITION];
+					float acc_weight_returnB[ACUM_PARTITION];
+					float acc_weight_returnA_returnB[ACUM_PARTITION];
+
+					/*----------------------------------------------------
+					 * Step 1: Handling the first index of a row 	 	 -
+					 * --------------------------------------------------*/
+					// 1.1: Reset all accumulated channels
+					RESET_REGISTERS:
+					for(int i = 0; i < ACUM_PARTITION; i++){
+					#pragma HLS UNROLL		/*< FULLY UNROLL */
+						acc_returnA[i] 					= 0.0f;
+						acc_returnB[i]					= 0.0f;
+						acc_weight_returnSquareA[i]		= 0.0f;
+						acc_weight_returnA[i]			= 0.0f;
+						acc_weight_returnSquareB[i]		= 0.0f;
+						acc_weight_returnB[i]			= 0.0f;
+						acc_weight_returnA_returnB[i]	= 0.0f;
 					}
-					for(int i = 0; i < NUMBER_OF_DAYS; i++){
-						bramA_file << bramA[i] << endl;
-						bramB_file << bramB[i] << endl;
+
+
+					/*---------------------------------------------------
+					 * Step 2: Parallel Accumulating		     		-
+					 * --------------------------------------------------*/
+					ACCUMULATION_LOOP:
+					for(int i = 0; i < NUMBER_OF_DAYS - 1; i++){
+					#pragma HLS PIPELINE
+						float lnReturnA			= logf(bramA[i]/bramA[i+1]); /*< BramA and B must be 2-port BRAM */
+						float lnReturnB 		= logf(bramB[i]/bramB[i+1]);
+						float weight			= weight_rom[i+1];
+
+						//Return Accumulation
+						acc_returnA[i%ACUM_PARTITION]		+= lnReturnA;
+						acc_returnB[i%ACUM_PARTITION]		+= lnReturnB;
+
+						// Weight * return square Accumulation
+						acc_weight_returnSquareA[i%ACUM_PARTITION] 	+= lnReturnA * lnReturnA * weight;
+						acc_weight_returnSquareB[i%ACUM_PARTITION]	+= lnReturnB * lnReturnB * weight;
+
+						// Weight * return Accumulation
+						acc_weight_returnA[i%ACUM_PARTITION]		+= lnReturnA * weight;
+						acc_weight_returnB[i%ACUM_PARTITION]		+= lnReturnB * weight;
+
+						// Weight * returnA * returnB Accumulation
+						acc_weight_returnA_returnB[i%ACUM_PARTITION]+= lnReturnA * lnReturnB * weight;
 					}
-					bramA_file.close();
-					bramB_file.close();
-				#endif
 
-				// Channels to store accumulation
-				float acc_returnA[ACUM_PARTITION];
-				float acc_returnB[ACUM_PARTITION];
-				float acc_weight_returnSquareA[ACUM_PARTITION];
-				float acc_weight_returnA[ACUM_PARTITION];
-				float acc_weight_returnSquareB[ACUM_PARTITION];
-				float acc_weight_returnB[ACUM_PARTITION];
-				float acc_weight_returnA_returnB[ACUM_PARTITION];
+					float sum_returnA 					= 0.0f;
+					float sum_returnB 					= 0.0f;
+					float sum_weight_returnSquareA 		= 0.0f;
+					float sum_weight_returnA 			= 0.0f;
+					float sum_weight_returnSquareB 		= 0.0f;
+					float sum_weight_returnB 			= 0.0f;
+					float sum_weight_returnA_returnB 	= 0.0f;
+					float sum_weight					= weight_rom[0];
+					LAST_ACCUM_LOOP:
+					for(int i = 0; i < ACUM_PARTITION; i++){
+					#pragma HLS PIPELINE II=5
+						sum_returnA 					+= acc_returnA[i];
+						sum_returnB 					+= acc_returnB[i];
+						sum_weight_returnSquareA		+= acc_weight_returnSquareA[i];
+						sum_weight_returnA 				+= acc_weight_returnA[i];
+						sum_weight_returnSquareB 		+= acc_weight_returnSquareB[i];
+						sum_weight_returnB 				+= acc_weight_returnB[i];
+						sum_weight_returnA_returnB 		+= acc_weight_returnA_returnB[i];
+					}
 
-				/*----------------------------------------------------
-				 * Step 1: Handling the first index of a row 	 	 -
-				 * --------------------------------------------------*/
-				// 1.1: Reset all accumulated channels
-				RESET_REGISTERS:
-				for(int i = 0; i < ACUM_PARTITION; i++){
-				#pragma HLS UNROLL		/*< FULLY UNROLL */
-					acc_returnA[i] 					= 0.0f;
-					acc_returnB[i]					= 0.0f;
-					acc_weight_returnSquareA[i]		= 0.0f;
-					acc_weight_returnA[i]			= 0.0f;
-					acc_weight_returnSquareB[i]		= 0.0f;
-					acc_weight_returnB[i]			= 0.0f;
-					acc_weight_returnA_returnB[i]	= 0.0f;
+					/*---------------------------------------------------
+					 * Step 3: Compute Correlation		    	     	-
+					 * --------------------------------------------------*/
+					float meanReturn1 =  sum_returnA / float(NUMBER_OF_DAYS - 1);
+					float meanReturn2 =  sum_returnB / float(NUMBER_OF_DAYS - 1);
+
+					float volatilityA = sqrtf((sum_weight_returnSquareA - 2.0f *
+										meanReturn1 * sum_weight_returnA)/ sum_weight
+										+  (meanReturn1 * meanReturn1));
+					float volatilityB = sqrtf((sum_weight_returnSquareB - 2.0f *
+										meanReturn2 * sum_weight_returnB)/ sum_weight
+										+  (meanReturn2 * meanReturn2));
+					float covariance  = (sum_weight_returnA_returnB - meanReturn1 *
+										sum_weight_returnB - meanReturn2 *
+										sum_weight_returnA)/ sum_weight
+										+ meanReturn1 * meanReturn2;
+					float corr_temp;
+					corr_temp = covariance / (volatilityA * volatilityB);
+
+					out_correlation[counter] = corr_temp;
+
+					counter++;
 				}
-
-
-				/*---------------------------------------------------
-				 * Step 2: Parallel Accumulating		     		-
-				 * --------------------------------------------------*/
-				ACCUMULATION_LOOP:
-				for(int i = 0; i < NUMBER_OF_DAYS - 1; i++){
-				#pragma HLS PIPELINE
-					float lnReturnA			= hls::logf(bramA[i]/bramA[i+1]); /*< BramA and B must be 2-port BRAM */
-					float lnReturnB 		= hls::logf(bramB[i]/bramB[i+1]);
-					float weight			= weight_rom[i+1];
-
-					//Return Accumulation
-					acc_returnA[i%ACUM_PARTITION]		+= lnReturnA;
-					acc_returnB[i%ACUM_PARTITION]		+= lnReturnB;
-
-					// Weight * return square Accumulation
-					acc_weight_returnSquareA[i%ACUM_PARTITION] 	+= lnReturnA * lnReturnA * weight;
-					acc_weight_returnSquareB[i%ACUM_PARTITION]	+= lnReturnB * lnReturnB * weight;
-
-					// Weight * return Accumulation
-					acc_weight_returnA[i%ACUM_PARTITION]		+= lnReturnA * weight;
-					acc_weight_returnB[i%ACUM_PARTITION]		+= lnReturnB * weight;
-
-					// Weight * returnA * returnB Accumulation
-					acc_weight_returnA_returnB[i%ACUM_PARTITION]+= lnReturnA * lnReturnB * weight;
-				}
-
-				float sum_returnA 					= 0.0f;
-				float sum_returnB 					= 0.0f;
-				float sum_weight_returnSquareA 		= 0.0f;
-				float sum_weight_returnA 			= 0.0f;
-				float sum_weight_returnSquareB 		= 0.0f;
-				float sum_weight_returnB 			= 0.0f;
-				float sum_weight_returnA_returnB 	= 0.0f;
-				float sum_weight					= weight_rom[0];
-				LAST_ACCUM_LOOP:
-				for(int i = 0; i < ACUM_PARTITION; i++){
-				#pragma HLS PIPELINE II=5
-					sum_returnA 					+= acc_returnA[i];
-					sum_returnB 					+= acc_returnB[i];
-					sum_weight_returnSquareA		+= acc_weight_returnSquareA[i];
-					sum_weight_returnA 				+= acc_weight_returnA[i];
-					sum_weight_returnSquareB 		+= acc_weight_returnSquareB[i];
-					sum_weight_returnB 				+= acc_weight_returnB[i];
-					sum_weight_returnA_returnB 		+= acc_weight_returnA_returnB[i];
-				}
-
-				/*---------------------------------------------------
-				 * Step 3: Compute Correlation		    	     	-
-				 * --------------------------------------------------*/
-				float meanReturn1 =  sum_returnA / float(NUMBER_OF_DAYS - 1);
-				float meanReturn2 =  sum_returnB / float(NUMBER_OF_DAYS - 1);
-
-				float volatilityA = hls::sqrtf((sum_weight_returnSquareA - 2.0f *
-									meanReturn1 * sum_weight_returnA)/ sum_weight
-									+  (meanReturn1 * meanReturn1));
-				float volatilityB = hls::sqrtf((sum_weight_returnSquareB - 2.0f *
-									meanReturn2 * sum_weight_returnB)/ sum_weight
-									+  (meanReturn2 * meanReturn2));
-				float covariance  = (sum_weight_returnA_returnB - meanReturn1 *
-									sum_weight_returnB - meanReturn2 *
-									sum_weight_returnA)/ sum_weight
-									+ meanReturn1 * meanReturn2;
-				float corr_temp;
-				corr_temp = covariance / (volatilityA * volatilityB);
-
-				*((float *)(out_correlation + rx_offset/sizeof(float) + counter)) = corr_temp;
-
-				counter++;
-				/*-----------------------------------------------------------------*/
-				/*< For C-simulation and Co-simulation >*/
-					#ifndef __SYNTHESIS__
-					cout << "----------------------------------------" 		<< endl;
-					cout << "Mean of Return A = \t\t" 	<< meanReturn1 		<< endl;
-					cout << "Mean of Return B = \t\t" 	<< meanReturn2 		<< endl;
-					cout << "Daily Volatility A = \t" 	<< volatilityA 		<< endl;
-					cout << "Daily Volatility B = \t" 	<< volatilityB 		<< endl;
-					cout << "Covariance   = \t\t\t"   	<< covariance  		<< endl;
-					cout << "Correlation  = \t\t\t"   	<< corr_temp	 	<< endl;
-					cout << "*************************************"    		<< endl;
-					#endif
-				/*-----------------------------------------------------------------*/
-			}
-	}
+		}
+	return 0;
 }
 
 

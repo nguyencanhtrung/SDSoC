@@ -1,2 +1,15 @@
 14:57:09 INFO  : Launching XSDB server: xsdb -s /opt/Xilinx/SDSoC/2014.4/SDK/2014.4/scripts/xsdb/xsdb/xsdb-server.tcl 2450
 15:21:39 INFO  : Launching XSDB server: xsdb -s /opt/Xilinx/SDSoC/2014.4/SDK/2014.4/scripts/xsdb/xsdb/xsdb-server.tcl 2450
+17:22:45 ERROR : Following violations found when running rule "Array partition pragma rule" on (mmult_kernel:mmult.cpp)
+17:22:45 ERROR : [The parameter "in_A" is part of array_partition pragma declaration., The parameter "in_B" is part of array_partition pragma declaration.]
+17:22:45 ERROR : Following violations found when running rule "Top level function rule" on (mmult_kernel:mmult.cpp)
+17:22:45 ERROR : ["mmult_kernel" is called from "mmult" of the same file.]
+17:22:54 ERROR : Following violations found when running rule "Array partition pragma rule" on (mmult_kernel:mmult.cpp)
+17:22:54 ERROR : [The parameter "in_A" is part of array_partition pragma declaration., The parameter "in_B" is part of array_partition pragma declaration.]
+17:22:54 ERROR : Following violations found when running rule "Top level function rule" on (mmult_kernel:mmult.cpp)
+17:22:54 ERROR : ["mmult_kernel" is called from "mmult" of the same file.]
+17:23:10 ERROR : Following violations found when running rule "Array partition pragma rule" on (mmult_kernel:mmult.cpp)
+17:23:10 ERROR : [The parameter "in_A" is part of array_partition pragma declaration., The parameter "in_B" is part of array_partition pragma declaration.]
+17:23:10 ERROR : Following violations found when running rule "Top level function rule" on (mmult_kernel:mmult.cpp)
+17:23:10 ERROR : ["mmult_kernel" is called from "mmult" of the same file.]
+15:11:16 INFO  : Launching XSDB server: xsdb -s /opt/Xilinx/SDSoC/2014.4/SDK/2014.4/scripts/xsdb/xsdb/xsdb-server.tcl 2450

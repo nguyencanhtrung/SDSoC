@@ -1,0 +1,79 @@
+SW(2)@118\n   %2 = call i8* @sds_alloc(i32 4096), !dbg !93
+SW(3)@119\n   %4 = call i8* @sds_alloc(i32 4096), !dbg !96
+SW(4)@87\n   call void @_ZL13mmultadd_initPfS_S_S_S_(float* %tin1Buf, float* %tin2Buf, float* %tin3Buf, float* %toutBufSw, float* %toutBufHw), !dbg !104
+SW(5)@92\n   call void @_Z12mmult_goldenPfS_S_(float* %tin1Buf, float* %tin2Buf, float* %2), !dbg !116
+SW(6)@101\n   call void @_Z4maddPfS_S_(float* %19, float* %tin3Buf, float* %toutBufHw), !dbg !131
+SW(7)@108\n   ret i32 %28, !dbg !137
+SW(8)@0\n   %tmpBuf2 = alloca [1024 x float], align 4
+SW(9)@77\n   call void @llvm.dbg.value(metadata !{float* %tin1Buf}, i64 0, metadata !85), !dbg !86
+SW(10)@77\n   call void @llvm.dbg.value(metadata !{float* %tin2Buf}, i64 0, metadata !87), !dbg !88
+SW(11)@77\n   call void @llvm.dbg.value(metadata !{float* %tin3Buf}, i64 0, metadata !89), !dbg !90
+SW(12)@78\n   call void @llvm.dbg.value(metadata !{float* %toutBufSw}, i64 0, metadata !91), !dbg !92
+SW(13)@78\n   call void @llvm.dbg.value(metadata !{float* %toutBufHw}, i64 0, metadata !93), !dbg !94
+SW(14)@82\n   %1 = call i8* @sds_alloc(i32 4096), !dbg !95
+SW(15)@82\n   %2 = bitcast i8* %1 to float*, !dbg !95
+SW(16)@82\n   call void @llvm.dbg.value(metadata !{float* %2}, i64 0, metadata !96), !dbg !97
+SW(17)@83\n   call void @llvm.dbg.declare(metadata !{[1024 x float]* %tmpBuf2}, metadata !98), !dbg !102
+SW(18)@85\n   %puts = call i32 @puts(i8* getelementptr inbounds ([18 x i8]* @str, i32 0, i32 0)), !dbg !103
+SW(19)@77\n   call void @llvm.dbg.value(metadata !{null}, i64 0, metadata !85), !dbg !86
+SW(20)@77\n   call void @llvm.dbg.value(metadata !{null}, i64 0, metadata !87), !dbg !88
+SW(21)@77\n   call void @llvm.dbg.value(metadata !{null}, i64 0, metadata !89), !dbg !90
+SW(22)@78\n   call void @llvm.dbg.value(metadata !{null}, i64 0, metadata !91), !dbg !92
+SW(23)@78\n   call void @llvm.dbg.value(metadata !{null}, i64 0, metadata !93), !dbg !94
+SW(24)@89\n   %3 = call i64 @sds_clock_counter(), !dbg !105
+SW(25)@89\n   call void @llvm.dbg.value(metadata !{i64 %3}, i64 0, metadata !106), !dbg !105
+SW(26)@80\n   call void @llvm.dbg.value(metadata !108, i64 0, metadata !109), !dbg !110
+SW(27)@91\n   br label %4, !dbg !111
+SW(28)@0\n   %storemerge = phi i32 [ 0, %0 ], [ %8, %7 ]
+SW(29)@80\n   call void @llvm.dbg.value(metadata !{null}, i64 0, metadata !109), !dbg !110
+SW(30)@91\n   %5 = icmp slt i32 %storemerge, 1024, !dbg !113
+SW(31)@91\n   br i1 %5, label %6, label %9, !dbg !113
+SW(32)@77\n   call void @llvm.dbg.value(metadata !{null}, i64 0, metadata !85), !dbg !86
+SW(33)@77\n   call void @llvm.dbg.value(metadata !{null}, i64 0, metadata !87), !dbg !88
+SW(34)@82\n   call void @llvm.dbg.value(metadata !{null}, i64 0, metadata !96), !dbg !97
+SW(35)@82\n   call void @llvm.dbg.value(metadata !{null}, i64 0, metadata !96), !dbg !97
+SW(36)@77\n   call void @llvm.dbg.value(metadata !{null}, i64 0, metadata !89), !dbg !90
+SW(37)@78\n   call void @llvm.dbg.value(metadata !{null}, i64 0, metadata !91), !dbg !92
+SW(38)@93\n   call void @_Z11madd_goldenPfS_S_(float* %2, float* %tin3Buf, float* %toutBufSw), !dbg !118
+SW(39)@94\n   br label %7, !dbg !119
+SW(40)@80\n   call void @llvm.dbg.value(metadata !{null}, i64 0, metadata !109), !dbg !110
+SW(41)@91\n   %8 = add nsw i32 %storemerge, 1, !dbg !120
+SW(42)@80\n   call void @llvm.dbg.value(metadata !{i32 %8}, i64 0, metadata !109), !dbg !110
+SW(43)@91\n   br label %4, !dbg !120
+SW(44)@96\n   %10 = call i64 @sds_clock_counter(), !dbg !121
+SW(45)@89\n   call void @llvm.dbg.value(metadata !{i64 %10}, i64 0, metadata !123), !dbg !105
+SW(46)@89\n   call void @llvm.dbg.value(metadata !{null}, i64 0, metadata !106), !dbg !105
+SW(47)@96\n   %11 = sub i64 %10, %3, !dbg !121
+SW(48)@96\n   %12 = lshr i64 %11, 10, !dbg !121
+SW(49)@96\n   %13 = call i32 (i8*, ...)* @printf(i8* getelementptr inbounds ([62 x i8]* @.str1, i32 0, i32 0), i64 %12), !dbg !121
+SW(50)@96\n   %14 = call i64 @sds_clock_counter(), !dbg !121
+SW(51)@89\n   call void @llvm.dbg.value(metadata !{i64 %14}, i64 0, metadata !106), !dbg !105
+SW(52)@80\n   call void @llvm.dbg.value(metadata !108, i64 0, metadata !109), !dbg !110
+SW(53)@98\n   br label %15, !dbg !124
+SW(54)@0\n   %storemerge1 = phi i32 [ 0, %9 ], [ %21, %20 ]
+SW(55)@80\n   call void @llvm.dbg.value(metadata !{null}, i64 0, metadata !109), !dbg !110
+SW(56)@98\n   %16 = icmp slt i32 %storemerge1, 1024, !dbg !126
+SW(57)@98\n   br i1 %16, label %17, label %22, !dbg !126
+SW(58)@77\n   call void @llvm.dbg.value(metadata !{null}, i64 0, metadata !85), !dbg !86
+SW(59)@77\n   call void @llvm.dbg.value(metadata !{null}, i64 0, metadata !87), !dbg !88
+SW(60)@99\n   %18 = getelementptr inbounds [1024 x float]* %tmpBuf2, i32 0, i32 0, !dbg !129
+SW(61)@101\n   %19 = getelementptr inbounds [1024 x float]* %tmpBuf2, i32 0, i32 0, !dbg !131
+SW(62)@77\n   call void @llvm.dbg.value(metadata !{null}, i64 0, metadata !89), !dbg !90
+SW(63)@78\n   call void @llvm.dbg.value(metadata !{null}, i64 0, metadata !93), !dbg !94
+SW(64)@102\n   br label %20, !dbg !132
+SW(65)@80\n   call void @llvm.dbg.value(metadata !{null}, i64 0, metadata !109), !dbg !110
+SW(66)@98\n   %21 = add nsw i32 %storemerge1, 1, !dbg !133
+SW(67)@80\n   call void @llvm.dbg.value(metadata !{i32 %21}, i64 0, metadata !109), !dbg !110
+SW(68)@98\n   br label %15, !dbg !133
+SW(69)@104\n   %23 = call i64 @sds_clock_counter(), !dbg !134
+SW(70)@89\n   call void @llvm.dbg.value(metadata !{i64 %23}, i64 0, metadata !123), !dbg !105
+SW(71)@89\n   call void @llvm.dbg.value(metadata !{null}, i64 0, metadata !106), !dbg !105
+SW(72)@104\n   %24 = sub i64 %23, %14, !dbg !134
+SW(73)@104\n   %25 = lshr i64 %24, 10, !dbg !134
+SW(74)@104\n   %26 = call i32 (i8*, ...)* @printf(i8* getelementptr inbounds ([64 x i8]* @.str2, i32 0, i32 0), i64 %25), !dbg !134
+SW(75)@82\n   call void @llvm.dbg.value(metadata !{null}, i64 0, metadata !96), !dbg !97
+SW(76)@106\n   %27 = bitcast float* %2 to i8*, !dbg !136
+SW(77)@106\n   call void @sds_free(i8* %27), !dbg !136
+SW(78)@78\n   call void @llvm.dbg.value(metadata !{null}, i64 0, metadata !91), !dbg !92
+SW(79)@78\n   call void @llvm.dbg.value(metadata !{null}, i64 0, metadata !93), !dbg !94
+SW(80)@108\n   %28 = call i32 @_ZL18mmult_result_checkPfS_(float* %toutBufSw, float* %toutBufHw), !dbg !137

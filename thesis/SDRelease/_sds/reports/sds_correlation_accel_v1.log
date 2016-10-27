@@ -1,0 +1,168 @@
+(c) Copyright 2012-2015 Xilinx, Inc. All Rights Reserved.
+#-----------------------------------------------------------
+# Tool version  : sds++ 2014.4 20150228
+# Start time    : Thu Oct 27 07:03:06 PM CEST 2016
+# Command line  : sds++ -Wall -O3 -I../src -c -fmessage-length=0 -MTsrc/correlation_accel_v1.o -sds-hw correlation_accel_v1 correlation_accel_v1.cpp -sds-end -MMD -MP -MFsrc/correlation_accel_v1.d -MTsrc/correlation_accel_v1.d -o src/correlation_accel_v1.o ../src/correlation_accel_v1.cpp -sds-pf zed
+# Log file      : /home/trungnguyen/SDSoC/thesis/SDRelease/_sds/reports/sds_correlation_accel_v1.log
+# Journal file  : /home/trungnguyen/SDSoC/thesis/SDRelease/_sds/reports/sds_correlation_accel_v1.jou
+# Report file   : /home/trungnguyen/SDSoC/thesis/SDRelease/_sds/reports/sds_correlation_accel_v1.rpt
+#-----------------------------------------------------------
+
+INFO: [SDSoC 0-0] Performing accelerator source linting
+sdslint -func correlation_accel_v1 /home/trungnguyen/SDSoC/thesis/src/correlation_accel_v1.cpp -- -c -target arm-xilinx-linux-gnueabi -mcpu=cortex-a9 -O0 -g -w   -I/opt/Xilinx/SDSoC/2014.4/SDK/2014.4/gnu/arm/lin/arm-xilinx-linux-gnueabi/include/c++/4.8.3  -I/opt/Xilinx/SDSoC/2014.4/SDK/2014.4/gnu/arm/lin/arm-xilinx-linux-gnueabi/include/c++/4.8.3/arm-xilinx-linux-gnueabi  -I/opt/Xilinx/SDSoC/2014.4/SDK/2014.4/gnu/arm/lin/arm-xilinx-linux-gnueabi/include/c++/4.8.3/backward   -I/opt/Xilinx/SDSoC/2014.4/SDK/2014.4/gnu/arm/lin/lib/gcc/arm-xilinx-linux-gnueabi/4.8.3/include  -I/opt/Xilinx/SDSoC/2014.4/SDK/2014.4/gnu/arm/lin/lib/gcc/arm-xilinx-linux-gnueabi/4.8.3/include-fixed  -I/opt/Xilinx/SDSoC/2014.4/SDK/2014.4/gnu/arm/lin/arm-xilinx-linux-gnueabi/include  -I/opt/Xilinx/SDSoC/2014.4/SDK/2014.4/gnu/arm/lin/arm-xilinx-linux-gnueabi/libc/usr/include  -I /opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/include  -I /opt/Xilinx/SDSoC/2014.4/arm-xilinx-linux-gnueabi/include   -I../src -Wall -fmessage-length=0 -MMD -MP -D __SDSCC__
+INFO: [SDSoC 0-0] Create data motion intermediate representation
+clang_wrapper -target arm-xilinx-linux-gnueabi -mcpu=cortex-a9 -O0 -g -w   -I/opt/Xilinx/SDSoC/2014.4/SDK/2014.4/gnu/arm/lin/arm-xilinx-linux-gnueabi/include/c++/4.8.3  -I/opt/Xilinx/SDSoC/2014.4/SDK/2014.4/gnu/arm/lin/arm-xilinx-linux-gnueabi/include/c++/4.8.3/arm-xilinx-linux-gnueabi  -I/opt/Xilinx/SDSoC/2014.4/SDK/2014.4/gnu/arm/lin/arm-xilinx-linux-gnueabi/include/c++/4.8.3/backward   -I/opt/Xilinx/SDSoC/2014.4/SDK/2014.4/gnu/arm/lin/lib/gcc/arm-xilinx-linux-gnueabi/4.8.3/include  -I/opt/Xilinx/SDSoC/2014.4/SDK/2014.4/gnu/arm/lin/lib/gcc/arm-xilinx-linux-gnueabi/4.8.3/include-fixed  -I/opt/Xilinx/SDSoC/2014.4/SDK/2014.4/gnu/arm/lin/arm-xilinx-linux-gnueabi/include  -I/opt/Xilinx/SDSoC/2014.4/SDK/2014.4/gnu/arm/lin/arm-xilinx-linux-gnueabi/libc/usr/include  -I /opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/include  -I /opt/Xilinx/SDSoC/2014.4/arm-xilinx-linux-gnueabi/include   -I../src -Wall -fmessage-length=0 -MMD -MP -D __SDSCC__ -emit-llvm -S /home/trungnguyen/SDSoC/thesis/src/correlation_accel_v1.cpp -o /home/trungnguyen/SDSoC/thesis/SDRelease/_sds/.llvm/src/correlation_accel_v1.s
+INFO: [SDSoC 0-0] Performing pragma generation
+pragma_gen  -func correlation_accel_v1  -o /home/trungnguyen/SDSoC/thesis/SDRelease/_sds/vhls/src/correlation_accel_v1.cpp  /home/trungnguyen/SDSoC/thesis/src/correlation_accel_v1.cpp  --  -c  -target arm-xilinx-linux-gnueabi -mcpu=cortex-a9 -O0 -g -w   -I/opt/Xilinx/SDSoC/2014.4/SDK/2014.4/gnu/arm/lin/arm-xilinx-linux-gnueabi/include/c++/4.8.3  -I/opt/Xilinx/SDSoC/2014.4/SDK/2014.4/gnu/arm/lin/arm-xilinx-linux-gnueabi/include/c++/4.8.3/arm-xilinx-linux-gnueabi  -I/opt/Xilinx/SDSoC/2014.4/SDK/2014.4/gnu/arm/lin/arm-xilinx-linux-gnueabi/include/c++/4.8.3/backward   -I/opt/Xilinx/SDSoC/2014.4/SDK/2014.4/gnu/arm/lin/lib/gcc/arm-xilinx-linux-gnueabi/4.8.3/include  -I/opt/Xilinx/SDSoC/2014.4/SDK/2014.4/gnu/arm/lin/lib/gcc/arm-xilinx-linux-gnueabi/4.8.3/include-fixed  -I/opt/Xilinx/SDSoC/2014.4/SDK/2014.4/gnu/arm/lin/arm-xilinx-linux-gnueabi/include  -I/opt/Xilinx/SDSoC/2014.4/SDK/2014.4/gnu/arm/lin/arm-xilinx-linux-gnueabi/libc/usr/include  -I /opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/include  -I /opt/Xilinx/SDSoC/2014.4/arm-xilinx-linux-gnueabi/include    -I/home/trungnguyen/SDSoC/thesis/src -Wall -O3 -fmessage-length=0 -MMD -MP -D __SDSCC__ -I/home/trungnguyen/SDSoC/thesis/src
+INFO: [SDSoC 0-0] Moving function correlation_accel_v1 to Programmable Logic
+/opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/bin/vivado_hls /home/trungnguyen/SDSoC/thesis/SDRelease/_sds/vhls/correlation_accel_v1_run.tcl
+================================================================
+  Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC
+  Version 2014.4
+  Build 1071461 on Tue Nov 18 16:42:57 PM 2014
+  Copyright (C) 2014 Xilinx Inc. All rights reserved.
+================================================================
+@I [LIC-101] Checked out feature [HLS]
+@I [HLS-10] Running '/opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/bin/unwrapped/lnx64.o/vivado_hls'
+            for user 'trungnguyen' on host 'verratnix.zmk.uni-kl.de' (Linux_x86_64 version 2.6.32-573.18.1.el6.x86_64) on Thu Oct 27 19:03:26 CEST 2016
+            in directory '/home/trungnguyen/SDSoC/thesis/SDRelease/_sds/vhls'
+@I [HLS-10] Creating and opening project '/home/trungnguyen/SDSoC/thesis/SDRelease/_sds/vhls/correlation_accel_v1'.
+@I [HLS-10] Adding design file '/home/trungnguyen/SDSoC/thesis/SDRelease/_sds/vhls/src/correlation_accel_v1.cpp' to the project
+@I [HLS-10] Creating and opening solution '/home/trungnguyen/SDSoC/thesis/SDRelease/_sds/vhls/correlation_accel_v1/solution'.
+@I [HLS-10] Cleaning up the solution database.
+@I [HLS-10] Setting target device to ' xc7z020clg484-1 '
+@I [SYN-201] Setting up clock 'default' with a period of 5.95ns.
+@I [HLS-10] Analyzing design file '/home/trungnguyen/SDSoC/thesis/SDRelease/_sds/vhls/src/correlation_accel_v1.cpp' ... 
+@I [HLS-10] Validating synthesis directives ...
+@I [HLS-10] Starting code transformations ...
+@I [HLS-10] Checking synthesizability ...
+@I [XFORM-602] Inlining function 'weight_rom_init' into 'correlation_accel_v1' (/home/trungnguyen/SDSoC/thesis/SDRelease/_sds/vhls/src/correlation_accel_v1.cpp:50) automatically.
+@I [XFORM-501] Unrolling loop 'RESET_REGISTERS' (/home/trungnguyen/SDSoC/thesis/SDRelease/_sds/vhls/src/correlation_accel_v1.cpp:88) in function 'correlation_accel_v1' completely.
+@I [XFORM-602] Inlining function 'weight_rom_init' into 'correlation_accel_v1' (/home/trungnguyen/SDSoC/thesis/SDRelease/_sds/vhls/src/correlation_accel_v1.cpp:50) automatically.
+@I [XFORM-811] Inferring bus burst read of variable length on port 'gmem32' (/home/trungnguyen/SDSoC/thesis/SDRelease/_sds/vhls/src/correlation_accel_v1.cpp:61:4).
+@I [XFORM-811] Inferring bus burst read of variable length on port 'gmem32' (/home/trungnguyen/SDSoC/thesis/SDRelease/_sds/vhls/src/correlation_accel_v1.cpp:68:6).
+@I [HLS-111] Elapsed time: 2.84 seconds; current memory usage: 107 MB.
+@I [HLS-10] Starting hardware synthesis ...
+@I [HLS-10] Synthesizing 'correlation_accel_v1' ...
+@I [HLS-10] ----------------------------------------------------------------
+@I [HLS-10] -- Scheduling module 'correlation_accel_v1' 
+@I [HLS-10] ----------------------------------------------------------------
+@I [SCHED-11] Starting scheduling ...
+@W [SCHED-21] Estimated delay (6.34ns) of 'sitofp' operation ('tmp_2', /home/trungnguyen/SDSoC/thesis/SDRelease/_sds/vhls/src/correlation_accel_v1.cpp:149) exceeds the target cycle time (target cycle time: 5.95ns, clock uncertainty: 0.744ns, effective cycle time: 5.21ns).
+@I [SCHED-61] Pipelining loop 'memcpy.correlation_accel_v1(int, int, float*, float*)::bramA.in_indices'.
+@I [SCHED-61] Pipelining result: Target II: 1, Final II: 1, Depth: 3.
+@I [SCHED-61] Pipelining loop 'memcpy.correlation_accel_v1(int, int, float*, float*)::bramB.in_indices'.
+@I [SCHED-61] Pipelining result: Target II: 1, Final II: 1, Depth: 3.
+@I [SCHED-61] Pipelining loop 'ACCUMULATION_LOOP'.
+@W [SCHED-68] Unable to enforce a carried dependency constraint (II = 1, distance = 6)
+   between 'store' operation (/home/trungnguyen/SDSoC/thesis/SDRelease/_sds/vhls/src/correlation_accel_v1.cpp:111) of variable 'tmp_19' on array 'acc_returnA' and 'load' operation ('acc_returnA_load', /home/trungnguyen/SDSoC/thesis/SDRelease/_sds/vhls/src/correlation_accel_v1.cpp:111) on array 'acc_returnA'.
+@I [SCHED-61] Pipelining result: Target II: 1, Final II: 2, Depth: 71.
+@I [SCHED-61] Pipelining loop 'LAST_ACCUM_LOOP'.
+@W [SCHED-68] Unable to enforce a carried constraint (II = 5)
+   between 'fadd' operation ('sum_returnA', /home/trungnguyen/SDSoC/thesis/SDRelease/_sds/vhls/src/correlation_accel_v1.cpp:137) and 'fadd' operation ('sum_returnA', /home/trungnguyen/SDSoC/thesis/SDRelease/_sds/vhls/src/correlation_accel_v1.cpp:137).
+@W [SCHED-68] Unable to enforce a carried constraint (II = 6)
+   between 'fadd' operation ('sum_returnA', /home/trungnguyen/SDSoC/thesis/SDRelease/_sds/vhls/src/correlation_accel_v1.cpp:137) and 'fadd' operation ('sum_returnA', /home/trungnguyen/SDSoC/thesis/SDRelease/_sds/vhls/src/correlation_accel_v1.cpp:137).
+@W [SCHED-68] Unable to enforce a carried constraint (II = 7)
+   between 'fadd' operation ('sum_returnA', /home/trungnguyen/SDSoC/thesis/SDRelease/_sds/vhls/src/correlation_accel_v1.cpp:137) and 'fadd' operation ('sum_returnA', /home/trungnguyen/SDSoC/thesis/SDRelease/_sds/vhls/src/correlation_accel_v1.cpp:137).
+@W [SCHED-68] Unable to enforce a carried constraint (II = 8)
+   between 'fadd' operation ('sum_returnA', /home/trungnguyen/SDSoC/thesis/SDRelease/_sds/vhls/src/correlation_accel_v1.cpp:137) and 'fadd' operation ('sum_returnA', /home/trungnguyen/SDSoC/thesis/SDRelease/_sds/vhls/src/correlation_accel_v1.cpp:137).
+@I [SCHED-61] Pipelining result: Target II: 5, Final II: 9, Depth: 17.
+@W [SCHED-71] Latency directive discarded for region correlation_accel_v1 since it contains subloops.
+@W [SCHED-21] Estimated clock period (6.34ns) exceeds the target (target clock period: 5.95ns, clock uncertainty: 0.744ns, effective delay budget: 5.21ns).
+@W [SCHED-21] The critical path consists of the following:
+	'sitofp' operation ('tmp_2', /home/trungnguyen/SDSoC/thesis/SDRelease/_sds/vhls/src/correlation_accel_v1.cpp:149) (6.34 ns)
+@I [SCHED-11] Finished scheduling.
+@I [HLS-111] Elapsed time: 0.21 seconds; current memory usage: 109 MB.
+@I [HLS-10] ----------------------------------------------------------------
+@I [HLS-10] -- Exploring micro-architecture for module 'correlation_accel_v1' 
+@I [HLS-10] ----------------------------------------------------------------
+@I [BIND-100] Starting micro-architecture generation ...
+@I [BIND-101] Performing variable lifetime analysis.
+@I [BIND-101] Exploring resource sharing.
+@I [BIND-101] Binding ...
+@I [BIND-100] Finished micro-architecture generation.
+@I [HLS-111] Elapsed time: 0.14 seconds; current memory usage: 112 MB.
+@I [HLS-10] ----------------------------------------------------------------
+@I [HLS-10] -- Generating RTL for module 'correlation_accel_v1' 
+@I [HLS-10] ----------------------------------------------------------------
+@I [RTGEN-500] Setting interface mode on port 'correlation_accel_v1/gmem32' to 'm_axi'.
+@I [RTGEN-500] Setting interface mode on port 'correlation_accel_v1/number_of_days' to 'ap_none'.
+@I [RTGEN-500] Setting interface mode on port 'correlation_accel_v1/number_of_indices' to 'ap_none'.
+@I [RTGEN-500] Setting interface mode on port 'correlation_accel_v1/in_indices' to 'ap_none'.
+@I [RTGEN-500] Setting interface mode on port 'correlation_accel_v1/out_correlation' to 'ap_none'.
+@I [RTGEN-500] Setting interface mode on function 'correlation_accel_v1' to 'ap_ctrl_hs'.
+@I [RTGEN-100] Generating core module 'correlation_accel_v1_fadd_32ns_32ns_32_9_full_dsp': 2 instance(s).
+@I [RTGEN-100] Generating core module 'correlation_accel_v1_faddfsub_32ns_32ns_32_9_full_dsp': 2 instance(s).
+@I [RTGEN-100] Generating core module 'correlation_accel_v1_fdiv_32ns_32ns_32_30': 2 instance(s).
+@I [RTGEN-100] Generating core module 'correlation_accel_v1_flog_32ns_32ns_32_18_full_dsp': 1 instance(s).
+@I [RTGEN-100] Generating core module 'correlation_accel_v1_fmul_32ns_32ns_32_5_max_dsp': 4 instance(s).
+@I [RTGEN-100] Generating core module 'correlation_accel_v1_fsqrt_32ns_32ns_32_28': 2 instance(s).
+@I [RTGEN-100] Generating core module 'correlation_accel_v1_mul_32s_32s_32_7': 1 instance(s).
+@I [RTGEN-100] Generating core module 'correlation_accel_v1_sitofp_32s_32_8': 1 instance(s).
+@I [RTGEN-100] Generating core module 'correlation_accel_v1_urem_31ns_4ns_31_35': 1 instance(s).
+@I [RTGEN-100] Finished creating RTL model for 'correlation_accel_v1'.
+@I [HLS-111] Elapsed time: 0.2 seconds; current memory usage: 116 MB.
+@I [RTMG-282] Generating pipelined core: 'correlation_accel_v1_mul_32s_32s_32_7_MulnS_0'
+@I [RTMG-282] Generating pipelined core: 'correlation_accel_v1_urem_31ns_4ns_31_35_div'
+@I [RTMG-278] Implementing memory 'correlation_accel_v1_weight_rom_ram' using block RAMs with power-on initialization.
+@I [RTMG-278] Implementing memory 'correlation_accel_v1_bramA_ram' using block RAMs with power-on initialization.
+@I [RTMG-278] Implementing memory 'correlation_accel_v1_bramB_ram' using block RAMs with power-on initialization.
+@I [RTMG-278] Implementing memory 'correlation_accel_v1_acc_returnA_ram' using distributed RAMs.
+@I [RTMG-278] Implementing memory 'correlation_accel_v1_acc_returnB_ram' using distributed RAMs.
+@I [HLS-10] Finished generating all RTL models.
+@I [WSYSC-301] Generating RTL SystemC for 'correlation_accel_v1'.
+@I [WVHDL-304] Generating RTL VHDL for 'correlation_accel_v1'.
+@I [WVLOG-307] Generating RTL Verilog for 'correlation_accel_v1'.
+@I [IMPL-8] Exporting RTL as an IP in IP-XACT.
+
+****** Vivado v2014.4 (64-bit)
+  **** SW Build 1071353 on Tue Nov 18 16:48:31 MST 2014
+  **** IP Build 1071914 on Wed Nov 19 05:30:59 MST 2014
+    ** Copyright 1986-2014 Xilinx, Inc. All Rights Reserved.
+
+source run_ippack.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/opt/Xilinx/SDSoC/2014.4/Vivado/2014.4/data/ip'.
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'correlation_accel_v1_ap_sitofp_6_no_dsp_32'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'correlation_accel_v1_ap_sitofp_6_no_dsp_32'...
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'correlation_accel_v1_ap_fdiv_28_no_dsp_32'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'correlation_accel_v1_ap_fdiv_28_no_dsp_32'...
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'correlation_accel_v1_ap_faddfsub_7_full_dsp_32'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'correlation_accel_v1_ap_faddfsub_7_full_dsp_32'...
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'correlation_accel_v1_ap_fsqrt_26_no_dsp_32'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'correlation_accel_v1_ap_fsqrt_26_no_dsp_32'...
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'correlation_accel_v1_ap_fmul_3_max_dsp_32'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'correlation_accel_v1_ap_fmul_3_max_dsp_32'...
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'correlation_accel_v1_ap_fadd_7_full_dsp_32'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'correlation_accel_v1_ap_fadd_7_full_dsp_32'...
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'correlation_accel_v1_ap_flog_16_full_dsp_32'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'correlation_accel_v1_ap_flog_16_full_dsp_32'...
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/opt/Xilinx/SDSoC/2014.4/Vivado/2014.4/data/ip'.
+INFO: [Common 17-206] Exiting Vivado at Thu Oct 27 19:03:56 2016...
+@I [HLS-112] Total elapsed time: 44.44 seconds; peak memory usage: 116 MB.
+@I [LIC-101] Checked in feature [HLS]
+xsltproc --output component.xml  /opt/Xilinx/SDSoC/2014.4/scripts/xsd/xdFixAximmAddrSpaceProperty.xsl  component.xml
+zip -u xilinx_com_hls_correlation_accel_v1_1_0.zip component.xml
+updating: component.xml (deflated 95%)
+sed -i -e {s/xilinx\.com\/xidane/xilinx\.com\/xd/g} /home/trungnguyen/SDSoC/thesis/SDRelease/_sds/vhls/correlation_accel_v1/solution/impl/ip/auxiliary.xml
+xsltproc  --output /home/trungnguyen/SDSoC/thesis/SDRelease/_sds/.llvm/correlation_accel_v1.hlsmap1.xml  --stringparam P_CLKID 1  --stringparam P_HLS_TYPE hls  /opt/Xilinx/SDSoC/2014.4/scripts/xsd/xdHlsmapRenameAttr.xsl  /home/trungnguyen/SDSoC/thesis/SDRelease/_sds/.llvm/correlation_accel_v1_auxiliary.xml
+xsltproc  --output /home/trungnguyen/SDSoC/thesis/SDRelease/_sds/.llvm/correlation_accel_v1.hlsmap.xml  /opt/Xilinx/SDSoC/2014.4/scripts/xsd/xdHlsmapAdapter.xsl  /home/trungnguyen/SDSoC/thesis/SDRelease/_sds/.llvm/correlation_accel_v1.hlsmap1.xml
+xsltproc    --output /home/trungnguyen/SDSoC/thesis/SDRelease/_sds/.llvm/correlation_accel_v1.fcnmap.xml  /opt/Xilinx/SDSoC/2014.4/scripts/xsd/xdHlsmapAxi4.xsl  /home/trungnguyen/SDSoC/thesis/SDRelease/_sds/.llvm/correlation_accel_v1.hlsmap.xml
+xsltproc  --output /home/trungnguyen/SDSoC/thesis/SDRelease/_sds/.llvm/correlation_accel_v1_if.xml  /opt/Xilinx/SDSoC/2014.4/scripts/xsd/xdHlsAdapterComp.xsl  /home/trungnguyen/SDSoC/thesis/SDRelease/_sds/.llvm/correlation_accel_v1.fcnmap.xml
+arm-xilinx-linux-gnueabi-g++ -c -I../src -Wall -O3 -fmessage-length=0 -MMD -MP -D __SDSCC__ -MT/home/trungnguyen/SDSoC/thesis/SDRelease/src/correlation_accel_v1.o -MF/home/trungnguyen/SDSoC/thesis/SDRelease/src/correlation_accel_v1.d -MT/home/trungnguyen/SDSoC/thesis/SDRelease/src/correlation_accel_v1.d  /home/trungnguyen/SDSoC/thesis/SDRelease/_sds/swstubs/correlation_accel_v1.cpp -o /home/trungnguyen/SDSoC/thesis/SDRelease/_sds/swstubs/correlation_accel_v1.o
+arm-xilinx-linux-gnueabi-objcopy --add-section .xdasm=/home/trungnguyen/SDSoC/thesis/SDRelease/_sds/.llvm/src/correlation_accel_v1.s /home/trungnguyen/SDSoC/thesis/SDRelease/_sds/swstubs/correlation_accel_v1.o
+arm-xilinx-linux-gnueabi-objcopy --add-section .xddata=/home/trungnguyen/SDSoC/thesis/SDRelease/_sds/swstubs/correlation_accel_v1.xml /home/trungnguyen/SDSoC/thesis/SDRelease/_sds/swstubs/correlation_accel_v1.o
+arm-xilinx-linux-gnueabi-g++ -E -I../src -Wall -O3 -fmessage-length=0 -MMD -MP -D __SDSCC__ -MT/home/trungnguyen/SDSoC/thesis/SDRelease/src/correlation_accel_v1.o -MF/home/trungnguyen/SDSoC/thesis/SDRelease/src/correlation_accel_v1.d -MT/home/trungnguyen/SDSoC/thesis/SDRelease/src/correlation_accel_v1.d -I /opt/Xilinx/SDSoC/2014.4/arm-xilinx-linux-gnueabi/include  -I /opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/include   /home/trungnguyen/SDSoC/thesis/src/correlation_accel_v1.cpp -o /home/trungnguyen/SDSoC/thesis/SDRelease/_sds/.pp/correlation_accel_v1.ii
+In file included from /home/trungnguyen/SDSoC/thesis/src/correlation_accel_v1.cpp:21:0:
+/home/trungnguyen/SDSoC/thesis/src/correlation_accel_v1.hpp:74:32: warning: extra tokens at end of #endif directive [enabled by default]
+ #endif /* CORRELATION_ACCL_H */_
+                                ^
+arm-xilinx-linux-gnueabi-objcopy --add-section .xdpp=/home/trungnguyen/SDSoC/thesis/SDRelease/_sds/.pp/correlation_accel_v1.ii /home/trungnguyen/SDSoC/thesis/SDRelease/_sds/swstubs/correlation_accel_v1.o
+arm-xilinx-linux-gnueabi-objcopy --add-section .xdfcnmap=/home/trungnguyen/SDSoC/thesis/SDRelease/_sds/.llvm/correlation_accel_v1.fcnmap.xml /home/trungnguyen/SDSoC/thesis/SDRelease/_sds/swstubs/correlation_accel_v1.o
+arm-xilinx-linux-gnueabi-objcopy --add-section .xdhlscore=/home/trungnguyen/SDSoC/thesis/SDRelease/_sds/vhls/correlation_accel_v1/solution/impl/ip/xilinx_com_hls_correlation_accel_v1_1_0.zip /home/trungnguyen/SDSoC/thesis/SDRelease/_sds/swstubs/correlation_accel_v1.o
+arm-xilinx-linux-gnueabi-objcopy --add-section .xdif=/home/trungnguyen/SDSoC/thesis/SDRelease/_sds/.llvm/correlation_accel_v1_if.xml /home/trungnguyen/SDSoC/thesis/SDRelease/_sds/swstubs/correlation_accel_v1.o
+sds++ log file saved as /home/trungnguyen/SDSoC/thesis/SDRelease/_sds/reports/sds_correlation_accel_v1.log
+sds++ completed at Thu Oct 27 07:04:12 PM CEST 2016

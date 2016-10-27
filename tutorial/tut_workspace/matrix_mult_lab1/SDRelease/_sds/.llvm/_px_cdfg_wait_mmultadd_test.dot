@@ -1,0 +1,31 @@
+digraph CDFG {
+node [shape=record];
+bb0 [shape=record, label = "{bb0|<x0x21b1480>SW(12)@0\n|<x0x21b1330>SW(13)@77\n|<x0x21b1f30>SW(14)@77\n|<x0x21b2170>SW(15)@77\n|<x0x21b23b0>SW(16)@78\n|<x0x21b25f0>SW(17)@78\n|<x0x21b2830>SW(18)@82\n|<x0x21b2a40>SW(19)@82\n|<x0x21b2c50>SW(20)@82\n|<x0x21b2e90>SW(21)@83\n|<x0x21b30d0>SW(22)@85\n|<x0x21b3310>SW(23)@77\n|<x0x21b3550>SW(24)@77\n|<x0x21b3770>SW(25)@77\n|<x0x21b3990>SW(26)@78\n|<x0x21b3bb0>SW(27)@78\n|<x0x21ab240>SW(7)@87\n\n--RAW--\>SW(9)@93\n\n--RAW--\>SW(8)@92\n\n--RAW--\>XFER(IN):B @101, ARRAY\n\n--RAW--\>XFER(IN):in_B @99, ARRAY\n\n--RAW--\>XFER(IN):in_A @99, ARRAY\n\n--RAW--\>SW(11)@108\n\n--RAW--\>SW(10)@108\n\n|<x0x21b5f30>SW(28)@89\n|<x0x21b6110>SW(29)@89\n|<x0x21b6350>SW(30)@80\n|<x0x21b6590>SW(31)@91\n}"];
+bb1 [shape=record, label = "{bb1|<x0x21b6940>SW(32)@0\n|<x0x21b6ac0>SW(33)@80\n|<x0x21b6c90>SW(34)@91\n|<x0x21b6e80>SW(35)@91\n}"];
+bb2 [shape=record, label = "{bb2|<x0x21b6780>SW(36)@77\n|<x0x21b7450>SW(37)@77\n|<x0x21b7690>SW(38)@82\n|<x0x21b4780>SW(8)@92\n|<x0x21b78b0>SW(39)@82\n|<x0x21b7af0>SW(40)@77\n|<x0x21b7d10>SW(41)@78\n|<x0x21ab770>SW(9)@93\n|<x0x21b7f30>SW(42)@94\n}"];
+bb3 [shape=record, label = "{bb3|<x0x21b8140>SW(43)@80\n|<x0x21b8430>SW(44)@91\n|<x0x21b8620>SW(45)@80\n|<x0x21b8860>SW(46)@91\n}"];
+bb4 [shape=record, label = "{bb4|<x0x21b8a70>SW(47)@96\n|<x0x21b8e70>SW(48)@89\n|<x0x21b9090>SW(49)@89\n|<x0x21b92d0>SW(50)@96\n|<x0x21b94c0>SW(51)@96\n|<x0x21b96d0>SW(52)@96\n|<x0x21b9940>SW(53)@96\n|<x0x21b9b30>SW(54)@89\n|<x0x21b9d70>SW(55)@80\n|<x0x21b9fb0>SW(56)@98\n}"];
+bb5 [shape=record, label = "{bb5|<x0x21ba1a0>SW(57)@0\n|<x0x21ba510>SW(58)@80\n|<x0x21ba6c0>SW(59)@98\n|<x0x21ba8b0>SW(60)@98\n}"];
+bb6 [shape=record, label = "{bb6|<x0x21baac0>SW(61)@77\n|<x0x21bae40>SW(62)@77\n|<x0x21bb060>SW(63)@99\n|<x0x21be5c0>XFER(IN):in_A @99, ARRAY\n|<x0x21be6a0>XFER(IN):in_B @99, ARRAY\n|<x0x21ad810>call 'mmult' in 'main.cpp' @99\n|<x0x21be780>XFER(OUT):out_C @99, DIRECT_SOURCE\n\n--(DIRECT)RAW--\>XFER(IN):A @101, DIRECT_SINK\n\n|<x0x21bb280>SW(64)@101\n|<x0x21bb4e0>SW(65)@77\n|<x0x21bb720>SW(66)@78\n|<x0x21bf4e0>XFER(IN):A @101, DIRECT_SINK\n|<x0x21bf5f0>XFER(IN):B @101, ARRAY\n|<x0x21a6100>call 'madd' in 'main.cpp' @101\n|<x0x21bf700>XFER(OUT):C @101, ARRAY\n\n--RAW--\>SW(11)@108\n\n--RAW--\>SW(10)@108\n\n|<x0x21b5970>cf_wait(): \nXFER(IN):B @101, ARRAY\nXFER(OUT):C @101, ARRAY\nXFER(IN):in_A @99, ARRAY\nXFER(IN):in_B @99, ARRAY\n\n|<x0x21bb940>SW(67)@102\n}"];
+bb7 [shape=record, label = "{bb7|<x0x21bbb50>SW(68)@80\n|<x0x21bbeb0>SW(69)@98\n|<x0x21bc0a0>SW(70)@80\n|<x0x21bc2e0>SW(71)@98\n}"];
+bb8 [shape=record, label = "{bb8|<x0x21bc540>SW(72)@104\n|<x0x21bca00>SW(73)@89\n|<x0x21bcc20>SW(74)@89\n|<x0x21bce60>SW(75)@104\n|<x0x21bd050>SW(76)@104\n|<x0x21bd260>SW(77)@104\n|<x0x21bd430>SW(78)@82\n|<x0x21bd650>SW(79)@106\n|<x0x21bd840>SW(80)@106\n|<x0x21bda50>SW(81)@78\n|<x0x21bdc90>SW(82)@78\n|<x0x21abbe0>SW(10)@108\n|<x0x21b58a0>SW(11)@108\n}"];
+bb0 -> bb1
+bb1 -> bb2
+bb1 -> bb4
+bb2 -> bb3
+bb3 -> bb1
+bb4 -> bb5
+bb5 -> bb6
+bb5 -> bb8
+bb6 -> bb7
+bb7 -> bb5
+bb0:x0x21ab240 -> bb2:x0x21ab770[color=blue]
+bb0:x0x21ab240 -> bb2:x0x21b4780[color=blue]
+bb0:x0x21ab240 -> bb6:x0x21bf5f0[color=blue]
+bb0:x0x21ab240 -> bb6:x0x21be6a0[color=blue]
+bb0:x0x21ab240 -> bb6:x0x21be5c0[color=blue]
+bb0:x0x21ab240 -> bb8:x0x21b58a0[color=blue]
+bb0:x0x21ab240 -> bb8:x0x21abbe0[color=blue]
+bb6:x0x21bf700 -> bb8:x0x21b58a0[color=blue]
+bb6:x0x21bf700 -> bb8:x0x21abbe0[color=blue]
+}

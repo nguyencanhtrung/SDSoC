@@ -1,0 +1,107 @@
+17:28:29 **** Build of configuration SDRelease for project matrix_mult_lab1 ****
+make all 
+Building file: ../src/madd.cpp
+Invoking: SDS++ Linux Compiler
+sds++ -Wall -O3 -I"../src" -c -fmessage-length=0 -MT"src/madd.o" -sds-hw madd madd.cpp -sds-end -MMD -MP -MF"src/madd.d" -MT"src/madd.d" -o "src/madd.o" "../src/madd.cpp" -sds-pf zed
+INFO: [SDSoC 0-0] processing -sds-hw block for madd
+INFO: [SDSoC 0-0] Performing accelerator source linting
+INFO: [SDSoC 0-0] Create data motion intermediate representation
+INFO: [SDSoC 0-0] Performing pragma generation
+INFO: [SDSoC 0-0] Moving function madd to Programmable Logic
+sds++ log file saved as /home/trungnguyen/SDSoC/tutorial/tut_workspace/matrix_mult_lab1/SDRelease/_sds/reports/sds_madd.log
+
+Finished building: ../src/madd.cpp
+ 
+Building file: ../src/main.cpp
+Invoking: SDS++ Linux Compiler
+sds++ -Wall -O3 -I"../src" -c -fmessage-length=0 -MT"src/main.o" -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cpp" -sds-pf zed
+INFO: [SDSoC 0-0] Create data motion intermediate representation
+INFO: [SDSoC 0-0] Compiling /home/trungnguyen/SDSoC/tutorial/tut_workspace/matrix_mult_lab1/src/main.cpp
+sds++ log file saved as /home/trungnguyen/SDSoC/tutorial/tut_workspace/matrix_mult_lab1/SDRelease/_sds/reports/sds_main.log
+
+Finished building: ../src/main.cpp
+ 
+Building file: ../src/mmult.cpp
+Invoking: SDS++ Linux Compiler
+sds++ -Wall -O3 -I"../src" -c -fmessage-length=0 -MT"src/mmult.o" -sds-hw mmult mmult.cpp -sds-end -MMD -MP -MF"src/mmult.d" -MT"src/mmult.d" -o "src/mmult.o" "../src/mmult.cpp" -sds-pf zed
+INFO: [SDSoC 0-0] processing -sds-hw block for mmult
+INFO: [SDSoC 0-0] Performing accelerator source linting
+INFO: [SDSoC 0-0] Create data motion intermediate representation
+INFO: [SDSoC 0-0] Performing pragma generation
+INFO: [SDSoC 0-0] Moving function mmult to Programmable Logic
+sds++ log file saved as /home/trungnguyen/SDSoC/tutorial/tut_workspace/matrix_mult_lab1/SDRelease/_sds/reports/sds_mmult.log
+
+Finished building: ../src/mmult.cpp
+ 
+Building target: matrix_mult_lab1.elf
+Invoking: SDS++ Linux Linker
+sds++  -o "matrix_mult_lab1.elf"  ./src/madd.o ./src/main.o ./src/mmult.o    -sds-pf zed
+INFO: [SDSoC 0-0] Analyzing object files
+... /home/trungnguyen/SDSoC/tutorial/tut_workspace/matrix_mult_lab1/SDRelease/src/madd.o
+... /home/trungnguyen/SDSoC/tutorial/tut_workspace/matrix_mult_lab1/SDRelease/src/main.o
+... /home/trungnguyen/SDSoC/tutorial/tut_workspace/matrix_mult_lab1/SDRelease/src/mmult.o
+INFO: [SDSoC 0-0] Generating data motion network
+INFO: [SDSoC 0-0] Analyzing hardware accelerators...
+INFO: [SDSoC 0-0] Analyzing callers to hardware accelerators...
+INFO: [SDSoC 0-0] Scheduling data transfer graph for partition 0
+INFO: [SDSoC 0-0] Creating data motion network hardware for partition 0
+INFO: [SDSoC 0-0] Creating software stub functions for partition 0
+INFO: [SDSoC 0-0] Generating data motion network report for partition 0
+INFO: [SDSoC 0-0] Rewriting caller code
+INFO: [SDSoC 0-0] Rewrite /home/trungnguyen/SDSoC/tutorial/tut_workspace/matrix_mult_lab1/src/main.cpp
+INFO: [SDSoC 0-0] Create accelerator stub functions
+INFO: [SDSoC 0-0] Creating block diagram (BD), address map, port information and device registration for partition 0 (this may take a few minutes)
+system_linker started at Mon Oct 24 05:29:48 PM CEST 2016
+INFO: [SDSoC 0-0] Creating hardware project files
+INFO: [SDSoC 0-0] Creating Vivado block design
+INFO: [SDSoC 0-0] Creating block diagram (BD) and address map
+INFO: [SDSoC 0-0] Copying address map
+INFO: [SDSoC 0-0] Creating port and device registration data
+/opt/Xilinx/SDSoC/2014.4/bin/cf2sw -i apsys_0.xml -r /home/trungnguyen/SDSoC/tutorial/tut_workspace/matrix_mult_lab1/SDRelease/_sds/.cdb/xd_ip_db.xml -a address_map.xml -pollMode 0    -n
+system_linker completed at Mon Oct 24 05:30:55 PM CEST 2016
+INFO: [SDSoC 0-0] Prepare hardware access API functions
+INFO: [SDSoC 0-0] Compile hardware access API functions
+INFO: [SDSoC 0-0] Compile accelerator stub functions
+INFO: [SDSoC 0-0] Compile rewritten caller functions
+caller rewrite for /home/trungnguyen/SDSoC/tutorial/tut_workspace/matrix_mult_lab1/SDRelease/src/main.o
+INFO: [SDSoC 0-0] Link application ELF file
+INFO: [SDSoC 0-0] Enable generation of hardware programming files
+INFO: [SDSoC 0-0] Enable generation of boot files
+INFO: [SDSoC 0-0] Calling system_linker for partition 0
+system_linker started at Mon Oct 24 05:30:57 PM CEST 2016
+INFO: [SDSoC 0-0] Generating bitstream for platform zed.
+      This may take some time to complete
+... [17:31:17] Starting synth_design
+... [17:31:22] Starting RTL Elaboration : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 1067.043 ; gain = 233.555 ; free physical = 12152 ; free virtual = 21974
+... [17:39:02] Start Loading Part and Timing Information
+... [17:39:02] Start Applying 'set_property' XDC Constraints
+... [17:39:22] Start RTL Component Statistics 
+... [17:39:22] Start RTL Hierarchical Component Statistics 
+... [17:39:22] Start Part Resource Summary
+... [17:39:32] Start Cross Boundary Optimization
+... [17:39:42] Start Area Optimization
+... [17:39:57] Start Timing Optimization
+... [17:40:07] Start Applying XDC Timing Constraints
+... [17:40:22] Start Technology Mapping
+... [17:41:22] Start IO Insertion
+... [17:41:22] Start Flattening Before IO Insertion
+... [17:41:22] Start Final Netlist Cleanup
+... [17:41:22] Start Renaming Generated Instances
+... [17:41:27] Start Rebuilding User Hierarchy
+... [17:41:37] Start Writing Synthesis Report
+... [17:42:19] Starting DRC Task
+... [17:42:29] Starting Logic Optimization Task
+... [17:42:39] Starting Power Optimization Task
+... [17:42:49] Starting PowerOpt Patch Enables Task
+... [17:42:59] Starting Placer Task
+... [17:44:34] Starting Routing Task
+INFO: [SDSoC 0-0] Creating boot files
+system_linker completed at Mon Oct 24 05:46:15 PM CEST 2016
+All user specified timing constraints are met.
+sds++ log file saved as /home/trungnguyen/SDSoC/tutorial/tut_workspace/matrix_mult_lab1/SDRelease/_sds/reports/sds.log
+
+Finished building target: matrix_mult_lab1.elf
+ 
+
+17:46:15 Build Finished (took 17m:45s.975ms)
+

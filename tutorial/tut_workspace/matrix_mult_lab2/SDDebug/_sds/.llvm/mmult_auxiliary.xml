@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xd:acceleratorMap xmlns:xd="http://www.xilinx.com/xd" xd:functionName="mmult" xd:componentRef="mmult" xd:initiationInterval="3372" xd:clockPeriod="5.950000" xd:sequential="true" xd:hostMachine="64">
+  <xd:controlReg xd:name="control" xd:interfaceRef="ap_ctrl" xd:busTypeRef="acc_handshake" xd:type="acc_handshake"/>
+  <xd:arg xd:name="in_A[]" xd:originalName="in_A" xd:direction="in" xd:interfaceRef="in_A" xd:busTypeRef="acc_fifo" xd:arraySize="1024" xd:dataWidth="32"/>
+  <xd:arg xd:name="in_B[]" xd:originalName="in_B" xd:direction="in" xd:interfaceRef="in_B" xd:busTypeRef="acc_fifo" xd:arraySize="1024" xd:dataWidth="32"/>
+  <xd:arg xd:name="out_C[]" xd:originalName="out_C" xd:direction="out" xd:interfaceRef="out_C" xd:busTypeRef="acc_fifo" xd:arraySize="1024" xd:dataWidth="32"/>
+  <xd:latencyEstimates xd:best-case="3371" xd:worst-case="3371" xd:average-case="3371"/>
+  <xd:resourceEstimates xd:LUT="24959" xd:FF="19747" xd:BRAM="64" xd:DSP="160"/>
+</xd:acceleratorMap>

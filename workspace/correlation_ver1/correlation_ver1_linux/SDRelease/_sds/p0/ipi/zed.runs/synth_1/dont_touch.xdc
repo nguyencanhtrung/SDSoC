@@ -87,7 +87,7 @@ set_property DONT_TOUCH TRUE [get_cells [split [join [get_cells -hier -filter {R
 
 # XDC: bd/zed/ip/zed_proc_sys_reset_0_3/zed_proc_sys_reset_0_3_ooc.xdc
 
-# XDC: ipshared/xilinx.com/correlation_accel_v1_v1_0/668ad6fa/constraints/correlation_accel_v1_ooc.xdc
+# XDC: ipshared/xilinx.com/correlation_accel_v1_v1_0/98fd237d/constraints/correlation_accel_v1_ooc.xdc
 
 # XDC: bd/zed/ip/zed_correlation_accel_v1_0_if_0/zed_correlation_accel_v1_0_if_0_ooc.xdc
 

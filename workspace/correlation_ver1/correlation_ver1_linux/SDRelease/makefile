@@ -41,7 +41,7 @@ all: correlation_ver1_linux.elf
 correlation_ver1_linux.elf: $(OBJS)  $(USER_OBJS)
 	@echo 'Building target: $@'
 	@echo 'Invoking: SDS++ Linux Linker'
-	sds++  -o "correlation_ver1_linux.elf" $(OBJS) $(USER_OBJS) $(LIBS) -sds-pf zed -dmclkid 2 
+	sds++  -o "correlation_ver1_linux.elf" $(OBJS) $(USER_OBJS) $(LIBS) -sds-pf zed
 	@echo 'Finished building target: $@'
 	@echo ' '
 

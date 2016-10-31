@@ -1,6 +1,6 @@
 
 set TopModule "correlation_accel_v1"
-set ClockPeriod "8.500000"
+set ClockPeriod "5.950000"
 set ClockList {ap_clk}
 set multiClockList {}
 set PortClockMap {}

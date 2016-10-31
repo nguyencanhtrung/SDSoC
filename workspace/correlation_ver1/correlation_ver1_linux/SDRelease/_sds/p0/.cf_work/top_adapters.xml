@@ -16,8 +16,8 @@
     <cf:port cf:name="out_correlation" cf:portType="stream" cf:direction="out"/>
     <cf:port cf:name="ap_return" cf:portType="stream" cf:direction="in"/>
   </cf:block>
-  <cf:comp cf:name="zed" xd:componentRef="zed" xd:clockId="2" xd:processor="ARM-A9"/>
-  <cf:comp cf:name="correlation_accel_v1_0" xd:componentRef="correlation_accel_v1" xd:clockId="2" xd:deviceId="-3" xd:libraryName="axis_acc_adapter">
+  <cf:comp cf:name="zed" xd:componentRef="zed" xd:clockId="1" xd:processor="ARM-A9"/>
+  <cf:comp cf:name="correlation_accel_v1_0" xd:componentRef="correlation_accel_v1" xd:clockId="1" xd:deviceId="-3" xd:libraryName="axis_acc_adapter">
     <cf:port cf:name="ap_rst_n" cf:portType="reset" cf:mode="slave" cf:direction="in"/>
     <cf:port cf:name="ap_clk" cf:portType="clock" cf:mode="slave" cf:direction="in"/>
     <cf:port cf:name="ap_ctrl" cf:portType="acc_handshake" cf:mode="slave" cf:direction="inout"/>
@@ -28,7 +28,7 @@
     <cf:port cf:name="in_indices" cf:portType="register" cf:mode="slave" cf:direction="in"/>
     <cf:port cf:name="out_correlation" cf:portType="register" cf:mode="slave" cf:direction="in"/>
   </cf:comp>
-  <cf:comp cf:name="correlation_accel_v1_0_if" xd:componentRef="correlation_accel_v1_if" xd:clockId="2" xd:deviceId="-3">
+  <cf:comp cf:name="correlation_accel_v1_0_if" xd:componentRef="correlation_accel_v1_if" xd:clockId="1" xd:deviceId="-3">
     <cf:parameter cf:name="C_OUTPUT_SCALAR_0_WIDTH" cf:value="32"/>
     <cf:parameter cf:name="C_INPUT_SCALAR_0_WIDTH" cf:value="32"/>
     <cf:parameter cf:name="C_INPUT_SCALAR_1_WIDTH" cf:value="32"/>

@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vivado HLS Report for 'correlation_accel_v1'" level="0">
-<item name = "Date">Mon Oct 31 19:50:15 2016
+<item name = "Date">Mon Oct 31 20:07:38 2016
 </item>
 <item name = "Version">2014.4 (Build 1071461 on Tue Nov 18 16:42:57 PM 2014)</item>
 <item name = "Project">correlation_accel_v1</item>
@@ -15,7 +15,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="4">Clock, Target, Estimated, Uncertainty</keys>
-<column name="default">8.50, 9.65, 1.06</column>
+<column name="default">5.95, 6.34, 0.74</column>
 </table>
 </item>
 </section>
@@ -35,14 +35,14 @@
 </item>
 <item name = "Loop"><table name="" hasTotal="0">
 <keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
-<column name="- INIT_WEIGHT_ROM">1250, 1250, 5, -, -, 250, no</column>
-<column name="- COMP_SUM_OF_WEIGHT">0, 17179869160, 8, -, -, 0 ~ 2147483645, no</column>
+<column name="- INIT_WEIGHT_ROM">1500, 1500, 6, -, -, 250, no</column>
+<column name="- COMP_SUM_OF_WEIGHT">0, 25769803740, 12, -, -, 0 ~ 2147483645, no</column>
 <column name="- OUTER_LOOP">?, ?, ?, -, -, ?, no</column>
 <column name=" + memcpy.correlation_accel_v1(int, int, float*, float*)::bramA.in_indices">0, 1073741824, 3, 1, 1, 0 ~ 1073741823, yes</column>
 <column name=" + INNER_LOOP">?, ?, ?, -, -, ?, no</column>
 <column name="  ++ memcpy.correlation_accel_v1(int, int, float*, float*)::bramB.in_indices">0, 1073741824, 3, 1, 1, 0 ~ 1073741823, yes</column>
-<column name="  ++ ACCUMULATION_LOOP">?, ?, 44, 1, 1, ?, yes</column>
-<column name="  ++ LAST_ACCUM_LOOP">34, 34, 10, 5, 5, 6, yes</column>
+<column name="  ++ ACCUMULATION_LOOP">?, ?, 71, 2, 1, ?, yes</column>
+<column name="  ++ LAST_ACCUM_LOOP">61, 61, 17, 9, 5, 6, yes</column>
 </table>
 </item>
 </section>

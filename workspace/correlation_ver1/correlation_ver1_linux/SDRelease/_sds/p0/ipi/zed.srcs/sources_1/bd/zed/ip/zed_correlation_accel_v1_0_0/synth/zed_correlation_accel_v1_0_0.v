@@ -48,11 +48,11 @@
 
 
 // IP VLNV: xilinx.com:hls:correlation_accel_v1:1.0
-// IP Revision: 1610311950
+// IP Revision: 1610312007
 
 (* X_CORE_INFO = "correlation_accel_v1,Vivado 2014.4" *)
 (* CHECK_LICENSE_TYPE = "zed_correlation_accel_v1_0_0,correlation_accel_v1,{}" *)
-(* CORE_GENERATION_INFO = "zed_correlation_accel_v1_0_0,correlation_accel_v1,{x_ipProduct=Vivado 2014.4,x_ipVendor=xilinx.com,x_ipLibrary=hls,x_ipName=correlation_accel_v1,x_ipVersion=1.0,x_ipCoreRevision=1610311950,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,C_M_AXI_GMEM32_ID_WIDTH=1,C_M_AXI_GMEM32_ADDR_WIDTH=32,C_M_AXI_GMEM32_DATA_WIDTH=32,C_M_AXI_GMEM32_AWUSER_WIDTH=1,C_M_AXI_GMEM32_ARUSER_WIDTH=1,C_M_AXI_GMEM32_WUSER_WIDTH=1,C_M_AXI_GMEM32_RUSER_WIDTH=1,C_M_AXI_GMEM32_BUSER_WIDTH=1,C_M_AXI_GMEM32_USER_VALUE=0x00000000,C_M_AXI_GMEM32_PROT_VALUE=000,C_M_AXI_GMEM32_CACHE_VALUE=0011}" *)
+(* CORE_GENERATION_INFO = "zed_correlation_accel_v1_0_0,correlation_accel_v1,{x_ipProduct=Vivado 2014.4,x_ipVendor=xilinx.com,x_ipLibrary=hls,x_ipName=correlation_accel_v1,x_ipVersion=1.0,x_ipCoreRevision=1610312007,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,C_M_AXI_GMEM32_ID_WIDTH=1,C_M_AXI_GMEM32_ADDR_WIDTH=32,C_M_AXI_GMEM32_DATA_WIDTH=32,C_M_AXI_GMEM32_AWUSER_WIDTH=1,C_M_AXI_GMEM32_ARUSER_WIDTH=1,C_M_AXI_GMEM32_WUSER_WIDTH=1,C_M_AXI_GMEM32_RUSER_WIDTH=1,C_M_AXI_GMEM32_BUSER_WIDTH=1,C_M_AXI_GMEM32_USER_VALUE=0x00000000,C_M_AXI_GMEM32_PROT_VALUE=000,C_M_AXI_GMEM32_CACHE_VALUE=0011}" *)
 (* DowngradeIPIdentifiedWarnings = "yes" *)
 module zed_correlation_accel_v1_0_0 (
   ap_clk,

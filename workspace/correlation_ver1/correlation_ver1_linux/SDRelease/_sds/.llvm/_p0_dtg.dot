@@ -6,7 +6,7 @@ v3 [label = "v3:XFER(IN):in_indices @340, ARRAY\nCPU\nAXIMM(mm2s) on AFI(PS to A
 v4 [label = "v4:call 'correlation_accel_v1' in 'main.cpp' @340\nACC\n" ,style=filled,fillcolor = red];
 v5 [label = "v5:XFER(OUT):v_return @340, SCALAR\nAXILITE(s2mm) on GP(PS to ACC)\n" ,style=filled,fillcolor = yellow];
 v6 [label = "v6:XFER(OUT):out_correlation @340, ARRAY\nCPU\nAXIMM(s2mm) on AFI(ACC to PS)\n" ,style=filled,fillcolor = yellow];
-v7 [label = "v7:cf_wait(): \nXFER(OUT):out_correlation @340, ARRAY\nCPU\nAXIMM(s2mm) on AFI(ACC to PS)\nXFER(IN):in_indices @340, ARRAY\nCPU\nAXIMM(mm2s) on AFI(PS to ACC)\nXFER(IN):number_of_days @340, SCALAR\nAXILITE(mm2s) on GP(PS to ACC)\nXFER(IN):number_of_indices @340, SCALAR\nAXILITE(mm2s) on GP(PS to ACC)\nXFER(OUT):v_return @340, SCALAR\nAXILITE(s2mm) on GP(PS to ACC)\n\nCPU\nCPU\nCPU\nCPU\nCPU\n" ,style=filled,fillcolor = cyan];
+v7 [label = "v7:cf_wait(): \nXFER(IN):in_indices @340, ARRAY\nCPU\nAXIMM(mm2s) on AFI(PS to ACC)\nXFER(IN):number_of_days @340, SCALAR\nAXILITE(mm2s) on GP(PS to ACC)\nXFER(IN):number_of_indices @340, SCALAR\nAXILITE(mm2s) on GP(PS to ACC)\nXFER(OUT):out_correlation @340, ARRAY\nCPU\nAXIMM(s2mm) on AFI(ACC to PS)\nXFER(OUT):v_return @340, SCALAR\nAXILITE(s2mm) on GP(PS to ACC)\n\nCPU\nCPU\nCPU\nCPU\nCPU\n" ,style=filled,fillcolor = cyan];
 subgraph cluster0 {
 v1;
 v2;

@@ -356,10 +356,11 @@ int main(int argc, char* argv[])
      /************************************************************
      *      Step 4: Compare results                             *
      *----------------------------------------------------------*/
+    int number_of_result = number_of_indices * (number_of_indices - 1) / 2;
     bool status;
     status = checkResult(  correlation_buff, correlation_sw,
-    				number_of_days_per_index,
-    				(float)ALLOW_ERR_THRES);
+    						number_of_result,
+    						(float)ALLOW_ERR_THRES);
     return 0;
 }
 

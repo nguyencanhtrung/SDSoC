@@ -1,5 +1,5 @@
 SW(2)@350\n   call void @_Z18correlation_goldenPfiiS_(float* %2, i32 %22, i32 252, float* %6), !dbg !133165
-SW(3)@359\n   %23 = call zeroext i1 @_ZL11checkResultPfS_if(float* %4, float* %6, i32 252, float 0x3EE4F8B580000000), !dbg !133166
+SW(3)@360\n   %27 = call zeroext i1 @_ZL11checkResultPfS_if(float* %4, float* %6, i32 %26, float 0x3EE4F8B580000000), !dbg !133169
 SW(4)@0\n   %number_of_indices = alloca i32, align 4
 SW(5)@308\n   call void @llvm.dbg.value(metadata !{i32 %argc}, i64 0, metadata !133128), !dbg !133129
 SW(6)@308\n   call void @llvm.dbg.value(metadata !{i8** %argv}, i64 0, metadata !133130), !dbg !133131
@@ -57,7 +57,13 @@ SW(57)@332\n   call void @llvm.dbg.value(metadata !{i32* %number_of_indices}, i6
 SW(58)@350\n   %22 = load i32* %number_of_indices, align 4, !dbg !133165
 SW(59)@313\n   call void @llvm.dbg.value(metadata !{null}, i64 0, metadata !133133), !dbg !133134
 SW(60)@324\n   call void @llvm.dbg.value(metadata !{null}, i64 0, metadata !133145), !dbg !133146
-SW(61)@319\n   call void @llvm.dbg.value(metadata !{null}, i64 0, metadata !133142), !dbg !133143
-SW(62)@324\n   call void @llvm.dbg.value(metadata !{null}, i64 0, metadata !133145), !dbg !133146
-SW(63)@313\n   call void @llvm.dbg.value(metadata !{null}, i64 0, metadata !133133), !dbg !133134
-SW(64)@362\n   ret i32 0, !dbg !133167
+SW(61)@332\n   call void @llvm.dbg.value(metadata !{i32* %number_of_indices}, i64 0, metadata !133150), !dbg !133151
+SW(62)@358\n   %23 = load i32* %number_of_indices, align 4, !dbg !133166
+SW(63)@332\n   call void @llvm.dbg.value(metadata !{i32* %number_of_indices}, i64 0, metadata !133150), !dbg !133151
+SW(64)@358\n   %24 = add nsw i32 %23, -1, !dbg !133166
+SW(65)@358\n   %25 = mul nsw i32 %23, %24, !dbg !133166
+SW(66)@358\n   %26 = sdiv i32 %25, 2, !dbg !133166
+SW(67)@358\n   call void @llvm.dbg.value(metadata !{i32 %26}, i64 0, metadata !133167), !dbg !133168
+SW(68)@319\n   call void @llvm.dbg.value(metadata !{null}, i64 0, metadata !133142), !dbg !133143
+SW(69)@324\n   call void @llvm.dbg.value(metadata !{null}, i64 0, metadata !133145), !dbg !133146
+SW(70)@363\n   ret i32 0, !dbg !133170

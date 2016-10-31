@@ -1,7 +1,7 @@
 (c) Copyright 2012-2015 Xilinx, Inc. All Rights Reserved.
 #-----------------------------------------------------------
 # Tool version  : sds++ 2014.4 20150228
-# Start time    : Mon Oct 31 04:13:16 PM CET 2016
+# Start time    : Mon Oct 31 04:52:32 PM CET 2016
 # Command line  : sds++ -o correlation_ver1_linux.elf ./src/correlation_accel_v1.o ./src/main.o -sds-pf zed
 # Log file      : /home/trungnguyen/SDSoC/workspace/correlation_ver1/correlation_ver1_linux/SDRelease/_sds/reports/sds.log
 # Journal file  : /home/trungnguyen/SDSoC/workspace/correlation_ver1/correlation_ver1_linux/SDRelease/_sds/reports/sds.jou

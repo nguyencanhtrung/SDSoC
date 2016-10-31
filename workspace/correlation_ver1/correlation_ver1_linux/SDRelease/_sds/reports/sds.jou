@@ -1,7 +1,7 @@
 (c) Copyright 2012-2015 Xilinx, Inc. All Rights Reserved.
 #-----------------------------------------------------------
 # Tool version  : sds++ 2014.4 20150228
-# Start time    : Mon Oct 31 04:13:16 PM CET 2016
+# Start time    : Mon Oct 31 04:52:32 PM CET 2016
 # Command line  : sds++ -o correlation_ver1_linux.elf ./src/correlation_accel_v1.o ./src/main.o -sds-pf zed
 # Log file      : /home/trungnguyen/SDSoC/workspace/correlation_ver1/correlation_ver1_linux/SDRelease/_sds/reports/sds.log
 # Journal file  : /home/trungnguyen/SDSoC/workspace/correlation_ver1/correlation_ver1_linux/SDRelease/_sds/reports/sds.jou
@@ -28,13 +28,11 @@ cd /home/trungnguyen/SDSoC/workspace/correlation_ver1/correlation_ver1_linux/SDR
 cd /home/trungnguyen/SDSoC/workspace/correlation_ver1/correlation_ver1_linux/SDRelease/_sds/swstubs
 stub_gen  -func correlation_accel_v1  -stub /home/trungnguyen/SDSoC/workspace/correlation_ver1/correlation_ver1_linux/SDRelease/_sds/.llvm/correlation_accel_v1.cfrewrite  -o /home/trungnguyen/SDSoC/workspace/correlation_ver1/correlation_ver1_linux/SDRelease/_sds/swstubs/correlation_accel_v1.cpp  /home/trungnguyen/SDSoC/workspace/correlation_ver1/correlation_ver1_linux/src/correlation_accel_v1.cpp  --  -c  -target arm-xilinx-linux-gnueabi -mcpu=cortex-a9 -O0 -g -w   -I/opt/Xilinx/SDSoC/2014.4/SDK/2014.4/gnu/arm/lin/arm-xilinx-linux-gnueabi/include/c++/4.8.3  -I/opt/Xilinx/SDSoC/2014.4/SDK/2014.4/gnu/arm/lin/arm-xilinx-linux-gnueabi/include/c++/4.8.3/arm-xilinx-linux-gnueabi  -I/opt/Xilinx/SDSoC/2014.4/SDK/2014.4/gnu/arm/lin/arm-xilinx-linux-gnueabi/include/c++/4.8.3/backward   -I/opt/Xilinx/SDSoC/2014.4/SDK/2014.4/gnu/arm/lin/lib/gcc/arm-xilinx-linux-gnueabi/4.8.3/include  -I/opt/Xilinx/SDSoC/2014.4/SDK/2014.4/gnu/arm/lin/lib/gcc/arm-xilinx-linux-gnueabi/4.8.3/include-fixed  -I/opt/Xilinx/SDSoC/2014.4/SDK/2014.4/gnu/arm/lin/arm-xilinx-linux-gnueabi/include  -I/opt/Xilinx/SDSoC/2014.4/SDK/2014.4/gnu/arm/lin/arm-xilinx-linux-gnueabi/libc/usr/include  -I /opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/include  -I /opt/Xilinx/SDSoC/2014.4/arm-xilinx-linux-gnueabi/include    -I/home/trungnguyen/SDSoC/workspace/correlation_ver1/correlation_ver1_linux/src -I/home/trungnguyen/SDSoC/workspace/correlation_ver1/correlation_ver1_linux/src -Wall -O3 -fmessage-length=0 -MMD -MP -D __SDSCC__
 cd /home/trungnguyen/SDSoC/workspace/correlation_ver1/correlation_ver1_linux/SDRelease
-# INFO: [SDSoC 0-0] Removing implementation files from previous run /home/trungnguyen/SDSoC/workspace/correlation_ver1/correlation_ver1_linux/SDRelease/_sds/p0/ipi
 xsltproc  -o /home/trungnguyen/SDSoC/workspace/correlation_ver1/correlation_ver1_linux/SDRelease/_sds/p0/ipi/apsys_acc_info.xml  --stringparam P_XD_IP_REPOS /home/trungnguyen/SDSoC/workspace/correlation_ver1/correlation_ver1_linux/SDRelease/_sds/.cdb/xd_ip_db.xml  /opt/Xilinx/SDSoC/2014.4/scripts/xsd/genAdapterPackagedIpInfo.xsl 
          /home/trungnguyen/SDSoC/workspace/correlation_ver1/correlation_ver1_linux/SDRelease/_sds/.llvm/apsys_0.xml
 cd /home/trungnguyen/SDSoC/workspace/correlation_ver1/correlation_ver1_linux/SDRelease
 cd /home/trungnguyen/SDSoC/workspace/correlation_ver1/correlation_ver1_linux/SDRelease
-# INFO: [SDSoC 0-0] Creating block diagram (BD), address map, port information and device registration for partition 0 (this may take a few minutes)
-system_linker -cf-input /home/trungnguyen/SDSoC/workspace/correlation_ver1/correlation_ver1_linux/SDRelease/_sds/.llvm/apsys_0.xml -cf-output-dir _sds/p0 -ip-db /home/trungnguyen/SDSoC/workspace/correlation_ver1/correlation_ver1_linux/SDRelease/_sds/.cdb/xd_ip_db.xml -ip-repo /home/trungnguyen/SDSoC/workspace/correlation_ver1/correlation_ver1_linux/SDRelease/_sds/iprepo/repo -sds-pf /opt/Xilinx/SDSoC/2014.4/platforms/zed:linux -software-only   -sdsoc
+# INFO: [SDSoC 0-0] Skipping block diagram (BD), address map, port information and device registration for partition 0
 # INFO: [SDSoC 0-0] Prepare hardware access API functions
 cd /home/trungnguyen/SDSoC/workspace/correlation_ver1/correlation_ver1_linux/SDRelease
 cd /home/trungnguyen/SDSoC/workspace/correlation_ver1/correlation_ver1_linux/SDRelease
@@ -62,6 +60,6 @@ cd /home/trungnguyen/SDSoC/workspace/correlation_ver1/correlation_ver1_linux/SDR
 # INFO: [SDSoC 0-0] Enable generation of hardware programming files
 # INFO: [SDSoC 0-0] Enable generation of boot files
 # INFO: [SDSoC 0-0] Calling system_linker for partition 0
-system_linker -cf-input /home/trungnguyen/SDSoC/workspace/correlation_ver1/correlation_ver1_linux/SDRelease/_sds/.llvm/apsys_0.xml -cf-output-dir _sds/p0 -ip-db /home/trungnguyen/SDSoC/workspace/correlation_ver1/correlation_ver1_linux/SDRelease/_sds/.cdb/xd_ip_db.xml -ip-repo /home/trungnguyen/SDSoC/workspace/correlation_ver1/correlation_ver1_linux/SDRelease/_sds/iprepo/repo -sds-pf /opt/Xilinx/SDSoC/2014.4/platforms/zed:linux -bitstream -bit-name correlation_ver1_linux.elf.bit -boot-files   -mdev-no-swgen -mdev-no-xsd -sdsoc -sd-output-dir _sds/p0/sd_card -bit-binary -elf /home/trungnguyen/SDSoC/workspace/correlation_ver1/correlation_ver1_linux/SDRelease/_sds/swstubs/correlation_ver1_linux.elf
+system_linker -cf-input /home/trungnguyen/SDSoC/workspace/correlation_ver1/correlation_ver1_linux/SDRelease/_sds/.llvm/apsys_0.xml -cf-output-dir _sds/p0 -ip-db /home/trungnguyen/SDSoC/workspace/correlation_ver1/correlation_ver1_linux/SDRelease/_sds/.cdb/xd_ip_db.xml -ip-repo /home/trungnguyen/SDSoC/workspace/correlation_ver1/correlation_ver1_linux/SDRelease/_sds/iprepo/repo -sds-pf /opt/Xilinx/SDSoC/2014.4/platforms/zed:linux   -bit-name correlation_ver1_linux.elf.bit -boot-files   -mdev-no-swgen -mdev-no-xsd -sdsoc -sd-output-dir _sds/p0/sd_card -bit-binary -elf /home/trungnguyen/SDSoC/workspace/correlation_ver1/correlation_ver1_linux/SDRelease/_sds/swstubs/correlation_ver1_linux.elf
 # All user specified timing constraints are met.
-# sds++ completed at Mon Oct 31 04:20:36 PM CET 2016
+# sds++ completed at Mon Oct 31 04:53:09 PM CET 2016

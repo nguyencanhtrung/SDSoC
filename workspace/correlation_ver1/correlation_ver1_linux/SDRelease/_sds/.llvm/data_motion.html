@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    table, th, td
+    {
+      border-collapse:collapse;
+      border:1px solid black;
+    }
+    th, td
+    {
+      padding:5px;
+    }
+    p
+    {
+      font-size:200%
+    }
+  </style>
+</head>
+<body>
+<p>Partition 0</p>
+<table>
+<caption><b><font size="5">Data Motion Network</font></b></caption>
+<tr>
+<th>Accelerator</th>
+<th>Argument</th>
+<th>IP Port</th>
+<th>Direction</th>
+<th>Declared Size(bytes)</th>
+<th>Pragmas</th>
+<th>Connection</th>
+</tr>
+<tr>
+<td>correlation_accel_v1_0</td>
+<td>number_of_days</td>
+<td>number_of_days</td>
+<td>IN</td>
+<td>4</td>
+<td><ul>
+</ul>
+</td>
+<td>M_AXI_GP0:AXILITE:0x80</td>
+</tr>
+<td></td>
+<td>number_of_indices</td>
+<td>number_of_indices</td>
+<td>IN</td>
+<td>4</td>
+<td><ul>
+</ul>
+</td>
+<td>M_AXI_GP0:AXILITE:0x84</td>
+</tr>
+<td></td>
+<td>in_indices</td>
+<td>in_indices</td>
+<td>IN</td>
+<td>2520000*4</td>
+<td><ul>
+<li>sys_port:AFI</li>
+</ul>
+</td>
+<td>S_AXI_HP0:AXIMM:0x88</td>
+</tr>
+<td></td>
+<td>out_correlation</td>
+<td>out_correlation</td>
+<td>OUT</td>
+<td>49995000*4</td>
+<td><ul>
+<li>sys_port:AFI</li>
+</ul>
+</td>
+<td>S_AXI_HP0:AXIMM:0x8C</td>
+</tr>
+<td></td>
+<td>return</td>
+<td>ap_return</td>
+<td>OUT</td>
+<td>4</td>
+<td><ul>
+</ul>
+</td>
+<td>M_AXI_GP0:AXILITE:0xC0</td>
+</tr>
+</table>
+
+<table>
+<caption><b><font size="5">Accelerator Callsites</font></b></caption>
+<tr>
+<th>Accelerator</th>
+<th>Callsite</th>
+<th>IP Port</th>
+<th>Transfer Size(bytes)</th>
+<th>Paged or Contiguous</th>
+<th>Cacheable or Non-cacheable</th>
+</tr>
+<tr>
+<td>correlation_accel_v1_0</td>
+<td>main.cpp:340:9</td>
+<td>number_of_days</td>
+<td>4</td>
+<td>paged</td>
+<td>cacheable</td>
+</tr>
+<td></td>
+<td></td>
+<td>number_of_indices</td>
+<td>4</td>
+<td>paged</td>
+<td>cacheable</td>
+</tr>
+<td></td>
+<td></td>
+<td>in_indices</td>
+<td>2520000 * 4</td>
+<td>paged</td>
+<td>cacheable</td>
+</tr>
+<td></td>
+<td></td>
+<td>out_correlation</td>
+<td>49995000 * 4</td>
+<td>paged</td>
+<td>cacheable</td>
+</tr>
+<td></td>
+<td></td>
+<td>ap_return</td>
+<td>4</td>
+<td>paged</td>
+<td>cacheable</td>
+</tr>
+</table>
+</body>
+</html>

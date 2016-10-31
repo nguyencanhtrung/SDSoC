@@ -20,14 +20,14 @@ CPP_DEPS += \
 src/correlation_accel_v1.o: ../src/correlation_accel_v1.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: SDS++ Linux Compiler'
-	sds++ -Wall -O3 -I"../src" -c -fmessage-length=0 -MT"$@" -sds-hw correlation_accel_v1 correlation_accel_v1.cpp -sds-end -MMD -MP -MF"$(@:%.o=%.d)" -MT"src/correlation_accel_v1.d" -o "$@" "$<" -sds-pf zed
+	sds++ -Wall -O3 -I"../src" -c -fmessage-length=0 -MT"$@" -sds-hw correlation_accel_v1 correlation_accel_v1.cpp -clkid 2 -sds-end -dmclkid 2  -MMD -MP -MF"$(@:%.o=%.d)" -MT"src/correlation_accel_v1.d" -o "$@" "$<" -sds-pf zed
 	@echo 'Finished building: $<'
 	@echo ' '
 
 src/%.o: ../src/%.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: SDS++ Linux Compiler'
-	sds++ -Wall -O3 -I"../src" -c -fmessage-length=0 -MT"$@" -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<" -sds-pf zed
+	sds++ -Wall -O3 -I"../src" -c -fmessage-length=0 -MT"$@" -dmclkid 2 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<" -sds-pf zed
 	@echo 'Finished building: $<'
 	@echo ' '
 

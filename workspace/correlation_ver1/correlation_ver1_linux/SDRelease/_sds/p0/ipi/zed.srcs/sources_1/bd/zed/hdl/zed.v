@@ -1,7 +1,7 @@
 //Copyright 1986-2014 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2014.4 (lin64) Build 1071353 Tue Nov 18 16:48:31 MST 2014
-//Date        : Mon Oct 31 17:17:05 2016
+//Date        : Mon Oct 31 19:51:00 2016
 //Host        : verratnix.zmk.uni-kl.de running 64-bit CentOS release 6.7 (Final)
 //Command     : generate_target zed.bd
 //Design      : zed
@@ -1188,8 +1188,8 @@ module zed
   wire correlation_accel_v1_0_m_axi_gmem32_WREADY;
   wire [3:0]correlation_accel_v1_0_m_axi_gmem32_WSTRB;
   wire correlation_accel_v1_0_m_axi_gmem32_WVALID;
-  wire [0:0]proc_sys_reset_1_interconnect_aresetn;
-  wire [0:0]proc_sys_reset_1_peripheral_aresetn;
+  wire [0:0]proc_sys_reset_2_interconnect_aresetn;
+  wire [0:0]proc_sys_reset_2_peripheral_aresetn;
   wire [31:0]ps7_M_AXI_GP0_ARADDR;
   wire [1:0]ps7_M_AXI_GP0_ARBURST;
   wire [3:0]ps7_M_AXI_GP0_ARCACHE;
@@ -1258,10 +1258,10 @@ GND GND
 VCC VCC
        (.P(VCC_1));
 zed_axi_interconnect_M_AXI_GP0_0 axi_interconnect_M_AXI_GP0
-       (.ACLK(clkid1),
-        .ARESETN(proc_sys_reset_1_interconnect_aresetn),
-        .M00_ACLK(clkid1),
-        .M00_ARESETN(proc_sys_reset_1_interconnect_aresetn),
+       (.ACLK(clkid2),
+        .ARESETN(proc_sys_reset_2_interconnect_aresetn),
+        .M00_ACLK(clkid2),
+        .M00_ARESETN(proc_sys_reset_2_interconnect_aresetn),
         .M00_AXI_araddr(axi_interconnect_M_AXI_GP0_M00_AXI_ARADDR),
         .M00_AXI_arready(axi_interconnect_M_AXI_GP0_M00_AXI_ARREADY),
         .M00_AXI_arvalid(axi_interconnect_M_AXI_GP0_M00_AXI_ARVALID),
@@ -1279,8 +1279,8 @@ zed_axi_interconnect_M_AXI_GP0_0 axi_interconnect_M_AXI_GP0
         .M00_AXI_wready(axi_interconnect_M_AXI_GP0_M00_AXI_WREADY),
         .M00_AXI_wstrb(axi_interconnect_M_AXI_GP0_M00_AXI_WSTRB),
         .M00_AXI_wvalid(axi_interconnect_M_AXI_GP0_M00_AXI_WVALID),
-        .S00_ACLK(clkid1),
-        .S00_ARESETN(proc_sys_reset_1_interconnect_aresetn),
+        .S00_ACLK(clkid2),
+        .S00_ARESETN(proc_sys_reset_2_interconnect_aresetn),
         .S00_AXI_araddr(ps7_M_AXI_GP0_ARADDR),
         .S00_AXI_arburst(ps7_M_AXI_GP0_ARBURST),
         .S00_AXI_arcache(ps7_M_AXI_GP0_ARCACHE),
@@ -1320,10 +1320,10 @@ zed_axi_interconnect_M_AXI_GP0_0 axi_interconnect_M_AXI_GP0
         .S00_AXI_wstrb(ps7_M_AXI_GP0_WSTRB),
         .S00_AXI_wvalid(ps7_M_AXI_GP0_WVALID));
 zed_axi_interconnect_S_AXI_HP0_0 axi_interconnect_S_AXI_HP0
-       (.ACLK(clkid1),
-        .ARESETN(proc_sys_reset_1_interconnect_aresetn),
-        .M00_ACLK(clkid1),
-        .M00_ARESETN(proc_sys_reset_1_interconnect_aresetn),
+       (.ACLK(clkid2),
+        .ARESETN(proc_sys_reset_2_interconnect_aresetn),
+        .M00_ACLK(clkid2),
+        .M00_ARESETN(proc_sys_reset_2_interconnect_aresetn),
         .M00_AXI_araddr(axi_interconnect_S_AXI_HP0_M00_AXI_ARADDR),
         .M00_AXI_arburst(axi_interconnect_S_AXI_HP0_M00_AXI_ARBURST),
         .M00_AXI_arcache(axi_interconnect_S_AXI_HP0_M00_AXI_ARCACHE),
@@ -1357,8 +1357,8 @@ zed_axi_interconnect_S_AXI_HP0_0 axi_interconnect_S_AXI_HP0
         .M00_AXI_wready(axi_interconnect_S_AXI_HP0_M00_AXI_WREADY),
         .M00_AXI_wstrb(axi_interconnect_S_AXI_HP0_M00_AXI_WSTRB),
         .M00_AXI_wvalid(axi_interconnect_S_AXI_HP0_M00_AXI_WVALID),
-        .S00_ACLK(clkid1),
-        .S00_ARESETN(proc_sys_reset_1_interconnect_aresetn),
+        .S00_ACLK(clkid2),
+        .S00_ARESETN(proc_sys_reset_2_interconnect_aresetn),
         .S00_AXI_araddr(correlation_accel_v1_0_m_axi_gmem32_ARADDR),
         .S00_AXI_arburst(correlation_accel_v1_0_m_axi_gmem32_ARBURST),
         .S00_AXI_arcache(correlation_accel_v1_0_m_axi_gmem32_ARCACHE),
@@ -1399,7 +1399,7 @@ zed_axi_interconnect_S_AXI_HP0_0 axi_interconnect_S_AXI_HP0
         .S00_AXI_wstrb(correlation_accel_v1_0_m_axi_gmem32_WSTRB),
         .S00_AXI_wvalid(correlation_accel_v1_0_m_axi_gmem32_WVALID));
 zed_correlation_accel_v1_0_0 correlation_accel_v1_0
-       (.ap_clk(clkid1),
+       (.ap_clk(clkid2),
         .ap_done(correlation_accel_v1_0_if_AP_CTRL_done),
         .ap_idle(correlation_accel_v1_0_if_AP_CTRL_idle),
         .ap_ready(correlation_accel_v1_0_if_AP_CTRL_ready),
@@ -1450,7 +1450,7 @@ zed_correlation_accel_v1_0_0 correlation_accel_v1_0
         .number_of_indices(correlation_accel_v1_0_if_ap_iscalar_1_dout),
         .out_correlation(correlation_accel_v1_0_if_ap_iscalar_3_dout));
 zed_correlation_accel_v1_0_if_0 correlation_accel_v1_0_if
-       (.aclk(clkid1),
+       (.aclk(clkid2),
         .ap_done(correlation_accel_v1_0_if_AP_CTRL_done),
         .ap_idle(correlation_accel_v1_0_if_AP_CTRL_idle),
         .ap_iscalar_0_dout(correlation_accel_v1_0_if_ap_iscalar_0_dout),
@@ -1461,9 +1461,9 @@ zed_correlation_accel_v1_0_if_0 correlation_accel_v1_0_if
         .ap_ready(correlation_accel_v1_0_if_AP_CTRL_ready),
         .ap_start(correlation_accel_v1_0_if_AP_CTRL_start),
         .aresetn(correlation_accel_v1_0_if_aresetn),
-        .s_axi_aclk(clkid1),
+        .s_axi_aclk(clkid2),
         .s_axi_araddr(axi_interconnect_M_AXI_GP0_M00_AXI_ARADDR),
-        .s_axi_aresetn(proc_sys_reset_1_peripheral_aresetn),
+        .s_axi_aresetn(proc_sys_reset_2_peripheral_aresetn),
         .s_axi_arready(axi_interconnect_M_AXI_GP0_M00_AXI_ARREADY),
         .s_axi_arvalid(axi_interconnect_M_AXI_GP0_M00_AXI_ARVALID),
         .s_axi_awaddr(axi_interconnect_M_AXI_GP0_M00_AXI_AWADDR),
@@ -1490,15 +1490,15 @@ zed_proc_sys_reset_1_0 proc_sys_reset_1
        (.aux_reset_in(VCC_1),
         .dcm_locked(VCC_1),
         .ext_reset_in(ps7_fclk_reset0_n),
-        .interconnect_aresetn(proc_sys_reset_1_interconnect_aresetn),
         .mb_debug_sys_rst(GND_1),
-        .peripheral_aresetn(proc_sys_reset_1_peripheral_aresetn),
         .slowest_sync_clk(clkid1));
 zed_proc_sys_reset_2_1 proc_sys_reset_2
        (.aux_reset_in(VCC_1),
         .dcm_locked(VCC_1),
         .ext_reset_in(ps7_fclk_reset0_n),
+        .interconnect_aresetn(proc_sys_reset_2_interconnect_aresetn),
         .mb_debug_sys_rst(GND_1),
+        .peripheral_aresetn(proc_sys_reset_2_peripheral_aresetn),
         .slowest_sync_clk(clkid2));
 zed_proc_sys_reset_3_2 proc_sys_reset_3
        (.aux_reset_in(VCC_1),
@@ -1531,7 +1531,7 @@ zed_ps7_0 ps7
         .FCLK_RESET0_N(ps7_fclk_reset0_n),
         .IRQ_F2P(xlconcat_1_dout),
         .MIO(FIXED_IO_mio[53:0]),
-        .M_AXI_GP0_ACLK(clkid1),
+        .M_AXI_GP0_ACLK(clkid2),
         .M_AXI_GP0_ARADDR(ps7_M_AXI_GP0_ARADDR),
         .M_AXI_GP0_ARBURST(ps7_M_AXI_GP0_ARBURST),
         .M_AXI_GP0_ARCACHE(ps7_M_AXI_GP0_ARCACHE),
@@ -1573,7 +1573,7 @@ zed_ps7_0 ps7
         .PS_CLK(FIXED_IO_ps_clk),
         .PS_PORB(FIXED_IO_ps_porb),
         .PS_SRSTB(FIXED_IO_ps_srstb),
-        .S_AXI_HP0_ACLK(clkid1),
+        .S_AXI_HP0_ACLK(clkid2),
         .S_AXI_HP0_ARADDR(axi_interconnect_S_AXI_HP0_M00_AXI_ARADDR),
         .S_AXI_HP0_ARBURST(axi_interconnect_S_AXI_HP0_M00_AXI_ARBURST),
         .S_AXI_HP0_ARCACHE(axi_interconnect_S_AXI_HP0_M00_AXI_ARCACHE),

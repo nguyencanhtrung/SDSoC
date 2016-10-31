@@ -6,7 +6,7 @@
 <Project Version="7" Minor="2" Path="/home/trungnguyen/SDSoC/workspace/correlation_ver1/correlation_ver1_linux/SDRelease/_sds/vhls/correlation_accel_v1/solution/impl/vhdl/project.xpr">
   <DefaultLaunch Dir="$PRUNDIR"/>
   <Configuration>
-    <Option Name="Id" Val="f6d93c612ee14d6682b44d6f9a6a6b43"/>
+    <Option Name="Id" Val="1abf47fff53541ed9c0463c4298be13d"/>
     <Option Name="Part" Val="xc7z020clg484-1"/>
     <Option Name="CompiledLibDir" Val="$PCACHEDIR/compile_simlib"/>
     <Option Name="TargetLanguage" Val="VHDL"/>
@@ -35,19 +35,13 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/correlation_accel_v1_faddfsub_32ns_32ns_32_9_full_dsp.vhd">
+      <File Path="$PPRDIR/correlation_accel_v1_faddfsub_32ns_32ns_32_5_full_dsp.vhd">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/correlation_accel_v1_bramB.vhd">
-        <FileInfo>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PPRDIR/correlation_accel_v1_fmul_32ns_32ns_32_5_max_dsp.vhd">
+      <File Path="$PPRDIR/correlation_accel_v1_fmul_32ns_32ns_32_4_max_dsp.vhd">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
@@ -59,25 +53,25 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/correlation_accel_v1_mul_32s_32s_32_7.vhd">
+      <File Path="$PPRDIR/correlation_accel_v1_fdiv_32ns_32ns_32_16.vhd">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/correlation_accel_v1_sitofp_32s_32_8.vhd">
+      <File Path="$PPRDIR/correlation_accel_v1_flog_32ns_32ns_32_13_full_dsp.vhd">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/correlation_accel_v1_acc_returnB.vhd">
+      <File Path="$PPRDIR/correlation_accel_v1_mul_32s_32s_32_6.vhd">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/correlation_accel_v1_fadd_32ns_32ns_32_9_full_dsp.vhd">
+      <File Path="$PPRDIR/correlation_accel_v1_sitofp_32s_32_6.vhd">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
@@ -95,67 +89,61 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/correlation_accel_v1_fsqrt_32ns_32ns_32_28.vhd">
+      <File Path="$PPRDIR/correlation_accel_v1_fadd_32ns_32ns_32_5_full_dsp.vhd">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/correlation_accel_v1_fdiv_32ns_32ns_32_30.vhd">
+      <File Path="$PPRDIR/correlation_accel_v1_fsqrt_32ns_32ns_32_16.vhd">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/correlation_accel_v1_flog_32ns_32ns_32_18_full_dsp.vhd">
-        <FileInfo>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PSRCDIR/sources_1/ip/correlation_accel_v1_ap_sitofp_6_no_dsp_32/correlation_accel_v1_ap_sitofp_6_no_dsp_32.xci">
+      <File Path="$PSRCDIR/sources_1/ip/correlation_accel_v1_ap_fadd_3_full_dsp_32/correlation_accel_v1_ap_fadd_3_full_dsp_32.xci">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/ip/correlation_accel_v1_ap_fdiv_28_no_dsp_32/correlation_accel_v1_ap_fdiv_28_no_dsp_32.xci">
+      <File Path="$PSRCDIR/sources_1/ip/correlation_accel_v1_ap_sitofp_4_no_dsp_32/correlation_accel_v1_ap_sitofp_4_no_dsp_32.xci">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/ip/correlation_accel_v1_ap_faddfsub_7_full_dsp_32/correlation_accel_v1_ap_faddfsub_7_full_dsp_32.xci">
+      <File Path="$PSRCDIR/sources_1/ip/correlation_accel_v1_ap_faddfsub_3_full_dsp_32/correlation_accel_v1_ap_faddfsub_3_full_dsp_32.xci">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/ip/correlation_accel_v1_ap_fsqrt_26_no_dsp_32/correlation_accel_v1_ap_fsqrt_26_no_dsp_32.xci">
+      <File Path="$PSRCDIR/sources_1/ip/correlation_accel_v1_ap_fdiv_14_no_dsp_32/correlation_accel_v1_ap_fdiv_14_no_dsp_32.xci">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/ip/correlation_accel_v1_ap_fmul_3_max_dsp_32/correlation_accel_v1_ap_fmul_3_max_dsp_32.xci">
+      <File Path="$PSRCDIR/sources_1/ip/correlation_accel_v1_ap_flog_11_full_dsp_32/correlation_accel_v1_ap_flog_11_full_dsp_32.xci">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/ip/correlation_accel_v1_ap_fadd_7_full_dsp_32/correlation_accel_v1_ap_fadd_7_full_dsp_32.xci">
+      <File Path="$PSRCDIR/sources_1/ip/correlation_accel_v1_ap_fsqrt_14_no_dsp_32/correlation_accel_v1_ap_fsqrt_14_no_dsp_32.xci">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/ip/correlation_accel_v1_ap_flog_16_full_dsp_32/correlation_accel_v1_ap_flog_16_full_dsp_32.xci">
+      <File Path="$PSRCDIR/sources_1/ip/correlation_accel_v1_ap_fmul_2_max_dsp_32/correlation_accel_v1_ap_fmul_2_max_dsp_32.xci">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>

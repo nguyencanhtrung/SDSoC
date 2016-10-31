@@ -26,6 +26,8 @@
  * -----------------------------------------------------------------------*/
  #include <stdio.h>
  #include <stdlib.h>
+ #include <stdint.h>		/*< For uint32_t */
+ #include <cmath>			/*< Math lib for C-simulation */
 
  #include "correlation_accel_v1.hpp"
 #include "cf_extra.h"
@@ -33,6 +35,11 @@
 /*-----------------------------------
  * API for Timing       			*
  * ---------------------------------*/
+#define COUNT_PER_SECOND 667000000
+
+#define TIME_STAMP_INIT  unsigned long long clock_start, clock_end;  clock_start = sds_clock_counter();
+#define TIME_STAMP_SW  { clock_end = sds_clock_counter(); printf("Time in second for golden version: %llf \n", (float)(clock_end-clock_start)/(float)COUNT_PER_SECOND); }
+#define TIME_STAMP_ACCEL  { clock_end = sds_clock_counter(); printf("Time in second for hardware version: %llf \n", (float)(clock_end-clock_start)/(float)COUNT_PER_SECOND); clock_start = sds_clock_counter();  }
 /*************************************************************************
 *                               HELPER FUNCTIONS                         *
 **************************************************************************/
@@ -289,9 +296,10 @@ static bool checkResult(   float *hw_result, float *sw_result,
         float sw_result_temp = sw_result[i];
         float hw_result_temp = hw_result[i];
 
-        printf("hw: %.6f - sw: %.6f\r\n", hw_result_temp, sw_result_temp);
+
         if(abs( sw_result_temp - hw_result_temp) > allowErrorThreshold) {
             ++errorCount_in;
+            printf("%d:  hw: %.6f - sw: %.6f\r\n", i, hw_result_temp, sw_result_temp);
 
         }
     }
@@ -337,6 +345,7 @@ int main(int argc, char* argv[])
     /************************************************************
 	*	 	Step 2: Hardware computation       					*
 	*----------------------------------------------------------*/
+    TIME_STAMP_INIT;
     //for(int i = number_of_indices; i > 1; --i){
         _p0_correlation_accel_v1_0( 
                                 number_of_days_per_index,   /* CPU in*/
@@ -345,6 +354,7 @@ int main(int argc, char* argv[])
                                 correlation_buff        	/* Output*/
         );
     //}
+    TIME_STAMP_ACCEL;
 	/************************************************************
 	 *		Step 3: Software computation					  	*
 	 *----------------------------------------------------------*/
@@ -352,7 +362,7 @@ int main(int argc, char* argv[])
                             number_of_indices,
                             number_of_days_per_index,
                             correlation_sw);
-
+    TIME_STAMP_SW;
      /************************************************************
      *      Step 4: Compare results                             *
      *----------------------------------------------------------*/

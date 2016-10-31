@@ -13,7 +13,7 @@
         <library value="xilinx/zynq/zynq_fpv6" name="DefaultPlatform"/>
     </libraryList>
     <clockList>
-        <clock name="default" period="5.95" default="false"/>
+        <clock name="default" period="8.5" default="false"/>
     </clockList>
     <config>
         <config_rtl reset_level="low"/>

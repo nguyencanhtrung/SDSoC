@@ -25,13 +25,16 @@
 /*-------------------------- Libraries -----------------------------*/
 /*==================================================================*/
 #include "hls_stream.h"
-#include "hls_math.h"		/*< Math lib for synthesize - Co-Sim */
-#include <cmath>			/*< Math lib for C-simulation */
 #include "math.h"
+//#ifdef __SDSVHLS__
+//#include "hls_math.h"		/*< Math lib for synthesize*/
+//#else
+//// The hls_math.h file inclides hdl_fpo.h which contains actual code and
+//// will cause linker error in the ARM compiler hence we add the function
+//// prototypes here
+//extern float sqrtf(float x);
+//#endif
 
-#include <iostream>
-#include <fstream>			/*< Stream class to both read and write
-								* from/to files*/
 #include <string.h>
 #include <stdlib.h>			/*< atof */
 #include <stdio.h>

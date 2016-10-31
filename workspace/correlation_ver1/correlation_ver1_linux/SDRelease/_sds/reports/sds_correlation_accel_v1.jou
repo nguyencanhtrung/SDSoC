@@ -1,7 +1,7 @@
 (c) Copyright 2012-2015 Xilinx, Inc. All Rights Reserved.
 #-----------------------------------------------------------
 # Tool version  : sds++ 2014.4 20150228
-# Start time    : Mon Oct 31 04:12:10 PM CET 2016
+# Start time    : Mon Oct 31 05:15:07 PM CET 2016
 # Command line  : sds++ -Wall -O3 -I../src -c -fmessage-length=0 -MTsrc/correlation_accel_v1.o -sds-hw correlation_accel_v1 correlation_accel_v1.cpp -sds-end -MMD -MP -MFsrc/correlation_accel_v1.d -MTsrc/correlation_accel_v1.d -o src/correlation_accel_v1.o ../src/correlation_accel_v1.cpp -sds-pf zed
 # Log file      : /home/trungnguyen/SDSoC/workspace/correlation_ver1/correlation_ver1_linux/SDRelease/_sds/reports/sds_correlation_accel_v1.log
 # Journal file  : /home/trungnguyen/SDSoC/workspace/correlation_ver1/correlation_ver1_linux/SDRelease/_sds/reports/sds_correlation_accel_v1.jou
@@ -38,4 +38,4 @@ arm-xilinx-linux-gnueabi-objcopy --add-section .xdpp=/home/trungnguyen/SDSoC/wor
 arm-xilinx-linux-gnueabi-objcopy --add-section .xdfcnmap=/home/trungnguyen/SDSoC/workspace/correlation_ver1/correlation_ver1_linux/SDRelease/_sds/.llvm/correlation_accel_v1.fcnmap.xml /home/trungnguyen/SDSoC/workspace/correlation_ver1/correlation_ver1_linux/SDRelease/_sds/swstubs/correlation_accel_v1.o
 arm-xilinx-linux-gnueabi-objcopy --add-section .xdhlscore=/home/trungnguyen/SDSoC/workspace/correlation_ver1/correlation_ver1_linux/SDRelease/_sds/vhls/correlation_accel_v1/solution/impl/ip/xilinx_com_hls_correlation_accel_v1_1_0.zip /home/trungnguyen/SDSoC/workspace/correlation_ver1/correlation_ver1_linux/SDRelease/_sds/swstubs/correlation_accel_v1.o
 arm-xilinx-linux-gnueabi-objcopy --add-section .xdif=/home/trungnguyen/SDSoC/workspace/correlation_ver1/correlation_ver1_linux/SDRelease/_sds/.llvm/correlation_accel_v1_if.xml /home/trungnguyen/SDSoC/workspace/correlation_ver1/correlation_ver1_linux/SDRelease/_sds/swstubs/correlation_accel_v1.o
-# sds++ completed at Mon Oct 31 04:13:15 PM CET 2016
+# sds++ completed at Mon Oct 31 05:16:12 PM CET 2016

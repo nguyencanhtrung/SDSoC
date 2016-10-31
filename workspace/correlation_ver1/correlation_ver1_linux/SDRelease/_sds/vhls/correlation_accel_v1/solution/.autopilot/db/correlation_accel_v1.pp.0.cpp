@@ -55266,7 +55266,7 @@ int correlation_accel_v1(
 
  int NUMBER_OF_DAYS = number_of_days;
  int NUMBER_OF_INDICES = number_of_indices;
-
+ int counter = 0;
  /*----------------------------------------------------------*
 	 * PART 1: WEIGHT ROOM Initialization 			    		*
 	 * ---------------------------------------------------------*/
@@ -55292,8 +55292,6 @@ int correlation_accel_v1(
      memcpy( bramB,
        &in_indices[NUMBER_OF_DAYS * column_index],
        NUMBER_OF_DAYS * sizeof(float));
-
-     static int counter = 0;
 
      // Channels to store accumulation
      float acc_returnA[6];

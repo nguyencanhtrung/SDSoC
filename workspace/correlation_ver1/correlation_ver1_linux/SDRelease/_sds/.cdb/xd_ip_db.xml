@@ -691,6 +691,6 @@
     <xd:arg xd:name="in_indices" xd:swRootName="in_indices" xd:direction="in" xd:busInterfaceRef="in_indices" xd:hwName="in_indices" xd:portInterfaceType="register" xd:aximmMasterRef="m_axi_gmem32" xd:aximmMasterDirection="in" xd:aximmMasterDataWidth="32" xd:aximmMasterArraySize="2520000" xd:dataWidth="32" xd:handshakeRef="ap_none" xd:instanceRef="correlation_accel_v1_if" xd:index="2" xd:offset="0x88" xd:bufferDepth="16"/>
     <xd:arg xd:name="out_correlation" xd:swRootName="out_correlation" xd:direction="in" xd:busInterfaceRef="out_correlation" xd:hwName="out_correlation" xd:portInterfaceType="register" xd:aximmMasterRef="m_axi_gmem32" xd:aximmMasterDirection="out" xd:aximmMasterDataWidth="32" xd:aximmMasterArraySize="49995000" xd:dataWidth="32" xd:handshakeRef="ap_none" xd:instanceRef="correlation_accel_v1_if" xd:index="3" xd:offset="0x8C" xd:bufferDepth="16"/>
     <xd:latencyEstimates xd:best-case="undef" xd:worst-case="undef" xd:average-case="undef"/>
-    <xd:resourceEstimates xd:LUT="12846" xd:FF="12517" xd:BRAM="5" xd:DSP="37"/>
+    <xd:resourceEstimates xd:LUT="13142" xd:FF="12711" xd:BRAM="5" xd:DSP="37"/>
   </xd:fcnMap>
 </xd:repository>

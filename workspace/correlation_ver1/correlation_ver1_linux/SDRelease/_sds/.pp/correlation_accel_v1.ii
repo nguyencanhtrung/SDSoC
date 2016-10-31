@@ -51309,7 +51309,7 @@ int correlation_accel_v1(
 
  int NUMBER_OF_DAYS = number_of_days;
  int NUMBER_OF_INDICES = number_of_indices;
-
+ int counter = 0;
 
 
 
@@ -51335,8 +51335,6 @@ int correlation_accel_v1(
      memcpy( bramB,
        &in_indices[NUMBER_OF_DAYS * column_index],
        NUMBER_OF_DAYS * sizeof(float));
-
-     static int counter = 0;
 
 
      float acc_returnA[6];
@@ -51436,7 +51434,7 @@ int correlation_accel_v1(
   }
  return 0;
 }
-# 195 "/home/trungnguyen/SDSoC/workspace/correlation_ver1/correlation_ver1_linux/src/correlation_accel_v1.cpp"
+# 193 "/home/trungnguyen/SDSoC/workspace/correlation_ver1/correlation_ver1_linux/src/correlation_accel_v1.cpp"
 static void weight_rom_init(
   float weightRom[252],
   int NUMBER_OF_DAYS)

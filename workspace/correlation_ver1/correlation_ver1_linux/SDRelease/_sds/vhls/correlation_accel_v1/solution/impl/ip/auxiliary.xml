@@ -9,5 +9,5 @@
   <xd:arg xd:name="in_indices" xd:originalName="in_indices" xd:direction="in" xd:interfaceRef="in_indices" xd:busTypeRef="register" xd:aximmInterfaceRef="m_axi_gmem32" xd:dataWidth="32" xd:handshakeRef="ap_none"/>
   <xd:arg xd:name="out_correlation" xd:originalName="out_correlation" xd:direction="in" xd:interfaceRef="out_correlation" xd:busTypeRef="register" xd:aximmInterfaceRef="m_axi_gmem32" xd:dataWidth="32" xd:handshakeRef="ap_none"/>
   <xd:latencyEstimates xd:best-case="undef" xd:worst-case="undef" xd:average-case="undef"/>
-  <xd:resourceEstimates xd:LUT="12846" xd:FF="12517" xd:BRAM="5" xd:DSP="37"/>
+  <xd:resourceEstimates xd:LUT="13142" xd:FF="12711" xd:BRAM="5" xd:DSP="37"/>
 </xd:acceleratorMap>

@@ -9,15 +9,15 @@
 <ProductFamily>zynq</ProductFamily>
 <Part>xc7z020clg484-1</Part>
 <TopModelName>correlation_accel_v1</TopModelName>
-<TargetClockPeriod>5.95</TargetClockPeriod>
-<ClockUncertainty>0.74</ClockUncertainty>
+<TargetClockPeriod>8.50</TargetClockPeriod>
+<ClockUncertainty>1.06</ClockUncertainty>
 </UserAssignments>
 
 <PerformanceEstimates>
 <PipelineType>none</PipelineType>
 <SummaryOfTimingAnalysis>
 <unit>ns</unit>
-<EstimatedClockPeriod>6.34</EstimatedClockPeriod>
+<EstimatedClockPeriod>9.65</EstimatedClockPeriod>
 </SummaryOfTimingAnalysis>
 <SummaryOfOverallLatency>
 <unit>clock cycles</unit>
@@ -30,8 +30,8 @@
 <SummaryOfLoopLatency>
 <INIT_WEIGHT_ROM>
 <TripCount>250</TripCount>
-<Latency>1500</Latency>
-<IterationLatency>6</IterationLatency>
+<Latency>1250</Latency>
+<IterationLatency>5</IterationLatency>
 </INIT_WEIGHT_ROM>
 <COMP_SUM_OF_WEIGHT>
 <TripCount>
@@ -43,10 +43,10 @@
 <Latency>
 <range>
 <min>0</min>
-<max>25769803740</max>
+<max>17179869160</max>
 </range>
 </Latency>
-<IterationLatency>12</IterationLatency>
+<IterationLatency>8</IterationLatency>
 </COMP_SUM_OF_WEIGHT>
 <OUTER_LOOP>
 <TripCount>undef</TripCount>
@@ -91,14 +91,14 @@
 <ACCUMULATION_LOOP>
 <TripCount>undef</TripCount>
 <Latency>undef</Latency>
-<PipelineII>2</PipelineII>
-<PipelineDepth>71</PipelineDepth>
+<PipelineII>1</PipelineII>
+<PipelineDepth>44</PipelineDepth>
 </ACCUMULATION_LOOP>
 <LAST_ACCUM_LOOP>
 <TripCount>6</TripCount>
-<Latency>61</Latency>
-<PipelineII>9</PipelineII>
-<PipelineDepth>17</PipelineDepth>
+<Latency>34</Latency>
+<PipelineII>5</PipelineII>
+<PipelineDepth>10</PipelineDepth>
 </LAST_ACCUM_LOOP>
 </INNER_LOOP>
 </OUTER_LOOP>
@@ -107,10 +107,10 @@
 
 <AreaEstimates>
 <Resources>
-<BRAM_18K>5</BRAM_18K>
-<DSP48E>37</DSP48E>
-<FF>12711</FF>
-<LUT>13142</LUT>
+<BRAM_18K>6</BRAM_18K>
+<DSP48E>68</DSP48E>
+<FF>11473</FF>
+<LUT>15424</LUT>
 <SLICE>0</SLICE>
 </Resources>
 <AvailableResources>

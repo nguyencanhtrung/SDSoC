@@ -2,15 +2,15 @@
 # Vivado v2014.4 (64-bit)
 # SW Build 1071353 on Tue Nov 18 16:48:31 MST 2014
 # IP Build 1071914 on Wed Nov 19 05:30:59 MST 2014
-# Start of session at: Mon Oct 31 20:12:32 2016
-# Process ID: 1890
+# Start of session at: Mon Oct 31 20:42:57 2016
+# Process ID: 16507
 # Log file: /home/trungnguyen/SDSoC/workspace/correlation_ver1/correlation_ver1_linux/SDRelease/_sds/p0/ipi/zed.runs/impl_1/zed_wrapper.vdi
 # Journal file: /home/trungnguyen/SDSoC/workspace/correlation_ver1/correlation_ver1_linux/SDRelease/_sds/p0/ipi/zed.runs/impl_1/vivado.jou
 #-----------------------------------------------------------
 source zed_wrapper.tcl -notrace
 Design is defaulting to srcset: sources_1
 Design is defaulting to constrset: constrs_1
-INFO: [Netlist 29-17] Analyzing 1438 Unisim elements for replacement
+INFO: [Netlist 29-17] Analyzing 1567 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-479] Netlist was created with Vivado 2014.4
 Loading clock regions from /opt/Xilinx/SDSoC/2014.4/Vivado/2014.4/data/parts/xilinx/zynq/zynq/xc7z020/ClockRegion.xml
@@ -64,7 +64,7 @@ INFO: [Project 1-111] Unisim Transformation Summary:
   RAM64M => RAM64M (RAMD64E, RAMD64E, RAMD64E, RAMD64E): 8 instances
   RAM64X1D => RAM64X1D (RAMD64E, RAMD64E): 8 instances
 
-link_design: Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 1268.211 ; gain = 345.988 ; free physical = 10749 ; free virtual = 21984
+link_design: Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 1278.219 ; gain = 355.988 ; free physical = 10178 ; free virtual = 21978
 Command: opt_design
 Attempting to get a license for feature 'Implementation' and/or device 'xc7z020'
 INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7z020'
@@ -75,42 +75,45 @@ INFO: [Drc 23-27] Running DRC with 8 threads
 INFO: [Project 1-461] DRC finished with 0 Errors
 INFO: [Project 1-462] Please refer to the DRC report (report_drc) for more information.
 
-Time (s): cpu = 00:00:00.18 ; elapsed = 00:00:00.17 . Memory (MB): peak = 1280.238 ; gain = 12.027 ; free physical = 10745 ; free virtual = 21980
+Time (s): cpu = 00:00:00.18 ; elapsed = 00:00:00.17 . Memory (MB): peak = 1289.246 ; gain = 11.027 ; free physical = 10174 ; free virtual = 21974
 INFO: [Timing 38-35] Done setting XDC timing constraints.
 
 Starting Logic Optimization Task
 
 Phase 1 Retarget
-INFO: [Opt 31-138] Pushed 2 inverter(s) to 48 load pin(s).
+INFO: [Opt 31-138] Pushed 3 inverter(s) to 49 load pin(s).
 INFO: [Opt 31-49] Retargeted 0 cell(s).
-Phase 1 Retarget | Checksum: 107d6d05a
+Phase 1 Retarget | Checksum: 1bb3fc0f0
 
-Time (s): cpu = 00:00:00.98 ; elapsed = 00:00:00.98 . Memory (MB): peak = 1798.754 ; gain = 0.000 ; free physical = 10364 ; free virtual = 21599
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 1820.762 ; gain = 0.000 ; free physical = 9782 ; free virtual = 21582
 
 Phase 2 Constant Propagation
 INFO: [Opt 31-138] Pushed 7 inverter(s) to 9 load pin(s).
-INFO: [Opt 31-10] Eliminated 881 cells.
-Phase 2 Constant Propagation | Checksum: db4a27de
+INFO: [Opt 31-10] Eliminated 845 cells.
+Phase 2 Constant Propagation | Checksum: fc7a8516
 
-Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1798.754 ; gain = 0.000 ; free physical = 10363 ; free virtual = 21597
+Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1820.762 ; gain = 0.000 ; free physical = 9781 ; free virtual = 21581
 
 Phase 3 Sweep
-WARNING: [Opt 31-6] Deleting driverless net: zed_i/correlation_accel_v1_0/inst/correlation_accel_v1_fadd_32ns_32ns_32_9_full_dsp_U3/correlation_accel_v1_ap_fadd_7_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.ALIGN_ADD/ZERO_14_DET.ZERO_DET/CARRY_OUT.
-WARNING: [Opt 31-6] Deleting driverless net: zed_i/correlation_accel_v1_0/inst/correlation_accel_v1_fadd_32ns_32ns_32_9_full_dsp_U4/correlation_accel_v1_ap_fadd_7_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.ALIGN_ADD/ZERO_14_DET.ZERO_DET/CARRY_OUT.
-WARNING: [Opt 31-6] Deleting driverless net: zed_i/correlation_accel_v1_0/inst/correlation_accel_v1_faddfsub_32ns_32ns_32_9_full_dsp_U1/correlation_accel_v1_ap_faddfsub_7_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.ALIGN_ADD/ZERO_14_DET.ZERO_DET/CARRY_OUT.
-WARNING: [Opt 31-6] Deleting driverless net: zed_i/correlation_accel_v1_0/inst/correlation_accel_v1_faddfsub_32ns_32ns_32_9_full_dsp_U2/correlation_accel_v1_ap_faddfsub_7_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.ALIGN_ADD/ZERO_14_DET.ZERO_DET/CARRY_OUT.
-INFO: [Opt 31-12] Eliminated 8214 unconnected nets.
+WARNING: [Opt 31-6] Deleting driverless net: zed_i/correlation_accel_v1_0/inst/correlation_accel_v1_fadd_32ns_32ns_32_5_full_dsp_U3/correlation_accel_v1_ap_fadd_3_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.ALIGN_ADD/ZERO_14_DET.ZERO_DET/CARRY_OUT.
+WARNING: [Opt 31-6] Deleting driverless net: zed_i/correlation_accel_v1_0/inst/correlation_accel_v1_fadd_32ns_32ns_32_5_full_dsp_U4/correlation_accel_v1_ap_fadd_3_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.ALIGN_ADD/ZERO_14_DET.ZERO_DET/CARRY_OUT.
+WARNING: [Opt 31-6] Deleting driverless net: zed_i/correlation_accel_v1_0/inst/correlation_accel_v1_fadd_32ns_32ns_32_5_full_dsp_U5/correlation_accel_v1_ap_fadd_3_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.ALIGN_ADD/ZERO_14_DET.ZERO_DET/CARRY_OUT.
+WARNING: [Opt 31-6] Deleting driverless net: zed_i/correlation_accel_v1_0/inst/correlation_accel_v1_fadd_32ns_32ns_32_5_full_dsp_U6/correlation_accel_v1_ap_fadd_3_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.ALIGN_ADD/ZERO_14_DET.ZERO_DET/CARRY_OUT.
+WARNING: [Opt 31-6] Deleting driverless net: zed_i/correlation_accel_v1_0/inst/correlation_accel_v1_fadd_32ns_32ns_32_5_full_dsp_U7/correlation_accel_v1_ap_fadd_3_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.ALIGN_ADD/ZERO_14_DET.ZERO_DET/CARRY_OUT.
+WARNING: [Opt 31-6] Deleting driverless net: zed_i/correlation_accel_v1_0/inst/correlation_accel_v1_faddfsub_32ns_32ns_32_5_full_dsp_U1/correlation_accel_v1_ap_faddfsub_3_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.ALIGN_ADD/ZERO_14_DET.ZERO_DET/CARRY_OUT.
+WARNING: [Opt 31-6] Deleting driverless net: zed_i/correlation_accel_v1_0/inst/correlation_accel_v1_faddfsub_32ns_32ns_32_5_full_dsp_U2/correlation_accel_v1_ap_faddfsub_3_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.ALIGN_ADD/ZERO_14_DET.ZERO_DET/CARRY_OUT.
+INFO: [Opt 31-12] Eliminated 11101 unconnected nets.
 INFO: [Opt 31-140] Inserted 0 IBUFs to IO ports without IO buffers.
 INFO: [Opt 31-141] Inserted 0 OBUFs to IO ports without IO buffers.
-INFO: [Opt 31-11] Eliminated 1335 unconnected cells.
-Phase 3 Sweep | Checksum: ed5dfe10
+INFO: [Opt 31-11] Eliminated 1310 unconnected cells.
+Phase 3 Sweep | Checksum: 1c93376b9
 
-Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 1798.754 ; gain = 0.000 ; free physical = 10363 ; free virtual = 21597
-Ending Logic Optimization Task | Checksum: ed5dfe10
+Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1820.762 ; gain = 0.000 ; free physical = 9781 ; free virtual = 21581
+Ending Logic Optimization Task | Checksum: 1c93376b9
 
-Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 1798.754 ; gain = 0.000 ; free physical = 10363 ; free virtual = 21597
-Implement Debug Cores | Checksum: 125ca9631
-Logic Optimization | Checksum: 125ca9631
+Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1820.762 ; gain = 0.000 ; free physical = 9781 ; free virtual = 21581
+Implement Debug Cores | Checksum: 14bbb7567
+Logic Optimization | Checksum: 14bbb7567
 
 Starting Power Optimization Task
 INFO: [Pwropt 34-132] Skipping clock gating for clocks with a period < 3.12 ns.
@@ -119,24 +122,24 @@ INFO: [Pwropt 34-10] Applying ODC optimizations ...
 
 
 Starting PowerOpt Patch Enables Task
-INFO: [Pwropt 34-162] WRITE_MODE attribute of 0 BRAM(s) out of a total of 15 has been updated to save power. Run report_power_opt to get a complete listing of the BRAMs updated.
+INFO: [Pwropt 34-162] WRITE_MODE attribute of 0 BRAM(s) out of a total of 17 has been updated to save power. Run report_power_opt to get a complete listing of the BRAMs updated.
 INFO: [Pwropt 34-201] Structural ODC has moved 0 WE to EN ports
-Number of BRAM Ports augmented: 4 newly gated: 0 Total Ports: 30
-Ending PowerOpt Patch Enables Task | Checksum: 153a85f9a
+Number of BRAM Ports augmented: 4 newly gated: 0 Total Ports: 34
+Ending PowerOpt Patch Enables Task | Checksum: 1bb373b31
 
-Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.02 . Memory (MB): peak = 1854.863 ; gain = 0.000 ; free physical = 10264 ; free virtual = 21499
-Ending Power Optimization Task | Checksum: 153a85f9a
+Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.02 . Memory (MB): peak = 1867.785 ; gain = 0.000 ; free physical = 9739 ; free virtual = 21539
+Ending Power Optimization Task | Checksum: 1bb373b31
 
-Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1854.863 ; gain = 56.109 ; free physical = 10264 ; free virtual = 21499
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1867.785 ; gain = 47.023 ; free physical = 9739 ; free virtual = 21539
 INFO: [Common 17-83] Releasing license: Implementation
-27 Infos, 14 Warnings, 0 Critical Warnings and 0 Errors encountered.
+27 Infos, 17 Warnings, 0 Critical Warnings and 0 Errors encountered.
 opt_design completed successfully
-opt_design: Time (s): cpu = 00:00:19 ; elapsed = 00:00:18 . Memory (MB): peak = 1854.863 ; gain = 586.652 ; free physical = 10264 ; free virtual = 21499
+opt_design: Time (s): cpu = 00:00:19 ; elapsed = 00:00:17 . Memory (MB): peak = 1867.785 ; gain = 589.566 ; free physical = 9739 ; free virtual = 21539
 Writing placer database...
 Writing XDEF routing.
 Writing XDEF routing logical nets.
 Writing XDEF routing special nets.
-Write XDEF Complete: Time (s): cpu = 00:00:00.05 ; elapsed = 00:00:00.02 . Memory (MB): peak = 1874.871 ; gain = 0.000 ; free physical = 10263 ; free virtual = 21499
+Write XDEF Complete: Time (s): cpu = 00:00:00.05 ; elapsed = 00:00:00.02 . Memory (MB): peak = 1887.793 ; gain = 0.000 ; free physical = 9737 ; free virtual = 21539
 INFO: [Drc 23-27] Running DRC with 8 threads
 INFO: [Coretcl 2-168] The results of DRC are in file /home/trungnguyen/SDSoC/workspace/correlation_ver1/correlation_ver1_linux/SDRelease/_sds/p0/ipi/zed.runs/impl_1/zed_wrapper_drc_opted.rpt.
 Command: place_design
@@ -154,25 +157,25 @@ Starting Placer Task
 INFO: [Place 30-611] Multithreading enabled for place_design using a maximum of 8 CPUs
 
 Phase 1 Placer Runtime Estimator
-Phase 1 Placer Runtime Estimator | Checksum: 12db0959f
+Phase 1 Placer Runtime Estimator | Checksum: 1012ed99d
 
-Time (s): cpu = 00:00:00.18 ; elapsed = 00:00:00.19 . Memory (MB): peak = 1874.875 ; gain = 0.000 ; free physical = 10257 ; free virtual = 21495
+Time (s): cpu = 00:00:00.18 ; elapsed = 00:00:00.18 . Memory (MB): peak = 1887.797 ; gain = 0.000 ; free physical = 9732 ; free virtual = 21536
 
 Phase 2 Placer Initialization
 
 Phase 2.1 Placer Initialization Core
-Netlist sorting complete. Time (s): cpu = 00:00:00.04 ; elapsed = 00:00:00.05 . Memory (MB): peak = 1874.875 ; gain = 0.000 ; free physical = 10257 ; free virtual = 21495
+Netlist sorting complete. Time (s): cpu = 00:00:00.05 ; elapsed = 00:00:00.05 . Memory (MB): peak = 1887.797 ; gain = 0.000 ; free physical = 9732 ; free virtual = 21536
 INFO: [Opt 31-140] Inserted 0 IBUFs to IO ports without IO buffers.
 INFO: [Opt 31-141] Inserted 0 OBUFs to IO ports without IO buffers.
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00.04 ; elapsed = 00:00:00.03 . Memory (MB): peak = 1874.875 ; gain = 0.000 ; free physical = 10258 ; free virtual = 21495
+Netlist sorting complete. Time (s): cpu = 00:00:00.04 ; elapsed = 00:00:00.03 . Memory (MB): peak = 1887.797 ; gain = 0.000 ; free physical = 9732 ; free virtual = 21536
 
 Phase 2.1.1 IO Placement/ Clock Placement/ Build Placer Device
 
 Phase 2.1.1.1 Pre-Place Cells
 Phase 2.1.1.1 Pre-Place Cells | Checksum: 4589089f
 
-Time (s): cpu = 00:00:00.87 ; elapsed = 00:00:00.88 . Memory (MB): peak = 1874.875 ; gain = 0.000 ; free physical = 10258 ; free virtual = 21495
+Time (s): cpu = 00:00:00.92 ; elapsed = 00:00:00.92 . Memory (MB): peak = 1887.797 ; gain = 0.000 ; free physical = 9732 ; free virtual = 21536
 WARNING: [Constraints 18-1079] Register zed_i/axi_interconnect_S_AXI_HP0/s00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_READ.USE_SPLIT_R.read_addr_inst/USE_R_CHANNEL.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.rd_rst_asreg_reg and zed_i/axi_interconnect_S_AXI_HP0/s00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_READ.USE_SPLIT_R.read_addr_inst/USE_R_CHANNEL.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.rd_rst_asreg_d1_reg are from the same synchronizer and have the ASYNC_REG property set, but could not be placed into the same slice due to constraints or mismatched control signals on the registers.
 WARNING: [Constraints 18-1079] Register zed_i/axi_interconnect_S_AXI_HP0/s00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_READ.USE_SPLIT_R.read_addr_inst/USE_R_CHANNEL.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.wr_rst_asreg_reg and zed_i/axi_interconnect_S_AXI_HP0/s00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_READ.USE_SPLIT_R.read_addr_inst/USE_R_CHANNEL.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.wr_rst_asreg_d1_reg are from the same synchronizer and have the ASYNC_REG property set, but could not be placed into the same slice due to constraints or mismatched control signals on the registers.
 WARNING: [Constraints 18-1079] Register zed_i/axi_interconnect_S_AXI_HP0/s00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_WRITE.write_addr_inst/USE_BURSTS.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.rd_rst_asreg_reg and zed_i/axi_interconnect_S_AXI_HP0/s00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_WRITE.write_addr_inst/USE_BURSTS.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.rd_rst_asreg_d1_reg are from the same synchronizer and have the ASYNC_REG property set, but could not be placed into the same slice due to constraints or mismatched control signals on the registers.
@@ -243,197 +246,192 @@ INFO: [Timing 38-35] Done setting XDC timing constraints.
 Phase 2.1.1.2 IO & Clk Clean Up
 Phase 2.1.1.2 IO & Clk Clean Up | Checksum: 4589089f
 
-Time (s): cpu = 00:00:07 ; elapsed = 00:00:05 . Memory (MB): peak = 2024.930 ; gain = 150.055 ; free physical = 10250 ; free virtual = 21488
+Time (s): cpu = 00:00:07 ; elapsed = 00:00:05 . Memory (MB): peak = 2037.852 ; gain = 150.055 ; free physical = 9704 ; free virtual = 21508
 
 Phase 2.1.1.3 Implementation Feasibility check On IDelay
 Phase 2.1.1.3 Implementation Feasibility check On IDelay | Checksum: 4589089f
 
-Time (s): cpu = 00:00:07 ; elapsed = 00:00:05 . Memory (MB): peak = 2024.930 ; gain = 150.055 ; free physical = 10250 ; free virtual = 21488
+Time (s): cpu = 00:00:07 ; elapsed = 00:00:05 . Memory (MB): peak = 2037.852 ; gain = 150.055 ; free physical = 9704 ; free virtual = 21508
 
 Phase 2.1.1.4 Commit IO Placement
-Phase 2.1.1.4 Commit IO Placement | Checksum: 5ef13230
+Phase 2.1.1.4 Commit IO Placement | Checksum: 083459ca
 
-Time (s): cpu = 00:00:07 ; elapsed = 00:00:05 . Memory (MB): peak = 2024.930 ; gain = 150.055 ; free physical = 10250 ; free virtual = 21488
-Phase 2.1.1 IO Placement/ Clock Placement/ Build Placer Device | Checksum: 5f5b0341
+Time (s): cpu = 00:00:07 ; elapsed = 00:00:05 . Memory (MB): peak = 2037.852 ; gain = 150.055 ; free physical = 9704 ; free virtual = 21508
+Phase 2.1.1 IO Placement/ Clock Placement/ Build Placer Device | Checksum: 5beecbe4
 
-Time (s): cpu = 00:00:07 ; elapsed = 00:00:05 . Memory (MB): peak = 2024.930 ; gain = 150.055 ; free physical = 10250 ; free virtual = 21488
+Time (s): cpu = 00:00:07 ; elapsed = 00:00:05 . Memory (MB): peak = 2037.852 ; gain = 150.055 ; free physical = 9704 ; free virtual = 21508
 
 Phase 2.1.2 Build Placer Netlist Model
 
 Phase 2.1.2.1 Place Init Design
 
 Phase 2.1.2.1.1 Init Lut Pin Assignment
-Phase 2.1.2.1.1 Init Lut Pin Assignment | Checksum: c1cb545e
+Phase 2.1.2.1.1 Init Lut Pin Assignment | Checksum: afc6be55
 
-Time (s): cpu = 00:00:08 ; elapsed = 00:00:06 . Memory (MB): peak = 2024.930 ; gain = 150.055 ; free physical = 10250 ; free virtual = 21488
-Phase 2.1.2.1 Place Init Design | Checksum: 7f5efc14
+Time (s): cpu = 00:00:08 ; elapsed = 00:00:06 . Memory (MB): peak = 2037.852 ; gain = 150.055 ; free physical = 9683 ; free virtual = 21487
+Phase 2.1.2.1 Place Init Design | Checksum: d6eeaccd
 
-Time (s): cpu = 00:00:19 ; elapsed = 00:00:08 . Memory (MB): peak = 2024.930 ; gain = 150.055 ; free physical = 10250 ; free virtual = 21488
-Phase 2.1.2 Build Placer Netlist Model | Checksum: 7f5efc14
+Time (s): cpu = 00:00:21 ; elapsed = 00:00:09 . Memory (MB): peak = 2037.852 ; gain = 150.055 ; free physical = 9680 ; free virtual = 21484
+Phase 2.1.2 Build Placer Netlist Model | Checksum: d6eeaccd
 
-Time (s): cpu = 00:00:19 ; elapsed = 00:00:08 . Memory (MB): peak = 2024.930 ; gain = 150.055 ; free physical = 10250 ; free virtual = 21488
+Time (s): cpu = 00:00:21 ; elapsed = 00:00:09 . Memory (MB): peak = 2037.852 ; gain = 150.055 ; free physical = 9680 ; free virtual = 21484
 
 Phase 2.1.3 Constrain Clocks/Macros
 
 Phase 2.1.3.1 Constrain Global/Regional Clocks
-Phase 2.1.3.1 Constrain Global/Regional Clocks | Checksum: 7f5efc14
+Phase 2.1.3.1 Constrain Global/Regional Clocks | Checksum: d6eeaccd
 
-Time (s): cpu = 00:00:19 ; elapsed = 00:00:08 . Memory (MB): peak = 2024.930 ; gain = 150.055 ; free physical = 10250 ; free virtual = 21488
-Phase 2.1.3 Constrain Clocks/Macros | Checksum: 7f5efc14
+Time (s): cpu = 00:00:21 ; elapsed = 00:00:09 . Memory (MB): peak = 2037.852 ; gain = 150.055 ; free physical = 9680 ; free virtual = 21484
+Phase 2.1.3 Constrain Clocks/Macros | Checksum: d6eeaccd
 
-Time (s): cpu = 00:00:20 ; elapsed = 00:00:08 . Memory (MB): peak = 2024.930 ; gain = 150.055 ; free physical = 10250 ; free virtual = 21488
-Phase 2.1 Placer Initialization Core | Checksum: 7f5efc14
+Time (s): cpu = 00:00:21 ; elapsed = 00:00:09 . Memory (MB): peak = 2037.852 ; gain = 150.055 ; free physical = 9680 ; free virtual = 21484
+Phase 2.1 Placer Initialization Core | Checksum: d6eeaccd
 
-Time (s): cpu = 00:00:20 ; elapsed = 00:00:08 . Memory (MB): peak = 2024.930 ; gain = 150.055 ; free physical = 10250 ; free virtual = 21488
-Phase 2 Placer Initialization | Checksum: 7f5efc14
+Time (s): cpu = 00:00:21 ; elapsed = 00:00:09 . Memory (MB): peak = 2037.852 ; gain = 150.055 ; free physical = 9680 ; free virtual = 21484
+Phase 2 Placer Initialization | Checksum: d6eeaccd
 
-Time (s): cpu = 00:00:20 ; elapsed = 00:00:08 . Memory (MB): peak = 2024.930 ; gain = 150.055 ; free physical = 10250 ; free virtual = 21488
+Time (s): cpu = 00:00:21 ; elapsed = 00:00:09 . Memory (MB): peak = 2037.852 ; gain = 150.055 ; free physical = 9680 ; free virtual = 21484
 
 Phase 3 Global Placement
-Phase 3 Global Placement | Checksum: 18601b97f
+Phase 3 Global Placement | Checksum: 1401af4ab
 
-Time (s): cpu = 00:00:43 ; elapsed = 00:00:18 . Memory (MB): peak = 2070.250 ; gain = 195.375 ; free physical = 10241 ; free virtual = 21479
+Time (s): cpu = 00:00:46 ; elapsed = 00:00:19 . Memory (MB): peak = 2085.609 ; gain = 197.812 ; free physical = 9670 ; free virtual = 21473
 
 Phase 4 Detail Placement
 
 Phase 4.1 Commit Multi Column Macros
-Phase 4.1 Commit Multi Column Macros | Checksum: 18601b97f
+Phase 4.1 Commit Multi Column Macros | Checksum: 1401af4ab
 
-Time (s): cpu = 00:00:43 ; elapsed = 00:00:18 . Memory (MB): peak = 2070.250 ; gain = 195.375 ; free physical = 10241 ; free virtual = 21479
+Time (s): cpu = 00:00:46 ; elapsed = 00:00:19 . Memory (MB): peak = 2085.609 ; gain = 197.812 ; free physical = 9670 ; free virtual = 21473
 
 Phase 4.2 Commit Most Macros & LUTRAMs
-Phase 4.2 Commit Most Macros & LUTRAMs | Checksum: eaa8e3f4
+Phase 4.2 Commit Most Macros & LUTRAMs | Checksum: 135bfde65
 
-Time (s): cpu = 00:00:51 ; elapsed = 00:00:20 . Memory (MB): peak = 2070.250 ; gain = 195.375 ; free physical = 10234 ; free virtual = 21471
+Time (s): cpu = 00:00:55 ; elapsed = 00:00:22 . Memory (MB): peak = 2085.609 ; gain = 197.812 ; free physical = 9663 ; free virtual = 21466
 
 Phase 4.3 Area Swap Optimization
-Phase 4.3 Area Swap Optimization | Checksum: 194d81fe5
+Phase 4.3 Area Swap Optimization | Checksum: 1bb9b68f9
 
-Time (s): cpu = 00:00:51 ; elapsed = 00:00:21 . Memory (MB): peak = 2070.250 ; gain = 195.375 ; free physical = 10234 ; free virtual = 21471
+Time (s): cpu = 00:00:55 ; elapsed = 00:00:22 . Memory (MB): peak = 2085.609 ; gain = 197.812 ; free physical = 9663 ; free virtual = 21466
 
 Phase 4.4 updateClock Trees: DP
-Phase 4.4 updateClock Trees: DP | Checksum: 194d81fe5
+Phase 4.4 updateClock Trees: DP | Checksum: 1bb9b68f9
 
-Time (s): cpu = 00:00:51 ; elapsed = 00:00:21 . Memory (MB): peak = 2070.250 ; gain = 195.375 ; free physical = 10234 ; free virtual = 21471
+Time (s): cpu = 00:00:55 ; elapsed = 00:00:22 . Memory (MB): peak = 2085.609 ; gain = 197.812 ; free physical = 9663 ; free virtual = 21466
 
 Phase 4.5 Timing Path Optimizer
-Phase 4.5 Timing Path Optimizer | Checksum: e5ae8183
+Phase 4.5 Timing Path Optimizer | Checksum: 1b875f289
 
-Time (s): cpu = 00:00:55 ; elapsed = 00:00:22 . Memory (MB): peak = 2070.250 ; gain = 195.375 ; free physical = 10234 ; free virtual = 21472
+Time (s): cpu = 00:00:58 ; elapsed = 00:00:22 . Memory (MB): peak = 2085.609 ; gain = 197.812 ; free physical = 9662 ; free virtual = 21466
 
 Phase 4.6 Small Shape Detail Placement
 
 Phase 4.6.1 Commit Small Macros & Core Logic
 
 Phase 4.6.1.1 setBudgets
-Phase 4.6.1.1 setBudgets | Checksum: 16c8948c7
+Phase 4.6.1.1 setBudgets | Checksum: 174f22302
 
-Time (s): cpu = 00:00:55 ; elapsed = 00:00:22 . Memory (MB): peak = 2070.250 ; gain = 195.375 ; free physical = 10234 ; free virtual = 21472
+Time (s): cpu = 00:00:58 ; elapsed = 00:00:23 . Memory (MB): peak = 2085.609 ; gain = 197.812 ; free physical = 9662 ; free virtual = 21466
 
 Phase 4.6.1.2 Commit Slice Clusters
-Phase 4.6.1.2 Commit Slice Clusters | Checksum: 16717eb80
+Phase 4.6.1.2 Commit Slice Clusters | Checksum: 1289cc65d
 
-Time (s): cpu = 00:00:58 ; elapsed = 00:00:24 . Memory (MB): peak = 2070.250 ; gain = 195.375 ; free physical = 10224 ; free virtual = 21462
-Phase 4.6.1 Commit Small Macros & Core Logic | Checksum: 16717eb80
+Time (s): cpu = 00:01:01 ; elapsed = 00:00:25 . Memory (MB): peak = 2085.609 ; gain = 197.812 ; free physical = 9650 ; free virtual = 21454
+Phase 4.6.1 Commit Small Macros & Core Logic | Checksum: 1289cc65d
 
-Time (s): cpu = 00:00:58 ; elapsed = 00:00:24 . Memory (MB): peak = 2070.250 ; gain = 195.375 ; free physical = 10224 ; free virtual = 21462
+Time (s): cpu = 00:01:01 ; elapsed = 00:00:25 . Memory (MB): peak = 2085.609 ; gain = 197.812 ; free physical = 9650 ; free virtual = 21454
 
 Phase 4.6.2 Clock Restriction Legalization for Leaf Columns
-Phase 4.6.2 Clock Restriction Legalization for Leaf Columns | Checksum: 16717eb80
+Phase 4.6.2 Clock Restriction Legalization for Leaf Columns | Checksum: 1289cc65d
 
-Time (s): cpu = 00:00:58 ; elapsed = 00:00:24 . Memory (MB): peak = 2070.250 ; gain = 195.375 ; free physical = 10224 ; free virtual = 21462
+Time (s): cpu = 00:01:01 ; elapsed = 00:00:25 . Memory (MB): peak = 2085.609 ; gain = 197.812 ; free physical = 9650 ; free virtual = 21454
 
 Phase 4.6.3 Clock Restriction Legalization for Non-Clock Pins
-Phase 4.6.3 Clock Restriction Legalization for Non-Clock Pins | Checksum: 16717eb80
+Phase 4.6.3 Clock Restriction Legalization for Non-Clock Pins | Checksum: 1289cc65d
 
-Time (s): cpu = 00:00:58 ; elapsed = 00:00:24 . Memory (MB): peak = 2070.250 ; gain = 195.375 ; free physical = 10224 ; free virtual = 21462
-Phase 4.6 Small Shape Detail Placement | Checksum: 16717eb80
+Time (s): cpu = 00:01:01 ; elapsed = 00:00:25 . Memory (MB): peak = 2085.609 ; gain = 197.812 ; free physical = 9650 ; free virtual = 21454
+Phase 4.6 Small Shape Detail Placement | Checksum: 1289cc65d
 
-Time (s): cpu = 00:00:58 ; elapsed = 00:00:24 . Memory (MB): peak = 2070.250 ; gain = 195.375 ; free physical = 10224 ; free virtual = 21462
+Time (s): cpu = 00:01:02 ; elapsed = 00:00:25 . Memory (MB): peak = 2085.609 ; gain = 197.812 ; free physical = 9650 ; free virtual = 21454
 
 Phase 4.7 Re-assign LUT pins
-Phase 4.7 Re-assign LUT pins | Checksum: 16717eb80
+Phase 4.7 Re-assign LUT pins | Checksum: 1289cc65d
 
-Time (s): cpu = 00:00:59 ; elapsed = 00:00:25 . Memory (MB): peak = 2070.250 ; gain = 195.375 ; free physical = 10224 ; free virtual = 21462
-Phase 4 Detail Placement | Checksum: 16717eb80
+Time (s): cpu = 00:01:02 ; elapsed = 00:00:26 . Memory (MB): peak = 2085.609 ; gain = 197.812 ; free physical = 9650 ; free virtual = 21454
+Phase 4 Detail Placement | Checksum: 1289cc65d
 
-Time (s): cpu = 00:00:59 ; elapsed = 00:00:25 . Memory (MB): peak = 2070.250 ; gain = 195.375 ; free physical = 10224 ; free virtual = 21462
+Time (s): cpu = 00:01:02 ; elapsed = 00:00:26 . Memory (MB): peak = 2085.609 ; gain = 197.812 ; free physical = 9650 ; free virtual = 21454
 
 Phase 5 Post Placement Optimization and Clean-Up
 
 Phase 5.1 PCOPT Shape updates
-Phase 5.1 PCOPT Shape updates | Checksum: 1f10a12fb
+Phase 5.1 PCOPT Shape updates | Checksum: 12b8eb3cf
 
-Time (s): cpu = 00:00:59 ; elapsed = 00:00:25 . Memory (MB): peak = 2070.250 ; gain = 195.375 ; free physical = 10224 ; free virtual = 21462
+Time (s): cpu = 00:01:02 ; elapsed = 00:00:26 . Memory (MB): peak = 2085.609 ; gain = 197.812 ; free physical = 9650 ; free virtual = 21454
 
 Phase 5.2 Post Commit Optimization
 
 Phase 5.2.1 updateClock Trees: PCOPT
-Phase 5.2.1 updateClock Trees: PCOPT | Checksum: 1f10a12fb
+Phase 5.2.1 updateClock Trees: PCOPT | Checksum: 12b8eb3cf
 
-Time (s): cpu = 00:00:59 ; elapsed = 00:00:25 . Memory (MB): peak = 2070.250 ; gain = 195.375 ; free physical = 10224 ; free virtual = 21462
+Time (s): cpu = 00:01:02 ; elapsed = 00:00:26 . Memory (MB): peak = 2085.609 ; gain = 197.812 ; free physical = 9650 ; free virtual = 21454
 
 Phase 5.2.2 Post Placement Optimization
 
 Phase 5.2.2.1 Post Placement Timing Optimization
+INFO: [Place 30-746] Post Placement Timing Summary WNS=1.592. For the most accurate timing information please run report_timing.
+Phase 5.2.2.1 Post Placement Timing Optimization | Checksum: 11c411329
 
-Phase 5.2.2.1.1 Restore Best Placement
-Phase 5.2.2.1.1 Restore Best Placement | Checksum: 1f0653dbd
+Time (s): cpu = 00:01:08 ; elapsed = 00:00:28 . Memory (MB): peak = 2085.609 ; gain = 197.812 ; free physical = 9640 ; free virtual = 21443
+Phase 5.2.2 Post Placement Optimization | Checksum: 11c411329
 
-Time (s): cpu = 00:01:05 ; elapsed = 00:00:27 . Memory (MB): peak = 2070.250 ; gain = 195.375 ; free physical = 10214 ; free virtual = 21451
-INFO: [Place 30-746] Post Placement Timing Summary WNS=0.509. For the most accurate timing information please run report_timing.
-Phase 5.2.2.1 Post Placement Timing Optimization | Checksum: 1f0653dbd
+Time (s): cpu = 00:01:08 ; elapsed = 00:00:28 . Memory (MB): peak = 2085.609 ; gain = 197.812 ; free physical = 9640 ; free virtual = 21443
+Phase 5.2 Post Commit Optimization | Checksum: 11c411329
 
-Time (s): cpu = 00:01:05 ; elapsed = 00:00:27 . Memory (MB): peak = 2070.250 ; gain = 195.375 ; free physical = 10214 ; free virtual = 21451
-Phase 5.2.2 Post Placement Optimization | Checksum: 1f0653dbd
-
-Time (s): cpu = 00:01:05 ; elapsed = 00:00:27 . Memory (MB): peak = 2070.250 ; gain = 195.375 ; free physical = 10214 ; free virtual = 21451
-Phase 5.2 Post Commit Optimization | Checksum: 1f0653dbd
-
-Time (s): cpu = 00:01:05 ; elapsed = 00:00:27 . Memory (MB): peak = 2070.250 ; gain = 195.375 ; free physical = 10214 ; free virtual = 21451
+Time (s): cpu = 00:01:08 ; elapsed = 00:00:28 . Memory (MB): peak = 2085.609 ; gain = 197.812 ; free physical = 9640 ; free virtual = 21443
 
 Phase 5.3 Sweep Clock Roots: Post-Placement
-Phase 5.3 Sweep Clock Roots: Post-Placement | Checksum: 1f0653dbd
+Phase 5.3 Sweep Clock Roots: Post-Placement | Checksum: 11c411329
 
-Time (s): cpu = 00:01:05 ; elapsed = 00:00:27 . Memory (MB): peak = 2070.250 ; gain = 195.375 ; free physical = 10214 ; free virtual = 21451
+Time (s): cpu = 00:01:08 ; elapsed = 00:00:28 . Memory (MB): peak = 2085.609 ; gain = 197.812 ; free physical = 9640 ; free virtual = 21443
 
 Phase 5.4 Post Placement Cleanup
-Phase 5.4 Post Placement Cleanup | Checksum: 1f0653dbd
+Phase 5.4 Post Placement Cleanup | Checksum: 11c411329
 
-Time (s): cpu = 00:01:05 ; elapsed = 00:00:27 . Memory (MB): peak = 2070.250 ; gain = 195.375 ; free physical = 10214 ; free virtual = 21451
+Time (s): cpu = 00:01:08 ; elapsed = 00:00:28 . Memory (MB): peak = 2085.609 ; gain = 197.812 ; free physical = 9640 ; free virtual = 21443
 
 Phase 5.5 Placer Reporting
 
 Phase 5.5.1 Restore STA
-Phase 5.5.1 Restore STA | Checksum: 1f0653dbd
+Phase 5.5.1 Restore STA | Checksum: 11c411329
 
-Time (s): cpu = 00:01:05 ; elapsed = 00:00:27 . Memory (MB): peak = 2070.250 ; gain = 195.375 ; free physical = 10214 ; free virtual = 21451
-Phase 5.5 Placer Reporting | Checksum: 1f0653dbd
+Time (s): cpu = 00:01:08 ; elapsed = 00:00:28 . Memory (MB): peak = 2085.609 ; gain = 197.812 ; free physical = 9640 ; free virtual = 21443
+Phase 5.5 Placer Reporting | Checksum: 11c411329
 
-Time (s): cpu = 00:01:05 ; elapsed = 00:00:27 . Memory (MB): peak = 2070.250 ; gain = 195.375 ; free physical = 10214 ; free virtual = 21451
+Time (s): cpu = 00:01:08 ; elapsed = 00:00:28 . Memory (MB): peak = 2085.609 ; gain = 197.812 ; free physical = 9640 ; free virtual = 21443
 
 Phase 5.6 Final Placement Cleanup
-Phase 5.6 Final Placement Cleanup | Checksum: 1581b620a
+Phase 5.6 Final Placement Cleanup | Checksum: 190c3999d
 
-Time (s): cpu = 00:01:05 ; elapsed = 00:00:28 . Memory (MB): peak = 2070.250 ; gain = 195.375 ; free physical = 10214 ; free virtual = 21451
-Phase 5 Post Placement Optimization and Clean-Up | Checksum: 1581b620a
+Time (s): cpu = 00:01:08 ; elapsed = 00:00:28 . Memory (MB): peak = 2085.609 ; gain = 197.812 ; free physical = 9640 ; free virtual = 21443
+Phase 5 Post Placement Optimization and Clean-Up | Checksum: 190c3999d
 
-Time (s): cpu = 00:01:05 ; elapsed = 00:00:28 . Memory (MB): peak = 2070.250 ; gain = 195.375 ; free physical = 10214 ; free virtual = 21451
-Ending Placer Task | Checksum: 110432f14
+Time (s): cpu = 00:01:08 ; elapsed = 00:00:28 . Memory (MB): peak = 2085.609 ; gain = 197.812 ; free physical = 9640 ; free virtual = 21443
+Ending Placer Task | Checksum: 14eb24428
 
-Time (s): cpu = 00:01:05 ; elapsed = 00:00:28 . Memory (MB): peak = 2070.250 ; gain = 195.375 ; free physical = 10214 ; free virtual = 21451
+Time (s): cpu = 00:01:08 ; elapsed = 00:00:28 . Memory (MB): peak = 2085.609 ; gain = 197.812 ; free physical = 9640 ; free virtual = 21443
 INFO: [Common 17-83] Releasing license: Implementation
-43 Infos, 25 Warnings, 0 Critical Warnings and 0 Errors encountered.
+43 Infos, 28 Warnings, 0 Critical Warnings and 0 Errors encountered.
 place_design completed successfully
-place_design: Time (s): cpu = 00:01:07 ; elapsed = 00:00:29 . Memory (MB): peak = 2070.250 ; gain = 195.375 ; free physical = 10214 ; free virtual = 21451
+place_design: Time (s): cpu = 00:01:10 ; elapsed = 00:00:29 . Memory (MB): peak = 2085.609 ; gain = 197.812 ; free physical = 9640 ; free virtual = 21443
 Writing placer database...
 Writing XDEF routing.
 Writing XDEF routing logical nets.
 Writing XDEF routing special nets.
-Write XDEF Complete: Time (s): cpu = 00:00:02 ; elapsed = 00:00:01 . Memory (MB): peak = 2070.250 ; gain = 0.000 ; free physical = 10183 ; free virtual = 21451
-report_io: Time (s): cpu = 00:00:00.06 ; elapsed = 00:00:00.10 . Memory (MB): peak = 2070.250 ; gain = 0.000 ; free physical = 10206 ; free virtual = 21449
-report_utilization: Time (s): cpu = 00:00:00.30 ; elapsed = 00:00:00.34 . Memory (MB): peak = 2070.250 ; gain = 0.000 ; free physical = 10206 ; free virtual = 21449
-report_control_sets: Time (s): cpu = 00:00:00.05 ; elapsed = 00:00:00.08 . Memory (MB): peak = 2070.250 ; gain = 0.000 ; free physical = 10206 ; free virtual = 21449
+Write XDEF Complete: Time (s): cpu = 00:00:02 ; elapsed = 00:00:01 . Memory (MB): peak = 2085.609 ; gain = 0.000 ; free physical = 9607 ; free virtual = 21442
+report_io: Time (s): cpu = 00:00:00.05 ; elapsed = 00:00:00.09 . Memory (MB): peak = 2085.609 ; gain = 0.000 ; free physical = 9631 ; free virtual = 21441
+report_utilization: Time (s): cpu = 00:00:00.29 ; elapsed = 00:00:00.31 . Memory (MB): peak = 2085.609 ; gain = 0.000 ; free physical = 9631 ; free virtual = 21440
+report_control_sets: Time (s): cpu = 00:00:00.04 ; elapsed = 00:00:00.06 . Memory (MB): peak = 2085.609 ; gain = 0.000 ; free physical = 9630 ; free virtual = 21440
 Command: route_design
 Attempting to get a license for feature 'Implementation' and/or device 'xc7z020'
 INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7z020'
@@ -448,159 +446,108 @@ Starting Routing Task
 INFO: [Route 35-254] Multithreading enabled for route_design using a maximum of 8 CPUs
 
 Phase 1 Build RT Design
-Phase 1 Build RT Design | Checksum: 6e56c349
+Phase 1 Build RT Design | Checksum: f14cb56c
 
-Time (s): cpu = 00:00:18 ; elapsed = 00:00:13 . Memory (MB): peak = 2122.809 ; gain = 52.559 ; free physical = 10111 ; free virtual = 21354
+Time (s): cpu = 00:00:17 ; elapsed = 00:00:13 . Memory (MB): peak = 2144.191 ; gain = 58.582 ; free physical = 9537 ; free virtual = 21347
 
 Phase 2 Router Initialization
 
 Phase 2.1 Create Timer
-Phase 2.1 Create Timer | Checksum: 6e56c349
+Phase 2.1 Create Timer | Checksum: f14cb56c
 
-Time (s): cpu = 00:00:18 ; elapsed = 00:00:13 . Memory (MB): peak = 2122.809 ; gain = 52.559 ; free physical = 10106 ; free virtual = 21350
+Time (s): cpu = 00:00:17 ; elapsed = 00:00:13 . Memory (MB): peak = 2144.191 ; gain = 58.582 ; free physical = 9532 ; free virtual = 21342
 
 Phase 2.2 Pre Route Cleanup
-Phase 2.2 Pre Route Cleanup | Checksum: 6e56c349
+Phase 2.2 Pre Route Cleanup | Checksum: f14cb56c
 
-Time (s): cpu = 00:00:18 ; elapsed = 00:00:13 . Memory (MB): peak = 2122.809 ; gain = 52.559 ; free physical = 10076 ; free virtual = 21320
+Time (s): cpu = 00:00:17 ; elapsed = 00:00:13 . Memory (MB): peak = 2144.191 ; gain = 58.582 ; free physical = 9503 ; free virtual = 21313
  Number of Nodes with overlaps = 0
 
 Phase 2.3 Update Timing
-Phase 2.3 Update Timing | Checksum: 16d410273
+Phase 2.3 Update Timing | Checksum: 21cf246e1
 
-Time (s): cpu = 00:00:28 ; elapsed = 00:00:16 . Memory (MB): peak = 2161.520 ; gain = 91.270 ; free physical = 10036 ; free virtual = 21279
-INFO: [Route 35-57] Estimated Timing Summary | WNS=0.678  | TNS=0      | WHS=-0.356 | THS=-367   |
+Time (s): cpu = 00:00:28 ; elapsed = 00:00:16 . Memory (MB): peak = 2181.934 ; gain = 96.324 ; free physical = 9460 ; free virtual = 21270
+INFO: [Route 35-57] Estimated Timing Summary | WNS=1.48   | TNS=0      | WHS=-0.303 | THS=-346   |
 
-Phase 2 Router Initialization | Checksum: 23b0d08de
+Phase 2 Router Initialization | Checksum: 1c116175d
 
-Time (s): cpu = 00:00:33 ; elapsed = 00:00:17 . Memory (MB): peak = 2161.520 ; gain = 91.270 ; free physical = 10012 ; free virtual = 21256
+Time (s): cpu = 00:00:34 ; elapsed = 00:00:17 . Memory (MB): peak = 2181.934 ; gain = 96.324 ; free physical = 9438 ; free virtual = 21248
 
 Phase 3 Initial Routing
-Phase 3 Initial Routing | Checksum: 19eae5c04
+Phase 3 Initial Routing | Checksum: 98b33859
 
-Time (s): cpu = 00:00:39 ; elapsed = 00:00:18 . Memory (MB): peak = 2161.520 ; gain = 91.270 ; free physical = 10012 ; free virtual = 21256
+Time (s): cpu = 00:00:40 ; elapsed = 00:00:18 . Memory (MB): peak = 2181.934 ; gain = 96.324 ; free physical = 9438 ; free virtual = 21247
 
 Phase 4 Rip-up And Reroute
 
 Phase 4.1 Global Iteration 0
- Number of Nodes with overlaps = 1699
- Number of Nodes with overlaps = 260
- Number of Nodes with overlaps = 52
- Number of Nodes with overlaps = 11
+ Number of Nodes with overlaps = 1630
+ Number of Nodes with overlaps = 103
  Number of Nodes with overlaps = 1
- Number of Nodes with overlaps = 3
- Number of Nodes with overlaps = 4
- Number of Nodes with overlaps = 2
- Number of Nodes with overlaps = 7
-INFO: [Route 35-325] The following overlapped nodes exist in the design and there is low overall congestion. 
-Resolution: Check for routing resource conflicts on the identified nets or significant localized congestion using the Route Congestion Metrics in the Device View. 
-1. INT_L_X26Y30/IMUX_L2
-Overlapping nets: 2
-	zed_i/correlation_accel_v1_0/inst/ap_sig_bdd_2941
-	zed_i/correlation_accel_v1_0/inst/n_4_ap_CS_fsm_reg[207]
-2. INT_L_X20Y31/IMUX_L45
-Overlapping nets: 2
-	zed_i/correlation_accel_v1_0/inst/correlation_accel_v1_fdiv_32ns_32ns_32_30_U9/correlation_accel_v1_ap_fdiv_28_no_dsp_32_u/n_4_U0_i_15
-	zed_i/correlation_accel_v1_0/inst/correlation_accel_v1_fdiv_32ns_32ns_32_30_U9/correlation_accel_v1_ap_fdiv_28_no_dsp_32_u/n_4_U0_i_16
-3. INT_L_X2Y38/IMUX_L38
-Overlapping nets: 2
-	zed_i/correlation_accel_v1_0/inst/ap_reg_ppstg_tmp_14_reg_1915_pp2_it12
-	zed_i/correlation_accel_v1_0/inst/ap_reg_ppstg_tmp_14_reg_1915_pp2_it14
-4. INT_R_X21Y31/IMUX30
-Overlapping nets: 2
-	zed_i/correlation_accel_v1_0/inst/ap_sig_bdd_2388
-	zed_i/correlation_accel_v1_0/inst/ap_sig_bdd_2428
-5. INT_L_X2Y39/IMUX_L39
-Overlapping nets: 2
-	zed_i/correlation_accel_v1_0/inst/ap_reg_ppstg_tmp_14_reg_1915_pp2_it11
-	zed_i/correlation_accel_v1_0/inst/ap_reg_ppstg_tmp_14_reg_1915_pp2_it1
-6. INT_R_X31Y45/IMUX16
-Overlapping nets: 2
-	zed_i/correlation_accel_v1_0/inst/row_index_reg_831[2]
-	zed_i/correlation_accel_v1_0/inst/row_index_reg_831[3]
-7. INT_L_X2Y38/NL1BEG_N3
-Overlapping nets: 2
-	zed_i/correlation_accel_v1_0/inst/ap_reg_ppstg_tmp_14_reg_1915_pp2_it8
-	zed_i/correlation_accel_v1_0/inst/ap_reg_ppstg_tmp_14_reg_1915_pp2_it14
-
+ Number of Nodes with overlaps = 1
  Number of Nodes with overlaps = 0
 
 Phase 4.1.1 Update Timing
-Phase 4.1.1 Update Timing | Checksum: 6ec16c2d
+Phase 4.1.1 Update Timing | Checksum: 196aa4f10
 
-Time (s): cpu = 00:00:55 ; elapsed = 00:00:24 . Memory (MB): peak = 2161.520 ; gain = 91.270 ; free physical = 10011 ; free virtual = 21255
-INFO: [Route 35-57] Estimated Timing Summary | WNS=0.21   | TNS=0      | WHS=N/A    | THS=N/A    |
+Time (s): cpu = 00:00:50 ; elapsed = 00:00:21 . Memory (MB): peak = 2181.934 ; gain = 96.324 ; free physical = 9437 ; free virtual = 21246
+INFO: [Route 35-57] Estimated Timing Summary | WNS=0.799  | TNS=0      | WHS=N/A    | THS=N/A    |
 
-Phase 4.1 Global Iteration 0 | Checksum: 1ba78b178
+Phase 4.1 Global Iteration 0 | Checksum: 1e2c78139
 
-Time (s): cpu = 00:00:55 ; elapsed = 00:00:24 . Memory (MB): peak = 2161.520 ; gain = 91.270 ; free physical = 10011 ; free virtual = 21255
+Time (s): cpu = 00:00:50 ; elapsed = 00:00:21 . Memory (MB): peak = 2181.934 ; gain = 96.324 ; free physical = 9437 ; free virtual = 21246
 
 Phase 4.2 Global Iteration 1
  Number of Nodes with overlaps = 1
- Number of Nodes with overlaps = 2
- Number of Nodes with overlaps = 10
- Number of Nodes with overlaps = 3
- Number of Nodes with overlaps = 2
-INFO: [Route 35-325] The following overlapped nodes exist in the design and there is low overall congestion. 
-Resolution: Check for routing resource conflicts on the identified nets or significant localized congestion using the Route Congestion Metrics in the Device View. 
-1. INT_R_X21Y32/IMUX12
-Overlapping nets: 2
-	zed_i/correlation_accel_v1_0/inst/correlation_accel_v1_fdiv_32ns_32ns_32_30_U9/correlation_accel_v1_ap_fdiv_28_no_dsp_32_u/n_4_U0_i_11
-	zed_i/correlation_accel_v1_0/inst/correlation_accel_v1_fdiv_32ns_32ns_32_30_U9/correlation_accel_v1_ap_fdiv_28_no_dsp_32_u/n_4_U0_i_12
-2. INT_L_X2Y38/IMUX_L23
-Overlapping nets: 2
-	zed_i/correlation_accel_v1_0/inst/ap_reg_ppstg_tmp_14_reg_1915_pp2_it10
-	zed_i/correlation_accel_v1_0/inst/ap_reg_ppstg_tmp_14_reg_1915_pp2_it6
-
  Number of Nodes with overlaps = 0
 
 Phase 4.2.1 Update Timing
-Phase 4.2.1 Update Timing | Checksum: 1a358c2a8
+Phase 4.2.1 Update Timing | Checksum: 16e8ced46
 
-Time (s): cpu = 00:00:58 ; elapsed = 00:00:26 . Memory (MB): peak = 2161.520 ; gain = 91.270 ; free physical = 10012 ; free virtual = 21255
-INFO: [Route 35-57] Estimated Timing Summary | WNS=-0.0568| TNS=-0.125 | WHS=N/A    | THS=N/A    |
+Time (s): cpu = 00:00:51 ; elapsed = 00:00:21 . Memory (MB): peak = 2181.934 ; gain = 96.324 ; free physical = 9437 ; free virtual = 21246
+INFO: [Route 35-57] Estimated Timing Summary | WNS=0.799  | TNS=0      | WHS=N/A    | THS=N/A    |
 
-Phase 4.2 Global Iteration 1 | Checksum: c9ebcf77
+Phase 4.2 Global Iteration 1 | Checksum: 176d5bf6a
 
-Time (s): cpu = 00:00:58 ; elapsed = 00:00:26 . Memory (MB): peak = 2161.520 ; gain = 91.270 ; free physical = 10012 ; free virtual = 21255
-Phase 4 Rip-up And Reroute | Checksum: c9ebcf77
+Time (s): cpu = 00:00:51 ; elapsed = 00:00:21 . Memory (MB): peak = 2181.934 ; gain = 96.324 ; free physical = 9437 ; free virtual = 21246
+Phase 4 Rip-up And Reroute | Checksum: 176d5bf6a
 
-Time (s): cpu = 00:00:58 ; elapsed = 00:00:26 . Memory (MB): peak = 2161.520 ; gain = 91.270 ; free physical = 10012 ; free virtual = 21255
+Time (s): cpu = 00:00:51 ; elapsed = 00:00:21 . Memory (MB): peak = 2181.934 ; gain = 96.324 ; free physical = 9437 ; free virtual = 21246
 
 Phase 5 Delay CleanUp
 
 Phase 5.1 Update Timing
-Phase 5.1 Update Timing | Checksum: b096b9c5
+Phase 5.1 Update Timing | Checksum: 123150dd1
 
-Time (s): cpu = 00:01:00 ; elapsed = 00:00:26 . Memory (MB): peak = 2161.520 ; gain = 91.270 ; free physical = 10012 ; free virtual = 21255
-INFO: [Route 35-57] Estimated Timing Summary | WNS=0.21   | TNS=0      | WHS=N/A    | THS=N/A    |
+Time (s): cpu = 00:00:53 ; elapsed = 00:00:22 . Memory (MB): peak = 2181.934 ; gain = 96.324 ; free physical = 9437 ; free virtual = 21246
+INFO: [Route 35-57] Estimated Timing Summary | WNS=0.799  | TNS=0      | WHS=N/A    | THS=N/A    |
 
-Phase 5 Delay CleanUp | Checksum: b096b9c5
+Phase 5 Delay CleanUp | Checksum: 123150dd1
 
-Time (s): cpu = 00:01:00 ; elapsed = 00:00:26 . Memory (MB): peak = 2161.520 ; gain = 91.270 ; free physical = 10012 ; free virtual = 21255
+Time (s): cpu = 00:00:53 ; elapsed = 00:00:22 . Memory (MB): peak = 2181.934 ; gain = 96.324 ; free physical = 9437 ; free virtual = 21246
 
 Phase 6 Clock Skew Optimization
-Phase 6 Clock Skew Optimization | Checksum: b096b9c5
+Phase 6 Clock Skew Optimization | Checksum: 123150dd1
 
-Time (s): cpu = 00:01:00 ; elapsed = 00:00:26 . Memory (MB): peak = 2161.520 ; gain = 91.270 ; free physical = 10012 ; free virtual = 21255
+Time (s): cpu = 00:00:53 ; elapsed = 00:00:22 . Memory (MB): peak = 2181.934 ; gain = 96.324 ; free physical = 9437 ; free virtual = 21246
 
 Phase 7 Post Hold Fix
 
 Phase 7.1 Update Timing
-Phase 7.1 Update Timing | Checksum: 4d9ea55f
+Phase 7.1 Update Timing | Checksum: 15a433edb
 
-Time (s): cpu = 00:01:02 ; elapsed = 00:00:27 . Memory (MB): peak = 2161.520 ; gain = 91.270 ; free physical = 10012 ; free virtual = 21255
-INFO: [Route 35-57] Estimated Timing Summary | WNS=0.21   | TNS=0      | WHS=-0.018 | THS=-0.034 |
+Time (s): cpu = 00:00:55 ; elapsed = 00:00:22 . Memory (MB): peak = 2181.934 ; gain = 96.324 ; free physical = 9437 ; free virtual = 21246
+INFO: [Route 35-57] Estimated Timing Summary | WNS=0.799  | TNS=0      | WHS=0.019  | THS=0      |
 
-Phase 7 Post Hold Fix | Checksum: 10a585d7d
+Phase 7 Post Hold Fix | Checksum: 1f2885f38
 
-Time (s): cpu = 00:01:03 ; elapsed = 00:00:27 . Memory (MB): peak = 2161.520 ; gain = 91.270 ; free physical = 10011 ; free virtual = 21255
+Time (s): cpu = 00:00:55 ; elapsed = 00:00:22 . Memory (MB): peak = 2181.934 ; gain = 96.324 ; free physical = 9437 ; free virtual = 21246
 
 Phase 8 Route finalize
 
 Router Utilization Summary
-  Global Vertical Routing Utilization    = 3.89847 %
-  Global Horizontal Routing Utilization  = 5.49687 %
+  Global Vertical Routing Utilization    = 4.2158 %
+  Global Horizontal Routing Utilization  = 6.38886 %
   Routable Net Status*
   *Does not include unroutable nets such as driverless and loadless.
   Run report_route_status for detailed report.
@@ -609,48 +556,43 @@ Router Utilization Summary
   Number of Partially Routed Nets     = 0
   Number of Node Overlaps             = 0
 
-Phase 8 Route finalize | Checksum: 1108f398f
+Phase 8 Route finalize | Checksum: 1624dde25
 
-Time (s): cpu = 00:01:03 ; elapsed = 00:00:27 . Memory (MB): peak = 2161.520 ; gain = 91.270 ; free physical = 10011 ; free virtual = 21255
+Time (s): cpu = 00:00:56 ; elapsed = 00:00:22 . Memory (MB): peak = 2181.934 ; gain = 96.324 ; free physical = 9437 ; free virtual = 21246
 
 Phase 9 Verifying routed nets
 
  Verification completed successfully
-Phase 9 Verifying routed nets | Checksum: 1108f398f
+Phase 9 Verifying routed nets | Checksum: 1624dde25
 
-Time (s): cpu = 00:01:03 ; elapsed = 00:00:27 . Memory (MB): peak = 2161.520 ; gain = 91.270 ; free physical = 10011 ; free virtual = 21255
+Time (s): cpu = 00:00:56 ; elapsed = 00:00:22 . Memory (MB): peak = 2181.934 ; gain = 96.324 ; free physical = 9437 ; free virtual = 21246
 
 Phase 10 Depositing Routes
-Phase 10 Depositing Routes | Checksum: 18f2a7c44
+Phase 10 Depositing Routes | Checksum: 1adcf3347
 
-Time (s): cpu = 00:01:04 ; elapsed = 00:00:28 . Memory (MB): peak = 2161.520 ; gain = 91.270 ; free physical = 10011 ; free virtual = 21255
+Time (s): cpu = 00:00:57 ; elapsed = 00:00:23 . Memory (MB): peak = 2181.934 ; gain = 96.324 ; free physical = 9437 ; free virtual = 21246
 
 Phase 11 Post Router Timing
-
-Phase 11.1 Update Timing
-Phase 11.1 Update Timing | Checksum: 18f2a7c44
-
-Time (s): cpu = 00:01:06 ; elapsed = 00:00:28 . Memory (MB): peak = 2161.520 ; gain = 91.270 ; free physical = 10011 ; free virtual = 21255
-INFO: [Route 35-57] Estimated Timing Summary | WNS=0.21   | TNS=0      | WHS=0.05   | THS=0      |
+INFO: [Route 35-57] Estimated Timing Summary | WNS=0.799  | TNS=0      | WHS=0.019  | THS=0      |
 
 INFO: [Route 35-327] The final timing numbers are based on the router estimated timing analysis. For a complete and accurate timing signoff, please run report_timing_summary.
-Phase 11 Post Router Timing | Checksum: 18f2a7c44
+Phase 11 Post Router Timing | Checksum: 1adcf3347
 
-Time (s): cpu = 00:01:06 ; elapsed = 00:00:28 . Memory (MB): peak = 2161.520 ; gain = 91.270 ; free physical = 10011 ; free virtual = 21255
+Time (s): cpu = 00:00:57 ; elapsed = 00:00:23 . Memory (MB): peak = 2181.934 ; gain = 96.324 ; free physical = 9437 ; free virtual = 21246
 INFO: [Route 35-16] Router Completed Successfully
 
 Routing Is Done.
 
-Time (s): cpu = 00:01:06 ; elapsed = 00:00:28 . Memory (MB): peak = 2161.520 ; gain = 91.270 ; free physical = 10011 ; free virtual = 21255
+Time (s): cpu = 00:00:57 ; elapsed = 00:00:24 . Memory (MB): peak = 2181.934 ; gain = 96.324 ; free physical = 9437 ; free virtual = 21246
 INFO: [Common 17-83] Releasing license: Implementation
-59 Infos, 26 Warnings, 0 Critical Warnings and 0 Errors encountered.
+57 Infos, 29 Warnings, 0 Critical Warnings and 0 Errors encountered.
 route_design completed successfully
-route_design: Time (s): cpu = 00:01:07 ; elapsed = 00:00:29 . Memory (MB): peak = 2161.520 ; gain = 91.270 ; free physical = 10011 ; free virtual = 21255
+route_design: Time (s): cpu = 00:00:59 ; elapsed = 00:00:24 . Memory (MB): peak = 2181.934 ; gain = 96.324 ; free physical = 9437 ; free virtual = 21246
 Writing placer database...
 Writing XDEF routing.
 Writing XDEF routing logical nets.
 Writing XDEF routing special nets.
-Write XDEF Complete: Time (s): cpu = 00:00:02 ; elapsed = 00:00:01 . Memory (MB): peak = 2174.844 ; gain = 0.000 ; free physical = 9972 ; free virtual = 21254
+Write XDEF Complete: Time (s): cpu = 00:00:02 ; elapsed = 00:00:01 . Memory (MB): peak = 2194.570 ; gain = 0.000 ; free physical = 9382 ; free virtual = 21242
 INFO: [Drc 23-27] Running DRC with 8 threads
 INFO: [Coretcl 2-168] The results of DRC are in file /home/trungnguyen/SDSoC/workspace/correlation_ver1/correlation_ver1_linux/SDRelease/_sds/p0/ipi/zed.runs/impl_1/zed_wrapper_drc_routed.rpt.
 INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Delay Type: min_max.
@@ -671,103 +613,106 @@ WARNING: [Drc 23-20] Rule violation (CFGBVS-1) Missing CFGBVS and CONFIG_VOLTAGE
  #where value2 is the voltage provided to configuration bank 0
 
 Refer to the device configuration user guide for more information.
-WARNING: [Drc 23-20] Rule violation (DPIP-1) Input pipelining - DSP zed_i/correlation_accel_v1_0/inst/correlation_accel_v1_fadd_32ns_32ns_32_9_full_dsp_U3/correlation_accel_v1_ap_fadd_7_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/SHIFT_RND/DSP input B is not pipelined. Pipelining DSP48 input will improve performance.
-WARNING: [Drc 23-20] Rule violation (DPIP-1) Input pipelining - DSP zed_i/correlation_accel_v1_0/inst/correlation_accel_v1_fadd_32ns_32ns_32_9_full_dsp_U4/correlation_accel_v1_ap_fadd_7_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/SHIFT_RND/DSP input B is not pipelined. Pipelining DSP48 input will improve performance.
-WARNING: [Drc 23-20] Rule violation (DPIP-1) Input pipelining - DSP zed_i/correlation_accel_v1_0/inst/correlation_accel_v1_faddfsub_32ns_32ns_32_9_full_dsp_U1/correlation_accel_v1_ap_faddfsub_7_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/SHIFT_RND/DSP input B is not pipelined. Pipelining DSP48 input will improve performance.
-WARNING: [Drc 23-20] Rule violation (DPIP-1) Input pipelining - DSP zed_i/correlation_accel_v1_0/inst/correlation_accel_v1_faddfsub_32ns_32ns_32_9_full_dsp_U2/correlation_accel_v1_ap_faddfsub_7_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/SHIFT_RND/DSP input B is not pipelined. Pipelining DSP48 input will improve performance.
-WARNING: [Drc 23-20] Rule violation (DPIP-1) Input pipelining - DSP zed_i/correlation_accel_v1_0/inst/correlation_accel_v1_flog_32ns_32ns_32_18_full_dsp_U14/correlation_accel_v1_ap_flog_16_full_dsp_32_u/U0/i_synth/LOG_OP.OP/rr/mul/gen_iter[1].rr_mult/bez_add/dsp.one.dsp48e1_add/DSP input A B C is not pipelined. Pipelining DSP48 input will improve performance.
-WARNING: [Drc 23-20] Rule violation (DPIP-1) Input pipelining - DSP zed_i/correlation_accel_v1_0/inst/correlation_accel_v1_flog_32ns_32ns_32_18_full_dsp_U14/correlation_accel_v1_ap_flog_16_full_dsp_32_u/U0/i_synth/LOG_OP.OP/rr/mul/gen_iter[1].rr_mult/zi_add_no_combined_adder.zi_add/dsp.one.dsp48e1_add/DSP input A B C is not pipelined. Pipelining DSP48 input will improve performance.
-WARNING: [Drc 23-20] Rule violation (DPIP-1) Input pipelining - DSP zed_i/correlation_accel_v1_0/inst/correlation_accel_v1_flog_32ns_32ns_32_18_full_dsp_U14/correlation_accel_v1_ap_flog_16_full_dsp_32_u/U0/i_synth/LOG_OP.OP/rr/mul/gen_iter[2].rr_mult/zi_add_no_combined_adder.zi_add/dsp.one.dsp48e1_add/DSP input A B C is not pipelined. Pipelining DSP48 input will improve performance.
-WARNING: [Drc 23-20] Rule violation (DPIP-1) Input pipelining - DSP zed_i/correlation_accel_v1_0/inst/correlation_accel_v1_flog_32ns_32ns_32_18_full_dsp_U14/correlation_accel_v1_ap_flog_16_full_dsp_32_u/U0/i_synth/LOG_OP.OP/rr/mul/z1_mult/gDSP.gDSP_only.iDSP/inferred_dsp.reg_mult.m_reg_reg input A B is not pipelined. Pipelining DSP48 input will improve performance.
-WARNING: [Drc 23-20] Rule violation (DPIP-1) Input pipelining - DSP zed_i/correlation_accel_v1_0/inst/correlation_accel_v1_flog_32ns_32ns_32_18_full_dsp_U14/correlation_accel_v1_ap_flog_16_full_dsp_32_u/U0/i_synth/LOG_OP.OP/taylor/squarer/gDSP.gDSP_only.iDSP/inferred_dsp.reg_mult.m_reg_reg input A B is not pipelined. Pipelining DSP48 input will improve performance.
-WARNING: [Drc 23-20] Rule violation (DPIP-1) Input pipelining - DSP zed_i/correlation_accel_v1_0/inst/correlation_accel_v1_flog_32ns_32ns_32_18_full_dsp_U14/correlation_accel_v1_ap_flog_16_full_dsp_32_u/U0/i_synth/LOG_OP.OP/taylor/z_plus_L_adder/dsp.one.dsp48e1_add/DSP input A B C is not pipelined. Pipelining DSP48 input will improve performance.
-WARNING: [Drc 23-20] Rule violation (DPIP-1) Input pipelining - DSP zed_i/correlation_accel_v1_0/inst/correlation_accel_v1_fmul_32ns_32ns_32_5_max_dsp_U5/correlation_accel_v1_ap_fmul_3_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/DSP input A B is not pipelined. Pipelining DSP48 input will improve performance.
-WARNING: [Drc 23-20] Rule violation (DPIP-1) Input pipelining - DSP zed_i/correlation_accel_v1_0/inst/correlation_accel_v1_fmul_32ns_32ns_32_5_max_dsp_U5/correlation_accel_v1_ap_fmul_3_max_dsp_32_u/U0/i_synth/MULT.OP/R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/DSP input A is not pipelined. Pipelining DSP48 input will improve performance.
-WARNING: [Drc 23-20] Rule violation (DPIP-1) Input pipelining - DSP zed_i/correlation_accel_v1_0/inst/correlation_accel_v1_fmul_32ns_32ns_32_5_max_dsp_U6/correlation_accel_v1_ap_fmul_3_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/DSP input A B is not pipelined. Pipelining DSP48 input will improve performance.
-WARNING: [Drc 23-20] Rule violation (DPIP-1) Input pipelining - DSP zed_i/correlation_accel_v1_0/inst/correlation_accel_v1_fmul_32ns_32ns_32_5_max_dsp_U6/correlation_accel_v1_ap_fmul_3_max_dsp_32_u/U0/i_synth/MULT.OP/R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/DSP input A is not pipelined. Pipelining DSP48 input will improve performance.
-WARNING: [Drc 23-20] Rule violation (DPIP-1) Input pipelining - DSP zed_i/correlation_accel_v1_0/inst/correlation_accel_v1_fmul_32ns_32ns_32_5_max_dsp_U7/correlation_accel_v1_ap_fmul_3_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/DSP input A B is not pipelined. Pipelining DSP48 input will improve performance.
-WARNING: [Drc 23-20] Rule violation (DPIP-1) Input pipelining - DSP zed_i/correlation_accel_v1_0/inst/correlation_accel_v1_fmul_32ns_32ns_32_5_max_dsp_U7/correlation_accel_v1_ap_fmul_3_max_dsp_32_u/U0/i_synth/MULT.OP/R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/DSP input A is not pipelined. Pipelining DSP48 input will improve performance.
-WARNING: [Drc 23-20] Rule violation (DPIP-1) Input pipelining - DSP zed_i/correlation_accel_v1_0/inst/correlation_accel_v1_fmul_32ns_32ns_32_5_max_dsp_U8/correlation_accel_v1_ap_fmul_3_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/DSP input A B is not pipelined. Pipelining DSP48 input will improve performance.
-WARNING: [Drc 23-20] Rule violation (DPIP-1) Input pipelining - DSP zed_i/correlation_accel_v1_0/inst/correlation_accel_v1_fmul_32ns_32ns_32_5_max_dsp_U8/correlation_accel_v1_ap_fmul_3_max_dsp_32_u/U0/i_synth/MULT.OP/R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/DSP input A is not pipelined. Pipelining DSP48 input will improve performance.
-WARNING: [Drc 23-20] Rule violation (DPOP-1) Output pipelining - DSP zed_i/correlation_accel_v1_0/inst/correlation_accel_v1_fadd_32ns_32ns_32_9_full_dsp_U3/correlation_accel_v1_ap_fadd_7_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/DSP output P is not pipelined. Pipelining DSP48 output will improve performance. Both multiplier/adder output can be pipelined.
-WARNING: [Drc 23-20] Rule violation (DPOP-1) Output pipelining - DSP zed_i/correlation_accel_v1_0/inst/correlation_accel_v1_fadd_32ns_32ns_32_9_full_dsp_U3/correlation_accel_v1_ap_fadd_7_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/SHIFT_RND/DSP output P is not pipelined. Pipelining DSP48 output will improve performance. Both multiplier/adder output can be pipelined.
-WARNING: [Drc 23-20] Rule violation (DPOP-1) Output pipelining - DSP zed_i/correlation_accel_v1_0/inst/correlation_accel_v1_fadd_32ns_32ns_32_9_full_dsp_U4/correlation_accel_v1_ap_fadd_7_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/DSP output P is not pipelined. Pipelining DSP48 output will improve performance. Both multiplier/adder output can be pipelined.
-WARNING: [Drc 23-20] Rule violation (DPOP-1) Output pipelining - DSP zed_i/correlation_accel_v1_0/inst/correlation_accel_v1_fadd_32ns_32ns_32_9_full_dsp_U4/correlation_accel_v1_ap_fadd_7_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/SHIFT_RND/DSP output P is not pipelined. Pipelining DSP48 output will improve performance. Both multiplier/adder output can be pipelined.
-WARNING: [Drc 23-20] Rule violation (DPOP-1) Output pipelining - DSP zed_i/correlation_accel_v1_0/inst/correlation_accel_v1_faddfsub_32ns_32ns_32_9_full_dsp_U1/correlation_accel_v1_ap_faddfsub_7_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/DSP output P is not pipelined. Pipelining DSP48 output will improve performance. Both multiplier/adder output can be pipelined.
-WARNING: [Drc 23-20] Rule violation (DPOP-1) Output pipelining - DSP zed_i/correlation_accel_v1_0/inst/correlation_accel_v1_faddfsub_32ns_32ns_32_9_full_dsp_U1/correlation_accel_v1_ap_faddfsub_7_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/SHIFT_RND/DSP output P is not pipelined. Pipelining DSP48 output will improve performance. Both multiplier/adder output can be pipelined.
-WARNING: [Drc 23-20] Rule violation (DPOP-1) Output pipelining - DSP zed_i/correlation_accel_v1_0/inst/correlation_accel_v1_faddfsub_32ns_32ns_32_9_full_dsp_U2/correlation_accel_v1_ap_faddfsub_7_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/DSP output P is not pipelined. Pipelining DSP48 output will improve performance. Both multiplier/adder output can be pipelined.
-WARNING: [Drc 23-20] Rule violation (DPOP-1) Output pipelining - DSP zed_i/correlation_accel_v1_0/inst/correlation_accel_v1_faddfsub_32ns_32ns_32_9_full_dsp_U2/correlation_accel_v1_ap_faddfsub_7_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/SHIFT_RND/DSP output P is not pipelined. Pipelining DSP48 output will improve performance. Both multiplier/adder output can be pipelined.
-WARNING: [Drc 23-20] Rule violation (DPOP-1) Output pipelining - DSP zed_i/correlation_accel_v1_0/inst/correlation_accel_v1_flog_32ns_32ns_32_18_full_dsp_U14/correlation_accel_v1_ap_flog_16_full_dsp_32_u/U0/i_synth/LOG_OP.OP/rr/L_path/g_adders[0].add/dsp.one.dsp48e1_add/DSP output P is not pipelined. Pipelining DSP48 output will improve performance. Both multiplier/adder output can be pipelined.
-WARNING: [Drc 23-20] Rule violation (DPOP-1) Output pipelining - DSP zed_i/correlation_accel_v1_0/inst/correlation_accel_v1_flog_32ns_32ns_32_18_full_dsp_U14/correlation_accel_v1_ap_flog_16_full_dsp_32_u/U0/i_synth/LOG_OP.OP/rr/L_path/g_adders[1].add/dsp.one.dsp48e1_add/DSP output P is not pipelined. Pipelining DSP48 output will improve performance. Both multiplier/adder output can be pipelined.
-WARNING: [Drc 23-20] Rule violation (DPOP-1) Output pipelining - DSP zed_i/correlation_accel_v1_0/inst/correlation_accel_v1_flog_32ns_32ns_32_18_full_dsp_U14/correlation_accel_v1_ap_flog_16_full_dsp_32_u/U0/i_synth/LOG_OP.OP/rr/mul/gen_iter[1].rr_mult/bez_add/dsp.one.dsp48e1_add/DSP output P is not pipelined. Pipelining DSP48 output will improve performance. Both multiplier/adder output can be pipelined.
-WARNING: [Drc 23-20] Rule violation (DPOP-1) Output pipelining - DSP zed_i/correlation_accel_v1_0/inst/correlation_accel_v1_flog_32ns_32ns_32_18_full_dsp_U14/correlation_accel_v1_ap_flog_16_full_dsp_32_u/U0/i_synth/LOG_OP.OP/rr/mul/gen_iter[1].rr_mult/zi_add_no_combined_adder.zi_add/dsp.one.dsp48e1_add/DSP output P is not pipelined. Pipelining DSP48 output will improve performance. Both multiplier/adder output can be pipelined.
-WARNING: [Drc 23-20] Rule violation (DPOP-1) Output pipelining - DSP zed_i/correlation_accel_v1_0/inst/correlation_accel_v1_flog_32ns_32ns_32_18_full_dsp_U14/correlation_accel_v1_ap_flog_16_full_dsp_32_u/U0/i_synth/LOG_OP.OP/rr/mul/gen_iter[2].rr_mult/az_mult_no_combined_adder.az_mult/gDSP.gDSP_only.iDSP/inferred_dsp.reg_mult.m_reg_reg output P is not pipelined. Pipelining DSP48 output will improve performance. Both multiplier/adder output can be pipelined.
-WARNING: [Drc 23-20] Rule violation (DPOP-1) Output pipelining - DSP zed_i/correlation_accel_v1_0/inst/correlation_accel_v1_flog_32ns_32ns_32_18_full_dsp_U14/correlation_accel_v1_ap_flog_16_full_dsp_32_u/U0/i_synth/LOG_OP.OP/rr/mul/gen_iter[2].rr_mult/bez_add/dsp.one.dsp48e1_add/DSP output P is not pipelined. Pipelining DSP48 output will improve performance. Both multiplier/adder output can be pipelined.
-WARNING: [Drc 23-20] Rule violation (DPOP-1) Output pipelining - DSP zed_i/correlation_accel_v1_0/inst/correlation_accel_v1_flog_32ns_32ns_32_18_full_dsp_U14/correlation_accel_v1_ap_flog_16_full_dsp_32_u/U0/i_synth/LOG_OP.OP/rr/mul/gen_iter[2].rr_mult/zi_add_no_combined_adder.zi_add/dsp.one.dsp48e1_add/DSP output P is not pipelined. Pipelining DSP48 output will improve performance. Both multiplier/adder output can be pipelined.
-WARNING: [Drc 23-20] Rule violation (DPOP-1) Output pipelining - DSP zed_i/correlation_accel_v1_0/inst/correlation_accel_v1_flog_32ns_32ns_32_18_full_dsp_U14/correlation_accel_v1_ap_flog_16_full_dsp_32_u/U0/i_synth/LOG_OP.OP/rr/mul/z1_mult/gDSP.gDSP_only.iDSP/inferred_dsp.reg_mult.m_reg_reg output P is not pipelined. Pipelining DSP48 output will improve performance. Both multiplier/adder output can be pipelined.
-WARNING: [Drc 23-20] Rule violation (DPOP-1) Output pipelining - DSP zed_i/correlation_accel_v1_0/inst/correlation_accel_v1_flog_32ns_32ns_32_18_full_dsp_U14/correlation_accel_v1_ap_flog_16_full_dsp_32_u/U0/i_synth/LOG_OP.OP/taylor/gen_combiner_dsp48.addsub_comb/dsp.one.dsp48e1_add/DSP output P is not pipelined. Pipelining DSP48 output will improve performance. Both multiplier/adder output can be pipelined.
-WARNING: [Drc 23-20] Rule violation (DPOP-1) Output pipelining - DSP zed_i/correlation_accel_v1_0/inst/correlation_accel_v1_flog_32ns_32ns_32_18_full_dsp_U14/correlation_accel_v1_ap_flog_16_full_dsp_32_u/U0/i_synth/LOG_OP.OP/taylor/gen_sum_addsub_dsp48.sum_addsub/dsp.one.dsp48e1_add/DSP output P is not pipelined. Pipelining DSP48 output will improve performance. Both multiplier/adder output can be pipelined.
-WARNING: [Drc 23-20] Rule violation (DPOP-1) Output pipelining - DSP zed_i/correlation_accel_v1_0/inst/correlation_accel_v1_flog_32ns_32ns_32_18_full_dsp_U14/correlation_accel_v1_ap_flog_16_full_dsp_32_u/U0/i_synth/LOG_OP.OP/taylor/squarer/gDSP.gDSP_only.iDSP/inferred_dsp.reg_mult.m_reg_reg output P is not pipelined. Pipelining DSP48 output will improve performance. Both multiplier/adder output can be pipelined.
-WARNING: [Drc 23-20] Rule violation (DPOP-1) Output pipelining - DSP zed_i/correlation_accel_v1_0/inst/correlation_accel_v1_flog_32ns_32ns_32_18_full_dsp_U14/correlation_accel_v1_ap_flog_16_full_dsp_32_u/U0/i_synth/LOG_OP.OP/taylor/z_plus_L_adder/dsp.one.dsp48e1_add/DSP output P is not pipelined. Pipelining DSP48 output will improve performance. Both multiplier/adder output can be pipelined.
-WARNING: [Drc 23-20] Rule violation (DPOP-1) Output pipelining - DSP zed_i/correlation_accel_v1_0/inst/correlation_accel_v1_fmul_32ns_32ns_32_5_max_dsp_U5/correlation_accel_v1_ap_fmul_3_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/DSP output P is not pipelined. Pipelining DSP48 output will improve performance. Both multiplier/adder output can be pipelined.
-WARNING: [Drc 23-20] Rule violation (DPOP-1) Output pipelining - DSP zed_i/correlation_accel_v1_0/inst/correlation_accel_v1_fmul_32ns_32ns_32_5_max_dsp_U5/correlation_accel_v1_ap_fmul_3_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/DSP output P is not pipelined. Pipelining DSP48 output will improve performance. Both multiplier/adder output can be pipelined.
-WARNING: [Drc 23-20] Rule violation (DPOP-1) Output pipelining - DSP zed_i/correlation_accel_v1_0/inst/correlation_accel_v1_fmul_32ns_32ns_32_5_max_dsp_U5/correlation_accel_v1_ap_fmul_3_max_dsp_32_u/U0/i_synth/MULT.OP/R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/DSP output P is not pipelined. Pipelining DSP48 output will improve performance. Both multiplier/adder output can be pipelined.
-WARNING: [Drc 23-20] Rule violation (DPOP-1) Output pipelining - DSP zed_i/correlation_accel_v1_0/inst/correlation_accel_v1_fmul_32ns_32ns_32_5_max_dsp_U6/correlation_accel_v1_ap_fmul_3_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/DSP output P is not pipelined. Pipelining DSP48 output will improve performance. Both multiplier/adder output can be pipelined.
-WARNING: [Drc 23-20] Rule violation (DPOP-1) Output pipelining - DSP zed_i/correlation_accel_v1_0/inst/correlation_accel_v1_fmul_32ns_32ns_32_5_max_dsp_U6/correlation_accel_v1_ap_fmul_3_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/DSP output P is not pipelined. Pipelining DSP48 output will improve performance. Both multiplier/adder output can be pipelined.
-WARNING: [Drc 23-20] Rule violation (DPOP-1) Output pipelining - DSP zed_i/correlation_accel_v1_0/inst/correlation_accel_v1_fmul_32ns_32ns_32_5_max_dsp_U6/correlation_accel_v1_ap_fmul_3_max_dsp_32_u/U0/i_synth/MULT.OP/R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/DSP output P is not pipelined. Pipelining DSP48 output will improve performance. Both multiplier/adder output can be pipelined.
-WARNING: [Drc 23-20] Rule violation (DPOP-1) Output pipelining - DSP zed_i/correlation_accel_v1_0/inst/correlation_accel_v1_fmul_32ns_32ns_32_5_max_dsp_U7/correlation_accel_v1_ap_fmul_3_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/DSP output P is not pipelined. Pipelining DSP48 output will improve performance. Both multiplier/adder output can be pipelined.
-WARNING: [Drc 23-20] Rule violation (DPOP-1) Output pipelining - DSP zed_i/correlation_accel_v1_0/inst/correlation_accel_v1_fmul_32ns_32ns_32_5_max_dsp_U7/correlation_accel_v1_ap_fmul_3_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/DSP output P is not pipelined. Pipelining DSP48 output will improve performance. Both multiplier/adder output can be pipelined.
-WARNING: [Drc 23-20] Rule violation (DPOP-1) Output pipelining - DSP zed_i/correlation_accel_v1_0/inst/correlation_accel_v1_fmul_32ns_32ns_32_5_max_dsp_U7/correlation_accel_v1_ap_fmul_3_max_dsp_32_u/U0/i_synth/MULT.OP/R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/DSP output P is not pipelined. Pipelining DSP48 output will improve performance. Both multiplier/adder output can be pipelined.
-WARNING: [Drc 23-20] Rule violation (DPOP-1) Output pipelining - DSP zed_i/correlation_accel_v1_0/inst/correlation_accel_v1_fmul_32ns_32ns_32_5_max_dsp_U8/correlation_accel_v1_ap_fmul_3_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/DSP output P is not pipelined. Pipelining DSP48 output will improve performance. Both multiplier/adder output can be pipelined.
-WARNING: [Drc 23-20] Rule violation (DPOP-1) Output pipelining - DSP zed_i/correlation_accel_v1_0/inst/correlation_accel_v1_fmul_32ns_32ns_32_5_max_dsp_U8/correlation_accel_v1_ap_fmul_3_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/DSP output P is not pipelined. Pipelining DSP48 output will improve performance. Both multiplier/adder output can be pipelined.
-WARNING: [Drc 23-20] Rule violation (DPOP-1) Output pipelining - DSP zed_i/correlation_accel_v1_0/inst/correlation_accel_v1_fmul_32ns_32ns_32_5_max_dsp_U8/correlation_accel_v1_ap_fmul_3_max_dsp_32_u/U0/i_synth/MULT.OP/R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/DSP output P is not pipelined. Pipelining DSP48 output will improve performance. Both multiplier/adder output can be pipelined.
-INFO: [Drc 23-20] Rule violation (AVAL-4) enum_USE_DPORT_FALSE_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND - zed_i/correlation_accel_v1_0/inst/correlation_accel_v1_fadd_32ns_32ns_32_9_full_dsp_U3/correlation_accel_v1_ap_fadd_7_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/DSP: DSP48E1 is not using the D port (USE_DPORT = FALSE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
-INFO: [Drc 23-20] Rule violation (AVAL-4) enum_USE_DPORT_FALSE_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND - zed_i/correlation_accel_v1_0/inst/correlation_accel_v1_fadd_32ns_32ns_32_9_full_dsp_U3/correlation_accel_v1_ap_fadd_7_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/SHIFT_RND/DSP: DSP48E1 is not using the D port (USE_DPORT = FALSE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
-INFO: [Drc 23-20] Rule violation (AVAL-4) enum_USE_DPORT_FALSE_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND - zed_i/correlation_accel_v1_0/inst/correlation_accel_v1_fadd_32ns_32ns_32_9_full_dsp_U4/correlation_accel_v1_ap_fadd_7_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/DSP: DSP48E1 is not using the D port (USE_DPORT = FALSE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
-INFO: [Drc 23-20] Rule violation (AVAL-4) enum_USE_DPORT_FALSE_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND - zed_i/correlation_accel_v1_0/inst/correlation_accel_v1_fadd_32ns_32ns_32_9_full_dsp_U4/correlation_accel_v1_ap_fadd_7_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/SHIFT_RND/DSP: DSP48E1 is not using the D port (USE_DPORT = FALSE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
-INFO: [Drc 23-20] Rule violation (AVAL-4) enum_USE_DPORT_FALSE_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND - zed_i/correlation_accel_v1_0/inst/correlation_accel_v1_faddfsub_32ns_32ns_32_9_full_dsp_U1/correlation_accel_v1_ap_faddfsub_7_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/DSP: DSP48E1 is not using the D port (USE_DPORT = FALSE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
-INFO: [Drc 23-20] Rule violation (AVAL-4) enum_USE_DPORT_FALSE_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND - zed_i/correlation_accel_v1_0/inst/correlation_accel_v1_faddfsub_32ns_32ns_32_9_full_dsp_U1/correlation_accel_v1_ap_faddfsub_7_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/SHIFT_RND/DSP: DSP48E1 is not using the D port (USE_DPORT = FALSE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
-INFO: [Drc 23-20] Rule violation (AVAL-4) enum_USE_DPORT_FALSE_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND - zed_i/correlation_accel_v1_0/inst/correlation_accel_v1_faddfsub_32ns_32ns_32_9_full_dsp_U2/correlation_accel_v1_ap_faddfsub_7_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/DSP: DSP48E1 is not using the D port (USE_DPORT = FALSE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
-INFO: [Drc 23-20] Rule violation (AVAL-4) enum_USE_DPORT_FALSE_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND - zed_i/correlation_accel_v1_0/inst/correlation_accel_v1_faddfsub_32ns_32ns_32_9_full_dsp_U2/correlation_accel_v1_ap_faddfsub_7_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/SHIFT_RND/DSP: DSP48E1 is not using the D port (USE_DPORT = FALSE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
-INFO: [Drc 23-20] Rule violation (AVAL-4) enum_USE_DPORT_FALSE_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND - zed_i/correlation_accel_v1_0/inst/correlation_accel_v1_flog_32ns_32ns_32_18_full_dsp_U14/correlation_accel_v1_ap_flog_16_full_dsp_32_u/U0/i_synth/LOG_OP.OP/rr/L_path/g_adders[0].add/dsp.one.dsp48e1_add/DSP: DSP48E1 is not using the D port (USE_DPORT = FALSE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
-INFO: [Drc 23-20] Rule violation (AVAL-4) enum_USE_DPORT_FALSE_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND - zed_i/correlation_accel_v1_0/inst/correlation_accel_v1_flog_32ns_32ns_32_18_full_dsp_U14/correlation_accel_v1_ap_flog_16_full_dsp_32_u/U0/i_synth/LOG_OP.OP/rr/L_path/g_adders[1].add/dsp.one.dsp48e1_add/DSP: DSP48E1 is not using the D port (USE_DPORT = FALSE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
-INFO: [Drc 23-20] Rule violation (AVAL-4) enum_USE_DPORT_FALSE_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND - zed_i/correlation_accel_v1_0/inst/correlation_accel_v1_flog_32ns_32ns_32_18_full_dsp_U14/correlation_accel_v1_ap_flog_16_full_dsp_32_u/U0/i_synth/LOG_OP.OP/rr/mul/gen_iter[1].rr_mult/az_mult_no_combined_adder.az_mult/gDSP.gHYBRID.iHYBRID/one_fabric_mult.dsp_based.iDSP/use_prim.appDSP48[0].bppDSP48[0].use_dsp.use_dsp48e1.iDSP48E1: DSP48E1 is not using the D port (USE_DPORT = FALSE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
-INFO: [Drc 23-20] Rule violation (AVAL-4) enum_USE_DPORT_FALSE_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND - zed_i/correlation_accel_v1_0/inst/correlation_accel_v1_flog_32ns_32ns_32_18_full_dsp_U14/correlation_accel_v1_ap_flog_16_full_dsp_32_u/U0/i_synth/LOG_OP.OP/rr/mul/gen_iter[1].rr_mult/bez_add/dsp.one.dsp48e1_add/DSP: DSP48E1 is not using the D port (USE_DPORT = FALSE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
-INFO: [Drc 23-20] Rule violation (AVAL-4) enum_USE_DPORT_FALSE_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND - zed_i/correlation_accel_v1_0/inst/correlation_accel_v1_flog_32ns_32ns_32_18_full_dsp_U14/correlation_accel_v1_ap_flog_16_full_dsp_32_u/U0/i_synth/LOG_OP.OP/rr/mul/gen_iter[1].rr_mult/zi_add_no_combined_adder.zi_add/dsp.one.dsp48e1_add/DSP: DSP48E1 is not using the D port (USE_DPORT = FALSE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
-INFO: [Drc 23-20] Rule violation (AVAL-4) enum_USE_DPORT_FALSE_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND - zed_i/correlation_accel_v1_0/inst/correlation_accel_v1_flog_32ns_32ns_32_18_full_dsp_U14/correlation_accel_v1_ap_flog_16_full_dsp_32_u/U0/i_synth/LOG_OP.OP/rr/mul/gen_iter[2].rr_mult/bez_add/dsp.one.dsp48e1_add/DSP: DSP48E1 is not using the D port (USE_DPORT = FALSE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
-INFO: [Drc 23-20] Rule violation (AVAL-4) enum_USE_DPORT_FALSE_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND - zed_i/correlation_accel_v1_0/inst/correlation_accel_v1_flog_32ns_32ns_32_18_full_dsp_U14/correlation_accel_v1_ap_flog_16_full_dsp_32_u/U0/i_synth/LOG_OP.OP/rr/mul/gen_iter[2].rr_mult/zi_add_no_combined_adder.zi_add/dsp.one.dsp48e1_add/DSP: DSP48E1 is not using the D port (USE_DPORT = FALSE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
-INFO: [Drc 23-20] Rule violation (AVAL-4) enum_USE_DPORT_FALSE_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND - zed_i/correlation_accel_v1_0/inst/correlation_accel_v1_flog_32ns_32ns_32_18_full_dsp_U14/correlation_accel_v1_ap_flog_16_full_dsp_32_u/U0/i_synth/LOG_OP.OP/taylor/gen_combiner_dsp48.addsub_comb/dsp.one.dsp48e1_add/DSP: DSP48E1 is not using the D port (USE_DPORT = FALSE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
-INFO: [Drc 23-20] Rule violation (AVAL-4) enum_USE_DPORT_FALSE_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND - zed_i/correlation_accel_v1_0/inst/correlation_accel_v1_flog_32ns_32ns_32_18_full_dsp_U14/correlation_accel_v1_ap_flog_16_full_dsp_32_u/U0/i_synth/LOG_OP.OP/taylor/gen_sum_addsub_dsp48.sum_addsub/dsp.one.dsp48e1_add/DSP: DSP48E1 is not using the D port (USE_DPORT = FALSE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
-INFO: [Drc 23-20] Rule violation (AVAL-4) enum_USE_DPORT_FALSE_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND - zed_i/correlation_accel_v1_0/inst/correlation_accel_v1_flog_32ns_32ns_32_18_full_dsp_U14/correlation_accel_v1_ap_flog_16_full_dsp_32_u/U0/i_synth/LOG_OP.OP/taylor/z_plus_L_adder/dsp.one.dsp48e1_add/DSP: DSP48E1 is not using the D port (USE_DPORT = FALSE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
-INFO: [Drc 23-20] Rule violation (AVAL-4) enum_USE_DPORT_FALSE_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND - zed_i/correlation_accel_v1_0/inst/correlation_accel_v1_fmul_32ns_32ns_32_5_max_dsp_U5/correlation_accel_v1_ap_fmul_3_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/DSP: DSP48E1 is not using the D port (USE_DPORT = FALSE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
-INFO: [Drc 23-20] Rule violation (AVAL-4) enum_USE_DPORT_FALSE_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND - zed_i/correlation_accel_v1_0/inst/correlation_accel_v1_fmul_32ns_32ns_32_5_max_dsp_U5/correlation_accel_v1_ap_fmul_3_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/DSP: DSP48E1 is not using the D port (USE_DPORT = FALSE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
-INFO: [Drc 23-20] Rule violation (AVAL-4) enum_USE_DPORT_FALSE_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND - zed_i/correlation_accel_v1_0/inst/correlation_accel_v1_fmul_32ns_32ns_32_5_max_dsp_U5/correlation_accel_v1_ap_fmul_3_max_dsp_32_u/U0/i_synth/MULT.OP/R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/DSP: DSP48E1 is not using the D port (USE_DPORT = FALSE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
-INFO: [Drc 23-20] Rule violation (AVAL-4) enum_USE_DPORT_FALSE_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND - zed_i/correlation_accel_v1_0/inst/correlation_accel_v1_fmul_32ns_32ns_32_5_max_dsp_U6/correlation_accel_v1_ap_fmul_3_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/DSP: DSP48E1 is not using the D port (USE_DPORT = FALSE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
-INFO: [Drc 23-20] Rule violation (AVAL-4) enum_USE_DPORT_FALSE_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND - zed_i/correlation_accel_v1_0/inst/correlation_accel_v1_fmul_32ns_32ns_32_5_max_dsp_U6/correlation_accel_v1_ap_fmul_3_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/DSP: DSP48E1 is not using the D port (USE_DPORT = FALSE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
-INFO: [Drc 23-20] Rule violation (AVAL-4) enum_USE_DPORT_FALSE_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND - zed_i/correlation_accel_v1_0/inst/correlation_accel_v1_fmul_32ns_32ns_32_5_max_dsp_U6/correlation_accel_v1_ap_fmul_3_max_dsp_32_u/U0/i_synth/MULT.OP/R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/DSP: DSP48E1 is not using the D port (USE_DPORT = FALSE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
-INFO: [Drc 23-20] Rule violation (AVAL-4) enum_USE_DPORT_FALSE_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND - zed_i/correlation_accel_v1_0/inst/correlation_accel_v1_fmul_32ns_32ns_32_5_max_dsp_U7/correlation_accel_v1_ap_fmul_3_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/DSP: DSP48E1 is not using the D port (USE_DPORT = FALSE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
-INFO: [Drc 23-20] Rule violation (AVAL-4) enum_USE_DPORT_FALSE_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND - zed_i/correlation_accel_v1_0/inst/correlation_accel_v1_fmul_32ns_32ns_32_5_max_dsp_U7/correlation_accel_v1_ap_fmul_3_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/DSP: DSP48E1 is not using the D port (USE_DPORT = FALSE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
-INFO: [Drc 23-20] Rule violation (AVAL-4) enum_USE_DPORT_FALSE_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND - zed_i/correlation_accel_v1_0/inst/correlation_accel_v1_fmul_32ns_32ns_32_5_max_dsp_U7/correlation_accel_v1_ap_fmul_3_max_dsp_32_u/U0/i_synth/MULT.OP/R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/DSP: DSP48E1 is not using the D port (USE_DPORT = FALSE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
-INFO: [Drc 23-20] Rule violation (AVAL-4) enum_USE_DPORT_FALSE_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND - zed_i/correlation_accel_v1_0/inst/correlation_accel_v1_fmul_32ns_32ns_32_5_max_dsp_U8/correlation_accel_v1_ap_fmul_3_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/DSP: DSP48E1 is not using the D port (USE_DPORT = FALSE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
-INFO: [Drc 23-20] Rule violation (AVAL-4) enum_USE_DPORT_FALSE_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND - zed_i/correlation_accel_v1_0/inst/correlation_accel_v1_fmul_32ns_32ns_32_5_max_dsp_U8/correlation_accel_v1_ap_fmul_3_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/DSP: DSP48E1 is not using the D port (USE_DPORT = FALSE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
-INFO: [Drc 23-20] Rule violation (AVAL-4) enum_USE_DPORT_FALSE_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND - zed_i/correlation_accel_v1_0/inst/correlation_accel_v1_fmul_32ns_32ns_32_5_max_dsp_U8/correlation_accel_v1_ap_fmul_3_max_dsp_32_u/U0/i_synth/MULT.OP/R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/DSP: DSP48E1 is not using the D port (USE_DPORT = FALSE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
-INFO: [Drc 23-20] Rule violation (AVAL-5) enum_USE_MULT_NONE_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND - zed_i/correlation_accel_v1_0/inst/correlation_accel_v1_flog_32ns_32ns_32_18_full_dsp_U14/correlation_accel_v1_ap_flog_16_full_dsp_32_u/U0/i_synth/LOG_OP.OP/rr/L_path/g_adders[0].add/dsp.one.dsp48e1_add/DSP: DSP48E1 is not using the Multiplier (USE_MULT = NONE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
-INFO: [Drc 23-20] Rule violation (AVAL-5) enum_USE_MULT_NONE_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND - zed_i/correlation_accel_v1_0/inst/correlation_accel_v1_flog_32ns_32ns_32_18_full_dsp_U14/correlation_accel_v1_ap_flog_16_full_dsp_32_u/U0/i_synth/LOG_OP.OP/rr/L_path/g_adders[1].add/dsp.one.dsp48e1_add/DSP: DSP48E1 is not using the Multiplier (USE_MULT = NONE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
-INFO: [Drc 23-20] Rule violation (AVAL-5) enum_USE_MULT_NONE_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND - zed_i/correlation_accel_v1_0/inst/correlation_accel_v1_flog_32ns_32ns_32_18_full_dsp_U14/correlation_accel_v1_ap_flog_16_full_dsp_32_u/U0/i_synth/LOG_OP.OP/rr/mul/gen_iter[1].rr_mult/bez_add/dsp.one.dsp48e1_add/DSP: DSP48E1 is not using the Multiplier (USE_MULT = NONE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
-INFO: [Drc 23-20] Rule violation (AVAL-5) enum_USE_MULT_NONE_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND - zed_i/correlation_accel_v1_0/inst/correlation_accel_v1_flog_32ns_32ns_32_18_full_dsp_U14/correlation_accel_v1_ap_flog_16_full_dsp_32_u/U0/i_synth/LOG_OP.OP/rr/mul/gen_iter[1].rr_mult/zi_add_no_combined_adder.zi_add/dsp.one.dsp48e1_add/DSP: DSP48E1 is not using the Multiplier (USE_MULT = NONE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
-INFO: [Drc 23-20] Rule violation (AVAL-5) enum_USE_MULT_NONE_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND - zed_i/correlation_accel_v1_0/inst/correlation_accel_v1_flog_32ns_32ns_32_18_full_dsp_U14/correlation_accel_v1_ap_flog_16_full_dsp_32_u/U0/i_synth/LOG_OP.OP/rr/mul/gen_iter[2].rr_mult/bez_add/dsp.one.dsp48e1_add/DSP: DSP48E1 is not using the Multiplier (USE_MULT = NONE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
-INFO: [Drc 23-20] Rule violation (AVAL-5) enum_USE_MULT_NONE_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND - zed_i/correlation_accel_v1_0/inst/correlation_accel_v1_flog_32ns_32ns_32_18_full_dsp_U14/correlation_accel_v1_ap_flog_16_full_dsp_32_u/U0/i_synth/LOG_OP.OP/rr/mul/gen_iter[2].rr_mult/zi_add_no_combined_adder.zi_add/dsp.one.dsp48e1_add/DSP: DSP48E1 is not using the Multiplier (USE_MULT = NONE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
-INFO: [Drc 23-20] Rule violation (AVAL-5) enum_USE_MULT_NONE_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND - zed_i/correlation_accel_v1_0/inst/correlation_accel_v1_flog_32ns_32ns_32_18_full_dsp_U14/correlation_accel_v1_ap_flog_16_full_dsp_32_u/U0/i_synth/LOG_OP.OP/taylor/gen_combiner_dsp48.addsub_comb/dsp.one.dsp48e1_add/DSP: DSP48E1 is not using the Multiplier (USE_MULT = NONE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
-INFO: [Drc 23-20] Rule violation (AVAL-5) enum_USE_MULT_NONE_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND - zed_i/correlation_accel_v1_0/inst/correlation_accel_v1_flog_32ns_32ns_32_18_full_dsp_U14/correlation_accel_v1_ap_flog_16_full_dsp_32_u/U0/i_synth/LOG_OP.OP/taylor/gen_sum_addsub_dsp48.sum_addsub/dsp.one.dsp48e1_add/DSP: DSP48E1 is not using the Multiplier (USE_MULT = NONE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
-INFO: [Drc 23-20] Rule violation (AVAL-5) enum_USE_MULT_NONE_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND - zed_i/correlation_accel_v1_0/inst/correlation_accel_v1_flog_32ns_32ns_32_18_full_dsp_U14/correlation_accel_v1_ap_flog_16_full_dsp_32_u/U0/i_synth/LOG_OP.OP/taylor/z_plus_L_adder/dsp.one.dsp48e1_add/DSP: DSP48E1 is not using the Multiplier (USE_MULT = NONE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
-INFO: [Drc 23-20] Rule violation (AVAL-5) enum_USE_MULT_NONE_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND - zed_i/correlation_accel_v1_0/inst/correlation_accel_v1_fmul_32ns_32ns_32_5_max_dsp_U5/correlation_accel_v1_ap_fmul_3_max_dsp_32_u/U0/i_synth/MULT.OP/R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/DSP: DSP48E1 is not using the Multiplier (USE_MULT = NONE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
-INFO: [Drc 23-20] Rule violation (AVAL-5) enum_USE_MULT_NONE_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND - zed_i/correlation_accel_v1_0/inst/correlation_accel_v1_fmul_32ns_32ns_32_5_max_dsp_U6/correlation_accel_v1_ap_fmul_3_max_dsp_32_u/U0/i_synth/MULT.OP/R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/DSP: DSP48E1 is not using the Multiplier (USE_MULT = NONE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
-INFO: [Drc 23-20] Rule violation (AVAL-5) enum_USE_MULT_NONE_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND - zed_i/correlation_accel_v1_0/inst/correlation_accel_v1_fmul_32ns_32ns_32_5_max_dsp_U7/correlation_accel_v1_ap_fmul_3_max_dsp_32_u/U0/i_synth/MULT.OP/R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/DSP: DSP48E1 is not using the Multiplier (USE_MULT = NONE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
-INFO: [Drc 23-20] Rule violation (AVAL-5) enum_USE_MULT_NONE_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND - zed_i/correlation_accel_v1_0/inst/correlation_accel_v1_fmul_32ns_32ns_32_5_max_dsp_U8/correlation_accel_v1_ap_fmul_3_max_dsp_32_u/U0/i_synth/MULT.OP/R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/DSP: DSP48E1 is not using the Multiplier (USE_MULT = NONE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
-INFO: [Drc 23-20] Rule violation (REQP-165) writefirst - Synchronous clocking for BRAM (zed_i/axi_interconnect_S_AXI_HP0/s00_couplers/auto_us_df/inst/gen_upsizer.gen_full_upsizer.axi_upsizer_inst/USE_READ.gen_pktfifo_r_upsizer.pktfifo_read_data_inst/gen_ramb[0].ramb_inst) in SDP mode with Write First mode may have address collisions if the same address appears on both read and write ports. It is suggested to simulate the design to determine if any possible address collisions could exist in the design.  If so it is suggested to evaluate ways to eliminate the collisions or you may change the write mode to Read First which may reduce some performance and consume more power however will delay the writing thus resolving any potential collisions.  See the FPGA Memory Resources User Guide for additional information.
-INFO: [Drc 23-20] Rule violation (REQP-165) writefirst - Synchronous clocking for BRAM (zed_i/axi_interconnect_S_AXI_HP0/s00_couplers/auto_us_df/inst/gen_upsizer.gen_full_upsizer.axi_upsizer_inst/USE_READ.gen_pktfifo_r_upsizer.pktfifo_read_data_inst/gen_ramb[1].ramb_inst) in SDP mode with Write First mode may have address collisions if the same address appears on both read and write ports. It is suggested to simulate the design to determine if any possible address collisions could exist in the design.  If so it is suggested to evaluate ways to eliminate the collisions or you may change the write mode to Read First which may reduce some performance and consume more power however will delay the writing thus resolving any potential collisions.  See the FPGA Memory Resources User Guide for additional information.
-INFO: [Drc 23-20] Rule violation (REQP-181) writefirst - Synchronous clocking for BRAM (zed_i/axi_interconnect_S_AXI_HP0/s00_couplers/auto_us_df/inst/gen_upsizer.gen_full_upsizer.axi_upsizer_inst/USE_WRITE.gen_pktfifo_w_upsizer.pktfifo_write_data_inst/w_buffer/inst_blk_mem_gen/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM36_NO_ECC.ram) in SDP mode with Write First mode may have address collisions if the same address appears on both read and write ports. It is suggested to use Read First mode to avoid any conditions for address collision. See the FPGA Memory Resources User Guide for additional information.
-INFO: [Vivado 12-3199] DRC finished with 0 Errors, 51 Warnings, 46 Advisories
+WARNING: [Drc 23-20] Rule violation (DPIP-1) Input pipelining - DSP zed_i/correlation_accel_v1_0/inst/correlation_accel_v1_fadd_32ns_32ns_32_5_full_dsp_U3/correlation_accel_v1_ap_fadd_3_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/DSP input A B C is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [Drc 23-20] Rule violation (DPIP-1) Input pipelining - DSP zed_i/correlation_accel_v1_0/inst/correlation_accel_v1_fadd_32ns_32ns_32_5_full_dsp_U3/correlation_accel_v1_ap_fadd_3_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/SHIFT_RND/DSP input C is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [Drc 23-20] Rule violation (DPIP-1) Input pipelining - DSP zed_i/correlation_accel_v1_0/inst/correlation_accel_v1_fadd_32ns_32ns_32_5_full_dsp_U4/correlation_accel_v1_ap_fadd_3_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/DSP input A B C is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [Drc 23-20] Rule violation (DPIP-1) Input pipelining - DSP zed_i/correlation_accel_v1_0/inst/correlation_accel_v1_fadd_32ns_32ns_32_5_full_dsp_U4/correlation_accel_v1_ap_fadd_3_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/SHIFT_RND/DSP input C is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [Drc 23-20] Rule violation (DPIP-1) Input pipelining - DSP zed_i/correlation_accel_v1_0/inst/correlation_accel_v1_fadd_32ns_32ns_32_5_full_dsp_U5/correlation_accel_v1_ap_fadd_3_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/DSP input A B C is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [Drc 23-20] Rule violation (DPIP-1) Input pipelining - DSP zed_i/correlation_accel_v1_0/inst/correlation_accel_v1_fadd_32ns_32ns_32_5_full_dsp_U5/correlation_accel_v1_ap_fadd_3_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/SHIFT_RND/DSP input C is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [Drc 23-20] Rule violation (DPIP-1) Input pipelining - DSP zed_i/correlation_accel_v1_0/inst/correlation_accel_v1_fadd_32ns_32ns_32_5_full_dsp_U6/correlation_accel_v1_ap_fadd_3_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/DSP input A B C is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [Drc 23-20] Rule violation (DPIP-1) Input pipelining - DSP zed_i/correlation_accel_v1_0/inst/correlation_accel_v1_fadd_32ns_32ns_32_5_full_dsp_U6/correlation_accel_v1_ap_fadd_3_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/SHIFT_RND/DSP input C is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [Drc 23-20] Rule violation (DPIP-1) Input pipelining - DSP zed_i/correlation_accel_v1_0/inst/correlation_accel_v1_fadd_32ns_32ns_32_5_full_dsp_U7/correlation_accel_v1_ap_fadd_3_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/DSP input A B C is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [Drc 23-20] Rule violation (DPIP-1) Input pipelining - DSP zed_i/correlation_accel_v1_0/inst/correlation_accel_v1_fadd_32ns_32ns_32_5_full_dsp_U7/correlation_accel_v1_ap_fadd_3_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/SHIFT_RND/DSP input C is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [Drc 23-20] Rule violation (DPIP-1) Input pipelining - DSP zed_i/correlation_accel_v1_0/inst/correlation_accel_v1_faddfsub_32ns_32ns_32_5_full_dsp_U1/correlation_accel_v1_ap_faddfsub_3_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/DSP input A B C is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [Drc 23-20] Rule violation (DPIP-1) Input pipelining - DSP zed_i/correlation_accel_v1_0/inst/correlation_accel_v1_faddfsub_32ns_32ns_32_5_full_dsp_U1/correlation_accel_v1_ap_faddfsub_3_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/SHIFT_RND/DSP input C is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [Drc 23-20] Rule violation (DPIP-1) Input pipelining - DSP zed_i/correlation_accel_v1_0/inst/correlation_accel_v1_faddfsub_32ns_32ns_32_5_full_dsp_U2/correlation_accel_v1_ap_faddfsub_3_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/DSP input A B C is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [Drc 23-20] Rule violation (DPIP-1) Input pipelining - DSP zed_i/correlation_accel_v1_0/inst/correlation_accel_v1_faddfsub_32ns_32ns_32_5_full_dsp_U2/correlation_accel_v1_ap_faddfsub_3_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/SHIFT_RND/DSP input C is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [Drc 23-20] Rule violation (DPIP-1) Input pipelining - DSP zed_i/correlation_accel_v1_0/inst/correlation_accel_v1_flog_32ns_32ns_32_13_full_dsp_U21/correlation_accel_v1_ap_flog_11_full_dsp_32_u/U0/i_synth/LOG_OP.OP/rr/mul/gen_iter[1].rr_mult/az_mult_no_combined_adder.az_mult/gDSP.gHYBRID.iHYBRID/one_fabric_mult.dsp_based.iDSP/use_prim.appDSP48[0].bppDSP48[0].use_dsp.use_dsp48e1.iDSP48E1 input A B C is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [Drc 23-20] Rule violation (DPIP-1) Input pipelining - DSP zed_i/correlation_accel_v1_0/inst/correlation_accel_v1_flog_32ns_32ns_32_13_full_dsp_U21/correlation_accel_v1_ap_flog_11_full_dsp_32_u/U0/i_synth/LOG_OP.OP/rr/mul/gen_iter[2].rr_mult/az_mult_no_combined_adder.az_mult/gDSP.gDSP_only.iDSP/inferred_dsp.reg_mult.m_reg_reg input A B is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [Drc 23-20] Rule violation (DPIP-1) Input pipelining - DSP zed_i/correlation_accel_v1_0/inst/correlation_accel_v1_flog_32ns_32ns_32_13_full_dsp_U21/correlation_accel_v1_ap_flog_11_full_dsp_32_u/U0/i_synth/LOG_OP.OP/rr/mul/gen_iter[2].rr_mult/bez_add/dsp.one.dsp48e1_add/DSP input A B C is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [Drc 23-20] Rule violation (DPIP-1) Input pipelining - DSP zed_i/correlation_accel_v1_0/inst/correlation_accel_v1_flog_32ns_32ns_32_13_full_dsp_U21/correlation_accel_v1_ap_flog_11_full_dsp_32_u/U0/i_synth/LOG_OP.OP/taylor/gen_combiner_dsp48.addsub_comb/dsp.one.dsp48e1_add/DSP input A B C is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [Drc 23-20] Rule violation (DPIP-1) Input pipelining - DSP zed_i/correlation_accel_v1_0/inst/correlation_accel_v1_flog_32ns_32ns_32_13_full_dsp_U21/correlation_accel_v1_ap_flog_11_full_dsp_32_u/U0/i_synth/LOG_OP.OP/taylor/gen_sum_addsub_dsp48.sum_addsub/dsp.one.dsp48e1_add/DSP input A B C is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [Drc 23-20] Rule violation (DPIP-1) Input pipelining - DSP zed_i/correlation_accel_v1_0/inst/correlation_accel_v1_flog_32ns_32ns_32_13_full_dsp_U21/correlation_accel_v1_ap_flog_11_full_dsp_32_u/U0/i_synth/LOG_OP.OP/taylor/z_plus_L_adder/dsp.one.dsp48e1_add/DSP input A B C is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [Drc 23-20] Rule violation (DPIP-1) Input pipelining - DSP zed_i/correlation_accel_v1_0/inst/correlation_accel_v1_flog_32ns_32ns_32_13_full_dsp_U22/correlation_accel_v1_ap_flog_11_full_dsp_32_u/U0/i_synth/LOG_OP.OP/rr/mul/gen_iter[1].rr_mult/az_mult_no_combined_adder.az_mult/gDSP.gHYBRID.iHYBRID/one_fabric_mult.dsp_based.iDSP/use_prim.appDSP48[0].bppDSP48[0].use_dsp.use_dsp48e1.iDSP48E1 input A B C is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [Drc 23-20] Rule violation (DPIP-1) Input pipelining - DSP zed_i/correlation_accel_v1_0/inst/correlation_accel_v1_flog_32ns_32ns_32_13_full_dsp_U22/correlation_accel_v1_ap_flog_11_full_dsp_32_u/U0/i_synth/LOG_OP.OP/rr/mul/gen_iter[2].rr_mult/az_mult_no_combined_adder.az_mult/gDSP.gDSP_only.iDSP/inferred_dsp.reg_mult.m_reg_reg input A B is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [Drc 23-20] Rule violation (DPIP-1) Input pipelining - DSP zed_i/correlation_accel_v1_0/inst/correlation_accel_v1_flog_32ns_32ns_32_13_full_dsp_U22/correlation_accel_v1_ap_flog_11_full_dsp_32_u/U0/i_synth/LOG_OP.OP/rr/mul/gen_iter[2].rr_mult/bez_add/dsp.one.dsp48e1_add/DSP input A B C is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [Drc 23-20] Rule violation (DPIP-1) Input pipelining - DSP zed_i/correlation_accel_v1_0/inst/correlation_accel_v1_flog_32ns_32ns_32_13_full_dsp_U22/correlation_accel_v1_ap_flog_11_full_dsp_32_u/U0/i_synth/LOG_OP.OP/taylor/gen_combiner_dsp48.addsub_comb/dsp.one.dsp48e1_add/DSP input A B C is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [Drc 23-20] Rule violation (DPIP-1) Input pipelining - DSP zed_i/correlation_accel_v1_0/inst/correlation_accel_v1_flog_32ns_32ns_32_13_full_dsp_U22/correlation_accel_v1_ap_flog_11_full_dsp_32_u/U0/i_synth/LOG_OP.OP/taylor/gen_sum_addsub_dsp48.sum_addsub/dsp.one.dsp48e1_add/DSP input A B C is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [Drc 23-20] Rule violation (DPIP-1) Input pipelining - DSP zed_i/correlation_accel_v1_0/inst/correlation_accel_v1_flog_32ns_32ns_32_13_full_dsp_U22/correlation_accel_v1_ap_flog_11_full_dsp_32_u/U0/i_synth/LOG_OP.OP/taylor/z_plus_L_adder/dsp.one.dsp48e1_add/DSP input A B C is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [Drc 23-20] Rule violation (DPIP-1) Input pipelining - DSP zed_i/correlation_accel_v1_0/inst/correlation_accel_v1_fmul_32ns_32ns_32_4_max_dsp_U10/correlation_accel_v1_ap_fmul_2_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/DSP input A B is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [Drc 23-20] Rule violation (DPIP-1) Input pipelining - DSP zed_i/correlation_accel_v1_0/inst/correlation_accel_v1_fmul_32ns_32ns_32_4_max_dsp_U10/correlation_accel_v1_ap_fmul_2_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/DSP input B is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [Drc 23-20] Rule violation (DPIP-1) Input pipelining - DSP zed_i/correlation_accel_v1_0/inst/correlation_accel_v1_fmul_32ns_32ns_32_4_max_dsp_U10/correlation_accel_v1_ap_fmul_2_max_dsp_32_u/U0/i_synth/MULT.OP/R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/DSP input A C is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [Drc 23-20] Rule violation (DPIP-1) Input pipelining - DSP zed_i/correlation_accel_v1_0/inst/correlation_accel_v1_fmul_32ns_32ns_32_4_max_dsp_U11/correlation_accel_v1_ap_fmul_2_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/DSP input A B is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [Drc 23-20] Rule violation (DPIP-1) Input pipelining - DSP zed_i/correlation_accel_v1_0/inst/correlation_accel_v1_fmul_32ns_32ns_32_4_max_dsp_U11/correlation_accel_v1_ap_fmul_2_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/DSP input B is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [Drc 23-20] Rule violation (DPIP-1) Input pipelining - DSP zed_i/correlation_accel_v1_0/inst/correlation_accel_v1_fmul_32ns_32ns_32_4_max_dsp_U11/correlation_accel_v1_ap_fmul_2_max_dsp_32_u/U0/i_synth/MULT.OP/R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/DSP input A C is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [Drc 23-20] Rule violation (DPIP-1) Input pipelining - DSP zed_i/correlation_accel_v1_0/inst/correlation_accel_v1_fmul_32ns_32ns_32_4_max_dsp_U12/correlation_accel_v1_ap_fmul_2_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/DSP input A B is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [Drc 23-20] Rule violation (DPIP-1) Input pipelining - DSP zed_i/correlation_accel_v1_0/inst/correlation_accel_v1_fmul_32ns_32ns_32_4_max_dsp_U12/correlation_accel_v1_ap_fmul_2_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/DSP input B is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [Drc 23-20] Rule violation (DPIP-1) Input pipelining - DSP zed_i/correlation_accel_v1_0/inst/correlation_accel_v1_fmul_32ns_32ns_32_4_max_dsp_U12/correlation_accel_v1_ap_fmul_2_max_dsp_32_u/U0/i_synth/MULT.OP/R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/DSP input A C is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [Drc 23-20] Rule violation (DPIP-1) Input pipelining - DSP zed_i/correlation_accel_v1_0/inst/correlation_accel_v1_fmul_32ns_32ns_32_4_max_dsp_U13/correlation_accel_v1_ap_fmul_2_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/DSP input A B is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [Drc 23-20] Rule violation (DPIP-1) Input pipelining - DSP zed_i/correlation_accel_v1_0/inst/correlation_accel_v1_fmul_32ns_32ns_32_4_max_dsp_U13/correlation_accel_v1_ap_fmul_2_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/DSP input B is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [Drc 23-20] Rule violation (DPIP-1) Input pipelining - DSP zed_i/correlation_accel_v1_0/inst/correlation_accel_v1_fmul_32ns_32ns_32_4_max_dsp_U13/correlation_accel_v1_ap_fmul_2_max_dsp_32_u/U0/i_synth/MULT.OP/R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/DSP input A C is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [Drc 23-20] Rule violation (DPIP-1) Input pipelining - DSP zed_i/correlation_accel_v1_0/inst/correlation_accel_v1_fmul_32ns_32ns_32_4_max_dsp_U14/correlation_accel_v1_ap_fmul_2_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/DSP input A B is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [Drc 23-20] Rule violation (DPIP-1) Input pipelining - DSP zed_i/correlation_accel_v1_0/inst/correlation_accel_v1_fmul_32ns_32ns_32_4_max_dsp_U14/correlation_accel_v1_ap_fmul_2_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/DSP input B is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [Drc 23-20] Rule violation (DPIP-1) Input pipelining - DSP zed_i/correlation_accel_v1_0/inst/correlation_accel_v1_fmul_32ns_32ns_32_4_max_dsp_U14/correlation_accel_v1_ap_fmul_2_max_dsp_32_u/U0/i_synth/MULT.OP/R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/DSP input A C is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [Drc 23-20] Rule violation (DPIP-1) Input pipelining - DSP zed_i/correlation_accel_v1_0/inst/correlation_accel_v1_fmul_32ns_32ns_32_4_max_dsp_U15/correlation_accel_v1_ap_fmul_2_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/DSP input A B is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [Drc 23-20] Rule violation (DPIP-1) Input pipelining - DSP zed_i/correlation_accel_v1_0/inst/correlation_accel_v1_fmul_32ns_32ns_32_4_max_dsp_U15/correlation_accel_v1_ap_fmul_2_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/DSP input B is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [Drc 23-20] Rule violation (DPIP-1) Input pipelining - DSP zed_i/correlation_accel_v1_0/inst/correlation_accel_v1_fmul_32ns_32ns_32_4_max_dsp_U15/correlation_accel_v1_ap_fmul_2_max_dsp_32_u/U0/i_synth/MULT.OP/R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/DSP input A C is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [Drc 23-20] Rule violation (DPIP-1) Input pipelining - DSP zed_i/correlation_accel_v1_0/inst/correlation_accel_v1_fmul_32ns_32ns_32_4_max_dsp_U8/correlation_accel_v1_ap_fmul_2_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/DSP input A B is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [Drc 23-20] Rule violation (DPIP-1) Input pipelining - DSP zed_i/correlation_accel_v1_0/inst/correlation_accel_v1_fmul_32ns_32ns_32_4_max_dsp_U8/correlation_accel_v1_ap_fmul_2_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/DSP input B is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [Drc 23-20] Rule violation (DPIP-1) Input pipelining - DSP zed_i/correlation_accel_v1_0/inst/correlation_accel_v1_fmul_32ns_32ns_32_4_max_dsp_U8/correlation_accel_v1_ap_fmul_2_max_dsp_32_u/U0/i_synth/MULT.OP/R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/DSP input A C is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [Drc 23-20] Rule violation (DPIP-1) Input pipelining - DSP zed_i/correlation_accel_v1_0/inst/correlation_accel_v1_fmul_32ns_32ns_32_4_max_dsp_U9/correlation_accel_v1_ap_fmul_2_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/DSP input A B is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [Drc 23-20] Rule violation (DPIP-1) Input pipelining - DSP zed_i/correlation_accel_v1_0/inst/correlation_accel_v1_fmul_32ns_32ns_32_4_max_dsp_U9/correlation_accel_v1_ap_fmul_2_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/DSP input B is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [Drc 23-20] Rule violation (DPIP-1) Input pipelining - DSP zed_i/correlation_accel_v1_0/inst/correlation_accel_v1_fmul_32ns_32ns_32_4_max_dsp_U9/correlation_accel_v1_ap_fmul_2_max_dsp_32_u/U0/i_synth/MULT.OP/R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/DSP input A C is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [Drc 23-20] Rule violation (DPOP-1) Output pipelining - DSP zed_i/correlation_accel_v1_0/inst/correlation_accel_v1_fadd_32ns_32ns_32_5_full_dsp_U3/correlation_accel_v1_ap_fadd_3_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/DSP output P is not pipelined. Pipelining DSP48 output will improve performance. Both multiplier/adder output can be pipelined.
+WARNING: [Drc 23-20] Rule violation (DPOP-1) Output pipelining - DSP zed_i/correlation_accel_v1_0/inst/correlation_accel_v1_fadd_32ns_32ns_32_5_full_dsp_U3/correlation_accel_v1_ap_fadd_3_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/SHIFT_RND/DSP output P is not pipelined. Pipelining DSP48 output will improve performance. Both multiplier/adder output can be pipelined.
+WARNING: [Drc 23-20] Rule violation (DPOP-1) Output pipelining - DSP zed_i/correlation_accel_v1_0/inst/correlation_accel_v1_fadd_32ns_32ns_32_5_full_dsp_U4/correlation_accel_v1_ap_fadd_3_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/DSP output P is not pipelined. Pipelining DSP48 output will improve performance. Both multiplier/adder output can be pipelined.
+WARNING: [Drc 23-20] Rule violation (DPOP-1) Output pipelining - DSP zed_i/correlation_accel_v1_0/inst/correlation_accel_v1_fadd_32ns_32ns_32_5_full_dsp_U4/correlation_accel_v1_ap_fadd_3_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/SHIFT_RND/DSP output P is not pipelined. Pipelining DSP48 output will improve performance. Both multiplier/adder output can be pipelined.
+WARNING: [Drc 23-20] Rule violation (DPOP-1) Output pipelining - DSP zed_i/correlation_accel_v1_0/inst/correlation_accel_v1_fadd_32ns_32ns_32_5_full_dsp_U5/correlation_accel_v1_ap_fadd_3_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/DSP output P is not pipelined. Pipelining DSP48 output will improve performance. Both multiplier/adder output can be pipelined.
+WARNING: [Drc 23-20] Rule violation (DPOP-1) Output pipelining - DSP zed_i/correlation_accel_v1_0/inst/correlation_accel_v1_fadd_32ns_32ns_32_5_full_dsp_U5/correlation_accel_v1_ap_fadd_3_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/SHIFT_RND/DSP output P is not pipelined. Pipelining DSP48 output will improve performance. Both multiplier/adder output can be pipelined.
+WARNING: [Drc 23-20] Rule violation (DPOP-1) Output pipelining - DSP zed_i/correlation_accel_v1_0/inst/correlation_accel_v1_fadd_32ns_32ns_32_5_full_dsp_U6/correlation_accel_v1_ap_fadd_3_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/DSP output P is not pipelined. Pipelining DSP48 output will improve performance. Both multiplier/adder output can be pipelined.
+WARNING: [Drc 23-20] Rule violation (DPOP-1) Output pipelining - DSP zed_i/correlation_accel_v1_0/inst/correlation_accel_v1_fadd_32ns_32ns_32_5_full_dsp_U6/correlation_accel_v1_ap_fadd_3_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/SHIFT_RND/DSP output P is not pipelined. Pipelining DSP48 output will improve performance. Both multiplier/adder output can be pipelined.
+WARNING: [Drc 23-20] Rule violation (DPOP-1) Output pipelining - DSP zed_i/correlation_accel_v1_0/inst/correlation_accel_v1_fadd_32ns_32ns_32_5_full_dsp_U7/correlation_accel_v1_ap_fadd_3_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/DSP output P is not pipelined. Pipelining DSP48 output will improve performance. Both multiplier/adder output can be pipelined.
+WARNING: [Drc 23-20] Rule violation (DPOP-1) Output pipelining - DSP zed_i/correlation_accel_v1_0/inst/correlation_accel_v1_fadd_32ns_32ns_32_5_full_dsp_U7/correlation_accel_v1_ap_fadd_3_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/SHIFT_RND/DSP output P is not pipelined. Pipelining DSP48 output will improve performance. Both multiplier/adder output can be pipelined.
+WARNING: [Drc 23-20] Rule violation (DPOP-1) Output pipelining - DSP zed_i/correlation_accel_v1_0/inst/correlation_accel_v1_faddfsub_32ns_32ns_32_5_full_dsp_U1/correlation_accel_v1_ap_faddfsub_3_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/DSP output P is not pipelined. Pipelining DSP48 output will improve performance. Both multiplier/adder output can be pipelined.
+WARNING: [Drc 23-20] Rule violation (DPOP-1) Output pipelining - DSP zed_i/correlation_accel_v1_0/inst/correlation_accel_v1_faddfsub_32ns_32ns_32_5_full_dsp_U1/correlation_accel_v1_ap_faddfsub_3_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/SHIFT_RND/DSP output P is not pipelined. Pipelining DSP48 output will improve performance. Both multiplier/adder output can be pipelined.
+WARNING: [Drc 23-20] Rule violation (DPOP-1) Output pipelining - DSP zed_i/correlation_accel_v1_0/inst/correlation_accel_v1_faddfsub_32ns_32ns_32_5_full_dsp_U2/correlation_accel_v1_ap_faddfsub_3_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/DSP output P is not pipelined. Pipelining DSP48 output will improve performance. Both multiplier/adder output can be pipelined.
+WARNING: [Drc 23-20] Rule violation (DPOP-1) Output pipelining - DSP zed_i/correlation_accel_v1_0/inst/correlation_accel_v1_faddfsub_32ns_32ns_32_5_full_dsp_U2/correlation_accel_v1_ap_faddfsub_3_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/SHIFT_RND/DSP output P is not pipelined. Pipelining DSP48 output will improve performance. Both multiplier/adder output can be pipelined.
+WARNING: [Drc 23-20] Rule violation (DPOP-1) Output pipelining - DSP zed_i/correlation_accel_v1_0/inst/correlation_accel_v1_flog_32ns_32ns_32_13_full_dsp_U21/correlation_accel_v1_ap_flog_11_full_dsp_32_u/U0/i_synth/LOG_OP.OP/rr/L_path/g_adders[0].add/dsp.one.dsp48e1_add/DSP output P is not pipelined. Pipelining DSP48 output will improve performance. Both multiplier/adder output can be pipelined.
+WARNING: [Drc 23-20] Rule violation (DPOP-1) Output pipelining - DSP zed_i/correlation_accel_v1_0/inst/correlation_accel_v1_flog_32ns_32ns_32_13_full_dsp_U21/correlation_accel_v1_ap_flog_11_full_dsp_32_u/U0/i_synth/LOG_OP.OP/rr/L_path/g_adders[1].add/dsp.one.dsp48e1_add/DSP output P is not pipelined. Pipelining DSP48 output will improve performance. Both multiplier/adder output can be pipelined.
+WARNING: [Drc 23-20] Rule violation (DPOP-1) Output pipelining - DSP zed_i/correlation_accel_v1_0/inst/correlation_accel_v1_flog_32ns_32ns_32_13_full_dsp_U21/correlation_accel_v1_ap_flog_11_full_dsp_32_u/U0/i_synth/LOG_OP.OP/rr/mul/gen_iter[1].rr_mult/az_mult_no_combined_adder.az_mult/gDSP.gHYBRID.iHYBRID/one_fabric_mult.dsp_based.iDSP/use_prim.appDSP48[0].bppDSP48[0].use_dsp.use_dsp48e1.iDSP48E1 output P is not pipelined. Pipelining DSP48 output will improve performance. Both multiplier/adder output can be pipelined.
+WARNING: [Drc 23-20] Rule violation (DPOP-1) Output pipelining - DSP zed_i/correlation_accel_v1_0/inst/correlation_accel_v1_flog_32ns_32ns_32_13_full_dsp_U21/correlation_accel_v1_ap_flog_11_full_dsp_32_u/U0/i_synth/LOG_OP.OP/rr/mul/gen_iter[1].rr_mult/bez_add/dsp.one.dsp48e1_add/DSP output P is not pipelined. Pipelining DSP48 output will improve performance. Both multiplier/adder output can be pipelined.
+WARNING: [Drc 23-20] Rule violation (DPOP-1) Output pipelining - DSP zed_i/correlation_accel_v1_0/inst/correlation_accel_v1_flog_32ns_32ns_32_13_full_dsp_U21/correlation_accel_v1_ap_flog_11_full_dsp_32_u/U0/i_synth/LOG_OP.OP/rr/mul/gen_iter[1].rr_mult/zi_add_no_combined_adder.zi_add/dsp.one.dsp48e1_add/DSP output P is not pipelined. Pipelining DSP48 output will improve performance. Both multiplier/adder output can be pipelined.
+WARNING: [Drc 23-20] Rule violation (DPOP-1) Output pipelining - DSP zed_i/correlation_accel_v1_0/inst/correlation_accel_v1_flog_32ns_32ns_32_13_full_dsp_U21/correlation_accel_v1_ap_flog_11_full_dsp_32_u/U0/i_synth/LOG_OP.OP/rr/mul/gen_iter[2].rr_mult/az_mult_no_combined_adder.az_mult/gDSP.gDSP_only.iDSP/inferred_dsp.reg_mult.m_reg_reg output P is not pipelined. Pipelining DSP48 output will improve performance. Both multiplier/adder output can be pipelined.
+WARNING: [Drc 23-20] Rule violation (DPOP-1) Output pipelining - DSP zed_i/correlation_accel_v1_0/inst/correlation_accel_v1_flog_32ns_32ns_32_13_full_dsp_U21/correlation_accel_v1_ap_flog_11_full_dsp_32_u/U0/i_synth/LOG_OP.OP/rr/mul/gen_iter[2].rr_mult/bez_add/dsp.one.dsp48e1_add/DSP output P is not pipelined. Pipelining DSP48 output will improve performance. Both multiplier/adder output can be pipelined.
+WARNING: [Drc 23-20] Rule violation (DPOP-1) Output pipelining - DSP zed_i/correlation_accel_v1_0/inst/correlation_accel_v1_flog_32ns_32ns_32_13_full_dsp_U21/correlation_accel_v1_ap_flog_11_full_dsp_32_u/U0/i_synth/LOG_OP.OP/rr/mul/gen_iter[2].rr_mult/zi_add_no_combined_adder.zi_add/dsp.one.dsp48e1_add/DSP output P is not pipelined. Pipelining DSP48 output will improve performance. Both multiplier/adder output can be pipelined.
+WARNING: [Drc 23-20] Rule violation (DPOP-1) Output pipelining - DSP zed_i/correlation_accel_v1_0/inst/correlation_accel_v1_flog_32ns_32ns_32_13_full_dsp_U21/correlation_accel_v1_ap_flog_11_full_dsp_32_u/U0/i_synth/LOG_OP.OP/rr/mul/z1_mult/gDSP.gDSP_only.iDSP/inferred_dsp.reg_mult.m_reg_reg output P is not pipelined. Pipelining DSP48 output will improve performance. Both multiplier/adder output can be pipelined.
+WARNING: [Drc 23-20] Rule violation (DPOP-1) Output pipelining - DSP zed_i/correlation_accel_v1_0/inst/correlation_accel_v1_flog_32ns_32ns_32_13_full_dsp_U21/correlation_accel_v1_ap_flog_11_full_dsp_32_u/U0/i_synth/LOG_OP.OP/taylor/gen_combiner_dsp48.addsub_comb/dsp.one.dsp48e1_add/DSP output P is not pipelined. Pipelining DSP48 output will improve performance. Both multiplier/adder output can be pipelined.
+WARNING: [Drc 23-20] Rule violation (DPOP-1) Output pipelining - DSP zed_i/correlation_accel_v1_0/inst/correlation_accel_v1_flog_32ns_32ns_32_13_full_dsp_U21/correlation_accel_v1_ap_flog_11_full_dsp_32_u/U0/i_synth/LOG_OP.OP/taylor/gen_sum_addsub_dsp48.sum_addsub/dsp.one.dsp48e1_add/DSP output P is not pipelined. Pipelining DSP48 output will improve performance. Both multiplier/adder output can be pipelined.
+WARNING: [Drc 23-20] Rule violation (DPOP-1) Output pipelining - DSP zed_i/correlation_accel_v1_0/inst/correlation_accel_v1_flog_32ns_32ns_32_13_full_dsp_U21/correlation_accel_v1_ap_flog_11_full_dsp_32_u/U0/i_synth/LOG_OP.OP/taylor/squarer/gDSP.gDSP_only.iDSP/inferred_dsp.reg_mult.m_reg_reg output P is not pipelined. Pipelining DSP48 output will improve performance. Both multiplier/adder output can be pipelined.
+WARNING: [Drc 23-20] Rule violation (DPOP-1) Output pipelining - DSP zed_i/correlation_accel_v1_0/inst/correlation_accel_v1_flog_32ns_32ns_32_13_full_dsp_U21/correlation_accel_v1_ap_flog_11_full_dsp_32_u/U0/i_synth/LOG_OP.OP/taylor/z_plus_L_adder/dsp.one.dsp48e1_add/DSP output P is not pipelined. Pipelining DSP48 output will improve performance. Both multiplier/adder output can be pipelined.
+WARNING: [Drc 23-20] Rule violation (DPOP-1) Output pipelining - DSP zed_i/correlation_accel_v1_0/inst/correlation_accel_v1_flog_32ns_32ns_32_13_full_dsp_U22/correlation_accel_v1_ap_flog_11_full_dsp_32_u/U0/i_synth/LOG_OP.OP/rr/L_path/g_adders[0].add/dsp.one.dsp48e1_add/DSP output P is not pipelined. Pipelining DSP48 output will improve performance. Both multiplier/adder output can be pipelined.
+WARNING: [Drc 23-20] Rule violation (DPOP-1) Output pipelining - DSP zed_i/correlation_accel_v1_0/inst/correlation_accel_v1_flog_32ns_32ns_32_13_full_dsp_U22/correlation_accel_v1_ap_flog_11_full_dsp_32_u/U0/i_synth/LOG_OP.OP/rr/L_path/g_adders[1].add/dsp.one.dsp48e1_add/DSP output P is not pipelined. Pipelining DSP48 output will improve performance. Both multiplier/adder output can be pipelined.
+WARNING: [Drc 23-20] Rule violation (DPOP-1) Output pipelining - DSP zed_i/correlation_accel_v1_0/inst/correlation_accel_v1_flog_32ns_32ns_32_13_full_dsp_U22/correlation_accel_v1_ap_flog_11_full_dsp_32_u/U0/i_synth/LOG_OP.OP/rr/mul/gen_iter[1].rr_mult/az_mult_no_combined_adder.az_mult/gDSP.gHYBRID.iHYBRID/one_fabric_mult.dsp_based.iDSP/use_prim.appDSP48[0].bppDSP48[0].use_dsp.use_dsp48e1.iDSP48E1 output P is not pipelined. Pipelining DSP48 output will improve performance. Both multiplier/adder output can be pipelined.
+WARNING: [Drc 23-20] Rule violation (DPOP-1) Output pipelining - DSP zed_i/correlation_accel_v1_0/inst/correlation_accel_v1_flog_32ns_32ns_32_13_full_dsp_U22/correlation_accel_v1_ap_flog_11_full_dsp_32_u/U0/i_synth/LOG_OP.OP/rr/mul/gen_iter[1].rr_mult/bez_add/dsp.one.dsp48e1_add/DSP output P is not pipelined. Pipelining DSP48 output will improve performance. Both multiplier/adder output can be pipelined.
+WARNING: [Drc 23-20] Rule violation (DPOP-1) Output pipelining - DSP zed_i/correlation_accel_v1_0/inst/correlation_accel_v1_flog_32ns_32ns_32_13_full_dsp_U22/correlation_accel_v1_ap_flog_11_full_dsp_32_u/U0/i_synth/LOG_OP.OP/rr/mul/gen_iter[1].rr_mult/zi_add_no_combined_adder.zi_add/dsp.one.dsp48e1_add/DSP output P is not pipelined. Pipelining DSP48 output will improve performance. Both multiplier/adder output can be pipelined.
+WARNING: [Drc 23-20] Rule violation (DPOP-1) Output pipelining - DSP zed_i/correlation_accel_v1_0/inst/correlation_accel_v1_flog_32ns_32ns_32_13_full_dsp_U22/correlation_accel_v1_ap_flog_11_full_dsp_32_u/U0/i_synth/LOG_OP.OP/rr/mul/gen_iter[2].rr_mult/az_mult_no_combined_adder.az_mult/gDSP.gDSP_only.iDSP/inferred_dsp.reg_mult.m_reg_reg output P is not pipelined. Pipelining DSP48 output will improve performance. Both multiplier/adder output can be pipelined.
+WARNING: [Drc 23-20] Rule violation (DPOP-1) Output pipelining - DSP zed_i/correlation_accel_v1_0/inst/correlation_accel_v1_flog_32ns_32ns_32_13_full_dsp_U22/correlation_accel_v1_ap_flog_11_full_dsp_32_u/U0/i_synth/LOG_OP.OP/rr/mul/gen_iter[2].rr_mult/bez_add/dsp.one.dsp48e1_add/DSP output P is not pipelined. Pipelining DSP48 output will improve performance. Both multiplier/adder output can be pipelined.
+WARNING: [Drc 23-20] Rule violation (DPOP-1) Output pipelining - DSP zed_i/correlation_accel_v1_0/inst/correlation_accel_v1_flog_32ns_32ns_32_13_full_dsp_U22/correlation_accel_v1_ap_flog_11_full_dsp_32_u/U0/i_synth/LOG_OP.OP/rr/mul/gen_iter[2].rr_mult/zi_add_no_combined_adder.zi_add/dsp.one.dsp48e1_add/DSP output P is not pipelined. Pipelining DSP48 output will improve performance. Both multiplier/adder output can be pipelined.
+WARNING: [Drc 23-20] Rule violation (DPOP-1) Output pipelining - DSP zed_i/correlation_accel_v1_0/inst/correlation_accel_v1_flog_32ns_32ns_32_13_full_dsp_U22/correlation_accel_v1_ap_flog_11_full_dsp_32_u/U0/i_synth/LOG_OP.OP/rr/mul/z1_mult/gDSP.gDSP_only.iDSP/inferred_dsp.reg_mult.m_reg_reg output P is not pipelined. Pipelining DSP48 output will improve performance. Both multiplier/adder output can be pipelined.
+WARNING: [Drc 23-20] Rule violation (DPOP-1) Output pipelining - DSP zed_i/correlation_accel_v1_0/inst/correlation_accel_v1_flog_32ns_32ns_32_13_full_dsp_U22/correlation_accel_v1_ap_flog_11_full_dsp_32_u/U0/i_synth/LOG_OP.OP/taylor/gen_combiner_dsp48.addsub_comb/dsp.one.dsp48e1_add/DSP output P is not pipelined. Pipelining DSP48 output will improve performance. Both multiplier/adder output can be pipelined.
+WARNING: [Drc 23-20] Rule violation (DPOP-1) Output pipelining - DSP zed_i/correlation_accel_v1_0/inst/correlation_accel_v1_flog_32ns_32ns_32_13_full_dsp_U22/correlation_accel_v1_ap_flog_11_full_dsp_32_u/U0/i_synth/LOG_OP.OP/taylor/gen_sum_addsub_dsp48.sum_addsub/dsp.one.dsp48e1_add/DSP output P is not pipelined. Pipelining DSP48 output will improve performance. Both multiplier/adder output can be pipelined.
+WARNING: [Drc 23-20] Rule violation (DPOP-1) Output pipelining - DSP zed_i/correlation_accel_v1_0/inst/correlation_accel_v1_flog_32ns_32ns_32_13_full_dsp_U22/correlation_accel_v1_ap_flog_11_full_dsp_32_u/U0/i_synth/LOG_OP.OP/taylor/squarer/gDSP.gDSP_only.iDSP/inferred_dsp.reg_mult.m_reg_reg output P is not pipelined. Pipelining DSP48 output will improve performance. Both multiplier/adder output can be pipelined.
+WARNING: [Drc 23-20] Rule violation (DPOP-1) Output pipelining - DSP zed_i/correlation_accel_v1_0/inst/correlation_accel_v1_flog_32ns_32ns_32_13_full_dsp_U22/correlation_accel_v1_ap_flog_11_full_dsp_32_u/U0/i_synth/LOG_OP.OP/taylor/z_plus_L_adder/dsp.one.dsp48e1_add/DSP output P is not pipelined. Pipelining DSP48 output will improve performance. Both multiplier/adder output can be pipelined.
+WARNING: [Drc 23-20] Rule violation (DPOP-1) Output pipelining - DSP zed_i/correlation_accel_v1_0/inst/correlation_accel_v1_fmul_32ns_32ns_32_4_max_dsp_U10/correlation_accel_v1_ap_fmul_2_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/DSP output P is not pipelined. Pipelining DSP48 output will improve performance. Both multiplier/adder output can be pipelined.
+WARNING: [Drc 23-20] Rule violation (DPOP-1) Output pipelining - DSP zed_i/correlation_accel_v1_0/inst/correlation_accel_v1_fmul_32ns_32ns_32_4_max_dsp_U10/correlation_accel_v1_ap_fmul_2_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/DSP output P is not pipelined. Pipelining DSP48 output will improve performance. Both multiplier/adder output can be pipelined.
+WARNING: [Drc 23-20] Rule violation (DPOP-1) Output pipelining - DSP zed_i/correlation_accel_v1_0/inst/correlation_accel_v1_fmul_32ns_32ns_32_4_max_dsp_U10/correlation_accel_v1_ap_fmul_2_max_dsp_32_u/U0/i_synth/MULT.OP/R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/DSP output P is not pipelined. Pipelining DSP48 output will improve performance. Both multiplier/adder output can be pipelined.
+WARNING: [Drc 23-20] Rule violation (DPOP-1) Output pipelining - DSP zed_i/correlation_accel_v1_0/inst/correlation_accel_v1_fmul_32ns_32ns_32_4_max_dsp_U11/correlation_accel_v1_ap_fmul_2_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/DSP output P is not pipelined. Pipelining DSP48 output will improve performance. Both multiplier/adder output can be pipelined.
+WARNING: [Drc 23-20] Rule violation (DPOP-1) Output pipelining - DSP zed_i/correlation_accel_v1_0/inst/correlation_accel_v1_fmul_32ns_32ns_32_4_max_dsp_U11/correlation_accel_v1_ap_fmul_2_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/DSP output P is not pipelined. Pipelining DSP48 output will improve performance. Both multiplier/adder output can be pipelined.
+WARNING: [Drc 23-20] Rule violation (DPOP-1) Output pipelining - DSP zed_i/correlation_accel_v1_0/inst/correlation_accel_v1_fmul_32ns_32ns_32_4_max_dsp_U11/correlation_accel_v1_ap_fmul_2_max_dsp_32_u/U0/i_synth/MULT.OP/R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/DSP output P is not pipelined. Pipelining DSP48 output will improve performance. Both multiplier/adder output can be pipelined.
+WARNING: [Drc 23-20] Rule violation (DPOP-1) Output pipelining - DSP zed_i/correlation_accel_v1_0/inst/correlation_accel_v1_fmul_32ns_32ns_32_4_max_dsp_U12/correlation_accel_v1_ap_fmul_2_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/DSP output P is not pipelined. Pipelining DSP48 output will improve performance. Both multiplier/adder output can be pipelined.
+WARNING: [Drc 23-20] Rule violation (DPOP-1) Output pipelining - DSP zed_i/correlation_accel_v1_0/inst/correlation_accel_v1_fmul_32ns_32ns_32_4_max_dsp_U12/correlation_accel_v1_ap_fmul_2_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/DSP output P is not pipelined. Pipelining DSP48 output will improve performance. Both multiplier/adder output can be pipelined.
+INFO: [Common 17-14] Message 'Drc 23-20' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Vivado 12-3199] DRC finished with 0 Errors, 116 Warnings, 87 Advisories
 INFO: [Vivado 12-3200] Please refer to the DRC report (report_drc) for more information.
 Loading data files...
 Loading site data...
@@ -778,8 +723,8 @@ Creating bitstream...
 Writing bitstream ./zed_wrapper.bit...
 INFO: [Vivado 12-1842] Bitgen Completed Successfully.
 INFO: [Project 1-118] WebTalk data collection is enabled (User setting is ON. Install Setting is ON.).
-INFO: [Common 17-186] '/home/trungnguyen/SDSoC/workspace/correlation_ver1/correlation_ver1_linux/SDRelease/_sds/p0/ipi/zed.runs/impl_1/usage_statistics_webtalk.xml' has been successfully sent to Xilinx on Mon Oct 31 20:14:39 2016. For additional details about this file, please refer to the WebTalk help file at /opt/Xilinx/SDSoC/2014.4/Vivado/2014.4/doc/webtalk_introduction.html.
+INFO: [Common 17-186] '/home/trungnguyen/SDSoC/workspace/correlation_ver1/correlation_ver1_linux/SDRelease/_sds/p0/ipi/zed.runs/impl_1/usage_statistics_webtalk.xml' has been successfully sent to Xilinx on Mon Oct 31 20:45:02 2016. For additional details about this file, please refer to the WebTalk help file at /opt/Xilinx/SDSoC/2014.4/Vivado/2014.4/doc/webtalk_introduction.html.
 INFO: [Common 17-83] Releasing license: Implementation
-write_bitstream: Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 2528.699 ; gain = 285.762 ; free physical = 9644 ; free virtual = 20899
+write_bitstream: Time (s): cpu = 00:00:25 ; elapsed = 00:00:26 . Memory (MB): peak = 2544.770 ; gain = 285.129 ; free physical = 9053 ; free virtual = 20893
 WARNING: [Vivado_Tcl 4-319] File zed_wrapper.mmi does not exist
-INFO: [Common 17-206] Exiting Vivado at Mon Oct 31 20:14:39 2016...
+INFO: [Common 17-206] Exiting Vivado at Mon Oct 31 20:45:02 2016...

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xd:acceleratorMap xmlns:xd="http://www.xilinx.com/xd" xd:fcnName="correlation_accel_v1" xd:type="hls_adapter" xd:adapterCompRef="correlation_accel_v1_if" xd:clockId="1" xd:componentRef="correlation_accel_v1" xd:initiationInterval="x" xd:clockPeriod="5.950000" xd:sequential="true" xd:hostMachine="64">
+<xd:acceleratorMap xmlns:xd="http://www.xilinx.com/xd" xd:fcnName="correlation_accel_v1" xd:type="hls_adapter" xd:adapterCompRef="correlation_accel_v1_if" xd:clockId="2" xd:componentRef="correlation_accel_v1" xd:initiationInterval="x" xd:clockPeriod="8.500000" xd:sequential="true" xd:hostMachine="64">
   <xd:returnValue xd:busInterfaceRef="ap_return" xd:portInterfaceType="register" xd:dataWidth="32" xd:hwName="ap_return" xd:index="0" xd:offset="0xC0" xd:bufferDepth="16"/>
   <xd:controlReg xd:name="control" xd:busInterfaceRef="ap_ctrl" xd:portInterfaceType="acc_handshake" xd:type="axis_acc_adapter" xd:offset="0x28" xd:bufferDepth="16" xd:dataWidth="4"/>
   <xd:arg xd:name="in_indices" xd:swRootName="in_indices" xd:direction="inout" xd:busInterfaceRef="m_axi_gmem32" xd:hwName="m_axi_gmem32" xd:portInterfaceType="aximm" xd:dataPack="true" xd:bitMapping="31:0" xd:arraySize="2520000" xd:dataWidth="32" xd:bufferDirection="in"/>
@@ -9,5 +9,5 @@
   <xd:arg xd:name="in_indices" xd:swRootName="in_indices" xd:direction="in" xd:busInterfaceRef="in_indices" xd:hwName="in_indices" xd:portInterfaceType="register" xd:aximmInterfaceRef="m_axi_gmem32" xd:dataWidth="32" xd:handshakeRef="ap_none" xd:instanceRef="correlation_accel_v1_if" xd:index="2" xd:offset="0x88" xd:bufferDepth="16"/>
   <xd:arg xd:name="out_correlation" xd:swRootName="out_correlation" xd:direction="in" xd:busInterfaceRef="out_correlation" xd:hwName="out_correlation" xd:portInterfaceType="register" xd:aximmInterfaceRef="m_axi_gmem32" xd:dataWidth="32" xd:handshakeRef="ap_none" xd:instanceRef="correlation_accel_v1_if" xd:index="3" xd:offset="0x8C" xd:bufferDepth="16"/>
   <xd:latencyEstimates xd:best-case="undef" xd:worst-case="undef" xd:average-case="undef"/>
-  <xd:resourceEstimates xd:LUT="13142" xd:FF="12711" xd:BRAM="5" xd:DSP="37"/>
+  <xd:resourceEstimates xd:LUT="15424" xd:FF="11473" xd:BRAM="6" xd:DSP="68"/>
 </xd:acceleratorMap>

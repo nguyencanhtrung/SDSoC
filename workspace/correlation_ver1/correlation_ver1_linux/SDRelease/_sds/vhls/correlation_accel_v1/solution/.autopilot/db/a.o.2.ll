@@ -515,7 +515,7 @@ declare i32 @_ssdm_op_SpecLoopTripCount(...)
 !0 = metadata !{i32 786449, i32 0, i32 4, metadata !"/home/trungnguyen/SDSoC/workspace/correlation_ver1/correlation_ver1_linux/SDRelease/_sds/vhls/correlation_accel_v1/solution/.autopilot/db/correlation_accel_v1.pragma.2.cpp", metadata !"/home/trungnguyen/SDSoC/workspace/correlation_ver1/correlation_ver1_linux/SDRelease/_sds/vhls", metadata !"clang version 3.1 ", i1 true, i1 false, metadata !"", i32 0, null, null, null, metadata !1} ; [ DW_TAG_compile_unit ]
 !1 = metadata !{metadata !2}
 !2 = metadata !{metadata !3, metadata !16, metadata !17, metadata !18, metadata !20, metadata !23, metadata !24, metadata !25, metadata !27}
-!3 = metadata !{i32 786484, i32 0, metadata !4, metadata !"bramA", metadata !"bramA", metadata !"", metadata !5, i32 58, metadata !13, i32 1, i32 1, [252 x float]* @bramA} ; [ DW_TAG_variable ]
+!3 = metadata !{i32 786484, i32 0, metadata !4, metadata !"bramB", metadata !"bramB", metadata !"", metadata !5, i32 59, metadata !13, i32 1, i32 1, [252 x float]* @bramB} ; [ DW_TAG_variable ]
 !4 = metadata !{i32 786478, i32 0, metadata !5, metadata !"correlation_accel_v1", metadata !"correlation_accel_v1", metadata !"_Z20correlation_accel_v1iiPfS_", metadata !5, i32 25, metadata !6, i1 false, i1 true, i32 0, i32 0, null, i32 256, i1 false, null, null, null, metadata !11, i32 32} ; [ DW_TAG_subprogram ]
 !5 = metadata !{i32 786473, metadata !"/home/trungnguyen/SDSoC/workspace/correlation_ver1/correlation_ver1_linux/SDRelease/_sds/vhls/src/correlation_accel_v1.cpp", metadata !"/home/trungnguyen/SDSoC/workspace/correlation_ver1/correlation_ver1_linux/SDRelease/_sds/vhls", null} ; [ DW_TAG_file_type ]
 !6 = metadata !{i32 786453, i32 0, metadata !"", i32 0, i32 0, i64 0, i64 0, i64 0, i32 0, null, metadata !7, i32 0, i32 0} ; [ DW_TAG_subroutine_type ]
@@ -528,8 +528,8 @@ declare i32 @_ssdm_op_SpecLoopTripCount(...)
 !13 = metadata !{i32 786433, null, metadata !"", null, i32 0, i64 8064, i64 32, i32 0, i32 0, metadata !10, metadata !14, i32 0, i32 0} ; [ DW_TAG_array_type ]
 !14 = metadata !{metadata !15}
 !15 = metadata !{i32 786465, i64 0, i64 251}      ; [ DW_TAG_subrange_type ]
-!16 = metadata !{i32 786484, i32 0, metadata !4, metadata !"bramB", metadata !"bramB", metadata !"", metadata !5, i32 59, metadata !13, i32 1, i32 1, [252 x float]* @bramB} ; [ DW_TAG_variable ]
-!17 = metadata !{i32 786484, i32 0, metadata !4, metadata !"weight_rom", metadata !"weight_rom", metadata !"", metadata !5, i32 49, metadata !13, i32 1, i32 1, [252 x float]* @weight_rom} ; [ DW_TAG_variable ]
+!16 = metadata !{i32 786484, i32 0, metadata !4, metadata !"weight_rom", metadata !"weight_rom", metadata !"", metadata !5, i32 49, metadata !13, i32 1, i32 1, [252 x float]* @weight_rom} ; [ DW_TAG_variable ]
+!17 = metadata !{i32 786484, i32 0, metadata !4, metadata !"bramA", metadata !"bramA", metadata !"", metadata !5, i32 58, metadata !13, i32 1, i32 1, [252 x float]* @bramA} ; [ DW_TAG_variable ]
 !18 = metadata !{i32 786484, i32 0, null, metadata !"signgam", metadata !"signgam", metadata !"", metadata !19, i32 157, metadata !8, i32 0, i32 1, null} ; [ DW_TAG_variable ]
 !19 = metadata !{i32 786473, metadata !"/usr/include/math.h", metadata !"/home/trungnguyen/SDSoC/workspace/correlation_ver1/correlation_ver1_linux/SDRelease/_sds/vhls", null} ; [ DW_TAG_file_type ]
 !20 = metadata !{i32 786484, i32 0, null, metadata !"_IO_2_1_stdin_", metadata !"_IO_2_1_stdin_", metadata !"", metadata !21, i32 346, metadata !22, i32 0, i32 1, null} ; [ DW_TAG_variable ]

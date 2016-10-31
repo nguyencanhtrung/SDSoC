@@ -47,7 +47,7 @@
 -- DO NOT MODIFY THIS FILE.
 
 -- IP VLNV: xilinx.com:hls:correlation_accel_v1:1.0
--- IP Revision: 1610312007
+-- IP Revision: 1610312038
 
 LIBRARY ieee;
 USE ieee.std_logic_1164.ALL;

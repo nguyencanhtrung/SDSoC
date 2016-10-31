@@ -1,10 +1,10 @@
 # This script segment is generated automatically by AutoPilot
 
 set id 1
-set name correlation_accel_v1_faddfsub_32ns_32ns_32_9_full_dsp
+set name correlation_accel_v1_faddfsub_32ns_32ns_32_5_full_dsp
 set corename simcore_faddfsub
 set op faddfsub
-set stage_num 9
+set stage_num 5
 set max_latency -1
 set registered_input 1
 set impl_style full_dsp
@@ -71,10 +71,10 @@ puts "@W \[IMPL-101\] Cannot find ::AESL_LIB_XILINX_FPV6::fpv6_gen, check your p
 
 
 set id 3
-set name correlation_accel_v1_fadd_32ns_32ns_32_9_full_dsp
+set name correlation_accel_v1_fadd_32ns_32ns_32_5_full_dsp
 set corename simcore_fadd
 set op fadd
-set stage_num 9
+set stage_num 5
 set max_latency -1
 set registered_input 1
 set impl_style full_dsp
@@ -140,11 +140,11 @@ puts "@W \[IMPL-101\] Cannot find ::AESL_LIB_XILINX_FPV6::fpv6_gen, check your p
 }
 
 
-set id 5
-set name correlation_accel_v1_fmul_32ns_32ns_32_5_max_dsp
+set id 8
+set name correlation_accel_v1_fmul_32ns_32ns_32_4_max_dsp
 set corename simcore_fmul
 set op fmul
-set stage_num 5
+set stage_num 4
 set max_latency -1
 set registered_input 1
 set impl_style max_dsp
@@ -210,11 +210,11 @@ puts "@W \[IMPL-101\] Cannot find ::AESL_LIB_XILINX_FPV6::fpv6_gen, check your p
 }
 
 
-set id 9
-set name correlation_accel_v1_fdiv_32ns_32ns_32_30
+set id 16
+set name correlation_accel_v1_fdiv_32ns_32ns_32_16
 set corename simcore_fdiv
 set op fdiv
-set stage_num 30
+set stage_num 16
 set max_latency -1
 set registered_input 1
 set in0_width 32
@@ -277,11 +277,11 @@ puts "@W \[IMPL-101\] Cannot find ::AESL_LIB_XILINX_FPV6::fpv6_gen, check your p
 }
 
 
-set id 11
-set name correlation_accel_v1_sitofp_32s_32_8
+set id 18
+set name correlation_accel_v1_sitofp_32s_32_6
 set corename simcore_sitofp
 set op sitofp
-set stage_num 8
+set stage_num 6
 set max_latency -1
 set registered_input 1
 set in0_width 32
@@ -338,11 +338,11 @@ puts "@W \[IMPL-101\] Cannot find ::AESL_LIB_XILINX_FPV6::fpv6_gen, check your p
 }
 
 
-set id 12
-set name correlation_accel_v1_fsqrt_32ns_32ns_32_28
+set id 19
+set name correlation_accel_v1_fsqrt_32ns_32ns_32_16
 set corename simcore_fsqrt
 set op fsqrt
-set stage_num 28
+set stage_num 16
 set max_latency -1
 set registered_input 1
 set in0_width 32
@@ -405,11 +405,11 @@ puts "@W \[IMPL-101\] Cannot find ::AESL_LIB_XILINX_FPV6::fpv6_gen, check your p
 }
 
 
-set id 14
-set name correlation_accel_v1_flog_32ns_32ns_32_18_full_dsp
+set id 21
+set name correlation_accel_v1_flog_32ns_32ns_32_13_full_dsp
 set corename simcore_flog
 set op flog
-set stage_num 18
+set stage_num 13
 set max_latency -1
 set registered_input 1
 set impl_style full_dsp
@@ -475,11 +475,11 @@ puts "@W \[IMPL-101\] Cannot find ::AESL_LIB_XILINX_FPV6::fpv6_gen, check your p
 }
 
 
-set id 15
-set name correlation_accel_v1_mul_32s_32s_32_7
+set id 23
+set name correlation_accel_v1_mul_32s_32s_32_6
 set corename simcore_mul
 set op mul
-set stage_num 7
+set stage_num 6
 set max_latency -1
 set registered_input 1
 set in0_width 32
@@ -542,7 +542,7 @@ puts "@W \[IMPL-101\] Cannot find ::AESL_LIB_VIRTEX::xil_gen_multicycle_mul, che
 }
 
 
-set id 16
+set id 24
 set name correlation_accel_v1_urem_31ns_4ns_31_35
 set corename simcore_urem
 set op urem
@@ -610,7 +610,7 @@ puts "@W \[IMPL-101\] Cannot find ::AESL_LIB_VIRTEX::xil_gen_div, check your pla
 
 
 # Memory (RAM/ROM)  definition:
-set ID 17
+set ID 25
 set MemName correlation_accel_v1_weight_rom
 set CoreName ap_simcore_mem
 set PortList { 2 2 }
@@ -626,7 +626,7 @@ set Initializer $ROMData
 set NumOfStage 2
 set MaxLatency -1
 set DelayBudget 2.39
-set ClkPeriod 5.95
+set ClkPeriod 8.5
 set RegisteredInput 0
 if {${::AESL::PGuard_simmodel_gen}} {
 if {[info proc ap_gen_simcore_mem] == "ap_gen_simcore_mem"} {
@@ -693,7 +693,7 @@ if {[info proc ::AESL_LIB_VIRTEX::xil_gen_RAM] == "::AESL_LIB_VIRTEX::xil_gen_RA
 
 
 # Memory (RAM/ROM)  definition:
-set ID 18
+set ID 26
 set MemName correlation_accel_v1_bramA
 set CoreName ap_simcore_mem
 set PortList { 2 1 }
@@ -709,7 +709,7 @@ set Initializer $ROMData
 set NumOfStage 2
 set MaxLatency -1
 set DelayBudget 2.39
-set ClkPeriod 5.95
+set ClkPeriod 8.5
 set RegisteredInput 0
 if {${::AESL::PGuard_simmodel_gen}} {
 if {[info proc ap_gen_simcore_mem] == "ap_gen_simcore_mem"} {
@@ -776,90 +776,7 @@ if {[info proc ::AESL_LIB_VIRTEX::xil_gen_RAM] == "::AESL_LIB_VIRTEX::xil_gen_RA
 
 
 # Memory (RAM/ROM)  definition:
-set ID 19
-set MemName correlation_accel_v1_bramB
-set CoreName ap_simcore_mem
-set PortList { 2 3 }
-set DataWd 32
-set AddrRange 252
-set AddrWd 8
-set impl_style block
-set TrueReset 0
-set IsROM 0
-set ROMData { }
-set HasInitializer 1
-set Initializer $ROMData
-set NumOfStage 2
-set MaxLatency -1
-set DelayBudget 2.39
-set ClkPeriod 5.95
-set RegisteredInput 0
-if {${::AESL::PGuard_simmodel_gen}} {
-if {[info proc ap_gen_simcore_mem] == "ap_gen_simcore_mem"} {
-    eval "ap_gen_simcore_mem { \
-    id ${ID} \
-    name ${MemName} \
-    corename ${CoreName}  \
-    op mem \
-    reset_level 1 \
-    sync_rst true \
-    stage_num ${NumOfStage}  \
-    registered_input ${RegisteredInput} \
-    port_num 2 \
-    port_list \{${PortList}\} \
-    data_wd ${DataWd} \
-    addr_wd ${AddrWd} \
-    addr_range ${AddrRange} \
-    style ${impl_style} \
-    true_reset ${TrueReset} \
-    delay_budget ${DelayBudget} \
-    clk_period ${ClkPeriod} \
-    HasInitializer ${HasInitializer} \
-    rom_data \{${ROMData}\} \
- } "
-} else {
-    puts "@W \[IMPL-102\] Cannot find ap_gen_simcore_mem, check your platform lib"
-}
-}
-
-
-if {${::AESL::PGuard_rtl_comp_handler}} {
-  ::AP::rtl_comp_handler $MemName
-}
-
-
-set CoreName RAM
-if {${::AESL::PGuard_autocg_gen} && ${::AESL::PGuard_autocg_ipmgen}} {
-if {[info proc ::AESL_LIB_VIRTEX::xil_gen_RAM] == "::AESL_LIB_VIRTEX::xil_gen_RAM"} {
-    eval "::AESL_LIB_VIRTEX::xil_gen_RAM { \
-    id ${ID} \
-    name ${MemName} \
-    corename ${CoreName}  \
-    op mem \
-    reset_level 1 \
-    sync_rst true \
-    stage_num ${NumOfStage}  \
-    registered_input ${RegisteredInput} \
-    port_num 2 \
-    port_list \{${PortList}\} \
-    data_wd ${DataWd} \
-    addr_wd ${AddrWd} \
-    addr_range ${AddrRange} \
-    style ${impl_style} \
-    true_reset ${TrueReset} \
-    delay_budget ${DelayBudget} \
-    clk_period ${ClkPeriod} \
-    HasInitializer ${HasInitializer} \
-    rom_data \{${ROMData}\} \
- } "
-  } else {
-    puts "@W \[IMPL-104\] Cannot find ::AESL_LIB_VIRTEX::xil_gen_RAM, check your platform lib"
-  }
-}
-
-
-# Memory (RAM/ROM)  definition:
-set ID 20
+set ID 27
 set MemName correlation_accel_v1_acc_returnA
 set CoreName ap_simcore_mem
 set PortList { 2 0 }
@@ -874,89 +791,7 @@ set ROMData {}
 set NumOfStage 2
 set MaxLatency -1
 set DelayBudget 2.39
-set ClkPeriod 5.95
-set RegisteredInput 0
-if {${::AESL::PGuard_simmodel_gen}} {
-if {[info proc ap_gen_simcore_mem] == "ap_gen_simcore_mem"} {
-    eval "ap_gen_simcore_mem { \
-    id ${ID} \
-    name ${MemName} \
-    corename ${CoreName}  \
-    op mem \
-    reset_level 1 \
-    sync_rst true \
-    stage_num ${NumOfStage}  \
-    registered_input ${RegisteredInput} \
-    port_num 2 \
-    port_list \{${PortList}\} \
-    data_wd ${DataWd} \
-    addr_wd ${AddrWd} \
-    addr_range ${AddrRange} \
-    style ${impl_style} \
-    true_reset ${TrueReset} \
-    delay_budget ${DelayBudget} \
-    clk_period ${ClkPeriod} \
-    HasInitializer ${HasInitializer} \
-    rom_data \{${ROMData}\} \
- } "
-} else {
-    puts "@W \[IMPL-102\] Cannot find ap_gen_simcore_mem, check your platform lib"
-}
-}
-
-
-if {${::AESL::PGuard_rtl_comp_handler}} {
-  ::AP::rtl_comp_handler $MemName
-}
-
-
-set CoreName RAM
-if {${::AESL::PGuard_autocg_gen} && ${::AESL::PGuard_autocg_ipmgen}} {
-if {[info proc ::AESL_LIB_VIRTEX::xil_gen_RAM] == "::AESL_LIB_VIRTEX::xil_gen_RAM"} {
-    eval "::AESL_LIB_VIRTEX::xil_gen_RAM { \
-    id ${ID} \
-    name ${MemName} \
-    corename ${CoreName}  \
-    op mem \
-    reset_level 1 \
-    sync_rst true \
-    stage_num ${NumOfStage}  \
-    registered_input ${RegisteredInput} \
-    port_num 2 \
-    port_list \{${PortList}\} \
-    data_wd ${DataWd} \
-    addr_wd ${AddrWd} \
-    addr_range ${AddrRange} \
-    style ${impl_style} \
-    true_reset ${TrueReset} \
-    delay_budget ${DelayBudget} \
-    clk_period ${ClkPeriod} \
-    HasInitializer ${HasInitializer} \
-    rom_data \{${ROMData}\} \
- } "
-  } else {
-    puts "@W \[IMPL-104\] Cannot find ::AESL_LIB_VIRTEX::xil_gen_RAM, check your platform lib"
-  }
-}
-
-
-# Memory (RAM/ROM)  definition:
-set ID 21
-set MemName correlation_accel_v1_acc_returnB
-set CoreName ap_simcore_mem
-set PortList { 2 2 }
-set DataWd 32
-set AddrRange 6
-set AddrWd 3
-set impl_style block
-set TrueReset 0
-set HasInitializer 0
-set IsROM 0
-set ROMData {}
-set NumOfStage 2
-set MaxLatency -1
-set DelayBudget 2.39
-set ClkPeriod 5.95
+set ClkPeriod 8.5
 set RegisteredInput 0
 if {${::AESL::PGuard_simmodel_gen}} {
 if {[info proc ap_gen_simcore_mem] == "ap_gen_simcore_mem"} {
@@ -1033,11 +868,11 @@ if {${::AESL::PGuard_autoexp_gen}} {
 if {${::AESL::PGuard_simmodel_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::m_axi_gen] == "::AESL_LIB_XILADAPTER::m_axi_gen"} {
 eval "::AESL_LIB_XILADAPTER::m_axi_gen { \
-    id 22 \
+    id 28 \
     corename {m_axi} \
     op interface \
     max_latency -1 \ 
-    delay_budget 5.20625 \ 
+    delay_budget 7.4375 \ 
     name {correlation_accel_v1_gmem32_m_axi} \
 } "
 } else {
@@ -1052,7 +887,7 @@ if {${::AESL::PGuard_rtl_comp_handler}} {
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 23 \
+    id 29 \
     name number_of_days \
     type other \
     dir I \
@@ -1067,7 +902,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 24 \
+    id 30 \
     name number_of_indices \
     type other \
     dir I \
@@ -1082,7 +917,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 25 \
+    id 31 \
     name in_indices \
     type other \
     dir I \
@@ -1097,7 +932,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 26 \
+    id 32 \
     name out_correlation \
     type other \
     dir I \

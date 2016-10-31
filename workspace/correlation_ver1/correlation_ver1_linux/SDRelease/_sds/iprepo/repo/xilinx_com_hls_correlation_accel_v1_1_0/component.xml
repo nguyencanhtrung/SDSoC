@@ -1761,31 +1761,31 @@
     <spirit:fileSet>
       <spirit:name>xilinx_verilogsynthesis_view_fileset</spirit:name>
       <spirit:file>
-        <spirit:name>hdl/ip/correlation_accel_v1_ap_fadd_7_full_dsp_32.vhd</spirit:name>
+        <spirit:name>hdl/ip/correlation_accel_v1_ap_flog_11_full_dsp_32.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/ip/correlation_accel_v1_ap_fdiv_28_no_dsp_32.vhd</spirit:name>
+        <spirit:name>hdl/ip/correlation_accel_v1_ap_sitofp_4_no_dsp_32.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/ip/correlation_accel_v1_ap_fsqrt_26_no_dsp_32.vhd</spirit:name>
+        <spirit:name>hdl/ip/correlation_accel_v1_ap_fdiv_14_no_dsp_32.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/ip/correlation_accel_v1_ap_faddfsub_7_full_dsp_32.vhd</spirit:name>
+        <spirit:name>hdl/ip/correlation_accel_v1_ap_fmul_2_max_dsp_32.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/ip/correlation_accel_v1_ap_fmul_3_max_dsp_32.vhd</spirit:name>
+        <spirit:name>hdl/ip/correlation_accel_v1_ap_fsqrt_14_no_dsp_32.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/ip/correlation_accel_v1_ap_sitofp_6_no_dsp_32.vhd</spirit:name>
+        <spirit:name>hdl/ip/correlation_accel_v1_ap_faddfsub_3_full_dsp_32.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/ip/correlation_accel_v1_ap_flog_16_full_dsp_32.vhd</spirit:name>
+        <spirit:name>hdl/ip/correlation_accel_v1_ap_fadd_3_full_dsp_32.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
@@ -1804,39 +1804,27 @@
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/correlation_accel_v1_acc_returnB.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>hdl/verilog/correlation_accel_v1_fadd_32ns_32ns_32_9_full_dsp.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-      </spirit:file>
-      <spirit:file>
         <spirit:name>hdl/verilog/correlation_accel_v1_weight_rom_ram.dat</spirit:name>
         <spirit:userFileType>mif</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/correlation_accel_v1_sitofp_32s_32_8.v</spirit:name>
+        <spirit:name>hdl/verilog/correlation_accel_v1_mul_32s_32s_32_6.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/correlation_accel_v1_bramB_ram.dat</spirit:name>
-        <spirit:userFileType>mif</spirit:userFileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>hdl/verilog/correlation_accel_v1_bramB.v</spirit:name>
+        <spirit:name>hdl/verilog/correlation_accel_v1_faddfsub_32ns_32ns_32_5_full_dsp.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/correlation_accel_v1_fmul_32ns_32ns_32_5_max_dsp.v</spirit:name>
+        <spirit:name>hdl/verilog/correlation_accel_v1_fmul_32ns_32ns_32_4_max_dsp.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/correlation_accel_v1_faddfsub_32ns_32ns_32_9_full_dsp.v</spirit:name>
+        <spirit:name>hdl/verilog/correlation_accel_v1_fdiv_32ns_32ns_32_16.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/correlation_accel_v1_flog_32ns_32ns_32_18_full_dsp.v</spirit:name>
+        <spirit:name>hdl/verilog/correlation_accel_v1_fadd_32ns_32ns_32_5_full_dsp.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
@@ -1848,11 +1836,7 @@
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/correlation_accel_v1_mul_32s_32s_32_7.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>hdl/verilog/correlation_accel_v1_fsqrt_32ns_32ns_32_28.v</spirit:name>
+        <spirit:name>hdl/verilog/correlation_accel_v1_fsqrt_32ns_32ns_32_16.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
@@ -1864,11 +1848,15 @@
         <spirit:userFileType>mif</spirit:userFileType>
       </spirit:file>
       <spirit:file>
+        <spirit:name>hdl/verilog/correlation_accel_v1_sitofp_32s_32_6.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
         <spirit:name>hdl/verilog/correlation_accel_v1_urem_31ns_4ns_31_35.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/correlation_accel_v1_fdiv_32ns_32ns_32_30.v</spirit:name>
+        <spirit:name>hdl/verilog/correlation_accel_v1_flog_32ns_32ns_32_13_full_dsp.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
     </spirit:fileSet>
@@ -1893,39 +1881,27 @@
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/correlation_accel_v1_acc_returnB.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>hdl/verilog/correlation_accel_v1_fadd_32ns_32ns_32_9_full_dsp.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-      </spirit:file>
-      <spirit:file>
         <spirit:name>hdl/verilog/correlation_accel_v1_weight_rom_ram.dat</spirit:name>
         <spirit:userFileType>mif</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/correlation_accel_v1_sitofp_32s_32_8.v</spirit:name>
+        <spirit:name>hdl/verilog/correlation_accel_v1_mul_32s_32s_32_6.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/correlation_accel_v1_bramB_ram.dat</spirit:name>
-        <spirit:userFileType>mif</spirit:userFileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>hdl/verilog/correlation_accel_v1_bramB.v</spirit:name>
+        <spirit:name>hdl/verilog/correlation_accel_v1_faddfsub_32ns_32ns_32_5_full_dsp.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/correlation_accel_v1_fmul_32ns_32ns_32_5_max_dsp.v</spirit:name>
+        <spirit:name>hdl/verilog/correlation_accel_v1_fmul_32ns_32ns_32_4_max_dsp.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/correlation_accel_v1_faddfsub_32ns_32ns_32_9_full_dsp.v</spirit:name>
+        <spirit:name>hdl/verilog/correlation_accel_v1_fdiv_32ns_32ns_32_16.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/correlation_accel_v1_flog_32ns_32ns_32_18_full_dsp.v</spirit:name>
+        <spirit:name>hdl/verilog/correlation_accel_v1_fadd_32ns_32ns_32_5_full_dsp.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
@@ -1937,11 +1913,7 @@
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/correlation_accel_v1_mul_32s_32s_32_7.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>hdl/verilog/correlation_accel_v1_fsqrt_32ns_32ns_32_28.v</spirit:name>
+        <spirit:name>hdl/verilog/correlation_accel_v1_fsqrt_32ns_32ns_32_16.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
@@ -1953,39 +1925,43 @@
         <spirit:userFileType>mif</spirit:userFileType>
       </spirit:file>
       <spirit:file>
+        <spirit:name>hdl/verilog/correlation_accel_v1_sitofp_32s_32_6.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
         <spirit:name>hdl/verilog/correlation_accel_v1_urem_31ns_4ns_31_35.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/correlation_accel_v1_fdiv_32ns_32ns_32_30.v</spirit:name>
+        <spirit:name>hdl/verilog/correlation_accel_v1_flog_32ns_32ns_32_13_full_dsp.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/ip/correlation_accel_v1_ap_fadd_7_full_dsp_32.vhd</spirit:name>
+        <spirit:name>hdl/ip/correlation_accel_v1_ap_flog_11_full_dsp_32.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/ip/correlation_accel_v1_ap_fdiv_28_no_dsp_32.vhd</spirit:name>
+        <spirit:name>hdl/ip/correlation_accel_v1_ap_sitofp_4_no_dsp_32.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/ip/correlation_accel_v1_ap_fsqrt_26_no_dsp_32.vhd</spirit:name>
+        <spirit:name>hdl/ip/correlation_accel_v1_ap_fdiv_14_no_dsp_32.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/ip/correlation_accel_v1_ap_faddfsub_7_full_dsp_32.vhd</spirit:name>
+        <spirit:name>hdl/ip/correlation_accel_v1_ap_fmul_2_max_dsp_32.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/ip/correlation_accel_v1_ap_fmul_3_max_dsp_32.vhd</spirit:name>
+        <spirit:name>hdl/ip/correlation_accel_v1_ap_fsqrt_14_no_dsp_32.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/ip/correlation_accel_v1_ap_sitofp_6_no_dsp_32.vhd</spirit:name>
+        <spirit:name>hdl/ip/correlation_accel_v1_ap_faddfsub_3_full_dsp_32.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/ip/correlation_accel_v1_ap_flog_16_full_dsp_32.vhd</spirit:name>
+        <spirit:name>hdl/ip/correlation_accel_v1_ap_fadd_3_full_dsp_32.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
     </spirit:fileSet>
@@ -2002,31 +1978,31 @@
     <spirit:fileSet>
       <spirit:name>xilinx_vhdlsynthesis_view_fileset</spirit:name>
       <spirit:file>
-        <spirit:name>hdl/ip/correlation_accel_v1_ap_fadd_7_full_dsp_32.vhd</spirit:name>
+        <spirit:name>hdl/ip/correlation_accel_v1_ap_flog_11_full_dsp_32.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/ip/correlation_accel_v1_ap_fdiv_28_no_dsp_32.vhd</spirit:name>
+        <spirit:name>hdl/ip/correlation_accel_v1_ap_sitofp_4_no_dsp_32.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/ip/correlation_accel_v1_ap_fsqrt_26_no_dsp_32.vhd</spirit:name>
+        <spirit:name>hdl/ip/correlation_accel_v1_ap_fdiv_14_no_dsp_32.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/ip/correlation_accel_v1_ap_faddfsub_7_full_dsp_32.vhd</spirit:name>
+        <spirit:name>hdl/ip/correlation_accel_v1_ap_fmul_2_max_dsp_32.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/ip/correlation_accel_v1_ap_fmul_3_max_dsp_32.vhd</spirit:name>
+        <spirit:name>hdl/ip/correlation_accel_v1_ap_fsqrt_14_no_dsp_32.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/ip/correlation_accel_v1_ap_sitofp_6_no_dsp_32.vhd</spirit:name>
+        <spirit:name>hdl/ip/correlation_accel_v1_ap_faddfsub_3_full_dsp_32.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/ip/correlation_accel_v1_ap_flog_16_full_dsp_32.vhd</spirit:name>
+        <spirit:name>hdl/ip/correlation_accel_v1_ap_fadd_3_full_dsp_32.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
@@ -2049,15 +2025,11 @@
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/correlation_accel_v1_faddfsub_32ns_32ns_32_9_full_dsp.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/correlation_accel_v1_faddfsub_32ns_32ns_32_5_full_dsp.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/correlation_accel_v1_bramB.vhd</spirit:name>
-        <spirit:fileType>vhdlSource</spirit:fileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>hdl/vhdl/correlation_accel_v1_fmul_32ns_32ns_32_5_max_dsp.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/correlation_accel_v1_fmul_32ns_32ns_32_4_max_dsp.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
@@ -2065,19 +2037,19 @@
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/correlation_accel_v1_mul_32s_32s_32_7.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/correlation_accel_v1_fdiv_32ns_32ns_32_16.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/correlation_accel_v1_sitofp_32s_32_8.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/correlation_accel_v1_flog_32ns_32ns_32_13_full_dsp.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/correlation_accel_v1_acc_returnB.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/correlation_accel_v1_mul_32s_32s_32_6.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/correlation_accel_v1_fadd_32ns_32ns_32_9_full_dsp.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/correlation_accel_v1_sitofp_32s_32_6.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
@@ -2089,17 +2061,13 @@
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/correlation_accel_v1_fsqrt_32ns_32ns_32_28.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/correlation_accel_v1_fadd_32ns_32ns_32_5_full_dsp.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/correlation_accel_v1_fdiv_32ns_32ns_32_30.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/correlation_accel_v1_fsqrt_32ns_32ns_32_16.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>hdl/vhdl/correlation_accel_v1_flog_32ns_32ns_32_18_full_dsp.vhd</spirit:name>
-        <spirit:fileType>vhdlSource</spirit:fileType>
-        <spirit:userFileType>CHECKSUM_2a8d36b3</spirit:userFileType>
+        <spirit:userFileType>CHECKSUM_f29b6b99</spirit:userFileType>
       </spirit:file>
     </spirit:fileSet>
     <spirit:fileSet>
@@ -2127,15 +2095,11 @@
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/correlation_accel_v1_faddfsub_32ns_32ns_32_9_full_dsp.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/correlation_accel_v1_faddfsub_32ns_32ns_32_5_full_dsp.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/correlation_accel_v1_bramB.vhd</spirit:name>
-        <spirit:fileType>vhdlSource</spirit:fileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>hdl/vhdl/correlation_accel_v1_fmul_32ns_32ns_32_5_max_dsp.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/correlation_accel_v1_fmul_32ns_32ns_32_4_max_dsp.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
@@ -2143,19 +2107,19 @@
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/correlation_accel_v1_mul_32s_32s_32_7.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/correlation_accel_v1_fdiv_32ns_32ns_32_16.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/correlation_accel_v1_sitofp_32s_32_8.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/correlation_accel_v1_flog_32ns_32ns_32_13_full_dsp.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/correlation_accel_v1_acc_returnB.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/correlation_accel_v1_mul_32s_32s_32_6.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/correlation_accel_v1_fadd_32ns_32ns_32_9_full_dsp.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/correlation_accel_v1_sitofp_32s_32_6.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
@@ -2167,43 +2131,39 @@
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/correlation_accel_v1_fsqrt_32ns_32ns_32_28.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/correlation_accel_v1_fadd_32ns_32ns_32_5_full_dsp.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/correlation_accel_v1_fdiv_32ns_32ns_32_30.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/correlation_accel_v1_fsqrt_32ns_32ns_32_16.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/correlation_accel_v1_flog_32ns_32ns_32_18_full_dsp.vhd</spirit:name>
+        <spirit:name>hdl/ip/correlation_accel_v1_ap_flog_11_full_dsp_32.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/ip/correlation_accel_v1_ap_fadd_7_full_dsp_32.vhd</spirit:name>
+        <spirit:name>hdl/ip/correlation_accel_v1_ap_sitofp_4_no_dsp_32.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/ip/correlation_accel_v1_ap_fdiv_28_no_dsp_32.vhd</spirit:name>
+        <spirit:name>hdl/ip/correlation_accel_v1_ap_fdiv_14_no_dsp_32.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/ip/correlation_accel_v1_ap_fsqrt_26_no_dsp_32.vhd</spirit:name>
+        <spirit:name>hdl/ip/correlation_accel_v1_ap_fmul_2_max_dsp_32.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/ip/correlation_accel_v1_ap_faddfsub_7_full_dsp_32.vhd</spirit:name>
+        <spirit:name>hdl/ip/correlation_accel_v1_ap_fsqrt_14_no_dsp_32.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/ip/correlation_accel_v1_ap_fmul_3_max_dsp_32.vhd</spirit:name>
+        <spirit:name>hdl/ip/correlation_accel_v1_ap_faddfsub_3_full_dsp_32.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/ip/correlation_accel_v1_ap_sitofp_6_no_dsp_32.vhd</spirit:name>
-        <spirit:fileType>vhdlSource</spirit:fileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>hdl/ip/correlation_accel_v1_ap_flog_16_full_dsp_32.vhd</spirit:name>
+        <spirit:name>hdl/ip/correlation_accel_v1_ap_fadd_3_full_dsp_32.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
     </spirit:fileSet>
@@ -2360,7 +2320,7 @@
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>clk_period</spirit:name>
-      <spirit:value spirit:resolve="immediate" spirit:id="PARAM_VALUE.clk_period" spirit:order="13">5.950000</spirit:value>
+      <spirit:value spirit:resolve="immediate" spirit:id="PARAM_VALUE.clk_period" spirit:order="13">8.500000</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>machine</spirit:name>
@@ -2388,8 +2348,8 @@
         <xilinx:taxonomy>/VIVADO_HLS_IP</xilinx:taxonomy>
       </xilinx:taxonomies>
       <xilinx:displayName>Correlation_accel_v1</xilinx:displayName>
-      <xilinx:coreRevision>1610312007</xilinx:coreRevision>
-      <xilinx:coreCreationDateTime>2016-10-31T19:07:46Z</xilinx:coreCreationDateTime>
+      <xilinx:coreRevision>1610312038</xilinx:coreRevision>
+      <xilinx:coreCreationDateTime>2016-10-31T19:38:37Z</xilinx:coreCreationDateTime>
     </xilinx:coreExtensions>
     <xilinx:packagingInfo>
       <xilinx:xilinxVersion>2014.4</xilinx:xilinxVersion>

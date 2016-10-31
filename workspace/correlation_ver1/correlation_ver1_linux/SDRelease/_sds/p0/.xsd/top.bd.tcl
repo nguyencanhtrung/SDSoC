@@ -112,7 +112,7 @@ connect_bd_net  \
   [get_bd_pins /correlation_accel_v1_0/out_correlation] \
 
 connect_bd_net  \
-  [get_bd_pins /ps7/FCLK_CLK1] \
+  [get_bd_pins /ps7/FCLK_CLK2] \
   [get_bd_pins /ps7/M_AXI_GP0_ACLK] \
   [get_bd_pins /ps7/S_AXI_HP0_ACLK] \
   [get_bd_pins /correlation_accel_v1_0/ap_clk] \
@@ -126,7 +126,7 @@ connect_bd_net  \
   [get_bd_pins /axi_interconnect_S_AXI_HP0/S00_ACLK] \
 
 connect_bd_net  \
-  [get_bd_pins /proc_sys_reset_1/interconnect_aresetn] \
+  [get_bd_pins /proc_sys_reset_2/interconnect_aresetn] \
   [get_bd_pins /axi_interconnect_M_AXI_GP0/ARESETN] \
   [get_bd_pins /axi_interconnect_M_AXI_GP0/S00_ARESETN] \
   [get_bd_pins /axi_interconnect_M_AXI_GP0/M00_ARESETN] \
@@ -135,7 +135,7 @@ connect_bd_net  \
   [get_bd_pins /axi_interconnect_S_AXI_HP0/S00_ARESETN] \
 
 connect_bd_net  \
-  [get_bd_pins /proc_sys_reset_1/peripheral_aresetn] \
+  [get_bd_pins /proc_sys_reset_2/peripheral_aresetn] \
   [get_bd_pins /correlation_accel_v1_0_if/s_axi_aresetn] \
 
 connect_bd_net  \

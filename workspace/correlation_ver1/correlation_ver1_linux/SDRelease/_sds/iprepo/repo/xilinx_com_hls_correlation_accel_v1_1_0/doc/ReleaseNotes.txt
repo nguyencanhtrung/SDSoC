@@ -10,4 +10,4 @@ Family       : zynq
 Device       : xc7z020
 Package      : clg484
 Speed Grade  : -1
-Clock Period : 8.500 ns
+Clock Period : 5.950 ns

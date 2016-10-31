@@ -2,8 +2,8 @@ set clock_constraint { \
     name clk \
     module correlation_accel_v1 \
     port ap_clk \
-    period 8.5 \
-    uncertainty 1.0625 \
+    period 5.95 \
+    uncertainty 0.74375 \
 }
 
 set all_path {}

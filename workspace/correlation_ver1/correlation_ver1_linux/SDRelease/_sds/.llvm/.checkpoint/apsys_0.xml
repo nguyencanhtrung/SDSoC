@@ -16,8 +16,8 @@
     <cf:port cf:name="out_correlation" cf:portType="stream" cf:direction="out"/>
     <cf:port cf:name="ap_return" cf:portType="stream" cf:direction="in"/>
   </cf:block>
-  <cf:comp cf:name="zed" xd:componentRef="zed" xd:clockId="2"/>
-  <cf:comp cf:name="correlation_accel_v1_0" xd:componentRef="correlation_accel_v1" xd:clockId="2"/>
+  <cf:comp cf:name="zed" xd:componentRef="zed" xd:clockId="1"/>
+  <cf:comp cf:name="correlation_accel_v1_0" xd:componentRef="correlation_accel_v1" xd:clockId="1"/>
   <cf:instance cf:name="hwinst_correlation_accel_v1_0" cf:blockName="hwblk_correlation_accel_v1" cf:compName="correlation_accel_v1_0">
     <cf:portMap cf:blockPort="cmd_correlation_accel_v1" cf:compPort="ap_ctrl" xd:register="0x28"/>
     <cf:portMap cf:blockPort="number_of_days" cf:compPort="number_of_days" xd:register="0x80"/>

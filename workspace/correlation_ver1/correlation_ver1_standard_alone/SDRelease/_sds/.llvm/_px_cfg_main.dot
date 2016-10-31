@@ -1,0 +1,3 @@
+digraph cfg {
+v0 [label = "bb0"];
+}

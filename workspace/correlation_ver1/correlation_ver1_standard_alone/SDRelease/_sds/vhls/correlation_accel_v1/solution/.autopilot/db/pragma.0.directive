@@ -1,0 +1,42 @@
+<AutoPilot:ProjectResources xmlns:AutoPilot="com.autoesl.autopilot.ui.directiveView">
+<sourceFile name="">
+<directive functionLabel="" functionName="correlation_accel_v1" label="">
+<pragma name="LATENCY">
+<option name="min" value="1"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="correlation_accel_v1" label="">
+<pragma name="INTERFACE">
+<option name="m_axi" positionalBoolean="mode" value=""/>
+<option name="depth" value="2520000"/>
+<option name="port" positionalBoolean="4" value="in_indices"/>
+<option name="offset" value="direct"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="correlation_accel_v1" label="">
+<pragma name="INTERFACE">
+<option name="m_axi" positionalBoolean="mode" value=""/>
+<option name="depth" value="49995000"/>
+<option name="port" positionalBoolean="4" value="out_correlation"/>
+<option name="offset" value="direct"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="correlation_accel_v1" label="">
+<pragma name="INTERFACE">
+<option name="ap_ctrl_hs" positionalBoolean="mode" value=""/>
+<option name="port" positionalBoolean="4" value="return"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="correlation_accel_v1" label="">
+<pragma name="UNROLL"/>
+</directive>
+<directive functionLabel="" functionName="correlation_accel_v1" label="">
+<pragma name="PIPELINE"/>
+</directive>
+<directive functionLabel="" functionName="correlation_accel_v1" label="">
+<pragma name="PIPELINE">
+<option name="II" value="5"/>
+</pragma>
+</directive>
+</sourceFile>
+</AutoPilot:ProjectResources>

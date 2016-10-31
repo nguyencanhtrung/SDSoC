@@ -1,0 +1,57 @@
+#-----------------------------------------------------------
+# hsi v2014.4 (64-bit)
+# SW Build 1071353 on Tue Nov 18 16:48:31 MST 2014
+# 
+# Start of session at: Mon Oct 31 21:14:16 2016
+# Process ID: 18226
+# Log file: /home/trungnguyen/SDSoC/workspace/correlation_ver1/correlation_ver1_standard_alone/SDRelease/_sds/swstubs/standalone_bsp/hsi.log
+# Journal file: /home/trungnguyen/SDSoC/workspace/correlation_ver1/correlation_ver1_standard_alone/SDRelease/_sds/swstubs/standalone_bsp/hsi.jou
+#-----------------------------------------------------------
+INFO: [Hsi 55-1698] elapsed time for repository loading 0 seconds
+source /home/trungnguyen/SDSoC/workspace/correlation_ver1/correlation_ver1_standard_alone/SDRelease/_sds/swstubs/standalone_bsp/create_bsp_post.tcl -notrace
+Running Make include in ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_1/src
+Running Make include in ps7_cortexa9_0/libsrc/devcfg_v3_2/src
+Running Make include in ps7_cortexa9_0/libsrc/dmaps_v2_1/src
+Running Make include in ps7_cortexa9_0/libsrc/emacps_v2_2/src
+Running Make include in ps7_cortexa9_0/libsrc/gpiops_v2_2/src
+Running Make include in ps7_cortexa9_0/libsrc/scugic_v2_1/src
+Running Make include in ps7_cortexa9_0/libsrc/scutimer_v2_0/src
+Running Make include in ps7_cortexa9_0/libsrc/scuwdt_v2_0/src
+Running Make include in ps7_cortexa9_0/libsrc/sdps_v2_3/src
+Running Make include in ps7_cortexa9_0/libsrc/standalone_v4_2/src
+Running Make include in ps7_cortexa9_0/libsrc/uartps_v2_2/src
+Running Make include in ps7_cortexa9_0/libsrc/usbps_v2_2/src
+Running Make include in ps7_cortexa9_0/libsrc/xadcps_v2_1/src
+Running Make include in ps7_cortexa9_0/libsrc/xilffs_v2_2/src
+Running Make libs in ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_1/src
+Compiling cpu_cortexa9
+Running Make libs in ps7_cortexa9_0/libsrc/devcfg_v3_2/src
+Compiling devcfg
+arm-xilinx-eabi-ar: creating ../../../lib/libxil.a
+Running Make libs in ps7_cortexa9_0/libsrc/dmaps_v2_1/src
+Compiling dmaps
+Running Make libs in ps7_cortexa9_0/libsrc/emacps_v2_2/src
+Compiling emacps
+Running Make libs in ps7_cortexa9_0/libsrc/gpiops_v2_2/src
+Compiling gpiops
+Running Make libs in ps7_cortexa9_0/libsrc/scugic_v2_1/src
+Compiling scugic
+Running Make libs in ps7_cortexa9_0/libsrc/scutimer_v2_0/src
+Compiling scutimer
+Running Make libs in ps7_cortexa9_0/libsrc/scuwdt_v2_0/src
+Compiling scuwdt
+Running Make libs in ps7_cortexa9_0/libsrc/sdps_v2_3/src
+Compiling sdps
+Running Make libs in ps7_cortexa9_0/libsrc/standalone_v4_2/src
+Compiling standalone
+Running Make libs in ps7_cortexa9_0/libsrc/uartps_v2_2/src
+Compiling uartps
+Running Make libs in ps7_cortexa9_0/libsrc/usbps_v2_2/src
+Compiling usbps
+Running Make libs in ps7_cortexa9_0/libsrc/xadcps_v2_1/src
+Compiling xadcps
+Running Make libs in ps7_cortexa9_0/libsrc/xilffs_v2_2/src
+Compiling XilFFs Library
+Creating archive libxilffs.a
+Finished building libraries
+INFO: [Common 17-206] Exiting hsi at Mon Oct 31 21:14:20 2016...

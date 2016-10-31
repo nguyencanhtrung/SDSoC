@@ -1,0 +1,7 @@
+/* standalone */
+the_ROM_image:
+{
+  [bootloader]/opt/Xilinx/SDSoC/2014.4/platforms/zed/boot/fsbl.elf
+  /home/trungnguyen/SDSoC/workspace/correlation_ver1/correlation_ver1_standard_alone/SDRelease/correlation_ver1_standard_alone.elf.bit
+  /home/trungnguyen/SDSoC/workspace/correlation_ver1/correlation_ver1_standard_alone/SDRelease/_sds/swstubs/correlation_ver1_standard_alone.elf
+}

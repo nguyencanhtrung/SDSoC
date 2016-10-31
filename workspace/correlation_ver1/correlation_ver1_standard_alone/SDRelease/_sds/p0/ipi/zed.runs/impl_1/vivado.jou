@@ -1,0 +1,10 @@
+#-----------------------------------------------------------
+# Vivado v2014.4 (64-bit)
+# SW Build 1071353 on Tue Nov 18 16:48:31 MST 2014
+# IP Build 1071914 on Wed Nov 19 05:30:59 MST 2014
+# Start of session at: Mon Oct 31 21:18:10 2016
+# Process ID: 18828
+# Log file: /home/trungnguyen/SDSoC/workspace/correlation_ver1/correlation_ver1_standard_alone/SDRelease/_sds/p0/ipi/zed.runs/impl_1/zed_wrapper.vdi
+# Journal file: /home/trungnguyen/SDSoC/workspace/correlation_ver1/correlation_ver1_standard_alone/SDRelease/_sds/p0/ipi/zed.runs/impl_1/vivado.jou
+#-----------------------------------------------------------
+source zed_wrapper.tcl -notrace

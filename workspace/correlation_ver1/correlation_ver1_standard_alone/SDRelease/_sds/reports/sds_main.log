@@ -1,0 +1,56 @@
+(c) Copyright 2012-2015 Xilinx, Inc. All Rights Reserved.
+#-----------------------------------------------------------
+# Tool version  : sds++ 2014.4 20150228
+# Start time    : Mon Oct 31 09:13:35 PM CET 2016
+# Command line  : sds++ -Wall -O3 -I../src -c -fmessage-length=0 -MTsrc/main.o -MMD -MP -MFsrc/main.d -MTsrc/main.d -o src/main.o ../src/main.cpp -target-os standalone -sds-pf zed
+# Log file      : /home/trungnguyen/SDSoC/workspace/correlation_ver1/correlation_ver1_standard_alone/SDRelease/_sds/reports/sds_main.log
+# Journal file  : /home/trungnguyen/SDSoC/workspace/correlation_ver1/correlation_ver1_standard_alone/SDRelease/_sds/reports/sds_main.jou
+# Report file   : /home/trungnguyen/SDSoC/workspace/correlation_ver1/correlation_ver1_standard_alone/SDRelease/_sds/reports/sds_main.rpt
+#-----------------------------------------------------------
+
+INFO: [SDSoC 0-0] Create data motion intermediate representation
+clang_wrapper -target arm-xilinx-eabi -mcpu=cortex-a9 -O0 -g -w   -I/opt/Xilinx/SDSoC/2014.4/SDK/2014.4/gnu/arm/lin/arm-xilinx-eabi/include/c++/4.8.3  -I/opt/Xilinx/SDSoC/2014.4/SDK/2014.4/gnu/arm/lin/arm-xilinx-eabi/include/c++/4.8.3/arm-xilinx-eabi  -I/opt/Xilinx/SDSoC/2014.4/SDK/2014.4/gnu/arm/lin/arm-xilinx-eabi/include/c++/4.8.3/backward   -I/opt/Xilinx/SDSoC/2014.4/SDK/2014.4/gnu/arm/lin/lib/gcc/arm-xilinx-eabi/4.8.3/include  -I/opt/Xilinx/SDSoC/2014.4/SDK/2014.4/gnu/arm/lin/lib/gcc/arm-xilinx-eabi/4.8.3/include-fixed  -I/opt/Xilinx/SDSoC/2014.4/SDK/2014.4/gnu/arm/lin/arm-xilinx-eabi/include  -I /opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/include  -I /opt/Xilinx/SDSoC/2014.4/arm-xilinx-eabi/include   -I../src -Wall -fmessage-length=0 -MMD -MP -D __SDSCC__ -emit-llvm -S /home/trungnguyen/SDSoC/workspace/correlation_ver1/correlation_ver1_standard_alone/src/main.cpp -o /home/trungnguyen/SDSoC/workspace/correlation_ver1/correlation_ver1_standard_alone/SDRelease/_sds/.llvm/src/main.s
+INFO: [SDSoC 0-0] Compiling /home/trungnguyen/SDSoC/workspace/correlation_ver1/correlation_ver1_standard_alone/src/main.cpp
+arm-xilinx-eabi-g++ -c -I../src -Wall -O3 -fmessage-length=0 -MMD -MP -D __SDSCC__ -MT/home/trungnguyen/SDSoC/workspace/correlation_ver1/correlation_ver1_standard_alone/SDRelease/src/main.o -MF/home/trungnguyen/SDSoC/workspace/correlation_ver1/correlation_ver1_standard_alone/SDRelease/src/main.d -MT/home/trungnguyen/SDSoC/workspace/correlation_ver1/correlation_ver1_standard_alone/SDRelease/src/main.d -I /opt/Xilinx/SDSoC/2014.4/arm-xilinx-eabi/include  -I /opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/include   /home/trungnguyen/SDSoC/workspace/correlation_ver1/correlation_ver1_standard_alone/src/main.cpp -o src/main.o
+/home/trungnguyen/SDSoC/workspace/correlation_ver1/correlation_ver1_standard_alone/src/correlation_accel_v1.hpp:78:32: warning: extra tokens at end of #endif directive [enabled by default]
+ #endif /* CORRELATION_ACCL_H */_
+                                ^
+/home/trungnguyen/SDSoC/workspace/correlation_ver1/correlation_ver1_standard_alone/src/main.cpp: In function 'int main(int, char**)':
+/home/trungnguyen/SDSoC/workspace/correlation_ver1/correlation_ver1_standard_alone/src/main.cpp:41:171: warning: use of 'll' length modifier with 'f' type character [-Wformat=]
+ #define TIME_STAMP_ACCEL  { clock_end = sds_clock_counter(); printf("Time in second for hardware version: %llf \n", (float)(clock_end-clock_start)/(float)COUNT_PER_SECOND); clock_start = sds_clock_counter();  }
+                                                                                                                                                                           ^
+/home/trungnguyen/SDSoC/workspace/correlation_ver1/correlation_ver1_standard_alone/src/main.cpp:358:5: note: in expansion of macro 'TIME_STAMP_ACCEL'
+     TIME_STAMP_ACCEL;
+     ^
+/home/trungnguyen/SDSoC/workspace/correlation_ver1/correlation_ver1_standard_alone/src/main.cpp:41:171: warning: use of 'll' length modifier with 'f' type character [-Wformat=]
+ #define TIME_STAMP_ACCEL  { clock_end = sds_clock_counter(); printf("Time in second for hardware version: %llf \n", (float)(clock_end-clock_start)/(float)COUNT_PER_SECOND); clock_start = sds_clock_counter();  }
+                                                                                                                                                                           ^
+/home/trungnguyen/SDSoC/workspace/correlation_ver1/correlation_ver1_standard_alone/src/main.cpp:358:5: note: in expansion of macro 'TIME_STAMP_ACCEL'
+     TIME_STAMP_ACCEL;
+     ^
+/home/trungnguyen/SDSoC/workspace/correlation_ver1/correlation_ver1_standard_alone/src/main.cpp:40:166: warning: use of 'll' length modifier with 'f' type character [-Wformat=]
+ #define TIME_STAMP_SW  { clock_end = sds_clock_counter(); printf("Time in second for golden version: %llf \n", (float)(clock_end-clock_start)/(float)COUNT_PER_SECOND); }
+                                                                                                                                                                      ^
+/home/trungnguyen/SDSoC/workspace/correlation_ver1/correlation_ver1_standard_alone/src/main.cpp:366:5: note: in expansion of macro 'TIME_STAMP_SW'
+     TIME_STAMP_SW;
+     ^
+/home/trungnguyen/SDSoC/workspace/correlation_ver1/correlation_ver1_standard_alone/src/main.cpp:40:166: warning: use of 'll' length modifier with 'f' type character [-Wformat=]
+ #define TIME_STAMP_SW  { clock_end = sds_clock_counter(); printf("Time in second for golden version: %llf \n", (float)(clock_end-clock_start)/(float)COUNT_PER_SECOND); }
+                                                                                                                                                                      ^
+/home/trungnguyen/SDSoC/workspace/correlation_ver1/correlation_ver1_standard_alone/src/main.cpp:366:5: note: in expansion of macro 'TIME_STAMP_SW'
+     TIME_STAMP_SW;
+     ^
+/home/trungnguyen/SDSoC/workspace/correlation_ver1/correlation_ver1_standard_alone/src/main.cpp:371:10: warning: variable 'status' set but not used [-Wunused-but-set-variable]
+     bool status;
+          ^
+/home/trungnguyen/SDSoC/workspace/correlation_ver1/correlation_ver1_standard_alone/src/main.cpp: In function 'bool indices_init(uint32_t)':
+/home/trungnguyen/SDSoC/workspace/correlation_ver1/correlation_ver1_standard_alone/src/main.cpp:95:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+/home/trungnguyen/SDSoC/workspace/correlation_ver1/correlation_ver1_standard_alone/src/correlation_accel_v1.hpp: At global scope:
+/home/trungnguyen/SDSoC/workspace/correlation_ver1/correlation_ver1_standard_alone/src/correlation_accel_v1.hpp:64:13: warning: 'void weight_rom_init(float*, int)' declared 'static' but never defined [-Wunused-function]
+ static void weight_rom_init(
+             ^
+arm-xilinx-eabi-objcopy --add-section .xdsdata=/home/trungnguyen/SDSoC/workspace/correlation_ver1/correlation_ver1_standard_alone/SDRelease/_sds/swstubs/main.xml src/main.o
+sds++ log file saved as /home/trungnguyen/SDSoC/workspace/correlation_ver1/correlation_ver1_standard_alone/SDRelease/_sds/reports/sds_main.log
+sds++ completed at Mon Oct 31 09:13:36 PM CET 2016

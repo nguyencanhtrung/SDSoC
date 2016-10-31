@@ -403,8 +403,8 @@ CONFIG.PCW_WDT_PERIPHERAL_ENABLE {0}  ] $ps7
 
   # Create port connections
   connect_bd_net -net clkid0 [get_bd_pins proc_sys_reset_0/slowest_sync_clk] [get_bd_pins ps7/FCLK_CLK0]
-  connect_bd_net -net clkid1 [get_bd_pins axi_interconnect_M_AXI_GP0/ACLK] [get_bd_pins axi_interconnect_M_AXI_GP0/M00_ACLK] [get_bd_pins axi_interconnect_M_AXI_GP0/S00_ACLK] [get_bd_pins axi_interconnect_S_AXI_HP0/ACLK] [get_bd_pins axi_interconnect_S_AXI_HP0/M00_ACLK] [get_bd_pins axi_interconnect_S_AXI_HP0/S00_ACLK] [get_bd_pins correlation_accel_v1_0/ap_clk] [get_bd_pins correlation_accel_v1_0_if/aclk] [get_bd_pins correlation_accel_v1_0_if/s_axi_aclk] [get_bd_pins proc_sys_reset_1/slowest_sync_clk] [get_bd_pins ps7/FCLK_CLK1] [get_bd_pins ps7/M_AXI_GP0_ACLK] [get_bd_pins ps7/S_AXI_HP0_ACLK]
-  connect_bd_net -net clkid2 [get_bd_pins proc_sys_reset_2/slowest_sync_clk] [get_bd_pins ps7/FCLK_CLK2]
+  connect_bd_net -net clkid1 [get_bd_pins proc_sys_reset_1/slowest_sync_clk] [get_bd_pins ps7/FCLK_CLK1]
+  connect_bd_net -net clkid2 [get_bd_pins axi_interconnect_M_AXI_GP0/ACLK] [get_bd_pins axi_interconnect_M_AXI_GP0/M00_ACLK] [get_bd_pins axi_interconnect_M_AXI_GP0/S00_ACLK] [get_bd_pins axi_interconnect_S_AXI_HP0/ACLK] [get_bd_pins axi_interconnect_S_AXI_HP0/M00_ACLK] [get_bd_pins axi_interconnect_S_AXI_HP0/S00_ACLK] [get_bd_pins correlation_accel_v1_0/ap_clk] [get_bd_pins correlation_accel_v1_0_if/aclk] [get_bd_pins correlation_accel_v1_0_if/s_axi_aclk] [get_bd_pins proc_sys_reset_2/slowest_sync_clk] [get_bd_pins ps7/FCLK_CLK2] [get_bd_pins ps7/M_AXI_GP0_ACLK] [get_bd_pins ps7/S_AXI_HP0_ACLK]
   connect_bd_net -net clkid3 [get_bd_pins proc_sys_reset_3/slowest_sync_clk] [get_bd_pins ps7/FCLK_CLK3]
   connect_bd_net -net correlation_accel_v1_0_ap_return [get_bd_pins correlation_accel_v1_0/ap_return] [get_bd_pins correlation_accel_v1_0_if/ap_oscalar_0_din]
   connect_bd_net -net correlation_accel_v1_0_if_ap_iscalar_0_dout [get_bd_pins correlation_accel_v1_0/number_of_days] [get_bd_pins correlation_accel_v1_0_if/ap_iscalar_0_dout]
@@ -412,8 +412,8 @@ CONFIG.PCW_WDT_PERIPHERAL_ENABLE {0}  ] $ps7
   connect_bd_net -net correlation_accel_v1_0_if_ap_iscalar_2_dout [get_bd_pins correlation_accel_v1_0/in_indices] [get_bd_pins correlation_accel_v1_0_if/ap_iscalar_2_dout]
   connect_bd_net -net correlation_accel_v1_0_if_ap_iscalar_3_dout [get_bd_pins correlation_accel_v1_0/out_correlation] [get_bd_pins correlation_accel_v1_0_if/ap_iscalar_3_dout]
   connect_bd_net -net correlation_accel_v1_0_if_aresetn [get_bd_pins correlation_accel_v1_0/ap_rst_n] [get_bd_pins correlation_accel_v1_0_if/aresetn]
-  connect_bd_net -net proc_sys_reset_1_interconnect_aresetn [get_bd_pins axi_interconnect_M_AXI_GP0/ARESETN] [get_bd_pins axi_interconnect_M_AXI_GP0/M00_ARESETN] [get_bd_pins axi_interconnect_M_AXI_GP0/S00_ARESETN] [get_bd_pins axi_interconnect_S_AXI_HP0/ARESETN] [get_bd_pins axi_interconnect_S_AXI_HP0/M00_ARESETN] [get_bd_pins axi_interconnect_S_AXI_HP0/S00_ARESETN] [get_bd_pins proc_sys_reset_1/interconnect_aresetn]
-  connect_bd_net -net proc_sys_reset_1_peripheral_aresetn [get_bd_pins correlation_accel_v1_0_if/s_axi_aresetn] [get_bd_pins proc_sys_reset_1/peripheral_aresetn]
+  connect_bd_net -net proc_sys_reset_2_interconnect_aresetn [get_bd_pins axi_interconnect_M_AXI_GP0/ARESETN] [get_bd_pins axi_interconnect_M_AXI_GP0/M00_ARESETN] [get_bd_pins axi_interconnect_M_AXI_GP0/S00_ARESETN] [get_bd_pins axi_interconnect_S_AXI_HP0/ARESETN] [get_bd_pins axi_interconnect_S_AXI_HP0/M00_ARESETN] [get_bd_pins axi_interconnect_S_AXI_HP0/S00_ARESETN] [get_bd_pins proc_sys_reset_2/interconnect_aresetn]
+  connect_bd_net -net proc_sys_reset_2_peripheral_aresetn [get_bd_pins correlation_accel_v1_0_if/s_axi_aresetn] [get_bd_pins proc_sys_reset_2/peripheral_aresetn]
   connect_bd_net -net ps7_fclk_reset0_n [get_bd_pins proc_sys_reset_0/ext_reset_in] [get_bd_pins proc_sys_reset_1/ext_reset_in] [get_bd_pins proc_sys_reset_2/ext_reset_in] [get_bd_pins proc_sys_reset_3/ext_reset_in] [get_bd_pins ps7/FCLK_RESET0_N]
   connect_bd_net -net ps7_irq_const_dout [get_bd_pins ps7_irq_const/dout] [get_bd_pins xlconcat/In0]
   connect_bd_net -net xlconcat_1_dout [get_bd_pins ps7/IRQ_F2P] [get_bd_pins xlconcat/dout]

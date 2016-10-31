@@ -1,14 +1,13 @@
 (c) Copyright 2012-2015 Xilinx, Inc. All Rights Reserved.
 #-----------------------------------------------------------
 # Tool version  : sds++ 2014.4 20150228
-# Start time    : Mon Oct 31 05:16:32 PM CET 2016
-# Command line  : sds++ -o correlation_ver1_linux.elf ./src/correlation_accel_v1.o ./src/main.o -sds-pf zed
+# Start time    : Mon Oct 31 07:50:38 PM CET 2016
+# Command line  : sds++ -o correlation_ver1_linux.elf ./src/correlation_accel_v1.o ./src/main.o -sds-pf zed -dmclkid 2
 # Log file      : /home/trungnguyen/SDSoC/workspace/correlation_ver1/correlation_ver1_linux/SDRelease/_sds/reports/sds.log
 # Journal file  : /home/trungnguyen/SDSoC/workspace/correlation_ver1/correlation_ver1_linux/SDRelease/_sds/reports/sds.jou
 # Report file   : /home/trungnguyen/SDSoC/workspace/correlation_ver1/correlation_ver1_linux/SDRelease/_sds/reports/sds.rpt
 #-----------------------------------------------------------
 
-INFO: [SDSoC 0-0] Removing implementation files from previous run
 Libraries: 
 Library Paths {}
 INFO: [SDSoC 0-0] Analyzing object files
@@ -19,55 +18,50 @@ arm-xilinx-linux-gnueabi-objcopy -O binary --set-section-flags .xdhlscore=alloc 
 unzip -u -o /home/trungnguyen/SDSoC/workspace/correlation_ver1/correlation_ver1_linux/SDRelease/_sds/iprepo/repo/xilinx_com_hls_correlation_accel_v1_1_0/xilinx_com_hls_correlation_accel_v1_1_0.zip -d /home/trungnguyen/SDSoC/workspace/correlation_ver1/correlation_ver1_linux/SDRelease/_sds/iprepo/repo/xilinx_com_hls_correlation_accel_v1_1_0
 Archive:  /home/trungnguyen/SDSoC/workspace/correlation_ver1/correlation_ver1_linux/SDRelease/_sds/iprepo/repo/xilinx_com_hls_correlation_accel_v1_1_0/xilinx_com_hls_correlation_accel_v1_1_0.zip
   inflating: /home/trungnguyen/SDSoC/workspace/correlation_ver1/correlation_ver1_linux/SDRelease/_sds/iprepo/repo/xilinx_com_hls_correlation_accel_v1_1_0/component.xml  
-  inflating: /home/trungnguyen/SDSoC/workspace/correlation_ver1/correlation_ver1_linux/SDRelease/_sds/iprepo/repo/xilinx_com_hls_correlation_accel_v1_1_0/hdl/ip/correlation_accel_v1_ap_fadd_7_full_dsp_32.vhd  
-  inflating: /home/trungnguyen/SDSoC/workspace/correlation_ver1/correlation_ver1_linux/SDRelease/_sds/iprepo/repo/xilinx_com_hls_correlation_accel_v1_1_0/hdl/ip/correlation_accel_v1_ap_fdiv_28_no_dsp_32.vhd  
-  inflating: /home/trungnguyen/SDSoC/workspace/correlation_ver1/correlation_ver1_linux/SDRelease/_sds/iprepo/repo/xilinx_com_hls_correlation_accel_v1_1_0/hdl/ip/correlation_accel_v1_ap_fsqrt_26_no_dsp_32.vhd  
-  inflating: /home/trungnguyen/SDSoC/workspace/correlation_ver1/correlation_ver1_linux/SDRelease/_sds/iprepo/repo/xilinx_com_hls_correlation_accel_v1_1_0/hdl/ip/correlation_accel_v1_ap_faddfsub_7_full_dsp_32.vhd  
-  inflating: /home/trungnguyen/SDSoC/workspace/correlation_ver1/correlation_ver1_linux/SDRelease/_sds/iprepo/repo/xilinx_com_hls_correlation_accel_v1_1_0/hdl/ip/correlation_accel_v1_ap_fmul_3_max_dsp_32.vhd  
-  inflating: /home/trungnguyen/SDSoC/workspace/correlation_ver1/correlation_ver1_linux/SDRelease/_sds/iprepo/repo/xilinx_com_hls_correlation_accel_v1_1_0/hdl/ip/correlation_accel_v1_ap_sitofp_6_no_dsp_32.vhd  
-  inflating: /home/trungnguyen/SDSoC/workspace/correlation_ver1/correlation_ver1_linux/SDRelease/_sds/iprepo/repo/xilinx_com_hls_correlation_accel_v1_1_0/hdl/ip/correlation_accel_v1_ap_flog_16_full_dsp_32.vhd  
+  inflating: /home/trungnguyen/SDSoC/workspace/correlation_ver1/correlation_ver1_linux/SDRelease/_sds/iprepo/repo/xilinx_com_hls_correlation_accel_v1_1_0/hdl/ip/correlation_accel_v1_ap_flog_11_full_dsp_32.vhd  
+  inflating: /home/trungnguyen/SDSoC/workspace/correlation_ver1/correlation_ver1_linux/SDRelease/_sds/iprepo/repo/xilinx_com_hls_correlation_accel_v1_1_0/hdl/ip/correlation_accel_v1_ap_sitofp_4_no_dsp_32.vhd  
+  inflating: /home/trungnguyen/SDSoC/workspace/correlation_ver1/correlation_ver1_linux/SDRelease/_sds/iprepo/repo/xilinx_com_hls_correlation_accel_v1_1_0/hdl/ip/correlation_accel_v1_ap_fdiv_14_no_dsp_32.vhd  
+  inflating: /home/trungnguyen/SDSoC/workspace/correlation_ver1/correlation_ver1_linux/SDRelease/_sds/iprepo/repo/xilinx_com_hls_correlation_accel_v1_1_0/hdl/ip/correlation_accel_v1_ap_fmul_2_max_dsp_32.vhd  
+  inflating: /home/trungnguyen/SDSoC/workspace/correlation_ver1/correlation_ver1_linux/SDRelease/_sds/iprepo/repo/xilinx_com_hls_correlation_accel_v1_1_0/hdl/ip/correlation_accel_v1_ap_fsqrt_14_no_dsp_32.vhd  
+  inflating: /home/trungnguyen/SDSoC/workspace/correlation_ver1/correlation_ver1_linux/SDRelease/_sds/iprepo/repo/xilinx_com_hls_correlation_accel_v1_1_0/hdl/ip/correlation_accel_v1_ap_faddfsub_3_full_dsp_32.vhd  
+  inflating: /home/trungnguyen/SDSoC/workspace/correlation_ver1/correlation_ver1_linux/SDRelease/_sds/iprepo/repo/xilinx_com_hls_correlation_accel_v1_1_0/hdl/ip/correlation_accel_v1_ap_fadd_3_full_dsp_32.vhd  
   inflating: /home/trungnguyen/SDSoC/workspace/correlation_ver1/correlation_ver1_linux/SDRelease/_sds/iprepo/repo/xilinx_com_hls_correlation_accel_v1_1_0/constraints/correlation_accel_v1_ooc.xdc  
   inflating: /home/trungnguyen/SDSoC/workspace/correlation_ver1/correlation_ver1_linux/SDRelease/_sds/iprepo/repo/xilinx_com_hls_correlation_accel_v1_1_0/hdl/verilog/correlation_accel_v1_acc_returnA.v  
   inflating: /home/trungnguyen/SDSoC/workspace/correlation_ver1/correlation_ver1_linux/SDRelease/_sds/iprepo/repo/xilinx_com_hls_correlation_accel_v1_1_0/hdl/verilog/correlation_accel_v1_bramA.v  
-  inflating: /home/trungnguyen/SDSoC/workspace/correlation_ver1/correlation_ver1_linux/SDRelease/_sds/iprepo/repo/xilinx_com_hls_correlation_accel_v1_1_0/hdl/verilog/correlation_accel_v1_acc_returnB.v  
-  inflating: /home/trungnguyen/SDSoC/workspace/correlation_ver1/correlation_ver1_linux/SDRelease/_sds/iprepo/repo/xilinx_com_hls_correlation_accel_v1_1_0/hdl/verilog/correlation_accel_v1_fadd_32ns_32ns_32_9_full_dsp.v  
   inflating: /home/trungnguyen/SDSoC/workspace/correlation_ver1/correlation_ver1_linux/SDRelease/_sds/iprepo/repo/xilinx_com_hls_correlation_accel_v1_1_0/hdl/verilog/correlation_accel_v1_weight_rom_ram.dat  
-  inflating: /home/trungnguyen/SDSoC/workspace/correlation_ver1/correlation_ver1_linux/SDRelease/_sds/iprepo/repo/xilinx_com_hls_correlation_accel_v1_1_0/hdl/verilog/correlation_accel_v1_sitofp_32s_32_8.v  
-  inflating: /home/trungnguyen/SDSoC/workspace/correlation_ver1/correlation_ver1_linux/SDRelease/_sds/iprepo/repo/xilinx_com_hls_correlation_accel_v1_1_0/hdl/verilog/correlation_accel_v1_bramB_ram.dat  
-  inflating: /home/trungnguyen/SDSoC/workspace/correlation_ver1/correlation_ver1_linux/SDRelease/_sds/iprepo/repo/xilinx_com_hls_correlation_accel_v1_1_0/hdl/verilog/correlation_accel_v1_bramB.v  
-  inflating: /home/trungnguyen/SDSoC/workspace/correlation_ver1/correlation_ver1_linux/SDRelease/_sds/iprepo/repo/xilinx_com_hls_correlation_accel_v1_1_0/hdl/verilog/correlation_accel_v1_fmul_32ns_32ns_32_5_max_dsp.v  
-  inflating: /home/trungnguyen/SDSoC/workspace/correlation_ver1/correlation_ver1_linux/SDRelease/_sds/iprepo/repo/xilinx_com_hls_correlation_accel_v1_1_0/hdl/verilog/correlation_accel_v1_faddfsub_32ns_32ns_32_9_full_dsp.v  
-  inflating: /home/trungnguyen/SDSoC/workspace/correlation_ver1/correlation_ver1_linux/SDRelease/_sds/iprepo/repo/xilinx_com_hls_correlation_accel_v1_1_0/hdl/verilog/correlation_accel_v1_flog_32ns_32ns_32_18_full_dsp.v  
+  inflating: /home/trungnguyen/SDSoC/workspace/correlation_ver1/correlation_ver1_linux/SDRelease/_sds/iprepo/repo/xilinx_com_hls_correlation_accel_v1_1_0/hdl/verilog/correlation_accel_v1_mul_32s_32s_32_6.v  
+  inflating: /home/trungnguyen/SDSoC/workspace/correlation_ver1/correlation_ver1_linux/SDRelease/_sds/iprepo/repo/xilinx_com_hls_correlation_accel_v1_1_0/hdl/verilog/correlation_accel_v1_faddfsub_32ns_32ns_32_5_full_dsp.v  
+  inflating: /home/trungnguyen/SDSoC/workspace/correlation_ver1/correlation_ver1_linux/SDRelease/_sds/iprepo/repo/xilinx_com_hls_correlation_accel_v1_1_0/hdl/verilog/correlation_accel_v1_fmul_32ns_32ns_32_4_max_dsp.v  
+  inflating: /home/trungnguyen/SDSoC/workspace/correlation_ver1/correlation_ver1_linux/SDRelease/_sds/iprepo/repo/xilinx_com_hls_correlation_accel_v1_1_0/hdl/verilog/correlation_accel_v1_fdiv_32ns_32ns_32_16.v  
+  inflating: /home/trungnguyen/SDSoC/workspace/correlation_ver1/correlation_ver1_linux/SDRelease/_sds/iprepo/repo/xilinx_com_hls_correlation_accel_v1_1_0/hdl/verilog/correlation_accel_v1_fadd_32ns_32ns_32_5_full_dsp.v  
   inflating: /home/trungnguyen/SDSoC/workspace/correlation_ver1/correlation_ver1_linux/SDRelease/_sds/iprepo/repo/xilinx_com_hls_correlation_accel_v1_1_0/hdl/verilog/correlation_accel_v1_weight_rom.v  
   inflating: /home/trungnguyen/SDSoC/workspace/correlation_ver1/correlation_ver1_linux/SDRelease/_sds/iprepo/repo/xilinx_com_hls_correlation_accel_v1_1_0/hdl/verilog/correlation_accel_v1.v  
-  inflating: /home/trungnguyen/SDSoC/workspace/correlation_ver1/correlation_ver1_linux/SDRelease/_sds/iprepo/repo/xilinx_com_hls_correlation_accel_v1_1_0/hdl/verilog/correlation_accel_v1_mul_32s_32s_32_7.v  
-  inflating: /home/trungnguyen/SDSoC/workspace/correlation_ver1/correlation_ver1_linux/SDRelease/_sds/iprepo/repo/xilinx_com_hls_correlation_accel_v1_1_0/hdl/verilog/correlation_accel_v1_fsqrt_32ns_32ns_32_28.v  
+  inflating: /home/trungnguyen/SDSoC/workspace/correlation_ver1/correlation_ver1_linux/SDRelease/_sds/iprepo/repo/xilinx_com_hls_correlation_accel_v1_1_0/hdl/verilog/correlation_accel_v1_fsqrt_32ns_32ns_32_16.v  
   inflating: /home/trungnguyen/SDSoC/workspace/correlation_ver1/correlation_ver1_linux/SDRelease/_sds/iprepo/repo/xilinx_com_hls_correlation_accel_v1_1_0/hdl/verilog/correlation_accel_v1_gmem32_m_axi.v  
   inflating: /home/trungnguyen/SDSoC/workspace/correlation_ver1/correlation_ver1_linux/SDRelease/_sds/iprepo/repo/xilinx_com_hls_correlation_accel_v1_1_0/hdl/verilog/correlation_accel_v1_bramA_ram.dat  
+  inflating: /home/trungnguyen/SDSoC/workspace/correlation_ver1/correlation_ver1_linux/SDRelease/_sds/iprepo/repo/xilinx_com_hls_correlation_accel_v1_1_0/hdl/verilog/correlation_accel_v1_sitofp_32s_32_6.v  
   inflating: /home/trungnguyen/SDSoC/workspace/correlation_ver1/correlation_ver1_linux/SDRelease/_sds/iprepo/repo/xilinx_com_hls_correlation_accel_v1_1_0/hdl/verilog/correlation_accel_v1_urem_31ns_4ns_31_35.v  
-  inflating: /home/trungnguyen/SDSoC/workspace/correlation_ver1/correlation_ver1_linux/SDRelease/_sds/iprepo/repo/xilinx_com_hls_correlation_accel_v1_1_0/hdl/verilog/correlation_accel_v1_fdiv_32ns_32ns_32_30.v  
+  inflating: /home/trungnguyen/SDSoC/workspace/correlation_ver1/correlation_ver1_linux/SDRelease/_sds/iprepo/repo/xilinx_com_hls_correlation_accel_v1_1_0/hdl/verilog/correlation_accel_v1_flog_32ns_32ns_32_13_full_dsp.v  
   inflating: /home/trungnguyen/SDSoC/workspace/correlation_ver1/correlation_ver1_linux/SDRelease/_sds/iprepo/repo/xilinx_com_hls_correlation_accel_v1_1_0/hdl/vhdl/correlation_accel_v1_acc_returnA.vhd  
   inflating: /home/trungnguyen/SDSoC/workspace/correlation_ver1/correlation_ver1_linux/SDRelease/_sds/iprepo/repo/xilinx_com_hls_correlation_accel_v1_1_0/hdl/vhdl/correlation_accel_v1.vhd  
   inflating: /home/trungnguyen/SDSoC/workspace/correlation_ver1/correlation_ver1_linux/SDRelease/_sds/iprepo/repo/xilinx_com_hls_correlation_accel_v1_1_0/hdl/vhdl/correlation_accel_v1_urem_31ns_4ns_31_35.vhd  
-  inflating: /home/trungnguyen/SDSoC/workspace/correlation_ver1/correlation_ver1_linux/SDRelease/_sds/iprepo/repo/xilinx_com_hls_correlation_accel_v1_1_0/hdl/vhdl/correlation_accel_v1_faddfsub_32ns_32ns_32_9_full_dsp.vhd  
-  inflating: /home/trungnguyen/SDSoC/workspace/correlation_ver1/correlation_ver1_linux/SDRelease/_sds/iprepo/repo/xilinx_com_hls_correlation_accel_v1_1_0/hdl/vhdl/correlation_accel_v1_bramB.vhd  
-  inflating: /home/trungnguyen/SDSoC/workspace/correlation_ver1/correlation_ver1_linux/SDRelease/_sds/iprepo/repo/xilinx_com_hls_correlation_accel_v1_1_0/hdl/vhdl/correlation_accel_v1_fmul_32ns_32ns_32_5_max_dsp.vhd  
+  inflating: /home/trungnguyen/SDSoC/workspace/correlation_ver1/correlation_ver1_linux/SDRelease/_sds/iprepo/repo/xilinx_com_hls_correlation_accel_v1_1_0/hdl/vhdl/correlation_accel_v1_faddfsub_32ns_32ns_32_5_full_dsp.vhd  
+  inflating: /home/trungnguyen/SDSoC/workspace/correlation_ver1/correlation_ver1_linux/SDRelease/_sds/iprepo/repo/xilinx_com_hls_correlation_accel_v1_1_0/hdl/vhdl/correlation_accel_v1_fmul_32ns_32ns_32_4_max_dsp.vhd  
   inflating: /home/trungnguyen/SDSoC/workspace/correlation_ver1/correlation_ver1_linux/SDRelease/_sds/iprepo/repo/xilinx_com_hls_correlation_accel_v1_1_0/hdl/vhdl/correlation_accel_v1_gmem32_m_axi.vhd  
-  inflating: /home/trungnguyen/SDSoC/workspace/correlation_ver1/correlation_ver1_linux/SDRelease/_sds/iprepo/repo/xilinx_com_hls_correlation_accel_v1_1_0/hdl/vhdl/correlation_accel_v1_mul_32s_32s_32_7.vhd  
-  inflating: /home/trungnguyen/SDSoC/workspace/correlation_ver1/correlation_ver1_linux/SDRelease/_sds/iprepo/repo/xilinx_com_hls_correlation_accel_v1_1_0/hdl/vhdl/correlation_accel_v1_sitofp_32s_32_8.vhd  
-  inflating: /home/trungnguyen/SDSoC/workspace/correlation_ver1/correlation_ver1_linux/SDRelease/_sds/iprepo/repo/xilinx_com_hls_correlation_accel_v1_1_0/hdl/vhdl/correlation_accel_v1_acc_returnB.vhd  
-  inflating: /home/trungnguyen/SDSoC/workspace/correlation_ver1/correlation_ver1_linux/SDRelease/_sds/iprepo/repo/xilinx_com_hls_correlation_accel_v1_1_0/hdl/vhdl/correlation_accel_v1_fadd_32ns_32ns_32_9_full_dsp.vhd  
+  inflating: /home/trungnguyen/SDSoC/workspace/correlation_ver1/correlation_ver1_linux/SDRelease/_sds/iprepo/repo/xilinx_com_hls_correlation_accel_v1_1_0/hdl/vhdl/correlation_accel_v1_fdiv_32ns_32ns_32_16.vhd  
+  inflating: /home/trungnguyen/SDSoC/workspace/correlation_ver1/correlation_ver1_linux/SDRelease/_sds/iprepo/repo/xilinx_com_hls_correlation_accel_v1_1_0/hdl/vhdl/correlation_accel_v1_flog_32ns_32ns_32_13_full_dsp.vhd  
+  inflating: /home/trungnguyen/SDSoC/workspace/correlation_ver1/correlation_ver1_linux/SDRelease/_sds/iprepo/repo/xilinx_com_hls_correlation_accel_v1_1_0/hdl/vhdl/correlation_accel_v1_mul_32s_32s_32_6.vhd  
+  inflating: /home/trungnguyen/SDSoC/workspace/correlation_ver1/correlation_ver1_linux/SDRelease/_sds/iprepo/repo/xilinx_com_hls_correlation_accel_v1_1_0/hdl/vhdl/correlation_accel_v1_sitofp_32s_32_6.vhd  
   inflating: /home/trungnguyen/SDSoC/workspace/correlation_ver1/correlation_ver1_linux/SDRelease/_sds/iprepo/repo/xilinx_com_hls_correlation_accel_v1_1_0/hdl/vhdl/correlation_accel_v1_weight_rom.vhd  
   inflating: /home/trungnguyen/SDSoC/workspace/correlation_ver1/correlation_ver1_linux/SDRelease/_sds/iprepo/repo/xilinx_com_hls_correlation_accel_v1_1_0/hdl/vhdl/correlation_accel_v1_bramA.vhd  
-  inflating: /home/trungnguyen/SDSoC/workspace/correlation_ver1/correlation_ver1_linux/SDRelease/_sds/iprepo/repo/xilinx_com_hls_correlation_accel_v1_1_0/hdl/vhdl/correlation_accel_v1_fsqrt_32ns_32ns_32_28.vhd  
-  inflating: /home/trungnguyen/SDSoC/workspace/correlation_ver1/correlation_ver1_linux/SDRelease/_sds/iprepo/repo/xilinx_com_hls_correlation_accel_v1_1_0/hdl/vhdl/correlation_accel_v1_fdiv_32ns_32ns_32_30.vhd  
-  inflating: /home/trungnguyen/SDSoC/workspace/correlation_ver1/correlation_ver1_linux/SDRelease/_sds/iprepo/repo/xilinx_com_hls_correlation_accel_v1_1_0/hdl/vhdl/correlation_accel_v1_flog_32ns_32ns_32_18_full_dsp.vhd  
+  inflating: /home/trungnguyen/SDSoC/workspace/correlation_ver1/correlation_ver1_linux/SDRelease/_sds/iprepo/repo/xilinx_com_hls_correlation_accel_v1_1_0/hdl/vhdl/correlation_accel_v1_fadd_32ns_32ns_32_5_full_dsp.vhd  
+  inflating: /home/trungnguyen/SDSoC/workspace/correlation_ver1/correlation_ver1_linux/SDRelease/_sds/iprepo/repo/xilinx_com_hls_correlation_accel_v1_1_0/hdl/vhdl/correlation_accel_v1_fsqrt_32ns_32ns_32_16.vhd  
   inflating: /home/trungnguyen/SDSoC/workspace/correlation_ver1/correlation_ver1_linux/SDRelease/_sds/iprepo/repo/xilinx_com_hls_correlation_accel_v1_1_0/doc/ReleaseNotes.txt  
   inflating: /home/trungnguyen/SDSoC/workspace/correlation_ver1/correlation_ver1_linux/SDRelease/_sds/iprepo/repo/xilinx_com_hls_correlation_accel_v1_1_0/misc/logo.png  
   inflating: /home/trungnguyen/SDSoC/workspace/correlation_ver1/correlation_ver1_linux/SDRelease/_sds/iprepo/repo/xilinx_com_hls_correlation_accel_v1_1_0/xgui/correlation_accel_v1_v1_0.tcl  
 arm-xilinx-linux-gnueabi-objcopy -O binary --set-section-flags .xdif=alloc --only-section=.xdif /home/trungnguyen/SDSoC/workspace/correlation_ver1/correlation_ver1_linux/SDRelease/src/correlation_accel_v1.o /home/trungnguyen/SDSoC/workspace/correlation_ver1/correlation_ver1_linux/SDRelease/_sds/.cdb/correlation_accel_v1_if.xml
 arm-xilinx-linux-gnueabi-objcopy -O binary --set-section-flags .xddata=alloc --only-section=.xddata /home/trungnguyen/SDSoC/workspace/correlation_ver1/correlation_ver1_linux/SDRelease/src/main.o /home/trungnguyen/SDSoC/workspace/correlation_ver1/correlation_ver1_linux/SDRelease/_sds/.data/main.o.xml
-build_xd_ip_db  -sdsoc  -sds-pf /opt/Xilinx/SDSoC/2014.4/platforms/zed/zed_hw.pfm  -clkid 1 -ip /home/trungnguyen/SDSoC/workspace/correlation_ver1/correlation_ver1_linux/SDRelease/_sds/iprepo/repo/xilinx_com_hls_correlation_accel_v1_1_0  -o /home/trungnguyen/SDSoC/workspace/correlation_ver1/correlation_ver1_linux/SDRelease/_sds/.cdb/xd_ip_db.xml  
+build_xd_ip_db  -sdsoc  -sds-pf /opt/Xilinx/SDSoC/2014.4/platforms/zed/zed_hw.pfm  -clkid 2 -ip /home/trungnguyen/SDSoC/workspace/correlation_ver1/correlation_ver1_linux/SDRelease/_sds/iprepo/repo/xilinx_com_hls_correlation_accel_v1_1_0  -o /home/trungnguyen/SDSoC/workspace/correlation_ver1/correlation_ver1_linux/SDRelease/_sds/.cdb/xd_ip_db.xml  
 INFO: Using user-defined path for XILINX_XD environment variable /opt/Xilinx/SDSoC/2014.4
 processing accelerators: /home/trungnguyen/SDSoC/workspace/correlation_ver1/correlation_ver1_linux/SDRelease/_sds/iprepo/repo/xilinx_com_hls_correlation_accel_v1_1_0
 ip_dir: /home/trungnguyen/SDSoC/workspace/correlation_ver1/correlation_ver1_linux/SDRelease/_sds/iprepo/repo/xilinx_com_hls_correlation_accel_v1_1_0
@@ -75,7 +69,7 @@ xsltproc --stringparam xpath "spirit:component/spirit:name/text()" /opt/Xilinx/S
 ip_name: correlation_accel_v1
 INFO: [SDSoC 0-0] Generating data motion network
 llvm-link -o /home/trungnguyen/SDSoC/workspace/correlation_ver1/correlation_ver1_linux/SDRelease/_sds/.llvm/sdi_all.o /home/trungnguyen/SDSoC/workspace/correlation_ver1/correlation_ver1_linux/SDRelease/_sds/.llvm/./src/correlation_accel_v1.s /home/trungnguyen/SDSoC/workspace/correlation_ver1/correlation_ver1_linux/SDRelease/_sds/.llvm/./src/main.s
-XidanePass  --platform zed  --dmclkid 1  --repo /home/trungnguyen/SDSoC/workspace/correlation_ver1/correlation_ver1_linux/SDRelease/_sds/.cdb/xd_ip_db.xml  --dmdb /opt/Xilinx/SDSoC/2014.4/data/DM.db   -os linux 
+XidanePass  --platform zed  --dmclkid 2  --repo /home/trungnguyen/SDSoC/workspace/correlation_ver1/correlation_ver1_linux/SDRelease/_sds/.cdb/xd_ip_db.xml  --dmdb /opt/Xilinx/SDSoC/2014.4/data/DM.db   -os linux 
 INFO: [SDSoC 0-0] Analyzing hardware accelerators...
 INFO: [SDSoC 0-0] Analyzing callers to hardware accelerators...
 INFO: [SDSoC 0-0] Scheduling data transfer graph for partition 0
@@ -87,19 +81,18 @@ INFO: [SDSoC 0-0] Rewrite /home/trungnguyen/SDSoC/workspace/correlation_ver1/cor
 INFO: [SDSoC 0-0] Create accelerator stub functions
 stub_gen  -func correlation_accel_v1  -stub /home/trungnguyen/SDSoC/workspace/correlation_ver1/correlation_ver1_linux/SDRelease/_sds/.llvm/correlation_accel_v1.cfrewrite  -o /home/trungnguyen/SDSoC/workspace/correlation_ver1/correlation_ver1_linux/SDRelease/_sds/swstubs/correlation_accel_v1.cpp  /home/trungnguyen/SDSoC/workspace/correlation_ver1/correlation_ver1_linux/src/correlation_accel_v1.cpp  --  -c  -target arm-xilinx-linux-gnueabi -mcpu=cortex-a9 -O0 -g -w   -I/opt/Xilinx/SDSoC/2014.4/SDK/2014.4/gnu/arm/lin/arm-xilinx-linux-gnueabi/include/c++/4.8.3  -I/opt/Xilinx/SDSoC/2014.4/SDK/2014.4/gnu/arm/lin/arm-xilinx-linux-gnueabi/include/c++/4.8.3/arm-xilinx-linux-gnueabi  -I/opt/Xilinx/SDSoC/2014.4/SDK/2014.4/gnu/arm/lin/arm-xilinx-linux-gnueabi/include/c++/4.8.3/backward   -I/opt/Xilinx/SDSoC/2014.4/SDK/2014.4/gnu/arm/lin/lib/gcc/arm-xilinx-linux-gnueabi/4.8.3/include  -I/opt/Xilinx/SDSoC/2014.4/SDK/2014.4/gnu/arm/lin/lib/gcc/arm-xilinx-linux-gnueabi/4.8.3/include-fixed  -I/opt/Xilinx/SDSoC/2014.4/SDK/2014.4/gnu/arm/lin/arm-xilinx-linux-gnueabi/include  -I/opt/Xilinx/SDSoC/2014.4/SDK/2014.4/gnu/arm/lin/arm-xilinx-linux-gnueabi/libc/usr/include  -I /opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/include  -I /opt/Xilinx/SDSoC/2014.4/arm-xilinx-linux-gnueabi/include    -I/home/trungnguyen/SDSoC/workspace/correlation_ver1/correlation_ver1_linux/src -I/home/trungnguyen/SDSoC/workspace/correlation_ver1/correlation_ver1_linux/src -Wall -O3 -fmessage-length=0 -MMD -MP -D __SDSCC__
 INFO: [SDSoC 0-0] Successfully performed stub generation on file: 
-INFO: [SDSoC 0-0] Removing implementation files from previous run /home/trungnguyen/SDSoC/workspace/correlation_ver1/correlation_ver1_linux/SDRelease/_sds/p0/ipi
 xsltproc  -o /home/trungnguyen/SDSoC/workspace/correlation_ver1/correlation_ver1_linux/SDRelease/_sds/p0/ipi/apsys_acc_info.xml  --stringparam P_XD_IP_REPOS /home/trungnguyen/SDSoC/workspace/correlation_ver1/correlation_ver1_linux/SDRelease/_sds/.cdb/xd_ip_db.xml  /opt/Xilinx/SDSoC/2014.4/scripts/xsd/genAdapterPackagedIpInfo.xsl 
          /home/trungnguyen/SDSoC/workspace/correlation_ver1/correlation_ver1_linux/SDRelease/_sds/.llvm/apsys_0.xml
 INFO: [SDSoC 0-0] Creating block diagram (BD), address map, port information and device registration for partition 0 (this may take a few minutes)
 system_linker -cf-input /home/trungnguyen/SDSoC/workspace/correlation_ver1/correlation_ver1_linux/SDRelease/_sds/.llvm/apsys_0.xml -cf-output-dir _sds/p0 -ip-db /home/trungnguyen/SDSoC/workspace/correlation_ver1/correlation_ver1_linux/SDRelease/_sds/.cdb/xd_ip_db.xml -ip-repo /home/trungnguyen/SDSoC/workspace/correlation_ver1/correlation_ver1_linux/SDRelease/_sds/iprepo/repo -sds-pf /opt/Xilinx/SDSoC/2014.4/platforms/zed:linux -software-only   -sdsoc
-system_linker started at Mon Oct 31 05:16:45 PM CET 2016
+system_linker started at Mon Oct 31 07:50:40 PM CET 2016
 INFO: [SDSoC 0-0] Creating hardware project files
 INFO: [SDSoC 0-0] Creating Vivado block design
 INFO: [SDSoC 0-0] Creating block diagram (BD) and address map
 INFO: [SDSoC 0-0] Copying address map
 INFO: [SDSoC 0-0] Creating port and device registration data
 /opt/Xilinx/SDSoC/2014.4/bin/cf2sw -i apsys_0.xml -r /home/trungnguyen/SDSoC/workspace/correlation_ver1/correlation_ver1_linux/SDRelease/_sds/.cdb/xd_ip_db.xml -a address_map.xml -pollMode 0    -n
-system_linker completed at Mon Oct 31 05:17:20 PM CET 2016
+system_linker completed at Mon Oct 31 07:51:14 PM CET 2016
 INFO: [SDSoC 0-0] Prepare hardware access API functions
 INFO: [SDSoC 0-0] Compile hardware access API functions
 INFO: [SDSoC 0-0] Compile accelerator stub functions
@@ -108,611 +101,62 @@ arm-xilinx-linux-gnueabi-gcc -I /opt/Xilinx/SDSoC/2014.4/arm-xilinx-linux-gnueab
 arm-xilinx-linux-gnueabi-g++ -I /opt/Xilinx/SDSoC/2014.4/arm-xilinx-linux-gnueabi/include  -I /opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/include    -c  /home/trungnguyen/SDSoC/workspace/correlation_ver1/correlation_ver1_linux/SDRelease/_sds/swstubs/cf_stub.c
 arm-xilinx-linux-gnueabi-ar crs /home/trungnguyen/SDSoC/workspace/correlation_ver1/correlation_ver1_linux/SDRelease/_sds/swstubs/libxlnk_stub.a /home/trungnguyen/SDSoC/workspace/correlation_ver1/correlation_ver1_linux/SDRelease/_sds/swstubs/devreg.o /home/trungnguyen/SDSoC/workspace/correlation_ver1/correlation_ver1_linux/SDRelease/_sds/swstubs/portinfo.o /home/trungnguyen/SDSoC/workspace/correlation_ver1/correlation_ver1_linux/SDRelease/_sds/swstubs/cf_stub.o
 arm-xilinx-linux-gnueabi-g++ -c correlation_accel_v1.cpp -I /opt/Xilinx/SDSoC/2014.4/arm-xilinx-linux-gnueabi/include  -I /opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/include   -I/home/trungnguyen/SDSoC/workspace/correlation_ver1/correlation_ver1_linux/src -I/home/trungnguyen/SDSoC/workspace/correlation_ver1/correlation_ver1_linux/src -Wall -O3 -fmessage-length=0 -MMD -MP -D __SDSCC__  -o correlation_accel_v1.o
-                 from /home/trungnguyen/SDSoC/workspace/correlation_ver1/correlation_ver1_linux/src/correlation_accel_v1.hpp:28,
-                 from correlation_accel_v1.cpp:21:
-                 from /opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/include/hls_math.h:293,
-                 from /home/trungnguyen/SDSoC/workspace/correlation_ver1/correlation_ver1_linux/src/correlation_accel_v1.hpp:28,
-                 from correlation_accel_v1.cpp:21:
-                 from /home/trungnguyen/SDSoC/workspace/correlation_ver1/correlation_ver1_linux/src/correlation_accel_v1.hpp:28,
-                 from correlation_accel_v1.cpp:21:
-                 from /home/trungnguyen/SDSoC/workspace/correlation_ver1/correlation_ver1_linux/src/correlation_accel_v1.hpp:28,
-                 from correlation_accel_v1.cpp:21:
-                 from /home/trungnguyen/SDSoC/workspace/correlation_ver1/correlation_ver1_linux/src/correlation_accel_v1.hpp:28,
-                 from correlation_accel_v1.cpp:21:
-                 from /home/trungnguyen/SDSoC/workspace/correlation_ver1/correlation_ver1_linux/src/correlation_accel_v1.hpp:28,
-                 from correlation_accel_v1.cpp:21:
-                 from /home/trungnguyen/SDSoC/workspace/correlation_ver1/correlation_ver1_linux/src/correlation_accel_v1.hpp:28,
-                 from correlation_accel_v1.cpp:21:
-                 from correlation_accel_v1.cpp:21:
-/home/trungnguyen/SDSoC/workspace/correlation_ver1/correlation_ver1_linux/src/correlation_accel_v1.hpp:75:32: warning: extra tokens at end of #endif directive [enabled by default]
+/home/trungnguyen/SDSoC/workspace/correlation_ver1/correlation_ver1_linux/src/correlation_accel_v1.hpp:78:32: warning: extra tokens at end of #endif directive [enabled by default]
  #endif /* CORRELATION_ACCL_H */_
                                 ^
 correlation_accel_v1.cpp: In function 'int correlation_accel_v1(int, int, float*, float*)':
-correlation_accel_v1.cpp:61:4: warning: label 'INNER_LOOP' defined but not used [-Wunused-label]
-    INNER_LOOP:
-    ^
-correlation_accel_v1.cpp:128:6: warning: label 'LAST_ACCUM_LOOP' defined but not used [-Wunused-label]
-      LAST_ACCUM_LOOP:
+correlation_accel_v1.cpp:97:6: warning: label 'ACCUMULATION_LOOP' defined but not used [-Wunused-label]
+      ACCUMULATION_LOOP:
       ^
 correlation_accel_v1.cpp:81:6: warning: label 'RESET_REGISTERS' defined but not used [-Wunused-label]
       RESET_REGISTERS:
       ^
+correlation_accel_v1.cpp:61:4: warning: label 'INNER_LOOP' defined but not used [-Wunused-label]
+    INNER_LOOP:
+    ^
+correlation_accel_v1.cpp:130:6: warning: label 'LAST_ACCUM_LOOP' defined but not used [-Wunused-label]
+      LAST_ACCUM_LOOP:
+      ^
 correlation_accel_v1.cpp:51:2: warning: label 'OUTER_LOOP' defined but not used [-Wunused-label]
   OUTER_LOOP:
   ^
-correlation_accel_v1.cpp:97:6: warning: label 'ACCUMULATION_LOOP' defined but not used [-Wunused-label]
-      ACCUMULATION_LOOP:
-      ^
 correlation_accel_v1.cpp: In function 'void weight_rom_init(float*, int)':
-correlation_accel_v1.cpp:233:2: warning: label 'INIT_WEIGHT_ROM' defined but not used [-Wunused-label]
+correlation_accel_v1.cpp:235:2: warning: label 'INIT_WEIGHT_ROM' defined but not used [-Wunused-label]
   INIT_WEIGHT_ROM:
   ^
-correlation_accel_v1.cpp:238:2: warning: label 'COMP_SUM_OF_WEIGHT' defined but not used [-Wunused-label]
+correlation_accel_v1.cpp:240:2: warning: label 'COMP_SUM_OF_WEIGHT' defined but not used [-Wunused-label]
   COMP_SUM_OF_WEIGHT:
   ^
-                 from correlation_accel_v1.cpp:21:
-/opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/include/hls_math.h: In instantiation of 'void hls::fir_blocksrl(T*, T*, T*, T*, int, int) [with T = short int; TRAITS = hls::hls_filter_traits_Q15]':
-/opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/include/hls_math.h:795:86:   required from here
-/opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/include/hls_math.h:749:1: warning: label 'fir_blocksrl_foreach_data' defined but not used [-Wunused-label]
- fir_blocksrl_foreach_data:
- ^
-/opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/include/hls_math.h: In instantiation of 'T_accum hls::dot(T*, T*, int) [with T_accum = int; T = short int]':
-/opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/include/hls_math.h:756:83:   required from 'void hls::fir_blocksrl(T*, T*, T*, T*, int, int) [with T = short int; TRAITS = hls::hls_filter_traits_Q15]'
-/opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/include/hls_math.h:795:86:   required from here
-/opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/include/hls_math.h:724:1: warning: label 'dot_foreach_tap' defined but not used [-Wunused-label]
- dot_foreach_tap:
- ^
-                 from /home/trungnguyen/SDSoC/workspace/correlation_ver1/correlation_ver1_linux/src/correlation_accel_v1.hpp:28,
-                 from correlation_accel_v1.cpp:21:
-/opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/include/hls/utils/x_hls_utils.h: At global scope:
-/opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/include/hls/utils/x_hls_utils.h:183:10: warning: 'const uint32_t pow2(uint32_t)' defined but not used [-Wunused-function]
- uint32_t pow2(uint32_t e)
-          ^
-/opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/include/hls/utils/x_hls_utils.h:226:7: warning: 'float to_float(float)' defined but not used [-Wunused-function]
- float to_float(float v)
-       ^
-/opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/include/hls/utils/x_hls_utils.h:395:15: warning: 'std::ostream& operator<<(std::ostream&, const fp_struct<float>&)' defined but not used [-Wunused-function]
- std::ostream &operator << (std::ostream &os, const fp_struct<float> &s)
-               ^
-/opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/include/hls/utils/x_hls_utils.h:411:1: warning: 'void castSingle(float, fp_struct<float>&)' defined but not used [-Wunused-function]
- castSingle(
- ^
-/opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/include/hls/utils/x_hls_utils.h:421:1: warning: 'float castSingle(fp_struct<float>)' defined but not used [-Wunused-function]
- castSingle(
- ^
-/opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/include/hls/utils/x_hls_utils.h:429:1: warning: 'void dumpSingle(float, fp_struct<float>)' defined but not used [-Wunused-function]
- dumpSingle(
- ^
-/opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/include/hls/utils/x_hls_utils.h:548:15: warning: 'std::ostream& operator<<(std::ostream&, const fp_struct<double>&)' defined but not used [-Wunused-function]
- std::ostream &operator << (std::ostream &os, const fp_struct<double> &s)
-               ^
-                 from /home/trungnguyen/SDSoC/workspace/correlation_ver1/correlation_ver1_linux/src/correlation_accel_v1.hpp:28,
-                 from correlation_accel_v1.cpp:21:
-/opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/include/hls/utils/x_hls_utils.h:560:1: warning: 'void castDouble(double, fp_struct<double>&)' defined but not used [-Wunused-function]
- castDouble(
- ^
-/opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/include/hls/utils/x_hls_utils.h:570:1: warning: 'double castDouble(fp_struct<double>)' defined but not used [-Wunused-function]
- castDouble(
- ^
-/opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/include/hls/utils/x_hls_utils.h:578:1: warning: 'void dumpDouble(double, fp_struct<double>)' defined but not used [-Wunused-function]
- dumpDouble(
- ^
-                 from /home/trungnguyen/SDSoC/workspace/correlation_ver1/correlation_ver1_linux/src/correlation_accel_v1.hpp:28,
-                 from correlation_accel_v1.cpp:21:
-/opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/include/hls/utils/x_hls_utils.h:164:11: warning: 'float hls::abs(float)' defined but not used [-Wunused-function]
-     float abs(float x) {
-           ^
-/opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/include/hls/utils/x_hls_utils.h:168:12: warning: 'double hls::abs(double)' defined but not used [-Wunused-function]
-     double abs(double x) {
-            ^
-/opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/include/hls/utils/x_hls_utils.h:172:9: warning: 'int hls::abs(int)' defined but not used [-Wunused-function]
-     int abs(int x) {
-         ^
-/opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/include/hls/utils/x_hls_utils.h:176:14: warning: 'long int hls::abs(long int)' defined but not used [-Wunused-function]
-     long int abs(long int x) {
-              ^
-                 from correlation_accel_v1.cpp:21:
-/opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/include/hls_math.h:61:12: warning: 'int hls::__signbit(float)' defined but not used [-Wunused-function]
- static int __signbit(float a_re)
-            ^
-/opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/include/hls_math.h:67:12: warning: 'int hls::__signbit(double)' defined but not used [-Wunused-function]
- static int __signbit(double a_re)
-            ^
-/opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/include/hls_math.h:81:14: warning: 'float hls::nanf(const char*)' defined but not used [-Wunused-function]
- static float nanf(const char *tagp) {
-              ^
-/opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/include/hls_math.h:99:1: warning: 'int hls::__isfinite(float)' defined but not used [-Wunused-function]
- __isfinite(float t_in)
- ^
-/opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/include/hls_math.h:108:1: warning: 'int hls::__isfinite(double)' defined but not used [-Wunused-function]
- __isfinite(double t_in)
- ^
-/opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/include/hls_math.h:174:1: warning: 'int hls::__isnormal(float)' defined but not used [-Wunused-function]
- __isnormal(float t_in)
- ^
-/opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/include/hls_math.h:183:1: warning: 'int hls::__isnormal(double)' defined but not used [-Wunused-function]
- __isnormal(double t_in)
- ^
-/opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/include/hls_math.h:219:1: warning: 'int hls::__fpclassifyf(float)' defined but not used [-Wunused-function]
- __fpclassifyf(float t_in)
- ^
-/opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/include/hls_math.h:235:1: warning: 'int hls::__fpclassify(double)' defined but not used [-Wunused-function]
- __fpclassify(double t_in)
- ^
-/opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/include/hls_math.h:267:7: warning: 'float hls::copysign(float, float)' defined but not used [-Wunused-function]
- float copysign(float x, float y)
-       ^
-/opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/include/hls_math.h:274:8: warning: 'double hls::fabs(double)' defined but not used [-Wunused-function]
- double fabs(double x)
-        ^
-/opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/include/hls_math.h:287:7: warning: 'float hls::fabs(float)' defined but not used [-Wunused-function]
- float fabs(float x)
-       ^
-                 from /home/trungnguyen/SDSoC/workspace/correlation_ver1/correlation_ver1_linux/src/correlation_accel_v1.hpp:28,
-                 from correlation_accel_v1.cpp:21:
-/opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/include/hls/hls_normalize.h:114:14: warning: 'unsigned int hls::find_normalization(int)' defined but not used [-Wunused-function]
- unsigned int find_normalization(int x)
-              ^
-/opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/include/hls/hls_normalize.h:128:14: warning: 'unsigned int hls::find_normalization(short int)' defined but not used [-Wunused-function]
- unsigned int find_normalization(short x)
-              ^
-                 from /home/trungnguyen/SDSoC/workspace/correlation_ver1/correlation_ver1_linux/src/correlation_accel_v1.hpp:28,
-                 from correlation_accel_v1.cpp:21:
-/opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/include/hls/hls_round.h:93:8: warning: 'double hls::floor(double)' defined but not used [-Wunused-function]
- double floor(double x)
-        ^
-/opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/include/hls/hls_round.h:156:7: warning: 'float hls::floor(float)' defined but not used [-Wunused-function]
- float floor(float x)
-       ^
-/opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/include/hls/hls_round.h:163:8: warning: 'double hls::ceil(double)' defined but not used [-Wunused-function]
- double ceil(double x)
-        ^
-/opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/include/hls/hls_round.h:228:7: warning: 'float hls::ceil(float)' defined but not used [-Wunused-function]
- float ceil(float x)
-       ^
-/opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/include/hls/hls_round.h:235:8: warning: 'double hls::trunc(double)' defined but not used [-Wunused-function]
- double trunc(double x)
-        ^
-/opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/include/hls/hls_round.h:279:7: warning: 'float hls::trunc(float)' defined but not used [-Wunused-function]
- float trunc(float x)
-       ^
-/opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/include/hls/hls_round.h:286:8: warning: 'double hls::round(double)' defined but not used [-Wunused-function]
- double round(double x)
-        ^
-/opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/include/hls/hls_round.h:357:7: warning: 'float hls::round(float)' defined but not used [-Wunused-function]
- float round(float x)
-       ^
-                 from /home/trungnguyen/SDSoC/workspace/correlation_ver1/correlation_ver1_linux/src/correlation_accel_v1.hpp:28,
-                 from correlation_accel_v1.cpp:21:
-/opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/include/hls/hls_round.h:412:10: warning: 'long int hls::lrint(double)' defined but not used [-Wunused-function]
- long int lrint(double x) {
-          ^
-/opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/include/hls/hls_round.h:418:15: warning: 'long long int hls::llrint(double)' defined but not used [-Wunused-function]
- long long int llrint(double x) {
-               ^
-/opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/include/hls/hls_round.h:423:10: warning: 'long int hls::lrintf(float)' defined but not used [-Wunused-function]
- long int lrintf(float x) {
-          ^
-/opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/include/hls/hls_round.h:429:15: warning: 'long long int hls::llrintf(float)' defined but not used [-Wunused-function]
- long long int llrintf(float x) {
-               ^
-/opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/include/hls/hls_round.h:434:8: warning: 'double hls::modf(double, double*)' defined but not used [-Wunused-function]
- double modf(double x, double *intpart)
-        ^
-/opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/include/hls/hls_round.h:530:7: warning: 'float hls::modf(float, float*)' defined but not used [-Wunused-function]
- float modf(float x, float *intpart)
-       ^
-                 from correlation_accel_v1.cpp:21:
-/opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/include/hls_math.h:305:8: warning: 'double hls::fmax(double, double)' defined but not used [-Wunused-function]
- double fmax(double x, double y)
-        ^
-/opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/include/hls_math.h:352:7: warning: 'float hls::fmax(float, float)' defined but not used [-Wunused-function]
- float fmax(float x, float y)
-       ^
-/opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/include/hls_math.h:366:8: warning: 'double hls::fmin(double, double)' defined but not used [-Wunused-function]
- double fmin(double x, double y)
-        ^
-/opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/include/hls_math.h:413:7: warning: 'float hls::fmin(float, float)' defined but not used [-Wunused-function]
- float fmin(float x, float y)
-       ^
-                 from correlation_accel_v1.cpp:21:
-/opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/include/hls_math.h:433:1: warning: 'float hls::sinpif(float)' defined but not used [-Wunused-function]
- sinpif(float t_in)
- ^
-/opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/include/hls_math.h:440:1: warning: 'float hls::sin(float)' defined but not used [-Wunused-function]
- sin(float t_in)
- ^
-/opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/include/hls_math.h:447:1: warning: 'double hls::sin(double)' defined but not used [-Wunused-function]
- sin(double t_in)
- ^
-/opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/include/hls_math.h:461:1: warning: 'float hls::cospif(float)' defined but not used [-Wunused-function]
- cospif(float t_in)
- ^
-/opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/include/hls_math.h:468:1: warning: 'float hls::cos(float)' defined but not used [-Wunused-function]
- cos(float t_in)
- ^
-/opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/include/hls_math.h:475:1: warning: 'double hls::cos(double)' defined but not used [-Wunused-function]
- cos(double t_in)
- ^
-/opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/include/hls_math.h:547:1: warning: 'float hls::atanf(float)' defined but not used [-Wunused-function]
- atanf(float t_in)
- ^
-/opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/include/hls_math.h:554:1: warning: 'double hls::atan2(double, double)' defined but not used [-Wunused-function]
- atan2(double y_in, double x_in)
- ^
-/opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/include/hls_math.h:561:1: warning: 'float hls::atan2f(float, float)' defined but not used [-Wunused-function]
- atan2f(float y_in, float x_in)
- ^
-/opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/include/hls_math.h:568:1: warning: 'float hls::sinhf(float)' defined but not used [-Wunused-function]
- sinhf(float t_in)
- ^
-/opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/include/hls_math.h:575:1: warning: 'float hls::coshf(float)' defined but not used [-Wunused-function]
- coshf(float t_in)
- ^
-                 from correlation_accel_v1.cpp:21:
-/opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/include/hls_math.h:588:1: warning: 'float hls::tanf(float)' defined but not used [-Wunused-function]
- tanf(float t_in)
- ^
-/opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/include/hls_math.h:603:1: warning: 'double hls::tan(double)' defined but not used [-Wunused-function]
- tan(double t_in)
- ^
-/opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/include/hls_math.h:624:7: warning: 'float hls::log10f(float)' defined but not used [-Wunused-function]
- float log10f(float x)
-       ^
-/opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/include/hls_math.h:637:8: warning: 'double hls::log10(double)' defined but not used [-Wunused-function]
- double log10(double x)
-        ^
-/opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/include/hls_math.h:644:8: warning: 'double hls::recip(double)' defined but not used [-Wunused-function]
- double recip(double x)
-        ^
-/opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/include/hls_math.h:650:7: warning: 'float hls::recipf(float)' defined but not used [-Wunused-function]
- float recipf(float x)
-       ^
-/opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/include/hls_math.h:656:8: warning: 'double hls::rsqrt(double)' defined but not used [-Wunused-function]
- double rsqrt(double x)
-        ^
-/opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/include/hls_math.h:662:7: warning: 'float hls::rsqrtf(float)' defined but not used [-Wunused-function]
- float rsqrtf(float x)
-       ^
-                 from correlation_accel_v1.cpp:21:
-/opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/include/hls_math.h:670:8: warning: 'double hls::sqrt(double)' defined but not used [-Wunused-function]
- double sqrt(double x)
-        ^
-/opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/include/hls_math.h:676:7: warning: 'float hls::sqrtf(float)' defined but not used [-Wunused-function]
- float sqrtf(float x)
-       ^
-/opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/include/hls_math.h:682:8: warning: 'double hls::exp(double)' defined but not used [-Wunused-function]
- double exp(double x)
-        ^
-/opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/include/hls_math.h:688:7: warning: 'float hls::expf(float)' defined but not used [-Wunused-function]
- float expf(float x)
-       ^
-/opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/include/hls_math.h:793:13: warning: 'void hls::fir_blocksrl_Q15(short int*, short int*, short int*, short int*, int, int)' defined but not used [-Wunused-function]
- static void fir_blocksrl_Q15(short *in, short *taps, short *out, short *state, int incount, int numtaps)
-             ^
-                 from /home/trungnguyen/SDSoC/workspace/correlation_ver1/correlation_ver1_linux/src/correlation_accel_v1.hpp:28,
-                 from correlation_accel_v1.cpp:21:
-/opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/include/hls/hls_log.h:492:7: warning: 'float hls::log_reduce::log(float)' defined but not used [-Wunused-function]
- float log(float x)
-       ^
-/opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/include/hls/hls_log.h:504:7: warning: 'float hls::log_reduce::log10(float)' defined but not used [-Wunused-function]
- float log10(float x)
-       ^
-/opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/include/hls/hls_log.h:638:8: warning: 'double hls::log_reduce::log10(double)' defined but not used [-Wunused-function]
- double log10(double x)
-        ^
-                 from /home/trungnguyen/SDSoC/workspace/correlation_ver1/correlation_ver1_linux/src/correlation_accel_v1.hpp:28,
-                 from correlation_accel_v1.cpp:21:
-/opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/include/hls/hls_cordic.h:681:1: warning: 'float hls::cordic::sinf(float)' defined but not used [-Wunused-function]
- sinf(float t_in)
- ^
-/opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/include/hls/hls_cordic.h:697:1: warning: 'float hls::cordic::cosf(float)' defined but not used [-Wunused-function]
- cosf(float t_in)
- ^
-/opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/include/hls/hls_cordic.h:778:6: warning: 'void hls::cordic::sincosf(float, float*, float*)' defined but not used [-Wunused-function]
- void sincosf(
-      ^
-/opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/include/hls/hls_cordic.h:794:1: warning: 'float hls::cordic::atan_cordic_floatdouble(float)' defined but not used [-Wunused-function]
- atan_cordic_floatdouble(
- ^
 INFO: [SDSoC 0-0] Compile rewritten caller functions
 arm-xilinx-linux-gnueabi-objcopy -O binary --set-section-flags .xdsdata=alloc --only-section=.xdsdata /home/trungnguyen/SDSoC/workspace/correlation_ver1/correlation_ver1_linux/SDRelease/src/main.o /home/trungnguyen/SDSoC/workspace/correlation_ver1/correlation_ver1_linux/SDRelease/_sds/.data/main.xml
 arm-xilinx-linux-gnueabi-g++ -c /home/trungnguyen/SDSoC/workspace/correlation_ver1/correlation_ver1_linux/SDRelease/_sds/swstubs/main.cpp -I/home/trungnguyen/SDSoC/workspace/correlation_ver1/correlation_ver1_linux/src -I/home/trungnguyen/SDSoC/workspace/correlation_ver1/correlation_ver1_linux/src -Wall -O3 -fmessage-length=0 -MMD -MP -D __SDSCC__ -I /opt/Xilinx/SDSoC/2014.4/arm-xilinx-linux-gnueabi/include  -I /opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/include   -o /home/trungnguyen/SDSoC/workspace/correlation_ver1/correlation_ver1_linux/SDRelease/_sds/swstubs/main.o
-                 from /home/trungnguyen/SDSoC/workspace/correlation_ver1/correlation_ver1_linux/src/correlation_accel_v1.hpp:28,
-                 from /home/trungnguyen/SDSoC/workspace/correlation_ver1/correlation_ver1_linux/SDRelease/_sds/swstubs/main.cpp:30:
-                 from /opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/include/hls_math.h:293,
-                 from /home/trungnguyen/SDSoC/workspace/correlation_ver1/correlation_ver1_linux/src/correlation_accel_v1.hpp:28,
-                 from /home/trungnguyen/SDSoC/workspace/correlation_ver1/correlation_ver1_linux/SDRelease/_sds/swstubs/main.cpp:30:
-                 from /home/trungnguyen/SDSoC/workspace/correlation_ver1/correlation_ver1_linux/src/correlation_accel_v1.hpp:28,
-                 from /home/trungnguyen/SDSoC/workspace/correlation_ver1/correlation_ver1_linux/SDRelease/_sds/swstubs/main.cpp:30:
-                 from /home/trungnguyen/SDSoC/workspace/correlation_ver1/correlation_ver1_linux/src/correlation_accel_v1.hpp:28,
-                 from /home/trungnguyen/SDSoC/workspace/correlation_ver1/correlation_ver1_linux/SDRelease/_sds/swstubs/main.cpp:30:
-                 from /home/trungnguyen/SDSoC/workspace/correlation_ver1/correlation_ver1_linux/src/correlation_accel_v1.hpp:28,
-                 from /home/trungnguyen/SDSoC/workspace/correlation_ver1/correlation_ver1_linux/SDRelease/_sds/swstubs/main.cpp:30:
-                 from /home/trungnguyen/SDSoC/workspace/correlation_ver1/correlation_ver1_linux/src/correlation_accel_v1.hpp:28,
-                 from /home/trungnguyen/SDSoC/workspace/correlation_ver1/correlation_ver1_linux/SDRelease/_sds/swstubs/main.cpp:30:
-                 from /home/trungnguyen/SDSoC/workspace/correlation_ver1/correlation_ver1_linux/src/correlation_accel_v1.hpp:28,
-                 from /home/trungnguyen/SDSoC/workspace/correlation_ver1/correlation_ver1_linux/SDRelease/_sds/swstubs/main.cpp:30:
-                 from /home/trungnguyen/SDSoC/workspace/correlation_ver1/correlation_ver1_linux/SDRelease/_sds/swstubs/main.cpp:30:
-/home/trungnguyen/SDSoC/workspace/correlation_ver1/correlation_ver1_linux/src/correlation_accel_v1.hpp:75:32: warning: extra tokens at end of #endif directive [enabled by default]
+/home/trungnguyen/SDSoC/workspace/correlation_ver1/correlation_ver1_linux/src/correlation_accel_v1.hpp:78:32: warning: extra tokens at end of #endif directive [enabled by default]
  #endif /* CORRELATION_ACCL_H */_
                                 ^
 /home/trungnguyen/SDSoC/workspace/correlation_ver1/correlation_ver1_linux/SDRelease/_sds/swstubs/main.cpp: In function 'int main(int, char**)':
-/home/trungnguyen/SDSoC/workspace/correlation_ver1/correlation_ver1_linux/SDRelease/_sds/swstubs/main.cpp:360:10: warning: variable 'status' set but not used [-Wunused-but-set-variable]
+/home/trungnguyen/SDSoC/workspace/correlation_ver1/correlation_ver1_linux/SDRelease/_sds/swstubs/main.cpp:42:171: warning: use of 'll' length modifier with 'f' type character [-Wformat=]
+ #define TIME_STAMP_ACCEL  { clock_end = sds_clock_counter(); printf("Time in second for hardware version: %llf \n", (float)(clock_end-clock_start)/(float)COUNT_PER_SECOND); clock_start = sds_clock_counter();  }
+                                                                                                                                                                           ^
+/home/trungnguyen/SDSoC/workspace/correlation_ver1/correlation_ver1_linux/SDRelease/_sds/swstubs/main.cpp:357:5: note: in expansion of macro 'TIME_STAMP_ACCEL'
+     TIME_STAMP_ACCEL;
+     ^
+/home/trungnguyen/SDSoC/workspace/correlation_ver1/correlation_ver1_linux/SDRelease/_sds/swstubs/main.cpp:41:166: warning: use of 'll' length modifier with 'f' type character [-Wformat=]
+ #define TIME_STAMP_SW  { clock_end = sds_clock_counter(); printf("Time in second for golden version: %llf \n", (float)(clock_end-clock_start)/(float)COUNT_PER_SECOND); }
+                                                                                                                                                                      ^
+/home/trungnguyen/SDSoC/workspace/correlation_ver1/correlation_ver1_linux/SDRelease/_sds/swstubs/main.cpp:365:5: note: in expansion of macro 'TIME_STAMP_SW'
+     TIME_STAMP_SW;
+     ^
+/home/trungnguyen/SDSoC/workspace/correlation_ver1/correlation_ver1_linux/SDRelease/_sds/swstubs/main.cpp:370:10: warning: variable 'status' set but not used [-Wunused-but-set-variable]
      bool status;
           ^
-                 from /home/trungnguyen/SDSoC/workspace/correlation_ver1/correlation_ver1_linux/SDRelease/_sds/swstubs/main.cpp:30:
-/opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/include/hls_math.h: In instantiation of 'void hls::fir_blocksrl(T*, T*, T*, T*, int, int) [with T = short int; TRAITS = hls::hls_filter_traits_Q15]':
-/opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/include/hls_math.h:795:86:   required from here
-/opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/include/hls_math.h:749:1: warning: label 'fir_blocksrl_foreach_data' defined but not used [-Wunused-label]
- fir_blocksrl_foreach_data:
- ^
-/opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/include/hls_math.h: In instantiation of 'T_accum hls::dot(T*, T*, int) [with T_accum = int; T = short int]':
-/opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/include/hls_math.h:756:83:   required from 'void hls::fir_blocksrl(T*, T*, T*, T*, int, int) [with T = short int; TRAITS = hls::hls_filter_traits_Q15]'
-/opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/include/hls_math.h:795:86:   required from here
-/opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/include/hls_math.h:724:1: warning: label 'dot_foreach_tap' defined but not used [-Wunused-label]
- dot_foreach_tap:
- ^
 /home/trungnguyen/SDSoC/workspace/correlation_ver1/correlation_ver1_linux/SDRelease/_sds/swstubs/main.cpp: In function 'bool indices_init(uint32_t)':
-/home/trungnguyen/SDSoC/workspace/correlation_ver1/correlation_ver1_linux/SDRelease/_sds/swstubs/main.cpp:89:1: warning: control reaches end of non-void function [-Wreturn-type]
+/home/trungnguyen/SDSoC/workspace/correlation_ver1/correlation_ver1_linux/SDRelease/_sds/swstubs/main.cpp:96:1: warning: control reaches end of non-void function [-Wreturn-type]
  }
  ^
-                 from /home/trungnguyen/SDSoC/workspace/correlation_ver1/correlation_ver1_linux/src/correlation_accel_v1.hpp:28,
-                 from /home/trungnguyen/SDSoC/workspace/correlation_ver1/correlation_ver1_linux/SDRelease/_sds/swstubs/main.cpp:30:
-/opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/include/hls/utils/x_hls_utils.h: At global scope:
-/opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/include/hls/utils/x_hls_utils.h:183:10: warning: 'const uint32_t pow2(uint32_t)' defined but not used [-Wunused-function]
- uint32_t pow2(uint32_t e)
-          ^
-/opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/include/hls/utils/x_hls_utils.h:226:7: warning: 'float to_float(float)' defined but not used [-Wunused-function]
- float to_float(float v)
-       ^
-/opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/include/hls/utils/x_hls_utils.h:395:15: warning: 'std::ostream& operator<<(std::ostream&, const fp_struct<float>&)' defined but not used [-Wunused-function]
- std::ostream &operator << (std::ostream &os, const fp_struct<float> &s)
-               ^
-/opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/include/hls/utils/x_hls_utils.h:411:1: warning: 'void castSingle(float, fp_struct<float>&)' defined but not used [-Wunused-function]
- castSingle(
- ^
-/opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/include/hls/utils/x_hls_utils.h:421:1: warning: 'float castSingle(fp_struct<float>)' defined but not used [-Wunused-function]
- castSingle(
- ^
-/opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/include/hls/utils/x_hls_utils.h:429:1: warning: 'void dumpSingle(float, fp_struct<float>)' defined but not used [-Wunused-function]
- dumpSingle(
- ^
-/opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/include/hls/utils/x_hls_utils.h:548:15: warning: 'std::ostream& operator<<(std::ostream&, const fp_struct<double>&)' defined but not used [-Wunused-function]
- std::ostream &operator << (std::ostream &os, const fp_struct<double> &s)
-               ^
-                 from /home/trungnguyen/SDSoC/workspace/correlation_ver1/correlation_ver1_linux/src/correlation_accel_v1.hpp:28,
-                 from /home/trungnguyen/SDSoC/workspace/correlation_ver1/correlation_ver1_linux/SDRelease/_sds/swstubs/main.cpp:30:
-/opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/include/hls/utils/x_hls_utils.h:560:1: warning: 'void castDouble(double, fp_struct<double>&)' defined but not used [-Wunused-function]
- castDouble(
- ^
-/opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/include/hls/utils/x_hls_utils.h:570:1: warning: 'double castDouble(fp_struct<double>)' defined but not used [-Wunused-function]
- castDouble(
- ^
-/opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/include/hls/utils/x_hls_utils.h:578:1: warning: 'void dumpDouble(double, fp_struct<double>)' defined but not used [-Wunused-function]
- dumpDouble(
- ^
-/home/trungnguyen/SDSoC/workspace/correlation_ver1/correlation_ver1_linux/src/correlation_accel_v1.hpp:61:13: warning: 'void weight_rom_init(float*, int)' declared 'static' but never defined [-Wunused-function]
+/home/trungnguyen/SDSoC/workspace/correlation_ver1/correlation_ver1_linux/src/correlation_accel_v1.hpp: At global scope:
+/home/trungnguyen/SDSoC/workspace/correlation_ver1/correlation_ver1_linux/src/correlation_accel_v1.hpp:64:13: warning: 'void weight_rom_init(float*, int)' declared 'static' but never defined [-Wunused-function]
  static void weight_rom_init(
              ^
-                 from /home/trungnguyen/SDSoC/workspace/correlation_ver1/correlation_ver1_linux/src/correlation_accel_v1.hpp:28,
-                 from /home/trungnguyen/SDSoC/workspace/correlation_ver1/correlation_ver1_linux/SDRelease/_sds/swstubs/main.cpp:30:
-/opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/include/hls/utils/x_hls_utils.h:164:11: warning: 'float hls::abs(float)' defined but not used [-Wunused-function]
-     float abs(float x) {
-           ^
-/opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/include/hls/utils/x_hls_utils.h:168:12: warning: 'double hls::abs(double)' defined but not used [-Wunused-function]
-     double abs(double x) {
-            ^
-/opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/include/hls/utils/x_hls_utils.h:172:9: warning: 'int hls::abs(int)' defined but not used [-Wunused-function]
-     int abs(int x) {
-         ^
-/opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/include/hls/utils/x_hls_utils.h:176:14: warning: 'long int hls::abs(long int)' defined but not used [-Wunused-function]
-     long int abs(long int x) {
-              ^
-                 from /home/trungnguyen/SDSoC/workspace/correlation_ver1/correlation_ver1_linux/SDRelease/_sds/swstubs/main.cpp:30:
-/opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/include/hls_math.h:61:12: warning: 'int hls::__signbit(float)' defined but not used [-Wunused-function]
- static int __signbit(float a_re)
-            ^
-/opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/include/hls_math.h:67:12: warning: 'int hls::__signbit(double)' defined but not used [-Wunused-function]
- static int __signbit(double a_re)
-            ^
-/opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/include/hls_math.h:81:14: warning: 'float hls::nanf(const char*)' defined but not used [-Wunused-function]
- static float nanf(const char *tagp) {
-              ^
-/opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/include/hls_math.h:99:1: warning: 'int hls::__isfinite(float)' defined but not used [-Wunused-function]
- __isfinite(float t_in)
- ^
-/opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/include/hls_math.h:108:1: warning: 'int hls::__isfinite(double)' defined but not used [-Wunused-function]
- __isfinite(double t_in)
- ^
-/opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/include/hls_math.h:174:1: warning: 'int hls::__isnormal(float)' defined but not used [-Wunused-function]
- __isnormal(float t_in)
- ^
-/opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/include/hls_math.h:183:1: warning: 'int hls::__isnormal(double)' defined but not used [-Wunused-function]
- __isnormal(double t_in)
- ^
-/opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/include/hls_math.h:219:1: warning: 'int hls::__fpclassifyf(float)' defined but not used [-Wunused-function]
- __fpclassifyf(float t_in)
- ^
-/opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/include/hls_math.h:235:1: warning: 'int hls::__fpclassify(double)' defined but not used [-Wunused-function]
- __fpclassify(double t_in)
- ^
-/opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/include/hls_math.h:267:7: warning: 'float hls::copysign(float, float)' defined but not used [-Wunused-function]
- float copysign(float x, float y)
-       ^
-/opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/include/hls_math.h:274:8: warning: 'double hls::fabs(double)' defined but not used [-Wunused-function]
- double fabs(double x)
-        ^
-/opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/include/hls_math.h:287:7: warning: 'float hls::fabs(float)' defined but not used [-Wunused-function]
- float fabs(float x)
-       ^
-                 from /home/trungnguyen/SDSoC/workspace/correlation_ver1/correlation_ver1_linux/src/correlation_accel_v1.hpp:28,
-                 from /home/trungnguyen/SDSoC/workspace/correlation_ver1/correlation_ver1_linux/SDRelease/_sds/swstubs/main.cpp:30:
-/opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/include/hls/hls_normalize.h:114:14: warning: 'unsigned int hls::find_normalization(int)' defined but not used [-Wunused-function]
- unsigned int find_normalization(int x)
-              ^
-/opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/include/hls/hls_normalize.h:128:14: warning: 'unsigned int hls::find_normalization(short int)' defined but not used [-Wunused-function]
- unsigned int find_normalization(short x)
-              ^
-                 from /home/trungnguyen/SDSoC/workspace/correlation_ver1/correlation_ver1_linux/src/correlation_accel_v1.hpp:28,
-                 from /home/trungnguyen/SDSoC/workspace/correlation_ver1/correlation_ver1_linux/SDRelease/_sds/swstubs/main.cpp:30:
-/opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/include/hls/hls_round.h:93:8: warning: 'double hls::floor(double)' defined but not used [-Wunused-function]
- double floor(double x)
-        ^
-/opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/include/hls/hls_round.h:156:7: warning: 'float hls::floor(float)' defined but not used [-Wunused-function]
- float floor(float x)
-       ^
-/opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/include/hls/hls_round.h:163:8: warning: 'double hls::ceil(double)' defined but not used [-Wunused-function]
- double ceil(double x)
-        ^
-/opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/include/hls/hls_round.h:228:7: warning: 'float hls::ceil(float)' defined but not used [-Wunused-function]
- float ceil(float x)
-       ^
-/opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/include/hls/hls_round.h:235:8: warning: 'double hls::trunc(double)' defined but not used [-Wunused-function]
- double trunc(double x)
-        ^
-/opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/include/hls/hls_round.h:279:7: warning: 'float hls::trunc(float)' defined but not used [-Wunused-function]
- float trunc(float x)
-       ^
-/opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/include/hls/hls_round.h:286:8: warning: 'double hls::round(double)' defined but not used [-Wunused-function]
- double round(double x)
-        ^
-/opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/include/hls/hls_round.h:357:7: warning: 'float hls::round(float)' defined but not used [-Wunused-function]
- float round(float x)
-       ^
-                 from /home/trungnguyen/SDSoC/workspace/correlation_ver1/correlation_ver1_linux/src/correlation_accel_v1.hpp:28,
-                 from /home/trungnguyen/SDSoC/workspace/correlation_ver1/correlation_ver1_linux/SDRelease/_sds/swstubs/main.cpp:30:
-/opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/include/hls/hls_round.h:412:10: warning: 'long int hls::lrint(double)' defined but not used [-Wunused-function]
- long int lrint(double x) {
-          ^
-/opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/include/hls/hls_round.h:418:15: warning: 'long long int hls::llrint(double)' defined but not used [-Wunused-function]
- long long int llrint(double x) {
-               ^
-/opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/include/hls/hls_round.h:423:10: warning: 'long int hls::lrintf(float)' defined but not used [-Wunused-function]
- long int lrintf(float x) {
-          ^
-/opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/include/hls/hls_round.h:429:15: warning: 'long long int hls::llrintf(float)' defined but not used [-Wunused-function]
- long long int llrintf(float x) {
-               ^
-/opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/include/hls/hls_round.h:434:8: warning: 'double hls::modf(double, double*)' defined but not used [-Wunused-function]
- double modf(double x, double *intpart)
-        ^
-/opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/include/hls/hls_round.h:530:7: warning: 'float hls::modf(float, float*)' defined but not used [-Wunused-function]
- float modf(float x, float *intpart)
-       ^
-                 from /home/trungnguyen/SDSoC/workspace/correlation_ver1/correlation_ver1_linux/SDRelease/_sds/swstubs/main.cpp:30:
-/opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/include/hls_math.h:305:8: warning: 'double hls::fmax(double, double)' defined but not used [-Wunused-function]
- double fmax(double x, double y)
-        ^
-/opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/include/hls_math.h:352:7: warning: 'float hls::fmax(float, float)' defined but not used [-Wunused-function]
- float fmax(float x, float y)
-       ^
-/opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/include/hls_math.h:366:8: warning: 'double hls::fmin(double, double)' defined but not used [-Wunused-function]
- double fmin(double x, double y)
-        ^
-/opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/include/hls_math.h:413:7: warning: 'float hls::fmin(float, float)' defined but not used [-Wunused-function]
- float fmin(float x, float y)
-       ^
-                 from /home/trungnguyen/SDSoC/workspace/correlation_ver1/correlation_ver1_linux/SDRelease/_sds/swstubs/main.cpp:30:
-/opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/include/hls_math.h:433:1: warning: 'float hls::sinpif(float)' defined but not used [-Wunused-function]
- sinpif(float t_in)
- ^
-/opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/include/hls_math.h:440:1: warning: 'float hls::sin(float)' defined but not used [-Wunused-function]
- sin(float t_in)
- ^
-/opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/include/hls_math.h:447:1: warning: 'double hls::sin(double)' defined but not used [-Wunused-function]
- sin(double t_in)
- ^
-/opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/include/hls_math.h:461:1: warning: 'float hls::cospif(float)' defined but not used [-Wunused-function]
- cospif(float t_in)
- ^
-/opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/include/hls_math.h:468:1: warning: 'float hls::cos(float)' defined but not used [-Wunused-function]
- cos(float t_in)
- ^
-/opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/include/hls_math.h:475:1: warning: 'double hls::cos(double)' defined but not used [-Wunused-function]
- cos(double t_in)
- ^
-/opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/include/hls_math.h:547:1: warning: 'float hls::atanf(float)' defined but not used [-Wunused-function]
- atanf(float t_in)
- ^
-/opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/include/hls_math.h:554:1: warning: 'double hls::atan2(double, double)' defined but not used [-Wunused-function]
- atan2(double y_in, double x_in)
- ^
-/opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/include/hls_math.h:561:1: warning: 'float hls::atan2f(float, float)' defined but not used [-Wunused-function]
- atan2f(float y_in, float x_in)
- ^
-/opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/include/hls_math.h:568:1: warning: 'float hls::sinhf(float)' defined but not used [-Wunused-function]
- sinhf(float t_in)
- ^
-/opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/include/hls_math.h:575:1: warning: 'float hls::coshf(float)' defined but not used [-Wunused-function]
- coshf(float t_in)
- ^
-                 from /home/trungnguyen/SDSoC/workspace/correlation_ver1/correlation_ver1_linux/SDRelease/_sds/swstubs/main.cpp:30:
-/opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/include/hls_math.h:588:1: warning: 'float hls::tanf(float)' defined but not used [-Wunused-function]
- tanf(float t_in)
- ^
-/opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/include/hls_math.h:603:1: warning: 'double hls::tan(double)' defined but not used [-Wunused-function]
- tan(double t_in)
- ^
-/opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/include/hls_math.h:624:7: warning: 'float hls::log10f(float)' defined but not used [-Wunused-function]
- float log10f(float x)
-       ^
-/opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/include/hls_math.h:637:8: warning: 'double hls::log10(double)' defined but not used [-Wunused-function]
- double log10(double x)
-        ^
-/opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/include/hls_math.h:644:8: warning: 'double hls::recip(double)' defined but not used [-Wunused-function]
- double recip(double x)
-        ^
-/opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/include/hls_math.h:650:7: warning: 'float hls::recipf(float)' defined but not used [-Wunused-function]
- float recipf(float x)
-       ^
-/opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/include/hls_math.h:656:8: warning: 'double hls::rsqrt(double)' defined but not used [-Wunused-function]
- double rsqrt(double x)
-        ^
-/opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/include/hls_math.h:662:7: warning: 'float hls::rsqrtf(float)' defined but not used [-Wunused-function]
- float rsqrtf(float x)
-       ^
-                 from /home/trungnguyen/SDSoC/workspace/correlation_ver1/correlation_ver1_linux/SDRelease/_sds/swstubs/main.cpp:30:
-/opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/include/hls_math.h:670:8: warning: 'double hls::sqrt(double)' defined but not used [-Wunused-function]
- double sqrt(double x)
-        ^
-/opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/include/hls_math.h:676:7: warning: 'float hls::sqrtf(float)' defined but not used [-Wunused-function]
- float sqrtf(float x)
-       ^
-/opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/include/hls_math.h:682:8: warning: 'double hls::exp(double)' defined but not used [-Wunused-function]
- double exp(double x)
-        ^
-/opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/include/hls_math.h:688:7: warning: 'float hls::expf(float)' defined but not used [-Wunused-function]
- float expf(float x)
-       ^
-/opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/include/hls_math.h:793:13: warning: 'void hls::fir_blocksrl_Q15(short int*, short int*, short int*, short int*, int, int)' defined but not used [-Wunused-function]
- static void fir_blocksrl_Q15(short *in, short *taps, short *out, short *state, int incount, int numtaps)
-             ^
-                 from /home/trungnguyen/SDSoC/workspace/correlation_ver1/correlation_ver1_linux/src/correlation_accel_v1.hpp:28,
-                 from /home/trungnguyen/SDSoC/workspace/correlation_ver1/correlation_ver1_linux/SDRelease/_sds/swstubs/main.cpp:30:
-/opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/include/hls/hls_log.h:492:7: warning: 'float hls::log_reduce::log(float)' defined but not used [-Wunused-function]
- float log(float x)
-       ^
-/opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/include/hls/hls_log.h:504:7: warning: 'float hls::log_reduce::log10(float)' defined but not used [-Wunused-function]
- float log10(float x)
-       ^
-/opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/include/hls/hls_log.h:638:8: warning: 'double hls::log_reduce::log10(double)' defined but not used [-Wunused-function]
- double log10(double x)
-        ^
-                 from /home/trungnguyen/SDSoC/workspace/correlation_ver1/correlation_ver1_linux/src/correlation_accel_v1.hpp:28,
-                 from /home/trungnguyen/SDSoC/workspace/correlation_ver1/correlation_ver1_linux/SDRelease/_sds/swstubs/main.cpp:30:
-/opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/include/hls/hls_cordic.h:681:1: warning: 'float hls::cordic::sinf(float)' defined but not used [-Wunused-function]
- sinf(float t_in)
- ^
-/opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/include/hls/hls_cordic.h:697:1: warning: 'float hls::cordic::cosf(float)' defined but not used [-Wunused-function]
- cosf(float t_in)
- ^
-/opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/include/hls/hls_cordic.h:778:6: warning: 'void hls::cordic::sincosf(float, float*, float*)' defined but not used [-Wunused-function]
- void sincosf(
-      ^
-/opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/include/hls/hls_cordic.h:794:1: warning: 'float hls::cordic::atan_cordic_floatdouble(float)' defined but not used [-Wunused-function]
- atan_cordic_floatdouble(
- ^
 arm-xilinx-linux-gnueabi-ar crs /home/trungnguyen/SDSoC/workspace/correlation_ver1/correlation_ver1_linux/SDRelease/_sds/swstubs/libcorrelation_ver1_linux.a /home/trungnguyen/SDSoC/workspace/correlation_ver1/correlation_ver1_linux/SDRelease/_sds/swstubs/devreg.o /home/trungnguyen/SDSoC/workspace/correlation_ver1/correlation_ver1_linux/SDRelease/_sds/swstubs/portinfo.o /home/trungnguyen/SDSoC/workspace/correlation_ver1/correlation_ver1_linux/SDRelease/_sds/swstubs/cf_stub.o /home/trungnguyen/SDSoC/workspace/correlation_ver1/correlation_ver1_linux/SDRelease/_sds/swstubs/correlation_accel_v1.o
 INFO: [SDSoC 0-0] Link application ELF file
 arm-xilinx-linux-gnueabi-g++   /home/trungnguyen/SDSoC/workspace/correlation_ver1/correlation_ver1_linux/SDRelease/src/correlation_accel_v1.o /home/trungnguyen/SDSoC/workspace/correlation_ver1/correlation_ver1_linux/SDRelease/_sds/swstubs/main.o /home/trungnguyen/SDSoC/workspace/correlation_ver1/correlation_ver1_linux/SDRelease/_sds/swstubs/correlation_accel_v1.o     -L /opt/Xilinx/SDSoC/2014.4/arm-xilinx-linux-gnueabi/lib -L/home/trungnguyen/SDSoC/workspace/correlation_ver1/correlation_ver1_linux/SDRelease/_sds/swstubs -Wl,--start-group  -Wl,--end-group -Wl,--start-group    -lpthread -lsds_lib -lxlnk_stub  -Wl,--end-group -o /home/trungnguyen/SDSoC/workspace/correlation_ver1/correlation_ver1_linux/SDRelease/_sds/swstubs/correlation_ver1_linux.elf
@@ -721,36 +165,36 @@ INFO: [SDSoC 0-0] Enable generation of hardware programming files
 INFO: [SDSoC 0-0] Enable generation of boot files
 INFO: [SDSoC 0-0] Calling system_linker for partition 0
 system_linker -cf-input /home/trungnguyen/SDSoC/workspace/correlation_ver1/correlation_ver1_linux/SDRelease/_sds/.llvm/apsys_0.xml -cf-output-dir _sds/p0 -ip-db /home/trungnguyen/SDSoC/workspace/correlation_ver1/correlation_ver1_linux/SDRelease/_sds/.cdb/xd_ip_db.xml -ip-repo /home/trungnguyen/SDSoC/workspace/correlation_ver1/correlation_ver1_linux/SDRelease/_sds/iprepo/repo -sds-pf /opt/Xilinx/SDSoC/2014.4/platforms/zed:linux -bitstream -bit-name correlation_ver1_linux.elf.bit -boot-files   -mdev-no-swgen -mdev-no-xsd -sdsoc -sd-output-dir _sds/p0/sd_card -bit-binary -elf /home/trungnguyen/SDSoC/workspace/correlation_ver1/correlation_ver1_linux/SDRelease/_sds/swstubs/correlation_ver1_linux.elf
-system_linker started at Mon Oct 31 05:17:43 PM CET 2016
+system_linker started at Mon Oct 31 07:51:16 PM CET 2016
 INFO: [SDSoC 0-0] Generating bitstream for platform zed.
       This may take some time to complete
-... [17:17:55] Starting synth_design
-... [17:18:00] Starting RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 1023.180 ; gain = 189.684 ; free physical = 10368 ; free virtual = 21718
-... [17:19:50] Start Loading Part and Timing Information
-... [17:19:50] Start Applying 'set_property' XDC Constraints
-... [17:20:00] Start RTL Component Statistics 
-... [17:20:00] Start RTL Hierarchical Component Statistics 
-... [17:20:00] Start Part Resource Summary
-... [17:20:00] Start Parallel Synthesis Optimization  : Time (s): cpu = 00:02:05 ; elapsed = 00:02:05 . Memory (MB): peak = 1811.879 ; gain = 978.383 ; free physical = 9695 ; free virtual = 21037
-... [17:20:00] Start Cross Boundary Optimization
-... [17:20:05] Start Area Optimization
-... [17:20:25] Start Timing Optimization
-... [17:20:30] Start Applying XDC Timing Constraints
-... [17:20:55] Start Technology Mapping
-... [17:21:15] Start IO Insertion
-... [17:21:15] Start Flattening Before IO Insertion
-... [17:21:15] Start Final Netlist Cleanup
-... [17:21:20] Start Renaming Generated Instances
-... [17:21:20] Start Rebuilding User Hierarchy
-... [17:21:25] Start Writing Synthesis Report
-... [17:21:53] Starting DRC Task
-... [17:21:58] Starting Logic Optimization Task
-... [17:22:08] Starting Power Optimization Task
-... [17:22:08] Starting PowerOpt Patch Enables Task
-... [17:22:13] Starting Placer Task
-... [17:22:43] Starting Routing Task
+... [19:51:28] Starting synth_design
+... [19:51:33] Starting RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 1023.168 ; gain = 189.684 ; free physical = 11039 ; free virtual = 22236
+... [19:53:23] Start Loading Part and Timing Information
+... [19:53:23] Start Applying 'set_property' XDC Constraints
+... [19:53:28] Start RTL Component Statistics 
+... [19:53:28] Start RTL Hierarchical Component Statistics 
+... [19:53:28] Start Part Resource Summary
+... [19:53:28] Start Parallel Synthesis Optimization  : Time (s): cpu = 00:02:05 ; elapsed = 00:02:04 . Memory (MB): peak = 1779.219 ; gain = 945.734 ; free physical = 10408 ; free virtual = 21612
+... [19:53:28] Start Cross Boundary Optimization
+... [19:53:38] Start Area Optimization
+... [19:53:48] Start Timing Optimization
+... [19:53:58] Start Applying XDC Timing Constraints
+... [19:54:03] Start Technology Mapping
+... [19:54:28] Start IO Insertion
+... [19:54:28] Start Flattening Before IO Insertion
+... [19:54:28] Start Final Netlist Cleanup
+... [19:54:28] Start Renaming Generated Instances
+... [19:54:33] Start Rebuilding User Hierarchy
+... [19:54:33] Start Writing Synthesis Report
+... [19:55:01] Starting DRC Task
+... [19:55:06] Starting Logic Optimization Task
+... [19:55:11] Starting Power Optimization Task
+... [19:55:16] Starting PowerOpt Patch Enables Task
+... [19:55:21] Starting Placer Task
+... [19:55:51] Starting Routing Task
 INFO: [SDSoC 0-0] Creating boot files
-system_linker completed at Mon Oct 31 05:23:48 PM CET 2016
+system_linker completed at Mon Oct 31 07:56:51 PM CET 2016
 All user specified timing constraints are met.
 sds++ log file saved as /home/trungnguyen/SDSoC/workspace/correlation_ver1/correlation_ver1_linux/SDRelease/_sds/reports/sds.log
-sds++ completed at Mon Oct 31 05:23:48 PM CET 2016
+sds++ completed at Mon Oct 31 07:56:51 PM CET 2016

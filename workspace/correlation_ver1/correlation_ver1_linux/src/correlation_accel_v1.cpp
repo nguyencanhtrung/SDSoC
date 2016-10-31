@@ -97,6 +97,7 @@ int correlation_accel_v1(
 					ACCUMULATION_LOOP:
 					for(int i = 0; i < NUMBER_OF_DAYS - 1; i++){
 					#pragma HLS PIPELINE
+
 						float lnReturnA			= logf(bramA[i]/bramA[i+1]); /*< BramA and B must be 2-port BRAM */
 						float lnReturnB 		= logf(bramB[i]/bramB[i+1]);
 						float weight			= weight_rom[i+1];
@@ -115,6 +116,7 @@ int correlation_accel_v1(
 
 						// Weight * returnA * returnB Accumulation
 						acc_weight_returnA_returnB[i%ACUM_PARTITION]+= lnReturnA * lnReturnB * weight;
+
 					}
 
 					float sum_returnA 					= 0.0f;

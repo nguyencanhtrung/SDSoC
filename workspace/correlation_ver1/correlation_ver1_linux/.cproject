@@ -44,12 +44,12 @@
 							</tool>
 						</toolChain>
 					</folderInfo>
-					<fileInfo id="com.xilinx.sdk.apf.linux.toolchain.configuration.debug.1710856227.src/correlation_accel_v1.cpp" name="correlation_accel_v1.cpp" rcbsApplicability="disable" resourcePath="src/correlation_accel_v1.cpp" toolsToInvoke="com.xilinx.sdk.apf.linux.toolchain.cxx.compiler.792976514.1069896340">
-						<tool id="com.xilinx.sdk.apf.linux.toolchain.cxx.compiler.792976514.1069896340" name="SDS++ Linux Compiler" superClass="com.xilinx.sdk.apf.linux.toolchain.cxx.compiler.792976514">
-							<option id="com.xilinx.sdk.apf.linux.accel.functions.485188864" superClass="com.xilinx.sdk.apf.linux.accel.functions" valueType="stringList">
+					<fileInfo id="com.xilinx.sdk.apf.linux.toolchain.configuration.debug.1710856227.src/correlation_accel_v1.cpp" name="correlation_accel_v1.cpp" rcbsApplicability="disable" resourcePath="src/correlation_accel_v1.cpp" toolsToInvoke="com.xilinx.sdk.apf.linux.toolchain.cxx.compiler.792976514.922144794">
+						<tool id="com.xilinx.sdk.apf.linux.toolchain.cxx.compiler.792976514.922144794" name="SDS++ Linux Compiler" superClass="com.xilinx.sdk.apf.linux.toolchain.cxx.compiler.792976514">
+							<option id="com.xilinx.sdk.apf.linux.accel.functions.1008229659" name="Accelerated Functions" superClass="com.xilinx.sdk.apf.linux.accel.functions" valueType="stringList">
 								<listOptionValue builtIn="false" value="correlation_accel_v1 correlation_accel_v1.cpp"/>
 							</option>
-							<inputType id="com.xilinx.sdk.apf.linux.cxx.compiler.input.966155295" name="C++ source files" superClass="com.xilinx.sdk.apf.linux.cxx.compiler.input"/>
+							<inputType id="com.xilinx.sdk.apf.linux.cxx.compiler.input.1122545060" name="C++ source files" superClass="com.xilinx.sdk.apf.linux.cxx.compiler.input"/>
 						</tool>
 					</fileInfo>
 					<sourceEntries>
@@ -99,14 +99,27 @@
 							</tool>
 						</toolChain>
 					</folderInfo>
-					<fileInfo id="com.xilinx.sdk.apf.linux.toolchain.configuration.release.648713013.src/correlation_accel_v1.cpp" name="correlation_accel_v1.cpp" rcbsApplicability="disable" resourcePath="src/correlation_accel_v1.cpp" toolsToInvoke="com.xilinx.sdk.apf.linux.toolchain.release.cxx.compiler.1181746530.810723294">
-						<tool id="com.xilinx.sdk.apf.linux.toolchain.release.cxx.compiler.1181746530.810723294" name="SDS++ Linux Compiler" superClass="com.xilinx.sdk.apf.linux.toolchain.release.cxx.compiler.1181746530">
-							<option id="com.xilinx.sdk.apf.linux.accel.functions.1827918832" superClass="com.xilinx.sdk.apf.linux.accel.functions" valueType="stringList">
+					<fileInfo id="com.xilinx.sdk.apf.linux.toolchain.configuration.release.648713013.src/correlation_accel_v1.cpp" name="correlation_accel_v1.cpp" rcbsApplicability="disable" resourcePath="src/correlation_accel_v1.cpp" toolsToInvoke="com.xilinx.sdk.apf.linux.toolchain.release.cxx.compiler.1181746530.1549502101">
+						<tool id="com.xilinx.sdk.apf.linux.toolchain.release.cxx.compiler.1181746530.1549502101" name="SDS++ Linux Compiler" superClass="com.xilinx.sdk.apf.linux.toolchain.release.cxx.compiler.1181746530">
+							<option id="com.xilinx.sdk.apf.linux.accel.functions.1334935347" name="Accelerated Functions" superClass="com.xilinx.sdk.apf.linux.accel.functions" valueType="stringList">
 								<listOptionValue builtIn="false" value="correlation_accel_v1 correlation_accel_v1.cpp"/>
 							</option>
-							<inputType id="com.xilinx.sdk.apf.linux.cxx.compiler.input.779044786" name="C++ source files" superClass="com.xilinx.sdk.apf.linux.cxx.compiler.input"/>
+							<inputType id="com.xilinx.sdk.apf.linux.cxx.compiler.input.363268669" name="C++ source files" superClass="com.xilinx.sdk.apf.linux.cxx.compiler.input"/>
 						</tool>
 					</fileInfo>
+					<folderInfo id="com.xilinx.sdk.apf.linux.toolchain.configuration.release.648713013.1757386701" name="/" resourcePath="SDRelease">
+						<toolChain id="com.xilinx.sdk.apf.linux.toolchain.release.1291259969" name="Xilinx SDSoC Linux Toolchain" superClass="com.xilinx.sdk.apf.linux.toolchain.release" unusedChildren="">
+							<option id="com.xilinx.sdk.apf.linux.common.option.platform.1834595293.1767969713" name="SDSoC Platform" superClass="com.xilinx.sdk.apf.linux.common.option.platform.1834595293"/>
+							<tool id="com.xilinx.sdk.apf.linux.toolchain.release.c.compiler.167474107" name="SDSCC Linux Compiler" superClass="com.xilinx.sdk.apf.linux.toolchain.release.c.compiler.1648761158">
+								<option id="xilinx.gnu.compiler.misc.ansi.817823789" superClass="xilinx.gnu.compiler.misc.ansi" value="false" valueType="boolean"/>
+								<inputType id="com.xilinx.sdk.apf.linux.c.compiler.input.1207994152" name="C source files" superClass="com.xilinx.sdk.apf.linux.c.compiler.input"/>
+							</tool>
+							<tool id="com.xilinx.sdk.apf.linux.toolchain.release.cxx.compiler.1595443163" name="SDS++ Linux Compiler" superClass="com.xilinx.sdk.apf.linux.toolchain.release.cxx.compiler.1181746530">
+								<inputType id="com.xilinx.sdk.apf.linux.cxx.compiler.input.2021041902" name="C++ source files" superClass="com.xilinx.sdk.apf.linux.cxx.compiler.input"/>
+							</tool>
+							<tool id="com.xilinx.sdk.apf.linux.toolchain.linker.807234167" name="SDS++ Linux Linker" superClass="com.xilinx.sdk.apf.linux.toolchain.linker.1220852561"/>
+						</toolChain>
+					</folderInfo>
 					<sourceEntries>
 						<entry excluding="**/_sds/iprepo/|**/_sds/p0/|**/_sds/vhls/" flags="VALUE_WORKSPACE_PATH" kind="sourcePath" name=""/>
 					</sourceEntries>
@@ -158,12 +171,12 @@
 							</tool>
 						</toolChain>
 					</folderInfo>
-					<fileInfo id="com.xilinx.sdk.apf.linux.toolchain.configuration.estimate.1078237257.src/correlation_accel_v1.cpp" name="correlation_accel_v1.cpp" rcbsApplicability="disable" resourcePath="src/correlation_accel_v1.cpp" toolsToInvoke="com.xilinx.sdk.apf.linux.toolchain.estimate.cxx.compiler.340969246.1420635626">
-						<tool id="com.xilinx.sdk.apf.linux.toolchain.estimate.cxx.compiler.340969246.1420635626" name="SDS++ Linux Compiler" superClass="com.xilinx.sdk.apf.linux.toolchain.estimate.cxx.compiler.340969246">
-							<option id="com.xilinx.sdk.apf.linux.accel.functions.2060652094" superClass="com.xilinx.sdk.apf.linux.accel.functions" valueType="stringList">
+					<fileInfo id="com.xilinx.sdk.apf.linux.toolchain.configuration.estimate.1078237257.src/correlation_accel_v1.cpp" name="correlation_accel_v1.cpp" rcbsApplicability="disable" resourcePath="src/correlation_accel_v1.cpp" toolsToInvoke="com.xilinx.sdk.apf.linux.toolchain.estimate.cxx.compiler.340969246.2112240715">
+						<tool id="com.xilinx.sdk.apf.linux.toolchain.estimate.cxx.compiler.340969246.2112240715" name="SDS++ Linux Compiler" superClass="com.xilinx.sdk.apf.linux.toolchain.estimate.cxx.compiler.340969246">
+							<option id="com.xilinx.sdk.apf.linux.accel.functions.2090686981" name="Accelerated Functions" superClass="com.xilinx.sdk.apf.linux.accel.functions" valueType="stringList">
 								<listOptionValue builtIn="false" value="correlation_accel_v1 correlation_accel_v1.cpp"/>
 							</option>
-							<inputType id="com.xilinx.sdk.apf.linux.cxx.compiler.input.689425650" name="C++ source files" superClass="com.xilinx.sdk.apf.linux.cxx.compiler.input"/>
+							<inputType id="com.xilinx.sdk.apf.linux.cxx.compiler.input.1522400669" name="C++ source files" superClass="com.xilinx.sdk.apf.linux.cxx.compiler.input"/>
 						</tool>
 					</fileInfo>
 					<sourceEntries>

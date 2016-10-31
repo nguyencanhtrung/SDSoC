@@ -55456,7 +55456,7 @@ _ssdm_op_SpecInterface(0, "ap_ctrl_hs", 0, 0, 0, 0, "", "", "");
 
  int NUMBER_OF_DAYS = number_of_days;
  int NUMBER_OF_INDICES = number_of_indices;
-
+ int counter = 0;
  /*----------------------------------------------------------*
 	 * PART 1: WEIGHT ROOM Initialization 			    		*
 	 * ---------------------------------------------------------*/
@@ -55482,8 +55482,6 @@ _ssdm_op_SpecInterface(0, "ap_ctrl_hs", 0, 0, 0, 0, "", "", "");
      memcpy( bramB,
        &in_indices[NUMBER_OF_DAYS * column_index],
        NUMBER_OF_DAYS * sizeof(float));
-
-     static int counter = 0;
 
      // Channels to store accumulation
      float acc_returnA[6];

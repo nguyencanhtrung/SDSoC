@@ -336,14 +336,14 @@ int main(int argc, char* argv[])
     /************************************************************
 	*	 	Step 2: Hardware computation       					*
 	*----------------------------------------------------------*/
-    for(int i = number_of_indices; i > 1; --i){
+    //for(int i = number_of_indices; i > 1; --i){
         correlation_accel_v1( 
                                 number_of_days_per_index,   /* CPU in*/
                                 number_of_indices,          /* CPU in*/
-                                (float *)(indices_buff + (number_of_indices - i) * number_of_days_per_index),  /*  Input*/
+                                (float *)(indices_buff),  /*  Input*/
                                 correlation_buff        	/* Output*/
         );
-    }
+    //}
 	/************************************************************
 	 *		Step 3: Software computation					  	*
 	 *----------------------------------------------------------*/

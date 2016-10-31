@@ -1,7 +1,7 @@
 (c) Copyright 2012-2015 Xilinx, Inc. All Rights Reserved.
 #-----------------------------------------------------------
 # Tool version  : sds++ 2014.4 20150228
-# Start time    : Mon Oct 31 04:52:32 PM CET 2016
+# Start time    : Mon Oct 31 05:16:32 PM CET 2016
 # Command line  : sds++ -o correlation_ver1_linux.elf ./src/correlation_accel_v1.o ./src/main.o -sds-pf zed
 # Log file      : /home/trungnguyen/SDSoC/workspace/correlation_ver1/correlation_ver1_linux/SDRelease/_sds/reports/sds.log
 # Journal file  : /home/trungnguyen/SDSoC/workspace/correlation_ver1/correlation_ver1_linux/SDRelease/_sds/reports/sds.jou
@@ -87,9 +87,19 @@ INFO: [SDSoC 0-0] Rewrite /home/trungnguyen/SDSoC/workspace/correlation_ver1/cor
 INFO: [SDSoC 0-0] Create accelerator stub functions
 stub_gen  -func correlation_accel_v1  -stub /home/trungnguyen/SDSoC/workspace/correlation_ver1/correlation_ver1_linux/SDRelease/_sds/.llvm/correlation_accel_v1.cfrewrite  -o /home/trungnguyen/SDSoC/workspace/correlation_ver1/correlation_ver1_linux/SDRelease/_sds/swstubs/correlation_accel_v1.cpp  /home/trungnguyen/SDSoC/workspace/correlation_ver1/correlation_ver1_linux/src/correlation_accel_v1.cpp  --  -c  -target arm-xilinx-linux-gnueabi -mcpu=cortex-a9 -O0 -g -w   -I/opt/Xilinx/SDSoC/2014.4/SDK/2014.4/gnu/arm/lin/arm-xilinx-linux-gnueabi/include/c++/4.8.3  -I/opt/Xilinx/SDSoC/2014.4/SDK/2014.4/gnu/arm/lin/arm-xilinx-linux-gnueabi/include/c++/4.8.3/arm-xilinx-linux-gnueabi  -I/opt/Xilinx/SDSoC/2014.4/SDK/2014.4/gnu/arm/lin/arm-xilinx-linux-gnueabi/include/c++/4.8.3/backward   -I/opt/Xilinx/SDSoC/2014.4/SDK/2014.4/gnu/arm/lin/lib/gcc/arm-xilinx-linux-gnueabi/4.8.3/include  -I/opt/Xilinx/SDSoC/2014.4/SDK/2014.4/gnu/arm/lin/lib/gcc/arm-xilinx-linux-gnueabi/4.8.3/include-fixed  -I/opt/Xilinx/SDSoC/2014.4/SDK/2014.4/gnu/arm/lin/arm-xilinx-linux-gnueabi/include  -I/opt/Xilinx/SDSoC/2014.4/SDK/2014.4/gnu/arm/lin/arm-xilinx-linux-gnueabi/libc/usr/include  -I /opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/include  -I /opt/Xilinx/SDSoC/2014.4/arm-xilinx-linux-gnueabi/include    -I/home/trungnguyen/SDSoC/workspace/correlation_ver1/correlation_ver1_linux/src -I/home/trungnguyen/SDSoC/workspace/correlation_ver1/correlation_ver1_linux/src -Wall -O3 -fmessage-length=0 -MMD -MP -D __SDSCC__
 INFO: [SDSoC 0-0] Successfully performed stub generation on file: 
+INFO: [SDSoC 0-0] Removing implementation files from previous run /home/trungnguyen/SDSoC/workspace/correlation_ver1/correlation_ver1_linux/SDRelease/_sds/p0/ipi
 xsltproc  -o /home/trungnguyen/SDSoC/workspace/correlation_ver1/correlation_ver1_linux/SDRelease/_sds/p0/ipi/apsys_acc_info.xml  --stringparam P_XD_IP_REPOS /home/trungnguyen/SDSoC/workspace/correlation_ver1/correlation_ver1_linux/SDRelease/_sds/.cdb/xd_ip_db.xml  /opt/Xilinx/SDSoC/2014.4/scripts/xsd/genAdapterPackagedIpInfo.xsl 
          /home/trungnguyen/SDSoC/workspace/correlation_ver1/correlation_ver1_linux/SDRelease/_sds/.llvm/apsys_0.xml
-INFO: [SDSoC 0-0] Skipping block diagram (BD), address map, port information and device registration for partition 0
+INFO: [SDSoC 0-0] Creating block diagram (BD), address map, port information and device registration for partition 0 (this may take a few minutes)
+system_linker -cf-input /home/trungnguyen/SDSoC/workspace/correlation_ver1/correlation_ver1_linux/SDRelease/_sds/.llvm/apsys_0.xml -cf-output-dir _sds/p0 -ip-db /home/trungnguyen/SDSoC/workspace/correlation_ver1/correlation_ver1_linux/SDRelease/_sds/.cdb/xd_ip_db.xml -ip-repo /home/trungnguyen/SDSoC/workspace/correlation_ver1/correlation_ver1_linux/SDRelease/_sds/iprepo/repo -sds-pf /opt/Xilinx/SDSoC/2014.4/platforms/zed:linux -software-only   -sdsoc
+system_linker started at Mon Oct 31 05:16:45 PM CET 2016
+INFO: [SDSoC 0-0] Creating hardware project files
+INFO: [SDSoC 0-0] Creating Vivado block design
+INFO: [SDSoC 0-0] Creating block diagram (BD) and address map
+INFO: [SDSoC 0-0] Copying address map
+INFO: [SDSoC 0-0] Creating port and device registration data
+/opt/Xilinx/SDSoC/2014.4/bin/cf2sw -i apsys_0.xml -r /home/trungnguyen/SDSoC/workspace/correlation_ver1/correlation_ver1_linux/SDRelease/_sds/.cdb/xd_ip_db.xml -a address_map.xml -pollMode 0    -n
+system_linker completed at Mon Oct 31 05:17:20 PM CET 2016
 INFO: [SDSoC 0-0] Prepare hardware access API functions
 INFO: [SDSoC 0-0] Compile hardware access API functions
 INFO: [SDSoC 0-0] Compile accelerator stub functions
@@ -118,26 +128,26 @@ arm-xilinx-linux-gnueabi-g++ -c correlation_accel_v1.cpp -I /opt/Xilinx/SDSoC/20
  #endif /* CORRELATION_ACCL_H */_
                                 ^
 correlation_accel_v1.cpp: In function 'int correlation_accel_v1(int, int, float*, float*)':
-correlation_accel_v1.cpp:130:6: warning: label 'LAST_ACCUM_LOOP' defined but not used [-Wunused-label]
+correlation_accel_v1.cpp:61:4: warning: label 'INNER_LOOP' defined but not used [-Wunused-label]
+    INNER_LOOP:
+    ^
+correlation_accel_v1.cpp:128:6: warning: label 'LAST_ACCUM_LOOP' defined but not used [-Wunused-label]
       LAST_ACCUM_LOOP:
+      ^
+correlation_accel_v1.cpp:81:6: warning: label 'RESET_REGISTERS' defined but not used [-Wunused-label]
+      RESET_REGISTERS:
       ^
 correlation_accel_v1.cpp:51:2: warning: label 'OUTER_LOOP' defined but not used [-Wunused-label]
   OUTER_LOOP:
   ^
-correlation_accel_v1.cpp:83:6: warning: label 'RESET_REGISTERS' defined but not used [-Wunused-label]
-      RESET_REGISTERS:
-      ^
-correlation_accel_v1.cpp:99:6: warning: label 'ACCUMULATION_LOOP' defined but not used [-Wunused-label]
+correlation_accel_v1.cpp:97:6: warning: label 'ACCUMULATION_LOOP' defined but not used [-Wunused-label]
       ACCUMULATION_LOOP:
       ^
-correlation_accel_v1.cpp:61:4: warning: label 'INNER_LOOP' defined but not used [-Wunused-label]
-    INNER_LOOP:
-    ^
 correlation_accel_v1.cpp: In function 'void weight_rom_init(float*, int)':
-correlation_accel_v1.cpp:235:2: warning: label 'INIT_WEIGHT_ROM' defined but not used [-Wunused-label]
+correlation_accel_v1.cpp:233:2: warning: label 'INIT_WEIGHT_ROM' defined but not used [-Wunused-label]
   INIT_WEIGHT_ROM:
   ^
-correlation_accel_v1.cpp:240:2: warning: label 'COMP_SUM_OF_WEIGHT' defined but not used [-Wunused-label]
+correlation_accel_v1.cpp:238:2: warning: label 'COMP_SUM_OF_WEIGHT' defined but not used [-Wunused-label]
   COMP_SUM_OF_WEIGHT:
   ^
                  from correlation_accel_v1.cpp:21:
@@ -710,10 +720,37 @@ arm-xilinx-linux-gnueabi-objcopy -R .xddata -R .xdfcnmap -R .xdhlscore -R .xdcor
 INFO: [SDSoC 0-0] Enable generation of hardware programming files
 INFO: [SDSoC 0-0] Enable generation of boot files
 INFO: [SDSoC 0-0] Calling system_linker for partition 0
-system_linker -cf-input /home/trungnguyen/SDSoC/workspace/correlation_ver1/correlation_ver1_linux/SDRelease/_sds/.llvm/apsys_0.xml -cf-output-dir _sds/p0 -ip-db /home/trungnguyen/SDSoC/workspace/correlation_ver1/correlation_ver1_linux/SDRelease/_sds/.cdb/xd_ip_db.xml -ip-repo /home/trungnguyen/SDSoC/workspace/correlation_ver1/correlation_ver1_linux/SDRelease/_sds/iprepo/repo -sds-pf /opt/Xilinx/SDSoC/2014.4/platforms/zed:linux   -bit-name correlation_ver1_linux.elf.bit -boot-files   -mdev-no-swgen -mdev-no-xsd -sdsoc -sd-output-dir _sds/p0/sd_card -bit-binary -elf /home/trungnguyen/SDSoC/workspace/correlation_ver1/correlation_ver1_linux/SDRelease/_sds/swstubs/correlation_ver1_linux.elf
-system_linker started at Mon Oct 31 04:53:08 PM CET 2016
+system_linker -cf-input /home/trungnguyen/SDSoC/workspace/correlation_ver1/correlation_ver1_linux/SDRelease/_sds/.llvm/apsys_0.xml -cf-output-dir _sds/p0 -ip-db /home/trungnguyen/SDSoC/workspace/correlation_ver1/correlation_ver1_linux/SDRelease/_sds/.cdb/xd_ip_db.xml -ip-repo /home/trungnguyen/SDSoC/workspace/correlation_ver1/correlation_ver1_linux/SDRelease/_sds/iprepo/repo -sds-pf /opt/Xilinx/SDSoC/2014.4/platforms/zed:linux -bitstream -bit-name correlation_ver1_linux.elf.bit -boot-files   -mdev-no-swgen -mdev-no-xsd -sdsoc -sd-output-dir _sds/p0/sd_card -bit-binary -elf /home/trungnguyen/SDSoC/workspace/correlation_ver1/correlation_ver1_linux/SDRelease/_sds/swstubs/correlation_ver1_linux.elf
+system_linker started at Mon Oct 31 05:17:43 PM CET 2016
+INFO: [SDSoC 0-0] Generating bitstream for platform zed.
+      This may take some time to complete
+... [17:17:55] Starting synth_design
+... [17:18:00] Starting RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 1023.180 ; gain = 189.684 ; free physical = 10368 ; free virtual = 21718
+... [17:19:50] Start Loading Part and Timing Information
+... [17:19:50] Start Applying 'set_property' XDC Constraints
+... [17:20:00] Start RTL Component Statistics 
+... [17:20:00] Start RTL Hierarchical Component Statistics 
+... [17:20:00] Start Part Resource Summary
+... [17:20:00] Start Parallel Synthesis Optimization  : Time (s): cpu = 00:02:05 ; elapsed = 00:02:05 . Memory (MB): peak = 1811.879 ; gain = 978.383 ; free physical = 9695 ; free virtual = 21037
+... [17:20:00] Start Cross Boundary Optimization
+... [17:20:05] Start Area Optimization
+... [17:20:25] Start Timing Optimization
+... [17:20:30] Start Applying XDC Timing Constraints
+... [17:20:55] Start Technology Mapping
+... [17:21:15] Start IO Insertion
+... [17:21:15] Start Flattening Before IO Insertion
+... [17:21:15] Start Final Netlist Cleanup
+... [17:21:20] Start Renaming Generated Instances
+... [17:21:20] Start Rebuilding User Hierarchy
+... [17:21:25] Start Writing Synthesis Report
+... [17:21:53] Starting DRC Task
+... [17:21:58] Starting Logic Optimization Task
+... [17:22:08] Starting Power Optimization Task
+... [17:22:08] Starting PowerOpt Patch Enables Task
+... [17:22:13] Starting Placer Task
+... [17:22:43] Starting Routing Task
 INFO: [SDSoC 0-0] Creating boot files
-system_linker completed at Mon Oct 31 04:53:09 PM CET 2016
+system_linker completed at Mon Oct 31 05:23:48 PM CET 2016
 All user specified timing constraints are met.
 sds++ log file saved as /home/trungnguyen/SDSoC/workspace/correlation_ver1/correlation_ver1_linux/SDRelease/_sds/reports/sds.log
-sds++ completed at Mon Oct 31 04:53:09 PM CET 2016
+sds++ completed at Mon Oct 31 05:23:48 PM CET 2016

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Delete resource &apos;correlation_ver3/SDDebug&apos;" deleteContents="false" description="Delete resource &apos;correlation_ver3/SDDebug&apos;" element1="/correlation_ver3/SDDebug" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1" stamp="1478101686971"/>
+</session>

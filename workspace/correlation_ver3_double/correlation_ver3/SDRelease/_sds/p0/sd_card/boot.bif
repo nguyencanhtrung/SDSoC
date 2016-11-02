@@ -1,0 +1,7 @@
+/* linux */
+the_ROM_image:
+{
+  [bootloader]/opt/Xilinx/SDSoC/2014.4/platforms/zed/boot/fsbl.elf
+  /home/trungnguyen/SDSoC/workspace/correlation_ver3_double/correlation_ver3/SDRelease/correlation_ver3.elf.bit
+  /opt/Xilinx/SDSoC/2014.4/platforms/zed/boot/u-boot.elf
+}

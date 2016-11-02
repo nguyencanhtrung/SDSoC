@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xd:acceleratorMap xmlns:xd="http://www.xilinx.com/xd" xd:functionName="correlation_accel_v2" xd:componentRef="correlation_accel_v2" xd:initiationInterval="x" xd:clockPeriod="8.500000" xd:sequential="true" xd:hostMachine="64">
+  <xd:controlReg xd:name="control" xd:interfaceRef="ap_ctrl" xd:busTypeRef="acc_handshake" xd:type="acc_handshake"/>
+  <xd:arg xd:name="number_of_days" xd:originalName="number_of_days" xd:direction="in" xd:interfaceRef="number_of_days" xd:busTypeRef="register" xd:dataWidth="32" xd:handshakeRef="ap_none"/>
+  <xd:arg xd:name="number_of_indices" xd:originalName="number_of_indices" xd:direction="in" xd:interfaceRef="number_of_indices" xd:busTypeRef="register" xd:dataWidth="32" xd:handshakeRef="ap_none"/>
+  <xd:arg xd:name="in_indices[].data" xd:originalName="in_indices" xd:direction="in" xd:interfaceRef="in_indices" xd:busTypeRef="axis" xd:arraySize="2520000" xd:dataWidth="32"/>
+  <xd:arg xd:name="in_indices[].keep" xd:originalName="in_indices" xd:direction="in" xd:interfaceRef="in_indices" xd:busTypeRef="axis" xd:arraySize="2520000" xd:dataWidth="4"/>
+  <xd:arg xd:name="in_indices[].strb" xd:originalName="in_indices" xd:direction="in" xd:interfaceRef="in_indices" xd:busTypeRef="axis" xd:arraySize="2520000" xd:dataWidth="4"/>
+  <xd:arg xd:name="in_indices[].user" xd:originalName="in_indices" xd:direction="in" xd:interfaceRef="in_indices" xd:busTypeRef="axis" xd:arraySize="2520000" xd:dataWidth="1"/>
+  <xd:arg xd:name="in_indices[].last" xd:originalName="in_indices" xd:direction="in" xd:interfaceRef="in_indices" xd:busTypeRef="axis" xd:arraySize="2520000" xd:dataWidth="1"/>
+  <xd:arg xd:name="in_indices[].id" xd:originalName="in_indices" xd:direction="in" xd:interfaceRef="in_indices" xd:busTypeRef="axis" xd:arraySize="2520000" xd:dataWidth="1"/>
+  <xd:arg xd:name="in_indices[].dest" xd:originalName="in_indices" xd:direction="in" xd:interfaceRef="in_indices" xd:busTypeRef="axis" xd:arraySize="2520000" xd:dataWidth="1"/>
+  <xd:arg xd:name="out_correlation[].data" xd:originalName="out_correlation" xd:direction="out" xd:interfaceRef="out_correlation" xd:busTypeRef="axis" xd:arraySize="49995000" xd:dataWidth="32"/>
+  <xd:arg xd:name="out_correlation[].keep" xd:originalName="out_correlation" xd:direction="out" xd:interfaceRef="out_correlation" xd:busTypeRef="axis" xd:arraySize="49995000" xd:dataWidth="4"/>
+  <xd:arg xd:name="out_correlation[].strb" xd:originalName="out_correlation" xd:direction="out" xd:interfaceRef="out_correlation" xd:busTypeRef="axis" xd:arraySize="49995000" xd:dataWidth="4"/>
+  <xd:arg xd:name="out_correlation[].user" xd:originalName="out_correlation" xd:direction="out" xd:interfaceRef="out_correlation" xd:busTypeRef="axis" xd:arraySize="49995000" xd:dataWidth="1"/>
+  <xd:arg xd:name="out_correlation[].last" xd:originalName="out_correlation" xd:direction="out" xd:interfaceRef="out_correlation" xd:busTypeRef="axis" xd:arraySize="49995000" xd:dataWidth="1"/>
+  <xd:arg xd:name="out_correlation[].id" xd:originalName="out_correlation" xd:direction="out" xd:interfaceRef="out_correlation" xd:busTypeRef="axis" xd:arraySize="49995000" xd:dataWidth="1"/>
+  <xd:arg xd:name="out_correlation[].dest" xd:originalName="out_correlation" xd:direction="out" xd:interfaceRef="out_correlation" xd:busTypeRef="axis" xd:arraySize="49995000" xd:dataWidth="1"/>
+  <xd:latencyEstimates xd:best-case="undef" xd:worst-case="undef" xd:average-case="undef"/>
+  <xd:resourceEstimates xd:LUT="12449" xd:FF="8994" xd:BRAM="3" xd:DSP="36"/>
+</xd:acceleratorMap>

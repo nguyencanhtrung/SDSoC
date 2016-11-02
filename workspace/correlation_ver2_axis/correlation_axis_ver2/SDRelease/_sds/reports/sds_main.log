@@ -1,0 +1,29 @@
+(c) Copyright 2012-2015 Xilinx, Inc. All Rights Reserved.
+#-----------------------------------------------------------
+# Tool version  : sds++ 2014.4 20150228
+# Start time    : Wed Nov 02 03:22:11 PM CET 2016
+# Command line  : sds++ -Wall -O3 -I../src -c -fmessage-length=0 -MTsrc/main.o -MMD -MP -MFsrc/main.d -MTsrc/main.d -o src/main.o ../src/main.cpp -sds-pf zed
+# Log file      : /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver2/SDRelease/_sds/reports/sds_main.log
+# Journal file  : /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver2/SDRelease/_sds/reports/sds_main.jou
+# Report file   : /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver2/SDRelease/_sds/reports/sds_main.rpt
+#-----------------------------------------------------------
+
+INFO: [SDSoC 0-0] Create data motion intermediate representation
+clang_wrapper -target arm-xilinx-linux-gnueabi -mcpu=cortex-a9 -O0 -g -w   -I/opt/Xilinx/SDSoC/2014.4/SDK/2014.4/gnu/arm/lin/arm-xilinx-linux-gnueabi/include/c++/4.8.3  -I/opt/Xilinx/SDSoC/2014.4/SDK/2014.4/gnu/arm/lin/arm-xilinx-linux-gnueabi/include/c++/4.8.3/arm-xilinx-linux-gnueabi  -I/opt/Xilinx/SDSoC/2014.4/SDK/2014.4/gnu/arm/lin/arm-xilinx-linux-gnueabi/include/c++/4.8.3/backward   -I/opt/Xilinx/SDSoC/2014.4/SDK/2014.4/gnu/arm/lin/lib/gcc/arm-xilinx-linux-gnueabi/4.8.3/include  -I/opt/Xilinx/SDSoC/2014.4/SDK/2014.4/gnu/arm/lin/lib/gcc/arm-xilinx-linux-gnueabi/4.8.3/include-fixed  -I/opt/Xilinx/SDSoC/2014.4/SDK/2014.4/gnu/arm/lin/arm-xilinx-linux-gnueabi/include  -I/opt/Xilinx/SDSoC/2014.4/SDK/2014.4/gnu/arm/lin/arm-xilinx-linux-gnueabi/libc/usr/include  -I /opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/include  -I /opt/Xilinx/SDSoC/2014.4/arm-xilinx-linux-gnueabi/include   -I../src -Wall -fmessage-length=0 -MMD -MP -D __SDSCC__ -emit-llvm -S /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver2/src/main.cpp -o /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver2/SDRelease/_sds/.llvm/src/main.s
+INFO: [SDSoC 0-0] Compiling /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver2/src/main.cpp
+arm-xilinx-linux-gnueabi-g++ -c -I../src -Wall -O3 -fmessage-length=0 -MMD -MP -D __SDSCC__ -MT/home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver2/SDRelease/src/main.o -MF/home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver2/SDRelease/src/main.d -MT/home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver2/SDRelease/src/main.d -I /opt/Xilinx/SDSoC/2014.4/arm-xilinx-linux-gnueabi/include  -I /opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/include   /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver2/src/main.cpp -o src/main.o
+/home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver2/src/main.cpp: In function 'int main(int, char**)':
+/home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver2/src/main.cpp:371:10: warning: variable 'status' set but not used [-Wunused-but-set-variable]
+     bool status;
+          ^
+/home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver2/src/main.cpp: In function 'bool indices_init(uint32_t)':
+/home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver2/src/main.cpp:95:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+/home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver2/src/correlation_accel_v2.hpp: At global scope:
+/home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver2/src/correlation_accel_v2.hpp:64:13: warning: 'void weight_rom_init(float*, int)' declared 'static' but never defined [-Wunused-function]
+ static void weight_rom_init(
+             ^
+arm-xilinx-linux-gnueabi-objcopy --add-section .xdsdata=/home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver2/SDRelease/_sds/swstubs/main.xml src/main.o
+sds++ log file saved as /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver2/SDRelease/_sds/reports/sds_main.log
+sds++ completed at Wed Nov 02 03:22:12 PM CET 2016

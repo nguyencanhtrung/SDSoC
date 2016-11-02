@@ -1,0 +1,32 @@
+void _p0_correlation_accel_v2_0(int number_of_days, int number_of_indices, float in_indices[2520000], float out_correlation[49995000]);
+void _p0_correlation_accel_v2_0(int number_of_days, int number_of_indices, float in_indices[2520000], float out_correlation[49995000])
+{
+  switch_to_next_partition(0);
+  int start_seq[3];
+  start_seq[0] = 0x00000300;
+  start_seq[1] = 0x00010000;
+  start_seq[2] = 0x00020000;
+  cf_request_handle_t _p0_swinst_correlation_accel_v2_0_cmd;
+  cf_send_i(&(_p0_swinst_correlation_accel_v2_0.cmd_correlation_accel_v2), start_seq, 3*sizeof(int), &_p0_swinst_correlation_accel_v2_0_cmd);
+  cf_wait(_p0_swinst_correlation_accel_v2_0_cmd);
+
+
+#ifdef SDS_DEBUG
+  if ((number_of_indices*number_of_days) * 4 != 2520000*4)
+    printf("in_indices of function correlation_accel_v2 transfer size is different from declared size, system may hang!\n");
+  if ((number_of_indices-1) * 4 != 49995000*4)
+    printf("out_correlation of function correlation_accel_v2 transfer size is different from declared size, system may hang!\n");
+#endif
+
+  cf_send_i(&(_p0_swinst_correlation_accel_v2_0.number_of_days), &number_of_days, 4, &_p0_request_0);
+  cf_send_i(&(_p0_swinst_correlation_accel_v2_0.number_of_indices), &number_of_indices, 4, &_p0_request_1);
+  cf_send_i(&(_p0_swinst_correlation_accel_v2_0.in_indices), in_indices, (number_of_indices*number_of_days) * 4, &_p0_request_2);
+
+  cf_receive_i(&(_p0_swinst_correlation_accel_v2_0.out_correlation), out_correlation, (number_of_indices-1) * 4, &_p0_correlation_accel_v2_0_num_out_correlation, &_p0_request_3);
+
+  cf_wait(_p0_request_0);
+  cf_wait(_p0_request_1);
+  cf_wait(_p0_request_2);
+  cf_wait(_p0_request_3);
+}
+

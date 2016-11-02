@@ -344,7 +344,7 @@ int main(int argc, char* argv[])
     /************************************************************
 	*	 	Step 2: Hardware computation       					*
 	*----------------------------------------------------------*/
-   // TIME_STAMP_INIT;
+    TIME_STAMP_INIT;
     int ptr_result = 0;
     for(int i = number_of_indices; i > 1; --i){
         correlation_accel_v2(
@@ -355,22 +355,22 @@ int main(int argc, char* argv[])
         );
         ptr_result += (i - 1);
     }
-   // TIME_STAMP_ACCEL;
+    TIME_STAMP_ACCEL;
 	/************************************************************
 	 *		Step 3: Software computation					  	*
 	 *----------------------------------------------------------*/
-    correlation_golden(		indices_buff,
-                            number_of_indices,
-                            number_of_days_per_index,
-                            correlation_sw);
-    //TIME_STAMP_SW;
+//    correlation_golden(		indices_buff,
+//                            number_of_indices,
+//                            number_of_days_per_index,
+//                            correlation_sw);
+//    TIME_STAMP_SW;
      /************************************************************
      *      Step 4: Compare results                             *
      *----------------------------------------------------------*/
-    int number_of_result = number_of_indices * (number_of_indices - 1) / 2;
-    bool status;
-    status = checkResult(  correlation_buff, correlation_sw,
-    						number_of_result,
-    						(float)ALLOW_ERR_THRES);
+//    int number_of_result = number_of_indices * (number_of_indices - 1) / 2;
+//    bool status;
+//    status = checkResult(  correlation_buff, correlation_sw,
+//    						number_of_result,
+//    						(float)ALLOW_ERR_THRES);
     return 0;
 }

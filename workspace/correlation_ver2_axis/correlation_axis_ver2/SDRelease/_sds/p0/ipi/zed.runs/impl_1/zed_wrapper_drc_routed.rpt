@@ -1,7 +1,7 @@
 Copyright 1986-2014 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2014.4 (lin64) Build 1071353 Tue Nov 18 16:48:31 MST 2014
-| Date         : Wed Nov  2 15:44:55 2016
+| Date         : Wed Nov  2 16:10:25 2016
 | Host         : verratnix.zmk.uni-kl.de running 64-bit CentOS release 6.7 (Final)
 | Command      : report_drc
 ------------------------------------------------------------------------------------
@@ -20,7 +20,7 @@ Table of Contents
       Design limits: <entire design considered>
            Ruledeck: default
            Max violations: <unlimited>
-         Violations found: 77
+         Violations found: 115
 
 2. REPORT DETAILS
 -----------------
@@ -39,197 +39,327 @@ Related violations: <none>
 
 DPIP-1#1 Warning
 Input pipelining  
-DSP zed_i/correlation_accel_v2_0/inst/correlation_accel_v2_fadd_32ns_32ns_32_9_full_dsp_U2/correlation_accel_v2_ap_fadd_7_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/SHIFT_RND/DSP input B is not pipelined. Pipelining DSP48 input will improve performance.
+DSP zed_i/correlation_accel_v2_0/inst/correlation_accel_v2_fadd_32ns_32ns_32_5_full_dsp_U2/correlation_accel_v2_ap_fadd_3_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/DSP input A B C is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#2 Warning
 Input pipelining  
-DSP zed_i/correlation_accel_v2_0/inst/correlation_accel_v2_faddfsub_32ns_32ns_32_9_full_dsp_U1/correlation_accel_v2_ap_faddfsub_7_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/SHIFT_RND/DSP input B is not pipelined. Pipelining DSP48 input will improve performance.
+DSP zed_i/correlation_accel_v2_0/inst/correlation_accel_v2_fadd_32ns_32ns_32_5_full_dsp_U2/correlation_accel_v2_ap_fadd_3_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/SHIFT_RND/DSP input C is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#3 Warning
 Input pipelining  
-DSP zed_i/correlation_accel_v2_0/inst/correlation_accel_v2_flog_32ns_32ns_32_18_full_dsp_U10/correlation_accel_v2_ap_flog_16_full_dsp_32_u/U0/i_synth/LOG_OP.OP/rr/mul/gen_iter[1].rr_mult/bez_add/dsp.one.dsp48e1_add/DSP input A B C is not pipelined. Pipelining DSP48 input will improve performance.
+DSP zed_i/correlation_accel_v2_0/inst/correlation_accel_v2_fadd_32ns_32ns_32_5_full_dsp_U3/correlation_accel_v2_ap_fadd_3_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/DSP input A B C is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#4 Warning
 Input pipelining  
-DSP zed_i/correlation_accel_v2_0/inst/correlation_accel_v2_flog_32ns_32ns_32_18_full_dsp_U10/correlation_accel_v2_ap_flog_16_full_dsp_32_u/U0/i_synth/LOG_OP.OP/rr/mul/gen_iter[1].rr_mult/zi_add_no_combined_adder.zi_add/dsp.one.dsp48e1_add/DSP input A B C is not pipelined. Pipelining DSP48 input will improve performance.
+DSP zed_i/correlation_accel_v2_0/inst/correlation_accel_v2_fadd_32ns_32ns_32_5_full_dsp_U3/correlation_accel_v2_ap_fadd_3_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/SHIFT_RND/DSP input C is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#5 Warning
 Input pipelining  
-DSP zed_i/correlation_accel_v2_0/inst/correlation_accel_v2_flog_32ns_32ns_32_18_full_dsp_U10/correlation_accel_v2_ap_flog_16_full_dsp_32_u/U0/i_synth/LOG_OP.OP/rr/mul/gen_iter[2].rr_mult/zi_add_no_combined_adder.zi_add/dsp.one.dsp48e1_add/DSP input A B C is not pipelined. Pipelining DSP48 input will improve performance.
+DSP zed_i/correlation_accel_v2_0/inst/correlation_accel_v2_fadd_32ns_32ns_32_5_full_dsp_U4/correlation_accel_v2_ap_fadd_3_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/DSP input A B C is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#6 Warning
 Input pipelining  
-DSP zed_i/correlation_accel_v2_0/inst/correlation_accel_v2_flog_32ns_32ns_32_18_full_dsp_U10/correlation_accel_v2_ap_flog_16_full_dsp_32_u/U0/i_synth/LOG_OP.OP/rr/mul/z1_mult/gDSP.gDSP_only.iDSP/inferred_dsp.reg_mult.m_reg_reg input A B is not pipelined. Pipelining DSP48 input will improve performance.
+DSP zed_i/correlation_accel_v2_0/inst/correlation_accel_v2_fadd_32ns_32ns_32_5_full_dsp_U4/correlation_accel_v2_ap_fadd_3_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/SHIFT_RND/DSP input C is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#7 Warning
 Input pipelining  
-DSP zed_i/correlation_accel_v2_0/inst/correlation_accel_v2_flog_32ns_32ns_32_18_full_dsp_U10/correlation_accel_v2_ap_flog_16_full_dsp_32_u/U0/i_synth/LOG_OP.OP/taylor/squarer/gDSP.gDSP_only.iDSP/inferred_dsp.reg_mult.m_reg_reg input A B is not pipelined. Pipelining DSP48 input will improve performance.
+DSP zed_i/correlation_accel_v2_0/inst/correlation_accel_v2_faddfsub_32ns_32ns_32_5_full_dsp_U1/correlation_accel_v2_ap_faddfsub_3_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/DSP input A B C is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#8 Warning
 Input pipelining  
-DSP zed_i/correlation_accel_v2_0/inst/correlation_accel_v2_flog_32ns_32ns_32_18_full_dsp_U10/correlation_accel_v2_ap_flog_16_full_dsp_32_u/U0/i_synth/LOG_OP.OP/taylor/z_plus_L_adder/dsp.one.dsp48e1_add/DSP input A B C is not pipelined. Pipelining DSP48 input will improve performance.
+DSP zed_i/correlation_accel_v2_0/inst/correlation_accel_v2_faddfsub_32ns_32ns_32_5_full_dsp_U1/correlation_accel_v2_ap_faddfsub_3_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/SHIFT_RND/DSP input C is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#9 Warning
 Input pipelining  
-DSP zed_i/correlation_accel_v2_0/inst/correlation_accel_v2_fmul_32ns_32ns_32_5_max_dsp_U3/correlation_accel_v2_ap_fmul_3_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/DSP input A B is not pipelined. Pipelining DSP48 input will improve performance.
+DSP zed_i/correlation_accel_v2_0/inst/correlation_accel_v2_flog_32ns_32ns_32_13_full_dsp_U14/correlation_accel_v2_ap_flog_11_full_dsp_32_u/U0/i_synth/LOG_OP.OP/rr/mul/gen_iter[1].rr_mult/az_mult_no_combined_adder.az_mult/gDSP.gHYBRID.iHYBRID/one_fabric_mult.dsp_based.iDSP/use_prim.appDSP48[0].bppDSP48[0].use_dsp.use_dsp48e1.iDSP48E1 input A B C is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#10 Warning
 Input pipelining  
-DSP zed_i/correlation_accel_v2_0/inst/correlation_accel_v2_fmul_32ns_32ns_32_5_max_dsp_U3/correlation_accel_v2_ap_fmul_3_max_dsp_32_u/U0/i_synth/MULT.OP/R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/DSP input A is not pipelined. Pipelining DSP48 input will improve performance.
+DSP zed_i/correlation_accel_v2_0/inst/correlation_accel_v2_flog_32ns_32ns_32_13_full_dsp_U14/correlation_accel_v2_ap_flog_11_full_dsp_32_u/U0/i_synth/LOG_OP.OP/rr/mul/gen_iter[2].rr_mult/az_mult_no_combined_adder.az_mult/gDSP.gDSP_only.iDSP/inferred_dsp.reg_mult.m_reg_reg input A B is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#11 Warning
 Input pipelining  
-DSP zed_i/correlation_accel_v2_0/inst/correlation_accel_v2_fmul_32ns_32ns_32_5_max_dsp_U4/correlation_accel_v2_ap_fmul_3_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/DSP input A B is not pipelined. Pipelining DSP48 input will improve performance.
+DSP zed_i/correlation_accel_v2_0/inst/correlation_accel_v2_flog_32ns_32ns_32_13_full_dsp_U14/correlation_accel_v2_ap_flog_11_full_dsp_32_u/U0/i_synth/LOG_OP.OP/rr/mul/gen_iter[2].rr_mult/bez_add/dsp.one.dsp48e1_add/DSP input A B C is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#12 Warning
 Input pipelining  
-DSP zed_i/correlation_accel_v2_0/inst/correlation_accel_v2_fmul_32ns_32ns_32_5_max_dsp_U4/correlation_accel_v2_ap_fmul_3_max_dsp_32_u/U0/i_synth/MULT.OP/R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/DSP input A is not pipelined. Pipelining DSP48 input will improve performance.
+DSP zed_i/correlation_accel_v2_0/inst/correlation_accel_v2_flog_32ns_32ns_32_13_full_dsp_U14/correlation_accel_v2_ap_flog_11_full_dsp_32_u/U0/i_synth/LOG_OP.OP/taylor/gen_combiner_dsp48.addsub_comb/dsp.one.dsp48e1_add/DSP input A B C is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#13 Warning
 Input pipelining  
-DSP zed_i/correlation_accel_v2_0/inst/correlation_accel_v2_fmul_32ns_32ns_32_5_max_dsp_U5/correlation_accel_v2_ap_fmul_3_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/DSP input A B is not pipelined. Pipelining DSP48 input will improve performance.
+DSP zed_i/correlation_accel_v2_0/inst/correlation_accel_v2_flog_32ns_32ns_32_13_full_dsp_U14/correlation_accel_v2_ap_flog_11_full_dsp_32_u/U0/i_synth/LOG_OP.OP/taylor/gen_sum_addsub_dsp48.sum_addsub/dsp.one.dsp48e1_add/DSP input A B C is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#14 Warning
 Input pipelining  
-DSP zed_i/correlation_accel_v2_0/inst/correlation_accel_v2_fmul_32ns_32ns_32_5_max_dsp_U5/correlation_accel_v2_ap_fmul_3_max_dsp_32_u/U0/i_synth/MULT.OP/R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/DSP input A is not pipelined. Pipelining DSP48 input will improve performance.
+DSP zed_i/correlation_accel_v2_0/inst/correlation_accel_v2_flog_32ns_32ns_32_13_full_dsp_U14/correlation_accel_v2_ap_flog_11_full_dsp_32_u/U0/i_synth/LOG_OP.OP/taylor/z_plus_L_adder/dsp.one.dsp48e1_add/DSP input A B C is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#15 Warning
+Input pipelining  
+DSP zed_i/correlation_accel_v2_0/inst/correlation_accel_v2_fmul_32ns_32ns_32_4_max_dsp_U5/correlation_accel_v2_ap_fmul_2_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/DSP input A B is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#16 Warning
+Input pipelining  
+DSP zed_i/correlation_accel_v2_0/inst/correlation_accel_v2_fmul_32ns_32ns_32_4_max_dsp_U5/correlation_accel_v2_ap_fmul_2_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/DSP input B is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#17 Warning
+Input pipelining  
+DSP zed_i/correlation_accel_v2_0/inst/correlation_accel_v2_fmul_32ns_32ns_32_4_max_dsp_U5/correlation_accel_v2_ap_fmul_2_max_dsp_32_u/U0/i_synth/MULT.OP/R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/DSP input A C is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#18 Warning
+Input pipelining  
+DSP zed_i/correlation_accel_v2_0/inst/correlation_accel_v2_fmul_32ns_32ns_32_4_max_dsp_U6/correlation_accel_v2_ap_fmul_2_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/DSP input A B is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#19 Warning
+Input pipelining  
+DSP zed_i/correlation_accel_v2_0/inst/correlation_accel_v2_fmul_32ns_32ns_32_4_max_dsp_U6/correlation_accel_v2_ap_fmul_2_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/DSP input B is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#20 Warning
+Input pipelining  
+DSP zed_i/correlation_accel_v2_0/inst/correlation_accel_v2_fmul_32ns_32ns_32_4_max_dsp_U6/correlation_accel_v2_ap_fmul_2_max_dsp_32_u/U0/i_synth/MULT.OP/R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/DSP input A C is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#21 Warning
+Input pipelining  
+DSP zed_i/correlation_accel_v2_0/inst/correlation_accel_v2_fmul_32ns_32ns_32_4_max_dsp_U7/correlation_accel_v2_ap_fmul_2_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/DSP input A B is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#22 Warning
+Input pipelining  
+DSP zed_i/correlation_accel_v2_0/inst/correlation_accel_v2_fmul_32ns_32ns_32_4_max_dsp_U7/correlation_accel_v2_ap_fmul_2_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/DSP input B is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#23 Warning
+Input pipelining  
+DSP zed_i/correlation_accel_v2_0/inst/correlation_accel_v2_fmul_32ns_32ns_32_4_max_dsp_U7/correlation_accel_v2_ap_fmul_2_max_dsp_32_u/U0/i_synth/MULT.OP/R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/DSP input A C is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#24 Warning
+Input pipelining  
+DSP zed_i/correlation_accel_v2_0/inst/correlation_accel_v2_fmul_32ns_32ns_32_4_max_dsp_U8/correlation_accel_v2_ap_fmul_2_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/DSP input A B is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#25 Warning
+Input pipelining  
+DSP zed_i/correlation_accel_v2_0/inst/correlation_accel_v2_fmul_32ns_32ns_32_4_max_dsp_U8/correlation_accel_v2_ap_fmul_2_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/DSP input B is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#26 Warning
+Input pipelining  
+DSP zed_i/correlation_accel_v2_0/inst/correlation_accel_v2_fmul_32ns_32ns_32_4_max_dsp_U8/correlation_accel_v2_ap_fmul_2_max_dsp_32_u/U0/i_synth/MULT.OP/R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/DSP input A C is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#27 Warning
+Input pipelining  
+DSP zed_i/correlation_accel_v2_0/inst/correlation_accel_v2_fmul_32ns_32ns_32_4_max_dsp_U9/correlation_accel_v2_ap_fmul_2_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/DSP input A B is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#28 Warning
+Input pipelining  
+DSP zed_i/correlation_accel_v2_0/inst/correlation_accel_v2_fmul_32ns_32ns_32_4_max_dsp_U9/correlation_accel_v2_ap_fmul_2_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/DSP input B is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#29 Warning
+Input pipelining  
+DSP zed_i/correlation_accel_v2_0/inst/correlation_accel_v2_fmul_32ns_32ns_32_4_max_dsp_U9/correlation_accel_v2_ap_fmul_2_max_dsp_32_u/U0/i_synth/MULT.OP/R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/DSP input A C is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPOP-1#1 Warning
 Output pipelining  
-DSP zed_i/correlation_accel_v2_0/inst/correlation_accel_v2_fadd_32ns_32ns_32_9_full_dsp_U2/correlation_accel_v2_ap_fadd_7_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/DSP output P is not pipelined. Pipelining DSP48 output will improve performance. Both multiplier/adder output can be pipelined.
+DSP zed_i/correlation_accel_v2_0/inst/correlation_accel_v2_fadd_32ns_32ns_32_5_full_dsp_U2/correlation_accel_v2_ap_fadd_3_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/DSP output P is not pipelined. Pipelining DSP48 output will improve performance. Both multiplier/adder output can be pipelined.
 Related violations: <none>
 
 DPOP-1#2 Warning
 Output pipelining  
-DSP zed_i/correlation_accel_v2_0/inst/correlation_accel_v2_fadd_32ns_32ns_32_9_full_dsp_U2/correlation_accel_v2_ap_fadd_7_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/SHIFT_RND/DSP output P is not pipelined. Pipelining DSP48 output will improve performance. Both multiplier/adder output can be pipelined.
+DSP zed_i/correlation_accel_v2_0/inst/correlation_accel_v2_fadd_32ns_32ns_32_5_full_dsp_U2/correlation_accel_v2_ap_fadd_3_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/SHIFT_RND/DSP output P is not pipelined. Pipelining DSP48 output will improve performance. Both multiplier/adder output can be pipelined.
 Related violations: <none>
 
 DPOP-1#3 Warning
 Output pipelining  
-DSP zed_i/correlation_accel_v2_0/inst/correlation_accel_v2_faddfsub_32ns_32ns_32_9_full_dsp_U1/correlation_accel_v2_ap_faddfsub_7_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/DSP output P is not pipelined. Pipelining DSP48 output will improve performance. Both multiplier/adder output can be pipelined.
+DSP zed_i/correlation_accel_v2_0/inst/correlation_accel_v2_fadd_32ns_32ns_32_5_full_dsp_U3/correlation_accel_v2_ap_fadd_3_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/DSP output P is not pipelined. Pipelining DSP48 output will improve performance. Both multiplier/adder output can be pipelined.
 Related violations: <none>
 
 DPOP-1#4 Warning
 Output pipelining  
-DSP zed_i/correlation_accel_v2_0/inst/correlation_accel_v2_faddfsub_32ns_32ns_32_9_full_dsp_U1/correlation_accel_v2_ap_faddfsub_7_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/SHIFT_RND/DSP output P is not pipelined. Pipelining DSP48 output will improve performance. Both multiplier/adder output can be pipelined.
+DSP zed_i/correlation_accel_v2_0/inst/correlation_accel_v2_fadd_32ns_32ns_32_5_full_dsp_U3/correlation_accel_v2_ap_fadd_3_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/SHIFT_RND/DSP output P is not pipelined. Pipelining DSP48 output will improve performance. Both multiplier/adder output can be pipelined.
 Related violations: <none>
 
 DPOP-1#5 Warning
 Output pipelining  
-DSP zed_i/correlation_accel_v2_0/inst/correlation_accel_v2_flog_32ns_32ns_32_18_full_dsp_U10/correlation_accel_v2_ap_flog_16_full_dsp_32_u/U0/i_synth/LOG_OP.OP/rr/L_path/g_adders[0].add/dsp.one.dsp48e1_add/DSP output P is not pipelined. Pipelining DSP48 output will improve performance. Both multiplier/adder output can be pipelined.
+DSP zed_i/correlation_accel_v2_0/inst/correlation_accel_v2_fadd_32ns_32ns_32_5_full_dsp_U4/correlation_accel_v2_ap_fadd_3_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/DSP output P is not pipelined. Pipelining DSP48 output will improve performance. Both multiplier/adder output can be pipelined.
 Related violations: <none>
 
 DPOP-1#6 Warning
 Output pipelining  
-DSP zed_i/correlation_accel_v2_0/inst/correlation_accel_v2_flog_32ns_32ns_32_18_full_dsp_U10/correlation_accel_v2_ap_flog_16_full_dsp_32_u/U0/i_synth/LOG_OP.OP/rr/L_path/g_adders[1].add/dsp.one.dsp48e1_add/DSP output P is not pipelined. Pipelining DSP48 output will improve performance. Both multiplier/adder output can be pipelined.
+DSP zed_i/correlation_accel_v2_0/inst/correlation_accel_v2_fadd_32ns_32ns_32_5_full_dsp_U4/correlation_accel_v2_ap_fadd_3_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/SHIFT_RND/DSP output P is not pipelined. Pipelining DSP48 output will improve performance. Both multiplier/adder output can be pipelined.
 Related violations: <none>
 
 DPOP-1#7 Warning
 Output pipelining  
-DSP zed_i/correlation_accel_v2_0/inst/correlation_accel_v2_flog_32ns_32ns_32_18_full_dsp_U10/correlation_accel_v2_ap_flog_16_full_dsp_32_u/U0/i_synth/LOG_OP.OP/rr/mul/gen_iter[1].rr_mult/bez_add/dsp.one.dsp48e1_add/DSP output P is not pipelined. Pipelining DSP48 output will improve performance. Both multiplier/adder output can be pipelined.
+DSP zed_i/correlation_accel_v2_0/inst/correlation_accel_v2_faddfsub_32ns_32ns_32_5_full_dsp_U1/correlation_accel_v2_ap_faddfsub_3_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/DSP output P is not pipelined. Pipelining DSP48 output will improve performance. Both multiplier/adder output can be pipelined.
 Related violations: <none>
 
 DPOP-1#8 Warning
 Output pipelining  
-DSP zed_i/correlation_accel_v2_0/inst/correlation_accel_v2_flog_32ns_32ns_32_18_full_dsp_U10/correlation_accel_v2_ap_flog_16_full_dsp_32_u/U0/i_synth/LOG_OP.OP/rr/mul/gen_iter[1].rr_mult/zi_add_no_combined_adder.zi_add/dsp.one.dsp48e1_add/DSP output P is not pipelined. Pipelining DSP48 output will improve performance. Both multiplier/adder output can be pipelined.
+DSP zed_i/correlation_accel_v2_0/inst/correlation_accel_v2_faddfsub_32ns_32ns_32_5_full_dsp_U1/correlation_accel_v2_ap_faddfsub_3_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/SHIFT_RND/DSP output P is not pipelined. Pipelining DSP48 output will improve performance. Both multiplier/adder output can be pipelined.
 Related violations: <none>
 
 DPOP-1#9 Warning
 Output pipelining  
-DSP zed_i/correlation_accel_v2_0/inst/correlation_accel_v2_flog_32ns_32ns_32_18_full_dsp_U10/correlation_accel_v2_ap_flog_16_full_dsp_32_u/U0/i_synth/LOG_OP.OP/rr/mul/gen_iter[2].rr_mult/az_mult_no_combined_adder.az_mult/gDSP.gDSP_only.iDSP/inferred_dsp.reg_mult.m_reg_reg output P is not pipelined. Pipelining DSP48 output will improve performance. Both multiplier/adder output can be pipelined.
+DSP zed_i/correlation_accel_v2_0/inst/correlation_accel_v2_flog_32ns_32ns_32_13_full_dsp_U14/correlation_accel_v2_ap_flog_11_full_dsp_32_u/U0/i_synth/LOG_OP.OP/rr/L_path/g_adders[0].add/dsp.one.dsp48e1_add/DSP output P is not pipelined. Pipelining DSP48 output will improve performance. Both multiplier/adder output can be pipelined.
 Related violations: <none>
 
 DPOP-1#10 Warning
 Output pipelining  
-DSP zed_i/correlation_accel_v2_0/inst/correlation_accel_v2_flog_32ns_32ns_32_18_full_dsp_U10/correlation_accel_v2_ap_flog_16_full_dsp_32_u/U0/i_synth/LOG_OP.OP/rr/mul/gen_iter[2].rr_mult/bez_add/dsp.one.dsp48e1_add/DSP output P is not pipelined. Pipelining DSP48 output will improve performance. Both multiplier/adder output can be pipelined.
+DSP zed_i/correlation_accel_v2_0/inst/correlation_accel_v2_flog_32ns_32ns_32_13_full_dsp_U14/correlation_accel_v2_ap_flog_11_full_dsp_32_u/U0/i_synth/LOG_OP.OP/rr/L_path/g_adders[1].add/dsp.one.dsp48e1_add/DSP output P is not pipelined. Pipelining DSP48 output will improve performance. Both multiplier/adder output can be pipelined.
 Related violations: <none>
 
 DPOP-1#11 Warning
 Output pipelining  
-DSP zed_i/correlation_accel_v2_0/inst/correlation_accel_v2_flog_32ns_32ns_32_18_full_dsp_U10/correlation_accel_v2_ap_flog_16_full_dsp_32_u/U0/i_synth/LOG_OP.OP/rr/mul/gen_iter[2].rr_mult/zi_add_no_combined_adder.zi_add/dsp.one.dsp48e1_add/DSP output P is not pipelined. Pipelining DSP48 output will improve performance. Both multiplier/adder output can be pipelined.
+DSP zed_i/correlation_accel_v2_0/inst/correlation_accel_v2_flog_32ns_32ns_32_13_full_dsp_U14/correlation_accel_v2_ap_flog_11_full_dsp_32_u/U0/i_synth/LOG_OP.OP/rr/mul/gen_iter[1].rr_mult/az_mult_no_combined_adder.az_mult/gDSP.gHYBRID.iHYBRID/one_fabric_mult.dsp_based.iDSP/use_prim.appDSP48[0].bppDSP48[0].use_dsp.use_dsp48e1.iDSP48E1 output P is not pipelined. Pipelining DSP48 output will improve performance. Both multiplier/adder output can be pipelined.
 Related violations: <none>
 
 DPOP-1#12 Warning
 Output pipelining  
-DSP zed_i/correlation_accel_v2_0/inst/correlation_accel_v2_flog_32ns_32ns_32_18_full_dsp_U10/correlation_accel_v2_ap_flog_16_full_dsp_32_u/U0/i_synth/LOG_OP.OP/rr/mul/z1_mult/gDSP.gDSP_only.iDSP/inferred_dsp.reg_mult.m_reg_reg output P is not pipelined. Pipelining DSP48 output will improve performance. Both multiplier/adder output can be pipelined.
+DSP zed_i/correlation_accel_v2_0/inst/correlation_accel_v2_flog_32ns_32ns_32_13_full_dsp_U14/correlation_accel_v2_ap_flog_11_full_dsp_32_u/U0/i_synth/LOG_OP.OP/rr/mul/gen_iter[1].rr_mult/bez_add/dsp.one.dsp48e1_add/DSP output P is not pipelined. Pipelining DSP48 output will improve performance. Both multiplier/adder output can be pipelined.
 Related violations: <none>
 
 DPOP-1#13 Warning
 Output pipelining  
-DSP zed_i/correlation_accel_v2_0/inst/correlation_accel_v2_flog_32ns_32ns_32_18_full_dsp_U10/correlation_accel_v2_ap_flog_16_full_dsp_32_u/U0/i_synth/LOG_OP.OP/taylor/gen_combiner_dsp48.addsub_comb/dsp.one.dsp48e1_add/DSP output P is not pipelined. Pipelining DSP48 output will improve performance. Both multiplier/adder output can be pipelined.
+DSP zed_i/correlation_accel_v2_0/inst/correlation_accel_v2_flog_32ns_32ns_32_13_full_dsp_U14/correlation_accel_v2_ap_flog_11_full_dsp_32_u/U0/i_synth/LOG_OP.OP/rr/mul/gen_iter[1].rr_mult/zi_add_no_combined_adder.zi_add/dsp.one.dsp48e1_add/DSP output P is not pipelined. Pipelining DSP48 output will improve performance. Both multiplier/adder output can be pipelined.
 Related violations: <none>
 
 DPOP-1#14 Warning
 Output pipelining  
-DSP zed_i/correlation_accel_v2_0/inst/correlation_accel_v2_flog_32ns_32ns_32_18_full_dsp_U10/correlation_accel_v2_ap_flog_16_full_dsp_32_u/U0/i_synth/LOG_OP.OP/taylor/gen_sum_addsub_dsp48.sum_addsub/dsp.one.dsp48e1_add/DSP output P is not pipelined. Pipelining DSP48 output will improve performance. Both multiplier/adder output can be pipelined.
+DSP zed_i/correlation_accel_v2_0/inst/correlation_accel_v2_flog_32ns_32ns_32_13_full_dsp_U14/correlation_accel_v2_ap_flog_11_full_dsp_32_u/U0/i_synth/LOG_OP.OP/rr/mul/gen_iter[2].rr_mult/az_mult_no_combined_adder.az_mult/gDSP.gDSP_only.iDSP/inferred_dsp.reg_mult.m_reg_reg output P is not pipelined. Pipelining DSP48 output will improve performance. Both multiplier/adder output can be pipelined.
 Related violations: <none>
 
 DPOP-1#15 Warning
 Output pipelining  
-DSP zed_i/correlation_accel_v2_0/inst/correlation_accel_v2_flog_32ns_32ns_32_18_full_dsp_U10/correlation_accel_v2_ap_flog_16_full_dsp_32_u/U0/i_synth/LOG_OP.OP/taylor/squarer/gDSP.gDSP_only.iDSP/inferred_dsp.reg_mult.m_reg_reg output P is not pipelined. Pipelining DSP48 output will improve performance. Both multiplier/adder output can be pipelined.
+DSP zed_i/correlation_accel_v2_0/inst/correlation_accel_v2_flog_32ns_32ns_32_13_full_dsp_U14/correlation_accel_v2_ap_flog_11_full_dsp_32_u/U0/i_synth/LOG_OP.OP/rr/mul/gen_iter[2].rr_mult/bez_add/dsp.one.dsp48e1_add/DSP output P is not pipelined. Pipelining DSP48 output will improve performance. Both multiplier/adder output can be pipelined.
 Related violations: <none>
 
 DPOP-1#16 Warning
 Output pipelining  
-DSP zed_i/correlation_accel_v2_0/inst/correlation_accel_v2_flog_32ns_32ns_32_18_full_dsp_U10/correlation_accel_v2_ap_flog_16_full_dsp_32_u/U0/i_synth/LOG_OP.OP/taylor/z_plus_L_adder/dsp.one.dsp48e1_add/DSP output P is not pipelined. Pipelining DSP48 output will improve performance. Both multiplier/adder output can be pipelined.
+DSP zed_i/correlation_accel_v2_0/inst/correlation_accel_v2_flog_32ns_32ns_32_13_full_dsp_U14/correlation_accel_v2_ap_flog_11_full_dsp_32_u/U0/i_synth/LOG_OP.OP/rr/mul/gen_iter[2].rr_mult/zi_add_no_combined_adder.zi_add/dsp.one.dsp48e1_add/DSP output P is not pipelined. Pipelining DSP48 output will improve performance. Both multiplier/adder output can be pipelined.
 Related violations: <none>
 
 DPOP-1#17 Warning
 Output pipelining  
-DSP zed_i/correlation_accel_v2_0/inst/correlation_accel_v2_fmul_32ns_32ns_32_5_max_dsp_U3/correlation_accel_v2_ap_fmul_3_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/DSP output P is not pipelined. Pipelining DSP48 output will improve performance. Both multiplier/adder output can be pipelined.
+DSP zed_i/correlation_accel_v2_0/inst/correlation_accel_v2_flog_32ns_32ns_32_13_full_dsp_U14/correlation_accel_v2_ap_flog_11_full_dsp_32_u/U0/i_synth/LOG_OP.OP/rr/mul/z1_mult/gDSP.gDSP_only.iDSP/inferred_dsp.reg_mult.m_reg_reg output P is not pipelined. Pipelining DSP48 output will improve performance. Both multiplier/adder output can be pipelined.
 Related violations: <none>
 
 DPOP-1#18 Warning
 Output pipelining  
-DSP zed_i/correlation_accel_v2_0/inst/correlation_accel_v2_fmul_32ns_32ns_32_5_max_dsp_U3/correlation_accel_v2_ap_fmul_3_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/DSP output P is not pipelined. Pipelining DSP48 output will improve performance. Both multiplier/adder output can be pipelined.
+DSP zed_i/correlation_accel_v2_0/inst/correlation_accel_v2_flog_32ns_32ns_32_13_full_dsp_U14/correlation_accel_v2_ap_flog_11_full_dsp_32_u/U0/i_synth/LOG_OP.OP/taylor/gen_combiner_dsp48.addsub_comb/dsp.one.dsp48e1_add/DSP output P is not pipelined. Pipelining DSP48 output will improve performance. Both multiplier/adder output can be pipelined.
 Related violations: <none>
 
 DPOP-1#19 Warning
 Output pipelining  
-DSP zed_i/correlation_accel_v2_0/inst/correlation_accel_v2_fmul_32ns_32ns_32_5_max_dsp_U3/correlation_accel_v2_ap_fmul_3_max_dsp_32_u/U0/i_synth/MULT.OP/R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/DSP output P is not pipelined. Pipelining DSP48 output will improve performance. Both multiplier/adder output can be pipelined.
+DSP zed_i/correlation_accel_v2_0/inst/correlation_accel_v2_flog_32ns_32ns_32_13_full_dsp_U14/correlation_accel_v2_ap_flog_11_full_dsp_32_u/U0/i_synth/LOG_OP.OP/taylor/gen_sum_addsub_dsp48.sum_addsub/dsp.one.dsp48e1_add/DSP output P is not pipelined. Pipelining DSP48 output will improve performance. Both multiplier/adder output can be pipelined.
 Related violations: <none>
 
 DPOP-1#20 Warning
 Output pipelining  
-DSP zed_i/correlation_accel_v2_0/inst/correlation_accel_v2_fmul_32ns_32ns_32_5_max_dsp_U4/correlation_accel_v2_ap_fmul_3_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/DSP output P is not pipelined. Pipelining DSP48 output will improve performance. Both multiplier/adder output can be pipelined.
+DSP zed_i/correlation_accel_v2_0/inst/correlation_accel_v2_flog_32ns_32ns_32_13_full_dsp_U14/correlation_accel_v2_ap_flog_11_full_dsp_32_u/U0/i_synth/LOG_OP.OP/taylor/squarer/gDSP.gDSP_only.iDSP/inferred_dsp.reg_mult.m_reg_reg output P is not pipelined. Pipelining DSP48 output will improve performance. Both multiplier/adder output can be pipelined.
 Related violations: <none>
 
 DPOP-1#21 Warning
 Output pipelining  
-DSP zed_i/correlation_accel_v2_0/inst/correlation_accel_v2_fmul_32ns_32ns_32_5_max_dsp_U4/correlation_accel_v2_ap_fmul_3_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/DSP output P is not pipelined. Pipelining DSP48 output will improve performance. Both multiplier/adder output can be pipelined.
+DSP zed_i/correlation_accel_v2_0/inst/correlation_accel_v2_flog_32ns_32ns_32_13_full_dsp_U14/correlation_accel_v2_ap_flog_11_full_dsp_32_u/U0/i_synth/LOG_OP.OP/taylor/z_plus_L_adder/dsp.one.dsp48e1_add/DSP output P is not pipelined. Pipelining DSP48 output will improve performance. Both multiplier/adder output can be pipelined.
 Related violations: <none>
 
 DPOP-1#22 Warning
 Output pipelining  
-DSP zed_i/correlation_accel_v2_0/inst/correlation_accel_v2_fmul_32ns_32ns_32_5_max_dsp_U4/correlation_accel_v2_ap_fmul_3_max_dsp_32_u/U0/i_synth/MULT.OP/R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/DSP output P is not pipelined. Pipelining DSP48 output will improve performance. Both multiplier/adder output can be pipelined.
+DSP zed_i/correlation_accel_v2_0/inst/correlation_accel_v2_fmul_32ns_32ns_32_4_max_dsp_U5/correlation_accel_v2_ap_fmul_2_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/DSP output P is not pipelined. Pipelining DSP48 output will improve performance. Both multiplier/adder output can be pipelined.
 Related violations: <none>
 
 DPOP-1#23 Warning
 Output pipelining  
-DSP zed_i/correlation_accel_v2_0/inst/correlation_accel_v2_fmul_32ns_32ns_32_5_max_dsp_U5/correlation_accel_v2_ap_fmul_3_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/DSP output P is not pipelined. Pipelining DSP48 output will improve performance. Both multiplier/adder output can be pipelined.
+DSP zed_i/correlation_accel_v2_0/inst/correlation_accel_v2_fmul_32ns_32ns_32_4_max_dsp_U5/correlation_accel_v2_ap_fmul_2_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/DSP output P is not pipelined. Pipelining DSP48 output will improve performance. Both multiplier/adder output can be pipelined.
 Related violations: <none>
 
 DPOP-1#24 Warning
 Output pipelining  
-DSP zed_i/correlation_accel_v2_0/inst/correlation_accel_v2_fmul_32ns_32ns_32_5_max_dsp_U5/correlation_accel_v2_ap_fmul_3_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/DSP output P is not pipelined. Pipelining DSP48 output will improve performance. Both multiplier/adder output can be pipelined.
+DSP zed_i/correlation_accel_v2_0/inst/correlation_accel_v2_fmul_32ns_32ns_32_4_max_dsp_U5/correlation_accel_v2_ap_fmul_2_max_dsp_32_u/U0/i_synth/MULT.OP/R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/DSP output P is not pipelined. Pipelining DSP48 output will improve performance. Both multiplier/adder output can be pipelined.
 Related violations: <none>
 
 DPOP-1#25 Warning
 Output pipelining  
-DSP zed_i/correlation_accel_v2_0/inst/correlation_accel_v2_fmul_32ns_32ns_32_5_max_dsp_U5/correlation_accel_v2_ap_fmul_3_max_dsp_32_u/U0/i_synth/MULT.OP/R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/DSP output P is not pipelined. Pipelining DSP48 output will improve performance. Both multiplier/adder output can be pipelined.
+DSP zed_i/correlation_accel_v2_0/inst/correlation_accel_v2_fmul_32ns_32ns_32_4_max_dsp_U6/correlation_accel_v2_ap_fmul_2_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/DSP output P is not pipelined. Pipelining DSP48 output will improve performance. Both multiplier/adder output can be pipelined.
+Related violations: <none>
+
+DPOP-1#26 Warning
+Output pipelining  
+DSP zed_i/correlation_accel_v2_0/inst/correlation_accel_v2_fmul_32ns_32ns_32_4_max_dsp_U6/correlation_accel_v2_ap_fmul_2_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/DSP output P is not pipelined. Pipelining DSP48 output will improve performance. Both multiplier/adder output can be pipelined.
+Related violations: <none>
+
+DPOP-1#27 Warning
+Output pipelining  
+DSP zed_i/correlation_accel_v2_0/inst/correlation_accel_v2_fmul_32ns_32ns_32_4_max_dsp_U6/correlation_accel_v2_ap_fmul_2_max_dsp_32_u/U0/i_synth/MULT.OP/R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/DSP output P is not pipelined. Pipelining DSP48 output will improve performance. Both multiplier/adder output can be pipelined.
+Related violations: <none>
+
+DPOP-1#28 Warning
+Output pipelining  
+DSP zed_i/correlation_accel_v2_0/inst/correlation_accel_v2_fmul_32ns_32ns_32_4_max_dsp_U7/correlation_accel_v2_ap_fmul_2_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/DSP output P is not pipelined. Pipelining DSP48 output will improve performance. Both multiplier/adder output can be pipelined.
+Related violations: <none>
+
+DPOP-1#29 Warning
+Output pipelining  
+DSP zed_i/correlation_accel_v2_0/inst/correlation_accel_v2_fmul_32ns_32ns_32_4_max_dsp_U7/correlation_accel_v2_ap_fmul_2_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/DSP output P is not pipelined. Pipelining DSP48 output will improve performance. Both multiplier/adder output can be pipelined.
+Related violations: <none>
+
+DPOP-1#30 Warning
+Output pipelining  
+DSP zed_i/correlation_accel_v2_0/inst/correlation_accel_v2_fmul_32ns_32ns_32_4_max_dsp_U7/correlation_accel_v2_ap_fmul_2_max_dsp_32_u/U0/i_synth/MULT.OP/R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/DSP output P is not pipelined. Pipelining DSP48 output will improve performance. Both multiplier/adder output can be pipelined.
+Related violations: <none>
+
+DPOP-1#31 Warning
+Output pipelining  
+DSP zed_i/correlation_accel_v2_0/inst/correlation_accel_v2_fmul_32ns_32ns_32_4_max_dsp_U8/correlation_accel_v2_ap_fmul_2_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/DSP output P is not pipelined. Pipelining DSP48 output will improve performance. Both multiplier/adder output can be pipelined.
+Related violations: <none>
+
+DPOP-1#32 Warning
+Output pipelining  
+DSP zed_i/correlation_accel_v2_0/inst/correlation_accel_v2_fmul_32ns_32ns_32_4_max_dsp_U8/correlation_accel_v2_ap_fmul_2_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/DSP output P is not pipelined. Pipelining DSP48 output will improve performance. Both multiplier/adder output can be pipelined.
+Related violations: <none>
+
+DPOP-1#33 Warning
+Output pipelining  
+DSP zed_i/correlation_accel_v2_0/inst/correlation_accel_v2_fmul_32ns_32ns_32_4_max_dsp_U8/correlation_accel_v2_ap_fmul_2_max_dsp_32_u/U0/i_synth/MULT.OP/R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/DSP output P is not pipelined. Pipelining DSP48 output will improve performance. Both multiplier/adder output can be pipelined.
+Related violations: <none>
+
+DPOP-1#34 Warning
+Output pipelining  
+DSP zed_i/correlation_accel_v2_0/inst/correlation_accel_v2_fmul_32ns_32ns_32_4_max_dsp_U9/correlation_accel_v2_ap_fmul_2_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/DSP output P is not pipelined. Pipelining DSP48 output will improve performance. Both multiplier/adder output can be pipelined.
+Related violations: <none>
+
+DPOP-1#35 Warning
+Output pipelining  
+DSP zed_i/correlation_accel_v2_0/inst/correlation_accel_v2_fmul_32ns_32ns_32_4_max_dsp_U9/correlation_accel_v2_ap_fmul_2_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/DSP output P is not pipelined. Pipelining DSP48 output will improve performance. Both multiplier/adder output can be pipelined.
+Related violations: <none>
+
+DPOP-1#36 Warning
+Output pipelining  
+DSP zed_i/correlation_accel_v2_0/inst/correlation_accel_v2_fmul_32ns_32ns_32_4_max_dsp_U9/correlation_accel_v2_ap_fmul_2_max_dsp_32_u/U0/i_synth/MULT.OP/R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/DSP output P is not pipelined. Pipelining DSP48 output will improve performance. Both multiplier/adder output can be pipelined.
 Related violations: <none>
 
 PLIO-7#1 Warning
@@ -244,177 +374,237 @@ Related violations: <none>
 
 AVAL-4#1 Advisory
 enum_USE_DPORT_FALSE_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND  
-zed_i/correlation_accel_v2_0/inst/correlation_accel_v2_fadd_32ns_32ns_32_9_full_dsp_U2/correlation_accel_v2_ap_fadd_7_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/DSP: DSP48E1 is not using the D port (USE_DPORT = FALSE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
+zed_i/correlation_accel_v2_0/inst/correlation_accel_v2_fadd_32ns_32ns_32_5_full_dsp_U2/correlation_accel_v2_ap_fadd_3_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/DSP: DSP48E1 is not using the D port (USE_DPORT = FALSE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
 Related violations: <none>
 
 AVAL-4#2 Advisory
 enum_USE_DPORT_FALSE_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND  
-zed_i/correlation_accel_v2_0/inst/correlation_accel_v2_fadd_32ns_32ns_32_9_full_dsp_U2/correlation_accel_v2_ap_fadd_7_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/SHIFT_RND/DSP: DSP48E1 is not using the D port (USE_DPORT = FALSE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
+zed_i/correlation_accel_v2_0/inst/correlation_accel_v2_fadd_32ns_32ns_32_5_full_dsp_U2/correlation_accel_v2_ap_fadd_3_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/SHIFT_RND/DSP: DSP48E1 is not using the D port (USE_DPORT = FALSE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
 Related violations: <none>
 
 AVAL-4#3 Advisory
 enum_USE_DPORT_FALSE_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND  
-zed_i/correlation_accel_v2_0/inst/correlation_accel_v2_faddfsub_32ns_32ns_32_9_full_dsp_U1/correlation_accel_v2_ap_faddfsub_7_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/DSP: DSP48E1 is not using the D port (USE_DPORT = FALSE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
+zed_i/correlation_accel_v2_0/inst/correlation_accel_v2_fadd_32ns_32ns_32_5_full_dsp_U3/correlation_accel_v2_ap_fadd_3_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/DSP: DSP48E1 is not using the D port (USE_DPORT = FALSE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
 Related violations: <none>
 
 AVAL-4#4 Advisory
 enum_USE_DPORT_FALSE_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND  
-zed_i/correlation_accel_v2_0/inst/correlation_accel_v2_faddfsub_32ns_32ns_32_9_full_dsp_U1/correlation_accel_v2_ap_faddfsub_7_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/SHIFT_RND/DSP: DSP48E1 is not using the D port (USE_DPORT = FALSE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
+zed_i/correlation_accel_v2_0/inst/correlation_accel_v2_fadd_32ns_32ns_32_5_full_dsp_U3/correlation_accel_v2_ap_fadd_3_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/SHIFT_RND/DSP: DSP48E1 is not using the D port (USE_DPORT = FALSE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
 Related violations: <none>
 
 AVAL-4#5 Advisory
 enum_USE_DPORT_FALSE_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND  
-zed_i/correlation_accel_v2_0/inst/correlation_accel_v2_flog_32ns_32ns_32_18_full_dsp_U10/correlation_accel_v2_ap_flog_16_full_dsp_32_u/U0/i_synth/LOG_OP.OP/rr/L_path/g_adders[0].add/dsp.one.dsp48e1_add/DSP: DSP48E1 is not using the D port (USE_DPORT = FALSE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
+zed_i/correlation_accel_v2_0/inst/correlation_accel_v2_fadd_32ns_32ns_32_5_full_dsp_U4/correlation_accel_v2_ap_fadd_3_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/DSP: DSP48E1 is not using the D port (USE_DPORT = FALSE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
 Related violations: <none>
 
 AVAL-4#6 Advisory
 enum_USE_DPORT_FALSE_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND  
-zed_i/correlation_accel_v2_0/inst/correlation_accel_v2_flog_32ns_32ns_32_18_full_dsp_U10/correlation_accel_v2_ap_flog_16_full_dsp_32_u/U0/i_synth/LOG_OP.OP/rr/L_path/g_adders[1].add/dsp.one.dsp48e1_add/DSP: DSP48E1 is not using the D port (USE_DPORT = FALSE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
+zed_i/correlation_accel_v2_0/inst/correlation_accel_v2_fadd_32ns_32ns_32_5_full_dsp_U4/correlation_accel_v2_ap_fadd_3_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/SHIFT_RND/DSP: DSP48E1 is not using the D port (USE_DPORT = FALSE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
 Related violations: <none>
 
 AVAL-4#7 Advisory
 enum_USE_DPORT_FALSE_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND  
-zed_i/correlation_accel_v2_0/inst/correlation_accel_v2_flog_32ns_32ns_32_18_full_dsp_U10/correlation_accel_v2_ap_flog_16_full_dsp_32_u/U0/i_synth/LOG_OP.OP/rr/mul/gen_iter[1].rr_mult/az_mult_no_combined_adder.az_mult/gDSP.gHYBRID.iHYBRID/one_fabric_mult.dsp_based.iDSP/use_prim.appDSP48[0].bppDSP48[0].use_dsp.use_dsp48e1.iDSP48E1: DSP48E1 is not using the D port (USE_DPORT = FALSE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
+zed_i/correlation_accel_v2_0/inst/correlation_accel_v2_faddfsub_32ns_32ns_32_5_full_dsp_U1/correlation_accel_v2_ap_faddfsub_3_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/DSP: DSP48E1 is not using the D port (USE_DPORT = FALSE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
 Related violations: <none>
 
 AVAL-4#8 Advisory
 enum_USE_DPORT_FALSE_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND  
-zed_i/correlation_accel_v2_0/inst/correlation_accel_v2_flog_32ns_32ns_32_18_full_dsp_U10/correlation_accel_v2_ap_flog_16_full_dsp_32_u/U0/i_synth/LOG_OP.OP/rr/mul/gen_iter[1].rr_mult/bez_add/dsp.one.dsp48e1_add/DSP: DSP48E1 is not using the D port (USE_DPORT = FALSE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
+zed_i/correlation_accel_v2_0/inst/correlation_accel_v2_faddfsub_32ns_32ns_32_5_full_dsp_U1/correlation_accel_v2_ap_faddfsub_3_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/SHIFT_RND/DSP: DSP48E1 is not using the D port (USE_DPORT = FALSE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
 Related violations: <none>
 
 AVAL-4#9 Advisory
 enum_USE_DPORT_FALSE_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND  
-zed_i/correlation_accel_v2_0/inst/correlation_accel_v2_flog_32ns_32ns_32_18_full_dsp_U10/correlation_accel_v2_ap_flog_16_full_dsp_32_u/U0/i_synth/LOG_OP.OP/rr/mul/gen_iter[1].rr_mult/zi_add_no_combined_adder.zi_add/dsp.one.dsp48e1_add/DSP: DSP48E1 is not using the D port (USE_DPORT = FALSE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
+zed_i/correlation_accel_v2_0/inst/correlation_accel_v2_flog_32ns_32ns_32_13_full_dsp_U14/correlation_accel_v2_ap_flog_11_full_dsp_32_u/U0/i_synth/LOG_OP.OP/rr/L_path/g_adders[0].add/dsp.one.dsp48e1_add/DSP: DSP48E1 is not using the D port (USE_DPORT = FALSE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
 Related violations: <none>
 
 AVAL-4#10 Advisory
 enum_USE_DPORT_FALSE_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND  
-zed_i/correlation_accel_v2_0/inst/correlation_accel_v2_flog_32ns_32ns_32_18_full_dsp_U10/correlation_accel_v2_ap_flog_16_full_dsp_32_u/U0/i_synth/LOG_OP.OP/rr/mul/gen_iter[2].rr_mult/bez_add/dsp.one.dsp48e1_add/DSP: DSP48E1 is not using the D port (USE_DPORT = FALSE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
+zed_i/correlation_accel_v2_0/inst/correlation_accel_v2_flog_32ns_32ns_32_13_full_dsp_U14/correlation_accel_v2_ap_flog_11_full_dsp_32_u/U0/i_synth/LOG_OP.OP/rr/L_path/g_adders[1].add/dsp.one.dsp48e1_add/DSP: DSP48E1 is not using the D port (USE_DPORT = FALSE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
 Related violations: <none>
 
 AVAL-4#11 Advisory
 enum_USE_DPORT_FALSE_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND  
-zed_i/correlation_accel_v2_0/inst/correlation_accel_v2_flog_32ns_32ns_32_18_full_dsp_U10/correlation_accel_v2_ap_flog_16_full_dsp_32_u/U0/i_synth/LOG_OP.OP/rr/mul/gen_iter[2].rr_mult/zi_add_no_combined_adder.zi_add/dsp.one.dsp48e1_add/DSP: DSP48E1 is not using the D port (USE_DPORT = FALSE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
+zed_i/correlation_accel_v2_0/inst/correlation_accel_v2_flog_32ns_32ns_32_13_full_dsp_U14/correlation_accel_v2_ap_flog_11_full_dsp_32_u/U0/i_synth/LOG_OP.OP/rr/mul/gen_iter[1].rr_mult/az_mult_no_combined_adder.az_mult/gDSP.gHYBRID.iHYBRID/one_fabric_mult.dsp_based.iDSP/use_prim.appDSP48[0].bppDSP48[0].use_dsp.use_dsp48e1.iDSP48E1: DSP48E1 is not using the D port (USE_DPORT = FALSE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
 Related violations: <none>
 
 AVAL-4#12 Advisory
 enum_USE_DPORT_FALSE_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND  
-zed_i/correlation_accel_v2_0/inst/correlation_accel_v2_flog_32ns_32ns_32_18_full_dsp_U10/correlation_accel_v2_ap_flog_16_full_dsp_32_u/U0/i_synth/LOG_OP.OP/taylor/gen_combiner_dsp48.addsub_comb/dsp.one.dsp48e1_add/DSP: DSP48E1 is not using the D port (USE_DPORT = FALSE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
+zed_i/correlation_accel_v2_0/inst/correlation_accel_v2_flog_32ns_32ns_32_13_full_dsp_U14/correlation_accel_v2_ap_flog_11_full_dsp_32_u/U0/i_synth/LOG_OP.OP/rr/mul/gen_iter[1].rr_mult/bez_add/dsp.one.dsp48e1_add/DSP: DSP48E1 is not using the D port (USE_DPORT = FALSE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
 Related violations: <none>
 
 AVAL-4#13 Advisory
 enum_USE_DPORT_FALSE_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND  
-zed_i/correlation_accel_v2_0/inst/correlation_accel_v2_flog_32ns_32ns_32_18_full_dsp_U10/correlation_accel_v2_ap_flog_16_full_dsp_32_u/U0/i_synth/LOG_OP.OP/taylor/gen_sum_addsub_dsp48.sum_addsub/dsp.one.dsp48e1_add/DSP: DSP48E1 is not using the D port (USE_DPORT = FALSE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
+zed_i/correlation_accel_v2_0/inst/correlation_accel_v2_flog_32ns_32ns_32_13_full_dsp_U14/correlation_accel_v2_ap_flog_11_full_dsp_32_u/U0/i_synth/LOG_OP.OP/rr/mul/gen_iter[1].rr_mult/zi_add_no_combined_adder.zi_add/dsp.one.dsp48e1_add/DSP: DSP48E1 is not using the D port (USE_DPORT = FALSE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
 Related violations: <none>
 
 AVAL-4#14 Advisory
 enum_USE_DPORT_FALSE_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND  
-zed_i/correlation_accel_v2_0/inst/correlation_accel_v2_flog_32ns_32ns_32_18_full_dsp_U10/correlation_accel_v2_ap_flog_16_full_dsp_32_u/U0/i_synth/LOG_OP.OP/taylor/z_plus_L_adder/dsp.one.dsp48e1_add/DSP: DSP48E1 is not using the D port (USE_DPORT = FALSE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
+zed_i/correlation_accel_v2_0/inst/correlation_accel_v2_flog_32ns_32ns_32_13_full_dsp_U14/correlation_accel_v2_ap_flog_11_full_dsp_32_u/U0/i_synth/LOG_OP.OP/rr/mul/gen_iter[2].rr_mult/bez_add/dsp.one.dsp48e1_add/DSP: DSP48E1 is not using the D port (USE_DPORT = FALSE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
 Related violations: <none>
 
 AVAL-4#15 Advisory
 enum_USE_DPORT_FALSE_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND  
-zed_i/correlation_accel_v2_0/inst/correlation_accel_v2_fmul_32ns_32ns_32_5_max_dsp_U3/correlation_accel_v2_ap_fmul_3_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/DSP: DSP48E1 is not using the D port (USE_DPORT = FALSE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
+zed_i/correlation_accel_v2_0/inst/correlation_accel_v2_flog_32ns_32ns_32_13_full_dsp_U14/correlation_accel_v2_ap_flog_11_full_dsp_32_u/U0/i_synth/LOG_OP.OP/rr/mul/gen_iter[2].rr_mult/zi_add_no_combined_adder.zi_add/dsp.one.dsp48e1_add/DSP: DSP48E1 is not using the D port (USE_DPORT = FALSE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
 Related violations: <none>
 
 AVAL-4#16 Advisory
 enum_USE_DPORT_FALSE_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND  
-zed_i/correlation_accel_v2_0/inst/correlation_accel_v2_fmul_32ns_32ns_32_5_max_dsp_U3/correlation_accel_v2_ap_fmul_3_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/DSP: DSP48E1 is not using the D port (USE_DPORT = FALSE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
+zed_i/correlation_accel_v2_0/inst/correlation_accel_v2_flog_32ns_32ns_32_13_full_dsp_U14/correlation_accel_v2_ap_flog_11_full_dsp_32_u/U0/i_synth/LOG_OP.OP/taylor/gen_combiner_dsp48.addsub_comb/dsp.one.dsp48e1_add/DSP: DSP48E1 is not using the D port (USE_DPORT = FALSE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
 Related violations: <none>
 
 AVAL-4#17 Advisory
 enum_USE_DPORT_FALSE_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND  
-zed_i/correlation_accel_v2_0/inst/correlation_accel_v2_fmul_32ns_32ns_32_5_max_dsp_U3/correlation_accel_v2_ap_fmul_3_max_dsp_32_u/U0/i_synth/MULT.OP/R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/DSP: DSP48E1 is not using the D port (USE_DPORT = FALSE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
+zed_i/correlation_accel_v2_0/inst/correlation_accel_v2_flog_32ns_32ns_32_13_full_dsp_U14/correlation_accel_v2_ap_flog_11_full_dsp_32_u/U0/i_synth/LOG_OP.OP/taylor/gen_sum_addsub_dsp48.sum_addsub/dsp.one.dsp48e1_add/DSP: DSP48E1 is not using the D port (USE_DPORT = FALSE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
 Related violations: <none>
 
 AVAL-4#18 Advisory
 enum_USE_DPORT_FALSE_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND  
-zed_i/correlation_accel_v2_0/inst/correlation_accel_v2_fmul_32ns_32ns_32_5_max_dsp_U4/correlation_accel_v2_ap_fmul_3_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/DSP: DSP48E1 is not using the D port (USE_DPORT = FALSE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
+zed_i/correlation_accel_v2_0/inst/correlation_accel_v2_flog_32ns_32ns_32_13_full_dsp_U14/correlation_accel_v2_ap_flog_11_full_dsp_32_u/U0/i_synth/LOG_OP.OP/taylor/z_plus_L_adder/dsp.one.dsp48e1_add/DSP: DSP48E1 is not using the D port (USE_DPORT = FALSE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
 Related violations: <none>
 
 AVAL-4#19 Advisory
 enum_USE_DPORT_FALSE_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND  
-zed_i/correlation_accel_v2_0/inst/correlation_accel_v2_fmul_32ns_32ns_32_5_max_dsp_U4/correlation_accel_v2_ap_fmul_3_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/DSP: DSP48E1 is not using the D port (USE_DPORT = FALSE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
+zed_i/correlation_accel_v2_0/inst/correlation_accel_v2_fmul_32ns_32ns_32_4_max_dsp_U5/correlation_accel_v2_ap_fmul_2_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/DSP: DSP48E1 is not using the D port (USE_DPORT = FALSE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
 Related violations: <none>
 
 AVAL-4#20 Advisory
 enum_USE_DPORT_FALSE_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND  
-zed_i/correlation_accel_v2_0/inst/correlation_accel_v2_fmul_32ns_32ns_32_5_max_dsp_U4/correlation_accel_v2_ap_fmul_3_max_dsp_32_u/U0/i_synth/MULT.OP/R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/DSP: DSP48E1 is not using the D port (USE_DPORT = FALSE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
+zed_i/correlation_accel_v2_0/inst/correlation_accel_v2_fmul_32ns_32ns_32_4_max_dsp_U5/correlation_accel_v2_ap_fmul_2_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/DSP: DSP48E1 is not using the D port (USE_DPORT = FALSE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
 Related violations: <none>
 
 AVAL-4#21 Advisory
 enum_USE_DPORT_FALSE_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND  
-zed_i/correlation_accel_v2_0/inst/correlation_accel_v2_fmul_32ns_32ns_32_5_max_dsp_U5/correlation_accel_v2_ap_fmul_3_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/DSP: DSP48E1 is not using the D port (USE_DPORT = FALSE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
+zed_i/correlation_accel_v2_0/inst/correlation_accel_v2_fmul_32ns_32ns_32_4_max_dsp_U5/correlation_accel_v2_ap_fmul_2_max_dsp_32_u/U0/i_synth/MULT.OP/R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/DSP: DSP48E1 is not using the D port (USE_DPORT = FALSE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
 Related violations: <none>
 
 AVAL-4#22 Advisory
 enum_USE_DPORT_FALSE_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND  
-zed_i/correlation_accel_v2_0/inst/correlation_accel_v2_fmul_32ns_32ns_32_5_max_dsp_U5/correlation_accel_v2_ap_fmul_3_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/DSP: DSP48E1 is not using the D port (USE_DPORT = FALSE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
+zed_i/correlation_accel_v2_0/inst/correlation_accel_v2_fmul_32ns_32ns_32_4_max_dsp_U6/correlation_accel_v2_ap_fmul_2_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/DSP: DSP48E1 is not using the D port (USE_DPORT = FALSE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
 Related violations: <none>
 
 AVAL-4#23 Advisory
 enum_USE_DPORT_FALSE_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND  
-zed_i/correlation_accel_v2_0/inst/correlation_accel_v2_fmul_32ns_32ns_32_5_max_dsp_U5/correlation_accel_v2_ap_fmul_3_max_dsp_32_u/U0/i_synth/MULT.OP/R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/DSP: DSP48E1 is not using the D port (USE_DPORT = FALSE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
+zed_i/correlation_accel_v2_0/inst/correlation_accel_v2_fmul_32ns_32ns_32_4_max_dsp_U6/correlation_accel_v2_ap_fmul_2_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/DSP: DSP48E1 is not using the D port (USE_DPORT = FALSE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
+Related violations: <none>
+
+AVAL-4#24 Advisory
+enum_USE_DPORT_FALSE_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND  
+zed_i/correlation_accel_v2_0/inst/correlation_accel_v2_fmul_32ns_32ns_32_4_max_dsp_U6/correlation_accel_v2_ap_fmul_2_max_dsp_32_u/U0/i_synth/MULT.OP/R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/DSP: DSP48E1 is not using the D port (USE_DPORT = FALSE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
+Related violations: <none>
+
+AVAL-4#25 Advisory
+enum_USE_DPORT_FALSE_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND  
+zed_i/correlation_accel_v2_0/inst/correlation_accel_v2_fmul_32ns_32ns_32_4_max_dsp_U7/correlation_accel_v2_ap_fmul_2_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/DSP: DSP48E1 is not using the D port (USE_DPORT = FALSE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
+Related violations: <none>
+
+AVAL-4#26 Advisory
+enum_USE_DPORT_FALSE_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND  
+zed_i/correlation_accel_v2_0/inst/correlation_accel_v2_fmul_32ns_32ns_32_4_max_dsp_U7/correlation_accel_v2_ap_fmul_2_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/DSP: DSP48E1 is not using the D port (USE_DPORT = FALSE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
+Related violations: <none>
+
+AVAL-4#27 Advisory
+enum_USE_DPORT_FALSE_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND  
+zed_i/correlation_accel_v2_0/inst/correlation_accel_v2_fmul_32ns_32ns_32_4_max_dsp_U7/correlation_accel_v2_ap_fmul_2_max_dsp_32_u/U0/i_synth/MULT.OP/R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/DSP: DSP48E1 is not using the D port (USE_DPORT = FALSE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
+Related violations: <none>
+
+AVAL-4#28 Advisory
+enum_USE_DPORT_FALSE_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND  
+zed_i/correlation_accel_v2_0/inst/correlation_accel_v2_fmul_32ns_32ns_32_4_max_dsp_U8/correlation_accel_v2_ap_fmul_2_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/DSP: DSP48E1 is not using the D port (USE_DPORT = FALSE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
+Related violations: <none>
+
+AVAL-4#29 Advisory
+enum_USE_DPORT_FALSE_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND  
+zed_i/correlation_accel_v2_0/inst/correlation_accel_v2_fmul_32ns_32ns_32_4_max_dsp_U8/correlation_accel_v2_ap_fmul_2_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/DSP: DSP48E1 is not using the D port (USE_DPORT = FALSE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
+Related violations: <none>
+
+AVAL-4#30 Advisory
+enum_USE_DPORT_FALSE_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND  
+zed_i/correlation_accel_v2_0/inst/correlation_accel_v2_fmul_32ns_32ns_32_4_max_dsp_U8/correlation_accel_v2_ap_fmul_2_max_dsp_32_u/U0/i_synth/MULT.OP/R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/DSP: DSP48E1 is not using the D port (USE_DPORT = FALSE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
+Related violations: <none>
+
+AVAL-4#31 Advisory
+enum_USE_DPORT_FALSE_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND  
+zed_i/correlation_accel_v2_0/inst/correlation_accel_v2_fmul_32ns_32ns_32_4_max_dsp_U9/correlation_accel_v2_ap_fmul_2_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/DSP: DSP48E1 is not using the D port (USE_DPORT = FALSE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
+Related violations: <none>
+
+AVAL-4#32 Advisory
+enum_USE_DPORT_FALSE_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND  
+zed_i/correlation_accel_v2_0/inst/correlation_accel_v2_fmul_32ns_32ns_32_4_max_dsp_U9/correlation_accel_v2_ap_fmul_2_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/DSP: DSP48E1 is not using the D port (USE_DPORT = FALSE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
+Related violations: <none>
+
+AVAL-4#33 Advisory
+enum_USE_DPORT_FALSE_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND  
+zed_i/correlation_accel_v2_0/inst/correlation_accel_v2_fmul_32ns_32ns_32_4_max_dsp_U9/correlation_accel_v2_ap_fmul_2_max_dsp_32_u/U0/i_synth/MULT.OP/R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/DSP: DSP48E1 is not using the D port (USE_DPORT = FALSE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
 Related violations: <none>
 
 AVAL-5#1 Advisory
 enum_USE_MULT_NONE_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND  
-zed_i/correlation_accel_v2_0/inst/correlation_accel_v2_flog_32ns_32ns_32_18_full_dsp_U10/correlation_accel_v2_ap_flog_16_full_dsp_32_u/U0/i_synth/LOG_OP.OP/rr/L_path/g_adders[0].add/dsp.one.dsp48e1_add/DSP: DSP48E1 is not using the Multiplier (USE_MULT = NONE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
+zed_i/correlation_accel_v2_0/inst/correlation_accel_v2_flog_32ns_32ns_32_13_full_dsp_U14/correlation_accel_v2_ap_flog_11_full_dsp_32_u/U0/i_synth/LOG_OP.OP/rr/L_path/g_adders[0].add/dsp.one.dsp48e1_add/DSP: DSP48E1 is not using the Multiplier (USE_MULT = NONE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
 Related violations: <none>
 
 AVAL-5#2 Advisory
 enum_USE_MULT_NONE_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND  
-zed_i/correlation_accel_v2_0/inst/correlation_accel_v2_flog_32ns_32ns_32_18_full_dsp_U10/correlation_accel_v2_ap_flog_16_full_dsp_32_u/U0/i_synth/LOG_OP.OP/rr/L_path/g_adders[1].add/dsp.one.dsp48e1_add/DSP: DSP48E1 is not using the Multiplier (USE_MULT = NONE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
+zed_i/correlation_accel_v2_0/inst/correlation_accel_v2_flog_32ns_32ns_32_13_full_dsp_U14/correlation_accel_v2_ap_flog_11_full_dsp_32_u/U0/i_synth/LOG_OP.OP/rr/L_path/g_adders[1].add/dsp.one.dsp48e1_add/DSP: DSP48E1 is not using the Multiplier (USE_MULT = NONE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
 Related violations: <none>
 
 AVAL-5#3 Advisory
 enum_USE_MULT_NONE_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND  
-zed_i/correlation_accel_v2_0/inst/correlation_accel_v2_flog_32ns_32ns_32_18_full_dsp_U10/correlation_accel_v2_ap_flog_16_full_dsp_32_u/U0/i_synth/LOG_OP.OP/rr/mul/gen_iter[1].rr_mult/bez_add/dsp.one.dsp48e1_add/DSP: DSP48E1 is not using the Multiplier (USE_MULT = NONE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
+zed_i/correlation_accel_v2_0/inst/correlation_accel_v2_flog_32ns_32ns_32_13_full_dsp_U14/correlation_accel_v2_ap_flog_11_full_dsp_32_u/U0/i_synth/LOG_OP.OP/rr/mul/gen_iter[1].rr_mult/bez_add/dsp.one.dsp48e1_add/DSP: DSP48E1 is not using the Multiplier (USE_MULT = NONE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
 Related violations: <none>
 
 AVAL-5#4 Advisory
 enum_USE_MULT_NONE_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND  
-zed_i/correlation_accel_v2_0/inst/correlation_accel_v2_flog_32ns_32ns_32_18_full_dsp_U10/correlation_accel_v2_ap_flog_16_full_dsp_32_u/U0/i_synth/LOG_OP.OP/rr/mul/gen_iter[1].rr_mult/zi_add_no_combined_adder.zi_add/dsp.one.dsp48e1_add/DSP: DSP48E1 is not using the Multiplier (USE_MULT = NONE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
+zed_i/correlation_accel_v2_0/inst/correlation_accel_v2_flog_32ns_32ns_32_13_full_dsp_U14/correlation_accel_v2_ap_flog_11_full_dsp_32_u/U0/i_synth/LOG_OP.OP/rr/mul/gen_iter[1].rr_mult/zi_add_no_combined_adder.zi_add/dsp.one.dsp48e1_add/DSP: DSP48E1 is not using the Multiplier (USE_MULT = NONE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
 Related violations: <none>
 
 AVAL-5#5 Advisory
 enum_USE_MULT_NONE_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND  
-zed_i/correlation_accel_v2_0/inst/correlation_accel_v2_flog_32ns_32ns_32_18_full_dsp_U10/correlation_accel_v2_ap_flog_16_full_dsp_32_u/U0/i_synth/LOG_OP.OP/rr/mul/gen_iter[2].rr_mult/bez_add/dsp.one.dsp48e1_add/DSP: DSP48E1 is not using the Multiplier (USE_MULT = NONE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
+zed_i/correlation_accel_v2_0/inst/correlation_accel_v2_flog_32ns_32ns_32_13_full_dsp_U14/correlation_accel_v2_ap_flog_11_full_dsp_32_u/U0/i_synth/LOG_OP.OP/rr/mul/gen_iter[2].rr_mult/bez_add/dsp.one.dsp48e1_add/DSP: DSP48E1 is not using the Multiplier (USE_MULT = NONE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
 Related violations: <none>
 
 AVAL-5#6 Advisory
 enum_USE_MULT_NONE_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND  
-zed_i/correlation_accel_v2_0/inst/correlation_accel_v2_flog_32ns_32ns_32_18_full_dsp_U10/correlation_accel_v2_ap_flog_16_full_dsp_32_u/U0/i_synth/LOG_OP.OP/rr/mul/gen_iter[2].rr_mult/zi_add_no_combined_adder.zi_add/dsp.one.dsp48e1_add/DSP: DSP48E1 is not using the Multiplier (USE_MULT = NONE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
+zed_i/correlation_accel_v2_0/inst/correlation_accel_v2_flog_32ns_32ns_32_13_full_dsp_U14/correlation_accel_v2_ap_flog_11_full_dsp_32_u/U0/i_synth/LOG_OP.OP/rr/mul/gen_iter[2].rr_mult/zi_add_no_combined_adder.zi_add/dsp.one.dsp48e1_add/DSP: DSP48E1 is not using the Multiplier (USE_MULT = NONE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
 Related violations: <none>
 
 AVAL-5#7 Advisory
 enum_USE_MULT_NONE_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND  
-zed_i/correlation_accel_v2_0/inst/correlation_accel_v2_flog_32ns_32ns_32_18_full_dsp_U10/correlation_accel_v2_ap_flog_16_full_dsp_32_u/U0/i_synth/LOG_OP.OP/taylor/gen_combiner_dsp48.addsub_comb/dsp.one.dsp48e1_add/DSP: DSP48E1 is not using the Multiplier (USE_MULT = NONE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
+zed_i/correlation_accel_v2_0/inst/correlation_accel_v2_flog_32ns_32ns_32_13_full_dsp_U14/correlation_accel_v2_ap_flog_11_full_dsp_32_u/U0/i_synth/LOG_OP.OP/taylor/gen_combiner_dsp48.addsub_comb/dsp.one.dsp48e1_add/DSP: DSP48E1 is not using the Multiplier (USE_MULT = NONE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
 Related violations: <none>
 
 AVAL-5#8 Advisory
 enum_USE_MULT_NONE_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND  
-zed_i/correlation_accel_v2_0/inst/correlation_accel_v2_flog_32ns_32ns_32_18_full_dsp_U10/correlation_accel_v2_ap_flog_16_full_dsp_32_u/U0/i_synth/LOG_OP.OP/taylor/gen_sum_addsub_dsp48.sum_addsub/dsp.one.dsp48e1_add/DSP: DSP48E1 is not using the Multiplier (USE_MULT = NONE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
+zed_i/correlation_accel_v2_0/inst/correlation_accel_v2_flog_32ns_32ns_32_13_full_dsp_U14/correlation_accel_v2_ap_flog_11_full_dsp_32_u/U0/i_synth/LOG_OP.OP/taylor/gen_sum_addsub_dsp48.sum_addsub/dsp.one.dsp48e1_add/DSP: DSP48E1 is not using the Multiplier (USE_MULT = NONE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
 Related violations: <none>
 
 AVAL-5#9 Advisory
 enum_USE_MULT_NONE_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND  
-zed_i/correlation_accel_v2_0/inst/correlation_accel_v2_flog_32ns_32ns_32_18_full_dsp_U10/correlation_accel_v2_ap_flog_16_full_dsp_32_u/U0/i_synth/LOG_OP.OP/taylor/z_plus_L_adder/dsp.one.dsp48e1_add/DSP: DSP48E1 is not using the Multiplier (USE_MULT = NONE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
+zed_i/correlation_accel_v2_0/inst/correlation_accel_v2_flog_32ns_32ns_32_13_full_dsp_U14/correlation_accel_v2_ap_flog_11_full_dsp_32_u/U0/i_synth/LOG_OP.OP/taylor/z_plus_L_adder/dsp.one.dsp48e1_add/DSP: DSP48E1 is not using the Multiplier (USE_MULT = NONE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
 Related violations: <none>
 
 AVAL-5#10 Advisory
 enum_USE_MULT_NONE_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND  
-zed_i/correlation_accel_v2_0/inst/correlation_accel_v2_fmul_32ns_32ns_32_5_max_dsp_U3/correlation_accel_v2_ap_fmul_3_max_dsp_32_u/U0/i_synth/MULT.OP/R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/DSP: DSP48E1 is not using the Multiplier (USE_MULT = NONE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
+zed_i/correlation_accel_v2_0/inst/correlation_accel_v2_fmul_32ns_32ns_32_4_max_dsp_U5/correlation_accel_v2_ap_fmul_2_max_dsp_32_u/U0/i_synth/MULT.OP/R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/DSP: DSP48E1 is not using the Multiplier (USE_MULT = NONE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
 Related violations: <none>
 
 AVAL-5#11 Advisory
 enum_USE_MULT_NONE_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND  
-zed_i/correlation_accel_v2_0/inst/correlation_accel_v2_fmul_32ns_32ns_32_5_max_dsp_U4/correlation_accel_v2_ap_fmul_3_max_dsp_32_u/U0/i_synth/MULT.OP/R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/DSP: DSP48E1 is not using the Multiplier (USE_MULT = NONE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
+zed_i/correlation_accel_v2_0/inst/correlation_accel_v2_fmul_32ns_32ns_32_4_max_dsp_U6/correlation_accel_v2_ap_fmul_2_max_dsp_32_u/U0/i_synth/MULT.OP/R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/DSP: DSP48E1 is not using the Multiplier (USE_MULT = NONE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
 Related violations: <none>
 
 AVAL-5#12 Advisory
 enum_USE_MULT_NONE_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND  
-zed_i/correlation_accel_v2_0/inst/correlation_accel_v2_fmul_32ns_32ns_32_5_max_dsp_U5/correlation_accel_v2_ap_fmul_3_max_dsp_32_u/U0/i_synth/MULT.OP/R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/DSP: DSP48E1 is not using the Multiplier (USE_MULT = NONE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
+zed_i/correlation_accel_v2_0/inst/correlation_accel_v2_fmul_32ns_32ns_32_4_max_dsp_U7/correlation_accel_v2_ap_fmul_2_max_dsp_32_u/U0/i_synth/MULT.OP/R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/DSP: DSP48E1 is not using the Multiplier (USE_MULT = NONE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
+Related violations: <none>
+
+AVAL-5#13 Advisory
+enum_USE_MULT_NONE_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND  
+zed_i/correlation_accel_v2_0/inst/correlation_accel_v2_fmul_32ns_32ns_32_4_max_dsp_U8/correlation_accel_v2_ap_fmul_2_max_dsp_32_u/U0/i_synth/MULT.OP/R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/DSP: DSP48E1 is not using the Multiplier (USE_MULT = NONE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
+Related violations: <none>
+
+AVAL-5#14 Advisory
+enum_USE_MULT_NONE_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND  
+zed_i/correlation_accel_v2_0/inst/correlation_accel_v2_fmul_32ns_32ns_32_4_max_dsp_U9/correlation_accel_v2_ap_fmul_2_max_dsp_32_u/U0/i_synth/MULT.OP/R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/DSP: DSP48E1 is not using the Multiplier (USE_MULT = NONE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
 Related violations: <none>
 
 

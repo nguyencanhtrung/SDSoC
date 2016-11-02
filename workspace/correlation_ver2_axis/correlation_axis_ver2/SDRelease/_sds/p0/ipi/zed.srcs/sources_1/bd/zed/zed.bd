@@ -678,6 +678,11 @@
         <spirit:name>clkid1</spirit:name>
         <spirit:internalPortReference spirit:componentRef="ps7" spirit:portRef="FCLK_CLK1"/>
         <spirit:internalPortReference spirit:componentRef="proc_sys_reset_1" spirit:portRef="slowest_sync_clk"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>clkid2</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="ps7" spirit:portRef="FCLK_CLK2"/>
+        <spirit:internalPortReference spirit:componentRef="proc_sys_reset_2" spirit:portRef="slowest_sync_clk"/>
         <spirit:internalPortReference spirit:componentRef="datamover_0" spirit:portRef="s_axi_lite_aclk"/>
         <spirit:internalPortReference spirit:componentRef="datamover_0" spirit:portRef="m_axi_mm2s_aclk"/>
         <spirit:internalPortReference spirit:componentRef="datamover_1" spirit:portRef="s_axi_lite_aclk"/>
@@ -700,11 +705,6 @@
         <spirit:internalPortReference spirit:componentRef="axis_dwc_datamover_1_rxd_0" spirit:portRef="aclk"/>
       </spirit:adHocConnection>
       <spirit:adHocConnection>
-        <spirit:name>clkid2</spirit:name>
-        <spirit:internalPortReference spirit:componentRef="ps7" spirit:portRef="FCLK_CLK2"/>
-        <spirit:internalPortReference spirit:componentRef="proc_sys_reset_2" spirit:portRef="slowest_sync_clk"/>
-      </spirit:adHocConnection>
-      <spirit:adHocConnection>
         <spirit:name>clkid3</spirit:name>
         <spirit:internalPortReference spirit:componentRef="ps7" spirit:portRef="FCLK_CLK3"/>
         <spirit:internalPortReference spirit:componentRef="proc_sys_reset_3" spirit:portRef="slowest_sync_clk"/>
@@ -725,8 +725,8 @@
         <spirit:internalPortReference spirit:componentRef="correlation_accel_v2_0" spirit:portRef="number_of_indices"/>
       </spirit:adHocConnection>
       <spirit:adHocConnection>
-        <spirit:name>proc_sys_reset_1_interconnect_aresetn</spirit:name>
-        <spirit:internalPortReference spirit:componentRef="proc_sys_reset_1" spirit:portRef="interconnect_aresetn"/>
+        <spirit:name>proc_sys_reset_2_interconnect_aresetn</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="proc_sys_reset_2" spirit:portRef="interconnect_aresetn"/>
         <spirit:internalPortReference spirit:componentRef="axi_interconnect_M_AXI_GP0" spirit:portRef="ARESETN"/>
         <spirit:internalPortReference spirit:componentRef="axi_interconnect_M_AXI_GP0" spirit:portRef="S00_ARESETN"/>
         <spirit:internalPortReference spirit:componentRef="axi_interconnect_M_AXI_GP0" spirit:portRef="M00_ARESETN"/>
@@ -738,8 +738,8 @@
         <spirit:internalPortReference spirit:componentRef="axi_interconnect_S_AXI_HP0" spirit:portRef="S01_ARESETN"/>
       </spirit:adHocConnection>
       <spirit:adHocConnection>
-        <spirit:name>proc_sys_reset_1_peripheral_aresetn</spirit:name>
-        <spirit:internalPortReference spirit:componentRef="proc_sys_reset_1" spirit:portRef="peripheral_aresetn"/>
+        <spirit:name>proc_sys_reset_2_peripheral_aresetn</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="proc_sys_reset_2" spirit:portRef="peripheral_aresetn"/>
         <spirit:internalPortReference spirit:componentRef="datamover_0" spirit:portRef="axi_resetn"/>
         <spirit:internalPortReference spirit:componentRef="datamover_1" spirit:portRef="axi_resetn"/>
         <spirit:internalPortReference spirit:componentRef="correlation_accel_v2_0_if" spirit:portRef="s_axi_aresetn"/>

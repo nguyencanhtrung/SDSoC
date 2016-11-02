@@ -1,7 +1,7 @@
 Copyright 1986-2014 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2014.4 (lin64) Build 1071353 Tue Nov 18 16:48:31 MST 2014
-| Date         : Wed Nov  2 15:44:13 2016
+| Date         : Wed Nov  2 16:09:50 2016
 | Host         : verratnix.zmk.uni-kl.de running 64-bit CentOS release 6.7 (Final)
 | Command      : report_io -file zed_wrapper_io_placed.rpt
 | Design       : zed_wrapper

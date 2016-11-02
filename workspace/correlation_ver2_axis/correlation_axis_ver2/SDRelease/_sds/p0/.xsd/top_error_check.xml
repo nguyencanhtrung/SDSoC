@@ -125,7 +125,7 @@
     <xd:busInterface xd:name="S_AXIS_S2MM" xd:instanceRef="datamover_1"/>
   </xd:connection>
     <xd:connection>
-    <xd:port xd:name="ps7_FCLK_CLK1" xd:instanceRef="zed"/>
+    <xd:port xd:name="ps7_FCLK_CLK2" xd:instanceRef="zed"/>
     <xd:port xd:name="s_axi_lite_aclk" xd:instanceRef="datamover_0"/>
     <xd:port xd:name="m_axi_mm2s_aclk" xd:instanceRef="datamover_0"/>
     <xd:port xd:name="s_axi_lite_aclk" xd:instanceRef="datamover_1"/>
@@ -148,7 +148,7 @@
     <xd:port xd:name="aclk" xd:instanceRef="axis_dwc_datamover_1_rxd_0"/>
   </xd:connection>
     <xd:connection>
-    <xd:port xd:name="proc_sys_reset_1_interconnect_aresetn" xd:instanceRef="zed"/>
+    <xd:port xd:name="proc_sys_reset_2_interconnect_aresetn" xd:instanceRef="zed"/>
     <xd:port xd:name="ARESETN" xd:instanceRef="axi_interconnect_M_AXI_GP0"/>
     <xd:port xd:name="S00_ARESETN" xd:instanceRef="axi_interconnect_M_AXI_GP0"/>
     <xd:port xd:name="M00_ARESETN" xd:instanceRef="axi_interconnect_M_AXI_GP0"/>
@@ -160,7 +160,7 @@
     <xd:port xd:name="S01_ARESETN" xd:instanceRef="axi_interconnect_S_AXI_HP0"/>
   </xd:connection>
     <xd:connection>
-    <xd:port xd:name="proc_sys_reset_1_peripheral_aresetn" xd:instanceRef="zed"/>
+    <xd:port xd:name="proc_sys_reset_2_peripheral_aresetn" xd:instanceRef="zed"/>
     <xd:port xd:name="axi_resetn" xd:instanceRef="datamover_0"/>
     <xd:port xd:name="axi_resetn" xd:instanceRef="datamover_1"/>
     <xd:port xd:name="s_axi_aresetn" xd:instanceRef="correlation_accel_v2_0_if"/>

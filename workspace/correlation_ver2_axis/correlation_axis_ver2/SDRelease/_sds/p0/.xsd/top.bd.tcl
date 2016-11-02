@@ -146,7 +146,7 @@ connect_bd_net  \
   [get_bd_pins /correlation_accel_v2_0/number_of_indices] \
 
 connect_bd_net  \
-  [get_bd_pins /ps7/FCLK_CLK1] \
+  [get_bd_pins /ps7/FCLK_CLK2] \
   [get_bd_pins /datamover_0/s_axi_lite_aclk] \
   [get_bd_pins /datamover_0/m_axi_mm2s_aclk] \
   [get_bd_pins /datamover_1/s_axi_lite_aclk] \
@@ -169,7 +169,7 @@ connect_bd_net  \
   [get_bd_pins /axis_dwc_datamover_1_rxd_0/aclk] \
 
 connect_bd_net  \
-  [get_bd_pins /proc_sys_reset_1/interconnect_aresetn] \
+  [get_bd_pins /proc_sys_reset_2/interconnect_aresetn] \
   [get_bd_pins /axi_interconnect_M_AXI_GP0/ARESETN] \
   [get_bd_pins /axi_interconnect_M_AXI_GP0/S00_ARESETN] \
   [get_bd_pins /axi_interconnect_M_AXI_GP0/M00_ARESETN] \
@@ -181,7 +181,7 @@ connect_bd_net  \
   [get_bd_pins /axi_interconnect_S_AXI_HP0/S01_ARESETN] \
 
 connect_bd_net  \
-  [get_bd_pins /proc_sys_reset_1/peripheral_aresetn] \
+  [get_bd_pins /proc_sys_reset_2/peripheral_aresetn] \
   [get_bd_pins /datamover_0/axi_resetn] \
   [get_bd_pins /datamover_1/axi_resetn] \
   [get_bd_pins /correlation_accel_v2_0_if/s_axi_aresetn] \

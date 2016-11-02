@@ -4,7 +4,7 @@ add_files /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_ax
 open_solution "solution" -reset
 set_part { xc7z020clg484-1 }
 # synthesis directives
-create_clock -period 5.95
+create_clock -period 8.5
 config_rtl -reset_level low
 # end synthesis directives
 csynth_design

@@ -41,7 +41,7 @@ all: correlation_axis_ver2.elf
 correlation_axis_ver2.elf: $(OBJS)  $(USER_OBJS)
 	@echo 'Building target: $@'
 	@echo 'Invoking: SDS++ Linux Linker'
-	sds++  -o "correlation_axis_ver2.elf" $(OBJS) $(USER_OBJS) $(LIBS) -sds-pf zed
+	sds++  -o "correlation_axis_ver2.elf" $(OBJS) $(USER_OBJS) $(LIBS) -sds-pf zed -dmclkid 2
 	@echo 'Finished building target: $@'
 	@echo ' '
 

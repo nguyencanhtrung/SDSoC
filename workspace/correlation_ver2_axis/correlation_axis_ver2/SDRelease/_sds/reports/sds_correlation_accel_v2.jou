@@ -1,8 +1,8 @@
 (c) Copyright 2012-2015 Xilinx, Inc. All Rights Reserved.
 #-----------------------------------------------------------
 # Tool version  : sds++ 2014.4 20150228
-# Start time    : Wed Nov 02 03:34:07 PM CET 2016
-# Command line  : sds++ -Wall -O3 -I../src -c -fmessage-length=0 -MTsrc/correlation_accel_v2.o -sds-hw correlation_accel_v2 correlation_accel_v2.cpp -sds-end -MMD -MP -MFsrc/correlation_accel_v2.d -MTsrc/correlation_accel_v2.d -o src/correlation_accel_v2.o ../src/correlation_accel_v2.cpp -sds-pf zed
+# Start time    : Wed Nov 02 03:59:58 PM CET 2016
+# Command line  : sds++ -Wall -O3 -I../src -c -fmessage-length=0 -MTsrc/correlation_accel_v2.o -sds-hw correlation_accel_v2 correlation_accel_v2.cpp -clkid 2 -sds-end -MMD -MP -MFsrc/correlation_accel_v2.d -MTsrc/correlation_accel_v2.d -o src/correlation_accel_v2.o ../src/correlation_accel_v2.cpp -sds-pf zed
 # Log file      : /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver2/SDRelease/_sds/reports/sds_correlation_accel_v2.log
 # Journal file  : /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver2/SDRelease/_sds/reports/sds_correlation_accel_v2.jou
 # Report file   : /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver2/SDRelease/_sds/reports/sds_correlation_accel_v2.rpt
@@ -25,7 +25,7 @@ cd /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver2
 sed -i -e {s/xilinx\.com\/xidane/xilinx\.com\/xd/g} /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver2/SDRelease/_sds/vhls/correlation_accel_v2/solution/impl/ip/auxiliary.xml
 cd /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver2/SDRelease
 cd /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver2/SDRelease/_sds/.llvm
-xsltproc  --output /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver2/SDRelease/_sds/.llvm/correlation_accel_v2.hlsmap1.xml  --stringparam P_CLKID 1  --stringparam P_HLS_TYPE hls  /opt/Xilinx/SDSoC/2014.4/scripts/xsd/xdHlsmapRenameAttr.xsl  /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver2/SDRelease/_sds/.llvm/correlation_accel_v2_auxiliary.xml
+xsltproc  --output /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver2/SDRelease/_sds/.llvm/correlation_accel_v2.hlsmap1.xml  --stringparam P_CLKID 2  --stringparam P_HLS_TYPE hls  /opt/Xilinx/SDSoC/2014.4/scripts/xsd/xdHlsmapRenameAttr.xsl  /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver2/SDRelease/_sds/.llvm/correlation_accel_v2_auxiliary.xml
 xsltproc  --output /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver2/SDRelease/_sds/.llvm/correlation_accel_v2.hlsmap.xml  /opt/Xilinx/SDSoC/2014.4/scripts/xsd/xdHlsmapAdapter.xsl  /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver2/SDRelease/_sds/.llvm/correlation_accel_v2.hlsmap1.xml
 xsltproc    --output /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver2/SDRelease/_sds/.llvm/correlation_accel_v2.fcnmap.xml  /opt/Xilinx/SDSoC/2014.4/scripts/xsd/xdHlsmapAxi4.xsl  /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver2/SDRelease/_sds/.llvm/correlation_accel_v2.hlsmap.xml
 xsltproc  --output /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver2/SDRelease/_sds/.llvm/correlation_accel_v2_if.xml  /opt/Xilinx/SDSoC/2014.4/scripts/xsd/xdHlsAdapterComp.xsl  /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver2/SDRelease/_sds/.llvm/correlation_accel_v2.fcnmap.xml
@@ -38,4 +38,4 @@ arm-xilinx-linux-gnueabi-objcopy --add-section .xdpp=/home/trungnguyen/SDSoC/wor
 arm-xilinx-linux-gnueabi-objcopy --add-section .xdfcnmap=/home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver2/SDRelease/_sds/.llvm/correlation_accel_v2.fcnmap.xml /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver2/SDRelease/_sds/swstubs/correlation_accel_v2.o
 arm-xilinx-linux-gnueabi-objcopy --add-section .xdhlscore=/home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver2/SDRelease/_sds/vhls/correlation_accel_v2/solution/impl/ip/xilinx_com_hls_correlation_accel_v2_1_0.zip /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver2/SDRelease/_sds/swstubs/correlation_accel_v2.o
 arm-xilinx-linux-gnueabi-objcopy --add-section .xdif=/home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver2/SDRelease/_sds/.llvm/correlation_accel_v2_if.xml /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver2/SDRelease/_sds/swstubs/correlation_accel_v2.o
-# sds++ completed at Wed Nov 02 03:34:58 PM CET 2016
+# sds++ completed at Wed Nov 02 04:00:49 PM CET 2016

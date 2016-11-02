@@ -1,14 +1,13 @@
 (c) Copyright 2012-2015 Xilinx, Inc. All Rights Reserved.
 #-----------------------------------------------------------
 # Tool version  : sds++ 2014.4 20150228
-# Start time    : Wed Nov 02 03:34:59 PM CET 2016
-# Command line  : sds++ -o correlation_axis_ver2.elf ./src/correlation_accel_v2.o ./src/main.o -sds-pf zed
+# Start time    : Wed Nov 02 04:00:51 PM CET 2016
+# Command line  : sds++ -o correlation_axis_ver2.elf ./src/correlation_accel_v2.o ./src/main.o -sds-pf zed -dmclkid 2
 # Log file      : /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver2/SDRelease/_sds/reports/sds.log
 # Journal file  : /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver2/SDRelease/_sds/reports/sds.jou
 # Report file   : /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver2/SDRelease/_sds/reports/sds.rpt
 #-----------------------------------------------------------
 
-# INFO: [SDSoC 0-0] Removing implementation files from previous run
 # INFO: [SDSoC 0-0] Analyzing object files
 arm-xilinx-linux-gnueabi-objcopy -O binary --set-section-flags .xddata=alloc --only-section=.xddata /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver2/SDRelease/src/correlation_accel_v2.o /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver2/SDRelease/_sds/.data/correlation_accel_v2.o.xml
 arm-xilinx-linux-gnueabi-objcopy -O binary --set-section-flags .xdpp=alloc --only-section=.xdpp /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver2/SDRelease/src/correlation_accel_v2.o /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver2/SDRelease/_sds/.pp/correlation_accel_v2.ii
@@ -17,12 +16,12 @@ arm-xilinx-linux-gnueabi-objcopy -O binary --set-section-flags .xdhlscore=alloc 
 unzip -u -o /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver2/SDRelease/_sds/iprepo/repo/xilinx_com_hls_correlation_accel_v2_1_0/xilinx_com_hls_correlation_accel_v2_1_0.zip -d /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver2/SDRelease/_sds/iprepo/repo/xilinx_com_hls_correlation_accel_v2_1_0
 arm-xilinx-linux-gnueabi-objcopy -O binary --set-section-flags .xdif=alloc --only-section=.xdif /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver2/SDRelease/src/correlation_accel_v2.o /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver2/SDRelease/_sds/.cdb/correlation_accel_v2_if.xml
 arm-xilinx-linux-gnueabi-objcopy -O binary --set-section-flags .xddata=alloc --only-section=.xddata /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver2/SDRelease/src/main.o /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver2/SDRelease/_sds/.data/main.o.xml
-build_xd_ip_db  -sdsoc  -sds-pf /opt/Xilinx/SDSoC/2014.4/platforms/zed/zed_hw.pfm  -clkid 1 -ip /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver2/SDRelease/_sds/iprepo/repo/xilinx_com_hls_correlation_accel_v2_1_0  -o /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver2/SDRelease/_sds/.cdb/xd_ip_db.xml  
+build_xd_ip_db  -sdsoc  -sds-pf /opt/Xilinx/SDSoC/2014.4/platforms/zed/zed_hw.pfm  -clkid 2 -ip /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver2/SDRelease/_sds/iprepo/repo/xilinx_com_hls_correlation_accel_v2_1_0  -o /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver2/SDRelease/_sds/.cdb/xd_ip_db.xml  
 # INFO: [SDSoC 0-0] Generating data motion network
 llvm-link -o /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver2/SDRelease/_sds/.llvm/sdi_all.o /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver2/SDRelease/_sds/.llvm/./src/correlation_accel_v2.s /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver2/SDRelease/_sds/.llvm/./src/main.s
 cd /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver2/SDRelease/_sds/.llvm
 cd /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver2/SDRelease/_sds/.llvm
-XidanePass  --platform zed  --dmclkid 1  --repo /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver2/SDRelease/_sds/.cdb/xd_ip_db.xml  --dmdb /opt/Xilinx/SDSoC/2014.4/data/DM.db   -os linux 
+XidanePass  --platform zed  --dmclkid 2  --repo /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver2/SDRelease/_sds/.cdb/xd_ip_db.xml  --dmdb /opt/Xilinx/SDSoC/2014.4/data/DM.db   -os linux 
 cd /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver2/SDRelease
 # INFO: [SDSoC 0-0] Create accelerator stub functions
 cd /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver2/SDRelease/_sds/swstubs
@@ -63,4 +62,4 @@ cd /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver2
 # INFO: [SDSoC 0-0] Calling system_linker for partition 0
 system_linker -cf-input /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver2/SDRelease/_sds/.llvm/apsys_0.xml -cf-output-dir _sds/p0 -ip-db /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver2/SDRelease/_sds/.cdb/xd_ip_db.xml -ip-repo /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver2/SDRelease/_sds/iprepo/repo -sds-pf /opt/Xilinx/SDSoC/2014.4/platforms/zed:linux -bitstream -bit-name correlation_axis_ver2.elf.bit -boot-files   -mdev-no-swgen -mdev-no-xsd -sdsoc -sd-output-dir _sds/p0/sd_card -bit-binary -elf /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver2/SDRelease/_sds/swstubs/correlation_axis_ver2.elf
 # All user specified timing constraints are met.
-# sds++ completed at Wed Nov 02 03:45:30 PM CET 2016
+# sds++ completed at Wed Nov 02 04:11:00 PM CET 2016

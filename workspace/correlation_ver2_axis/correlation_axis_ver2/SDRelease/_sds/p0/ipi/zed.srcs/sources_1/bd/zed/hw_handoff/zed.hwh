@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Wed Nov  2 15:35:31 2016" VIVADOVERSION="2014.4">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Wed Nov  2 16:01:20 2016" VIVADOVERSION="2014.4">
 
   <SYSTEMINFO ARCH="zynq" BOARD="em.avnet.com:zed:part0:1.0" DEVICE="7z020" NAME="zed_imp" PACKAGE="clg484" SPEEDGRADE="-1"/>
 
@@ -335,44 +335,44 @@
         <PARAMETER NAME="EDK_IPTYPE" VALUE="BUS"/>
       </PARAMETERS>
       <PORTS>
-        <PORT CLKFREQUENCY="142857132" DIR="I" NAME="ACLK" SIGIS="clk" SIGNAME="ps7_FCLK_CLK1">
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="ACLK" SIGIS="clk" SIGNAME="ps7_FCLK_CLK2">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="ps7_clockc_0" PORT="FCLK1"/>
+            <CONNECTION INSTANCE="ps7_clockc_0" PORT="FCLK2"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="0" NAME="ARESETN" RIGHT="0" SIGIS="rst" SIGNAME="proc_sys_reset_1_interconnect_aresetn">
+        <PORT DIR="I" LEFT="0" NAME="ARESETN" RIGHT="0" SIGIS="rst" SIGNAME="proc_sys_reset_2_interconnect_aresetn">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="proc_sys_reset_1" PORT="interconnect_aresetn"/>
+            <CONNECTION INSTANCE="proc_sys_reset_2" PORT="interconnect_aresetn"/>
           </CONNECTIONS>
         </PORT>
-        <PORT CLKFREQUENCY="142857132" DIR="I" NAME="S00_ACLK" SIGIS="clk" SIGNAME="ps7_FCLK_CLK1">
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="S00_ACLK" SIGIS="clk" SIGNAME="ps7_FCLK_CLK2">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="ps7_clockc_0" PORT="FCLK1"/>
+            <CONNECTION INSTANCE="ps7_clockc_0" PORT="FCLK2"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="0" NAME="S00_ARESETN" RIGHT="0" SIGIS="rst" SIGNAME="proc_sys_reset_1_interconnect_aresetn">
+        <PORT DIR="I" LEFT="0" NAME="S00_ARESETN" RIGHT="0" SIGIS="rst" SIGNAME="proc_sys_reset_2_interconnect_aresetn">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="proc_sys_reset_1" PORT="interconnect_aresetn"/>
+            <CONNECTION INSTANCE="proc_sys_reset_2" PORT="interconnect_aresetn"/>
           </CONNECTIONS>
         </PORT>
-        <PORT CLKFREQUENCY="142857132" DIR="I" NAME="M00_ACLK" SIGIS="clk" SIGNAME="ps7_FCLK_CLK1">
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="M00_ACLK" SIGIS="clk" SIGNAME="ps7_FCLK_CLK2">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="ps7_clockc_0" PORT="FCLK1"/>
+            <CONNECTION INSTANCE="ps7_clockc_0" PORT="FCLK2"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="0" NAME="M00_ARESETN" RIGHT="0" SIGIS="rst" SIGNAME="proc_sys_reset_1_interconnect_aresetn">
+        <PORT DIR="I" LEFT="0" NAME="M00_ARESETN" RIGHT="0" SIGIS="rst" SIGNAME="proc_sys_reset_2_interconnect_aresetn">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="proc_sys_reset_1" PORT="interconnect_aresetn"/>
+            <CONNECTION INSTANCE="proc_sys_reset_2" PORT="interconnect_aresetn"/>
           </CONNECTIONS>
         </PORT>
-        <PORT CLKFREQUENCY="142857132" DIR="I" NAME="M01_ACLK" SIGIS="clk" SIGNAME="ps7_FCLK_CLK1">
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="M01_ACLK" SIGIS="clk" SIGNAME="ps7_FCLK_CLK2">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="ps7_clockc_0" PORT="FCLK1"/>
+            <CONNECTION INSTANCE="ps7_clockc_0" PORT="FCLK2"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="0" NAME="M01_ARESETN" RIGHT="0" SIGIS="rst" SIGNAME="proc_sys_reset_1_interconnect_aresetn">
+        <PORT DIR="I" LEFT="0" NAME="M01_ARESETN" RIGHT="0" SIGIS="rst" SIGNAME="proc_sys_reset_2_interconnect_aresetn">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="proc_sys_reset_1" PORT="interconnect_aresetn"/>
+            <CONNECTION INSTANCE="proc_sys_reset_2" PORT="interconnect_aresetn"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" LEFT="31" NAME="S00_AXI_awaddr" RIGHT="0" SIGIS="undef" SIGNAME="axi_interconnect_M_AXI_GP0_S00_AXI_awaddr">
@@ -742,14 +742,14 @@
             <CONNECTION INSTANCE="datamover_0" PORT="s_axi_lite_rready"/>
           </CONNECTIONS>
         </PORT>
-        <PORT CLKFREQUENCY="142857132" DIR="I" NAME="M02_ACLK" SIGIS="clk" SIGNAME="ps7_FCLK_CLK1">
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="M02_ACLK" SIGIS="clk" SIGNAME="ps7_FCLK_CLK2">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="ps7_clockc_0" PORT="FCLK1"/>
+            <CONNECTION INSTANCE="ps7_clockc_0" PORT="FCLK2"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="0" NAME="M02_ARESETN" RIGHT="0" SIGIS="rst" SIGNAME="proc_sys_reset_1_interconnect_aresetn">
+        <PORT DIR="I" LEFT="0" NAME="M02_ARESETN" RIGHT="0" SIGIS="rst" SIGNAME="proc_sys_reset_2_interconnect_aresetn">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="proc_sys_reset_1" PORT="interconnect_aresetn"/>
+            <CONNECTION INSTANCE="proc_sys_reset_2" PORT="interconnect_aresetn"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="9" NAME="M02_AXI_awaddr" RIGHT="0" SIGIS="undef" SIGNAME="axi_interconnect_M_AXI_GP0_M02_AXI_awaddr">
@@ -1346,34 +1346,34 @@
         <PARAMETER NAME="EDK_IPTYPE" VALUE="BUS"/>
       </PARAMETERS>
       <PORTS>
-        <PORT CLKFREQUENCY="142857132" DIR="I" NAME="ACLK" SIGIS="clk" SIGNAME="ps7_FCLK_CLK1">
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="ACLK" SIGIS="clk" SIGNAME="ps7_FCLK_CLK2">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="ps7_clockc_0" PORT="FCLK1"/>
+            <CONNECTION INSTANCE="ps7_clockc_0" PORT="FCLK2"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="0" NAME="ARESETN" RIGHT="0" SIGIS="rst" SIGNAME="proc_sys_reset_1_interconnect_aresetn">
+        <PORT DIR="I" LEFT="0" NAME="ARESETN" RIGHT="0" SIGIS="rst" SIGNAME="proc_sys_reset_2_interconnect_aresetn">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="proc_sys_reset_1" PORT="interconnect_aresetn"/>
+            <CONNECTION INSTANCE="proc_sys_reset_2" PORT="interconnect_aresetn"/>
           </CONNECTIONS>
         </PORT>
-        <PORT CLKFREQUENCY="142857132" DIR="I" NAME="S00_ACLK" SIGIS="clk" SIGNAME="ps7_FCLK_CLK1">
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="S00_ACLK" SIGIS="clk" SIGNAME="ps7_FCLK_CLK2">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="ps7_clockc_0" PORT="FCLK1"/>
+            <CONNECTION INSTANCE="ps7_clockc_0" PORT="FCLK2"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="0" NAME="S00_ARESETN" RIGHT="0" SIGIS="rst" SIGNAME="proc_sys_reset_1_interconnect_aresetn">
+        <PORT DIR="I" LEFT="0" NAME="S00_ARESETN" RIGHT="0" SIGIS="rst" SIGNAME="proc_sys_reset_2_interconnect_aresetn">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="proc_sys_reset_1" PORT="interconnect_aresetn"/>
+            <CONNECTION INSTANCE="proc_sys_reset_2" PORT="interconnect_aresetn"/>
           </CONNECTIONS>
         </PORT>
-        <PORT CLKFREQUENCY="142857132" DIR="I" NAME="M00_ACLK" SIGIS="clk" SIGNAME="ps7_FCLK_CLK1">
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="M00_ACLK" SIGIS="clk" SIGNAME="ps7_FCLK_CLK2">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="ps7_clockc_0" PORT="FCLK1"/>
+            <CONNECTION INSTANCE="ps7_clockc_0" PORT="FCLK2"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="0" NAME="M00_ARESETN" RIGHT="0" SIGIS="rst" SIGNAME="proc_sys_reset_1_interconnect_aresetn">
+        <PORT DIR="I" LEFT="0" NAME="M00_ARESETN" RIGHT="0" SIGIS="rst" SIGNAME="proc_sys_reset_2_interconnect_aresetn">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="proc_sys_reset_1" PORT="interconnect_aresetn"/>
+            <CONNECTION INSTANCE="proc_sys_reset_2" PORT="interconnect_aresetn"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" NAME="S00_AXI_awaddr" SIGIS="undef"/>
@@ -1628,14 +1628,14 @@
             <CONNECTION INSTANCE="ps7" PORT="S_AXI_HP0_RREADY"/>
           </CONNECTIONS>
         </PORT>
-        <PORT CLKFREQUENCY="142857132" DIR="I" NAME="S01_ACLK" SIGIS="clk" SIGNAME="ps7_FCLK_CLK1">
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="S01_ACLK" SIGIS="clk" SIGNAME="ps7_FCLK_CLK2">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="ps7_clockc_0" PORT="FCLK1"/>
+            <CONNECTION INSTANCE="ps7_clockc_0" PORT="FCLK2"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="0" NAME="S01_ARESETN" RIGHT="0" SIGIS="rst" SIGNAME="proc_sys_reset_1_interconnect_aresetn">
+        <PORT DIR="I" LEFT="0" NAME="S01_ARESETN" RIGHT="0" SIGIS="rst" SIGNAME="proc_sys_reset_2_interconnect_aresetn">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="proc_sys_reset_1" PORT="interconnect_aresetn"/>
+            <CONNECTION INSTANCE="proc_sys_reset_2" PORT="interconnect_aresetn"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" LEFT="31" NAME="S01_AXI_awaddr" RIGHT="0" SIGIS="undef" SIGNAME="axi_interconnect_S_AXI_HP0_S01_AXI_awaddr">
@@ -1914,14 +1914,14 @@
         <PARAMETER NAME="EDK_IPTYPE" VALUE="BUS"/>
       </PARAMETERS>
       <PORTS>
-        <PORT CLKFREQUENCY="142857132" DIR="I" NAME="aclk" SIGIS="clk" SIGNAME="ps7_FCLK_CLK1">
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="aclk" SIGIS="clk" SIGNAME="ps7_FCLK_CLK2">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="ps7_clockc_0" PORT="FCLK1"/>
+            <CONNECTION INSTANCE="ps7_clockc_0" PORT="FCLK2"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="aresetn" SIGIS="rst" SIGNAME="proc_sys_reset_1_peripheral_aresetn">
+        <PORT DIR="I" NAME="aresetn" SIGIS="rst" SIGNAME="proc_sys_reset_2_peripheral_aresetn">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="proc_sys_reset_1" PORT="peripheral_aresetn"/>
+            <CONNECTION INSTANCE="proc_sys_reset_2" PORT="peripheral_aresetn"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" NAME="s_axis_tvalid" SIGIS="undef" SIGNAME="axis_dwc_datamover_0_txd_0_s_axis_tvalid">
@@ -2024,14 +2024,14 @@
         <PARAMETER NAME="EDK_IPTYPE" VALUE="BUS"/>
       </PARAMETERS>
       <PORTS>
-        <PORT CLKFREQUENCY="142857132" DIR="I" NAME="aclk" SIGIS="clk" SIGNAME="ps7_FCLK_CLK1">
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="aclk" SIGIS="clk" SIGNAME="ps7_FCLK_CLK2">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="ps7_clockc_0" PORT="FCLK1"/>
+            <CONNECTION INSTANCE="ps7_clockc_0" PORT="FCLK2"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="aresetn" SIGIS="rst" SIGNAME="proc_sys_reset_1_peripheral_aresetn">
+        <PORT DIR="I" NAME="aresetn" SIGIS="rst" SIGNAME="proc_sys_reset_2_peripheral_aresetn">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="proc_sys_reset_1" PORT="peripheral_aresetn"/>
+            <CONNECTION INSTANCE="proc_sys_reset_2" PORT="peripheral_aresetn"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" NAME="s_axis_tvalid" SIGIS="undef" SIGNAME="axis_dwc_datamover_1_rxd_0_s_axis_tvalid">
@@ -2137,9 +2137,9 @@
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
       </PARAMETERS>
       <PORTS>
-        <PORT CLKFREQUENCY="142857132" DIR="I" NAME="ap_clk" SIGIS="clk" SIGNAME="ps7_FCLK_CLK1">
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="ap_clk" SIGIS="clk" SIGNAME="ps7_FCLK_CLK2">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="ps7_clockc_0" PORT="FCLK1"/>
+            <CONNECTION INSTANCE="ps7_clockc_0" PORT="FCLK2"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" NAME="ap_rst_n" SIGIS="rst" SIGNAME="correlation_accel_v2_0_if_aresetn">
@@ -2579,14 +2579,14 @@
         <PARAMETER NAME="C_HIGHADDR" VALUE="0x43C0FFFF"/>
       </PARAMETERS>
       <PORTS>
-        <PORT CLKFREQUENCY="142857132" DIR="I" NAME="s_axi_aclk" SIGIS="clk" SIGNAME="ps7_FCLK_CLK1">
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="s_axi_aclk" SIGIS="clk" SIGNAME="ps7_FCLK_CLK2">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="ps7_clockc_0" PORT="FCLK1"/>
+            <CONNECTION INSTANCE="ps7_clockc_0" PORT="FCLK2"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="s_axi_aresetn" SIGIS="rst" SIGNAME="proc_sys_reset_1_peripheral_aresetn">
+        <PORT DIR="I" NAME="s_axi_aresetn" SIGIS="rst" SIGNAME="proc_sys_reset_2_peripheral_aresetn">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="proc_sys_reset_1" PORT="peripheral_aresetn"/>
+            <CONNECTION INSTANCE="proc_sys_reset_2" PORT="peripheral_aresetn"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" LEFT="12" NAME="s_axi_awaddr" RIGHT="0" SIGIS="undef" SIGNAME="axi_interconnect_M_AXI_GP0_M00_AXI_awaddr">
@@ -2674,9 +2674,9 @@
             <CONNECTION INSTANCE="axi_interconnect_M_AXI_GP0" PORT="M00_AXI_rready"/>
           </CONNECTIONS>
         </PORT>
-        <PORT CLKFREQUENCY="142857132" DIR="I" NAME="aclk" SIGIS="clk" SIGNAME="ps7_FCLK_CLK1">
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="aclk" SIGIS="clk" SIGNAME="ps7_FCLK_CLK2">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="ps7_clockc_0" PORT="FCLK1"/>
+            <CONNECTION INSTANCE="ps7_clockc_0" PORT="FCLK2"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" NAME="aresetn" SIGIS="rst" SIGNAME="correlation_accel_v2_0_if_aresetn">
@@ -2814,19 +2814,19 @@
         <PARAMETER NAME="C_HIGHADDR" VALUE="0x4040FFFF"/>
       </PARAMETERS>
       <PORTS>
-        <PORT CLKFREQUENCY="142857132" DIR="I" NAME="s_axi_lite_aclk" SIGIS="clk" SIGNAME="ps7_FCLK_CLK1">
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="s_axi_lite_aclk" SIGIS="clk" SIGNAME="ps7_FCLK_CLK2">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="ps7_clockc_0" PORT="FCLK1"/>
+            <CONNECTION INSTANCE="ps7_clockc_0" PORT="FCLK2"/>
           </CONNECTIONS>
         </PORT>
-        <PORT CLKFREQUENCY="142857132" DIR="I" NAME="m_axi_mm2s_aclk" SIGIS="clk" SIGNAME="ps7_FCLK_CLK1">
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="m_axi_mm2s_aclk" SIGIS="clk" SIGNAME="ps7_FCLK_CLK2">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="ps7_clockc_0" PORT="FCLK1"/>
+            <CONNECTION INSTANCE="ps7_clockc_0" PORT="FCLK2"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="axi_resetn" SIGIS="rst" SIGNAME="proc_sys_reset_1_peripheral_aresetn">
+        <PORT DIR="I" NAME="axi_resetn" SIGIS="rst" SIGNAME="proc_sys_reset_2_peripheral_aresetn">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="proc_sys_reset_1" PORT="peripheral_aresetn"/>
+            <CONNECTION INSTANCE="proc_sys_reset_2" PORT="peripheral_aresetn"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" NAME="s_axi_lite_awvalid" SIGIS="undef" SIGNAME="axi_interconnect_M_AXI_GP0_M01_AXI_awvalid">
@@ -3127,19 +3127,19 @@
         <PARAMETER NAME="C_HIGHADDR" VALUE="0x4041FFFF"/>
       </PARAMETERS>
       <PORTS>
-        <PORT CLKFREQUENCY="142857132" DIR="I" NAME="s_axi_lite_aclk" SIGIS="clk" SIGNAME="ps7_FCLK_CLK1">
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="s_axi_lite_aclk" SIGIS="clk" SIGNAME="ps7_FCLK_CLK2">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="ps7_clockc_0" PORT="FCLK1"/>
+            <CONNECTION INSTANCE="ps7_clockc_0" PORT="FCLK2"/>
           </CONNECTIONS>
         </PORT>
-        <PORT CLKFREQUENCY="142857132" DIR="I" NAME="m_axi_s2mm_aclk" SIGIS="clk" SIGNAME="ps7_FCLK_CLK1">
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="m_axi_s2mm_aclk" SIGIS="clk" SIGNAME="ps7_FCLK_CLK2">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="ps7_clockc_0" PORT="FCLK1"/>
+            <CONNECTION INSTANCE="ps7_clockc_0" PORT="FCLK2"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="axi_resetn" SIGIS="rst" SIGNAME="proc_sys_reset_1_peripheral_aresetn">
+        <PORT DIR="I" NAME="axi_resetn" SIGIS="rst" SIGNAME="proc_sys_reset_2_peripheral_aresetn">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="proc_sys_reset_1" PORT="peripheral_aresetn"/>
+            <CONNECTION INSTANCE="proc_sys_reset_2" PORT="peripheral_aresetn"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" NAME="s_axi_lite_awvalid" SIGIS="undef" SIGNAME="axi_interconnect_M_AXI_GP0_M02_AXI_awvalid">
@@ -3471,28 +3471,8 @@
         <PORT DIR="O" NAME="mb_reset" SIGIS="rst"/>
         <PORT DIR="O" LEFT="0" NAME="bus_struct_reset" RIGHT="0" SIGIS="rst"/>
         <PORT DIR="O" LEFT="0" NAME="peripheral_reset" RIGHT="0" SIGIS="rst"/>
-        <PORT DIR="O" LEFT="0" NAME="interconnect_aresetn" RIGHT="0" SIGIS="rst" SIGNAME="proc_sys_reset_1_interconnect_aresetn">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="axi_interconnect_M_AXI_GP0" PORT="ARESETN"/>
-            <CONNECTION INSTANCE="axi_interconnect_M_AXI_GP0" PORT="S00_ARESETN"/>
-            <CONNECTION INSTANCE="axi_interconnect_M_AXI_GP0" PORT="M00_ARESETN"/>
-            <CONNECTION INSTANCE="axi_interconnect_M_AXI_GP0" PORT="M01_ARESETN"/>
-            <CONNECTION INSTANCE="axi_interconnect_M_AXI_GP0" PORT="M02_ARESETN"/>
-            <CONNECTION INSTANCE="axi_interconnect_S_AXI_HP0" PORT="ARESETN"/>
-            <CONNECTION INSTANCE="axi_interconnect_S_AXI_HP0" PORT="M00_ARESETN"/>
-            <CONNECTION INSTANCE="axi_interconnect_S_AXI_HP0" PORT="S00_ARESETN"/>
-            <CONNECTION INSTANCE="axi_interconnect_S_AXI_HP0" PORT="S01_ARESETN"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" LEFT="0" NAME="peripheral_aresetn" RIGHT="0" SIGIS="rst" SIGNAME="proc_sys_reset_1_peripheral_aresetn">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="datamover_0" PORT="axi_resetn"/>
-            <CONNECTION INSTANCE="datamover_1" PORT="axi_resetn"/>
-            <CONNECTION INSTANCE="correlation_accel_v2_0_if" PORT="s_axi_aresetn"/>
-            <CONNECTION INSTANCE="axis_dwc_datamover_0_txd_0" PORT="aresetn"/>
-            <CONNECTION INSTANCE="axis_dwc_datamover_1_rxd_0" PORT="aresetn"/>
-          </CONNECTIONS>
-        </PORT>
+        <PORT DIR="O" LEFT="0" NAME="interconnect_aresetn" RIGHT="0" SIGIS="rst"/>
+        <PORT DIR="O" LEFT="0" NAME="peripheral_aresetn" RIGHT="0" SIGIS="rst"/>
       </PORTS>
       <BUSINTERFACES/>
     </MODULE>
@@ -3532,8 +3512,28 @@
         <PORT DIR="O" NAME="mb_reset" SIGIS="rst"/>
         <PORT DIR="O" LEFT="0" NAME="bus_struct_reset" RIGHT="0" SIGIS="rst"/>
         <PORT DIR="O" LEFT="0" NAME="peripheral_reset" RIGHT="0" SIGIS="rst"/>
-        <PORT DIR="O" LEFT="0" NAME="interconnect_aresetn" RIGHT="0" SIGIS="rst"/>
-        <PORT DIR="O" LEFT="0" NAME="peripheral_aresetn" RIGHT="0" SIGIS="rst"/>
+        <PORT DIR="O" LEFT="0" NAME="interconnect_aresetn" RIGHT="0" SIGIS="rst" SIGNAME="proc_sys_reset_2_interconnect_aresetn">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axi_interconnect_M_AXI_GP0" PORT="ARESETN"/>
+            <CONNECTION INSTANCE="axi_interconnect_M_AXI_GP0" PORT="S00_ARESETN"/>
+            <CONNECTION INSTANCE="axi_interconnect_M_AXI_GP0" PORT="M00_ARESETN"/>
+            <CONNECTION INSTANCE="axi_interconnect_M_AXI_GP0" PORT="M01_ARESETN"/>
+            <CONNECTION INSTANCE="axi_interconnect_M_AXI_GP0" PORT="M02_ARESETN"/>
+            <CONNECTION INSTANCE="axi_interconnect_S_AXI_HP0" PORT="ARESETN"/>
+            <CONNECTION INSTANCE="axi_interconnect_S_AXI_HP0" PORT="M00_ARESETN"/>
+            <CONNECTION INSTANCE="axi_interconnect_S_AXI_HP0" PORT="S00_ARESETN"/>
+            <CONNECTION INSTANCE="axi_interconnect_S_AXI_HP0" PORT="S01_ARESETN"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="0" NAME="peripheral_aresetn" RIGHT="0" SIGIS="rst" SIGNAME="proc_sys_reset_2_peripheral_aresetn">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="datamover_0" PORT="axi_resetn"/>
+            <CONNECTION INSTANCE="datamover_1" PORT="axi_resetn"/>
+            <CONNECTION INSTANCE="correlation_accel_v2_0_if" PORT="s_axi_aresetn"/>
+            <CONNECTION INSTANCE="axis_dwc_datamover_0_txd_0" PORT="aresetn"/>
+            <CONNECTION INSTANCE="axis_dwc_datamover_1_rxd_0" PORT="aresetn"/>
+          </CONNECTIONS>
+        </PORT>
       </PORTS>
       <BUSINTERFACES/>
     </MODULE>
@@ -3611,6 +3611,12 @@
           <CONNECTIONS>
             <CONNECTION INSTANCE="ps7_dev_cfg_0" PORT="FCLK1"/>
             <CONNECTION INSTANCE="proc_sys_reset_1" PORT="slowest_sync_clk"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT CLKFREQUENCY="100000000" DIR="O" NAME="FCLK2" SIGIS="CLK" SIGNAME="ps7_FCLK_CLK2">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="ps7_dev_cfg_0" PORT="FCLK2"/>
+            <CONNECTION INSTANCE="proc_sys_reset_2" PORT="slowest_sync_clk"/>
             <CONNECTION INSTANCE="datamover_0" PORT="s_axi_lite_aclk"/>
             <CONNECTION INSTANCE="datamover_0" PORT="m_axi_mm2s_aclk"/>
             <CONNECTION INSTANCE="datamover_1" PORT="s_axi_lite_aclk"/>
@@ -3631,12 +3637,6 @@
             <CONNECTION INSTANCE="axi_interconnect_S_AXI_HP0" PORT="S01_ACLK"/>
             <CONNECTION INSTANCE="axis_dwc_datamover_0_txd_0" PORT="aclk"/>
             <CONNECTION INSTANCE="axis_dwc_datamover_1_rxd_0" PORT="aclk"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT CLKFREQUENCY="100000000" DIR="O" NAME="FCLK2" SIGIS="CLK" SIGNAME="ps7_FCLK_CLK2">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="ps7_dev_cfg_0" PORT="FCLK2"/>
-            <CONNECTION INSTANCE="proc_sys_reset_2" PORT="slowest_sync_clk"/>
           </CONNECTIONS>
         </PORT>
         <PORT CLKFREQUENCY="200000000" DIR="O" NAME="FCLK3" SIGIS="CLK" SIGNAME="ps7_FCLK_CLK3">

@@ -11,9 +11,9 @@
 <Name>correlation_accel_v2</Name>
 <PerformanceEstimates>
 <SummaryOfTimingAnalysis>
-<TargetClockPeriod>5.95</TargetClockPeriod>
-<ClockUncertainty>0.74</ClockUncertainty>
-<EstimatedClockPeriod>6.34</EstimatedClockPeriod>
+<TargetClockPeriod>8.50</TargetClockPeriod>
+<ClockUncertainty>1.06</ClockUncertainty>
+<EstimatedClockPeriod>9.65</EstimatedClockPeriod>
 </SummaryOfTimingAnalysis>
 <SummaryOfOverallLatency>
 <Best-caseLatency>undef</Best-caseLatency>
@@ -26,9 +26,9 @@
 <INIT_WEIGHT_ROM>
 <Name>INIT_WEIGHT_ROM</Name>
 <TripCount>250</TripCount>
-<Latency>1500</Latency>
-<IterationLatency>6</IterationLatency>
-<PipelineDepth>6</PipelineDepth>
+<Latency>1250</Latency>
+<IterationLatency>5</IterationLatency>
+<PipelineDepth>5</PipelineDepth>
 </INIT_WEIGHT_ROM>
 <COMP_SUM_OF_WEIGHT>
 <Name>COMP_SUM_OF_WEIGHT</Name>
@@ -38,23 +38,23 @@
 <max>2147483645</max>
 </range>
 </TripCount>
-<Latency>0 ~ 25769803740</Latency>
-<IterationLatency>12</IterationLatency>
-<PipelineDepth>12</PipelineDepth>
+<Latency>0 ~ 17179869160</Latency>
+<IterationLatency>8</IterationLatency>
+<PipelineDepth>8</PipelineDepth>
 </COMP_SUM_OF_WEIGHT>
 <ACCUMULATION_LOOP_FIRST_INDEX>
 <Name>ACCUMULATION_LOOP_FIRST_INDEX</Name>
 <TripCount>undef</TripCount>
 <Latency>undef</Latency>
-<PipelineII>2</PipelineII>
-<PipelineDepth>69</PipelineDepth>
+<PipelineII>1</PipelineII>
+<PipelineDepth>43</PipelineDepth>
 </ACCUMULATION_LOOP_FIRST_INDEX>
 <LAST_ACCUM_LOOP_FIRST_INDEX>
 <Name>LAST_ACCUM_LOOP_FIRST_INDEX</Name>
 <TripCount>6</TripCount>
-<Latency>57</Latency>
-<PipelineII>9</PipelineII>
-<PipelineDepth>13</PipelineDepth>
+<Latency>33</Latency>
+<PipelineII>5</PipelineII>
+<PipelineDepth>9</PipelineDepth>
 </LAST_ACCUM_LOOP_FIRST_INDEX>
 <Loop5>
 <Name>Loop 5</Name>
@@ -71,8 +71,8 @@
 <Name>ACCUMULATION_LOOP_FLOATING_INDEX</Name>
 <TripCount>undef</TripCount>
 <Latency>undef</Latency>
-<PipelineII>2</PipelineII>
-<PipelineDepth>70</PipelineDepth>
+<PipelineII>1</PipelineII>
+<PipelineDepth>43</PipelineDepth>
 </ACCUMULATION_LOOP_FLOATING_INDEX>
 </Loop5>
 </SummaryOfLoopLatency>
@@ -80,9 +80,9 @@
 <AreaEstimates>
 <Resources>
 <BRAM_18K>3</BRAM_18K>
-<DSP48E>26</DSP48E>
-<FF>10249</FF>
-<LUT>11516</LUT>
+<DSP48E>36</DSP48E>
+<FF>8994</FF>
+<LUT>12449</LUT>
 <SLICE>0</SLICE>
 </Resources>
 </AreaEstimates>

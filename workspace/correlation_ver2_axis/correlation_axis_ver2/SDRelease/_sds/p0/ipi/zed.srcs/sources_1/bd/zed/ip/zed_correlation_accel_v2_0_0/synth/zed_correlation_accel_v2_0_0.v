@@ -48,11 +48,11 @@
 
 
 // IP VLNV: xilinx.com:hls:correlation_accel_v2:1.0
-// IP Revision: 1611021534
+// IP Revision: 1611021600
 
 (* X_CORE_INFO = "correlation_accel_v2,Vivado 2014.4" *)
 (* CHECK_LICENSE_TYPE = "zed_correlation_accel_v2_0_0,correlation_accel_v2,{}" *)
-(* CORE_GENERATION_INFO = "zed_correlation_accel_v2_0_0,correlation_accel_v2,{x_ipProduct=Vivado 2014.4,x_ipVendor=xilinx.com,x_ipLibrary=hls,x_ipName=correlation_accel_v2,x_ipVersion=1.0,x_ipCoreRevision=1611021534,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED}" *)
+(* CORE_GENERATION_INFO = "zed_correlation_accel_v2_0_0,correlation_accel_v2,{x_ipProduct=Vivado 2014.4,x_ipVendor=xilinx.com,x_ipLibrary=hls,x_ipName=correlation_accel_v2,x_ipVersion=1.0,x_ipCoreRevision=1611021600,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED}" *)
 (* DowngradeIPIdentifiedWarnings = "yes" *)
 module zed_correlation_accel_v2_0_0 (
   ap_clk,

@@ -1,0 +1,43 @@
+(c) Copyright 2012-2015 Xilinx, Inc. All Rights Reserved.
+#-----------------------------------------------------------
+# Tool version  : sds++ 2014.4 20150228
+# Start time    : Tue Jan 24 01:55:06 PM CET 2017
+# Command line  : sds++ -Wall -O3 -I../src -c -fmessage-length=0 -MTsrc/correlation_accel_v2.o -MMD -MP -MFsrc/correlation_accel_v2.d -MTsrc/correlation_accel_v2.d -o src/correlation_accel_v2.o ../src/correlation_accel_v2.cpp -sds-pf zed
+# Log file      : /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease/_sds/reports/sds_correlation_accel_v2.log
+# Journal file  : /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease/_sds/reports/sds_correlation_accel_v2.jou
+# Report file   : /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease/_sds/reports/sds_correlation_accel_v2.rpt
+#-----------------------------------------------------------
+
+INFO: [SDSoC 0-0] Create data motion intermediate representation
+clang_wrapper -target arm-xilinx-linux-gnueabi -mcpu=cortex-a9 -O0 -g -w   -I/opt/Xilinx/SDSoC/2014.4/SDK/2014.4/gnu/arm/lin/arm-xilinx-linux-gnueabi/include/c++/4.8.3  -I/opt/Xilinx/SDSoC/2014.4/SDK/2014.4/gnu/arm/lin/arm-xilinx-linux-gnueabi/include/c++/4.8.3/arm-xilinx-linux-gnueabi  -I/opt/Xilinx/SDSoC/2014.4/SDK/2014.4/gnu/arm/lin/arm-xilinx-linux-gnueabi/include/c++/4.8.3/backward   -I/opt/Xilinx/SDSoC/2014.4/SDK/2014.4/gnu/arm/lin/lib/gcc/arm-xilinx-linux-gnueabi/4.8.3/include  -I/opt/Xilinx/SDSoC/2014.4/SDK/2014.4/gnu/arm/lin/lib/gcc/arm-xilinx-linux-gnueabi/4.8.3/include-fixed  -I/opt/Xilinx/SDSoC/2014.4/SDK/2014.4/gnu/arm/lin/arm-xilinx-linux-gnueabi/include  -I/opt/Xilinx/SDSoC/2014.4/SDK/2014.4/gnu/arm/lin/arm-xilinx-linux-gnueabi/libc/usr/include  -I /opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/include  -I /opt/Xilinx/SDSoC/2014.4/arm-xilinx-linux-gnueabi/include   -I../src -Wall -fmessage-length=0 -MMD -MP -D __SDSCC__ -emit-llvm -S /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/src/correlation_accel_v2.cpp -o /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease/_sds/.llvm/src/correlation_accel_v2.s
+INFO: [SDSoC 0-0] Compiling /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/src/correlation_accel_v2.cpp
+arm-xilinx-linux-gnueabi-g++ -c -I../src -Wall -O3 -fmessage-length=0 -MMD -MP -D __SDSCC__ -MT/home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease/src/correlation_accel_v2.o -MF/home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease/src/correlation_accel_v2.d -MT/home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease/src/correlation_accel_v2.d -I /opt/Xilinx/SDSoC/2014.4/arm-xilinx-linux-gnueabi/include  -I /opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/include   /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/src/correlation_accel_v2.cpp -o src/correlation_accel_v2.o
+/home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/src/correlation_accel_v2.cpp: In function 'void correlation_accel_v2(int, int, float*, float*)':
+/home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/src/correlation_accel_v2.cpp:107:2: warning: label 'RESET_REGISTERS_FIRST_INDEX' defined but not used [-Wunused-label]
+  RESET_REGISTERS_FIRST_INDEX:
+  ^
+/home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/src/correlation_accel_v2.cpp:132:2: warning: label 'ACCUMULATION_LOOP_FIRST_INDEX' defined but not used [-Wunused-label]
+  ACCUMULATION_LOOP_FIRST_INDEX:
+  ^
+/home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/src/correlation_accel_v2.cpp:231:3: warning: label 'ACCUMULATION_LOOP_FLOATING_INDEX' defined but not used [-Wunused-label]
+   ACCUMULATION_LOOP_FLOATING_INDEX:
+   ^
+/home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/src/correlation_accel_v2.cpp:188:2: warning: label 'LAST_ACCUM_LOOP_FIRST_INDEX' defined but not used [-Wunused-label]
+  LAST_ACCUM_LOOP_FIRST_INDEX:
+  ^
+/home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/src/correlation_accel_v2.cpp:292:3: warning: label 'LAST_ACCUM_LOOP' defined but not used [-Wunused-label]
+   LAST_ACCUM_LOOP:
+   ^
+/home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/src/correlation_accel_v2.cpp:203:3: warning: label 'RESET_REGISTERS' defined but not used [-Wunused-label]
+   RESET_REGISTERS:
+   ^
+/home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/src/correlation_accel_v2.cpp: In function 'void weight_rom_init(float*, int)':
+/home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/src/correlation_accel_v2.cpp:375:2: warning: label 'COMP_SUM_OF_WEIGHT' defined but not used [-Wunused-label]
+  COMP_SUM_OF_WEIGHT:
+  ^
+/home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/src/correlation_accel_v2.cpp:370:2: warning: label 'INIT_WEIGHT_ROM' defined but not used [-Wunused-label]
+  INIT_WEIGHT_ROM:
+  ^
+arm-xilinx-linux-gnueabi-objcopy --add-section .xdsdata=/home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease/_sds/swstubs/correlation_accel_v2.xml src/correlation_accel_v2.o
+sds++ log file saved as /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease/_sds/reports/sds_correlation_accel_v2.log
+sds++ completed at Tue Jan 24 01:55:08 PM CET 2017

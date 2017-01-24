@@ -1,7 +1,7 @@
 Copyright 1986-2014 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2014.4 (lin64) Build 1071353 Tue Nov 18 16:48:31 MST 2014
-| Date         : Wed Nov  2 16:10:25 2016
+| Date         : Tue Jan 24 22:40:00 2017
 | Host         : verratnix.zmk.uni-kl.de running 64-bit CentOS release 6.7 (Final)
 | Command      : report_drc
 ------------------------------------------------------------------------------------
@@ -20,7 +20,7 @@ Table of Contents
       Design limits: <entire design considered>
            Ruledeck: default
            Max violations: <unlimited>
-         Violations found: 115
+         Violations found: 118
 
 2. REPORT DETAILS
 -----------------
@@ -369,7 +369,7 @@ Related violations: <none>
 
 RTSTAT-10#1 Warning
 No routable loads  
-308 net(s) have no routable loads. The problem net(s) are zed_i/datamover_1/U0/mm2s_cmnd_data, zed_i/datamover_1/U0/mm2s_decerr, zed_i/datamover_1/U0/mm2s_interr, zed_i/datamover_1/U0/mm2s_slverr, zed_i/datamover_0/U0/s2mm_cmnd_data, zed_i/datamover_1/U0/I_S2MM_DMA_MNGR/s2mm_cmnd_data[31], zed_i/datamover_0/U0/s2mm_cmnd_wr, zed_i/datamover_0/U0/s2mm_decerr, zed_i/datamover_0/U0/s2mm_interr, zed_i/datamover_0/U0/s2mm_slverr.
+444 net(s) have no routable loads. The problem net(s) are zed_i/datamover_0/U0/I_SG_FETCH_MNGR/I_FTCH_PNTR_MNGR/ch2_fetch_address_i, zed_i/datamover_0/U0/I_SG_FETCH_MNGR/I_FTCH_SG/ch2_stale_descriptor, zed_i/datamover_0/U0/GEN_SG_ENGINE.I_SG_ENGINE/I_SG_FETCH_QUEUE/counter[12], zed_i/datamover_0/U0/GEN_SG_ENGINE.I_SG_ENGINE/I_SG_FETCH_QUEUE/data_concat_tlast, zed_i/datamover_0/U0/GEN_SG_ENGINE.I_SG_ENGINE/GEN_DESC_UPDATE.I_SG_UPDATE_QUEUE/GEN_QUEUE.I_UPDT_DESC_QUEUE/follower_reg_s2mm[32], zed_i/datamover_0/U0/GEN_SG_ENGINE.I_SG_ENGINE/GEN_DESC_UPDATE.I_SG_UPDATE_QUEUE/GEN_QUEUE.I_UPDT_DESC_QUEUE/follower_reg_s2mm[33], zed_i/datamover_1/U0/mm2s_cmnd_data, zed_i/datamover_1/U0/mm2s_decerr, zed_i/datamover_1/U0/mm2s_interr, zed_i/datamover_1/U0/mm2s_slverr, zed_i/datamover_0/U0/GEN_SG_ENGINE.I_SG_ENGINE/I_SG_FETCH_QUEUE/GEN_QUEUE.FTCH_QUEUE_I/queue_dout2_new, zed_i/datamover_0/U0/GEN_SG_ENGINE.I_SG_ENGINE/I_SG_FETCH_QUEUE/GEN_QUEUE.FTCH_QUEUE_I/queue_dout2_valid, zed_i/datamover_0/U0/GEN_SG_ENGINE.I_SG_ENGINE/I_SG_FETCH_QUEUE/GEN_QUEUE.FTCH_QUEUE_I/queue_dout_new[55], zed_i/datamover_0/U0/GEN_SG_ENGINE.I_SG_ENGINE/I_SG_FETCH_QUEUE/GEN_QUEUE.FTCH_QUEUE_I/queue_dout_new[56], zed_i/datamover_0/U0/GEN_SG_ENGINE.I_SG_ENGINE/I_SG_FETCH_QUEUE/GEN_QUEUE.FTCH_QUEUE_I/queue_dout_new[57] (the first 15 of 25 listed).
 Related violations: <none>
 
 AVAL-4#1 Advisory
@@ -605,6 +605,21 @@ Related violations: <none>
 AVAL-5#14 Advisory
 enum_USE_MULT_NONE_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND  
 zed_i/correlation_accel_v2_0/inst/correlation_accel_v2_fmul_32ns_32ns_32_4_max_dsp_U9/correlation_accel_v2_ap_fmul_2_max_dsp_32_u/U0/i_synth/MULT.OP/R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/DSP: DSP48E1 is not using the Multiplier (USE_MULT = NONE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
+Related violations: <none>
+
+REQP-165#1 Advisory
+writefirst  
+Synchronous clocking for BRAM (zed_i/axi_interconnect_S_AXI_HP0/s00_couplers/auto_us_df/inst/gen_upsizer.gen_full_upsizer.axi_upsizer_inst/USE_READ.gen_pktfifo_r_upsizer.pktfifo_read_data_inst/gen_ramb[0].ramb_inst) in SDP mode with Write First mode may have address collisions if the same address appears on both read and write ports. It is suggested to simulate the design to determine if any possible address collisions could exist in the design.  If so it is suggested to evaluate ways to eliminate the collisions or you may change the write mode to Read First which may reduce some performance and consume more power however will delay the writing thus resolving any potential collisions.  See the FPGA Memory Resources User Guide for additional information.
+Related violations: <none>
+
+REQP-165#2 Advisory
+writefirst  
+Synchronous clocking for BRAM (zed_i/axi_interconnect_S_AXI_HP0/s00_couplers/auto_us_df/inst/gen_upsizer.gen_full_upsizer.axi_upsizer_inst/USE_READ.gen_pktfifo_r_upsizer.pktfifo_read_data_inst/gen_ramb[1].ramb_inst) in SDP mode with Write First mode may have address collisions if the same address appears on both read and write ports. It is suggested to simulate the design to determine if any possible address collisions could exist in the design.  If so it is suggested to evaluate ways to eliminate the collisions or you may change the write mode to Read First which may reduce some performance and consume more power however will delay the writing thus resolving any potential collisions.  See the FPGA Memory Resources User Guide for additional information.
+Related violations: <none>
+
+REQP-181#1 Advisory
+writefirst  
+Synchronous clocking for BRAM (zed_i/axi_interconnect_S_AXI_HP0/s00_couplers/auto_us_df/inst/gen_upsizer.gen_full_upsizer.axi_upsizer_inst/USE_WRITE.gen_pktfifo_w_upsizer.pktfifo_write_data_inst/w_buffer/inst_blk_mem_gen/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM36_NO_ECC.ram) in SDP mode with Write First mode may have address collisions if the same address appears on both read and write ports. It is suggested to use Read First mode to avoid any conditions for address collision. See the FPGA Memory Resources User Guide for additional information.
 Related violations: <none>
 
 

@@ -36,7 +36,7 @@ Copyright (C) 2014 Xilinx Inc. All rights reserved.
 @W [XFORM-124] Array 'in_indices.dest.V' (/home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver2/SDRelease/_sds/vhls/src/correlation_accel_v2.cpp:39) may have improper streaming access(es), possible reasons: (1) some entries are accessed more than once; (2) some entries are not used; (3) the entries are not accessed in sequential order.
 @W [XFORM-542] Cannot flatten a loop nest 'Loop-5' (/home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver2/SDRelease/_sds/vhls/src/correlation_accel_v2.cpp:205:26) in function 'correlation_accel_v2' : 
                 because there is nontrivial logic in the loop latch.
-@I [HLS-111] Elapsed time: 2.33 seconds; current memory usage: 66.8 MB.
+@I [HLS-111] Elapsed time: 2.24 seconds; current memory usage: 66.8 MB.
 @I [HLS-10] Starting hardware synthesis ...
 @I [HLS-10] Synthesizing 'correlation_accel_v2' ...
 @I [HLS-10] ----------------------------------------------------------------
@@ -56,7 +56,7 @@ Copyright (C) 2014 Xilinx Inc. All rights reserved.
 	'load' operation ('acc_return_load_1', /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver2/SDRelease/_sds/vhls/src/correlation_accel_v2.cpp:179) on array 'acc_return' (2.39 ns)
 	'fadd' operation ('tmp_21', /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver2/SDRelease/_sds/vhls/src/correlation_accel_v2.cpp:179) (7.26 ns)
 @I [SCHED-11] Finished scheduling.
-@I [HLS-111] Elapsed time: 0.29 seconds; current memory usage: 69.1 MB.
+@I [HLS-111] Elapsed time: 0.31 seconds; current memory usage: 69.1 MB.
 @I [HLS-10] ----------------------------------------------------------------
 @I [HLS-10] -- Exploring micro-architecture for module 'correlation_accel_v2' 
 @I [HLS-10] ----------------------------------------------------------------
@@ -65,7 +65,7 @@ Copyright (C) 2014 Xilinx Inc. All rights reserved.
 @I [BIND-101] Exploring resource sharing.
 @I [BIND-101] Binding ...
 @I [BIND-100] Finished micro-architecture generation.
-@I [HLS-111] Elapsed time: 0.1 seconds; current memory usage: 71.6 MB.
+@I [HLS-111] Elapsed time: 0.11 seconds; current memory usage: 71.6 MB.
 @I [HLS-10] ----------------------------------------------------------------
 @I [HLS-10] -- Generating RTL for module 'correlation_accel_v2' 
 @I [HLS-10] ----------------------------------------------------------------
@@ -95,7 +95,7 @@ Copyright (C) 2014 Xilinx Inc. All rights reserved.
 @I [RTGEN-100] Generating core module 'correlation_accel_v2_sitofp_32ns_32_6': 1 instance(s).
 @I [RTGEN-100] Generating core module 'correlation_accel_v2_urem_32ns_4ns_32_36': 2 instance(s).
 @I [RTGEN-100] Finished creating RTL model for 'correlation_accel_v2'.
-@I [HLS-111] Elapsed time: 0.25 seconds; current memory usage: 76.6 MB.
+@I [HLS-111] Elapsed time: 0.26 seconds; current memory usage: 76.7 MB.
 @I [RTMG-282] Generating pipelined core: 'correlation_accel_v2_urem_32ns_4ns_32_36_div'
 @I [RTMG-278] Implementing memory 'correlation_accel_v2_weight_rom_ram' using block RAMs with power-on initialization.
 @I [RTMG-278] Implementing memory 'correlation_accel_v2_lnReturnA_ram' using block RAMs with power-on initialization.
@@ -105,5 +105,5 @@ Copyright (C) 2014 Xilinx Inc. All rights reserved.
 @I [WVHDL-304] Generating RTL VHDL for 'correlation_accel_v2'.
 @I [WVLOG-307] Generating RTL Verilog for 'correlation_accel_v2'.
 @I [IMPL-8] Exporting RTL as an IP in IP-XACT.
-@I [HLS-112] Total elapsed time: 50.649 seconds; peak memory usage: 76.6 MB.
+@I [HLS-112] Total elapsed time: 52.596 seconds; peak memory usage: 76.7 MB.
 @I [LIC-101] Checked in feature [HLS]

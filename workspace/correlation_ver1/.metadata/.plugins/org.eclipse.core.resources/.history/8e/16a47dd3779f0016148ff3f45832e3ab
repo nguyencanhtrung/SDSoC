@@ -1,0 +1,9 @@
+/home/trungnguyen/SDSoC/workspace/correlation_ver1/correlation_ver1_linux/SDDebug/src/main.o \
+ /home/trungnguyen/SDSoC/workspace/correlation_ver1/correlation_ver1_linux/SDDebug/src/main.d: \
+ /home/trungnguyen/SDSoC/workspace/correlation_ver1/correlation_ver1_linux/src/main.cpp \
+ /home/trungnguyen/SDSoC/workspace/correlation_ver1/correlation_ver1_linux/src/mmult.h \
+ /opt/Xilinx/SDSoC/2014.4/arm-xilinx-linux-gnueabi/include/sds_lib.h
+
+/home/trungnguyen/SDSoC/workspace/correlation_ver1/correlation_ver1_linux/src/mmult.h:
+
+/opt/Xilinx/SDSoC/2014.4/arm-xilinx-linux-gnueabi/include/sds_lib.h:

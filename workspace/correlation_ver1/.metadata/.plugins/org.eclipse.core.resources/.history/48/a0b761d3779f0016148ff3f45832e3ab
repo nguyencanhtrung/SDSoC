@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xd:repository xmlns:xd="http://www.xilinx.com/xd">
+  <xd:fcnMap xd:fcnName="mmult" xd:type="hls" xd:clockId="1" xd:componentRef="mmult" xd:initiationInterval="5421" xd:clockPeriod="5.950000" xd:sequential="true" xd:hostMachine="64">
+    <xd:arg xd:name="A" xd:swRootName="A" xd:direction="in" xd:busInterfaceRef="A" xd:hwName="A" xd:portInterfaceType="axis" xd:arraySize="1024" xd:dataWidth="32"/>
+    <xd:arg xd:name="B" xd:swRootName="B" xd:direction="in" xd:busInterfaceRef="B" xd:hwName="B" xd:portInterfaceType="axis" xd:arraySize="1024" xd:dataWidth="32"/>
+    <xd:arg xd:name="C" xd:swRootName="C" xd:direction="out" xd:busInterfaceRef="C" xd:hwName="C" xd:portInterfaceType="axis" xd:arraySize="1024" xd:dataWidth="32"/>
+    <xd:latencyEstimates xd:best-case="5420" xd:worst-case="5420" xd:average-case="5420"/>
+    <xd:resourceEstimates xd:LUT="17975" xd:FF="12231" xd:BRAM="34" xd:DSP="80"/>
+  </xd:fcnMap>
+</xd:repository>

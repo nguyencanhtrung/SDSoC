@@ -379,7 +379,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>customizationCRC</spirit:name>
-            <spirit:value>5fe870eb</spirit:value>
+            <spirit:value>b1eea926</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>customizationCRCversion</spirit:name>
@@ -387,7 +387,7 @@
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Wed Nov 02 15:01:34 UTC 2016</spirit:value>
+            <spirit:value>Tue Jan 24 21:28:44 UTC 2017</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>StaleAtRelink</spirit:name>
@@ -430,7 +430,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>customizationCRC</spirit:name>
-            <spirit:value>5fe870eb</spirit:value>
+            <spirit:value>b1eea926</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>customizationCRCversion</spirit:name>
@@ -438,7 +438,7 @@
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Wed Nov 02 15:01:34 UTC 2016</spirit:value>
+            <spirit:value>Tue Jan 24 21:28:44 UTC 2017</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>StaleAtRelink</spirit:name>
@@ -457,7 +457,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>customizationCRC</spirit:name>
-            <spirit:value>5fe870eb</spirit:value>
+            <spirit:value>b1eea926</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>customizationCRCversion</spirit:name>
@@ -465,7 +465,7 @@
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Wed Nov 02 15:01:34 UTC 2016</spirit:value>
+            <spirit:value>Tue Jan 24 21:28:44 UTC 2017</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>StaleAtRelink</spirit:name>
@@ -508,7 +508,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>customizationCRC</spirit:name>
-            <spirit:value>e89367e8</spirit:value>
+            <spirit:value>0f301eba</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>customizationCRCversion</spirit:name>
@@ -516,7 +516,7 @@
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Wed Nov 02 15:01:34 UTC 2016</spirit:value>
+            <spirit:value>Tue Jan 24 21:28:44 UTC 2017</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>StaleAtRelink</spirit:name>
@@ -535,7 +535,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>customizationCRC</spirit:name>
-            <spirit:value>e89367e8</spirit:value>
+            <spirit:value>0f301eba</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>customizationCRCversion</spirit:name>
@@ -543,7 +543,7 @@
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Wed Nov 02 15:01:34 UTC 2016</spirit:value>
+            <spirit:value>Tue Jan 24 21:28:44 UTC 2017</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>StaleAtRelink</spirit:name>
@@ -561,7 +561,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>customizationCRC</spirit:name>
-            <spirit:value>5fe870eb</spirit:value>
+            <spirit:value>b1eea926</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>customizationCRCversion</spirit:name>
@@ -569,7 +569,7 @@
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Wed Nov 02 15:01:34 UTC 2016</spirit:value>
+            <spirit:value>Tue Jan 24 21:28:44 UTC 2017</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>StaleAtRelink</spirit:name>
@@ -1208,94 +1208,94 @@
     <spirit:fileSet>
       <spirit:name>xilinx_verilogsynthesis_view_fileset</spirit:name>
       <spirit:file>
-        <spirit:name>../../../../ipshared/xilinx.com/correlation_accel_v2_v1_0/5e2ad2ba/hdl/ip/correlation_accel_v2_ap_flog_11_full_dsp_32.vhd</spirit:name>
+        <spirit:name>../../../../ipshared/xilinx.com/correlation_accel_v2_v1_0/fe9d62df/hdl/ip/correlation_accel_v2_ap_flog_11_full_dsp_32.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../../../ipshared/xilinx.com/correlation_accel_v2_v1_0/5e2ad2ba/hdl/ip/correlation_accel_v2_ap_fdiv_14_no_dsp_32.vhd</spirit:name>
+        <spirit:name>../../../../ipshared/xilinx.com/correlation_accel_v2_v1_0/fe9d62df/hdl/ip/correlation_accel_v2_ap_fdiv_14_no_dsp_32.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../../../ipshared/xilinx.com/correlation_accel_v2_v1_0/5e2ad2ba/hdl/ip/correlation_accel_v2_ap_sitofp_4_no_dsp_32.vhd</spirit:name>
+        <spirit:name>../../../../ipshared/xilinx.com/correlation_accel_v2_v1_0/fe9d62df/hdl/ip/correlation_accel_v2_ap_sitofp_4_no_dsp_32.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../../../ipshared/xilinx.com/correlation_accel_v2_v1_0/5e2ad2ba/hdl/ip/correlation_accel_v2_ap_fsqrt_14_no_dsp_32.vhd</spirit:name>
+        <spirit:name>../../../../ipshared/xilinx.com/correlation_accel_v2_v1_0/fe9d62df/hdl/ip/correlation_accel_v2_ap_fsqrt_14_no_dsp_32.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../../../ipshared/xilinx.com/correlation_accel_v2_v1_0/5e2ad2ba/hdl/ip/correlation_accel_v2_ap_fadd_3_full_dsp_32.vhd</spirit:name>
+        <spirit:name>../../../../ipshared/xilinx.com/correlation_accel_v2_v1_0/fe9d62df/hdl/ip/correlation_accel_v2_ap_fadd_3_full_dsp_32.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../../../ipshared/xilinx.com/correlation_accel_v2_v1_0/5e2ad2ba/hdl/ip/correlation_accel_v2_ap_fmul_2_max_dsp_32.vhd</spirit:name>
+        <spirit:name>../../../../ipshared/xilinx.com/correlation_accel_v2_v1_0/fe9d62df/hdl/ip/correlation_accel_v2_ap_fmul_2_max_dsp_32.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../../../ipshared/xilinx.com/correlation_accel_v2_v1_0/5e2ad2ba/hdl/ip/correlation_accel_v2_ap_faddfsub_3_full_dsp_32.vhd</spirit:name>
+        <spirit:name>../../../../ipshared/xilinx.com/correlation_accel_v2_v1_0/fe9d62df/hdl/ip/correlation_accel_v2_ap_faddfsub_3_full_dsp_32.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../../../ipshared/xilinx.com/correlation_accel_v2_v1_0/5e2ad2ba/constraints/correlation_accel_v2_ooc.xdc</spirit:name>
+        <spirit:name>../../../../ipshared/xilinx.com/correlation_accel_v2_v1_0/fe9d62df/constraints/correlation_accel_v2_ooc.xdc</spirit:name>
         <spirit:userFileType>xdc</spirit:userFileType>
         <spirit:userFileType>USED_IN_out_of_context</spirit:userFileType>
         <spirit:userFileType>USED_IN_synthesis</spirit:userFileType>
         <spirit:userFileType>USED_IN_implementation</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../../../ipshared/xilinx.com/correlation_accel_v2_v1_0/5e2ad2ba/hdl/verilog/correlation_accel_v2_fsqrt_32ns_32ns_32_16.v</spirit:name>
+        <spirit:name>../../../../ipshared/xilinx.com/correlation_accel_v2_v1_0/fe9d62df/hdl/verilog/correlation_accel_v2_fsqrt_32ns_32ns_32_16.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../../../ipshared/xilinx.com/correlation_accel_v2_v1_0/5e2ad2ba/hdl/verilog/correlation_accel_v2_fmul_32ns_32ns_32_4_max_dsp.v</spirit:name>
+        <spirit:name>../../../../ipshared/xilinx.com/correlation_accel_v2_v1_0/fe9d62df/hdl/verilog/correlation_accel_v2_fmul_32ns_32ns_32_4_max_dsp.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../../../ipshared/xilinx.com/correlation_accel_v2_v1_0/5e2ad2ba/hdl/verilog/correlation_accel_v2_fadd_32ns_32ns_32_5_full_dsp.v</spirit:name>
+        <spirit:name>../../../../ipshared/xilinx.com/correlation_accel_v2_v1_0/fe9d62df/hdl/verilog/correlation_accel_v2_fadd_32ns_32ns_32_5_full_dsp.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../../../ipshared/xilinx.com/correlation_accel_v2_v1_0/5e2ad2ba/hdl/verilog/correlation_accel_v2_weight_rom_ram.dat</spirit:name>
+        <spirit:name>../../../../ipshared/xilinx.com/correlation_accel_v2_v1_0/fe9d62df/hdl/verilog/correlation_accel_v2_weight_rom_ram.dat</spirit:name>
         <spirit:userFileType>mif</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../../../ipshared/xilinx.com/correlation_accel_v2_v1_0/5e2ad2ba/hdl/verilog/correlation_accel_v2_sitofp_32ns_32_6.v</spirit:name>
+        <spirit:name>../../../../ipshared/xilinx.com/correlation_accel_v2_v1_0/fe9d62df/hdl/verilog/correlation_accel_v2_sitofp_32ns_32_6.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../../../ipshared/xilinx.com/correlation_accel_v2_v1_0/5e2ad2ba/hdl/verilog/correlation_accel_v2_acc_return.v</spirit:name>
+        <spirit:name>../../../../ipshared/xilinx.com/correlation_accel_v2_v1_0/fe9d62df/hdl/verilog/correlation_accel_v2_acc_return.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../../../ipshared/xilinx.com/correlation_accel_v2_v1_0/5e2ad2ba/hdl/verilog/correlation_accel_v2_faddfsub_32ns_32ns_32_5_full_dsp.v</spirit:name>
+        <spirit:name>../../../../ipshared/xilinx.com/correlation_accel_v2_v1_0/fe9d62df/hdl/verilog/correlation_accel_v2_faddfsub_32ns_32ns_32_5_full_dsp.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../../../ipshared/xilinx.com/correlation_accel_v2_v1_0/5e2ad2ba/hdl/verilog/correlation_accel_v2_weight_rom.v</spirit:name>
+        <spirit:name>../../../../ipshared/xilinx.com/correlation_accel_v2_v1_0/fe9d62df/hdl/verilog/correlation_accel_v2_weight_rom.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../../../ipshared/xilinx.com/correlation_accel_v2_v1_0/5e2ad2ba/hdl/verilog/correlation_accel_v2_fdiv_32ns_32ns_32_16.v</spirit:name>
+        <spirit:name>../../../../ipshared/xilinx.com/correlation_accel_v2_v1_0/fe9d62df/hdl/verilog/correlation_accel_v2_fdiv_32ns_32ns_32_16.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../../../ipshared/xilinx.com/correlation_accel_v2_v1_0/5e2ad2ba/hdl/verilog/correlation_accel_v2_urem_32ns_4ns_32_36.v</spirit:name>
+        <spirit:name>../../../../ipshared/xilinx.com/correlation_accel_v2_v1_0/fe9d62df/hdl/verilog/correlation_accel_v2_urem_32ns_4ns_32_36.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../../../ipshared/xilinx.com/correlation_accel_v2_v1_0/5e2ad2ba/hdl/verilog/correlation_accel_v2_flog_32ns_32ns_32_13_full_dsp.v</spirit:name>
+        <spirit:name>../../../../ipshared/xilinx.com/correlation_accel_v2_v1_0/fe9d62df/hdl/verilog/correlation_accel_v2_flog_32ns_32ns_32_13_full_dsp.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../../../ipshared/xilinx.com/correlation_accel_v2_v1_0/5e2ad2ba/hdl/verilog/correlation_accel_v2.v</spirit:name>
+        <spirit:name>../../../../ipshared/xilinx.com/correlation_accel_v2_v1_0/fe9d62df/hdl/verilog/correlation_accel_v2.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../../../ipshared/xilinx.com/correlation_accel_v2_v1_0/5e2ad2ba/hdl/verilog/correlation_accel_v2_lnReturnA_ram.dat</spirit:name>
+        <spirit:name>../../../../ipshared/xilinx.com/correlation_accel_v2_v1_0/fe9d62df/hdl/verilog/correlation_accel_v2_lnReturnA_ram.dat</spirit:name>
         <spirit:userFileType>mif</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../../../ipshared/xilinx.com/correlation_accel_v2_v1_0/5e2ad2ba/hdl/verilog/correlation_accel_v2_lnReturnA.v</spirit:name>
+        <spirit:name>../../../../ipshared/xilinx.com/correlation_accel_v2_v1_0/fe9d62df/hdl/verilog/correlation_accel_v2_lnReturnA.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
     </spirit:fileSet>
@@ -1450,87 +1450,87 @@
     <spirit:fileSet>
       <spirit:name>xilinx_verilogbehavioralsimulation_view_fileset</spirit:name>
       <spirit:file>
-        <spirit:name>../../../../ipshared/xilinx.com/correlation_accel_v2_v1_0/5e2ad2ba/hdl/verilog/correlation_accel_v2_fsqrt_32ns_32ns_32_16.v</spirit:name>
+        <spirit:name>../../../../ipshared/xilinx.com/correlation_accel_v2_v1_0/fe9d62df/hdl/verilog/correlation_accel_v2_fsqrt_32ns_32ns_32_16.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../../../ipshared/xilinx.com/correlation_accel_v2_v1_0/5e2ad2ba/hdl/verilog/correlation_accel_v2_fmul_32ns_32ns_32_4_max_dsp.v</spirit:name>
+        <spirit:name>../../../../ipshared/xilinx.com/correlation_accel_v2_v1_0/fe9d62df/hdl/verilog/correlation_accel_v2_fmul_32ns_32ns_32_4_max_dsp.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../../../ipshared/xilinx.com/correlation_accel_v2_v1_0/5e2ad2ba/hdl/verilog/correlation_accel_v2_fadd_32ns_32ns_32_5_full_dsp.v</spirit:name>
+        <spirit:name>../../../../ipshared/xilinx.com/correlation_accel_v2_v1_0/fe9d62df/hdl/verilog/correlation_accel_v2_fadd_32ns_32ns_32_5_full_dsp.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../../../ipshared/xilinx.com/correlation_accel_v2_v1_0/5e2ad2ba/hdl/verilog/correlation_accel_v2_weight_rom_ram.dat</spirit:name>
+        <spirit:name>../../../../ipshared/xilinx.com/correlation_accel_v2_v1_0/fe9d62df/hdl/verilog/correlation_accel_v2_weight_rom_ram.dat</spirit:name>
         <spirit:userFileType>mif</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../../../ipshared/xilinx.com/correlation_accel_v2_v1_0/5e2ad2ba/hdl/verilog/correlation_accel_v2_sitofp_32ns_32_6.v</spirit:name>
+        <spirit:name>../../../../ipshared/xilinx.com/correlation_accel_v2_v1_0/fe9d62df/hdl/verilog/correlation_accel_v2_sitofp_32ns_32_6.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../../../ipshared/xilinx.com/correlation_accel_v2_v1_0/5e2ad2ba/hdl/verilog/correlation_accel_v2_acc_return.v</spirit:name>
+        <spirit:name>../../../../ipshared/xilinx.com/correlation_accel_v2_v1_0/fe9d62df/hdl/verilog/correlation_accel_v2_acc_return.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../../../ipshared/xilinx.com/correlation_accel_v2_v1_0/5e2ad2ba/hdl/verilog/correlation_accel_v2_faddfsub_32ns_32ns_32_5_full_dsp.v</spirit:name>
+        <spirit:name>../../../../ipshared/xilinx.com/correlation_accel_v2_v1_0/fe9d62df/hdl/verilog/correlation_accel_v2_faddfsub_32ns_32ns_32_5_full_dsp.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../../../ipshared/xilinx.com/correlation_accel_v2_v1_0/5e2ad2ba/hdl/verilog/correlation_accel_v2_weight_rom.v</spirit:name>
+        <spirit:name>../../../../ipshared/xilinx.com/correlation_accel_v2_v1_0/fe9d62df/hdl/verilog/correlation_accel_v2_weight_rom.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../../../ipshared/xilinx.com/correlation_accel_v2_v1_0/5e2ad2ba/hdl/verilog/correlation_accel_v2_fdiv_32ns_32ns_32_16.v</spirit:name>
+        <spirit:name>../../../../ipshared/xilinx.com/correlation_accel_v2_v1_0/fe9d62df/hdl/verilog/correlation_accel_v2_fdiv_32ns_32ns_32_16.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../../../ipshared/xilinx.com/correlation_accel_v2_v1_0/5e2ad2ba/hdl/verilog/correlation_accel_v2_urem_32ns_4ns_32_36.v</spirit:name>
+        <spirit:name>../../../../ipshared/xilinx.com/correlation_accel_v2_v1_0/fe9d62df/hdl/verilog/correlation_accel_v2_urem_32ns_4ns_32_36.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../../../ipshared/xilinx.com/correlation_accel_v2_v1_0/5e2ad2ba/hdl/verilog/correlation_accel_v2_flog_32ns_32ns_32_13_full_dsp.v</spirit:name>
+        <spirit:name>../../../../ipshared/xilinx.com/correlation_accel_v2_v1_0/fe9d62df/hdl/verilog/correlation_accel_v2_flog_32ns_32ns_32_13_full_dsp.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../../../ipshared/xilinx.com/correlation_accel_v2_v1_0/5e2ad2ba/hdl/verilog/correlation_accel_v2.v</spirit:name>
+        <spirit:name>../../../../ipshared/xilinx.com/correlation_accel_v2_v1_0/fe9d62df/hdl/verilog/correlation_accel_v2.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../../../ipshared/xilinx.com/correlation_accel_v2_v1_0/5e2ad2ba/hdl/verilog/correlation_accel_v2_lnReturnA_ram.dat</spirit:name>
+        <spirit:name>../../../../ipshared/xilinx.com/correlation_accel_v2_v1_0/fe9d62df/hdl/verilog/correlation_accel_v2_lnReturnA_ram.dat</spirit:name>
         <spirit:userFileType>mif</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../../../ipshared/xilinx.com/correlation_accel_v2_v1_0/5e2ad2ba/hdl/verilog/correlation_accel_v2_lnReturnA.v</spirit:name>
+        <spirit:name>../../../../ipshared/xilinx.com/correlation_accel_v2_v1_0/fe9d62df/hdl/verilog/correlation_accel_v2_lnReturnA.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../../../ipshared/xilinx.com/correlation_accel_v2_v1_0/5e2ad2ba/hdl/ip/correlation_accel_v2_ap_flog_11_full_dsp_32.vhd</spirit:name>
+        <spirit:name>../../../../ipshared/xilinx.com/correlation_accel_v2_v1_0/fe9d62df/hdl/ip/correlation_accel_v2_ap_flog_11_full_dsp_32.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../../../ipshared/xilinx.com/correlation_accel_v2_v1_0/5e2ad2ba/hdl/ip/correlation_accel_v2_ap_fdiv_14_no_dsp_32.vhd</spirit:name>
+        <spirit:name>../../../../ipshared/xilinx.com/correlation_accel_v2_v1_0/fe9d62df/hdl/ip/correlation_accel_v2_ap_fdiv_14_no_dsp_32.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../../../ipshared/xilinx.com/correlation_accel_v2_v1_0/5e2ad2ba/hdl/ip/correlation_accel_v2_ap_sitofp_4_no_dsp_32.vhd</spirit:name>
+        <spirit:name>../../../../ipshared/xilinx.com/correlation_accel_v2_v1_0/fe9d62df/hdl/ip/correlation_accel_v2_ap_sitofp_4_no_dsp_32.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../../../ipshared/xilinx.com/correlation_accel_v2_v1_0/5e2ad2ba/hdl/ip/correlation_accel_v2_ap_fsqrt_14_no_dsp_32.vhd</spirit:name>
+        <spirit:name>../../../../ipshared/xilinx.com/correlation_accel_v2_v1_0/fe9d62df/hdl/ip/correlation_accel_v2_ap_fsqrt_14_no_dsp_32.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../../../ipshared/xilinx.com/correlation_accel_v2_v1_0/5e2ad2ba/hdl/ip/correlation_accel_v2_ap_fadd_3_full_dsp_32.vhd</spirit:name>
+        <spirit:name>../../../../ipshared/xilinx.com/correlation_accel_v2_v1_0/fe9d62df/hdl/ip/correlation_accel_v2_ap_fadd_3_full_dsp_32.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../../../ipshared/xilinx.com/correlation_accel_v2_v1_0/5e2ad2ba/hdl/ip/correlation_accel_v2_ap_fmul_2_max_dsp_32.vhd</spirit:name>
+        <spirit:name>../../../../ipshared/xilinx.com/correlation_accel_v2_v1_0/fe9d62df/hdl/ip/correlation_accel_v2_ap_fmul_2_max_dsp_32.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../../../ipshared/xilinx.com/correlation_accel_v2_v1_0/5e2ad2ba/hdl/ip/correlation_accel_v2_ap_faddfsub_3_full_dsp_32.vhd</spirit:name>
+        <spirit:name>../../../../ipshared/xilinx.com/correlation_accel_v2_v1_0/fe9d62df/hdl/ip/correlation_accel_v2_ap_faddfsub_3_full_dsp_32.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
     </spirit:fileSet>
@@ -1685,7 +1685,7 @@
     <spirit:fileSet>
       <spirit:name>xilinx_miscfiles_view_fileset</spirit:name>
       <spirit:file>
-        <spirit:name>../../../../ipshared/xilinx.com/correlation_accel_v2_v1_0/5e2ad2ba/misc/logo.png</spirit:name>
+        <spirit:name>../../../../ipshared/xilinx.com/correlation_accel_v2_v1_0/fe9d62df/misc/logo.png</spirit:name>
         <spirit:userFileType>image</spirit:userFileType>
       </spirit:file>
     </spirit:fileSet>
@@ -1726,8 +1726,8 @@
         <xilinx:taxonomy>/VIVADO_HLS_IP</xilinx:taxonomy>
       </xilinx:taxonomies>
       <xilinx:displayName>Correlation_accel_v2</xilinx:displayName>
-      <xilinx:coreRevision>1611021600</xilinx:coreRevision>
-      <xilinx:coreCreationDateTime>2016-11-02T15:00:35Z</xilinx:coreCreationDateTime>
+      <xilinx:coreRevision>1701242227</xilinx:coreRevision>
+      <xilinx:coreCreationDateTime>2017-01-24T21:27:39Z</xilinx:coreCreationDateTime>
     </xilinx:coreExtensions>
     <xilinx:packagingInfo>
       <xilinx:xilinxVersion>2014.4</xilinx:xilinxVersion>

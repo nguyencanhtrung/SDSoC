@@ -1009,7 +1009,15 @@
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
+        <spirit:name>hdl/verilog/FIFO_correlation_accel_v3_number_of_indices14_channel.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
         <spirit:name>hdl/verilog/correlation_accel_v3_frontEnd_weight_rom.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>hdl/verilog/FIFO_correlation_accel_v3_number_of_days15_channel.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
@@ -1046,10 +1054,6 @@
       </spirit:file>
       <spirit:file>
         <spirit:name>hdl/verilog/correlation_accel_v3_fmul_32ns_32ns_32_4_max_dsp.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>hdl/verilog/FIFO_correlation_accel_v3_number_of_days14_channel.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
@@ -1090,10 +1094,6 @@
       </spirit:file>
       <spirit:file>
         <spirit:name>hdl/verilog/FIFO_correlation_accel_v3_sum_weight_returnA_returnB_V.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>hdl/verilog/FIFO_correlation_accel_v3_number_of_indices15_channel.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
@@ -1130,7 +1130,15 @@
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
+        <spirit:name>hdl/verilog/FIFO_correlation_accel_v3_number_of_indices14_channel.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
         <spirit:name>hdl/verilog/correlation_accel_v3_frontEnd_weight_rom.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>hdl/verilog/FIFO_correlation_accel_v3_number_of_days15_channel.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
@@ -1167,10 +1175,6 @@
       </spirit:file>
       <spirit:file>
         <spirit:name>hdl/verilog/correlation_accel_v3_fmul_32ns_32ns_32_4_max_dsp.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>hdl/verilog/FIFO_correlation_accel_v3_number_of_days14_channel.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
@@ -1211,10 +1215,6 @@
       </spirit:file>
       <spirit:file>
         <spirit:name>hdl/verilog/FIFO_correlation_accel_v3_sum_weight_returnA_returnB_V.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>hdl/verilog/FIFO_correlation_accel_v3_number_of_indices15_channel.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
@@ -1334,11 +1334,11 @@
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/FIFO_correlation_accel_v3_number_of_days14_channel.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/correlation_accel_v3_fadd_32ns_32ns_32_5_full_dsp.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/correlation_accel_v3_fadd_32ns_32ns_32_5_full_dsp.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/FIFO_correlation_accel_v3_number_of_indices14_channel.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
@@ -1378,11 +1378,11 @@
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/correlation_accel_v3_frontEnd_acc_return.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/FIFO_correlation_accel_v3_number_of_days15_channel.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/FIFO_correlation_accel_v3_number_of_indices15_channel.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/correlation_accel_v3_frontEnd_acc_return.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
@@ -1448,11 +1448,11 @@
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/FIFO_correlation_accel_v3_number_of_days14_channel.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/correlation_accel_v3_fadd_32ns_32ns_32_5_full_dsp.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/correlation_accel_v3_fadd_32ns_32ns_32_5_full_dsp.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/FIFO_correlation_accel_v3_number_of_indices14_channel.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
@@ -1492,11 +1492,11 @@
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/correlation_accel_v3_frontEnd_acc_return.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/FIFO_correlation_accel_v3_number_of_days15_channel.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/FIFO_correlation_accel_v3_number_of_indices15_channel.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/correlation_accel_v3_frontEnd_acc_return.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
@@ -1625,8 +1625,8 @@
         <xilinx:taxonomy>/VIVADO_HLS_IP</xilinx:taxonomy>
       </xilinx:taxonomies>
       <xilinx:displayName>Correlation_accel_v3</xilinx:displayName>
-      <xilinx:coreRevision>1701241743</xilinx:coreRevision>
-      <xilinx:coreCreationDateTime>2017-01-24T16:44:04Z</xilinx:coreCreationDateTime>
+      <xilinx:coreRevision>1701242248</xilinx:coreRevision>
+      <xilinx:coreCreationDateTime>2017-01-24T21:48:27Z</xilinx:coreCreationDateTime>
     </xilinx:coreExtensions>
     <xilinx:packagingInfo>
       <xilinx:xilinxVersion>2014.4</xilinx:xilinxVersion>

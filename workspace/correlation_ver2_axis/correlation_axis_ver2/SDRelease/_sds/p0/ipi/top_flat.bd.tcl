@@ -155,7 +155,7 @@ proc create_root_design { parentCell } {
 
   # Create instance: axi_interconnect_S_AXI_HP0, and set properties
   set axi_interconnect_S_AXI_HP0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:axi_interconnect:2.1 axi_interconnect_S_AXI_HP0 ]
-  set_property -dict [ list CONFIG.M00_HAS_DATA_FIFO {2} CONFIG.M00_HAS_REGSLICE {1} CONFIG.NUM_MI {1} CONFIG.NUM_SI {2} CONFIG.S00_HAS_DATA_FIFO {2} CONFIG.S00_HAS_REGSLICE {1} CONFIG.S01_HAS_DATA_FIFO {2} CONFIG.S01_HAS_REGSLICE {1} CONFIG.STRATEGY {2}  ] $axi_interconnect_S_AXI_HP0
+  set_property -dict [ list CONFIG.M00_HAS_DATA_FIFO {2} CONFIG.M00_HAS_REGSLICE {1} CONFIG.NUM_MI {1} CONFIG.NUM_SI {3} CONFIG.S00_HAS_DATA_FIFO {2} CONFIG.S00_HAS_REGSLICE {1} CONFIG.S01_HAS_DATA_FIFO {2} CONFIG.S01_HAS_REGSLICE {1} CONFIG.S02_HAS_DATA_FIFO {2} CONFIG.S02_HAS_REGSLICE {1} CONFIG.STRATEGY {2}  ] $axi_interconnect_S_AXI_HP0
 
   # Create instance: axis_dwc_datamover_0_txd_0, and set properties
   set axis_dwc_datamover_0_txd_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:axis_dwidth_converter:1.1 axis_dwc_datamover_0_txd_0 ]
@@ -164,6 +164,10 @@ proc create_root_design { parentCell } {
   # Create instance: axis_dwc_datamover_1_rxd_0, and set properties
   set axis_dwc_datamover_1_rxd_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:axis_dwidth_converter:1.1 axis_dwc_datamover_1_rxd_0 ]
   set_property -dict [ list CONFIG.M_TDATA_NUM_BYTES {8} CONFIG.S_TDATA_NUM_BYTES {4}  ] $axis_dwc_datamover_1_rxd_0
+
+  # Create instance: axis_rtr_datamover_0, and set properties
+  set axis_rtr_datamover_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:axi_stream_router:1.0 axis_rtr_datamover_0 ]
+  set_property -dict [ list CONFIG.C_M_AXIS_RXD_TDATA_WIDTH {64} CONFIG.C_M_AXIS_TDATA_WIDTH {64} CONFIG.C_NUM_MASTER_SLOTS {1} CONFIG.C_NUM_SLAVE_SLOTS {0} CONFIG.C_S_AXIS_TDATA_WIDTH {64} CONFIG.C_S_AXIS_TXD_TDATA_WIDTH {64}  ] $axis_rtr_datamover_0
 
   # Create instance: correlation_accel_v2_0, and set properties
   set correlation_accel_v2_0 [ create_bd_cell -type ip -vlnv xilinx.com:hls:correlation_accel_v2:1.0 correlation_accel_v2_0 ]
@@ -174,7 +178,7 @@ proc create_root_design { parentCell } {
 
   # Create instance: datamover_0, and set properties
   set datamover_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:axi_dma:7.1 datamover_0 ]
-  set_property -dict [ list CONFIG.c_dlytmr_resolution {1250} CONFIG.c_include_mm2s {1} CONFIG.c_include_mm2s_dre {1} CONFIG.c_include_mm2s_sf {1} CONFIG.c_include_s2mm {0} CONFIG.c_include_sg {0} CONFIG.c_m_axi_mm2s_data_width {64} CONFIG.c_m_axis_mm2s_tdata_width {64} CONFIG.c_mm2s_burst_size {64} CONFIG.c_sg_length_width {23}  ] $datamover_0
+  set_property -dict [ list CONFIG.c_dlytmr_resolution {1250} CONFIG.c_include_mm2s {1} CONFIG.c_include_mm2s_dre {1} CONFIG.c_include_mm2s_sf {1} CONFIG.c_include_s2mm {0} CONFIG.c_include_sg {1} CONFIG.c_m_axi_mm2s_data_width {64} CONFIG.c_m_axis_mm2s_tdata_width {64} CONFIG.c_mm2s_burst_size {64} CONFIG.c_sg_include_stscntrl_strm {1} CONFIG.c_sg_length_width {23} CONFIG.c_sg_use_stsapp_length {0}  ] $datamover_0
 
   # Create instance: datamover_1, and set properties
   set datamover_1 [ create_bd_cell -type ip -vlnv xilinx.com:ip:axi_dma:7.1 datamover_1 ]
@@ -411,11 +415,14 @@ CONFIG.PCW_WDT_PERIPHERAL_ENABLE {0}  ] $ps7
   connect_bd_intf_net -intf_net axi_interconnect_S_AXI_HP0_M00_AXI [get_bd_intf_pins axi_interconnect_S_AXI_HP0/M00_AXI] [get_bd_intf_pins ps7/S_AXI_HP0]
   connect_bd_intf_net -intf_net axis_dwc_datamover_0_txd_0_M_AXIS [get_bd_intf_pins axis_dwc_datamover_0_txd_0/M_AXIS] [get_bd_intf_pins correlation_accel_v2_0/in_indices]
   connect_bd_intf_net -intf_net axis_dwc_datamover_1_rxd_0_M_AXIS [get_bd_intf_pins axis_dwc_datamover_1_rxd_0/M_AXIS] [get_bd_intf_pins datamover_1/S_AXIS_S2MM]
+  connect_bd_intf_net -intf_net axis_rtr_datamover_0_M_AXIS_0 [get_bd_intf_pins axis_dwc_datamover_0_txd_0/S_AXIS] [get_bd_intf_pins axis_rtr_datamover_0/M_AXIS_0]
   connect_bd_intf_net -intf_net correlation_accel_v2_0_if_AP_CTRL [get_bd_intf_pins correlation_accel_v2_0/ap_ctrl] [get_bd_intf_pins correlation_accel_v2_0_if/AP_CTRL]
   connect_bd_intf_net -intf_net correlation_accel_v2_0_out_correlation [get_bd_intf_pins axis_dwc_datamover_1_rxd_0/S_AXIS] [get_bd_intf_pins correlation_accel_v2_0/out_correlation]
-  connect_bd_intf_net -intf_net datamover_0_M_AXIS_MM2S [get_bd_intf_pins axis_dwc_datamover_0_txd_0/S_AXIS] [get_bd_intf_pins datamover_0/M_AXIS_MM2S]
-  connect_bd_intf_net -intf_net datamover_0_M_AXI_MM2S [get_bd_intf_pins axi_interconnect_S_AXI_HP0/S00_AXI] [get_bd_intf_pins datamover_0/M_AXI_MM2S]
-  connect_bd_intf_net -intf_net datamover_1_M_AXI_S2MM [get_bd_intf_pins axi_interconnect_S_AXI_HP0/S01_AXI] [get_bd_intf_pins datamover_1/M_AXI_S2MM]
+  connect_bd_intf_net -intf_net datamover_0_M_AXIS_CNTRL [get_bd_intf_pins axis_rtr_datamover_0/s_axis_txc] [get_bd_intf_pins datamover_0/M_AXIS_CNTRL]
+  connect_bd_intf_net -intf_net datamover_0_M_AXIS_MM2S [get_bd_intf_pins axis_rtr_datamover_0/s_axis_txd] [get_bd_intf_pins datamover_0/M_AXIS_MM2S]
+  connect_bd_intf_net -intf_net datamover_0_M_AXI_MM2S [get_bd_intf_pins axi_interconnect_S_AXI_HP0/S01_AXI] [get_bd_intf_pins datamover_0/M_AXI_MM2S]
+  connect_bd_intf_net -intf_net datamover_0_M_AXI_SG [get_bd_intf_pins axi_interconnect_S_AXI_HP0/S00_AXI] [get_bd_intf_pins datamover_0/M_AXI_SG]
+  connect_bd_intf_net -intf_net datamover_1_M_AXI_S2MM [get_bd_intf_pins axi_interconnect_S_AXI_HP0/S02_AXI] [get_bd_intf_pins datamover_1/M_AXI_S2MM]
   connect_bd_intf_net -intf_net ps7_M_AXI_GP0 [get_bd_intf_pins axi_interconnect_M_AXI_GP0/S00_AXI] [get_bd_intf_pins ps7/M_AXI_GP0]
   connect_bd_intf_net -intf_net ps7_ddr [get_bd_intf_ports DDR] [get_bd_intf_pins ps7/DDR]
   connect_bd_intf_net -intf_net ps7_fixed_io [get_bd_intf_ports FIXED_IO] [get_bd_intf_pins ps7/FIXED_IO]
@@ -423,19 +430,20 @@ CONFIG.PCW_WDT_PERIPHERAL_ENABLE {0}  ] $ps7
   # Create port connections
   connect_bd_net -net clkid0 [get_bd_pins proc_sys_reset_0/slowest_sync_clk] [get_bd_pins ps7/FCLK_CLK0]
   connect_bd_net -net clkid1 [get_bd_pins proc_sys_reset_1/slowest_sync_clk] [get_bd_pins ps7/FCLK_CLK1]
-  connect_bd_net -net clkid2 [get_bd_pins axi_interconnect_M_AXI_GP0/ACLK] [get_bd_pins axi_interconnect_M_AXI_GP0/M00_ACLK] [get_bd_pins axi_interconnect_M_AXI_GP0/M01_ACLK] [get_bd_pins axi_interconnect_M_AXI_GP0/M02_ACLK] [get_bd_pins axi_interconnect_M_AXI_GP0/S00_ACLK] [get_bd_pins axi_interconnect_S_AXI_HP0/ACLK] [get_bd_pins axi_interconnect_S_AXI_HP0/M00_ACLK] [get_bd_pins axi_interconnect_S_AXI_HP0/S00_ACLK] [get_bd_pins axi_interconnect_S_AXI_HP0/S01_ACLK] [get_bd_pins axis_dwc_datamover_0_txd_0/aclk] [get_bd_pins axis_dwc_datamover_1_rxd_0/aclk] [get_bd_pins correlation_accel_v2_0/ap_clk] [get_bd_pins correlation_accel_v2_0_if/aclk] [get_bd_pins correlation_accel_v2_0_if/s_axi_aclk] [get_bd_pins datamover_0/m_axi_mm2s_aclk] [get_bd_pins datamover_0/s_axi_lite_aclk] [get_bd_pins datamover_1/m_axi_s2mm_aclk] [get_bd_pins datamover_1/s_axi_lite_aclk] [get_bd_pins proc_sys_reset_2/slowest_sync_clk] [get_bd_pins ps7/FCLK_CLK2] [get_bd_pins ps7/M_AXI_GP0_ACLK] [get_bd_pins ps7/S_AXI_HP0_ACLK]
+  connect_bd_net -net clkid2 [get_bd_pins axi_interconnect_M_AXI_GP0/ACLK] [get_bd_pins axi_interconnect_M_AXI_GP0/M00_ACLK] [get_bd_pins axi_interconnect_M_AXI_GP0/M01_ACLK] [get_bd_pins axi_interconnect_M_AXI_GP0/M02_ACLK] [get_bd_pins axi_interconnect_M_AXI_GP0/S00_ACLK] [get_bd_pins axi_interconnect_S_AXI_HP0/ACLK] [get_bd_pins axi_interconnect_S_AXI_HP0/M00_ACLK] [get_bd_pins axi_interconnect_S_AXI_HP0/S00_ACLK] [get_bd_pins axi_interconnect_S_AXI_HP0/S01_ACLK] [get_bd_pins axi_interconnect_S_AXI_HP0/S02_ACLK] [get_bd_pins axis_dwc_datamover_0_txd_0/aclk] [get_bd_pins axis_dwc_datamover_1_rxd_0/aclk] [get_bd_pins axis_rtr_datamover_0/M_AXIS_0_ACLK] [get_bd_pins axis_rtr_datamover_0/m_axis_rxd_aclk] [get_bd_pins axis_rtr_datamover_0/m_axis_rxs_aclk] [get_bd_pins axis_rtr_datamover_0/s_axis_txc_aclk] [get_bd_pins axis_rtr_datamover_0/s_axis_txd_aclk] [get_bd_pins correlation_accel_v2_0/ap_clk] [get_bd_pins correlation_accel_v2_0_if/aclk] [get_bd_pins correlation_accel_v2_0_if/s_axi_aclk] [get_bd_pins datamover_0/m_axi_mm2s_aclk] [get_bd_pins datamover_0/m_axi_sg_aclk] [get_bd_pins datamover_0/s_axi_lite_aclk] [get_bd_pins datamover_1/m_axi_s2mm_aclk] [get_bd_pins datamover_1/s_axi_lite_aclk] [get_bd_pins proc_sys_reset_2/slowest_sync_clk] [get_bd_pins ps7/FCLK_CLK2] [get_bd_pins ps7/M_AXI_GP0_ACLK] [get_bd_pins ps7/S_AXI_HP0_ACLK]
   connect_bd_net -net clkid3 [get_bd_pins proc_sys_reset_3/slowest_sync_clk] [get_bd_pins ps7/FCLK_CLK3]
   connect_bd_net -net correlation_accel_v2_0_if_ap_iscalar_0_dout [get_bd_pins correlation_accel_v2_0/number_of_days] [get_bd_pins correlation_accel_v2_0_if/ap_iscalar_0_dout]
   connect_bd_net -net correlation_accel_v2_0_if_ap_iscalar_1_dout [get_bd_pins correlation_accel_v2_0/number_of_indices] [get_bd_pins correlation_accel_v2_0_if/ap_iscalar_1_dout]
   connect_bd_net -net correlation_accel_v2_0_if_aresetn [get_bd_pins correlation_accel_v2_0/ap_rst_n] [get_bd_pins correlation_accel_v2_0_if/aresetn]
   connect_bd_net -net datamover_0_mm2s_introut [get_bd_pins datamover_0/mm2s_introut] [get_bd_pins xlconcat/In0]
   connect_bd_net -net datamover_1_s2mm_introut [get_bd_pins datamover_1/s2mm_introut] [get_bd_pins xlconcat/In1]
-  connect_bd_net -net proc_sys_reset_2_interconnect_aresetn [get_bd_pins axi_interconnect_M_AXI_GP0/ARESETN] [get_bd_pins axi_interconnect_M_AXI_GP0/M00_ARESETN] [get_bd_pins axi_interconnect_M_AXI_GP0/M01_ARESETN] [get_bd_pins axi_interconnect_M_AXI_GP0/M02_ARESETN] [get_bd_pins axi_interconnect_M_AXI_GP0/S00_ARESETN] [get_bd_pins axi_interconnect_S_AXI_HP0/ARESETN] [get_bd_pins axi_interconnect_S_AXI_HP0/M00_ARESETN] [get_bd_pins axi_interconnect_S_AXI_HP0/S00_ARESETN] [get_bd_pins axi_interconnect_S_AXI_HP0/S01_ARESETN] [get_bd_pins proc_sys_reset_2/interconnect_aresetn]
-  connect_bd_net -net proc_sys_reset_2_peripheral_aresetn [get_bd_pins axis_dwc_datamover_0_txd_0/aresetn] [get_bd_pins axis_dwc_datamover_1_rxd_0/aresetn] [get_bd_pins correlation_accel_v2_0_if/s_axi_aresetn] [get_bd_pins datamover_0/axi_resetn] [get_bd_pins datamover_1/axi_resetn] [get_bd_pins proc_sys_reset_2/peripheral_aresetn]
+  connect_bd_net -net proc_sys_reset_2_interconnect_aresetn [get_bd_pins axi_interconnect_M_AXI_GP0/ARESETN] [get_bd_pins axi_interconnect_M_AXI_GP0/M00_ARESETN] [get_bd_pins axi_interconnect_M_AXI_GP0/M01_ARESETN] [get_bd_pins axi_interconnect_M_AXI_GP0/M02_ARESETN] [get_bd_pins axi_interconnect_M_AXI_GP0/S00_ARESETN] [get_bd_pins axi_interconnect_S_AXI_HP0/ARESETN] [get_bd_pins axi_interconnect_S_AXI_HP0/M00_ARESETN] [get_bd_pins axi_interconnect_S_AXI_HP0/S00_ARESETN] [get_bd_pins axi_interconnect_S_AXI_HP0/S01_ARESETN] [get_bd_pins axi_interconnect_S_AXI_HP0/S02_ARESETN] [get_bd_pins proc_sys_reset_2/interconnect_aresetn]
+  connect_bd_net -net proc_sys_reset_2_peripheral_aresetn [get_bd_pins axis_dwc_datamover_0_txd_0/aresetn] [get_bd_pins axis_dwc_datamover_1_rxd_0/aresetn] [get_bd_pins axis_rtr_datamover_0/m_axis_rxd_aresetn] [get_bd_pins axis_rtr_datamover_0/m_axis_rxs_aresetn] [get_bd_pins axis_rtr_datamover_0/s_axis_txc_aresetn] [get_bd_pins axis_rtr_datamover_0/s_axis_txd_aresetn] [get_bd_pins correlation_accel_v2_0_if/s_axi_aresetn] [get_bd_pins datamover_0/axi_resetn] [get_bd_pins datamover_1/axi_resetn] [get_bd_pins proc_sys_reset_2/peripheral_aresetn]
   connect_bd_net -net ps7_fclk_reset0_n [get_bd_pins proc_sys_reset_0/ext_reset_in] [get_bd_pins proc_sys_reset_1/ext_reset_in] [get_bd_pins proc_sys_reset_2/ext_reset_in] [get_bd_pins proc_sys_reset_3/ext_reset_in] [get_bd_pins ps7/FCLK_RESET0_N]
   connect_bd_net -net xlconcat_1_dout [get_bd_pins ps7/IRQ_F2P] [get_bd_pins xlconcat/dout]
 
   # Create address segments
+  create_bd_addr_seg -range 0x20000000 -offset 0x0 [get_bd_addr_spaces datamover_0/Data_SG] [get_bd_addr_segs ps7/S_AXI_HP0/HP0_DDR_LOWOCM] SEG_ps7_HP0_DDR_LOWOCM
   create_bd_addr_seg -range 0x20000000 -offset 0x0 [get_bd_addr_spaces datamover_0/Data_MM2S] [get_bd_addr_segs ps7/S_AXI_HP0/HP0_DDR_LOWOCM] SEG_ps7_HP0_DDR_LOWOCM
   create_bd_addr_seg -range 0x20000000 -offset 0x0 [get_bd_addr_spaces datamover_1/Data_S2MM] [get_bd_addr_segs ps7/S_AXI_HP0/HP0_DDR_LOWOCM] SEG_ps7_HP0_DDR_LOWOCM
   create_bd_addr_seg -range 0x10000 -offset 0x43C00000 [get_bd_addr_spaces ps7/Data] [get_bd_addr_segs correlation_accel_v2_0_if/S_AXI/Reg] SEG_correlation_accel_v2_0_if_Reg

@@ -6,7 +6,7 @@
 <Project Version="7" Minor="2" Path="/home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease/_sds/vhls/correlation_accel_v3/solution/impl/vhdl/project.xpr">
   <DefaultLaunch Dir="$PRUNDIR"/>
   <Configuration>
-    <Option Name="Id" Val="71b5636cc5e14990b223bc1fe1359e5f"/>
+    <Option Name="Id" Val="4c5568a7bd6340569c65fae31f60577c"/>
     <Option Name="Part" Val="xc7z020clg484-1"/>
     <Option Name="CompiledLibDir" Val="$PCACHEDIR/compile_simlib"/>
     <Option Name="TargetLanguage" Val="VHDL"/>
@@ -71,13 +71,13 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/FIFO_correlation_accel_v3_number_of_days14_channel.vhd">
+      <File Path="$PPRDIR/correlation_accel_v3_fadd_32ns_32ns_32_5_full_dsp.vhd">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/correlation_accel_v3_fadd_32ns_32ns_32_5_full_dsp.vhd">
+      <File Path="$PPRDIR/FIFO_correlation_accel_v3_number_of_indices14_channel.vhd">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
@@ -137,13 +137,13 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/correlation_accel_v3_frontEnd_acc_return.vhd">
+      <File Path="$PPRDIR/FIFO_correlation_accel_v3_number_of_days15_channel.vhd">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/FIFO_correlation_accel_v3_number_of_indices15_channel.vhd">
+      <File Path="$PPRDIR/correlation_accel_v3_frontEnd_acc_return.vhd">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>

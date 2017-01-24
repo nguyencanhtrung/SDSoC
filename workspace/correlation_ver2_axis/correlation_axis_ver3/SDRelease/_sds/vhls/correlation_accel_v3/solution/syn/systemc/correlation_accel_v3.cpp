@@ -63,12 +63,12 @@ correlation_accel_v3::correlation_accel_v3(sc_module_name name) : sc_module(name
     correlation_accel_v3_frontEnd_U0->sum_weight_returnA_out_V_din(correlation_accel_v3_frontEnd_U0_sum_weight_returnA_out_V_din);
     correlation_accel_v3_frontEnd_U0->sum_weight_returnA_out_V_full_n(correlation_accel_v3_frontEnd_U0_sum_weight_returnA_out_V_full_n);
     correlation_accel_v3_frontEnd_U0->sum_weight_returnA_out_V_write(correlation_accel_v3_frontEnd_U0_sum_weight_returnA_out_V_write);
-    correlation_accel_v3_frontEnd_U0->NUMBER_OF_DAYS_out_din(correlation_accel_v3_frontEnd_U0_NUMBER_OF_DAYS_out_din);
-    correlation_accel_v3_frontEnd_U0->NUMBER_OF_DAYS_out_full_n(correlation_accel_v3_frontEnd_U0_NUMBER_OF_DAYS_out_full_n);
-    correlation_accel_v3_frontEnd_U0->NUMBER_OF_DAYS_out_write(correlation_accel_v3_frontEnd_U0_NUMBER_OF_DAYS_out_write);
     correlation_accel_v3_frontEnd_U0->NUMBER_OF_INDICES_out_din(correlation_accel_v3_frontEnd_U0_NUMBER_OF_INDICES_out_din);
     correlation_accel_v3_frontEnd_U0->NUMBER_OF_INDICES_out_full_n(correlation_accel_v3_frontEnd_U0_NUMBER_OF_INDICES_out_full_n);
     correlation_accel_v3_frontEnd_U0->NUMBER_OF_INDICES_out_write(correlation_accel_v3_frontEnd_U0_NUMBER_OF_INDICES_out_write);
+    correlation_accel_v3_frontEnd_U0->NUMBER_OF_DAYS_out_din(correlation_accel_v3_frontEnd_U0_NUMBER_OF_DAYS_out_din);
+    correlation_accel_v3_frontEnd_U0->NUMBER_OF_DAYS_out_full_n(correlation_accel_v3_frontEnd_U0_NUMBER_OF_DAYS_out_full_n);
+    correlation_accel_v3_frontEnd_U0->NUMBER_OF_DAYS_out_write(correlation_accel_v3_frontEnd_U0_NUMBER_OF_DAYS_out_write);
     correlation_accel_v3_backEnd_U0 = new correlation_accel_v3_backEnd("correlation_accel_v3_backEnd_U0");
     correlation_accel_v3_backEnd_U0->ap_clk(ap_clk);
     correlation_accel_v3_backEnd_U0->ap_rst(ap_rst_n_inv);
@@ -204,28 +204,28 @@ correlation_accel_v3::correlation_accel_v3(sc_module_name name) : sc_module(name
     sum_weight_returnA_V_U->if_dout(sum_weight_returnA_V_dout);
     sum_weight_returnA_V_U->if_empty_n(sum_weight_returnA_V_empty_n);
     sum_weight_returnA_V_U->if_read(sum_weight_returnA_V_read);
-    number_of_days14_channel_U = new FIFO_correlation_accel_v3_number_of_days14_channel("number_of_days14_channel_U");
-    number_of_days14_channel_U->clk(ap_clk);
-    number_of_days14_channel_U->reset(ap_rst_n_inv);
-    number_of_days14_channel_U->if_read_ce(number_of_days14_channel_U_ap_dummy_ce);
-    number_of_days14_channel_U->if_write_ce(number_of_days14_channel_U_ap_dummy_ce);
-    number_of_days14_channel_U->if_din(number_of_days14_channel_din);
-    number_of_days14_channel_U->if_full_n(number_of_days14_channel_full_n);
-    number_of_days14_channel_U->if_write(number_of_days14_channel_write);
-    number_of_days14_channel_U->if_dout(number_of_days14_channel_dout);
-    number_of_days14_channel_U->if_empty_n(number_of_days14_channel_empty_n);
-    number_of_days14_channel_U->if_read(number_of_days14_channel_read);
-    number_of_indices15_channel_U = new FIFO_correlation_accel_v3_number_of_indices15_channel("number_of_indices15_channel_U");
-    number_of_indices15_channel_U->clk(ap_clk);
-    number_of_indices15_channel_U->reset(ap_rst_n_inv);
-    number_of_indices15_channel_U->if_read_ce(number_of_indices15_channel_U_ap_dummy_ce);
-    number_of_indices15_channel_U->if_write_ce(number_of_indices15_channel_U_ap_dummy_ce);
-    number_of_indices15_channel_U->if_din(number_of_indices15_channel_din);
-    number_of_indices15_channel_U->if_full_n(number_of_indices15_channel_full_n);
-    number_of_indices15_channel_U->if_write(number_of_indices15_channel_write);
-    number_of_indices15_channel_U->if_dout(number_of_indices15_channel_dout);
-    number_of_indices15_channel_U->if_empty_n(number_of_indices15_channel_empty_n);
-    number_of_indices15_channel_U->if_read(number_of_indices15_channel_read);
+    number_of_indices14_channel_U = new FIFO_correlation_accel_v3_number_of_indices14_channel("number_of_indices14_channel_U");
+    number_of_indices14_channel_U->clk(ap_clk);
+    number_of_indices14_channel_U->reset(ap_rst_n_inv);
+    number_of_indices14_channel_U->if_read_ce(number_of_indices14_channel_U_ap_dummy_ce);
+    number_of_indices14_channel_U->if_write_ce(number_of_indices14_channel_U_ap_dummy_ce);
+    number_of_indices14_channel_U->if_din(number_of_indices14_channel_din);
+    number_of_indices14_channel_U->if_full_n(number_of_indices14_channel_full_n);
+    number_of_indices14_channel_U->if_write(number_of_indices14_channel_write);
+    number_of_indices14_channel_U->if_dout(number_of_indices14_channel_dout);
+    number_of_indices14_channel_U->if_empty_n(number_of_indices14_channel_empty_n);
+    number_of_indices14_channel_U->if_read(number_of_indices14_channel_read);
+    number_of_days15_channel_U = new FIFO_correlation_accel_v3_number_of_days15_channel("number_of_days15_channel_U");
+    number_of_days15_channel_U->clk(ap_clk);
+    number_of_days15_channel_U->reset(ap_rst_n_inv);
+    number_of_days15_channel_U->if_read_ce(number_of_days15_channel_U_ap_dummy_ce);
+    number_of_days15_channel_U->if_write_ce(number_of_days15_channel_U_ap_dummy_ce);
+    number_of_days15_channel_U->if_din(number_of_days15_channel_din);
+    number_of_days15_channel_U->if_full_n(number_of_days15_channel_full_n);
+    number_of_days15_channel_U->if_write(number_of_days15_channel_write);
+    number_of_days15_channel_U->if_dout(number_of_days15_channel_dout);
+    number_of_days15_channel_U->if_empty_n(number_of_days15_channel_empty_n);
+    number_of_days15_channel_U->if_read(number_of_days15_channel_read);
 
     SC_METHOD(thread_ap_clk_no_reset_);
     dont_initialize();
@@ -253,16 +253,16 @@ correlation_accel_v3::correlation_accel_v3(sc_module_name name) : sc_module(name
     sensitive << ( correlation_accel_v3_frontEnd_U0_ap_ready );
 
     SC_METHOD(thread_correlation_accel_v3_backEnd_U0_NUMBER_OF_DAYS_dout);
-    sensitive << ( number_of_days14_channel_dout );
+    sensitive << ( number_of_days15_channel_dout );
 
     SC_METHOD(thread_correlation_accel_v3_backEnd_U0_NUMBER_OF_DAYS_empty_n);
-    sensitive << ( number_of_days14_channel_empty_n );
+    sensitive << ( number_of_days15_channel_empty_n );
 
     SC_METHOD(thread_correlation_accel_v3_backEnd_U0_NUMBER_OF_INDICES_dout);
-    sensitive << ( number_of_indices15_channel_dout );
+    sensitive << ( number_of_indices14_channel_dout );
 
     SC_METHOD(thread_correlation_accel_v3_backEnd_U0_NUMBER_OF_INDICES_empty_n);
-    sensitive << ( number_of_indices15_channel_empty_n );
+    sensitive << ( number_of_indices14_channel_empty_n );
 
     SC_METHOD(thread_correlation_accel_v3_backEnd_U0_ap_continue);
     sensitive << ( ap_sig_hs_continue );
@@ -322,13 +322,13 @@ correlation_accel_v3::correlation_accel_v3(sc_module_name name) : sc_module(name
     sensitive << ( number_of_days );
 
     SC_METHOD(thread_correlation_accel_v3_frontEnd_U0_NUMBER_OF_DAYS_out_full_n);
-    sensitive << ( number_of_days14_channel_full_n );
+    sensitive << ( number_of_days15_channel_full_n );
 
     SC_METHOD(thread_correlation_accel_v3_frontEnd_U0_NUMBER_OF_INDICES);
     sensitive << ( number_of_indices );
 
     SC_METHOD(thread_correlation_accel_v3_frontEnd_U0_NUMBER_OF_INDICES_out_full_n);
-    sensitive << ( number_of_indices15_channel_full_n );
+    sensitive << ( number_of_indices14_channel_full_n );
 
     SC_METHOD(thread_correlation_accel_v3_frontEnd_U0_ap_continue);
 
@@ -386,26 +386,26 @@ correlation_accel_v3::correlation_accel_v3(sc_module_name name) : sc_module(name
     SC_METHOD(thread_in_indices_TREADY);
     sensitive << ( correlation_accel_v3_frontEnd_U0_in_indices_TREADY );
 
-    SC_METHOD(thread_number_of_days14_channel_U_ap_dummy_ce);
+    SC_METHOD(thread_number_of_days15_channel_U_ap_dummy_ce);
 
-    SC_METHOD(thread_number_of_days14_channel_din);
+    SC_METHOD(thread_number_of_days15_channel_din);
     sensitive << ( correlation_accel_v3_frontEnd_U0_NUMBER_OF_DAYS_out_din );
 
-    SC_METHOD(thread_number_of_days14_channel_read);
+    SC_METHOD(thread_number_of_days15_channel_read);
     sensitive << ( correlation_accel_v3_backEnd_U0_NUMBER_OF_DAYS_read );
 
-    SC_METHOD(thread_number_of_days14_channel_write);
+    SC_METHOD(thread_number_of_days15_channel_write);
     sensitive << ( correlation_accel_v3_frontEnd_U0_NUMBER_OF_DAYS_out_write );
 
-    SC_METHOD(thread_number_of_indices15_channel_U_ap_dummy_ce);
+    SC_METHOD(thread_number_of_indices14_channel_U_ap_dummy_ce);
 
-    SC_METHOD(thread_number_of_indices15_channel_din);
+    SC_METHOD(thread_number_of_indices14_channel_din);
     sensitive << ( correlation_accel_v3_frontEnd_U0_NUMBER_OF_INDICES_out_din );
 
-    SC_METHOD(thread_number_of_indices15_channel_read);
+    SC_METHOD(thread_number_of_indices14_channel_read);
     sensitive << ( correlation_accel_v3_backEnd_U0_NUMBER_OF_INDICES_read );
 
-    SC_METHOD(thread_number_of_indices15_channel_write);
+    SC_METHOD(thread_number_of_indices14_channel_write);
     sensitive << ( correlation_accel_v3_frontEnd_U0_NUMBER_OF_INDICES_out_write );
 
     SC_METHOD(thread_out_correlation_TDATA);
@@ -603,12 +603,12 @@ correlation_accel_v3::correlation_accel_v3(sc_module_name name) : sc_module(name
     sc_trace(mVcdFile, correlation_accel_v3_frontEnd_U0_sum_weight_returnA_out_V_din, "correlation_accel_v3_frontEnd_U0_sum_weight_returnA_out_V_din");
     sc_trace(mVcdFile, correlation_accel_v3_frontEnd_U0_sum_weight_returnA_out_V_full_n, "correlation_accel_v3_frontEnd_U0_sum_weight_returnA_out_V_full_n");
     sc_trace(mVcdFile, correlation_accel_v3_frontEnd_U0_sum_weight_returnA_out_V_write, "correlation_accel_v3_frontEnd_U0_sum_weight_returnA_out_V_write");
-    sc_trace(mVcdFile, correlation_accel_v3_frontEnd_U0_NUMBER_OF_DAYS_out_din, "correlation_accel_v3_frontEnd_U0_NUMBER_OF_DAYS_out_din");
-    sc_trace(mVcdFile, correlation_accel_v3_frontEnd_U0_NUMBER_OF_DAYS_out_full_n, "correlation_accel_v3_frontEnd_U0_NUMBER_OF_DAYS_out_full_n");
-    sc_trace(mVcdFile, correlation_accel_v3_frontEnd_U0_NUMBER_OF_DAYS_out_write, "correlation_accel_v3_frontEnd_U0_NUMBER_OF_DAYS_out_write");
     sc_trace(mVcdFile, correlation_accel_v3_frontEnd_U0_NUMBER_OF_INDICES_out_din, "correlation_accel_v3_frontEnd_U0_NUMBER_OF_INDICES_out_din");
     sc_trace(mVcdFile, correlation_accel_v3_frontEnd_U0_NUMBER_OF_INDICES_out_full_n, "correlation_accel_v3_frontEnd_U0_NUMBER_OF_INDICES_out_full_n");
     sc_trace(mVcdFile, correlation_accel_v3_frontEnd_U0_NUMBER_OF_INDICES_out_write, "correlation_accel_v3_frontEnd_U0_NUMBER_OF_INDICES_out_write");
+    sc_trace(mVcdFile, correlation_accel_v3_frontEnd_U0_NUMBER_OF_DAYS_out_din, "correlation_accel_v3_frontEnd_U0_NUMBER_OF_DAYS_out_din");
+    sc_trace(mVcdFile, correlation_accel_v3_frontEnd_U0_NUMBER_OF_DAYS_out_full_n, "correlation_accel_v3_frontEnd_U0_NUMBER_OF_DAYS_out_full_n");
+    sc_trace(mVcdFile, correlation_accel_v3_frontEnd_U0_NUMBER_OF_DAYS_out_write, "correlation_accel_v3_frontEnd_U0_NUMBER_OF_DAYS_out_write");
     sc_trace(mVcdFile, correlation_accel_v3_backEnd_U0_ap_start, "correlation_accel_v3_backEnd_U0_ap_start");
     sc_trace(mVcdFile, correlation_accel_v3_backEnd_U0_ap_done, "correlation_accel_v3_backEnd_U0_ap_done");
     sc_trace(mVcdFile, correlation_accel_v3_backEnd_U0_ap_continue, "correlation_accel_v3_backEnd_U0_ap_continue");
@@ -710,20 +710,20 @@ correlation_accel_v3::correlation_accel_v3(sc_module_name name) : sc_module(name
     sc_trace(mVcdFile, sum_weight_returnA_V_dout, "sum_weight_returnA_V_dout");
     sc_trace(mVcdFile, sum_weight_returnA_V_empty_n, "sum_weight_returnA_V_empty_n");
     sc_trace(mVcdFile, sum_weight_returnA_V_read, "sum_weight_returnA_V_read");
-    sc_trace(mVcdFile, number_of_days14_channel_U_ap_dummy_ce, "number_of_days14_channel_U_ap_dummy_ce");
-    sc_trace(mVcdFile, number_of_days14_channel_din, "number_of_days14_channel_din");
-    sc_trace(mVcdFile, number_of_days14_channel_full_n, "number_of_days14_channel_full_n");
-    sc_trace(mVcdFile, number_of_days14_channel_write, "number_of_days14_channel_write");
-    sc_trace(mVcdFile, number_of_days14_channel_dout, "number_of_days14_channel_dout");
-    sc_trace(mVcdFile, number_of_days14_channel_empty_n, "number_of_days14_channel_empty_n");
-    sc_trace(mVcdFile, number_of_days14_channel_read, "number_of_days14_channel_read");
-    sc_trace(mVcdFile, number_of_indices15_channel_U_ap_dummy_ce, "number_of_indices15_channel_U_ap_dummy_ce");
-    sc_trace(mVcdFile, number_of_indices15_channel_din, "number_of_indices15_channel_din");
-    sc_trace(mVcdFile, number_of_indices15_channel_full_n, "number_of_indices15_channel_full_n");
-    sc_trace(mVcdFile, number_of_indices15_channel_write, "number_of_indices15_channel_write");
-    sc_trace(mVcdFile, number_of_indices15_channel_dout, "number_of_indices15_channel_dout");
-    sc_trace(mVcdFile, number_of_indices15_channel_empty_n, "number_of_indices15_channel_empty_n");
-    sc_trace(mVcdFile, number_of_indices15_channel_read, "number_of_indices15_channel_read");
+    sc_trace(mVcdFile, number_of_indices14_channel_U_ap_dummy_ce, "number_of_indices14_channel_U_ap_dummy_ce");
+    sc_trace(mVcdFile, number_of_indices14_channel_din, "number_of_indices14_channel_din");
+    sc_trace(mVcdFile, number_of_indices14_channel_full_n, "number_of_indices14_channel_full_n");
+    sc_trace(mVcdFile, number_of_indices14_channel_write, "number_of_indices14_channel_write");
+    sc_trace(mVcdFile, number_of_indices14_channel_dout, "number_of_indices14_channel_dout");
+    sc_trace(mVcdFile, number_of_indices14_channel_empty_n, "number_of_indices14_channel_empty_n");
+    sc_trace(mVcdFile, number_of_indices14_channel_read, "number_of_indices14_channel_read");
+    sc_trace(mVcdFile, number_of_days15_channel_U_ap_dummy_ce, "number_of_days15_channel_U_ap_dummy_ce");
+    sc_trace(mVcdFile, number_of_days15_channel_din, "number_of_days15_channel_din");
+    sc_trace(mVcdFile, number_of_days15_channel_full_n, "number_of_days15_channel_full_n");
+    sc_trace(mVcdFile, number_of_days15_channel_write, "number_of_days15_channel_write");
+    sc_trace(mVcdFile, number_of_days15_channel_dout, "number_of_days15_channel_dout");
+    sc_trace(mVcdFile, number_of_days15_channel_empty_n, "number_of_days15_channel_empty_n");
+    sc_trace(mVcdFile, number_of_days15_channel_read, "number_of_days15_channel_read");
     sc_trace(mVcdFile, ap_reg_procdone_correlation_accel_v3_frontEnd_U0, "ap_reg_procdone_correlation_accel_v3_frontEnd_U0");
     sc_trace(mVcdFile, ap_sig_hs_done, "ap_sig_hs_done");
     sc_trace(mVcdFile, ap_reg_procdone_correlation_accel_v3_backEnd_U0, "ap_reg_procdone_correlation_accel_v3_backEnd_U0");
@@ -754,8 +754,8 @@ correlation_accel_v3::~correlation_accel_v3() {
     delete sum_returnA_V_U;
     delete sum_weight_returnSquareA_V_U;
     delete sum_weight_returnA_V_U;
-    delete number_of_days14_channel_U;
-    delete number_of_indices15_channel_U;
+    delete number_of_indices14_channel_U;
+    delete number_of_days15_channel_U;
 }
 
 void correlation_accel_v3::thread_ap_clk_no_reset_() {
@@ -823,19 +823,19 @@ void correlation_accel_v3::thread_ap_sig_top_allready() {
 }
 
 void correlation_accel_v3::thread_correlation_accel_v3_backEnd_U0_NUMBER_OF_DAYS_dout() {
-    correlation_accel_v3_backEnd_U0_NUMBER_OF_DAYS_dout = number_of_days14_channel_dout.read();
+    correlation_accel_v3_backEnd_U0_NUMBER_OF_DAYS_dout = number_of_days15_channel_dout.read();
 }
 
 void correlation_accel_v3::thread_correlation_accel_v3_backEnd_U0_NUMBER_OF_DAYS_empty_n() {
-    correlation_accel_v3_backEnd_U0_NUMBER_OF_DAYS_empty_n = number_of_days14_channel_empty_n.read();
+    correlation_accel_v3_backEnd_U0_NUMBER_OF_DAYS_empty_n = number_of_days15_channel_empty_n.read();
 }
 
 void correlation_accel_v3::thread_correlation_accel_v3_backEnd_U0_NUMBER_OF_INDICES_dout() {
-    correlation_accel_v3_backEnd_U0_NUMBER_OF_INDICES_dout = number_of_indices15_channel_dout.read();
+    correlation_accel_v3_backEnd_U0_NUMBER_OF_INDICES_dout = number_of_indices14_channel_dout.read();
 }
 
 void correlation_accel_v3::thread_correlation_accel_v3_backEnd_U0_NUMBER_OF_INDICES_empty_n() {
-    correlation_accel_v3_backEnd_U0_NUMBER_OF_INDICES_empty_n = number_of_indices15_channel_empty_n.read();
+    correlation_accel_v3_backEnd_U0_NUMBER_OF_INDICES_empty_n = number_of_indices14_channel_empty_n.read();
 }
 
 void correlation_accel_v3::thread_correlation_accel_v3_backEnd_U0_ap_continue() {
@@ -915,7 +915,7 @@ void correlation_accel_v3::thread_correlation_accel_v3_frontEnd_U0_NUMBER_OF_DAY
 }
 
 void correlation_accel_v3::thread_correlation_accel_v3_frontEnd_U0_NUMBER_OF_DAYS_out_full_n() {
-    correlation_accel_v3_frontEnd_U0_NUMBER_OF_DAYS_out_full_n = number_of_days14_channel_full_n.read();
+    correlation_accel_v3_frontEnd_U0_NUMBER_OF_DAYS_out_full_n = number_of_days15_channel_full_n.read();
 }
 
 void correlation_accel_v3::thread_correlation_accel_v3_frontEnd_U0_NUMBER_OF_INDICES() {
@@ -923,7 +923,7 @@ void correlation_accel_v3::thread_correlation_accel_v3_frontEnd_U0_NUMBER_OF_IND
 }
 
 void correlation_accel_v3::thread_correlation_accel_v3_frontEnd_U0_NUMBER_OF_INDICES_out_full_n() {
-    correlation_accel_v3_frontEnd_U0_NUMBER_OF_INDICES_out_full_n = number_of_indices15_channel_full_n.read();
+    correlation_accel_v3_frontEnd_U0_NUMBER_OF_INDICES_out_full_n = number_of_indices14_channel_full_n.read();
 }
 
 void correlation_accel_v3::thread_correlation_accel_v3_frontEnd_U0_ap_continue() {
@@ -1002,36 +1002,36 @@ void correlation_accel_v3::thread_in_indices_TREADY() {
     in_indices_TREADY = correlation_accel_v3_frontEnd_U0_in_indices_TREADY.read();
 }
 
-void correlation_accel_v3::thread_number_of_days14_channel_U_ap_dummy_ce() {
-    number_of_days14_channel_U_ap_dummy_ce = ap_const_logic_1;
+void correlation_accel_v3::thread_number_of_days15_channel_U_ap_dummy_ce() {
+    number_of_days15_channel_U_ap_dummy_ce = ap_const_logic_1;
 }
 
-void correlation_accel_v3::thread_number_of_days14_channel_din() {
-    number_of_days14_channel_din = correlation_accel_v3_frontEnd_U0_NUMBER_OF_DAYS_out_din.read();
+void correlation_accel_v3::thread_number_of_days15_channel_din() {
+    number_of_days15_channel_din = correlation_accel_v3_frontEnd_U0_NUMBER_OF_DAYS_out_din.read();
 }
 
-void correlation_accel_v3::thread_number_of_days14_channel_read() {
-    number_of_days14_channel_read = correlation_accel_v3_backEnd_U0_NUMBER_OF_DAYS_read.read();
+void correlation_accel_v3::thread_number_of_days15_channel_read() {
+    number_of_days15_channel_read = correlation_accel_v3_backEnd_U0_NUMBER_OF_DAYS_read.read();
 }
 
-void correlation_accel_v3::thread_number_of_days14_channel_write() {
-    number_of_days14_channel_write = correlation_accel_v3_frontEnd_U0_NUMBER_OF_DAYS_out_write.read();
+void correlation_accel_v3::thread_number_of_days15_channel_write() {
+    number_of_days15_channel_write = correlation_accel_v3_frontEnd_U0_NUMBER_OF_DAYS_out_write.read();
 }
 
-void correlation_accel_v3::thread_number_of_indices15_channel_U_ap_dummy_ce() {
-    number_of_indices15_channel_U_ap_dummy_ce = ap_const_logic_1;
+void correlation_accel_v3::thread_number_of_indices14_channel_U_ap_dummy_ce() {
+    number_of_indices14_channel_U_ap_dummy_ce = ap_const_logic_1;
 }
 
-void correlation_accel_v3::thread_number_of_indices15_channel_din() {
-    number_of_indices15_channel_din = correlation_accel_v3_frontEnd_U0_NUMBER_OF_INDICES_out_din.read();
+void correlation_accel_v3::thread_number_of_indices14_channel_din() {
+    number_of_indices14_channel_din = correlation_accel_v3_frontEnd_U0_NUMBER_OF_INDICES_out_din.read();
 }
 
-void correlation_accel_v3::thread_number_of_indices15_channel_read() {
-    number_of_indices15_channel_read = correlation_accel_v3_backEnd_U0_NUMBER_OF_INDICES_read.read();
+void correlation_accel_v3::thread_number_of_indices14_channel_read() {
+    number_of_indices14_channel_read = correlation_accel_v3_backEnd_U0_NUMBER_OF_INDICES_read.read();
 }
 
-void correlation_accel_v3::thread_number_of_indices15_channel_write() {
-    number_of_indices15_channel_write = correlation_accel_v3_frontEnd_U0_NUMBER_OF_INDICES_out_write.read();
+void correlation_accel_v3::thread_number_of_indices14_channel_write() {
+    number_of_indices14_channel_write = correlation_accel_v3_frontEnd_U0_NUMBER_OF_INDICES_out_write.read();
 }
 
 void correlation_accel_v3::thread_out_correlation_TDATA() {

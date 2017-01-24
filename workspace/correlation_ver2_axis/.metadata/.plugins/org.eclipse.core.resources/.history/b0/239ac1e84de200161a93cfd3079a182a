@@ -1,0 +1,218 @@
+================================================================
+  Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC
+  Version 2014.4
+  Build 1071461 on Tue Nov 18 16:42:57 PM 2014
+  Copyright (C) 2014 Xilinx Inc. All rights reserved.
+================================================================
+@I [LIC-101] Checked out feature [HLS]
+@I [HLS-10] Running '/opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/bin/unwrapped/lnx64.o/vivado_hls'
+            for user 'trungnguyen' on host 'verratnix.zmk.uni-kl.de' (Linux_x86_64 version 2.6.32-573.18.1.el6.x86_64) on Tue Jan 24 16:56:37 CET 2017
+            in directory '/home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease/_sds/vhls'
+@I [HLS-10] Creating and opening project '/home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease/_sds/vhls/correlation_accel_v3'.
+@I [HLS-10] Adding design file '/home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease/_sds/vhls/src/correlation_accel_v3.cpp' to the project
+@I [HLS-10] Creating and opening solution '/home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease/_sds/vhls/correlation_accel_v3/solution'.
+@I [HLS-10] Cleaning up the solution database.
+@I [HLS-10] Setting target device to ' xc7z020clg484-1 '
+@I [SYN-201] Setting up clock 'default' with a period of 5.95ns.
+@I [HLS-10] Analyzing design file '/home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease/_sds/vhls/src/correlation_accel_v3.cpp' ... 
+@I [HLS-10] Validating synthesis directives ...
+@I [HLS-10] Starting code transformations ...
+@I [HLS-10] Checking synthesizability ...
+@I [XFORM-602] Inlining function 'weight_rom_init' into 'frontEnd' (/home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease/_sds/vhls/src/correlation_accel_v3.cpp:248) automatically.
+@I [XFORM-501] Unrolling loop 'RESET_REGISTERS_FIRST_INDEX' (/home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease/_sds/vhls/src/correlation_accel_v3.cpp:279) in function 'frontEnd' completely.
+@I [XFORM-501] Unrolling loop 'RESET_REGISTERS' (/home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease/_sds/vhls/src/correlation_accel_v3.cpp:375) in function 'frontEnd' completely.
+@I [XFORM-101] Partitioning array 'shift_reg' (/home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease/_sds/vhls/src/correlation_accel_v3.cpp:263) in dimension 1 completely.
+@I [XFORM-602] Inlining function 'weight_rom_init' into 'frontEnd' (/home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease/_sds/vhls/src/correlation_accel_v3.cpp:248) automatically.
+@I [XFORM-712] Applying dataflow to function 'correlation_accel_v3' (/home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease/_sds/vhls/src/correlation_accel_v3.cpp:34), detected/extracted 2 process function(s):
+	 'frontEnd'
+	 'backEnd'.
+@W [XFORM-124] Array 'out_correlation.data.V' (/home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease/_sds/vhls/src/correlation_accel_v3.cpp:38) may have improper streaming access(es), possible reasons: (1) some entries are accessed more than once; (2) some entries are not used; (3) the entries are not accessed in sequential order.
+@W [XFORM-124] Array 'out_correlation.keep.V' (/home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease/_sds/vhls/src/correlation_accel_v3.cpp:38) may have improper streaming access(es), possible reasons: (1) some entries are accessed more than once; (2) some entries are not used; (3) the entries are not accessed in sequential order.
+@W [XFORM-124] Array 'out_correlation.strb.V' (/home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease/_sds/vhls/src/correlation_accel_v3.cpp:38) may have improper streaming access(es), possible reasons: (1) some entries are accessed more than once; (2) some entries are not used; (3) the entries are not accessed in sequential order.
+@W [XFORM-124] Array 'out_correlation.user.V' (/home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease/_sds/vhls/src/correlation_accel_v3.cpp:38) may have improper streaming access(es), possible reasons: (1) some entries are accessed more than once; (2) some entries are not used; (3) the entries are not accessed in sequential order.
+@W [XFORM-124] Array 'out_correlation.last.V' (/home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease/_sds/vhls/src/correlation_accel_v3.cpp:38) may have improper streaming access(es), possible reasons: (1) some entries are accessed more than once; (2) some entries are not used; (3) the entries are not accessed in sequential order.
+@W [XFORM-124] Array 'out_correlation.id.V' (/home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease/_sds/vhls/src/correlation_accel_v3.cpp:38) may have improper streaming access(es), possible reasons: (1) some entries are accessed more than once; (2) some entries are not used; (3) the entries are not accessed in sequential order.
+@W [XFORM-124] Array 'out_correlation.dest.V' (/home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease/_sds/vhls/src/correlation_accel_v3.cpp:38) may have improper streaming access(es), possible reasons: (1) some entries are accessed more than once; (2) some entries are not used; (3) the entries are not accessed in sequential order.
+@W [XFORM-124] Array 'in_indices.data.V' (/home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease/_sds/vhls/src/correlation_accel_v3.cpp:37) may have improper streaming access(es), possible reasons: (1) some entries are accessed more than once; (2) some entries are not used; (3) the entries are not accessed in sequential order.
+@W [XFORM-124] Array 'in_indices.keep.V' (/home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease/_sds/vhls/src/correlation_accel_v3.cpp:37) may have improper streaming access(es), possible reasons: (1) some entries are accessed more than once; (2) some entries are not used; (3) the entries are not accessed in sequential order.
+@W [XFORM-124] Array 'in_indices.strb.V' (/home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease/_sds/vhls/src/correlation_accel_v3.cpp:37) may have improper streaming access(es), possible reasons: (1) some entries are accessed more than once; (2) some entries are not used; (3) the entries are not accessed in sequential order.
+@W [XFORM-124] Array 'in_indices.user.V' (/home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease/_sds/vhls/src/correlation_accel_v3.cpp:37) may have improper streaming access(es), possible reasons: (1) some entries are accessed more than once; (2) some entries are not used; (3) the entries are not accessed in sequential order.
+@W [XFORM-124] Array 'in_indices.last.V' (/home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease/_sds/vhls/src/correlation_accel_v3.cpp:37) may have improper streaming access(es), possible reasons: (1) some entries are accessed more than once; (2) some entries are not used; (3) the entries are not accessed in sequential order.
+@W [XFORM-124] Array 'in_indices.id.V' (/home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease/_sds/vhls/src/correlation_accel_v3.cpp:37) may have improper streaming access(es), possible reasons: (1) some entries are accessed more than once; (2) some entries are not used; (3) the entries are not accessed in sequential order.
+@W [XFORM-124] Array 'in_indices.dest.V' (/home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease/_sds/vhls/src/correlation_accel_v3.cpp:37) may have improper streaming access(es), possible reasons: (1) some entries are accessed more than once; (2) some entries are not used; (3) the entries are not accessed in sequential order.
+@W [XFORM-542] Cannot flatten a loop nest 'Loop-5' (/home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease/_sds/vhls/src/correlation_accel_v3.cpp:372:26) in function 'frontEnd' : 
+               more than one sub loop.
+@I [HLS-111] Elapsed time: 3.7 seconds; current memory usage: 86.8 MB.
+@I [HLS-10] Starting hardware synthesis ...
+@I [HLS-10] Synthesizing 'correlation_accel_v3' ...
+@I [HLS-10] ----------------------------------------------------------------
+@I [HLS-10] -- Scheduling module 'correlation_accel_v3_frontEnd' 
+@I [HLS-10] ----------------------------------------------------------------
+@I [SCHED-11] Starting scheduling ...
+@I [SCHED-61] Pipelining loop 'ACCUMULATION_LOOP_FIRST_INDEX'.
+@W [SCHED-68] Unable to enforce a carried dependency constraint (II = 1, distance = 6)
+   between 'store' operation (/home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease/_sds/vhls/src/correlation_accel_v3.cpp:346) of variable 'tmp_18_i' on array 'acc_return' and 'load' operation ('acc_return_load_1', /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease/_sds/vhls/src/correlation_accel_v3.cpp:346) on array 'acc_return'.
+@I [SCHED-61] Pipelining result: Target II: 1, Final II: 2, Depth: 69.
+@I [SCHED-61] Pipelining loop 'LAST_ACCUM_LOOP_FIRST_INDEX'.
+@W [SCHED-68] Unable to enforce a carried constraint (II = 5)
+   between 'fadd' operation ('sum_weight_returnA', /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease/_sds/vhls/src/correlation_accel_v3.cpp:366) and 'fadd' operation ('sum_weight_returnA', /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease/_sds/vhls/src/correlation_accel_v3.cpp:366).
+@W [SCHED-68] Unable to enforce a carried constraint (II = 6)
+   between 'fadd' operation ('sum_weight_returnA', /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease/_sds/vhls/src/correlation_accel_v3.cpp:366) and 'fadd' operation ('sum_weight_returnA', /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease/_sds/vhls/src/correlation_accel_v3.cpp:366).
+@W [SCHED-68] Unable to enforce a carried constraint (II = 7)
+   between 'fadd' operation ('sum_weight_returnA', /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease/_sds/vhls/src/correlation_accel_v3.cpp:366) and 'fadd' operation ('sum_weight_returnA', /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease/_sds/vhls/src/correlation_accel_v3.cpp:366).
+@W [SCHED-68] Unable to enforce a carried constraint (II = 8)
+   between 'fadd' operation ('sum_weight_returnA', /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease/_sds/vhls/src/correlation_accel_v3.cpp:366) and 'fadd' operation ('sum_weight_returnA', /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease/_sds/vhls/src/correlation_accel_v3.cpp:366).
+@I [SCHED-61] Pipelining result: Target II: 5, Final II: 9, Depth: 13.
+@I [SCHED-61] Pipelining loop 'ACCUMULATION_LOOP_FLOATING_INDEX'.
+@W [SCHED-68] Unable to enforce a carried dependency constraint (II = 1, distance = 6)
+   between 'store' operation (/home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease/_sds/vhls/src/correlation_accel_v3.cpp:445) of variable 'tmp_58_i' on array 'acc_return' and 'load' operation ('acc_return_load_3', /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease/_sds/vhls/src/correlation_accel_v3.cpp:445) on array 'acc_return'.
+@I [SCHED-61] Pipelining result: Target II: 1, Final II: 2, Depth: 70.
+@I [SCHED-61] Pipelining loop 'LAST_ACCUM_LOOP'.
+@W [SCHED-68] Unable to enforce a carried constraint (II = 5)
+   between 'fadd' operation ('sum_weight_returnA_returnB', /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease/_sds/vhls/src/correlation_accel_v3.cpp:471) and 'fadd' operation ('sum_weight_returnA_returnB', /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease/_sds/vhls/src/correlation_accel_v3.cpp:471).
+@W [SCHED-68] Unable to enforce a carried constraint (II = 6)
+   between 'fadd' operation ('sum_weight_returnA_returnB', /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease/_sds/vhls/src/correlation_accel_v3.cpp:471) and 'fadd' operation ('sum_weight_returnA_returnB', /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease/_sds/vhls/src/correlation_accel_v3.cpp:471).
+@W [SCHED-68] Unable to enforce a carried constraint (II = 7)
+   between 'fadd' operation ('sum_weight_returnA_returnB', /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease/_sds/vhls/src/correlation_accel_v3.cpp:471) and 'fadd' operation ('sum_weight_returnA_returnB', /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease/_sds/vhls/src/correlation_accel_v3.cpp:471).
+@W [SCHED-68] Unable to enforce a carried constraint (II = 8)
+   between 'fadd' operation ('sum_weight_returnA_returnB', /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease/_sds/vhls/src/correlation_accel_v3.cpp:471) and 'fadd' operation ('sum_weight_returnA_returnB', /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease/_sds/vhls/src/correlation_accel_v3.cpp:471).
+@I [SCHED-61] Pipelining result: Target II: 5, Final II: 9, Depth: 14.
+@I [SCHED-11] Finished scheduling.
+@I [HLS-111] Elapsed time: 0.22 seconds; current memory usage: 88.7 MB.
+@I [HLS-10] ----------------------------------------------------------------
+@I [HLS-10] -- Exploring micro-architecture for module 'correlation_accel_v3_frontEnd' 
+@I [HLS-10] ----------------------------------------------------------------
+@I [BIND-100] Starting micro-architecture generation ...
+@I [BIND-101] Performing variable lifetime analysis.
+@I [BIND-101] Exploring resource sharing.
+@I [BIND-101] Binding ...
+@I [BIND-100] Finished micro-architecture generation.
+@I [HLS-111] Elapsed time: 0.07 seconds; current memory usage: 90.8 MB.
+@I [HLS-10] ----------------------------------------------------------------
+@I [HLS-10] -- Scheduling module 'correlation_accel_v3_backEnd' 
+@I [HLS-10] ----------------------------------------------------------------
+@I [SCHED-11] Starting scheduling ...
+@W [SCHED-21] Estimated delay (6.34ns) of 'sitofp' operation ('tmp_i_24', /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease/_sds/vhls/src/correlation_accel_v3.cpp:561) exceeds the target cycle time (target cycle time: 5.95ns, clock uncertainty: 0.744ns, effective cycle time: 5.21ns).
+@I [SCHED-61] Pipelining loop 'Loop 1'.
+@I [SCHED-61] Pipelining result: Target II: 1, Final II: 1, Depth: 153.
+@W [SCHED-21] Estimated clock period (6.34ns) exceeds the target (target clock period: 5.95ns, clock uncertainty: 0.744ns, effective delay budget: 5.21ns).
+@W [SCHED-21] The critical path consists of the following:
+	'sitofp' operation ('tmp_i_24', /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease/_sds/vhls/src/correlation_accel_v3.cpp:561) (6.34 ns)
+@I [SCHED-11] Finished scheduling.
+@I [HLS-111] Elapsed time: 0.15 seconds; current memory usage: 91.5 MB.
+@I [HLS-10] ----------------------------------------------------------------
+@I [HLS-10] -- Exploring micro-architecture for module 'correlation_accel_v3_backEnd' 
+@I [HLS-10] ----------------------------------------------------------------
+@I [BIND-100] Starting micro-architecture generation ...
+@I [BIND-101] Performing variable lifetime analysis.
+@I [BIND-101] Exploring resource sharing.
+@I [BIND-101] Binding ...
+@I [BIND-100] Finished micro-architecture generation.
+@I [HLS-111] Elapsed time: 0.04 seconds; current memory usage: 92.6 MB.
+@I [HLS-10] ----------------------------------------------------------------
+@I [HLS-10] -- Scheduling module 'correlation_accel_v3' 
+@I [HLS-10] ----------------------------------------------------------------
+@I [SCHED-11] Starting scheduling ...
+@W [SCHED-71] Latency directive discarded for region correlation_accel_v3since region contains function calls with variable latency.
+@I [SCHED-11] Finished scheduling.
+@I [HLS-111] Elapsed time: 0.05 seconds; current memory usage: 92.8 MB.
+@I [HLS-10] ----------------------------------------------------------------
+@I [HLS-10] -- Exploring micro-architecture for module 'correlation_accel_v3' 
+@I [HLS-10] ----------------------------------------------------------------
+@I [BIND-100] Starting micro-architecture generation ...
+@I [BIND-101] Performing variable lifetime analysis.
+@I [BIND-101] Exploring resource sharing.
+@I [BIND-101] Binding ...
+@I [BIND-100] Finished micro-architecture generation.
+@I [HLS-111] Elapsed time: 0.02 seconds; current memory usage: 93.1 MB.
+@I [HLS-10] ----------------------------------------------------------------
+@I [HLS-10] -- Generating RTL for module 'correlation_accel_v3_frontEnd' 
+@I [HLS-10] ----------------------------------------------------------------
+@I [RTGEN-100] Generating core module 'correlation_accel_v3_fadd_32ns_32ns_32_9_full_dsp': 2 instance(s).
+@I [RTGEN-100] Generating core module 'correlation_accel_v3_fdiv_32ns_32ns_32_30': 1 instance(s).
+@I [RTGEN-100] Generating core module 'correlation_accel_v3_flog_32ns_32ns_32_18_full_dsp': 1 instance(s).
+@I [RTGEN-100] Generating core module 'correlation_accel_v3_fmul_32ns_32ns_32_5_max_dsp': 3 instance(s).
+@I [RTGEN-100] Generating core module 'correlation_accel_v3_urem_32ns_4ns_32_36': 2 instance(s).
+@I [RTGEN-100] Finished creating RTL model for 'correlation_accel_v3_frontEnd'.
+@I [HLS-111] Elapsed time: 0.19 seconds; current memory usage: 95.9 MB.
+@I [HLS-10] ----------------------------------------------------------------
+@I [HLS-10] -- Generating RTL for module 'correlation_accel_v3_backEnd' 
+@I [HLS-10] ----------------------------------------------------------------
+@I [RTGEN-100] Generating core module 'correlation_accel_v3_fadd_32ns_32ns_32_9_full_dsp': 3 instance(s).
+@I [RTGEN-100] Generating core module 'correlation_accel_v3_fdiv_32ns_32ns_32_30': 6 instance(s).
+@I [RTGEN-100] Generating core module 'correlation_accel_v3_fmul_32ns_32ns_32_5_max_dsp': 10 instance(s).
+@I [RTGEN-100] Generating core module 'correlation_accel_v3_fsqrt_32ns_32ns_32_28': 2 instance(s).
+@I [RTGEN-100] Generating core module 'correlation_accel_v3_fsub_32ns_32ns_32_9_full_dsp': 4 instance(s).
+@I [RTGEN-100] Generating core module 'correlation_accel_v3_sitofp_32ns_32_8': 1 instance(s).
+@I [RTGEN-100] Finished creating RTL model for 'correlation_accel_v3_backEnd'.
+@I [HLS-111] Elapsed time: 0.37 seconds; current memory usage: 104 MB.
+@I [HLS-10] ----------------------------------------------------------------
+@I [HLS-10] -- Generating RTL for module 'correlation_accel_v3' 
+@I [HLS-10] ----------------------------------------------------------------
+@I [RTGEN-500] Setting interface mode on port 'correlation_accel_v3/number_of_days' to 'ap_none'.
+@I [RTGEN-500] Setting interface mode on port 'correlation_accel_v3/number_of_indices' to 'ap_none'.
+@I [RTGEN-500] Setting interface mode on port 'correlation_accel_v3/in_indices_data_V' to 'axis'.
+@I [RTGEN-500] Setting interface mode on port 'correlation_accel_v3/in_indices_keep_V' to 'axis'.
+@I [RTGEN-500] Setting interface mode on port 'correlation_accel_v3/in_indices_strb_V' to 'axis'.
+@I [RTGEN-500] Setting interface mode on port 'correlation_accel_v3/in_indices_user_V' to 'axis'.
+@I [RTGEN-500] Setting interface mode on port 'correlation_accel_v3/in_indices_last_V' to 'axis'.
+@I [RTGEN-500] Setting interface mode on port 'correlation_accel_v3/in_indices_id_V' to 'axis'.
+@I [RTGEN-500] Setting interface mode on port 'correlation_accel_v3/in_indices_dest_V' to 'axis'.
+@I [RTGEN-500] Setting interface mode on port 'correlation_accel_v3/out_correlation_data_V' to 'axis'.
+@I [RTGEN-500] Setting interface mode on port 'correlation_accel_v3/out_correlation_keep_V' to 'axis'.
+@I [RTGEN-500] Setting interface mode on port 'correlation_accel_v3/out_correlation_strb_V' to 'axis'.
+@I [RTGEN-500] Setting interface mode on port 'correlation_accel_v3/out_correlation_user_V' to 'axis'.
+@I [RTGEN-500] Setting interface mode on port 'correlation_accel_v3/out_correlation_last_V' to 'axis'.
+@I [RTGEN-500] Setting interface mode on port 'correlation_accel_v3/out_correlation_id_V' to 'axis'.
+@I [RTGEN-500] Setting interface mode on port 'correlation_accel_v3/out_correlation_dest_V' to 'axis'.
+@I [RTGEN-500] Setting interface mode on function 'correlation_accel_v3' to 'ap_ctrl_hs'.
+@I [RTGEN-100] Finished creating RTL model for 'correlation_accel_v3'.
+@I [HLS-111] Elapsed time: 0.14 seconds; current memory usage: 107 MB.
+@I [RTMG-282] Generating pipelined core: 'correlation_accel_v3_urem_32ns_4ns_32_36_div'
+@I [RTMG-278] Implementing memory 'correlation_accel_v3_frontEnd_weight_rom_ram' using block RAMs with power-on initialization.
+@I [RTMG-278] Implementing memory 'correlation_accel_v3_frontEnd_lnReturnA_ram' using block RAMs with power-on initialization.
+@I [RTMG-278] Implementing memory 'correlation_accel_v3_frontEnd_acc_return_ram' using distributed RAMs.
+@I [RTMG-278] Implementing memory 'correlation_accel_v3_frontEnd_acc_weight_returnA_returnB_ram' using distributed RAMs.
+@I [RTMG-285] Implementing FIFO 'FIFO_correlation_accel_v3_sum_weight_V' using Block RAMs.
+@I [RTMG-285] Implementing FIFO 'FIFO_correlation_accel_v3_sum_return_V' using Block RAMs.
+@I [RTMG-285] Implementing FIFO 'FIFO_correlation_accel_v3_sum_weight_returnSquare_V' using Block RAMs.
+@I [RTMG-285] Implementing FIFO 'FIFO_correlation_accel_v3_sum_weight_return_V' using Block RAMs.
+@I [RTMG-285] Implementing FIFO 'FIFO_correlation_accel_v3_sum_weight_returnA_returnB_V' using Block RAMs.
+@I [RTMG-285] Implementing FIFO 'FIFO_correlation_accel_v3_sum_returnA_V' using Block RAMs.
+@I [RTMG-285] Implementing FIFO 'FIFO_correlation_accel_v3_sum_weight_returnSquareA_V' using Block RAMs.
+@I [RTMG-285] Implementing FIFO 'FIFO_correlation_accel_v3_sum_weight_returnA_V' using Block RAMs.
+@I [HLS-10] Finished generating all RTL models.
+@I [WSYSC-301] Generating RTL SystemC for 'correlation_accel_v3'.
+@I [WVHDL-304] Generating RTL VHDL for 'correlation_accel_v3'.
+@I [WVLOG-307] Generating RTL Verilog for 'correlation_accel_v3'.
+@I [IMPL-8] Exporting RTL as an IP in IP-XACT.
+
+****** Vivado v2014.4 (64-bit)
+  **** SW Build 1071353 on Tue Nov 18 16:48:31 MST 2014
+  **** IP Build 1071914 on Wed Nov 19 05:30:59 MST 2014
+    ** Copyright 1986-2014 Xilinx, Inc. All Rights Reserved.
+
+source run_ippack.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/opt/Xilinx/SDSoC/2014.4/Vivado/2014.4/data/ip'.
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'correlation_accel_v3_ap_fsub_7_full_dsp_32'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'correlation_accel_v3_ap_fsub_7_full_dsp_32'...
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'correlation_accel_v3_ap_fsqrt_26_no_dsp_32'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'correlation_accel_v3_ap_fsqrt_26_no_dsp_32'...
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'correlation_accel_v3_ap_sitofp_6_no_dsp_32'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'correlation_accel_v3_ap_sitofp_6_no_dsp_32'...
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'correlation_accel_v3_ap_fadd_7_full_dsp_32'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'correlation_accel_v3_ap_fadd_7_full_dsp_32'...
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'correlation_accel_v3_ap_fdiv_28_no_dsp_32'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'correlation_accel_v3_ap_fdiv_28_no_dsp_32'...
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'correlation_accel_v3_ap_flog_16_full_dsp_32'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'correlation_accel_v3_ap_flog_16_full_dsp_32'...
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'correlation_accel_v3_ap_fmul_3_max_dsp_32'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'correlation_accel_v3_ap_fmul_3_max_dsp_32'...
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/opt/Xilinx/SDSoC/2014.4/Vivado/2014.4/data/ip'.
+INFO: [Common 17-206] Exiting Vivado at Tue Jan 24 16:57:18 2017...
+@I [HLS-112] Total elapsed time: 54.256 seconds; peak memory usage: 107 MB.
+@I [LIC-101] Checked in feature [HLS]

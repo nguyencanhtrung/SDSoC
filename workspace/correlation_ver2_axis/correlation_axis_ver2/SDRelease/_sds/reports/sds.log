@@ -1,7 +1,7 @@
 (c) Copyright 2012-2015 Xilinx, Inc. All Rights Reserved.
 #-----------------------------------------------------------
 # Tool version  : sds++ 2014.4 20150228
-# Start time    : Wed Nov 02 04:00:51 PM CET 2016
+# Start time    : Tue Jan 24 10:27:55 PM CET 2017
 # Command line  : sds++ -o correlation_axis_ver2.elf ./src/correlation_accel_v2.o ./src/main.o -sds-pf zed -dmclkid 2
 # Log file      : /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver2/SDRelease/_sds/reports/sds.log
 # Journal file  : /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver2/SDRelease/_sds/reports/sds.jou
@@ -84,14 +84,14 @@ xsltproc  -o /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation
          /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver2/SDRelease/_sds/.llvm/apsys_0.xml
 INFO: [SDSoC 0-0] Creating block diagram (BD), address map, port information and device registration for partition 0 (this may take a few minutes)
 system_linker -cf-input /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver2/SDRelease/_sds/.llvm/apsys_0.xml -cf-output-dir _sds/p0 -ip-db /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver2/SDRelease/_sds/.cdb/xd_ip_db.xml -ip-repo /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver2/SDRelease/_sds/iprepo/repo -sds-pf /opt/Xilinx/SDSoC/2014.4/platforms/zed:linux -software-only   -sdsoc
-system_linker started at Wed Nov 02 04:00:53 PM CET 2016
+system_linker started at Tue Jan 24 10:27:57 PM CET 2017
 INFO: [SDSoC 0-0] Creating hardware project files
 INFO: [SDSoC 0-0] Creating Vivado block design
 INFO: [SDSoC 0-0] Creating block diagram (BD) and address map
 INFO: [SDSoC 0-0] Copying address map
 INFO: [SDSoC 0-0] Creating port and device registration data
 /opt/Xilinx/SDSoC/2014.4/bin/cf2sw -i apsys_0.xml -r /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver2/SDRelease/_sds/.cdb/xd_ip_db.xml -a address_map.xml -pollMode 0    -n
-system_linker completed at Wed Nov 02 04:01:38 PM CET 2016
+system_linker completed at Tue Jan 24 10:28:48 PM CET 2017
 INFO: [SDSoC 0-0] Prepare hardware access API functions
 INFO: [SDSoC 0-0] Compile hardware access API functions
 INFO: [SDSoC 0-0] Compile accelerator stub functions
@@ -130,22 +130,22 @@ INFO: [SDSoC 0-0] Compile rewritten caller functions
 arm-xilinx-linux-gnueabi-objcopy -O binary --set-section-flags .xdsdata=alloc --only-section=.xdsdata /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver2/SDRelease/src/main.o /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver2/SDRelease/_sds/.data/main.xml
 arm-xilinx-linux-gnueabi-g++ -c /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver2/SDRelease/_sds/swstubs/main.cpp -I/home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver2/src -I/home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver2/src -Wall -O3 -fmessage-length=0 -MMD -MP -D __SDSCC__ -I /opt/Xilinx/SDSoC/2014.4/arm-xilinx-linux-gnueabi/include  -I /opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/include   -o /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver2/SDRelease/_sds/swstubs/main.o
 /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver2/SDRelease/_sds/swstubs/main.cpp: In function 'int main(int, char**)':
-/home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver2/SDRelease/_sds/swstubs/main.cpp:42:171: warning: use of 'll' length modifier with 'f' type character [-Wformat=]
+/home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver2/SDRelease/_sds/swstubs/main.cpp:43:171: warning: use of 'll' length modifier with 'f' type character [-Wformat=]
  #define TIME_STAMP_ACCEL  { clock_end = sds_clock_counter(); printf("Time in second for hardware version: %llf \n", (float)(clock_end-clock_start)/(float)COUNT_PER_SECOND); clock_start = sds_clock_counter();  }
                                                                                                                                                                            ^
-/home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver2/SDRelease/_sds/swstubs/main.cpp:359:5: note: in expansion of macro 'TIME_STAMP_ACCEL'
+/home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver2/SDRelease/_sds/swstubs/main.cpp:377:5: note: in expansion of macro 'TIME_STAMP_ACCEL'
      TIME_STAMP_ACCEL;
      ^
+/home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver2/SDRelease/_sds/swstubs/main.cpp:391:10: warning: variable 'status' set but not used [-Wunused-but-set-variable]
+     bool status;
+          ^
 /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver2/SDRelease/_sds/swstubs/main.cpp: In function 'bool indices_init(uint32_t)':
-/home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver2/SDRelease/_sds/swstubs/main.cpp:96:1: warning: control reaches end of non-void function [-Wreturn-type]
+/home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver2/SDRelease/_sds/swstubs/main.cpp:97:1: warning: control reaches end of non-void function [-Wreturn-type]
  }
  ^
 /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver2/src/correlation_accel_v2.hpp: At global scope:
 /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver2/src/correlation_accel_v2.hpp:64:13: warning: 'void weight_rom_init(float*, int)' declared 'static' but never defined [-Wunused-function]
  static void weight_rom_init(
-             ^
-/home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver2/SDRelease/_sds/swstubs/main.cpp:287:13: warning: 'bool checkResult(float*, float*, int, float)' defined but not used [-Wunused-function]
- static bool checkResult(   float *hw_result, float *sw_result,
              ^
 arm-xilinx-linux-gnueabi-ar crs /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver2/SDRelease/_sds/swstubs/libcorrelation_axis_ver2.a /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver2/SDRelease/_sds/swstubs/devreg.o /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver2/SDRelease/_sds/swstubs/portinfo.o /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver2/SDRelease/_sds/swstubs/cf_stub.o /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver2/SDRelease/_sds/swstubs/correlation_accel_v2.o
 INFO: [SDSoC 0-0] Link application ELF file
@@ -155,36 +155,36 @@ INFO: [SDSoC 0-0] Enable generation of hardware programming files
 INFO: [SDSoC 0-0] Enable generation of boot files
 INFO: [SDSoC 0-0] Calling system_linker for partition 0
 system_linker -cf-input /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver2/SDRelease/_sds/.llvm/apsys_0.xml -cf-output-dir _sds/p0 -ip-db /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver2/SDRelease/_sds/.cdb/xd_ip_db.xml -ip-repo /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver2/SDRelease/_sds/iprepo/repo -sds-pf /opt/Xilinx/SDSoC/2014.4/platforms/zed:linux -bitstream -bit-name correlation_axis_ver2.elf.bit -boot-files   -mdev-no-swgen -mdev-no-xsd -sdsoc -sd-output-dir _sds/p0/sd_card -bit-binary -elf /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver2/SDRelease/_sds/swstubs/correlation_axis_ver2.elf
-system_linker started at Wed Nov 02 04:01:39 PM CET 2016
+system_linker started at Tue Jan 24 10:28:50 PM CET 2017
 INFO: [SDSoC 0-0] Generating bitstream for platform zed.
       This may take some time to complete
-... [16:01:52] Starting synth_design
-... [16:01:57] Starting RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 1046.047 ; gain = 212.559 ; free physical = 11001 ; free virtual = 22015
-... [16:06:57] Start Loading Part and Timing Information
-... [16:06:57] Start Applying 'set_property' XDC Constraints
-... [16:07:12] Start RTL Component Statistics 
-... [16:07:12] Start RTL Hierarchical Component Statistics 
-... [16:07:12] Start Part Resource Summary
-... [16:07:12] Start Parallel Synthesis Optimization  : Time (s): cpu = 00:05:19 ; elapsed = 00:05:19 . Memory (MB): peak = 1897.398 ; gain = 1063.910 ; free physical = 10247 ; free virtual = 21270
-... [16:07:12] Start Cross Boundary Optimization
-... [16:07:17] Start Area Optimization
-... [16:07:37] Start Timing Optimization
-... [16:07:47] Start Applying XDC Timing Constraints
-... [16:07:57] Start Technology Mapping
-... [16:08:22] Start IO Insertion
-... [16:08:22] Start Flattening Before IO Insertion
-... [16:08:22] Start Final Netlist Cleanup
-... [16:08:22] Start Renaming Generated Instances
-... [16:08:27] Start Rebuilding User Hierarchy
-... [16:08:27] Start Writing Synthesis Report
-... [16:08:55] Starting DRC Task
-... [16:09:00] Starting Logic Optimization Task
-... [16:09:10] Starting Power Optimization Task
-... [16:09:10] Starting PowerOpt Patch Enables Task
-... [16:09:15] Starting Placer Task
-... [16:09:55] Starting Routing Task
+... [22:29:04] Starting synth_design
+... [22:29:14] Starting RTL Elaboration : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 1054.047 ; gain = 220.555 ; free physical = 10190 ; free virtual = 21549
+... [22:35:59] Start Loading Part and Timing Information
+... [22:35:59] Start Applying 'set_property' XDC Constraints
+... [22:36:14] Start RTL Component Statistics 
+... [22:36:14] Start RTL Hierarchical Component Statistics 
+... [22:36:14] Start Part Resource Summary
+... [22:36:14] Start Parallel Synthesis Optimization  : Time (s): cpu = 00:07:07 ; elapsed = 00:07:09 . Memory (MB): peak = 1996.742 ; gain = 1163.250 ; free physical = 8761 ; free virtual = 20611
+... [22:36:14] Start Cross Boundary Optimization
+... [22:36:19] Start Area Optimization
+... [22:36:44] Start Timing Optimization
+... [22:36:54] Start Applying XDC Timing Constraints
+... [22:37:04] Start Technology Mapping
+... [22:37:34] Start IO Insertion
+... [22:37:34] Start Flattening Before IO Insertion
+... [22:37:34] Start Final Netlist Cleanup
+... [22:37:34] Start Renaming Generated Instances
+... [22:37:39] Start Rebuilding User Hierarchy
+... [22:37:39] Start Writing Synthesis Report
+... [22:38:11] Starting DRC Task
+... [22:38:21] Starting Logic Optimization Task
+... [22:38:26] Starting Power Optimization Task
+... [22:38:36] Starting PowerOpt Patch Enables Task
+... [22:38:41] Starting Placer Task
+... [22:39:26] Starting Routing Task
 INFO: [SDSoC 0-0] Creating boot files
-system_linker completed at Wed Nov 02 04:11:00 PM CET 2016
+system_linker completed at Tue Jan 24 10:40:37 PM CET 2017
 All user specified timing constraints are met.
 sds++ log file saved as /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver2/SDRelease/_sds/reports/sds.log
-sds++ completed at Wed Nov 02 04:11:00 PM CET 2016
+sds++ completed at Tue Jan 24 10:40:37 PM CET 2017

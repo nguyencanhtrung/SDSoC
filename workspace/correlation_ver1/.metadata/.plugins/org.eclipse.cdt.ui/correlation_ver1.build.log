@@ -1,0 +1,7 @@
+18:15:15 **** Clean-only build of configuration SDRelease for project correlation_ver1 ****
+make clean 
+rm -rf _sds sd_card  ./src/correlation_accel_v1.o ./src/main.o  ./src/correlation_accel_v1.d ./src/main.d  correlation_ver1.elf
+ 
+
+18:15:15 Build Finished (took 60ms)
+

@@ -50,12 +50,12 @@ module correlation_accel_v3_frontEnd (
         sum_weight_returnA_out_V_din,
         sum_weight_returnA_out_V_full_n,
         sum_weight_returnA_out_V_write,
-        NUMBER_OF_DAYS_out_din,
-        NUMBER_OF_DAYS_out_full_n,
-        NUMBER_OF_DAYS_out_write,
         NUMBER_OF_INDICES_out_din,
         NUMBER_OF_INDICES_out_full_n,
-        NUMBER_OF_INDICES_out_write
+        NUMBER_OF_INDICES_out_write,
+        NUMBER_OF_DAYS_out_din,
+        NUMBER_OF_DAYS_out_full_n,
+        NUMBER_OF_DAYS_out_write
 );
 
 parameter    ap_const_logic_1 = 1'b1;
@@ -191,12 +191,12 @@ output   sum_weight_returnSquareA_out_V_write;
 output  [31:0] sum_weight_returnA_out_V_din;
 input   sum_weight_returnA_out_V_full_n;
 output   sum_weight_returnA_out_V_write;
-output  [31:0] NUMBER_OF_DAYS_out_din;
-input   NUMBER_OF_DAYS_out_full_n;
-output   NUMBER_OF_DAYS_out_write;
 output  [31:0] NUMBER_OF_INDICES_out_din;
 input   NUMBER_OF_INDICES_out_full_n;
 output   NUMBER_OF_INDICES_out_write;
+output  [31:0] NUMBER_OF_DAYS_out_din;
+input   NUMBER_OF_DAYS_out_full_n;
+output   NUMBER_OF_DAYS_out_write;
 
 reg ap_done;
 reg ap_idle;
@@ -210,8 +210,8 @@ reg sum_weight_returnA_returnB_out_write;
 reg sum_returnA_out_V_write;
 reg sum_weight_returnSquareA_out_V_write;
 reg sum_weight_returnA_out_V_write;
-reg NUMBER_OF_DAYS_out_write;
 reg NUMBER_OF_INDICES_out_write;
+reg NUMBER_OF_DAYS_out_write;
 reg    ap_done_reg = 1'b0;
 (* fsm_encoding = "none" *) reg   [32:0] ap_CS_fsm = 33'b1;
 reg    ap_sig_cseq_ST_st1_fsm_0;
@@ -4953,9 +4953,9 @@ begin
 end
 
 /// ap_sig_bdd_805 assign process. ///
-always @ (ap_start or ap_done_reg or NUMBER_OF_DAYS_out_full_n or NUMBER_OF_INDICES_out_full_n)
+always @ (ap_start or ap_done_reg or NUMBER_OF_INDICES_out_full_n or NUMBER_OF_DAYS_out_full_n)
 begin
-    ap_sig_bdd_805 = ((NUMBER_OF_INDICES_out_full_n == ap_const_logic_0) | (NUMBER_OF_DAYS_out_full_n == ap_const_logic_0) | (ap_start == ap_const_logic_0) | (ap_done_reg == ap_const_logic_1));
+    ap_sig_bdd_805 = ((NUMBER_OF_DAYS_out_full_n == ap_const_logic_0) | (NUMBER_OF_INDICES_out_full_n == ap_const_logic_0) | (ap_start == ap_const_logic_0) | (ap_done_reg == ap_const_logic_1));
 end
 
 /// ap_sig_bdd_817 assign process. ///

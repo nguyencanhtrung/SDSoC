@@ -9,12 +9,17 @@
 
 #include "xlnk_core_cf.h"
 #include "accel_info.h"
+#include "axi_dma_sg_dm.h"
 #include "axi_dma_simple_dm.h"
 #include "axi_lite_dm.h"
 
-extern axi_dma_simple_info_t _p0_datamover_0;
 extern axi_dma_simple_info_t _p0_datamover_1;
 extern accel_info_t _sds__p0_correlation_accel_v3_0;
+
+axi_dma_sg_channel_info_t _p0_datamover_0_channel_send = {
+  .name = "xilinx-axidma.0chan0",
+  .state = 0
+};
 
 axi_lite_info_t _p0_swinst_correlation_accel_v3_0_cmd_correlation_accel_v3_info = {
   .accel_info = &_sds__p0_correlation_accel_v3_0,
@@ -31,10 +36,10 @@ axi_lite_info_t _p0_swinst_correlation_accel_v3_0_number_of_indices_info = {
   .reg_name = "0x84"
 };
 
-axi_dma_simple_channel_info_t _p0_swinst_correlation_accel_v3_0_in_indices_info = {
-  .dma_info = &_p0_datamover_0,
-  .in_use = 0,
-  .needs_cache_flush_invalidate = 1
+axi_dma_sg_transaction_info_t _p0_swinst_correlation_accel_v3_0_in_indices_info = {
+  .dma_channel_info = &_p0_datamover_0_channel_send,
+  .port_id = 0,
+  .flag = (0 | CF_FLAG_CACHE_FLUSH_INVALIDATE)
 };
 
 axi_dma_simple_channel_info_t _p0_swinst_correlation_accel_v3_0_out_correlation_info = {
@@ -61,9 +66,9 @@ struct _p0_swblk_correlation_accel_v3 _p0_swinst_correlation_accel_v3_0 = {
 		.send_i = &axi_lite_send },
   .in_indices = { .base = { 
 		.channel_info = &_p0_swinst_correlation_accel_v3_0_in_indices_info, 
-		.open_i = &axi_dma_simple_open, 
-		.close_i = &axi_dma_simple_close },
-		.send_i = &axi_dma_simple_send_i },
+		.open_i = &axi_dma_sg_open, 
+		.close_i = &axi_dma_sg_close },
+		.send_i = &axi_dma_sg_send_i },
   .out_correlation = { .base = { 
 		.channel_info = &_p0_swinst_correlation_accel_v3_0_out_correlation_info, 
 		.open_i = &axi_dma_simple_open, 

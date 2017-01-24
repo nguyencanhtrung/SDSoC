@@ -1,0 +1,382 @@
+/*******************************************************************************************/
+/* Author: Trung Nguyen - TU Kaiserslautern													*
+ * Date:   Sep. 14, 2016																	*
+ * Version: 0.01  - Bare metal version														*
+ * 	 					- without UART														*
+ * 	 					- using simple DMA													*
+ * ----------------------------------------------------------------------------------------*/
+/* NOTE:																					*
+ * Memory space																				*
+ * 				_________																	*
+ * 0x01000000	|_______| RX_BUFFER_STORE_CORRELATION_BASE									*
+ * 				:_______:																	*
+ * 		256MB	:		:																	*
+ * 				:		:																	*
+ * 0x11000000	|_______| TX_BUFFER_STORE_INDICES_BASE										*
+ * 		239MB	:_______:																	*
+ * 				|	:	|																	*
+ * 				:___:___:																	*
+ *																							*
+ * 	RX_BUFFER_STORE_CORRELATION_BASE	=>	RX_BUFFER_BASE									*
+ * 	TX_BUFFER_STORE_INDICES_BASE		=>	TX_BUFFER_BASE					*
+ **************************************************************************/
+
+/**************************************************************************/
+/*	Including files														  *
+ * -----------------------------------------------------------------------*/
+ #include <stdio.h>
+ #include <stdlib.h>
+ #include <stdint.h>		/*< For uint32_t */
+ //#include <cmath>			/*< Math lib for C-simulation */
+
+ #include "correlation_accel_v3.hpp"
+ #include "sds_lib.h"
+/*-----------------------------------
+ * API for Timing       			*
+ * ---------------------------------*/
+#define COUNT_PER_SECOND 667000000
+
+#define TIME_STAMP_INIT  unsigned long long clock_start, clock_end;  clock_start = sds_clock_counter();
+#define TIME_STAMP_SW  { clock_end = sds_clock_counter(); printf("Time in second for golden version: %llf \n", (float)(clock_end-clock_start)/(float)COUNT_PER_SECOND); }
+#define TIME_STAMP_ACCEL  { clock_end = sds_clock_counter(); printf("Time in second for hardware version: %llf \n", (float)(clock_end-clock_start)/(float)COUNT_PER_SECOND); clock_start = sds_clock_counter();  }
+/*************************************************************************
+*                               HELPER FUNCTIONS                         *
+**************************************************************************/
+/*************************************************************************
+ * INDICES INITIALIZATION                                                *
+ * @param                                                                *
+ *      - Address where we store indices sample for testing              *
+ * @return                                                               *
+ *      - bool: false - FAILED                                           *
+                true  - SUCCESSFUL                                       *
+ * @note                                                                 *
+ *      - Declare as static, so only those functions in same file can use*                       
+ *        this, and when using it dont create other instance but point to* 
+          the same static instance                                       *
+ *************************************************************************/
+static bool indices_init( uint32_t TX_BUFFER_BASE){
+
+    /* Importants variables */
+    int NUM_OF_INDICES_IN_MEM   = 10000;   // Fixed - try to initiate 10000 indices in memory
+    int NUM_OF_DAYS_PER_INDEX   = 252;     // Fixed
+    int UPPER_BOUND             = NUM_OF_INDICES_IN_MEM/10;
+
+    float inputData[1260] ={              // 5 indices
+        #include "data.txt"
+    };
+
+    memcpy( (float *)(TX_BUFFER_BASE),                    // 5
+            (float *) inputData,
+             20 * NUM_OF_DAYS_PER_INDEX);
+
+    memcpy( (float *)(TX_BUFFER_BASE) + NUM_OF_DAYS_PER_INDEX * 5, // 10
+            (float *) inputData,
+             20 * NUM_OF_DAYS_PER_INDEX);
+
+    for (int j = 1; j < UPPER_BOUND; j++){
+        memcpy( (float *)(TX_BUFFER_BASE)+  NUM_OF_DAYS_PER_INDEX * 5 * 2 * j,  // + 10
+                (float *) (TX_BUFFER_BASE),
+                 20 * NUM_OF_DAYS_PER_INDEX * 2);
+    }
+   // Compare memories region
+    int errorCount = 0;
+    int status;
+    for(int j = 0; j < UPPER_BOUND * 2; j ++){
+        status =  memcmp((float *)(TX_BUFFER_BASE) + NUM_OF_DAYS_PER_INDEX * 5*j, (float *)(inputData), 5040);
+        if(status != 0){
+            errorCount ++;
+        }
+    }
+
+    if(errorCount != 0){
+        printf("Error memcpy!\r\n");
+        return false;
+    }
+}
+
+
+/*************************************************************************
+ * Correlation Computation using MATLAB algorithm                        *
+ * @param                                                                *
+ *      - pointer to memory location where indices are stored            *
+ *      - pointer to memory location where weights are stored            *
+ *      - size  = number of days is examined                             *
+ *      - weightSum: reference to sum of all weight                      *
+ * @return                                                               *
+ *      - float: correlation of 2 indices                                *
+ * @note                                                                 *
+ *      - none                                                           *
+ *************************************************************************/
+float correlationComp_v1_sw(float *indexA, float *indexB,
+                float *weight,int size, float *weightSum){
+    float lnReturnA[size -1];
+    float lnReturnB[size -1];
+    float meanReturnA = 0;
+    float meanReturnB = 0;
+
+    // Compute natural logarithm of returns
+    int i;
+    for(i = 0; i < size - 1; i++){
+        lnReturnA[i] = logf (indexA[i]/indexA[i+1]);
+        lnReturnB[i] = logf (indexB[i]/indexB[i+1]);
+
+        meanReturnA += lnReturnA[i]/(float)(size -1);
+        meanReturnB += lnReturnB[i]/(float)(size -1);
+    }
+
+    float diffA[size -1], diffB[size -1];
+    float accumA = 0;
+    float accumB = 0;
+    float accumCov = 0;
+
+    // Volatility computation
+    float volatilityA, volatilityB;
+    int i_sw;
+    for(i_sw = 0; i_sw < size -1; i_sw++){
+        diffA[i_sw] =   lnReturnA[i_sw] - meanReturnA;
+        diffB[i_sw] =   lnReturnB[i_sw] - meanReturnB;
+        accumA      +=  diffA[i_sw] * diffA[i_sw] * weight[i_sw];
+        accumB      +=  diffB[i_sw] * diffB[i_sw] * weight[i_sw];
+        accumCov    +=  diffA[i_sw] * diffB[i_sw] * weight[i_sw];
+    }
+    volatilityA     =   sqrtf(accumA/ (*weightSum));
+    volatilityB     =   sqrtf(accumB/ (*weightSum));
+
+    // Covariance computation
+    float covariance;
+    covariance      =   accumCov/ (*weightSum);
+
+    return (covariance/(volatilityA * volatilityB));
+}
+/*************************************************************************
+ * Correlation Computation using MATLAB algorithm                        *
+ * @param                                                                *
+ *      - pointer to memory location where indices are stored            *
+ *      - pointer to memory location where weights are stored            *
+ *      - size  = number of days is examined                             *
+ *      - weightSum: reference to sum of all weight                      *
+ * @return                                                               *
+ *      - float: correlation of 2 indices                                *
+ * @note                                                                 *
+ *      - none                                                           *
+ *************************************************************************/
+float correlationComp_v2_sw(float *indexA, float *indexB,
+                float *weight,int size, float *weightSum){
+    float lnReturnA;
+    float lnReturnB;
+    float meanReturnA       = 0;
+    float meanReturnB       = 0;
+
+    float sumLogReturnA     = 0;
+    float sumWeightRetA     = 0;
+    float sumWeightRet2A    = 0;
+
+    float sumLogReturnB     = 0;
+    float sumWeightRetB     = 0;
+    float sumWeightRet2B    = 0;
+
+    float sumWeightRetARetB = 0;
+
+    // Compute natural logarithm of returns
+    int i;
+    for(i = 0; i < size - 1; i++){
+        lnReturnA       = logf (indexA[i]/indexA[i+1]);
+        lnReturnB       = logf (indexB[i]/indexB[i+1]);
+
+        sumLogReturnA   += lnReturnA;
+        sumWeightRetA   += weight[i] * lnReturnA;
+        sumWeightRet2A  += weight[i] * lnReturnA * lnReturnA;
+
+        sumLogReturnB   += lnReturnB;
+        sumWeightRetB   += weight[i] * lnReturnB;
+        sumWeightRet2B  += weight[i] * lnReturnB * lnReturnB;
+
+        sumWeightRetARetB += weight[i] * lnReturnA * lnReturnB;
+
+
+    }
+
+    meanReturnA     = sumLogReturnA/(float)(size -1);
+    meanReturnB     = sumLogReturnB/(float)(size -1);
+
+    // Volatility computation
+    float volatilityA, volatilityB;
+
+    volatilityA     =   sqrtf( (sumWeightRet2A - 2 * sumWeightRetA * meanReturnA)/ (*weightSum) + meanReturnA * meanReturnA);
+    volatilityB     =   sqrtf( (sumWeightRet2B - 2 * sumWeightRetB * meanReturnB)/ (*weightSum) + meanReturnB * meanReturnB);
+
+    // Covariance computation
+    float covariance;
+    covariance      =   (sumWeightRetARetB - sumWeightRetA * meanReturnB - sumWeightRetB * meanReturnA)/ (*weightSum) + meanReturnA * meanReturnB;
+
+    return (covariance/(volatilityA * volatilityB));
+}
+/*************************************************************************
+ * Weight Computation                                                    *
+ * @param                                                                *
+ *      - pointer to memory location where weight is stored              *
+ *      - size  = number of days is examined                             *
+ *      - weightSum: pointer where store sum of all weight               *
+ * @note                                                                 *
+ *      - none                                                           *
+ *************************************************************************/
+static void weightComp(float *weight, int size, float *weightSum){
+    weight[0]       = 1.0;
+    *weightSum      = 1.0;
+    int i;
+    for(i = 1; i < size - 1; i++){
+        weight[i]   = weight[i -1] * 0.94;
+        *weightSum  += weight[i];
+    }
+}
+
+/*************************************************************************
+ * CORRELATION computation -- software                                   *
+ * @param                                                                *
+ *      - pointer to memory location where weight is stored              *
+ *      - size  = number of days is examined                             *
+ *      - weightSum: pointer where store sum of all weight               *
+ * @note                                                                 *
+ *      - none                                                           *
+ *************************************************************************/
+void correlation_golden(
+                        float       *indices, 
+                        const int   number_of_indices, 
+                        const int   number_of_days_per_index,
+                        float       *correlation)
+{
+    int rom_size = number_of_days_per_index - 1;
+    static float weightSum;
+    float weightRom[rom_size];
+    weightComp(weightRom, number_of_days_per_index, &weightSum);
+    int index = 0;
+    int i;
+    for(i = 0; i < number_of_indices - 1; i++){
+        int j;
+        for(j = i + 1; j < number_of_indices; j++){
+            float *indexA = (float *)(indices + i * number_of_days_per_index);
+            float *indexB = (float *)(indices + j * number_of_days_per_index);
+
+            if((indexA == NULL) || (indexB == NULL)){
+                printf("ERROR!  correlation kernel - pointer A, B is NULL\r\n");
+            }
+//          float correlation_temp  =   correlationComp_v1_sw( indexA,
+//                                                          indexB,
+//                                                          weightRom,
+//                                                          number_of_days_per_index,
+//                                                          &weightSum);
+            float correlation_temp  =   correlationComp_v2_sw( indexA,
+                                                            indexB,
+                                                            weightRom,
+                                                            number_of_days_per_index,
+                                                            &weightSum);
+            *((float *)(correlation + index)) = correlation_temp;
+            ++index;
+        }
+    }
+}
+
+/*************************************************************************
+ * CHECKING HW results and SW results                                    *
+ * @param                                                                *
+ * @note                                                                 *
+ *      - none                                                           *
+ *************************************************************************/
+
+static bool checkResult(   float *hw_result, float *sw_result,
+                    const int number_of_result,
+                    const float allowErrorThreshold)
+{
+    int i;
+    int errorCount_in = 0;
+   // Xil_DCacheInvalidateRange(hw_result, number_of_result * 4);
+   // Xil_DCacheInvalidateRange(sw_result, number_of_result * 4);
+    for(i = 0; i < number_of_result; i++){
+        float sw_result_temp = sw_result[i];
+        float hw_result_temp = hw_result[i];
+
+
+        if(abs( sw_result_temp - hw_result_temp) > allowErrorThreshold) {
+            ++errorCount_in;
+            printf("%d:  hw: %.6f - sw: %.6f\r\n", i, hw_result_temp, sw_result_temp);
+
+        }
+    }
+    if(errorCount_in > 0){
+    	printf("TEST FAILED !!!\r\n");
+        return false;
+    } else {
+    	printf("TEST PASSED !!!\r\n");
+    	return true;
+    }
+}
+/********************************************************************************************
+*								MAIN program												*
+*********************************************************************************************/
+int main(int argc, char* argv[])
+{
+    /************************************************************
+     *	 	Step 1: Writing Sample Data into DRAM 				*
+     *----------------------------------------------------------*/
+    int number_of_days_per_index    = 252;
+    int all_indices_size 			= 10000 * number_of_days_per_index * sizeof(float);
+    float *indices_buff             = NULL;
+    indices_buff                    = (float *)sds_mmap((void *) 0x11000000, 
+    										all_indices_size,
+                                            indices_buff);
+    float *correlation_buff         = NULL;
+    correlation_buff                = (float *)sds_mmap((void *) 0x01000000, 
+                                                        49995000 * sizeof(float),
+                                                        correlation_buff);
+    
+    float *correlation_sw 			= NULL;
+    correlation_sw 					= (float *)sds_mmap((void *) 0x14000000,
+            							499500 * sizeof(float),
+            							correlation_sw);
+
+    indices_init((uint32_t)indices_buff);
+   // Xil_DCacheFlushRange(indices_buff, all_indices_size);
+
+    int number_of_indices;
+    int debug = 0;
+    printf("Number of indices: \r\n");
+    scanf("%d" , &number_of_indices);
+    printf("\r\n");
+    printf("Debug?: \r\n");
+    scanf("%d" , &debug);
+    printf("\r\n");
+    /************************************************************
+	*	 	Step 2: Hardware computation       					*
+	*----------------------------------------------------------*/
+    TIME_STAMP_INIT;
+    int ptr_result = 0;
+    for(int i = number_of_indices; i > 1; --i){
+        correlation_accel_v3(
+                                number_of_days_per_index,   /* CPU in*/
+                                i,          /* CPU in*/
+                                (float *)(indices_buff + (number_of_indices - i) * number_of_days_per_index),  /*  Input*/
+                                (float *)(correlation_buff + ptr_result)        	/* Output*/
+        );
+        ptr_result += (i - 1);
+    }
+    TIME_STAMP_ACCEL;
+	/************************************************************
+	 *		Step 3: Software computation					  	*
+	 *----------------------------------------------------------*/
+    if(debug == 1) {
+    correlation_golden(		indices_buff,
+                            number_of_indices,
+                            number_of_days_per_index,
+                            correlation_sw);
+//    TIME_STAMP_SW;
+     /************************************************************
+     *      Step 4: Compare results                             *
+     *----------------------------------------------------------*/
+    int number_of_result = number_of_indices * (number_of_indices - 1) / 2;
+    bool status;
+    status = checkResult(  correlation_buff, correlation_sw,
+    						number_of_result,
+    						(float)ALLOW_ERR_THRES);
+    }
+    return 0;
+}

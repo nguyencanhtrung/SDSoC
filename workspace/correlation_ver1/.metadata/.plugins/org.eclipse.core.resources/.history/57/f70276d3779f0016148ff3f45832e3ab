@@ -1,0 +1,4 @@
+#ifndef CF_EXTRA_H_
+#define CF_EXTRA_H_
+void _p0_mmult_0(float A[1024], float B[1024], float C[1024]);
+#endif

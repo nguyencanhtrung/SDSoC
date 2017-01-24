@@ -1,0 +1,50 @@
+SW(2)@353\n   call void @_Z18correlation_goldenPfiiS_(float* %2, i32 %12, i32 252, float* %6), !dbg !208
+SW(3)@363\n   %17 = call zeroext i1 @_ZL11checkResultPfS_if(float* %4, float* %6, i32 %16, float 0x3EE4F8B580000000), !dbg !212
+SW(4)@0\n   %number_of_indices = alloca i32, align 4
+SW(5)@311\n   call void @llvm.dbg.value(metadata !{i32 %argc}, i64 0, metadata !181), !dbg !182
+SW(6)@311\n   call void @llvm.dbg.value(metadata !{i8** %argv}, i64 0, metadata !183), !dbg !184
+SW(7)@316\n   call void @llvm.dbg.value(metadata !185, i64 0, metadata !186), !dbg !187
+SW(8)@316\n   call void @llvm.dbg.value(metadata !{null}, i64 0, metadata !186), !dbg !187
+SW(9)@317\n   call void @llvm.dbg.value(metadata !188, i64 0, metadata !189), !dbg !190
+SW(10)@318\n   call void @llvm.dbg.value(metadata !191, i64 0, metadata !192), !dbg !193
+SW(11)@318\n   call void @llvm.dbg.value(metadata !{null}, i64 0, metadata !192), !dbg !193
+SW(12)@319\n   %1 = call i8* @sds_mmap(i8* inttoptr (i32 285212672 to i8*), i32 10080000, i8* null), !dbg !194
+SW(13)@319\n   %2 = bitcast i8* %1 to float*, !dbg !194
+SW(14)@318\n   call void @llvm.dbg.value(metadata !{float* %2}, i64 0, metadata !192), !dbg !193
+SW(15)@322\n   call void @llvm.dbg.value(metadata !191, i64 0, metadata !195), !dbg !196
+SW(16)@322\n   call void @llvm.dbg.value(metadata !{null}, i64 0, metadata !195), !dbg !196
+SW(17)@323\n   %3 = call i8* @sds_mmap(i8* inttoptr (i32 16777216 to i8*), i32 199980000, i8* null), !dbg !197
+SW(18)@323\n   %4 = bitcast i8* %3 to float*, !dbg !197
+SW(19)@322\n   call void @llvm.dbg.value(metadata !{float* %4}, i64 0, metadata !195), !dbg !196
+SW(20)@327\n   call void @llvm.dbg.value(metadata !191, i64 0, metadata !198), !dbg !199
+SW(21)@327\n   call void @llvm.dbg.value(metadata !{null}, i64 0, metadata !198), !dbg !199
+SW(22)@328\n   %5 = call i8* @sds_mmap(i8* inttoptr (i32 335544320 to i8*), i32 1998000, i8* null), !dbg !200
+SW(23)@328\n   %6 = bitcast i8* %5 to float*, !dbg !200
+SW(24)@327\n   call void @llvm.dbg.value(metadata !{float* %6}, i64 0, metadata !198), !dbg !199
+SW(25)@318\n   call void @llvm.dbg.value(metadata !{null}, i64 0, metadata !192), !dbg !193
+SW(26)@332\n   %7 = ptrtoint float* %2 to i32, !dbg !201
+SW(27)@332\n   %8 = call zeroext i1 @_ZL12indices_initj(i32 %7), !dbg !201
+SW(28)@336\n   %puts = call i32 @puts(i8* getelementptr inbounds ([21 x i8]* @str1, i32 0, i32 0)), !dbg !202
+SW(29)@335\n   call void @llvm.dbg.value(metadata !{i32* %number_of_indices}, i64 0, metadata !203), !dbg !204
+SW(30)@337\n   %9 = call i32 (i8*, ...)* @scanf(i8* getelementptr inbounds ([3 x i8]* @.str2, i32 0, i32 0), i32* %number_of_indices), !dbg !205
+SW(31)@338\n   %puts1 = call i32 @puts(i8* getelementptr inbounds ([2 x i8]* @str2, i32 0, i32 0)), !dbg !206
+SW(32)@316\n   call void @llvm.dbg.value(metadata !{null}, i64 0, metadata !186), !dbg !187
+SW(33)@335\n   call void @llvm.dbg.value(metadata !{i32* %number_of_indices}, i64 0, metadata !203), !dbg !204
+SW(34)@343\n   %10 = load i32* %number_of_indices, align 4, !dbg !207
+SW(35)@318\n   call void @llvm.dbg.value(metadata !{null}, i64 0, metadata !192), !dbg !193
+SW(36)@322\n   call void @llvm.dbg.value(metadata !{null}, i64 0, metadata !195), !dbg !196
+SW(37)@318\n   call void @llvm.dbg.value(metadata !{null}, i64 0, metadata !192), !dbg !193
+SW(38)@335\n   call void @llvm.dbg.value(metadata !{i32* %number_of_indices}, i64 0, metadata !203), !dbg !204
+SW(39)@353\n   %12 = load i32* %number_of_indices, align 4, !dbg !208
+SW(40)@316\n   call void @llvm.dbg.value(metadata !{null}, i64 0, metadata !186), !dbg !187
+SW(41)@327\n   call void @llvm.dbg.value(metadata !{null}, i64 0, metadata !198), !dbg !199
+SW(42)@335\n   call void @llvm.dbg.value(metadata !{i32* %number_of_indices}, i64 0, metadata !203), !dbg !204
+SW(43)@361\n   %13 = load i32* %number_of_indices, align 4, !dbg !209
+SW(44)@335\n   call void @llvm.dbg.value(metadata !{i32* %number_of_indices}, i64 0, metadata !203), !dbg !204
+SW(45)@361\n   %14 = add nsw i32 %13, -1, !dbg !209
+SW(46)@361\n   %15 = mul nsw i32 %13, %14, !dbg !209
+SW(47)@361\n   %16 = sdiv i32 %15, 2, !dbg !209
+SW(48)@361\n   call void @llvm.dbg.value(metadata !{i32 %16}, i64 0, metadata !210), !dbg !211
+SW(49)@322\n   call void @llvm.dbg.value(metadata !{null}, i64 0, metadata !195), !dbg !196
+SW(50)@327\n   call void @llvm.dbg.value(metadata !{null}, i64 0, metadata !198), !dbg !199
+SW(51)@366\n   ret i32 0, !dbg !213

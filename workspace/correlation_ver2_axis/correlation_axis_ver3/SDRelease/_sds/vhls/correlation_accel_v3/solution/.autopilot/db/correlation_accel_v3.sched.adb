@@ -523,7 +523,7 @@
 					<Obj>
 						<type>0</type>
 						<id>21</id>
-						<name>number_of_indices15_channel</name>
+						<name>number_of_days15_channel</name>
 						<fileName></fileName>
 						<fileDirectory></fileDirectory>
 						<lineNumber>0</lineNumber>
@@ -550,7 +550,7 @@
 					<Obj>
 						<type>0</type>
 						<id>22</id>
-						<name>number_of_days14_channel</name>
+						<name>number_of_indices14_channel</name>
 						<fileName></fileName>
 						<fileDirectory></fileDirectory>
 						<lineNumber>0</lineNumber>
@@ -1381,13 +1381,13 @@
 			<item class_id_reference="20" object_id="_69">
 				<id>116</id>
 				<edge_type>1</edge_type>
-				<source_obj>22</source_obj>
+				<source_obj>21</source_obj>
 				<sink_obj>74</sink_obj>
 			</item>
 			<item class_id_reference="20" object_id="_70">
 				<id>117</id>
 				<edge_type>1</edge_type>
-				<source_obj>21</source_obj>
+				<source_obj>22</source_obj>
 				<sink_obj>74</sink_obj>
 			</item>
 			<item class_id_reference="20" object_id="_71">
@@ -1686,7 +1686,7 @@
 							</item>
 							<item class_id_reference="28" object_id="_128">
 								<port class_id_reference="29" object_id="_129">
-									<name>NUMBER_OF_DAYS_out</name>
+									<name>NUMBER_OF_INDICES_out</name>
 									<dir>0</dir>
 									<type>1</type>
 								</port>
@@ -1694,7 +1694,7 @@
 							</item>
 							<item class_id_reference="28" object_id="_130">
 								<port class_id_reference="29" object_id="_131">
-									<name>NUMBER_OF_INDICES_out</name>
+									<name>NUMBER_OF_DAYS_out</name>
 									<dir>0</dir>
 									<type>1</type>
 								</port>
@@ -2065,7 +2065,7 @@
 					</item>
 					<item class_id_reference="32" object_id="_212">
 						<type>1</type>
-						<name>number_of_days14_channel</name>
+						<name>number_of_indices14_channel</name>
 						<ssdmobj_id>22</ssdmobj_id>
 						<ctype>0</ctype>
 						<depth>1</depth>
@@ -2089,7 +2089,7 @@
 					</item>
 					<item class_id_reference="32" object_id="_217">
 						<type>1</type>
-						<name>number_of_indices15_channel</name>
+						<name>number_of_days15_channel</name>
 						<ssdmobj_id>21</ssdmobj_id>
 						<ctype>0</ctype>
 						<depth>1</depth>

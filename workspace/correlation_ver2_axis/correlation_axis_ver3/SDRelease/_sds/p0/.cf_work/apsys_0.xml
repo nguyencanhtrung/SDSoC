@@ -42,7 +42,7 @@
     <cf:dataMover cf:compName="zed" cf:softwareLib="axi_lite"/>
   </cf:connection>
   <cf:connection cf:srcInst="swinst_correlation_accel_v3_0" cf:srcPort="in_indices" cf:dstInst="hwinst_correlation_accel_v3_0" cf:dstPort="in_indices">
-    <cf:dataMover cf:compName="datamover_0" cf:softwareLib="axi_dma_simple"/>
+    <cf:dataMover cf:compName="datamover_0" cf:softwareLib="axi_dma_sg"/>
   </cf:connection>
   <cf:connection cf:srcInst="hwinst_correlation_accel_v3_0" cf:srcPort="out_correlation" cf:dstInst="swinst_correlation_accel_v3_0" cf:dstPort="out_correlation">
     <cf:dataMover cf:compName="datamover_1" cf:softwareLib="axi_dma_simple"/>

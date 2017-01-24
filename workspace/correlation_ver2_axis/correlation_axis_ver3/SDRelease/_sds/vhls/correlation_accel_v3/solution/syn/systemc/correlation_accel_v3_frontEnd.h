@@ -67,12 +67,12 @@ struct correlation_accel_v3_frontEnd : public sc_module {
     sc_out< sc_lv<32> > sum_weight_returnA_out_V_din;
     sc_in< sc_logic > sum_weight_returnA_out_V_full_n;
     sc_out< sc_logic > sum_weight_returnA_out_V_write;
-    sc_out< sc_lv<32> > NUMBER_OF_DAYS_out_din;
-    sc_in< sc_logic > NUMBER_OF_DAYS_out_full_n;
-    sc_out< sc_logic > NUMBER_OF_DAYS_out_write;
     sc_out< sc_lv<32> > NUMBER_OF_INDICES_out_din;
     sc_in< sc_logic > NUMBER_OF_INDICES_out_full_n;
     sc_out< sc_logic > NUMBER_OF_INDICES_out_write;
+    sc_out< sc_lv<32> > NUMBER_OF_DAYS_out_din;
+    sc_in< sc_logic > NUMBER_OF_DAYS_out_full_n;
+    sc_out< sc_logic > NUMBER_OF_DAYS_out_write;
 
 
     // Module declarations

@@ -1,0 +1,68 @@
+(c) Copyright 2012-2015 Xilinx, Inc. All Rights Reserved.
+#-----------------------------------------------------------
+# Tool version  : sds++ 2014.4 20150228
+# Start time    : Mon Oct 31 04:05:39 PM CET 2016
+# Command line  : sds++ -o correlation_ver1_linux.elf ./src/correlation_accel_v1.o ./src/main.o -lm -sds-pf zed
+# Log file      : /home/trungnguyen/SDSoC/workspace/correlation_ver1/correlation_ver1_linux/SDDebug/_sds/reports/sds.log
+# Journal file  : /home/trungnguyen/SDSoC/workspace/correlation_ver1/correlation_ver1_linux/SDDebug/_sds/reports/sds.jou
+# Report file   : /home/trungnguyen/SDSoC/workspace/correlation_ver1/correlation_ver1_linux/SDDebug/_sds/reports/sds.rpt
+#-----------------------------------------------------------
+
+INFO: [SDSoC 0-0] Removing implementation files from previous run
+Libraries: m
+Library Paths {}
+Searching for static library libm.a
+INFO: [SDSoC 0-0] Analyzing object files
+arm-xilinx-linux-gnueabi-objcopy -O binary --set-section-flags .xddata=alloc --only-section=.xddata /home/trungnguyen/SDSoC/workspace/correlation_ver1/correlation_ver1_linux/SDDebug/src/correlation_accel_v1.o /home/trungnguyen/SDSoC/workspace/correlation_ver1/correlation_ver1_linux/SDDebug/_sds/.data/correlation_accel_v1.o.xml
+arm-xilinx-linux-gnueabi-objcopy -O binary --set-section-flags .xddata=alloc --only-section=.xddata /home/trungnguyen/SDSoC/workspace/correlation_ver1/correlation_ver1_linux/SDDebug/src/main.o /home/trungnguyen/SDSoC/workspace/correlation_ver1/correlation_ver1_linux/SDDebug/_sds/.data/main.o.xml
+build_xd_ip_db  -sdsoc  -sds-pf /opt/Xilinx/SDSoC/2014.4/platforms/zed/zed_hw.pfm    -o /home/trungnguyen/SDSoC/workspace/correlation_ver1/correlation_ver1_linux/SDDebug/_sds/.cdb/xd_ip_db.xml  
+INFO: Using user-defined path for XILINX_XD environment variable /opt/Xilinx/SDSoC/2014.4
+INFO: [SDSoC 0-0] Generating data motion network
+llvm-link -o /home/trungnguyen/SDSoC/workspace/correlation_ver1/correlation_ver1_linux/SDDebug/_sds/.llvm/sdi_all.o /home/trungnguyen/SDSoC/workspace/correlation_ver1/correlation_ver1_linux/SDDebug/_sds/.llvm/./src/correlation_accel_v1.s /home/trungnguyen/SDSoC/workspace/correlation_ver1/correlation_ver1_linux/SDDebug/_sds/.llvm/./src/main.s
+XidanePass  --platform zed  --dmclkid 1  --repo /home/trungnguyen/SDSoC/workspace/correlation_ver1/correlation_ver1_linux/SDDebug/_sds/.cdb/xd_ip_db.xml  --dmdb /opt/Xilinx/SDSoC/2014.4/data/DM.db   -os linux 
+INFO: [SDSoC 0-0] Analyzing hardware accelerators...
+INFO: [SDSoC 0-0] No hardware accelerators specified.
+INFO: [SDSoC 0-0] Using prebuilt hardware
+INFO: [SDSoC 0-0] Skipping block diagram (BD), address map, port information and device registration for partition 0
+INFO: [SDSoC 0-0] Prepare hardware access API functions
+INFO: [SDSoC 0-0] Compile hardware access API functions
+INFO: [SDSoC 0-0] Compile accelerator stub functions
+arm-xilinx-linux-gnueabi-gcc -I /opt/Xilinx/SDSoC/2014.4/arm-xilinx-linux-gnueabi/include  -I /opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/include    -c  /home/trungnguyen/SDSoC/workspace/correlation_ver1/correlation_ver1_linux/SDDebug/_sds/swstubs/devreg.c
+arm-xilinx-linux-gnueabi-gcc -I /opt/Xilinx/SDSoC/2014.4/arm-xilinx-linux-gnueabi/include  -I /opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/include    -c  /home/trungnguyen/SDSoC/workspace/correlation_ver1/correlation_ver1_linux/SDDebug/_sds/swstubs/portinfo.c
+arm-xilinx-linux-gnueabi-g++ -I /opt/Xilinx/SDSoC/2014.4/arm-xilinx-linux-gnueabi/include  -I /opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/include    -c  /home/trungnguyen/SDSoC/workspace/correlation_ver1/correlation_ver1_linux/SDDebug/_sds/swstubs/cf_stub.c
+arm-xilinx-linux-gnueabi-ar crs /home/trungnguyen/SDSoC/workspace/correlation_ver1/correlation_ver1_linux/SDDebug/_sds/swstubs/libxlnk_stub.a /home/trungnguyen/SDSoC/workspace/correlation_ver1/correlation_ver1_linux/SDDebug/_sds/swstubs/devreg.o /home/trungnguyen/SDSoC/workspace/correlation_ver1/correlation_ver1_linux/SDDebug/_sds/swstubs/portinfo.o /home/trungnguyen/SDSoC/workspace/correlation_ver1/correlation_ver1_linux/SDDebug/_sds/swstubs/cf_stub.o
+arm-xilinx-linux-gnueabi-ar crs /home/trungnguyen/SDSoC/workspace/correlation_ver1/correlation_ver1_linux/SDDebug/_sds/swstubs/libcorrelation_ver1_linux.a /home/trungnguyen/SDSoC/workspace/correlation_ver1/correlation_ver1_linux/SDDebug/_sds/swstubs/devreg.o /home/trungnguyen/SDSoC/workspace/correlation_ver1/correlation_ver1_linux/SDDebug/_sds/swstubs/portinfo.o /home/trungnguyen/SDSoC/workspace/correlation_ver1/correlation_ver1_linux/SDDebug/_sds/swstubs/cf_stub.o 
+INFO: [SDSoC 0-0] Link application ELF file
+arm-xilinx-linux-gnueabi-g++   /home/trungnguyen/SDSoC/workspace/correlation_ver1/correlation_ver1_linux/SDDebug/src/correlation_accel_v1.o /home/trungnguyen/SDSoC/workspace/correlation_ver1/correlation_ver1_linux/SDDebug/src/main.o  /home/trungnguyen/SDSoC/workspace/correlation_ver1/correlation_ver1_linux/SDDebug/_sds/swstubs/devreg.o /home/trungnguyen/SDSoC/workspace/correlation_ver1/correlation_ver1_linux/SDDebug/_sds/swstubs/portinfo.o -lm   -L /opt/Xilinx/SDSoC/2014.4/arm-xilinx-linux-gnueabi/lib -L/home/trungnguyen/SDSoC/workspace/correlation_ver1/correlation_ver1_linux/SDDebug/_sds/swstubs -Wl,--start-group  -Wl,--end-group -Wl,--start-group    -lpthread -lsds_lib -lxlnk_stub  -Wl,--end-group -o /home/trungnguyen/SDSoC/workspace/correlation_ver1/correlation_ver1_linux/SDDebug/_sds/swstubs/correlation_ver1_linux.elf
+/home/trungnguyen/SDSoC/workspace/correlation_ver1/correlation_ver1_linux/SDDebug/src/correlation_accel_v1.o: In function `xil_fpo_mul_flt(float, float)':
+/opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/include/hls_fpo.h:225: undefined reference to `xip_fpo_mul_flt'
+/home/trungnguyen/SDSoC/workspace/correlation_ver1/correlation_ver1_linux/SDDebug/src/correlation_accel_v1.o: In function `xil_fpo_mul_d(double, double)':
+/opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/include/hls_fpo.h:234: undefined reference to `xip_fpo_mul_d'
+/home/trungnguyen/SDSoC/workspace/correlation_ver1/correlation_ver1_linux/SDDebug/src/correlation_accel_v1.o: In function `xil_fpo_div_flt(float, float)':
+/opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/include/hls_fpo.h:247: undefined reference to `xip_fpo_div_flt'
+/home/trungnguyen/SDSoC/workspace/correlation_ver1/correlation_ver1_linux/SDDebug/src/correlation_accel_v1.o: In function `xil_fpo_div_d(double, double)':
+/opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/include/hls_fpo.h:256: undefined reference to `xip_fpo_div_d'
+/home/trungnguyen/SDSoC/workspace/correlation_ver1/correlation_ver1_linux/SDDebug/src/correlation_accel_v1.o: In function `xil_fpo_rec_flt(float)':
+/opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/include/hls_fpo.h:269: undefined reference to `xip_fpo_rec_flt'
+/home/trungnguyen/SDSoC/workspace/correlation_ver1/correlation_ver1_linux/SDDebug/src/correlation_accel_v1.o: In function `xil_fpo_rec_d(double)':
+/opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/include/hls_fpo.h:278: undefined reference to `xip_fpo_rec_d'
+/home/trungnguyen/SDSoC/workspace/correlation_ver1/correlation_ver1_linux/SDDebug/src/correlation_accel_v1.o: In function `xil_fpo_sqrt_flt(float)':
+/opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/include/hls_fpo.h:292: undefined reference to `xip_fpo_sqrt_flt'
+/home/trungnguyen/SDSoC/workspace/correlation_ver1/correlation_ver1_linux/SDDebug/src/correlation_accel_v1.o: In function `xil_fpo_sqrt_d(double)':
+/opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/include/hls_fpo.h:302: undefined reference to `xip_fpo_sqrt_d'
+/home/trungnguyen/SDSoC/workspace/correlation_ver1/correlation_ver1_linux/SDDebug/src/correlation_accel_v1.o: In function `xil_fpo_recsqrt_flt(float)':
+/opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/include/hls_fpo.h:316: undefined reference to `xip_fpo_recsqrt_flt'
+/home/trungnguyen/SDSoC/workspace/correlation_ver1/correlation_ver1_linux/SDDebug/src/correlation_accel_v1.o: In function `xil_fpo_recsqrt_d(double)':
+/opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/include/hls_fpo.h:325: undefined reference to `xip_fpo_recsqrt_d'
+/home/trungnguyen/SDSoC/workspace/correlation_ver1/correlation_ver1_linux/SDDebug/src/correlation_accel_v1.o: In function `xil_fpo_log_flt(float)':
+/opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/include/hls_fpo.h:358: undefined reference to `xip_fpo_log_flt'
+/home/trungnguyen/SDSoC/workspace/correlation_ver1/correlation_ver1_linux/SDDebug/src/correlation_accel_v1.o: In function `xil_fpo_log_d(double)':
+/opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/include/hls_fpo.h:367: undefined reference to `xip_fpo_log_d'
+/home/trungnguyen/SDSoC/workspace/correlation_ver1/correlation_ver1_linux/SDDebug/src/correlation_accel_v1.o: In function `xil_fpo_exp_flt(float)':
+/opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/include/hls_fpo.h:381: undefined reference to `xip_fpo_exp_flt'
+/home/trungnguyen/SDSoC/workspace/correlation_ver1/correlation_ver1_linux/SDDebug/src/correlation_accel_v1.o: In function `xil_fpo_exp_d(double)':
+/opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/include/hls_fpo.h:394: undefined reference to `xip_fpo_exp_d'
+collect2: error: ld returned 1 exit status
+ERROR: [SDSoC 0-0] Exiting sds++ : Error when calling 'arm-xilinx-linux-gnueabi-g++   /home/trungnguyen/SDSoC/workspace/correlation_ver1/correlation_ver1_linux/SDDebug/src/correlation_accel_v1.o /home/trungnguyen/SDSoC/workspace/correlation_ver1/correlation_ver1_linux/SDDebug/src/main.o  /home/trungnguyen/SDSoC/workspace/correlation_ver1/correlation_ver1_linux/SDDebug/_sds/swstubs/devreg.o /home/trungnguyen/SDSoC/workspace/correlation_ver1/correlation_ver1_linux/SDDebug/_sds/swstubs/portinfo.o -lm   -L /opt/Xilinx/SDSoC/2014.4/arm-xilinx-linux-gnueabi/lib -L/home/trungnguyen/SDSoC/workspace/correlation_ver1/correlation_ver1_linux/SDDebug/_sds/swstubs -Wl,--start-group  -Wl,--end-group -Wl,--start-group    -lpthread -lsds_lib -lxlnk_stub  -Wl,--end-group -o /home/trungnguyen/SDSoC/workspace/correlation_ver1/correlation_ver1_linux/SDDebug/_sds/swstubs/correlation_ver1_linux.elf'
+sds++ log file saved as /home/trungnguyen/SDSoC/workspace/correlation_ver1/correlation_ver1_linux/SDDebug/_sds/reports/sds.log
+sds++ completed at Mon Oct 31 04:05:45 PM CET 2016

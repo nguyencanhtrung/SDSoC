@@ -1,0 +1,785 @@
+; ModuleID = '/home/trungnguyen/SDSoC/workspace/correlation_ver1/correlation_ver1_linux/SDDebug/_sds/vhls/mmult/solution/.autopilot/db/a.o.2.bc'
+target datalayout = "e-p:64:64:64-i1:8:8-i8:8:8-i16:16:16-i32:32:32-i64:64:64-f32:32:32-f64:64:64-v64:64:64-v128:128:128-a0:0:64-s0:64:64-f80:128:128-n8:16:32:64-S128"
+target triple = "x86_64-unknown-linux-gnu"
+
+@p_str = private unnamed_addr constant [1 x i8] zeroinitializer, align 1
+@p_str2 = private unnamed_addr constant [12 x i8] c"hls_label_3\00", align 1
+@p_str3 = private unnamed_addr constant [5 x i8] c"axis\00", align 1
+@p_str4 = private unnamed_addr constant [13 x i8] c"ap_ctrl_none\00", align 1
+@p_str5 = private unnamed_addr constant [12 x i8] c"hls_label_4\00", align 1
+@p_str6 = private unnamed_addr constant [12 x i8] c"hls_label_5\00", align 1
+@p_str7 = private unnamed_addr constant [12 x i8] c"hls_label_6\00", align 1
+@llvm_global_ctors_0 = appending global [1 x i32] [i32 65535]
+@llvm_global_ctors_1 = appending global [1 x void ()*] [void ()* @_GLOBAL__I_a]
+@str = internal constant [6 x i8] c"mmult\00"
+
+declare void @llvm.dbg.declare(metadata, metadata) nounwind readnone
+
+define weak void @_ssdm_op_SpecPipeline(...) nounwind {
+entry:
+  ret void
+}
+
+define weak void @_ssdm_op_SpecLatency(...) nounwind {
+entry:
+  ret void
+}
+
+define weak void @_ssdm_op_SpecInterface(...) nounwind {
+entry:
+  ret void
+}
+
+declare void @llvm.dbg.value(metadata, i64, metadata) nounwind readnone
+
+define weak void @_ssdm_op_SpecTopModule(...) {
+entry:
+  ret void
+}
+
+declare void @_GLOBAL__I_a() nounwind section ".text.startup"
+
+define weak i32 @_ssdm_op_SpecRegionBegin(...) {
+entry:
+  ret i32 0
+}
+
+define weak i32 @_ssdm_op_SpecRegionEnd(...) {
+entry:
+  ret i32 0
+}
+
+define weak void @_ssdm_op_SpecBitsMap(...) {
+entry:
+  ret void
+}
+
+define weak i32 @_ssdm_op_SpecLoopTripCount(...) {
+entry:
+  ret i32 0
+}
+
+define void @mmult(i32* %A_data_V, i4* %A_keep_V, i4* %A_strb_V, i1* %A_user_V, i1* %A_last_V, i1* %A_id_V, i1* %A_dest_V, i32* %B_data_V, i4* %B_keep_V, i4* %B_strb_V, i1* %B_user_V, i1* %B_last_V, i1* %B_id_V, i1* %B_dest_V, i32* %C_data_V, i4* %C_keep_V, i4* %C_strb_V, i1* %C_user_V, i1* %C_last_V, i1* %C_id_V, i1* %C_dest_V) {
+  call void (...)* @_ssdm_op_SpecBitsMap(i32* %A_data_V), !map !7
+  call void (...)* @_ssdm_op_SpecBitsMap(i4* %A_keep_V), !map !13
+  call void (...)* @_ssdm_op_SpecBitsMap(i4* %A_strb_V), !map !17
+  call void (...)* @_ssdm_op_SpecBitsMap(i1* %A_user_V), !map !21
+  call void (...)* @_ssdm_op_SpecBitsMap(i1* %A_last_V), !map !25
+  call void (...)* @_ssdm_op_SpecBitsMap(i1* %A_id_V), !map !29
+  call void (...)* @_ssdm_op_SpecBitsMap(i1* %A_dest_V), !map !33
+  call void (...)* @_ssdm_op_SpecBitsMap(i32* %B_data_V), !map !37
+  call void (...)* @_ssdm_op_SpecBitsMap(i4* %B_keep_V), !map !41
+  call void (...)* @_ssdm_op_SpecBitsMap(i4* %B_strb_V), !map !45
+  call void (...)* @_ssdm_op_SpecBitsMap(i1* %B_user_V), !map !49
+  call void (...)* @_ssdm_op_SpecBitsMap(i1* %B_last_V), !map !53
+  call void (...)* @_ssdm_op_SpecBitsMap(i1* %B_id_V), !map !57
+  call void (...)* @_ssdm_op_SpecBitsMap(i1* %B_dest_V), !map !61
+  call void (...)* @_ssdm_op_SpecBitsMap(i32* %C_data_V), !map !65
+  call void (...)* @_ssdm_op_SpecBitsMap(i4* %C_keep_V), !map !69
+  call void (...)* @_ssdm_op_SpecBitsMap(i4* %C_strb_V), !map !73
+  call void (...)* @_ssdm_op_SpecBitsMap(i1* %C_user_V), !map !77
+  call void (...)* @_ssdm_op_SpecBitsMap(i1* %C_last_V), !map !81
+  call void (...)* @_ssdm_op_SpecBitsMap(i1* %C_id_V), !map !85
+  call void (...)* @_ssdm_op_SpecBitsMap(i1* %C_dest_V), !map !89
+  call void (...)* @_ssdm_op_SpecTopModule([6 x i8]* @str) nounwind
+  %A_buf_0 = alloca [128 x float], align 4
+  %A_buf_1 = alloca [128 x float], align 4
+  %A_buf_2 = alloca [128 x float], align 4
+  %A_buf_3 = alloca [128 x float], align 4
+  %A_buf_4 = alloca [128 x float], align 4
+  %A_buf_5 = alloca [128 x float], align 4
+  %A_buf_6 = alloca [128 x float], align 4
+  %A_buf_7 = alloca [128 x float], align 4
+  %B_buf_0 = alloca [128 x float], align 4
+  %B_buf_1 = alloca [128 x float], align 4
+  %B_buf_2 = alloca [128 x float], align 4
+  %B_buf_3 = alloca [128 x float], align 4
+  %B_buf_4 = alloca [128 x float], align 4
+  %B_buf_5 = alloca [128 x float], align 4
+  %B_buf_6 = alloca [128 x float], align 4
+  %B_buf_7 = alloca [128 x float], align 4
+  %C_buf = alloca [1024 x float], align 4
+  call void (...)* @_ssdm_op_SpecLatency(i32 1, i32 65535, [1 x i8]* @p_str) nounwind
+  call void (...)* @_ssdm_op_SpecInterface(i32* %A_data_V, i4* %A_keep_V, i4* %A_strb_V, i1* %A_user_V, i1* %A_last_V, i1* %A_id_V, i1* %A_dest_V, [5 x i8]* @p_str3, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str)
+  call void (...)* @_ssdm_op_SpecInterface(i32* %B_data_V, i4* %B_keep_V, i4* %B_strb_V, i1* %B_user_V, i1* %B_last_V, i1* %B_id_V, i1* %B_dest_V, [5 x i8]* @p_str3, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str)
+  call void (...)* @_ssdm_op_SpecInterface(i32* %C_data_V, i4* %C_keep_V, i4* %C_strb_V, i1* %C_user_V, i1* %C_last_V, i1* %C_id_V, i1* %C_dest_V, [5 x i8]* @p_str3, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str)
+  call void (...)* @_ssdm_op_SpecInterface(i32 0, [13 x i8]* @p_str4, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str) nounwind
+  br label %1
+
+; <label>:1                                       ; preds = %0, %2
+  %indvar_flatten = phi i11 [ 0, %0 ], [ %indvar_flatten_next, %2 ]
+  %indvars_iv1 = phi i11 [ 32, %0 ], [ %indvars_iv1_mid2, %2 ]
+  %i = phi i6 [ 0, %0 ], [ %i_mid2, %2 ]
+  %k = phi i11 [ 0, %0 ], [ %k_mid2, %2 ]
+  %k_1 = phi i11 [ 0, %0 ], [ %tmp_8, %2 ]
+  %j = phi i6 [ 0, %0 ], [ %j_1, %2 ]
+  %tmp1_dest_V = alloca i1, align 1
+  %tmp1_id_V = alloca i1, align 1
+  %tmp1_last_V = alloca i1, align 1
+  %tmp1_user_V = alloca i1, align 1
+  %tmp1_strb_V = alloca i4, align 1
+  %tmp1_keep_V = alloca i4, align 1
+  %exitcond_flatten = icmp eq i11 %indvar_flatten, -1024
+  %indvar_flatten_next = add i11 %indvar_flatten, 1
+  br i1 %exitcond_flatten, label %.preheader.preheader, label %.reset
+
+; <label>:2                                       ; preds = %branch7, %branch6, %branch5, %branch4, %branch3, %branch2, %branch1, %branch0
+  store volatile i4 %tmp1_keep_V_1, i4* %tmp1_keep_V, align 4
+  store volatile i4 %tmp1_strb_V_1, i4* %tmp1_strb_V, align 1
+  store volatile i1 %tmp1_user_V_1, i1* %tmp1_user_V, align 2
+  store volatile i1 %tmp1_last_V_1, i1* %tmp1_last_V, align 1
+  store volatile i1 %tmp1_id_V_1, i1* %tmp1_id_V, align 4
+  store volatile i1 %tmp1_dest_V_1, i1* %tmp1_dest_V, align 1
+  %empty = call i32 (...)* @_ssdm_op_SpecRegionEnd([12 x i8]* @p_str5, i32 %tmp_2)
+  %j_1 = add i6 %j_mid2, 1
+  %tmp_8 = add i11 %k_1_mid2, 1
+  br label %1
+
+.reset:                                           ; preds = %1
+  %k_2_dup = add i11 %k, 32
+  %empty_5 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 1024, i64 1024, i64 1024)
+  %exitcond = icmp eq i11 %k_1, %indvars_iv1
+  %k_1_mid2 = select i1 %exitcond, i11 %k_2_dup, i11 %k_1
+  %j_mid2 = select i1 %exitcond, i6 0, i6 %j
+  %indvars_iv_next1_dup = add i11 %indvars_iv1, 32
+  %indvars_iv1_mid2 = select i1 %exitcond, i11 %indvars_iv_next1_dup, i11 %indvars_iv1
+  %i_s = add i6 %i, 1
+  %i_mid2 = select i1 %exitcond, i6 %i_s, i6 %i
+  %k_mid2 = select i1 %exitcond, i11 %k_2_dup, i11 %k
+  %tmp_2 = call i32 (...)* @_ssdm_op_SpecRegionBegin([12 x i8]* @p_str5)
+  call void (...)* @_ssdm_op_SpecPipeline(i32 1, i32 1, i32 1, i32 0, [1 x i8]* @p_str) nounwind
+  %empty_6 = call { i32, i4, i4, i1, i1, i1, i1 } @_ssdm_op_Read.axis.volatile.i32P.i4P.i4P.i1P.i1P.i1P.i1P(i32* %A_data_V, i4* %A_keep_V, i4* %A_strb_V, i1* %A_user_V, i1* %A_last_V, i1* %A_id_V, i1* %A_dest_V)
+  %A_data_V_tmp = extractvalue { i32, i4, i4, i1, i1, i1, i1 } %empty_6, 0
+  %tmp1_keep_V_1 = extractvalue { i32, i4, i4, i1, i1, i1, i1 } %empty_6, 1
+  %tmp1_strb_V_1 = extractvalue { i32, i4, i4, i1, i1, i1, i1 } %empty_6, 2
+  %tmp1_user_V_1 = extractvalue { i32, i4, i4, i1, i1, i1, i1 } %empty_6, 3
+  %tmp1_last_V_1 = extractvalue { i32, i4, i4, i1, i1, i1, i1 } %empty_6, 4
+  %tmp1_id_V_1 = extractvalue { i32, i4, i4, i1, i1, i1, i1 } %empty_6, 5
+  %tmp1_dest_V_1 = extractvalue { i32, i4, i4, i1, i1, i1, i1 } %empty_6, 6
+  %tmp_5 = bitcast i32 %A_data_V_tmp to float
+  %arrayNo_cast = call i4 @_ssdm_op_PartSelect.i4.i6.i32.i32(i6 %j_mid2, i32 2, i32 5)
+  %tmp_6 = trunc i6 %j_mid2 to i2
+  %tmp = call i8 @_ssdm_op_BitConcatenate.i8.i6.i2(i6 %i_mid2, i2 %tmp_6)
+  %tmp_3 = zext i8 %tmp to i64
+  %A_buf_0_addr = getelementptr [128 x float]* %A_buf_0, i64 0, i64 %tmp_3
+  %A_buf_1_addr = getelementptr [128 x float]* %A_buf_1, i64 0, i64 %tmp_3
+  %A_buf_2_addr = getelementptr [128 x float]* %A_buf_2, i64 0, i64 %tmp_3
+  %A_buf_3_addr = getelementptr [128 x float]* %A_buf_3, i64 0, i64 %tmp_3
+  %A_buf_4_addr = getelementptr [128 x float]* %A_buf_4, i64 0, i64 %tmp_3
+  %A_buf_5_addr = getelementptr [128 x float]* %A_buf_5, i64 0, i64 %tmp_3
+  %A_buf_6_addr = getelementptr [128 x float]* %A_buf_6, i64 0, i64 %tmp_3
+  %A_buf_7_addr = getelementptr [128 x float]* %A_buf_7, i64 0, i64 %tmp_3
+  switch i4 %arrayNo_cast, label %branch7 [
+    i4 0, label %branch0
+    i4 1, label %branch1
+    i4 2, label %branch2
+    i4 3, label %branch3
+    i4 4, label %branch4
+    i4 5, label %branch5
+    i4 6, label %branch6
+  ]
+
+.preheader.preheader:                             ; preds = %1, %3
+  %indvar_flatten7 = phi i11 [ %indvar_flatten_next8, %3 ], [ 0, %1 ]
+  %indvars_iv2 = phi i11 [ %indvars_iv2_mid2, %3 ], [ 32, %1 ]
+  %l = phi i6 [ %l_mid2, %3 ], [ 0, %1 ]
+  %n = phi i11 [ %n_mid2, %3 ], [ 0, %1 ]
+  %n_1 = phi i11 [ %tmp_7, %3 ], [ 0, %1 ]
+  %m = phi i6 [ %m_1, %3 ], [ 0, %1 ]
+  %tmp2_dest_V = alloca i1, align 1
+  %tmp2_id_V = alloca i1, align 1
+  %tmp2_last_V = alloca i1, align 1
+  %tmp2_user_V = alloca i1, align 1
+  %tmp2_strb_V = alloca i4, align 1
+  %tmp2_keep_V = alloca i4, align 1
+  %exitcond_flatten9 = icmp eq i11 %indvar_flatten7, -1024
+  %indvar_flatten_next8 = add i11 %indvar_flatten7, 1
+  br i1 %exitcond_flatten9, label %.preheader.i, label %.preheader
+
+; <label>:3                                       ; preds = %branch15, %branch14, %branch13, %branch12, %branch11, %branch10, %branch9, %branch8
+  store volatile i4 %tmp2_keep_V_1, i4* %tmp2_keep_V, align 4
+  store volatile i4 %tmp2_strb_V_1, i4* %tmp2_strb_V, align 1
+  store volatile i1 %tmp2_user_V_1, i1* %tmp2_user_V, align 2
+  store volatile i1 %tmp2_last_V_1, i1* %tmp2_last_V, align 1
+  store volatile i1 %tmp2_id_V_1, i1* %tmp2_id_V, align 4
+  store volatile i1 %tmp2_dest_V_1, i1* %tmp2_dest_V, align 1
+  %empty_7 = call i32 (...)* @_ssdm_op_SpecRegionEnd([12 x i8]* @p_str6, i32 %tmp_s)
+  %m_1 = add i6 %m_mid2, 1
+  %tmp_7 = add i11 %n_1_mid2, 1
+  br label %.preheader.preheader
+
+.preheader:                                       ; preds = %.preheader.preheader
+  %n_2_dup = add i11 %n, 32
+  %empty_8 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 1024, i64 1024, i64 1024)
+  %exitcond1 = icmp eq i11 %n_1, %indvars_iv2
+  %n_1_mid2 = select i1 %exitcond1, i11 %n_2_dup, i11 %n_1
+  %m_mid2 = select i1 %exitcond1, i6 0, i6 %m
+  %indvars_iv_next2_dup = add i11 %indvars_iv2, 32
+  %indvars_iv2_mid2 = select i1 %exitcond1, i11 %indvars_iv_next2_dup, i11 %indvars_iv2
+  %l_s = add i6 %l, 1
+  %l_mid2 = select i1 %exitcond1, i6 %l_s, i6 %l
+  %n_mid2 = select i1 %exitcond1, i11 %n_2_dup, i11 %n
+  %arrayNo1_cast = call i4 @_ssdm_op_PartSelect.i4.i6.i32.i32(i6 %l_mid2, i32 2, i32 5)
+  %tmp_s = call i32 (...)* @_ssdm_op_SpecRegionBegin([12 x i8]* @p_str6)
+  call void (...)* @_ssdm_op_SpecPipeline(i32 1, i32 1, i32 1, i32 0, [1 x i8]* @p_str) nounwind
+  %empty_9 = call { i32, i4, i4, i1, i1, i1, i1 } @_ssdm_op_Read.axis.volatile.i32P.i4P.i4P.i1P.i1P.i1P.i1P(i32* %B_data_V, i4* %B_keep_V, i4* %B_strb_V, i1* %B_user_V, i1* %B_last_V, i1* %B_id_V, i1* %B_dest_V)
+  %B_data_V_tmp = extractvalue { i32, i4, i4, i1, i1, i1, i1 } %empty_9, 0
+  %tmp2_keep_V_1 = extractvalue { i32, i4, i4, i1, i1, i1, i1 } %empty_9, 1
+  %tmp2_strb_V_1 = extractvalue { i32, i4, i4, i1, i1, i1, i1 } %empty_9, 2
+  %tmp2_user_V_1 = extractvalue { i32, i4, i4, i1, i1, i1, i1 } %empty_9, 3
+  %tmp2_last_V_1 = extractvalue { i32, i4, i4, i1, i1, i1, i1 } %empty_9, 4
+  %tmp2_id_V_1 = extractvalue { i32, i4, i4, i1, i1, i1, i1 } %empty_9, 5
+  %tmp2_dest_V_1 = extractvalue { i32, i4, i4, i1, i1, i1, i1 } %empty_9, 6
+  %tmp_1 = bitcast i32 %B_data_V_tmp to float
+  %tmp_3_trn_cast = zext i6 %m_mid2 to i8
+  %tmp_30 = trunc i6 %l_mid2 to i2
+  %tmp_9 = call i7 @_ssdm_op_BitConcatenate.i7.i2.i5(i2 %tmp_30, i5 0)
+  %p_addr_cast = zext i7 %tmp_9 to i8
+  %p_addr1 = add i8 %p_addr_cast, %tmp_3_trn_cast
+  %tmp_10 = zext i8 %p_addr1 to i64
+  %B_buf_0_addr = getelementptr [128 x float]* %B_buf_0, i64 0, i64 %tmp_10
+  %B_buf_1_addr = getelementptr [128 x float]* %B_buf_1, i64 0, i64 %tmp_10
+  %B_buf_2_addr = getelementptr [128 x float]* %B_buf_2, i64 0, i64 %tmp_10
+  %B_buf_3_addr = getelementptr [128 x float]* %B_buf_3, i64 0, i64 %tmp_10
+  %B_buf_4_addr = getelementptr [128 x float]* %B_buf_4, i64 0, i64 %tmp_10
+  %B_buf_5_addr = getelementptr [128 x float]* %B_buf_5, i64 0, i64 %tmp_10
+  %B_buf_6_addr = getelementptr [128 x float]* %B_buf_6, i64 0, i64 %tmp_10
+  %B_buf_7_addr = getelementptr [128 x float]* %B_buf_7, i64 0, i64 %tmp_10
+  switch i4 %arrayNo1_cast, label %branch15 [
+    i4 0, label %branch8
+    i4 1, label %branch9
+    i4 2, label %branch10
+    i4 3, label %branch11
+    i4 4, label %branch12
+    i4 5, label %branch13
+    i4 6, label %branch14
+  ]
+
+.preheader.i:                                     ; preds = %.preheader.preheader, %.preheader658
+  %indvar_flatten1 = phi i11 [ %indvar_flatten_next1, %.preheader658 ], [ 0, %.preheader.preheader ]
+  %i_0_i = phi i6 [ %i_0_i_mid2, %.preheader658 ], [ 0, %.preheader.preheader ]
+  %j_0_i = phi i6 [ %j_3, %.preheader658 ], [ 0, %.preheader.preheader ]
+  %exitcond_flatten1 = icmp eq i11 %indvar_flatten1, -1024
+  %indvar_flatten_next1 = add i11 %indvar_flatten1, 1
+  br i1 %exitcond_flatten1, label %mmult_kernel.exit.preheader, label %.preheader658
+
+.preheader658:                                    ; preds = %.preheader.i
+  %empty_10 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 1024, i64 1024, i64 1024)
+  %exitcond1_i = icmp eq i6 %j_0_i, -32
+  %j_0_i_mid2 = select i1 %exitcond1_i, i6 0, i6 %j_0_i
+  %i_1 = add i6 %i_0_i, 1
+  %i_0_i_mid2 = select i1 %exitcond1_i, i6 %i_1, i6 %i_0_i
+  %tmp_12 = call i8 @_ssdm_op_BitConcatenate.i8.i6.i2(i6 %i_0_i_mid2, i2 0)
+  %tmp_15 = zext i8 %tmp_12 to i64
+  %A_buf_0_addr_1 = getelementptr [128 x float]* %A_buf_0, i64 0, i64 %tmp_15
+  %A_buf_0_load = load float* %A_buf_0_addr_1, align 16
+  %tmp_16 = or i8 %tmp_12, 1
+  %p_addr2 = call i32 @_ssdm_op_BitConcatenate.i32.i24.i8(i24 0, i8 %tmp_16)
+  %tmp_17 = zext i32 %p_addr2 to i64
+  %A_buf_0_addr_2 = getelementptr [128 x float]* %A_buf_0, i64 0, i64 %tmp_17
+  %A_buf_0_load_1 = load float* %A_buf_0_addr_2, align 4
+  %tmp_18 = or i8 %tmp_12, 2
+  %p_addr3 = call i32 @_ssdm_op_BitConcatenate.i32.i24.i8(i24 0, i8 %tmp_18)
+  %tmp_19 = zext i32 %p_addr3 to i64
+  %A_buf_0_addr_3 = getelementptr [128 x float]* %A_buf_0, i64 0, i64 %tmp_19
+  %A_buf_0_load_2 = load float* %A_buf_0_addr_3, align 8
+  %tmp_20 = or i8 %tmp_12, 3
+  %p_addr4 = call i32 @_ssdm_op_BitConcatenate.i32.i24.i8(i24 0, i8 %tmp_20)
+  %tmp_21 = zext i32 %p_addr4 to i64
+  %A_buf_0_addr_4 = getelementptr [128 x float]* %A_buf_0, i64 0, i64 %tmp_21
+  %A_buf_0_load_3 = load float* %A_buf_0_addr_4, align 4
+  %A_buf_1_addr_1 = getelementptr [128 x float]* %A_buf_1, i64 0, i64 %tmp_15
+  %A_buf_1_load = load float* %A_buf_1_addr_1, align 16
+  %A_buf_1_addr_2 = getelementptr [128 x float]* %A_buf_1, i64 0, i64 %tmp_17
+  %A_buf_1_load_1 = load float* %A_buf_1_addr_2, align 4
+  %A_buf_1_addr_3 = getelementptr [128 x float]* %A_buf_1, i64 0, i64 %tmp_19
+  %A_buf_1_load_2 = load float* %A_buf_1_addr_3, align 8
+  %A_buf_1_addr_4 = getelementptr [128 x float]* %A_buf_1, i64 0, i64 %tmp_21
+  %A_buf_1_load_3 = load float* %A_buf_1_addr_4, align 4
+  %A_buf_2_addr_1 = getelementptr [128 x float]* %A_buf_2, i64 0, i64 %tmp_15
+  %A_buf_2_load = load float* %A_buf_2_addr_1, align 16
+  %A_buf_2_addr_2 = getelementptr [128 x float]* %A_buf_2, i64 0, i64 %tmp_17
+  %A_buf_2_load_1 = load float* %A_buf_2_addr_2, align 4
+  %A_buf_2_addr_3 = getelementptr [128 x float]* %A_buf_2, i64 0, i64 %tmp_19
+  %A_buf_2_load_2 = load float* %A_buf_2_addr_3, align 8
+  %A_buf_2_addr_4 = getelementptr [128 x float]* %A_buf_2, i64 0, i64 %tmp_21
+  %A_buf_2_load_3 = load float* %A_buf_2_addr_4, align 4
+  %A_buf_3_addr_1 = getelementptr [128 x float]* %A_buf_3, i64 0, i64 %tmp_15
+  %A_buf_3_load = load float* %A_buf_3_addr_1, align 16
+  %A_buf_3_addr_2 = getelementptr [128 x float]* %A_buf_3, i64 0, i64 %tmp_17
+  %A_buf_3_load_1 = load float* %A_buf_3_addr_2, align 4
+  %A_buf_3_addr_3 = getelementptr [128 x float]* %A_buf_3, i64 0, i64 %tmp_19
+  %A_buf_3_load_2 = load float* %A_buf_3_addr_3, align 8
+  %A_buf_3_addr_4 = getelementptr [128 x float]* %A_buf_3, i64 0, i64 %tmp_21
+  %A_buf_3_load_3 = load float* %A_buf_3_addr_4, align 4
+  %A_buf_4_addr_1 = getelementptr [128 x float]* %A_buf_4, i64 0, i64 %tmp_15
+  %A_buf_4_load = load float* %A_buf_4_addr_1, align 16
+  %A_buf_4_addr_2 = getelementptr [128 x float]* %A_buf_4, i64 0, i64 %tmp_17
+  %A_buf_4_load_1 = load float* %A_buf_4_addr_2, align 4
+  %A_buf_4_addr_3 = getelementptr [128 x float]* %A_buf_4, i64 0, i64 %tmp_19
+  %A_buf_4_load_2 = load float* %A_buf_4_addr_3, align 8
+  %A_buf_4_addr_4 = getelementptr [128 x float]* %A_buf_4, i64 0, i64 %tmp_21
+  %A_buf_4_load_3 = load float* %A_buf_4_addr_4, align 4
+  %A_buf_5_addr_1 = getelementptr [128 x float]* %A_buf_5, i64 0, i64 %tmp_15
+  %A_buf_5_load = load float* %A_buf_5_addr_1, align 16
+  %A_buf_5_addr_2 = getelementptr [128 x float]* %A_buf_5, i64 0, i64 %tmp_17
+  %A_buf_5_load_1 = load float* %A_buf_5_addr_2, align 4
+  %A_buf_5_addr_3 = getelementptr [128 x float]* %A_buf_5, i64 0, i64 %tmp_19
+  %A_buf_5_load_2 = load float* %A_buf_5_addr_3, align 8
+  %A_buf_5_addr_4 = getelementptr [128 x float]* %A_buf_5, i64 0, i64 %tmp_21
+  %A_buf_5_load_3 = load float* %A_buf_5_addr_4, align 4
+  %A_buf_6_addr_1 = getelementptr [128 x float]* %A_buf_6, i64 0, i64 %tmp_15
+  %A_buf_6_load = load float* %A_buf_6_addr_1, align 16
+  %A_buf_6_addr_2 = getelementptr [128 x float]* %A_buf_6, i64 0, i64 %tmp_17
+  %A_buf_6_load_1 = load float* %A_buf_6_addr_2, align 4
+  %A_buf_6_addr_3 = getelementptr [128 x float]* %A_buf_6, i64 0, i64 %tmp_19
+  %A_buf_6_load_2 = load float* %A_buf_6_addr_3, align 8
+  %A_buf_6_addr_4 = getelementptr [128 x float]* %A_buf_6, i64 0, i64 %tmp_21
+  %A_buf_6_load_3 = load float* %A_buf_6_addr_4, align 4
+  %A_buf_7_addr_1 = getelementptr [128 x float]* %A_buf_7, i64 0, i64 %tmp_15
+  %A_buf_7_load = load float* %A_buf_7_addr_1, align 16
+  %A_buf_7_addr_2 = getelementptr [128 x float]* %A_buf_7, i64 0, i64 %tmp_17
+  %A_buf_7_load_1 = load float* %A_buf_7_addr_2, align 4
+  %A_buf_7_addr_3 = getelementptr [128 x float]* %A_buf_7, i64 0, i64 %tmp_19
+  %A_buf_7_load_2 = load float* %A_buf_7_addr_3, align 8
+  %A_buf_7_addr_4 = getelementptr [128 x float]* %A_buf_7, i64 0, i64 %tmp_21
+  %A_buf_7_load_3 = load float* %A_buf_7_addr_4, align 4
+  %tmp_4 = call i32 (...)* @_ssdm_op_SpecRegionBegin([12 x i8]* @p_str2)
+  call void (...)* @_ssdm_op_SpecPipeline(i32 1, i32 1, i32 1, i32 0, [1 x i8]* @p_str) nounwind
+  %tmp_10_trn_cast1 = zext i6 %j_0_i_mid2 to i12
+  %tmp_10_trn_cast2 = zext i6 %j_0_i_mid2 to i8
+  %tmp_10_trn_cast = zext i6 %j_0_i_mid2 to i7
+  %tmp_22 = zext i6 %j_0_i_mid2 to i64
+  %B_buf_0_addr_1 = getelementptr [128 x float]* %B_buf_0, i64 0, i64 %tmp_22
+  %B_buf_0_load = load float* %B_buf_0_addr_1, align 4
+  %prod = fmul float %A_buf_0_load, %B_buf_0_load
+  %sum = fadd float %prod, 0.000000e+00
+  %p_addr5 = add i7 %tmp_10_trn_cast, 32
+  %tmp_23 = zext i7 %p_addr5 to i64
+  %B_buf_0_addr_2 = getelementptr [128 x float]* %B_buf_0, i64 0, i64 %tmp_23
+  %B_buf_0_load_1 = load float* %B_buf_0_addr_2, align 4
+  %prod_1 = fmul float %A_buf_0_load_1, %B_buf_0_load_1
+  %sum_1 = fadd float %sum, %prod_1
+  %p_addr6 = call i32 @_ssdm_op_BitConcatenate.i32.i26.i6(i26 1, i6 %j_0_i_mid2)
+  %tmp_24 = zext i32 %p_addr6 to i64
+  %B_buf_0_addr_3 = getelementptr [128 x float]* %B_buf_0, i64 0, i64 %tmp_24
+  %B_buf_0_load_2 = load float* %B_buf_0_addr_3, align 4
+  %prod_2 = fmul float %A_buf_0_load_2, %B_buf_0_load_2
+  %sum_2 = fadd float %sum_1, %prod_2
+  %p_addr7 = add i8 %tmp_10_trn_cast2, 96
+  %tmp_25 = zext i8 %p_addr7 to i64
+  %B_buf_0_addr_4 = getelementptr [128 x float]* %B_buf_0, i64 0, i64 %tmp_25
+  %B_buf_0_load_3 = load float* %B_buf_0_addr_4, align 4
+  %prod_3 = fmul float %A_buf_0_load_3, %B_buf_0_load_3
+  %sum_3 = fadd float %sum_2, %prod_3
+  %B_buf_1_addr_1 = getelementptr [128 x float]* %B_buf_1, i64 0, i64 %tmp_22
+  %B_buf_1_load = load float* %B_buf_1_addr_1, align 4
+  %prod_4 = fmul float %A_buf_1_load, %B_buf_1_load
+  %sum_4 = fadd float %sum_3, %prod_4
+  %B_buf_1_addr_2 = getelementptr [128 x float]* %B_buf_1, i64 0, i64 %tmp_23
+  %B_buf_1_load_1 = load float* %B_buf_1_addr_2, align 4
+  %prod_5 = fmul float %A_buf_1_load_1, %B_buf_1_load_1
+  %sum_5 = fadd float %sum_4, %prod_5
+  %B_buf_1_addr_3 = getelementptr [128 x float]* %B_buf_1, i64 0, i64 %tmp_24
+  %B_buf_1_load_2 = load float* %B_buf_1_addr_3, align 4
+  %prod_6 = fmul float %A_buf_1_load_2, %B_buf_1_load_2
+  %sum_6 = fadd float %sum_5, %prod_6
+  %B_buf_1_addr_4 = getelementptr [128 x float]* %B_buf_1, i64 0, i64 %tmp_25
+  %B_buf_1_load_3 = load float* %B_buf_1_addr_4, align 4
+  %prod_7 = fmul float %A_buf_1_load_3, %B_buf_1_load_3
+  %sum_7 = fadd float %sum_6, %prod_7
+  %B_buf_2_addr_1 = getelementptr [128 x float]* %B_buf_2, i64 0, i64 %tmp_22
+  %B_buf_2_load = load float* %B_buf_2_addr_1, align 4
+  %prod_8 = fmul float %A_buf_2_load, %B_buf_2_load
+  %sum_8 = fadd float %sum_7, %prod_8
+  %B_buf_2_addr_2 = getelementptr [128 x float]* %B_buf_2, i64 0, i64 %tmp_23
+  %B_buf_2_load_1 = load float* %B_buf_2_addr_2, align 4
+  %prod_9 = fmul float %A_buf_2_load_1, %B_buf_2_load_1
+  %sum_9 = fadd float %sum_8, %prod_9
+  %B_buf_2_addr_3 = getelementptr [128 x float]* %B_buf_2, i64 0, i64 %tmp_24
+  %B_buf_2_load_2 = load float* %B_buf_2_addr_3, align 4
+  %prod_s = fmul float %A_buf_2_load_2, %B_buf_2_load_2
+  %sum_s = fadd float %sum_9, %prod_s
+  %B_buf_2_addr_4 = getelementptr [128 x float]* %B_buf_2, i64 0, i64 %tmp_25
+  %B_buf_2_load_3 = load float* %B_buf_2_addr_4, align 4
+  %prod_10 = fmul float %A_buf_2_load_3, %B_buf_2_load_3
+  %sum_10 = fadd float %sum_s, %prod_10
+  %B_buf_3_addr_1 = getelementptr [128 x float]* %B_buf_3, i64 0, i64 %tmp_22
+  %B_buf_3_load = load float* %B_buf_3_addr_1, align 4
+  %prod_11 = fmul float %A_buf_3_load, %B_buf_3_load
+  %sum_11 = fadd float %sum_10, %prod_11
+  %B_buf_3_addr_2 = getelementptr [128 x float]* %B_buf_3, i64 0, i64 %tmp_23
+  %B_buf_3_load_1 = load float* %B_buf_3_addr_2, align 4
+  %prod_12 = fmul float %A_buf_3_load_1, %B_buf_3_load_1
+  %sum_12 = fadd float %sum_11, %prod_12
+  %B_buf_3_addr_3 = getelementptr [128 x float]* %B_buf_3, i64 0, i64 %tmp_24
+  %B_buf_3_load_2 = load float* %B_buf_3_addr_3, align 4
+  %prod_13 = fmul float %A_buf_3_load_2, %B_buf_3_load_2
+  %sum_13 = fadd float %sum_12, %prod_13
+  %B_buf_3_addr_4 = getelementptr [128 x float]* %B_buf_3, i64 0, i64 %tmp_25
+  %B_buf_3_load_3 = load float* %B_buf_3_addr_4, align 4
+  %prod_14 = fmul float %A_buf_3_load_3, %B_buf_3_load_3
+  %sum_14 = fadd float %sum_13, %prod_14
+  %B_buf_4_addr_1 = getelementptr [128 x float]* %B_buf_4, i64 0, i64 %tmp_22
+  %B_buf_4_load = load float* %B_buf_4_addr_1, align 4
+  %prod_15 = fmul float %A_buf_4_load, %B_buf_4_load
+  %sum_15 = fadd float %sum_14, %prod_15
+  %B_buf_4_addr_2 = getelementptr [128 x float]* %B_buf_4, i64 0, i64 %tmp_23
+  %B_buf_4_load_1 = load float* %B_buf_4_addr_2, align 4
+  %prod_16 = fmul float %A_buf_4_load_1, %B_buf_4_load_1
+  %sum_16 = fadd float %sum_15, %prod_16
+  %B_buf_4_addr_3 = getelementptr [128 x float]* %B_buf_4, i64 0, i64 %tmp_24
+  %B_buf_4_load_2 = load float* %B_buf_4_addr_3, align 4
+  %prod_17 = fmul float %A_buf_4_load_2, %B_buf_4_load_2
+  %sum_17 = fadd float %sum_16, %prod_17
+  %B_buf_4_addr_4 = getelementptr [128 x float]* %B_buf_4, i64 0, i64 %tmp_25
+  %B_buf_4_load_3 = load float* %B_buf_4_addr_4, align 4
+  %prod_18 = fmul float %A_buf_4_load_3, %B_buf_4_load_3
+  %sum_18 = fadd float %sum_17, %prod_18
+  %B_buf_5_addr_1 = getelementptr [128 x float]* %B_buf_5, i64 0, i64 %tmp_22
+  %B_buf_5_load = load float* %B_buf_5_addr_1, align 4
+  %prod_19 = fmul float %A_buf_5_load, %B_buf_5_load
+  %sum_19 = fadd float %sum_18, %prod_19
+  %B_buf_5_addr_2 = getelementptr [128 x float]* %B_buf_5, i64 0, i64 %tmp_23
+  %B_buf_5_load_1 = load float* %B_buf_5_addr_2, align 4
+  %prod_20 = fmul float %A_buf_5_load_1, %B_buf_5_load_1
+  %sum_20 = fadd float %sum_19, %prod_20
+  %B_buf_5_addr_3 = getelementptr [128 x float]* %B_buf_5, i64 0, i64 %tmp_24
+  %B_buf_5_load_2 = load float* %B_buf_5_addr_3, align 4
+  %prod_21 = fmul float %A_buf_5_load_2, %B_buf_5_load_2
+  %sum_21 = fadd float %sum_20, %prod_21
+  %B_buf_5_addr_4 = getelementptr [128 x float]* %B_buf_5, i64 0, i64 %tmp_25
+  %B_buf_5_load_3 = load float* %B_buf_5_addr_4, align 4
+  %prod_22 = fmul float %A_buf_5_load_3, %B_buf_5_load_3
+  %sum_22 = fadd float %sum_21, %prod_22
+  %B_buf_6_addr_1 = getelementptr [128 x float]* %B_buf_6, i64 0, i64 %tmp_22
+  %B_buf_6_load = load float* %B_buf_6_addr_1, align 4
+  %prod_23 = fmul float %A_buf_6_load, %B_buf_6_load
+  %sum_23 = fadd float %sum_22, %prod_23
+  %B_buf_6_addr_2 = getelementptr [128 x float]* %B_buf_6, i64 0, i64 %tmp_23
+  %B_buf_6_load_1 = load float* %B_buf_6_addr_2, align 4
+  %prod_24 = fmul float %A_buf_6_load_1, %B_buf_6_load_1
+  %sum_24 = fadd float %sum_23, %prod_24
+  %B_buf_6_addr_3 = getelementptr [128 x float]* %B_buf_6, i64 0, i64 %tmp_24
+  %B_buf_6_load_2 = load float* %B_buf_6_addr_3, align 4
+  %prod_25 = fmul float %A_buf_6_load_2, %B_buf_6_load_2
+  %sum_25 = fadd float %sum_24, %prod_25
+  %B_buf_6_addr_4 = getelementptr [128 x float]* %B_buf_6, i64 0, i64 %tmp_25
+  %B_buf_6_load_3 = load float* %B_buf_6_addr_4, align 4
+  %prod_26 = fmul float %A_buf_6_load_3, %B_buf_6_load_3
+  %sum_26 = fadd float %sum_25, %prod_26
+  %B_buf_7_addr_1 = getelementptr [128 x float]* %B_buf_7, i64 0, i64 %tmp_22
+  %B_buf_7_load = load float* %B_buf_7_addr_1, align 4
+  %prod_27 = fmul float %A_buf_7_load, %B_buf_7_load
+  %sum_27 = fadd float %sum_26, %prod_27
+  %B_buf_7_addr_2 = getelementptr [128 x float]* %B_buf_7, i64 0, i64 %tmp_23
+  %B_buf_7_load_1 = load float* %B_buf_7_addr_2, align 4
+  %prod_28 = fmul float %A_buf_7_load_1, %B_buf_7_load_1
+  %sum_28 = fadd float %sum_27, %prod_28
+  %B_buf_7_addr_3 = getelementptr [128 x float]* %B_buf_7, i64 0, i64 %tmp_24
+  %B_buf_7_load_2 = load float* %B_buf_7_addr_3, align 4
+  %prod_29 = fmul float %A_buf_7_load_2, %B_buf_7_load_2
+  %sum_29 = fadd float %sum_28, %prod_29
+  %B_buf_7_addr_4 = getelementptr [128 x float]* %B_buf_7, i64 0, i64 %tmp_25
+  %B_buf_7_load_3 = load float* %B_buf_7_addr_4, align 4
+  %prod_30 = fmul float %A_buf_7_load_3, %B_buf_7_load_3
+  %sum_30 = fadd float %sum_29, %prod_30
+  %tmp_26 = call i11 @_ssdm_op_BitConcatenate.i11.i6.i5(i6 %i_0_i_mid2, i5 0)
+  %p_addr8_cast = zext i11 %tmp_26 to i12
+  %p_addr9 = add i12 %p_addr8_cast, %tmp_10_trn_cast1
+  %tmp_27 = zext i12 %p_addr9 to i64
+  %C_buf_addr_1 = getelementptr [1024 x float]* %C_buf, i64 0, i64 %tmp_27
+  store float %sum_30, float* %C_buf_addr_1, align 4
+  %empty_11 = call i32 (...)* @_ssdm_op_SpecRegionEnd([12 x i8]* @p_str2, i32 %tmp_4)
+  %j_3 = add i6 %j_0_i_mid2, 1
+  br label %.preheader.i
+
+mmult_kernel.exit.preheader:                      ; preds = %.preheader.i, %mmult_kernel.exit
+  %indvar_flatten2 = phi i11 [ %indvar_flatten_next2, %mmult_kernel.exit ], [ 0, %.preheader.i ]
+  %indvars_iv = phi i11 [ %indvars_iv_mid2, %mmult_kernel.exit ], [ 32, %.preheader.i ]
+  %i1 = phi i6 [ %i1_mid2, %mmult_kernel.exit ], [ 0, %.preheader.i ]
+  %k2 = phi i11 [ %k2_mid2, %mmult_kernel.exit ], [ 0, %.preheader.i ]
+  %k2_1 = phi i11 [ %tmp_14, %mmult_kernel.exit ], [ 0, %.preheader.i ]
+  %j3 = phi i6 [ %j_2, %mmult_kernel.exit ], [ 0, %.preheader.i ]
+  %exitcond_flatten2 = icmp eq i11 %indvar_flatten2, -1024
+  %indvar_flatten_next2 = add i11 %indvar_flatten2, 1
+  br i1 %exitcond_flatten2, label %4, label %mmult_kernel.exit
+
+mmult_kernel.exit:                                ; preds = %mmult_kernel.exit.preheader
+  %k_3_dup = add i11 %k2, 32
+  %empty_12 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 1024, i64 1024, i64 1024)
+  %exitcond2 = icmp eq i11 %k2_1, %indvars_iv
+  %k2_1_mid2 = select i1 %exitcond2, i11 %k_3_dup, i11 %k2_1
+  %j3_mid2 = select i1 %exitcond2, i6 0, i6 %j3
+  %indvars_iv_next_dup = add i11 %indvars_iv, 32
+  %indvars_iv_mid2 = select i1 %exitcond2, i11 %indvars_iv_next_dup, i11 %indvars_iv
+  %i_2 = add i6 %i1, 1
+  %i1_mid2 = select i1 %exitcond2, i6 %i_2, i6 %i1
+  %k2_mid2 = select i1 %exitcond2, i11 %k_3_dup, i11 %k2
+  %tmp_11 = call i32 (...)* @_ssdm_op_SpecRegionBegin([12 x i8]* @p_str7)
+  call void (...)* @_ssdm_op_SpecPipeline(i32 1, i32 1, i32 1, i32 0, [1 x i8]* @p_str) nounwind
+  %tmp_12_trn_cast = zext i6 %j3_mid2 to i12
+  %tmp_28 = call i11 @_ssdm_op_BitConcatenate.i11.i6.i5(i6 %i1_mid2, i5 0)
+  %p_addr10_cast = zext i11 %tmp_28 to i12
+  %p_addr = add i12 %p_addr10_cast, %tmp_12_trn_cast
+  %tmp_29 = zext i12 %p_addr to i64
+  %C_buf_addr = getelementptr [1024 x float]* %C_buf, i64 0, i64 %tmp_29
+  %C_buf_load = load float* %C_buf_addr, align 4
+  %val_assign = bitcast float %C_buf_load to i32
+  %tmp_13 = icmp eq i11 %k2_1_mid2, 1023
+  call void @_ssdm_op_Write.axis.volatile.i32P.i4P.i4P.i1P.i1P.i1P.i1P(i32* %C_data_V, i4* %C_keep_V, i4* %C_strb_V, i1* %C_user_V, i1* %C_last_V, i1* %C_id_V, i1* %C_dest_V, i32 %val_assign, i4 -1, i4 1, i1 false, i1 %tmp_13, i1 false, i1 false)
+  %empty_13 = call i32 (...)* @_ssdm_op_SpecRegionEnd([12 x i8]* @p_str7, i32 %tmp_11)
+  %j_2 = add i6 %j3_mid2, 1
+  %tmp_14 = add i11 %k2_1_mid2, 1
+  br label %mmult_kernel.exit.preheader
+
+; <label>:4                                       ; preds = %mmult_kernel.exit.preheader
+  ret void
+
+branch0:                                          ; preds = %.reset
+  store float %tmp_5, float* %A_buf_0_addr, align 4
+  br label %2
+
+branch1:                                          ; preds = %.reset
+  store float %tmp_5, float* %A_buf_1_addr, align 4
+  br label %2
+
+branch2:                                          ; preds = %.reset
+  store float %tmp_5, float* %A_buf_2_addr, align 4
+  br label %2
+
+branch3:                                          ; preds = %.reset
+  store float %tmp_5, float* %A_buf_3_addr, align 4
+  br label %2
+
+branch4:                                          ; preds = %.reset
+  store float %tmp_5, float* %A_buf_4_addr, align 4
+  br label %2
+
+branch5:                                          ; preds = %.reset
+  store float %tmp_5, float* %A_buf_5_addr, align 4
+  br label %2
+
+branch6:                                          ; preds = %.reset
+  store float %tmp_5, float* %A_buf_6_addr, align 4
+  br label %2
+
+branch7:                                          ; preds = %.reset
+  store float %tmp_5, float* %A_buf_7_addr, align 4
+  br label %2
+
+branch8:                                          ; preds = %.preheader
+  store float %tmp_1, float* %B_buf_0_addr, align 4
+  br label %3
+
+branch9:                                          ; preds = %.preheader
+  store float %tmp_1, float* %B_buf_1_addr, align 4
+  br label %3
+
+branch10:                                         ; preds = %.preheader
+  store float %tmp_1, float* %B_buf_2_addr, align 4
+  br label %3
+
+branch11:                                         ; preds = %.preheader
+  store float %tmp_1, float* %B_buf_3_addr, align 4
+  br label %3
+
+branch12:                                         ; preds = %.preheader
+  store float %tmp_1, float* %B_buf_4_addr, align 4
+  br label %3
+
+branch13:                                         ; preds = %.preheader
+  store float %tmp_1, float* %B_buf_5_addr, align 4
+  br label %3
+
+branch14:                                         ; preds = %.preheader
+  store float %tmp_1, float* %B_buf_6_addr, align 4
+  br label %3
+
+branch15:                                         ; preds = %.preheader
+  store float %tmp_1, float* %B_buf_7_addr, align 4
+  br label %3
+}
+
+define weak i4 @_ssdm_op_PartSelect.i4.i6.i32.i32(i6, i32, i32) nounwind readnone {
+entry:
+  %empty = call i6 @llvm.part.select.i6(i6 %0, i32 %1, i32 %2)
+  %empty_14 = trunc i6 %empty to i4
+  ret i4 %empty_14
+}
+
+define weak i8 @_ssdm_op_BitConcatenate.i8.i6.i2(i6, i2) nounwind readnone {
+entry:
+  %empty = zext i6 %0 to i8
+  %empty_15 = zext i2 %1 to i8
+  %empty_16 = shl i8 %empty, 2
+  %empty_17 = or i8 %empty_16, %empty_15
+  ret i8 %empty_17
+}
+
+define weak i7 @_ssdm_op_BitConcatenate.i7.i2.i5(i2, i5) nounwind readnone {
+entry:
+  %empty = zext i2 %0 to i7
+  %empty_18 = zext i5 %1 to i7
+  %empty_19 = shl i7 %empty, 5
+  %empty_20 = or i7 %empty_19, %empty_18
+  ret i7 %empty_20
+}
+
+define weak i32 @_ssdm_op_BitConcatenate.i32.i26.i6(i26, i6) nounwind readnone {
+entry:
+  %empty = zext i26 %0 to i32
+  %empty_21 = zext i6 %1 to i32
+  %empty_22 = shl i32 %empty, 6
+  %empty_23 = or i32 %empty_22, %empty_21
+  ret i32 %empty_23
+}
+
+define weak i11 @_ssdm_op_BitConcatenate.i11.i6.i5(i6, i5) nounwind readnone {
+entry:
+  %empty = zext i6 %0 to i11
+  %empty_24 = zext i5 %1 to i11
+  %empty_25 = shl i11 %empty, 5
+  %empty_26 = or i11 %empty_25, %empty_24
+  ret i11 %empty_26
+}
+
+define weak i32 @_ssdm_op_BitConcatenate.i32.i24.i8(i24, i8) nounwind readnone {
+entry:
+  %empty = zext i24 %0 to i32
+  %empty_27 = zext i8 %1 to i32
+  %empty_28 = shl i32 %empty, 8
+  %empty_29 = or i32 %empty_28, %empty_27
+  ret i32 %empty_29
+}
+
+define weak { i32, i4, i4, i1, i1, i1, i1 } @_ssdm_op_Read.axis.volatile.i32P.i4P.i4P.i1P.i1P.i1P.i1P(i32*, i4*, i4*, i1*, i1*, i1*, i1*) {
+entry:
+  %empty = load i32* %0
+  %empty_30 = load i4* %1
+  %empty_31 = load i4* %2
+  %empty_32 = load i1* %3
+  %empty_33 = load i1* %4
+  %empty_34 = load i1* %5
+  %empty_35 = load i1* %6
+  %mrv_0 = insertvalue { i32, i4, i4, i1, i1, i1, i1 } undef, i32 %empty, 0
+  %mrv1 = insertvalue { i32, i4, i4, i1, i1, i1, i1 } %mrv_0, i4 %empty_30, 1
+  %mrv2 = insertvalue { i32, i4, i4, i1, i1, i1, i1 } %mrv1, i4 %empty_31, 2
+  %mrv3 = insertvalue { i32, i4, i4, i1, i1, i1, i1 } %mrv2, i1 %empty_32, 3
+  %mrv4 = insertvalue { i32, i4, i4, i1, i1, i1, i1 } %mrv3, i1 %empty_33, 4
+  %mrv5 = insertvalue { i32, i4, i4, i1, i1, i1, i1 } %mrv4, i1 %empty_34, 5
+  %mrv6 = insertvalue { i32, i4, i4, i1, i1, i1, i1 } %mrv5, i1 %empty_35, 6
+  ret { i32, i4, i4, i1, i1, i1, i1 } %mrv6
+}
+
+define weak void @_ssdm_op_Write.axis.volatile.i32P.i4P.i4P.i1P.i1P.i1P.i1P(i32*, i4*, i4*, i1*, i1*, i1*, i1*, i32, i4, i4, i1, i1, i1, i1) {
+entry:
+  store i32 %7, i32* %0
+  store i4 %8, i4* %1
+  store i4 %9, i4* %2
+  store i1 %10, i1* %3
+  store i1 %11, i1* %4
+  store i1 %12, i1* %5
+  store i1 %13, i1* %6
+  ret void
+}
+
+declare i6 @llvm.part.select.i6(i6, i32, i32) nounwind readnone
+
+declare i2 @_ssdm_op_PartSelect.i2.i6.i32.i32(i6, i32, i32) nounwind readnone
+
+!llvm.map.gv = !{!0}
+
+!0 = metadata !{metadata !1, [1 x i32]* @llvm_global_ctors_0}
+!1 = metadata !{metadata !2}
+!2 = metadata !{i32 0, i32 31, metadata !3}
+!3 = metadata !{metadata !4}
+!4 = metadata !{metadata !"llvm.global_ctors.0", metadata !5, metadata !"", i32 0, i32 31}
+!5 = metadata !{metadata !6}
+!6 = metadata !{i32 0, i32 0, i32 1}
+!7 = metadata !{metadata !8}
+!8 = metadata !{i32 0, i32 31, metadata !9}
+!9 = metadata !{metadata !10}
+!10 = metadata !{metadata !"A.data.V", metadata !11, metadata !"uint32", i32 0, i32 31}
+!11 = metadata !{metadata !12}
+!12 = metadata !{i32 0, i32 1023, i32 1}
+!13 = metadata !{metadata !14}
+!14 = metadata !{i32 0, i32 3, metadata !15}
+!15 = metadata !{metadata !16}
+!16 = metadata !{metadata !"A.keep.V", metadata !11, metadata !"uint4", i32 0, i32 3}
+!17 = metadata !{metadata !18}
+!18 = metadata !{i32 0, i32 3, metadata !19}
+!19 = metadata !{metadata !20}
+!20 = metadata !{metadata !"A.strb.V", metadata !11, metadata !"uint4", i32 0, i32 3}
+!21 = metadata !{metadata !22}
+!22 = metadata !{i32 0, i32 0, metadata !23}
+!23 = metadata !{metadata !24}
+!24 = metadata !{metadata !"A.user.V", metadata !11, metadata !"uint1", i32 0, i32 0}
+!25 = metadata !{metadata !26}
+!26 = metadata !{i32 0, i32 0, metadata !27}
+!27 = metadata !{metadata !28}
+!28 = metadata !{metadata !"A.last.V", metadata !11, metadata !"uint1", i32 0, i32 0}
+!29 = metadata !{metadata !30}
+!30 = metadata !{i32 0, i32 0, metadata !31}
+!31 = metadata !{metadata !32}
+!32 = metadata !{metadata !"A.id.V", metadata !11, metadata !"uint1", i32 0, i32 0}
+!33 = metadata !{metadata !34}
+!34 = metadata !{i32 0, i32 0, metadata !35}
+!35 = metadata !{metadata !36}
+!36 = metadata !{metadata !"A.dest.V", metadata !11, metadata !"uint1", i32 0, i32 0}
+!37 = metadata !{metadata !38}
+!38 = metadata !{i32 0, i32 31, metadata !39}
+!39 = metadata !{metadata !40}
+!40 = metadata !{metadata !"B.data.V", metadata !11, metadata !"uint32", i32 0, i32 31}
+!41 = metadata !{metadata !42}
+!42 = metadata !{i32 0, i32 3, metadata !43}
+!43 = metadata !{metadata !44}
+!44 = metadata !{metadata !"B.keep.V", metadata !11, metadata !"uint4", i32 0, i32 3}
+!45 = metadata !{metadata !46}
+!46 = metadata !{i32 0, i32 3, metadata !47}
+!47 = metadata !{metadata !48}
+!48 = metadata !{metadata !"B.strb.V", metadata !11, metadata !"uint4", i32 0, i32 3}
+!49 = metadata !{metadata !50}
+!50 = metadata !{i32 0, i32 0, metadata !51}
+!51 = metadata !{metadata !52}
+!52 = metadata !{metadata !"B.user.V", metadata !11, metadata !"uint1", i32 0, i32 0}
+!53 = metadata !{metadata !54}
+!54 = metadata !{i32 0, i32 0, metadata !55}
+!55 = metadata !{metadata !56}
+!56 = metadata !{metadata !"B.last.V", metadata !11, metadata !"uint1", i32 0, i32 0}
+!57 = metadata !{metadata !58}
+!58 = metadata !{i32 0, i32 0, metadata !59}
+!59 = metadata !{metadata !60}
+!60 = metadata !{metadata !"B.id.V", metadata !11, metadata !"uint1", i32 0, i32 0}
+!61 = metadata !{metadata !62}
+!62 = metadata !{i32 0, i32 0, metadata !63}
+!63 = metadata !{metadata !64}
+!64 = metadata !{metadata !"B.dest.V", metadata !11, metadata !"uint1", i32 0, i32 0}
+!65 = metadata !{metadata !66}
+!66 = metadata !{i32 0, i32 31, metadata !67}
+!67 = metadata !{metadata !68}
+!68 = metadata !{metadata !"C.data.V", metadata !11, metadata !"uint32", i32 0, i32 31}
+!69 = metadata !{metadata !70}
+!70 = metadata !{i32 0, i32 3, metadata !71}
+!71 = metadata !{metadata !72}
+!72 = metadata !{metadata !"C.keep.V", metadata !11, metadata !"uint4", i32 0, i32 3}
+!73 = metadata !{metadata !74}
+!74 = metadata !{i32 0, i32 3, metadata !75}
+!75 = metadata !{metadata !76}
+!76 = metadata !{metadata !"C.strb.V", metadata !11, metadata !"uint4", i32 0, i32 3}
+!77 = metadata !{metadata !78}
+!78 = metadata !{i32 0, i32 0, metadata !79}
+!79 = metadata !{metadata !80}
+!80 = metadata !{metadata !"C.user.V", metadata !11, metadata !"uint1", i32 0, i32 0}
+!81 = metadata !{metadata !82}
+!82 = metadata !{i32 0, i32 0, metadata !83}
+!83 = metadata !{metadata !84}
+!84 = metadata !{metadata !"C.last.V", metadata !11, metadata !"uint1", i32 0, i32 0}
+!85 = metadata !{metadata !86}
+!86 = metadata !{i32 0, i32 0, metadata !87}
+!87 = metadata !{metadata !88}
+!88 = metadata !{metadata !"C.id.V", metadata !11, metadata !"uint1", i32 0, i32 0}
+!89 = metadata !{metadata !90}
+!90 = metadata !{i32 0, i32 0, metadata !91}
+!91 = metadata !{metadata !92}
+!92 = metadata !{metadata !"C.dest.V", metadata !11, metadata !"uint1", i32 0, i32 0}

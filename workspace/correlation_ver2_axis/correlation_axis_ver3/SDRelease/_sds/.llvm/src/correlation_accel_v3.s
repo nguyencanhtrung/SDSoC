@@ -1073,7 +1073,7 @@ attributes #3 = { nounwind "less-precise-fpmad"="false" "no-frame-pointer-elim"=
 !114 = metadata !{metadata !"/opt/Xilinx/SDSoC/2014.4/SDK/2014.4/gnu/arm/lin/arm-xilinx-linux-gnueabi/include/c++/4.8.3/bits/ios_base.h"}
 !115 = metadata !{metadata !"../src/correlation_accel_v3.hpp"}
 !116 = metadata !{metadata !"/opt/Xilinx/SDSoC/2014.4/SDK/2014.4/gnu/arm/lin/arm-xilinx-linux-gnueabi/libc/usr/include/bits/mathcalls.h"}
-!117 = metadata !{metadata !"in_indices,number_of_indices*number_of_days,,,AXIDMA_SIMPLE,AFI,0,, out_correlation,number_of_indices-1,,,AXIDMA_SIMPLE,AFI,0,, "}
+!117 = metadata !{metadata !"in_indices,number_of_indices*number_of_days,,,AXIDMA_SG,AFI,0,, out_correlation,number_of_indices-1,,,AXIDMA_SIMPLE,AFI,0,, "}
 !118 = metadata !{i32 2, metadata !"Dwarf Version", i32 4}
 !119 = metadata !{i32 2, metadata !"Debug Info Version", i32 1}
 !120 = metadata !{i32 1, metadata !"wchar_size", i32 4}

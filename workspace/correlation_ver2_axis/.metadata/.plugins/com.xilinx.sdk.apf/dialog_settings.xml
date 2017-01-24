@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<item value="Linux" key="sdsoc.os"/>
+	<item value="false" key="sdsoc.sysroot"/>
+	<item value="zed" key="sdsoc.platform"/>
+</section>

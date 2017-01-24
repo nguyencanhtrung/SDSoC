@@ -1,0 +1,27 @@
+int _p0_correlation_accel_v1_0(int number_of_days, int number_of_indices, float in_indices[2520000], float out_correlation[49995000]);
+int _p0_correlation_accel_v1_0(int number_of_days, int number_of_indices, float in_indices[2520000], float out_correlation[49995000])
+{
+  switch_to_next_partition(0);
+  int start_seq[3];
+  start_seq[0] = 0x00000f00;
+  start_seq[1] = 0x00010100;
+  start_seq[2] = 0x00020000;
+  cf_request_handle_t _p0_swinst_correlation_accel_v1_0_cmd;
+  cf_send_i(&(_p0_swinst_correlation_accel_v1_0.cmd_correlation_accel_v1), start_seq, 3*sizeof(int), &_p0_swinst_correlation_accel_v1_0_cmd);
+  cf_wait(_p0_swinst_correlation_accel_v1_0_cmd);
+
+  cf_send_i(&(_p0_swinst_correlation_accel_v1_0.number_of_days), &number_of_days, 4, &_p0_request_0);
+  cf_send_i(&(_p0_swinst_correlation_accel_v1_0.number_of_indices), &number_of_indices, 4, &_p0_request_1);
+  cf_send_ref_i(&(_p0_swinst_correlation_accel_v1_0.in_indices), &in_indices, 2520000 * 4, &_p0_request_2);
+  cf_send_ref_i(&(_p0_swinst_correlation_accel_v1_0.out_correlation), &out_correlation, 49995000 * 4, &_p0_request_3);
+
+  cf_receive_i(&(_p0_swinst_correlation_accel_v1_0.ap_return), &_p0_correlation_accel_v1_0_v_return, 4, &_p0_correlation_accel_v1_0_num_ap_return, &_p0_request_4);
+
+  cf_wait(_p0_request_0);
+  cf_wait(_p0_request_1);
+  cf_wait(_p0_request_2);
+  cf_wait(_p0_request_3);
+  cf_wait(_p0_request_4);
+  return _p0_correlation_accel_v1_0_v_return;
+}
+

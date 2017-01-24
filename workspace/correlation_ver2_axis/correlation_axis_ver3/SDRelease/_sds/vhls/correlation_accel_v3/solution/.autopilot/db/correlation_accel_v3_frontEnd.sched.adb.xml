@@ -839,7 +839,7 @@ entry:0  call void (...)* @_ssdm_op_SpecInterface(i1* %in_indices_dest_V, i1* %i
 
 <node id="23" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="8" op_3_bw="32" op_4_bw="32" op_5_bw="32" op_6_bw="32" op_7_bw="8" op_8_bw="8" op_9_bw="8">
 <![CDATA[
-entry:1  call void (...)* @_ssdm_op_SpecInterface(i32* %NUMBER_OF_INDICES_out, [8 x i8]* @str68, i32 0, i32 0, i32 0, i32 0, [8 x i8]* @str68, [8 x i8]* @str68, [8 x i8]* @str68)
+entry:1  call void (...)* @_ssdm_op_SpecInterface(i32* %NUMBER_OF_DAYS_out, [8 x i8]* @str68, i32 0, i32 0, i32 0, i32 0, [8 x i8]* @str68, [8 x i8]* @str68, [8 x i8]* @str68)
 
 ]]></node>
 <StgValue><ssdm name=""/></StgValue>
@@ -854,7 +854,7 @@ entry:1  call void (...)* @_ssdm_op_SpecInterface(i32* %NUMBER_OF_INDICES_out, [
 
 <node id="24" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="8" op_3_bw="32" op_4_bw="32" op_5_bw="32" op_6_bw="32" op_7_bw="8" op_8_bw="8" op_9_bw="8">
 <![CDATA[
-entry:2  call void (...)* @_ssdm_op_SpecInterface(i32* %NUMBER_OF_DAYS_out, [8 x i8]* @str67, i32 0, i32 0, i32 0, i32 0, [8 x i8]* @str67, [8 x i8]* @str67, [8 x i8]* @str67)
+entry:2  call void (...)* @_ssdm_op_SpecInterface(i32* %NUMBER_OF_INDICES_out, [8 x i8]* @str67, i32 0, i32 0, i32 0, i32 0, [8 x i8]* @str67, [8 x i8]* @str67, [8 x i8]* @str67)
 
 ]]></node>
 <StgValue><ssdm name=""/></StgValue>
@@ -1049,7 +1049,7 @@ entry:14  %acc_weight_returnA_returnB = alloca [6 x float], align 16
 
 <node id="37" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="8" op_3_bw="32" op_4_bw="32" op_5_bw="32" op_6_bw="32" op_7_bw="8" op_8_bw="8" op_9_bw="8">
 <![CDATA[
-entry:15  call void (...)* @_ssdm_op_SpecInterface(i32* %NUMBER_OF_INDICES_out, [8 x i8]* @str57, i32 0, i32 0, i32 0, i32 0, [8 x i8]* @str57, [8 x i8]* @str57, [8 x i8]* @str57)
+entry:15  call void (...)* @_ssdm_op_SpecInterface(i32* %NUMBER_OF_DAYS_out, [8 x i8]* @str57, i32 0, i32 0, i32 0, i32 0, [8 x i8]* @str57, [8 x i8]* @str57, [8 x i8]* @str57)
 
 ]]></node>
 <StgValue><ssdm name=""/></StgValue>
@@ -1064,7 +1064,7 @@ entry:15  call void (...)* @_ssdm_op_SpecInterface(i32* %NUMBER_OF_INDICES_out, 
 
 <node id="38" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="32">
 <![CDATA[
-entry:16  call void @_ssdm_op_Write.ap_fifo.i32P(i32* %NUMBER_OF_INDICES_out, i32 %NUMBER_OF_INDICES_read)
+entry:16  call void @_ssdm_op_Write.ap_fifo.i32P(i32* %NUMBER_OF_DAYS_out, i32 %NUMBER_OF_DAYS_read)
 
 ]]></node>
 <StgValue><ssdm name=""/></StgValue>
@@ -1079,7 +1079,7 @@ entry:16  call void @_ssdm_op_Write.ap_fifo.i32P(i32* %NUMBER_OF_INDICES_out, i3
 
 <node id="39" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="8" op_3_bw="32" op_4_bw="32" op_5_bw="32" op_6_bw="32" op_7_bw="8" op_8_bw="8" op_9_bw="8">
 <![CDATA[
-entry:17  call void (...)* @_ssdm_op_SpecInterface(i32* %NUMBER_OF_DAYS_out, [8 x i8]* @str55, i32 0, i32 0, i32 0, i32 0, [8 x i8]* @str55, [8 x i8]* @str55, [8 x i8]* @str55)
+entry:17  call void (...)* @_ssdm_op_SpecInterface(i32* %NUMBER_OF_INDICES_out, [8 x i8]* @str55, i32 0, i32 0, i32 0, i32 0, [8 x i8]* @str55, [8 x i8]* @str55, [8 x i8]* @str55)
 
 ]]></node>
 <StgValue><ssdm name=""/></StgValue>
@@ -1094,7 +1094,7 @@ entry:17  call void (...)* @_ssdm_op_SpecInterface(i32* %NUMBER_OF_DAYS_out, [8 
 
 <node id="40" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="32">
 <![CDATA[
-entry:18  call void @_ssdm_op_Write.ap_fifo.i32P(i32* %NUMBER_OF_DAYS_out, i32 %NUMBER_OF_DAYS_read)
+entry:18  call void @_ssdm_op_Write.ap_fifo.i32P(i32* %NUMBER_OF_INDICES_out, i32 %NUMBER_OF_INDICES_read)
 
 ]]></node>
 <StgValue><ssdm name=""/></StgValue>

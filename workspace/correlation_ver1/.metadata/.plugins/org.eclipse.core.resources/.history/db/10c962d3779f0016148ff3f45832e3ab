@@ -1,0 +1,33 @@
+digraph defuse_graph {
+v0 [label = "def: (bb11),sw(5)@82"];
+v1 [label = "def: (bb11),sw(6)@83"];
+v2 [label = "def: (bb11),sw(7)@84"];
+v3 [label = "use: (bb13),hw, call:mmult"];
+v4 [label = "use: (bb13),hw, call:mmult"];
+v5 [label = "def: (bb13),hw, call:mmult"];
+v6 [label = "use: (bb16),sw(8)@93"];
+v7 [label = "use: (bb16),sw(8)@93"];
+v8 [label = "use: (bb21),sw(9)@97"];
+v9 [label = "use: (bb22),sw(10)@98"];
+v10 [label = "use: (bb28),sw(11)@107"];
+v11 [label = "use: (bb28),sw(12)@108"];
+v12 [label = "use: (bb28),sw(13)@110"];
+v13 [label = "use: (bb31),sw(14)@119"];
+v14 [label = "def: (bb31),sw(14)@119"];
+v15 [label = "use: (bb33),sw(15)@120"];
+v16 [label = "def: (bb33),sw(15)@120"];
+v17 [label = "use: (bb35),sw(16)@121"];
+v18 [label = "def: (bb35),sw(16)@121"];
+v1 -> v4;
+v0 -> v3;
+v1 -> v7;
+v0 -> v6;
+v5 -> v8;
+v5 -> v9;
+v5 -> v12;
+v1 -> v11;
+v0 -> v10;
+v0 -> v13;
+v1 -> v15;
+v5 -> v17;
+}

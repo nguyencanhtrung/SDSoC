@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xd:data xmlns:xd="http://www.xilinx.com/xd">
+  <xd:source name="main.cpp" compiler="g++" objfile="src/main.o" srcpath="/home/trungnguyen/SDSoC/workspace/correlation_ver1/correlation_ver1_linux/src" flags="-I/home/trungnguyen/SDSoC/workspace/correlation_ver1/correlation_ver1_linux/src -I/home/trungnguyen/SDSoC/workspace/correlation_ver1/correlation_ver1_linux/src -Wall -O0 -g -fmessage-length=0 -MMD -MP -D __SDSCC__"/>
+</xd:data>

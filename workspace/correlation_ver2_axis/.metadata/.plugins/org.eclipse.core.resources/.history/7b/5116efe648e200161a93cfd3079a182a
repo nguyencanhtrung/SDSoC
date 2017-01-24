@@ -1,0 +1,1481 @@
+; ModuleID = '/home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/src/correlation_accel_v3.cpp'
+target datalayout = "e-m:e-p:32:32-i64:64-v128:64:128-n32-S64"
+target triple = "armv7-xilinx-linux-gnueabi"
+
+%"class.std::ios_base::Init" = type { i8 }
+
+@_ZStL8__ioinit = internal global %"class.std::ios_base::Init" zeroinitializer, align 1
+@__dso_handle = external global i8
+@_ZZ8frontEndiiPfS_S_S_S_S_S_S_S_E10weight_rom = internal global [252 x float] zeroinitializer, align 4
+@_ZZ8frontEndiiPfS_S_S_S_S_S_S_S_E9lnReturnA = internal global [252 x float] zeroinitializer, align 4
+@llvm.global_ctors = appending global [1 x { i32, void ()*, i8* }] [{ i32, void ()*, i8* } { i32 65535, void ()* @_GLOBAL__sub_I_correlation_accel_v3.cpp, i8* null }]
+
+define internal void @__cxx_global_var_init() section ".text.startup" {
+  %1 = call %"class.std::ios_base::Init"* @_ZNSt8ios_base4InitC1Ev(%"class.std::ios_base::Init"* @_ZStL8__ioinit), !dbg !123
+  %2 = call i32 @__cxa_atexit(void (i8*)* bitcast (%"class.std::ios_base::Init"* (%"class.std::ios_base::Init"*)* @_ZNSt8ios_base4InitD1Ev to void (i8*)*), i8* getelementptr inbounds (%"class.std::ios_base::Init"* @_ZStL8__ioinit, i32 0, i32 0), i8* @__dso_handle) #1, !dbg !123
+  ret void, !dbg !123
+}
+
+declare %"class.std::ios_base::Init"* @_ZNSt8ios_base4InitC1Ev(%"class.std::ios_base::Init"* returned) #0
+
+declare %"class.std::ios_base::Init"* @_ZNSt8ios_base4InitD1Ev(%"class.std::ios_base::Init"* returned) #0
+
+; Function Attrs: nounwind
+declare i32 @__cxa_atexit(void (i8*)*, i8*, i8*) #1
+
+define void @_Z20correlation_accel_v3iiPfS_(i32 %number_of_days, i32 %number_of_indices, float* %in_indices, float* %out_correlation) #0 {
+  %1 = alloca i32, align 4
+  %2 = alloca i32, align 4
+  %3 = alloca float*, align 4
+  %4 = alloca float*, align 4
+  %NUMBER_OF_DAYS = alloca i32, align 4
+  %NUMBER_OF_INDICES = alloca i32, align 4
+  %5 = alloca i8*
+  store i32 %number_of_days, i32* %1, align 4
+  call void @llvm.dbg.declare(metadata !{i32* %1}, metadata !124), !dbg !125
+  store i32 %number_of_indices, i32* %2, align 4
+  call void @llvm.dbg.declare(metadata !{i32* %2}, metadata !126), !dbg !127
+  store float* %in_indices, float** %3, align 4
+  call void @llvm.dbg.declare(metadata !{float** %3}, metadata !128), !dbg !129
+  store float* %out_correlation, float** %4, align 4
+  call void @llvm.dbg.declare(metadata !{float** %4}, metadata !130), !dbg !131
+  call void @llvm.dbg.declare(metadata !{i32* %NUMBER_OF_DAYS}, metadata !132), !dbg !134
+  %6 = load i32* %1, align 4, !dbg !135
+  store i32 %6, i32* %NUMBER_OF_DAYS, align 4, !dbg !135
+  call void @llvm.dbg.declare(metadata !{i32* %NUMBER_OF_INDICES}, metadata !136), !dbg !137
+  %7 = load i32* %2, align 4, !dbg !138
+  store i32 %7, i32* %NUMBER_OF_INDICES, align 4, !dbg !138
+  %8 = load i32* %NUMBER_OF_INDICES, align 4, !dbg !139
+  %9 = sub nsw i32 %8, 1, !dbg !139
+  %10 = call i8* @llvm.stacksave(), !dbg !139
+  store i8* %10, i8** %5, !dbg !139
+  %11 = alloca float, i32 %9, align 4, !dbg !139
+  call void @llvm.dbg.declare(metadata !{float* %11}, metadata !140), !dbg !144
+  %12 = load i32* %NUMBER_OF_INDICES, align 4, !dbg !145
+  %13 = sub nsw i32 %12, 1, !dbg !145
+  %14 = alloca float, i32 %13, align 4, !dbg !145
+  call void @llvm.dbg.declare(metadata !{float* %14}, metadata !146), !dbg !147
+  %15 = load i32* %NUMBER_OF_INDICES, align 4, !dbg !148
+  %16 = sub nsw i32 %15, 1, !dbg !148
+  %17 = alloca float, i32 %16, align 4, !dbg !148
+  call void @llvm.dbg.declare(metadata !{float* %17}, metadata !149), !dbg !150
+  %18 = load i32* %NUMBER_OF_INDICES, align 4, !dbg !151
+  %19 = sub nsw i32 %18, 1, !dbg !151
+  %20 = alloca float, i32 %19, align 4, !dbg !151
+  call void @llvm.dbg.declare(metadata !{float* %20}, metadata !152), !dbg !153
+  %21 = load i32* %NUMBER_OF_INDICES, align 4, !dbg !154
+  %22 = sub nsw i32 %21, 1, !dbg !154
+  %23 = alloca float, i32 %22, align 4, !dbg !154
+  call void @llvm.dbg.declare(metadata !{float* %23}, metadata !155), !dbg !156
+  %24 = load i32* %NUMBER_OF_INDICES, align 4, !dbg !157
+  %25 = sub nsw i32 %24, 1, !dbg !157
+  %26 = alloca float, i32 %25, align 4, !dbg !157
+  call void @llvm.dbg.declare(metadata !{float* %26}, metadata !158), !dbg !159
+  %27 = load i32* %NUMBER_OF_INDICES, align 4, !dbg !160
+  %28 = sub nsw i32 %27, 1, !dbg !160
+  %29 = alloca float, i32 %28, align 4, !dbg !160
+  call void @llvm.dbg.declare(metadata !{float* %29}, metadata !161), !dbg !162
+  %30 = load i32* %NUMBER_OF_INDICES, align 4, !dbg !163
+  %31 = sub nsw i32 %30, 1, !dbg !163
+  %32 = alloca float, i32 %31, align 4, !dbg !163
+  call void @llvm.dbg.declare(metadata !{float* %32}, metadata !164), !dbg !165
+  %33 = load i32* %NUMBER_OF_DAYS, align 4, !dbg !166
+  %34 = load i32* %NUMBER_OF_INDICES, align 4, !dbg !166
+  %35 = load float** %3, align 4, !dbg !166
+  call void @_Z8frontEndiiPfS_S_S_S_S_S_S_S_(i32 %33, i32 %34, float* %35, float* %11, float* %14, float* %17, float* %20, float* %32, float* %26, float* %29, float* %32), !dbg !166
+  %36 = load i32* %NUMBER_OF_DAYS, align 4, !dbg !167
+  %37 = load i32* %NUMBER_OF_INDICES, align 4, !dbg !167
+  %38 = load float** %4, align 4, !dbg !167
+  call void @_Z7backEndiiPfS_S_S_S_S_S_S_S_(i32 %36, i32 %37, float* %11, float* %14, float* %17, float* %20, float* %23, float* %26, float* %29, float* %32, float* %38), !dbg !167
+  %39 = load i8** %5, !dbg !168
+  call void @llvm.stackrestore(i8* %39), !dbg !168
+  ret void, !dbg !168
+}
+
+; Function Attrs: nounwind readnone
+declare void @llvm.dbg.declare(metadata, metadata) #2
+
+; Function Attrs: nounwind
+declare i8* @llvm.stacksave() #1
+
+define void @_Z8frontEndiiPfS_S_S_S_S_S_S_S_(i32 %NUMBER_OF_DAYS, i32 %NUMBER_OF_INDICES, float* %in_indices, float* %sum_weight_out, float* %sum_return_out, float* %sum_weight_returnSquare_out, float* %sum_weight_return_out, float* %sum_weight_returnA_returnB_out, float* %sum_returnA_out, float* %sum_weight_returnSquareA_out, float* %sum_weight_returnA_out) #0 {
+  %1 = alloca i32, align 4
+  %2 = alloca i32, align 4
+  %3 = alloca float*, align 4
+  %4 = alloca float*, align 4
+  %5 = alloca float*, align 4
+  %6 = alloca float*, align 4
+  %7 = alloca float*, align 4
+  %8 = alloca float*, align 4
+  %9 = alloca float*, align 4
+  %10 = alloca float*, align 4
+  %11 = alloca float*, align 4
+  %sum_weight = alloca float, align 4
+  %acc_return = alloca [6 x float], align 4
+  %acc_weight_returnSquare = alloca [6 x float], align 4
+  %acc_weight_return = alloca [6 x float], align 4
+  %acc_weight_returnA_returnB = alloca [6 x float], align 4
+  %shift_reg = alloca [2 x float], align 4
+  %sum_returnA = alloca float, align 4
+  %sum_weight_returnSquareA = alloca float, align 4
+  %sum_weight_returnA = alloca float, align 4
+  %i = alloca i32, align 4
+  %i1 = alloca i32, align 4
+  %lnReturn = alloca float, align 4
+  %weight = alloca float, align 4
+  %channel = alloca i32, align 4
+  %i2 = alloca i32, align 4
+  %column_index = alloca i32, align 4
+  %i3 = alloca i32, align 4
+  %index = alloca i32, align 4
+  %i4 = alloca i32, align 4
+  %lnReturn5 = alloca float, align 4
+  %weight6 = alloca float, align 4
+  %channel7 = alloca i32, align 4
+  %sum_return = alloca float, align 4
+  %sum_weight_returnSquare = alloca float, align 4
+  %sum_weight_return = alloca float, align 4
+  %sum_weight_returnA_returnB = alloca float, align 4
+  %i8 = alloca i32, align 4
+  %i9 = alloca i32, align 4
+  store i32 %NUMBER_OF_DAYS, i32* %1, align 4
+  call void @llvm.dbg.declare(metadata !{i32* %1}, metadata !169), !dbg !170
+  store i32 %NUMBER_OF_INDICES, i32* %2, align 4
+  call void @llvm.dbg.declare(metadata !{i32* %2}, metadata !171), !dbg !172
+  store float* %in_indices, float** %3, align 4
+  call void @llvm.dbg.declare(metadata !{float** %3}, metadata !173), !dbg !174
+  store float* %sum_weight_out, float** %4, align 4
+  call void @llvm.dbg.declare(metadata !{float** %4}, metadata !175), !dbg !176
+  store float* %sum_return_out, float** %5, align 4
+  call void @llvm.dbg.declare(metadata !{float** %5}, metadata !177), !dbg !178
+  store float* %sum_weight_returnSquare_out, float** %6, align 4
+  call void @llvm.dbg.declare(metadata !{float** %6}, metadata !179), !dbg !180
+  store float* %sum_weight_return_out, float** %7, align 4
+  call void @llvm.dbg.declare(metadata !{float** %7}, metadata !181), !dbg !182
+  store float* %sum_weight_returnA_returnB_out, float** %8, align 4
+  call void @llvm.dbg.declare(metadata !{float** %8}, metadata !183), !dbg !184
+  store float* %sum_returnA_out, float** %9, align 4
+  call void @llvm.dbg.declare(metadata !{float** %9}, metadata !185), !dbg !186
+  store float* %sum_weight_returnSquareA_out, float** %10, align 4
+  call void @llvm.dbg.declare(metadata !{float** %10}, metadata !187), !dbg !188
+  store float* %sum_weight_returnA_out, float** %11, align 4
+  call void @llvm.dbg.declare(metadata !{float** %11}, metadata !189), !dbg !190
+  %12 = load i32* %2, align 4
+  %13 = sub nsw i32 %12, 1
+  %14 = load i32* %2, align 4
+  %15 = sub nsw i32 %14, 1
+  %16 = load i32* %2, align 4
+  %17 = sub nsw i32 %16, 1
+  %18 = load i32* %2, align 4
+  %19 = sub nsw i32 %18, 1
+  %20 = load i32* %2, align 4
+  %21 = sub nsw i32 %20, 1
+  %22 = load i32* %2, align 4
+  %23 = sub nsw i32 %22, 1
+  %24 = load i32* %2, align 4
+  %25 = sub nsw i32 %24, 1
+  %26 = load i32* %2, align 4
+  %27 = sub nsw i32 %26, 1
+  %28 = load i32* %1, align 4, !dbg !191
+  call void @_ZL15weight_rom_initPfi(float* getelementptr inbounds ([252 x float]* @_ZZ8frontEndiiPfS_S_S_S_S_S_S_S_E10weight_rom, i32 0, i32 0), i32 %28), !dbg !191
+  call void @llvm.dbg.declare(metadata !{float* %sum_weight}, metadata !192), !dbg !193
+  %29 = load float* getelementptr inbounds ([252 x float]* @_ZZ8frontEndiiPfS_S_S_S_S_S_S_S_E10weight_rom, i32 0, i32 0), align 4, !dbg !194
+  store float %29, float* %sum_weight, align 4, !dbg !194
+  call void @llvm.dbg.declare(metadata !{[6 x float]* %acc_return}, metadata !195), !dbg !199
+  call void @llvm.dbg.declare(metadata !{[6 x float]* %acc_weight_returnSquare}, metadata !200), !dbg !201
+  call void @llvm.dbg.declare(metadata !{[6 x float]* %acc_weight_return}, metadata !202), !dbg !203
+  call void @llvm.dbg.declare(metadata !{[6 x float]* %acc_weight_returnA_returnB}, metadata !204), !dbg !205
+  call void @llvm.dbg.declare(metadata !{[2 x float]* %shift_reg}, metadata !206), !dbg !210
+  call void @llvm.dbg.declare(metadata !{float* %sum_returnA}, metadata !211), !dbg !212
+  store float 0.000000e+00, float* %sum_returnA, align 4, !dbg !213
+  call void @llvm.dbg.declare(metadata !{float* %sum_weight_returnSquareA}, metadata !214), !dbg !215
+  store float 0.000000e+00, float* %sum_weight_returnSquareA, align 4, !dbg !216
+  call void @llvm.dbg.declare(metadata !{float* %sum_weight_returnA}, metadata !217), !dbg !218
+  store float 0.000000e+00, float* %sum_weight_returnA, align 4, !dbg !219
+  br label %30, !dbg !219
+
+; <label>:30                                      ; preds = %0
+  call void @llvm.dbg.declare(metadata !{i32* %i}, metadata !220), !dbg !222
+  store i32 0, i32* %i, align 4, !dbg !223
+  br label %31, !dbg !223
+
+; <label>:31                                      ; preds = %43, %30
+  %32 = load i32* %i, align 4, !dbg !224
+  %33 = icmp slt i32 %32, 6, !dbg !224
+  br i1 %33, label %34, label %46, !dbg !224
+
+; <label>:34                                      ; preds = %31
+  %35 = load i32* %i, align 4, !dbg !227
+  %36 = getelementptr inbounds [6 x float]* %acc_return, i32 0, i32 %35, !dbg !227
+  store float 0.000000e+00, float* %36, align 4, !dbg !227
+  %37 = load i32* %i, align 4, !dbg !229
+  %38 = getelementptr inbounds [6 x float]* %acc_weight_returnSquare, i32 0, i32 %37, !dbg !229
+  store float 0.000000e+00, float* %38, align 4, !dbg !229
+  %39 = load i32* %i, align 4, !dbg !230
+  %40 = getelementptr inbounds [6 x float]* %acc_weight_returnSquare, i32 0, i32 %39, !dbg !230
+  store float 0.000000e+00, float* %40, align 4, !dbg !230
+  %41 = load i32* %i, align 4, !dbg !231
+  %42 = getelementptr inbounds [6 x float]* %acc_weight_return, i32 0, i32 %41, !dbg !231
+  store float 0.000000e+00, float* %42, align 4, !dbg !231
+  br label %43, !dbg !232
+
+; <label>:43                                      ; preds = %34
+  %44 = load i32* %i, align 4, !dbg !233
+  %45 = add nsw i32 %44, 1, !dbg !233
+  store i32 %45, i32* %i, align 4, !dbg !233
+  br label %31, !dbg !233
+
+; <label>:46                                      ; preds = %31
+  %47 = load float** %3, align 4, !dbg !234
+  %48 = getelementptr inbounds float* %47, i32 0, !dbg !234
+  %49 = load float* %48, align 4, !dbg !234
+  %50 = getelementptr inbounds [2 x float]* %shift_reg, i32 0, i32 1, !dbg !234
+  store float %49, float* %50, align 4, !dbg !234
+  br label %51, !dbg !234
+
+; <label>:51                                      ; preds = %46
+  call void @llvm.dbg.declare(metadata !{i32* %i1}, metadata !235), !dbg !237
+  store i32 1, i32* %i1, align 4, !dbg !238
+  br label %52, !dbg !238
+
+; <label>:52                                      ; preds = %112, %51
+  %53 = load i32* %i1, align 4, !dbg !239
+  %54 = load i32* %1, align 4, !dbg !239
+  %55 = sub nsw i32 %54, 1, !dbg !239
+  %56 = icmp sle i32 %53, %55, !dbg !239
+  br i1 %56, label %57, label %115, !dbg !239
+
+; <label>:57                                      ; preds = %52
+  %58 = load i32* %i1, align 4, !dbg !242
+  %59 = icmp eq i32 %58, 1, !dbg !242
+  br i1 %59, label %60, label %66, !dbg !242
+
+; <label>:60                                      ; preds = %57
+  %61 = load i32* %i1, align 4, !dbg !245
+  %62 = load float** %3, align 4, !dbg !245
+  %63 = getelementptr inbounds float* %62, i32 %61, !dbg !245
+  %64 = load float* %63, align 4, !dbg !245
+  %65 = getelementptr inbounds [2 x float]* %shift_reg, i32 0, i32 0, !dbg !245
+  store float %64, float* %65, align 4, !dbg !245
+  br label %75, !dbg !247
+
+; <label>:66                                      ; preds = %57
+  %67 = getelementptr inbounds [2 x float]* %shift_reg, i32 0, i32 0, !dbg !248
+  %68 = load float* %67, align 4, !dbg !248
+  %69 = getelementptr inbounds [2 x float]* %shift_reg, i32 0, i32 1, !dbg !248
+  store float %68, float* %69, align 4, !dbg !248
+  %70 = load i32* %i1, align 4, !dbg !250
+  %71 = load float** %3, align 4, !dbg !250
+  %72 = getelementptr inbounds float* %71, i32 %70, !dbg !250
+  %73 = load float* %72, align 4, !dbg !250
+  %74 = getelementptr inbounds [2 x float]* %shift_reg, i32 0, i32 0, !dbg !250
+  store float %73, float* %74, align 4, !dbg !250
+  br label %75
+
+; <label>:75                                      ; preds = %66, %60
+  call void @llvm.dbg.declare(metadata !{float* %lnReturn}, metadata !251), !dbg !252
+  %76 = getelementptr inbounds [2 x float]* %shift_reg, i32 0, i32 1, !dbg !253
+  %77 = load float* %76, align 4, !dbg !253
+  %78 = getelementptr inbounds [2 x float]* %shift_reg, i32 0, i32 0, !dbg !253
+  %79 = load float* %78, align 4, !dbg !253
+  %80 = fdiv float %77, %79, !dbg !253
+  %81 = call float @logf(float %80) #1, !dbg !253
+  store float %81, float* %lnReturn, align 4, !dbg !253
+  call void @llvm.dbg.declare(metadata !{float* %weight}, metadata !254), !dbg !255
+  %82 = load i32* %i1, align 4, !dbg !256
+  %83 = getelementptr inbounds [252 x float]* @_ZZ8frontEndiiPfS_S_S_S_S_S_S_S_E10weight_rom, i32 0, i32 %82, !dbg !256
+  %84 = load float* %83, align 4, !dbg !256
+  store float %84, float* %weight, align 4, !dbg !256
+  call void @llvm.dbg.declare(metadata !{i32* %channel}, metadata !257), !dbg !258
+  %85 = load i32* %i1, align 4, !dbg !259
+  %86 = srem i32 %85, 6, !dbg !259
+  store i32 %86, i32* %channel, align 4, !dbg !259
+  %87 = load float* %lnReturn, align 4, !dbg !260
+  %88 = load i32* %channel, align 4, !dbg !260
+  %89 = getelementptr inbounds [6 x float]* %acc_return, i32 0, i32 %88, !dbg !260
+  %90 = load float* %89, align 4, !dbg !260
+  %91 = fadd float %90, %87, !dbg !260
+  store float %91, float* %89, align 4, !dbg !260
+  %92 = load float* %lnReturn, align 4, !dbg !261
+  %93 = load float* %lnReturn, align 4, !dbg !261
+  %94 = fmul float %92, %93, !dbg !261
+  %95 = load float* %weight, align 4, !dbg !261
+  %96 = fmul float %94, %95, !dbg !261
+  %97 = load i32* %channel, align 4, !dbg !261
+  %98 = getelementptr inbounds [6 x float]* %acc_weight_returnSquare, i32 0, i32 %97, !dbg !261
+  %99 = load float* %98, align 4, !dbg !261
+  %100 = fadd float %99, %96, !dbg !261
+  store float %100, float* %98, align 4, !dbg !261
+  %101 = load float* %lnReturn, align 4, !dbg !262
+  %102 = load float* %weight, align 4, !dbg !262
+  %103 = fmul float %101, %102, !dbg !262
+  %104 = load i32* %channel, align 4, !dbg !262
+  %105 = getelementptr inbounds [6 x float]* %acc_weight_return, i32 0, i32 %104, !dbg !262
+  %106 = load float* %105, align 4, !dbg !262
+  %107 = fadd float %106, %103, !dbg !262
+  store float %107, float* %105, align 4, !dbg !262
+  %108 = load float* %lnReturn, align 4, !dbg !263
+  %109 = load i32* %i1, align 4, !dbg !263
+  %110 = sub nsw i32 %109, 1, !dbg !263
+  %111 = getelementptr inbounds [252 x float]* @_ZZ8frontEndiiPfS_S_S_S_S_S_S_S_E9lnReturnA, i32 0, i32 %110, !dbg !263
+  store float %108, float* %111, align 4, !dbg !263
+  br label %112, !dbg !264
+
+; <label>:112                                     ; preds = %75
+  %113 = load i32* %i1, align 4, !dbg !265
+  %114 = add nsw i32 %113, 1, !dbg !265
+  store i32 %114, i32* %i1, align 4, !dbg !265
+  br label %52, !dbg !265
+
+; <label>:115                                     ; preds = %52
+  br label %116, !dbg !266
+
+; <label>:116                                     ; preds = %115
+  call void @llvm.dbg.declare(metadata !{i32* %i2}, metadata !267), !dbg !269
+  store i32 0, i32* %i2, align 4, !dbg !270
+  br label %117, !dbg !270
+
+; <label>:117                                     ; preds = %136, %116
+  %118 = load i32* %i2, align 4, !dbg !271
+  %119 = icmp slt i32 %118, 6, !dbg !271
+  br i1 %119, label %120, label %139, !dbg !271
+
+; <label>:120                                     ; preds = %117
+  %121 = load i32* %i2, align 4, !dbg !274
+  %122 = getelementptr inbounds [6 x float]* %acc_return, i32 0, i32 %121, !dbg !274
+  %123 = load float* %122, align 4, !dbg !274
+  %124 = load float* %sum_returnA, align 4, !dbg !274
+  %125 = fadd float %124, %123, !dbg !274
+  store float %125, float* %sum_returnA, align 4, !dbg !274
+  %126 = load i32* %i2, align 4, !dbg !276
+  %127 = getelementptr inbounds [6 x float]* %acc_weight_returnSquare, i32 0, i32 %126, !dbg !276
+  %128 = load float* %127, align 4, !dbg !276
+  %129 = load float* %sum_weight_returnSquareA, align 4, !dbg !276
+  %130 = fadd float %129, %128, !dbg !276
+  store float %130, float* %sum_weight_returnSquareA, align 4, !dbg !276
+  %131 = load i32* %i2, align 4, !dbg !277
+  %132 = getelementptr inbounds [6 x float]* %acc_weight_return, i32 0, i32 %131, !dbg !277
+  %133 = load float* %132, align 4, !dbg !277
+  %134 = load float* %sum_weight_returnA, align 4, !dbg !277
+  %135 = fadd float %134, %133, !dbg !277
+  store float %135, float* %sum_weight_returnA, align 4, !dbg !277
+  br label %136, !dbg !278
+
+; <label>:136                                     ; preds = %120
+  %137 = load i32* %i2, align 4, !dbg !279
+  %138 = add nsw i32 %137, 1, !dbg !279
+  store i32 %138, i32* %i2, align 4, !dbg !279
+  br label %117, !dbg !279
+
+; <label>:139                                     ; preds = %117
+  call void @llvm.dbg.declare(metadata !{i32* %column_index}, metadata !280), !dbg !282
+  store i32 1, i32* %column_index, align 4, !dbg !283
+  br label %140, !dbg !283
+
+; <label>:140                                     ; preds = %321, %139
+  %141 = load i32* %column_index, align 4, !dbg !284
+  %142 = load i32* %2, align 4, !dbg !284
+  %143 = icmp slt i32 %141, %142, !dbg !284
+  br i1 %143, label %144, label %324, !dbg !284
+
+; <label>:144                                     ; preds = %140
+  br label %145, !dbg !287
+
+; <label>:145                                     ; preds = %144
+  call void @llvm.dbg.declare(metadata !{i32* %i3}, metadata !290), !dbg !292
+  store i32 0, i32* %i3, align 4, !dbg !293
+  br label %146, !dbg !293
+
+; <label>:146                                     ; preds = %160, %145
+  %147 = load i32* %i3, align 4, !dbg !294
+  %148 = icmp slt i32 %147, 6, !dbg !294
+  br i1 %148, label %149, label %163, !dbg !294
+
+; <label>:149                                     ; preds = %146
+  %150 = load i32* %i3, align 4, !dbg !297
+  %151 = getelementptr inbounds [6 x float]* %acc_return, i32 0, i32 %150, !dbg !297
+  store float 0.000000e+00, float* %151, align 4, !dbg !297
+  %152 = load i32* %i3, align 4, !dbg !299
+  %153 = getelementptr inbounds [6 x float]* %acc_weight_returnSquare, i32 0, i32 %152, !dbg !299
+  store float 0.000000e+00, float* %153, align 4, !dbg !299
+  %154 = load i32* %i3, align 4, !dbg !300
+  %155 = getelementptr inbounds [6 x float]* %acc_weight_returnSquare, i32 0, i32 %154, !dbg !300
+  store float 0.000000e+00, float* %155, align 4, !dbg !300
+  %156 = load i32* %i3, align 4, !dbg !301
+  %157 = getelementptr inbounds [6 x float]* %acc_weight_return, i32 0, i32 %156, !dbg !301
+  store float 0.000000e+00, float* %157, align 4, !dbg !301
+  %158 = load i32* %i3, align 4, !dbg !302
+  %159 = getelementptr inbounds [6 x float]* %acc_weight_returnA_returnB, i32 0, i32 %158, !dbg !302
+  store float 0.000000e+00, float* %159, align 4, !dbg !302
+  br label %160, !dbg !303
+
+; <label>:160                                     ; preds = %149
+  %161 = load i32* %i3, align 4, !dbg !304
+  %162 = add nsw i32 %161, 1, !dbg !304
+  store i32 %162, i32* %i3, align 4, !dbg !304
+  br label %146, !dbg !304
+
+; <label>:163                                     ; preds = %146
+  call void @llvm.dbg.declare(metadata !{i32* %index}, metadata !305), !dbg !306
+  %164 = load i32* %column_index, align 4, !dbg !307
+  %165 = load i32* %1, align 4, !dbg !307
+  %166 = mul nsw i32 %164, %165, !dbg !307
+  store i32 %166, i32* %index, align 4, !dbg !307
+  %167 = load i32* %index, align 4, !dbg !308
+  %168 = load float** %3, align 4, !dbg !308
+  %169 = getelementptr inbounds float* %168, i32 %167, !dbg !308
+  %170 = load float* %169, align 4, !dbg !308
+  %171 = getelementptr inbounds [2 x float]* %shift_reg, i32 0, i32 1, !dbg !308
+  store float %170, float* %171, align 4, !dbg !308
+  br label %172, !dbg !308
+
+; <label>:172                                     ; preds = %163
+  call void @llvm.dbg.declare(metadata !{i32* %i4}, metadata !309), !dbg !311
+  store i32 1, i32* %i4, align 4, !dbg !312
+  br label %173, !dbg !312
+
+; <label>:173                                     ; preds = %245, %172
+  %174 = load i32* %i4, align 4, !dbg !313
+  %175 = load i32* %1, align 4, !dbg !313
+  %176 = sub nsw i32 %175, 1, !dbg !313
+  %177 = icmp sle i32 %174, %176, !dbg !313
+  br i1 %177, label %178, label %248, !dbg !313
+
+; <label>:178                                     ; preds = %173
+  %179 = load i32* %i4, align 4, !dbg !316
+  %180 = icmp eq i32 %179, 1, !dbg !316
+  br i1 %180, label %181, label %189, !dbg !316
+
+; <label>:181                                     ; preds = %178
+  %182 = load i32* %index, align 4, !dbg !319
+  %183 = load i32* %i4, align 4, !dbg !319
+  %184 = add nsw i32 %182, %183, !dbg !319
+  %185 = load float** %3, align 4, !dbg !319
+  %186 = getelementptr inbounds float* %185, i32 %184, !dbg !319
+  %187 = load float* %186, align 4, !dbg !319
+  %188 = getelementptr inbounds [2 x float]* %shift_reg, i32 0, i32 0, !dbg !319
+  store float %187, float* %188, align 4, !dbg !319
+  br label %200, !dbg !321
+
+; <label>:189                                     ; preds = %178
+  %190 = getelementptr inbounds [2 x float]* %shift_reg, i32 0, i32 0, !dbg !322
+  %191 = load float* %190, align 4, !dbg !322
+  %192 = getelementptr inbounds [2 x float]* %shift_reg, i32 0, i32 1, !dbg !322
+  store float %191, float* %192, align 4, !dbg !322
+  %193 = load i32* %index, align 4, !dbg !324
+  %194 = load i32* %i4, align 4, !dbg !324
+  %195 = add nsw i32 %193, %194, !dbg !324
+  %196 = load float** %3, align 4, !dbg !324
+  %197 = getelementptr inbounds float* %196, i32 %195, !dbg !324
+  %198 = load float* %197, align 4, !dbg !324
+  %199 = getelementptr inbounds [2 x float]* %shift_reg, i32 0, i32 0, !dbg !324
+  store float %198, float* %199, align 4, !dbg !324
+  br label %200
+
+; <label>:200                                     ; preds = %189, %181
+  call void @llvm.dbg.declare(metadata !{float* %lnReturn5}, metadata !325), !dbg !326
+  %201 = getelementptr inbounds [2 x float]* %shift_reg, i32 0, i32 1, !dbg !327
+  %202 = load float* %201, align 4, !dbg !327
+  %203 = getelementptr inbounds [2 x float]* %shift_reg, i32 0, i32 0, !dbg !327
+  %204 = load float* %203, align 4, !dbg !327
+  %205 = fdiv float %202, %204, !dbg !327
+  %206 = call float @logf(float %205) #1, !dbg !327
+  store float %206, float* %lnReturn5, align 4, !dbg !327
+  call void @llvm.dbg.declare(metadata !{float* %weight6}, metadata !328), !dbg !329
+  %207 = load i32* %i4, align 4, !dbg !330
+  %208 = getelementptr inbounds [252 x float]* @_ZZ8frontEndiiPfS_S_S_S_S_S_S_S_E10weight_rom, i32 0, i32 %207, !dbg !330
+  %209 = load float* %208, align 4, !dbg !330
+  store float %209, float* %weight6, align 4, !dbg !330
+  call void @llvm.dbg.declare(metadata !{i32* %channel7}, metadata !331), !dbg !332
+  %210 = load i32* %i4, align 4, !dbg !333
+  %211 = srem i32 %210, 6, !dbg !333
+  store i32 %211, i32* %channel7, align 4, !dbg !333
+  %212 = load float* %lnReturn5, align 4, !dbg !334
+  %213 = load i32* %channel7, align 4, !dbg !334
+  %214 = getelementptr inbounds [6 x float]* %acc_return, i32 0, i32 %213, !dbg !334
+  %215 = load float* %214, align 4, !dbg !334
+  %216 = fadd float %215, %212, !dbg !334
+  store float %216, float* %214, align 4, !dbg !334
+  %217 = load float* %lnReturn5, align 4, !dbg !335
+  %218 = load float* %lnReturn5, align 4, !dbg !335
+  %219 = fmul float %217, %218, !dbg !335
+  %220 = load float* %weight6, align 4, !dbg !335
+  %221 = fmul float %219, %220, !dbg !335
+  %222 = load i32* %channel7, align 4, !dbg !335
+  %223 = getelementptr inbounds [6 x float]* %acc_weight_returnSquare, i32 0, i32 %222, !dbg !335
+  %224 = load float* %223, align 4, !dbg !335
+  %225 = fadd float %224, %221, !dbg !335
+  store float %225, float* %223, align 4, !dbg !335
+  %226 = load float* %lnReturn5, align 4, !dbg !336
+  %227 = load float* %weight6, align 4, !dbg !336
+  %228 = fmul float %226, %227, !dbg !336
+  %229 = load i32* %channel7, align 4, !dbg !336
+  %230 = getelementptr inbounds [6 x float]* %acc_weight_return, i32 0, i32 %229, !dbg !336
+  %231 = load float* %230, align 4, !dbg !336
+  %232 = fadd float %231, %228, !dbg !336
+  store float %232, float* %230, align 4, !dbg !336
+  %233 = load i32* %i4, align 4, !dbg !337
+  %234 = sub nsw i32 %233, 1, !dbg !337
+  %235 = getelementptr inbounds [252 x float]* @_ZZ8frontEndiiPfS_S_S_S_S_S_S_S_E9lnReturnA, i32 0, i32 %234, !dbg !337
+  %236 = load float* %235, align 4, !dbg !337
+  %237 = load float* %lnReturn5, align 4, !dbg !337
+  %238 = fmul float %236, %237, !dbg !337
+  %239 = load float* %weight6, align 4, !dbg !337
+  %240 = fmul float %238, %239, !dbg !337
+  %241 = load i32* %channel7, align 4, !dbg !337
+  %242 = getelementptr inbounds [6 x float]* %acc_weight_returnA_returnB, i32 0, i32 %241, !dbg !337
+  %243 = load float* %242, align 4, !dbg !337
+  %244 = fadd float %243, %240, !dbg !337
+  store float %244, float* %242, align 4, !dbg !337
+  br label %245, !dbg !338
+
+; <label>:245                                     ; preds = %200
+  %246 = load i32* %i4, align 4, !dbg !339
+  %247 = add nsw i32 %246, 1, !dbg !339
+  store i32 %247, i32* %i4, align 4, !dbg !339
+  br label %173, !dbg !339
+
+; <label>:248                                     ; preds = %173
+  call void @llvm.dbg.declare(metadata !{float* %sum_return}, metadata !340), !dbg !341
+  store float 0.000000e+00, float* %sum_return, align 4, !dbg !342
+  call void @llvm.dbg.declare(metadata !{float* %sum_weight_returnSquare}, metadata !343), !dbg !344
+  store float 0.000000e+00, float* %sum_weight_returnSquare, align 4, !dbg !345
+  call void @llvm.dbg.declare(metadata !{float* %sum_weight_return}, metadata !346), !dbg !347
+  store float 0.000000e+00, float* %sum_weight_return, align 4, !dbg !348
+  call void @llvm.dbg.declare(metadata !{float* %sum_weight_returnA_returnB}, metadata !349), !dbg !350
+  store float 0.000000e+00, float* %sum_weight_returnA_returnB, align 4, !dbg !351
+  br label %249, !dbg !351
+
+; <label>:249                                     ; preds = %248
+  call void @llvm.dbg.declare(metadata !{i32* %i8}, metadata !352), !dbg !354
+  store i32 0, i32* %i8, align 4, !dbg !355
+  br label %250, !dbg !355
+
+; <label>:250                                     ; preds = %274, %249
+  %251 = load i32* %i8, align 4, !dbg !356
+  %252 = icmp slt i32 %251, 6, !dbg !356
+  br i1 %252, label %253, label %277, !dbg !356
+
+; <label>:253                                     ; preds = %250
+  %254 = load i32* %i8, align 4, !dbg !359
+  %255 = getelementptr inbounds [6 x float]* %acc_return, i32 0, i32 %254, !dbg !359
+  %256 = load float* %255, align 4, !dbg !359
+  %257 = load float* %sum_return, align 4, !dbg !359
+  %258 = fadd float %257, %256, !dbg !359
+  store float %258, float* %sum_return, align 4, !dbg !359
+  %259 = load i32* %i8, align 4, !dbg !361
+  %260 = getelementptr inbounds [6 x float]* %acc_weight_returnSquare, i32 0, i32 %259, !dbg !361
+  %261 = load float* %260, align 4, !dbg !361
+  %262 = load float* %sum_weight_returnSquare, align 4, !dbg !361
+  %263 = fadd float %262, %261, !dbg !361
+  store float %263, float* %sum_weight_returnSquare, align 4, !dbg !361
+  %264 = load i32* %i8, align 4, !dbg !362
+  %265 = getelementptr inbounds [6 x float]* %acc_weight_return, i32 0, i32 %264, !dbg !362
+  %266 = load float* %265, align 4, !dbg !362
+  %267 = load float* %sum_weight_return, align 4, !dbg !362
+  %268 = fadd float %267, %266, !dbg !362
+  store float %268, float* %sum_weight_return, align 4, !dbg !362
+  %269 = load i32* %i8, align 4, !dbg !363
+  %270 = getelementptr inbounds [6 x float]* %acc_weight_returnA_returnB, i32 0, i32 %269, !dbg !363
+  %271 = load float* %270, align 4, !dbg !363
+  %272 = load float* %sum_weight_returnA_returnB, align 4, !dbg !363
+  %273 = fadd float %272, %271, !dbg !363
+  store float %273, float* %sum_weight_returnA_returnB, align 4, !dbg !363
+  br label %274, !dbg !364
+
+; <label>:274                                     ; preds = %253
+  %275 = load i32* %i8, align 4, !dbg !365
+  %276 = add nsw i32 %275, 1, !dbg !365
+  store i32 %276, i32* %i8, align 4, !dbg !365
+  br label %250, !dbg !365
+
+; <label>:277                                     ; preds = %250
+  call void @llvm.dbg.declare(metadata !{i32* %i9}, metadata !366), !dbg !367
+  %278 = load i32* %column_index, align 4, !dbg !368
+  %279 = sub nsw i32 %278, 1, !dbg !368
+  %280 = srem i32 %279, 252, !dbg !368
+  store i32 %280, i32* %i9, align 4, !dbg !368
+  %281 = load float* getelementptr inbounds ([252 x float]* @_ZZ8frontEndiiPfS_S_S_S_S_S_S_S_E10weight_rom, i32 0, i32 0), align 4, !dbg !369
+  %282 = load i32* %column_index, align 4, !dbg !369
+  %283 = sub nsw i32 %282, 1, !dbg !369
+  %284 = load float** %4, align 4, !dbg !369
+  %285 = getelementptr inbounds float* %284, i32 %283, !dbg !369
+  store float %281, float* %285, align 4, !dbg !369
+  %286 = load float* %sum_return, align 4, !dbg !370
+  %287 = load i32* %column_index, align 4, !dbg !370
+  %288 = sub nsw i32 %287, 1, !dbg !370
+  %289 = load float** %5, align 4, !dbg !370
+  %290 = getelementptr inbounds float* %289, i32 %288, !dbg !370
+  store float %286, float* %290, align 4, !dbg !370
+  %291 = load float* %sum_weight_returnSquare, align 4, !dbg !371
+  %292 = load i32* %column_index, align 4, !dbg !371
+  %293 = sub nsw i32 %292, 1, !dbg !371
+  %294 = load float** %6, align 4, !dbg !371
+  %295 = getelementptr inbounds float* %294, i32 %293, !dbg !371
+  store float %291, float* %295, align 4, !dbg !371
+  %296 = load float* %sum_weight_return, align 4, !dbg !372
+  %297 = load i32* %column_index, align 4, !dbg !372
+  %298 = sub nsw i32 %297, 1, !dbg !372
+  %299 = load float** %7, align 4, !dbg !372
+  %300 = getelementptr inbounds float* %299, i32 %298, !dbg !372
+  store float %296, float* %300, align 4, !dbg !372
+  %301 = load float* %sum_weight_returnA_returnB, align 4, !dbg !373
+  %302 = load i32* %column_index, align 4, !dbg !373
+  %303 = sub nsw i32 %302, 1, !dbg !373
+  %304 = load float** %8, align 4, !dbg !373
+  %305 = getelementptr inbounds float* %304, i32 %303, !dbg !373
+  store float %301, float* %305, align 4, !dbg !373
+  %306 = load float* %sum_returnA, align 4, !dbg !374
+  %307 = load i32* %column_index, align 4, !dbg !374
+  %308 = sub nsw i32 %307, 1, !dbg !374
+  %309 = load float** %9, align 4, !dbg !374
+  %310 = getelementptr inbounds float* %309, i32 %308, !dbg !374
+  store float %306, float* %310, align 4, !dbg !374
+  %311 = load float* %sum_weight_returnSquareA, align 4, !dbg !375
+  %312 = load i32* %column_index, align 4, !dbg !375
+  %313 = sub nsw i32 %312, 1, !dbg !375
+  %314 = load float** %10, align 4, !dbg !375
+  %315 = getelementptr inbounds float* %314, i32 %313, !dbg !375
+  store float %311, float* %315, align 4, !dbg !375
+  %316 = load float* %sum_weight_returnA, align 4, !dbg !376
+  %317 = load i32* %column_index, align 4, !dbg !376
+  %318 = sub nsw i32 %317, 1, !dbg !376
+  %319 = load float** %11, align 4, !dbg !376
+  %320 = getelementptr inbounds float* %319, i32 %318, !dbg !376
+  store float %316, float* %320, align 4, !dbg !376
+  br label %321, !dbg !377
+
+; <label>:321                                     ; preds = %277
+  %322 = load i32* %column_index, align 4, !dbg !378
+  %323 = add nsw i32 %322, 1, !dbg !378
+  store i32 %323, i32* %column_index, align 4, !dbg !378
+  br label %140, !dbg !378
+
+; <label>:324                                     ; preds = %140
+  ret void, !dbg !379
+}
+
+; Function Attrs: nounwind
+define void @_Z7backEndiiPfS_S_S_S_S_S_S_S_(i32 %NUMBER_OF_DAYS, i32 %NUMBER_OF_INDICES, float* %sum_weight_in, float* %sum_return_in, float* %sum_weight_returnSquare_in, float* %sum_weight_return_in, float* %sum_weight_returnA_returnB_in, float* %sum_returnA_in, float* %sum_weight_returnSquareA_in, float* %sum_weight_returnA_in, float* %out_correlation) #3 {
+  %1 = alloca i32, align 4
+  %2 = alloca i32, align 4
+  %3 = alloca float*, align 4
+  %4 = alloca float*, align 4
+  %5 = alloca float*, align 4
+  %6 = alloca float*, align 4
+  %7 = alloca float*, align 4
+  %8 = alloca float*, align 4
+  %9 = alloca float*, align 4
+  %10 = alloca float*, align 4
+  %11 = alloca float*, align 4
+  %column_index = alloca i32, align 4
+  %sum_weight = alloca float, align 4
+  %sum_return = alloca float, align 4
+  %sum_weight_returnSquare = alloca float, align 4
+  %sum_weight_return = alloca float, align 4
+  %sum_weight_returnA_returnB = alloca float, align 4
+  %sum_returnA = alloca float, align 4
+  %sum_weight_returnSquareA = alloca float, align 4
+  %sum_weight_returnA = alloca float, align 4
+  %meanReturnA = alloca float, align 4
+  %meanReturnB = alloca float, align 4
+  %volatilityA = alloca float, align 4
+  %volatilityB = alloca float, align 4
+  %covariance = alloca float, align 4
+  %corr_temp = alloca float, align 4
+  store i32 %NUMBER_OF_DAYS, i32* %1, align 4
+  call void @llvm.dbg.declare(metadata !{i32* %1}, metadata !380), !dbg !381
+  store i32 %NUMBER_OF_INDICES, i32* %2, align 4
+  call void @llvm.dbg.declare(metadata !{i32* %2}, metadata !382), !dbg !383
+  store float* %sum_weight_in, float** %3, align 4
+  call void @llvm.dbg.declare(metadata !{float** %3}, metadata !384), !dbg !385
+  store float* %sum_return_in, float** %4, align 4
+  call void @llvm.dbg.declare(metadata !{float** %4}, metadata !386), !dbg !387
+  store float* %sum_weight_returnSquare_in, float** %5, align 4
+  call void @llvm.dbg.declare(metadata !{float** %5}, metadata !388), !dbg !389
+  store float* %sum_weight_return_in, float** %6, align 4
+  call void @llvm.dbg.declare(metadata !{float** %6}, metadata !390), !dbg !391
+  store float* %sum_weight_returnA_returnB_in, float** %7, align 4
+  call void @llvm.dbg.declare(metadata !{float** %7}, metadata !392), !dbg !393
+  store float* %sum_returnA_in, float** %8, align 4
+  call void @llvm.dbg.declare(metadata !{float** %8}, metadata !394), !dbg !395
+  store float* %sum_weight_returnSquareA_in, float** %9, align 4
+  call void @llvm.dbg.declare(metadata !{float** %9}, metadata !396), !dbg !397
+  store float* %sum_weight_returnA_in, float** %10, align 4
+  call void @llvm.dbg.declare(metadata !{float** %10}, metadata !398), !dbg !399
+  store float* %out_correlation, float** %11, align 4
+  call void @llvm.dbg.declare(metadata !{float** %11}, metadata !400), !dbg !401
+  %12 = load i32* %2, align 4
+  %13 = sub nsw i32 %12, 1
+  %14 = load i32* %2, align 4
+  %15 = sub nsw i32 %14, 1
+  %16 = load i32* %2, align 4
+  %17 = sub nsw i32 %16, 1
+  %18 = load i32* %2, align 4
+  %19 = sub nsw i32 %18, 1
+  %20 = load i32* %2, align 4
+  %21 = sub nsw i32 %20, 1
+  %22 = load i32* %2, align 4
+  %23 = sub nsw i32 %22, 1
+  %24 = load i32* %2, align 4
+  %25 = sub nsw i32 %24, 1
+  %26 = load i32* %2, align 4
+  %27 = sub nsw i32 %26, 1
+  call void @llvm.dbg.declare(metadata !{i32* %column_index}, metadata !402), !dbg !404
+  store i32 1, i32* %column_index, align 4, !dbg !405
+  br label %28, !dbg !405
+
+; <label>:28                                      ; preds = %134, %0
+  %29 = load i32* %column_index, align 4, !dbg !406
+  %30 = load i32* %2, align 4, !dbg !406
+  %31 = icmp slt i32 %29, %30, !dbg !406
+  br i1 %31, label %32, label %137, !dbg !406
+
+; <label>:32                                      ; preds = %28
+  call void @llvm.dbg.declare(metadata !{float* %sum_weight}, metadata !409), !dbg !411
+  %33 = load i32* %column_index, align 4, !dbg !412
+  %34 = sub nsw i32 %33, 1, !dbg !412
+  %35 = load float** %3, align 4, !dbg !412
+  %36 = getelementptr inbounds float* %35, i32 %34, !dbg !412
+  %37 = load float* %36, align 4, !dbg !412
+  store float %37, float* %sum_weight, align 4, !dbg !412
+  call void @llvm.dbg.declare(metadata !{float* %sum_return}, metadata !413), !dbg !414
+  %38 = load i32* %column_index, align 4, !dbg !415
+  %39 = sub nsw i32 %38, 1, !dbg !415
+  %40 = load float** %4, align 4, !dbg !415
+  %41 = getelementptr inbounds float* %40, i32 %39, !dbg !415
+  %42 = load float* %41, align 4, !dbg !415
+  store float %42, float* %sum_return, align 4, !dbg !415
+  call void @llvm.dbg.declare(metadata !{float* %sum_weight_returnSquare}, metadata !416), !dbg !417
+  %43 = load i32* %column_index, align 4, !dbg !418
+  %44 = sub nsw i32 %43, 1, !dbg !418
+  %45 = load float** %5, align 4, !dbg !418
+  %46 = getelementptr inbounds float* %45, i32 %44, !dbg !418
+  %47 = load float* %46, align 4, !dbg !418
+  store float %47, float* %sum_weight_returnSquare, align 4, !dbg !418
+  call void @llvm.dbg.declare(metadata !{float* %sum_weight_return}, metadata !419), !dbg !420
+  %48 = load i32* %column_index, align 4, !dbg !421
+  %49 = sub nsw i32 %48, 1, !dbg !421
+  %50 = load float** %6, align 4, !dbg !421
+  %51 = getelementptr inbounds float* %50, i32 %49, !dbg !421
+  %52 = load float* %51, align 4, !dbg !421
+  store float %52, float* %sum_weight_return, align 4, !dbg !421
+  call void @llvm.dbg.declare(metadata !{float* %sum_weight_returnA_returnB}, metadata !422), !dbg !423
+  %53 = load i32* %column_index, align 4, !dbg !424
+  %54 = sub nsw i32 %53, 1, !dbg !424
+  %55 = load float** %7, align 4, !dbg !424
+  %56 = getelementptr inbounds float* %55, i32 %54, !dbg !424
+  %57 = load float* %56, align 4, !dbg !424
+  store float %57, float* %sum_weight_returnA_returnB, align 4, !dbg !424
+  call void @llvm.dbg.declare(metadata !{float* %sum_returnA}, metadata !425), !dbg !426
+  %58 = load i32* %column_index, align 4, !dbg !427
+  %59 = sub nsw i32 %58, 1, !dbg !427
+  %60 = load float** %8, align 4, !dbg !427
+  %61 = getelementptr inbounds float* %60, i32 %59, !dbg !427
+  %62 = load float* %61, align 4, !dbg !427
+  store float %62, float* %sum_returnA, align 4, !dbg !427
+  call void @llvm.dbg.declare(metadata !{float* %sum_weight_returnSquareA}, metadata !428), !dbg !429
+  %63 = load i32* %column_index, align 4, !dbg !430
+  %64 = sub nsw i32 %63, 1, !dbg !430
+  %65 = load float** %9, align 4, !dbg !430
+  %66 = getelementptr inbounds float* %65, i32 %64, !dbg !430
+  %67 = load float* %66, align 4, !dbg !430
+  store float %67, float* %sum_weight_returnSquareA, align 4, !dbg !430
+  call void @llvm.dbg.declare(metadata !{float* %sum_weight_returnA}, metadata !431), !dbg !432
+  %68 = load i32* %column_index, align 4, !dbg !433
+  %69 = sub nsw i32 %68, 1, !dbg !433
+  %70 = load float** %10, align 4, !dbg !433
+  %71 = getelementptr inbounds float* %70, i32 %69, !dbg !433
+  %72 = load float* %71, align 4, !dbg !433
+  store float %72, float* %sum_weight_returnA, align 4, !dbg !433
+  call void @llvm.dbg.declare(metadata !{float* %meanReturnA}, metadata !434), !dbg !435
+  %73 = load float* %sum_returnA, align 4, !dbg !436
+  %74 = load i32* %1, align 4, !dbg !436
+  %75 = sub nsw i32 %74, 1, !dbg !436
+  %76 = sitofp i32 %75 to float, !dbg !436
+  %77 = fdiv float %73, %76, !dbg !436
+  store float %77, float* %meanReturnA, align 4, !dbg !436
+  call void @llvm.dbg.declare(metadata !{float* %meanReturnB}, metadata !437), !dbg !438
+  %78 = load float* %sum_return, align 4, !dbg !439
+  %79 = load i32* %1, align 4, !dbg !439
+  %80 = sub nsw i32 %79, 1, !dbg !439
+  %81 = sitofp i32 %80 to float, !dbg !439
+  %82 = fdiv float %78, %81, !dbg !439
+  store float %82, float* %meanReturnB, align 4, !dbg !439
+  call void @llvm.dbg.declare(metadata !{float* %volatilityA}, metadata !440), !dbg !441
+  %83 = load float* %sum_weight_returnSquareA, align 4, !dbg !442
+  %84 = load float* %meanReturnA, align 4, !dbg !442
+  %85 = fmul float 2.000000e+00, %84, !dbg !442
+  %86 = load float* %sum_weight_returnA, align 4, !dbg !442
+  %87 = fmul float %85, %86, !dbg !442
+  %88 = fsub float %83, %87, !dbg !442
+  %89 = load float* %sum_weight, align 4, !dbg !442
+  %90 = fdiv float %88, %89, !dbg !442
+  %91 = load float* %meanReturnA, align 4, !dbg !442
+  %92 = load float* %meanReturnA, align 4, !dbg !442
+  %93 = fmul float %91, %92, !dbg !442
+  %94 = fadd float %90, %93, !dbg !442
+  %95 = call float @sqrtf(float %94) #1, !dbg !442
+  store float %95, float* %volatilityA, align 4, !dbg !442
+  call void @llvm.dbg.declare(metadata !{float* %volatilityB}, metadata !443), !dbg !444
+  %96 = load float* %sum_weight_returnSquare, align 4, !dbg !445
+  %97 = load float* %meanReturnB, align 4, !dbg !445
+  %98 = fmul float 2.000000e+00, %97, !dbg !445
+  %99 = load float* %sum_weight_return, align 4, !dbg !445
+  %100 = fmul float %98, %99, !dbg !445
+  %101 = fsub float %96, %100, !dbg !445
+  %102 = load float* %sum_weight, align 4, !dbg !445
+  %103 = fdiv float %101, %102, !dbg !445
+  %104 = load float* %meanReturnB, align 4, !dbg !445
+  %105 = load float* %meanReturnB, align 4, !dbg !445
+  %106 = fmul float %104, %105, !dbg !445
+  %107 = fadd float %103, %106, !dbg !445
+  %108 = call float @sqrtf(float %107) #1, !dbg !445
+  store float %108, float* %volatilityB, align 4, !dbg !445
+  call void @llvm.dbg.declare(metadata !{float* %covariance}, metadata !446), !dbg !447
+  %109 = load float* %sum_weight_returnA_returnB, align 4, !dbg !448
+  %110 = load float* %meanReturnA, align 4, !dbg !448
+  %111 = load float* %sum_weight_return, align 4, !dbg !448
+  %112 = fmul float %110, %111, !dbg !448
+  %113 = fsub float %109, %112, !dbg !448
+  %114 = load float* %meanReturnB, align 4, !dbg !448
+  %115 = load float* %sum_weight_returnA, align 4, !dbg !448
+  %116 = fmul float %114, %115, !dbg !448
+  %117 = fsub float %113, %116, !dbg !448
+  %118 = load float* %sum_weight, align 4, !dbg !448
+  %119 = fdiv float %117, %118, !dbg !448
+  %120 = load float* %meanReturnA, align 4, !dbg !448
+  %121 = load float* %meanReturnB, align 4, !dbg !448
+  %122 = fmul float %120, %121, !dbg !448
+  %123 = fadd float %119, %122, !dbg !448
+  store float %123, float* %covariance, align 4, !dbg !448
+  call void @llvm.dbg.declare(metadata !{float* %corr_temp}, metadata !449), !dbg !450
+  %124 = load float* %covariance, align 4, !dbg !451
+  %125 = load float* %volatilityA, align 4, !dbg !451
+  %126 = load float* %volatilityB, align 4, !dbg !451
+  %127 = fmul float %125, %126, !dbg !451
+  %128 = fdiv float %124, %127, !dbg !451
+  store float %128, float* %corr_temp, align 4, !dbg !451
+  %129 = load float* %corr_temp, align 4, !dbg !452
+  %130 = load i32* %column_index, align 4, !dbg !452
+  %131 = sub nsw i32 %130, 1, !dbg !452
+  %132 = load float** %11, align 4, !dbg !452
+  %133 = getelementptr inbounds float* %132, i32 %131, !dbg !452
+  store float %129, float* %133, align 4, !dbg !452
+  br label %134, !dbg !453
+
+; <label>:134                                     ; preds = %32
+  %135 = load i32* %column_index, align 4, !dbg !454
+  %136 = add nsw i32 %135, 1, !dbg !454
+  store i32 %136, i32* %column_index, align 4, !dbg !454
+  br label %28, !dbg !454
+
+; <label>:137                                     ; preds = %28
+  ret void, !dbg !455
+}
+
+; Function Attrs: nounwind
+declare void @llvm.stackrestore(i8*) #1
+
+; Function Attrs: nounwind
+define internal void @_ZL15weight_rom_initPfi(float* %weightRom, i32 %NUMBER_OF_DAYS) #3 {
+  %1 = alloca float*, align 4
+  %2 = alloca i32, align 4
+  %lambda = alloca float, align 4
+  %i = alloca i32, align 4
+  %i1 = alloca i32, align 4
+  store float* %weightRom, float** %1, align 4
+  call void @llvm.dbg.declare(metadata !{float** %1}, metadata !456), !dbg !457
+  store i32 %NUMBER_OF_DAYS, i32* %2, align 4
+  call void @llvm.dbg.declare(metadata !{i32* %2}, metadata !458), !dbg !459
+  call void @llvm.dbg.declare(metadata !{float* %lambda}, metadata !460), !dbg !461
+  store float 0x3FEE147AE0000000, float* %lambda, align 4, !dbg !462
+  %3 = load float** %1, align 4, !dbg !463
+  %4 = getelementptr inbounds float* %3, i32 0, !dbg !463
+  store float 1.000000e+00, float* %4, align 4, !dbg !463
+  %5 = load float** %1, align 4, !dbg !464
+  %6 = getelementptr inbounds float* %5, i32 1, !dbg !464
+  store float 1.000000e+00, float* %6, align 4, !dbg !464
+  br label %7, !dbg !464
+
+; <label>:7                                       ; preds = %0
+  call void @llvm.dbg.declare(metadata !{i32* %i}, metadata !465), !dbg !467
+  store i32 2, i32* %i, align 4, !dbg !468
+  br label %8, !dbg !468
+
+; <label>:8                                       ; preds = %22, %7
+  %9 = load i32* %i, align 4, !dbg !469
+  %10 = icmp slt i32 %9, 252, !dbg !469
+  br i1 %10, label %11, label %25, !dbg !469
+
+; <label>:11                                      ; preds = %8
+  %12 = load float* %lambda, align 4, !dbg !472
+  %13 = load i32* %i, align 4, !dbg !472
+  %14 = sub nsw i32 %13, 1, !dbg !472
+  %15 = load float** %1, align 4, !dbg !472
+  %16 = getelementptr inbounds float* %15, i32 %14, !dbg !472
+  %17 = load float* %16, align 4, !dbg !472
+  %18 = fmul float %12, %17, !dbg !472
+  %19 = load i32* %i, align 4, !dbg !472
+  %20 = load float** %1, align 4, !dbg !472
+  %21 = getelementptr inbounds float* %20, i32 %19, !dbg !472
+  store float %18, float* %21, align 4, !dbg !472
+  br label %22, !dbg !474
+
+; <label>:22                                      ; preds = %11
+  %23 = load i32* %i, align 4, !dbg !475
+  %24 = add nsw i32 %23, 1, !dbg !475
+  store i32 %24, i32* %i, align 4, !dbg !475
+  br label %8, !dbg !475
+
+; <label>:25                                      ; preds = %8
+  br label %26, !dbg !476
+
+; <label>:26                                      ; preds = %25
+  call void @llvm.dbg.declare(metadata !{i32* %i1}, metadata !477), !dbg !479
+  store i32 2, i32* %i1, align 4, !dbg !480
+  br label %27, !dbg !480
+
+; <label>:27                                      ; preds = %40, %26
+  %28 = load i32* %i1, align 4, !dbg !481
+  %29 = load i32* %2, align 4, !dbg !481
+  %30 = icmp slt i32 %28, %29, !dbg !481
+  br i1 %30, label %31, label %43, !dbg !481
+
+; <label>:31                                      ; preds = %27
+  %32 = load i32* %i1, align 4, !dbg !484
+  %33 = load float** %1, align 4, !dbg !484
+  %34 = getelementptr inbounds float* %33, i32 %32, !dbg !484
+  %35 = load float* %34, align 4, !dbg !484
+  %36 = load float** %1, align 4, !dbg !484
+  %37 = getelementptr inbounds float* %36, i32 0, !dbg !484
+  %38 = load float* %37, align 4, !dbg !484
+  %39 = fadd float %38, %35, !dbg !484
+  store float %39, float* %37, align 4, !dbg !484
+  br label %40, !dbg !486
+
+; <label>:40                                      ; preds = %31
+  %41 = load i32* %i1, align 4, !dbg !487
+  %42 = add nsw i32 %41, 1, !dbg !487
+  store i32 %42, i32* %i1, align 4, !dbg !487
+  br label %27, !dbg !487
+
+; <label>:43                                      ; preds = %27
+  ret void, !dbg !488
+}
+
+; Function Attrs: nounwind
+declare float @logf(float) #3
+
+; Function Attrs: nounwind
+declare float @sqrtf(float) #3
+
+define internal void @_GLOBAL__sub_I_correlation_accel_v3.cpp() section ".text.startup" {
+  call void @__cxx_global_var_init(), !dbg !489
+  ret void, !dbg !489
+}
+
+attributes #0 = { "less-precise-fpmad"="false" "no-frame-pointer-elim"="true" "no-frame-pointer-elim-non-leaf" "no-infs-fp-math"="false" "no-nans-fp-math"="false" "stack-protector-buffer-size"="8" "unsafe-fp-math"="false" "use-soft-float"="false" }
+attributes #1 = { nounwind }
+attributes #2 = { nounwind readnone }
+attributes #3 = { nounwind "less-precise-fpmad"="false" "no-frame-pointer-elim"="true" "no-frame-pointer-elim-non-leaf" "no-infs-fp-math"="false" "no-nans-fp-math"="false" "stack-protector-buffer-size"="8" "unsafe-fp-math"="false" "use-soft-float"="false" }
+
+!llvm.dbg.cu = !{!0}
+!xidane.function_declaration_type = !{!100, !101, !102, !101, !103, !104, !105, !106, !107, !108, !109, !110, !111, !112, !113, !112}
+!xidane.function_declaration_filename = !{!100, !114, !102, !114, !103, !115, !105, !115, !107, !115, !109, !115, !111, !116, !113, !116}
+!xidane.function_argument_annotation = !{!103, !117}
+!xidane.ExternC = !{!111, !113}
+!llvm.module.flags = !{!118, !119, !120, !121}
+!llvm.ident = !{!122}
+
+!0 = metadata !{i32 786449, metadata !1, i32 4, metadata !"clang version 3.5.0 (tags/RELEASE_350/final)", i1 false, metadata !"", i32 0, metadata !2, metadata !3, metadata !37, metadata !60, metadata !67, metadata !"", i32 1} ; [ DW_TAG_compile_unit ] [/home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease/../src/correlation_accel_v3.cpp] [DW_LANG_C_plus_plus]
+!1 = metadata !{metadata !"../src/correlation_accel_v3.cpp", metadata !"/home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease"}
+!2 = metadata !{}
+!3 = metadata !{metadata !4, metadata !10, metadata !12, metadata !16, metadata !28}
+!4 = metadata !{i32 786451, metadata !5, null, metadata !"", i32 82, i64 64, i64 32, i32 0, i32 0, null, metadata !6, i32 0, null, null, metadata !"_ZTS11__mbstate_t"} ; [ DW_TAG_structure_type ] [line 82, size 64, align 32, offset 0] [def] [from ]
+!5 = metadata !{metadata !"/opt/Xilinx/SDSoC/2014.4/SDK/2014.4/gnu/arm/lin/arm-xilinx-linux-gnueabi/libc/usr/include/wchar.h", metadata !"/home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease"}
+!6 = metadata !{metadata !7, metadata !9}
+!7 = metadata !{i32 786445, metadata !5, metadata !"_ZTS11__mbstate_t", metadata !"__count", i32 84, i64 32, i64 32, i64 0, i32 0, metadata !8} ; [ DW_TAG_member ] [__count] [line 84, size 32, align 32, offset 0] [from int]
+!8 = metadata !{i32 786468, null, null, metadata !"int", i32 0, i64 32, i64 32, i64 0, i32 0, i32 5} ; [ DW_TAG_base_type ] [int] [line 0, size 32, align 32, offset 0, enc DW_ATE_signed]
+!9 = metadata !{i32 786445, metadata !5, metadata !"_ZTS11__mbstate_t", metadata !"__value", i32 93, i64 32, i64 32, i64 32, i32 0, metadata !"_ZTSN11__mbstate_tUt_E"} ; [ DW_TAG_member ] [__value] [line 93, size 32, align 32, offset 32] [from _ZTSN11__mbstate_tUt_E]
+!10 = metadata !{i32 786451, metadata !11, null, metadata !"lconv", i32 53, i64 0, i64 0, i32 0, i32 4, null, null, i32 0, null, null, metadata !"_ZTS5lconv"} ; [ DW_TAG_structure_type ] [lconv] [line 53, size 0, align 0, offset 0] [decl] [from ]
+!11 = metadata !{metadata !"/opt/Xilinx/SDSoC/2014.4/SDK/2014.4/gnu/arm/lin/arm-xilinx-linux-gnueabi/libc/usr/include/locale.h", metadata !"/home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease"}
+!12 = metadata !{i32 786434, metadata !13, metadata !14, metadata !"ios_base", i32 199, i64 0, i64 0, i32 0, i32 4, null, null, i32 0, null, null, metadata !"_ZTSSt8ios_base"} ; [ DW_TAG_class_type ] [ios_base] [line 199, size 0, align 0, offset 0] [decl] [from ]
+!13 = metadata !{metadata !"/opt/Xilinx/SDSoC/2014.4/SDK/2014.4/gnu/arm/lin/arm-xilinx-linux-gnueabi/include/c++/4.8.3/bits/ios_base.h", metadata !"/home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease"}
+!14 = metadata !{i32 786489, metadata !15, null, metadata !"std", i32 184} ; [ DW_TAG_namespace ] [std] [line 184]
+!15 = metadata !{metadata !"/opt/Xilinx/SDSoC/2014.4/SDK/2014.4/gnu/arm/lin/arm-xilinx-linux-gnueabi/include/c++/4.8.3/arm-xilinx-linux-gnueabi/bits/c++config.h", metadata !"/home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease"}
+!16 = metadata !{i32 786434, metadata !13, metadata !"_ZTSSt8ios_base", metadata !"Init", i32 533, i64 8, i64 8, i32 0, i32 0, null, metadata !17, i32 0, null, null, metadata !"_ZTSNSt8ios_base4InitE"} ; [ DW_TAG_class_type ] [Init] [line 533, size 8, align 8, offset 0] [def] [from ]
+!17 = metadata !{metadata !18, metadata !21, metadata !23, metadata !27}
+!18 = metadata !{i32 786445, metadata !13, metadata !"_ZTSNSt8ios_base4InitE", metadata !"_S_refcount", i32 541, i64 0, i64 0, i64 0, i32 4097, metadata !19, null} ; [ DW_TAG_member ] [_S_refcount] [line 541, size 0, align 0, offset 0] [private] [static] [from _Atomic_word]
+!19 = metadata !{i32 786454, metadata !20, null, metadata !"_Atomic_word", i32 32, i64 0, i64 0, i64 0, i32 0, metadata !8} ; [ DW_TAG_typedef ] [_Atomic_word] [line 32, size 0, align 0, offset 0] [from int]
+!20 = metadata !{metadata !"/opt/Xilinx/SDSoC/2014.4/SDK/2014.4/gnu/arm/lin/arm-xilinx-linux-gnueabi/include/c++/4.8.3/arm-xilinx-linux-gnueabi/bits/atomic_word.h", metadata !"/home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease"}
+!21 = metadata !{i32 786445, metadata !13, metadata !"_ZTSNSt8ios_base4InitE", metadata !"_S_synced_with_stdio", i32 542, i64 0, i64 0, i64 0, i32 4097, metadata !22, null} ; [ DW_TAG_member ] [_S_synced_with_stdio] [line 542, size 0, align 0, offset 0] [private] [static] [from bool]
+!22 = metadata !{i32 786468, null, null, metadata !"bool", i32 0, i64 8, i64 8, i64 0, i32 0, i32 2} ; [ DW_TAG_base_type ] [bool] [line 0, size 8, align 8, offset 0, enc DW_ATE_boolean]
+!23 = metadata !{i32 786478, metadata !13, metadata !"_ZTSNSt8ios_base4InitE", metadata !"Init", metadata !"Init", metadata !"", i32 537, metadata !24, i1 false, i1 false, i32 0, i32 0, null, i32 256, i1 false, null, null, i32 0, null, i32 537} ; [ DW_TAG_subprogram ] [line 537] [Init]
+!24 = metadata !{i32 786453, i32 0, null, metadata !"", i32 0, i64 0, i64 0, i64 0, i32 0, null, metadata !25, i32 0, null, null, null} ; [ DW_TAG_subroutine_type ] [line 0, size 0, align 0, offset 0] [from ]
+!25 = metadata !{null, metadata !26}
+!26 = metadata !{i32 786447, null, null, metadata !"", i32 0, i64 32, i64 32, i64 0, i32 1088, metadata !"_ZTSNSt8ios_base4InitE"} ; [ DW_TAG_pointer_type ] [line 0, size 32, align 32, offset 0] [artificial] [from _ZTSNSt8ios_base4InitE]
+!27 = metadata !{i32 786478, metadata !13, metadata !"_ZTSNSt8ios_base4InitE", metadata !"~Init", metadata !"~Init", metadata !"", i32 538, metadata !24, i1 false, i1 false, i32 0, i32 0, null, i32 256, i1 false, null, null, i32 0, null, i32 538} ; [ DW_TAG_subprogram ] [line 538] [~Init]
+!28 = metadata !{i32 786455, metadata !5, metadata !"_ZTS11__mbstate_t", metadata !"", i32 85, i64 32, i64 32, i64 0, i32 0, null, metadata !29, i32 0, null, null, metadata !"_ZTSN11__mbstate_tUt_E"} ; [ DW_TAG_union_type ] [line 85, size 32, align 32, offset 0] [def] [from ]
+!29 = metadata !{metadata !30, metadata !32}
+!30 = metadata !{i32 786445, metadata !5, metadata !"_ZTSN11__mbstate_tUt_E", metadata !"__wch", i32 88, i64 32, i64 32, i64 0, i32 0, metadata !31} ; [ DW_TAG_member ] [__wch] [line 88, size 32, align 32, offset 0] [from unsigned int]
+!31 = metadata !{i32 786468, null, null, metadata !"unsigned int", i32 0, i64 32, i64 32, i64 0, i32 0, i32 7} ; [ DW_TAG_base_type ] [unsigned int] [line 0, size 32, align 32, offset 0, enc DW_ATE_unsigned]
+!32 = metadata !{i32 786445, metadata !5, metadata !"_ZTSN11__mbstate_tUt_E", metadata !"__wchb", i32 92, i64 32, i64 8, i64 0, i32 0, metadata !33} ; [ DW_TAG_member ] [__wchb] [line 92, size 32, align 8, offset 0] [from ]
+!33 = metadata !{i32 786433, null, null, metadata !"", i32 0, i64 32, i64 8, i32 0, i32 0, metadata !34, metadata !35, i32 0, null, null, null} ; [ DW_TAG_array_type ] [line 0, size 32, align 8, offset 0] [from char]
+!34 = metadata !{i32 786468, null, null, metadata !"char", i32 0, i64 8, i64 8, i64 0, i32 0, i32 8} ; [ DW_TAG_base_type ] [char] [line 0, size 8, align 8, offset 0, enc DW_ATE_unsigned_char]
+!35 = metadata !{metadata !36}
+!36 = metadata !{i32 786465, i64 0, i64 4}        ; [ DW_TAG_subrange_type ] [0, 3]
+!37 = metadata !{metadata !38, metadata !43, metadata !50, metadata !53, metadata !54, metadata !57}
+!38 = metadata !{i32 786478, metadata !39, metadata !40, metadata !"__cxx_global_var_init", metadata !"__cxx_global_var_init", metadata !"", i32 74, metadata !41, i1 true, i1 true, i32 0, i32 0, null, i32 256, i1 false, void ()* @__cxx_global_var_init, null, null, metadata !2, i32 74} ; [ DW_TAG_subprogram ] [line 74] [local] [def] [__cxx_global_var_init]
+!39 = metadata !{metadata !"/opt/Xilinx/SDSoC/2014.4/SDK/2014.4/gnu/arm/lin/arm-xilinx-linux-gnueabi/include/c++/4.8.3/iostream", metadata !"/home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease"}
+!40 = metadata !{i32 786473, metadata !39}        ; [ DW_TAG_file_type ] [/home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease//opt/Xilinx/SDSoC/2014.4/SDK/2014.4/gnu/arm/lin/arm-xilinx-linux-gnueabi/include/c++/4.8.3/iostream]
+!41 = metadata !{i32 786453, i32 0, null, metadata !"", i32 0, i64 0, i64 0, i64 0, i32 0, null, metadata !42, i32 0, null, null, null} ; [ DW_TAG_subroutine_type ] [line 0, size 0, align 0, offset 0] [from ]
+!42 = metadata !{null}
+!43 = metadata !{i32 786478, metadata !44, metadata !45, metadata !"correlation_accel_v3", metadata !"correlation_accel_v3", metadata !"_Z20correlation_accel_v3iiPfS_", i32 42, metadata !46, i1 false, i1 true, i32 0, i32 0, null, i32 256, i1 false, void (i32, i32, float*, float*)* @_Z20correlation_accel_v3iiPfS_, null, null, metadata !2, i32 50} ; [ DW_TAG_subprogram ] [line 42] [def] [scope 50] [correlation_accel_v3]
+!44 = metadata !{metadata !"/home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/src/correlation_accel_v3.cpp", metadata !"/home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease"}
+!45 = metadata !{i32 786473, metadata !44}        ; [ DW_TAG_file_type ] [/home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease//home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/src/correlation_accel_v3.cpp]
+!46 = metadata !{i32 786453, i32 0, null, metadata !"", i32 0, i64 0, i64 0, i64 0, i32 0, null, metadata !47, i32 0, null, null, null} ; [ DW_TAG_subroutine_type ] [line 0, size 0, align 0, offset 0] [from ]
+!47 = metadata !{null, metadata !8, metadata !8, metadata !48, metadata !48}
+!48 = metadata !{i32 786447, null, null, metadata !"", i32 0, i64 32, i64 32, i64 0, i32 0, metadata !49} ; [ DW_TAG_pointer_type ] [line 0, size 32, align 32, offset 0] [from float]
+!49 = metadata !{i32 786468, null, null, metadata !"float", i32 0, i64 32, i64 32, i64 0, i32 0, i32 4} ; [ DW_TAG_base_type ] [float] [line 0, size 32, align 32, offset 0, enc DW_ATE_float]
+!50 = metadata !{i32 786478, metadata !44, metadata !45, metadata !"frontEnd", metadata !"frontEnd", metadata !"_Z8frontEndiiPfS_S_S_S_S_S_S_S_", i32 210, metadata !51, i1 false, i1 true, i32 0, i32 0, null, i32 256, i1 false, void (i32, i32, float*, float*, float*, float*, float*, float*, float*, float*, float*)* @_Z8frontEndiiPfS_S_S_S_S_S_S_S_, null, null, metadata !2, i32 225} ; [ DW_TAG_subprogram ] [line 210] [def] [scope 225] [frontEnd]
+!51 = metadata !{i32 786453, i32 0, null, metadata !"", i32 0, i64 0, i64 0, i64 0, i32 0, null, metadata !52, i32 0, null, null, null} ; [ DW_TAG_subroutine_type ] [line 0, size 0, align 0, offset 0] [from ]
+!52 = metadata !{null, metadata !8, metadata !8, metadata !48, metadata !48, metadata !48, metadata !48, metadata !48, metadata !48, metadata !48, metadata !48, metadata !48}
+!53 = metadata !{i32 786478, metadata !44, metadata !45, metadata !"backEnd", metadata !"backEnd", metadata !"_Z7backEndiiPfS_S_S_S_S_S_S_S_", i32 498, metadata !51, i1 false, i1 true, i32 0, i32 0, null, i32 256, i1 false, void (i32, i32, float*, float*, float*, float*, float*, float*, float*, float*, float*)* @_Z7backEndiiPfS_S_S_S_S_S_S_S_, null, null, metadata !2, i32 514} ; [ DW_TAG_subprogram ] [line 498] [def] [scope 514] [backEnd]
+!54 = metadata !{i32 786478, metadata !44, metadata !45, metadata !"weight_rom_init", metadata !"weight_rom_init", metadata !"_ZL15weight_rom_initPfi", i32 174, metadata !55, i1 true, i1 true, i32 0, i32 0, null, i32 256, i1 false, void (float*, i32)* @_ZL15weight_rom_initPfi, null, null, metadata !2, i32 177} ; [ DW_TAG_subprogram ] [line 174] [local] [def] [scope 177] [weight_rom_init]
+!55 = metadata !{i32 786453, i32 0, null, metadata !"", i32 0, i64 0, i64 0, i64 0, i32 0, null, metadata !56, i32 0, null, null, null} ; [ DW_TAG_subroutine_type ] [line 0, size 0, align 0, offset 0] [from ]
+!56 = metadata !{null, metadata !48, metadata !8}
+!57 = metadata !{i32 786478, metadata !1, metadata !58, metadata !"", metadata !"", metadata !"_GLOBAL__sub_I_correlation_accel_v3.cpp", i32 0, metadata !59, i1 true, i1 true, i32 0, i32 0, null, i32 64, i1 false, void ()* @_GLOBAL__sub_I_correlation_accel_v3.cpp, null, null, metadata !2, i32 0} ; [ DW_TAG_subprogram ] [line 0] [local] [def]
+!58 = metadata !{i32 786473, metadata !1}         ; [ DW_TAG_file_type ] [/home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease/../src/correlation_accel_v3.cpp]
+!59 = metadata !{i32 786453, i32 0, null, metadata !"", i32 0, i64 0, i64 0, i64 0, i32 0, null, metadata !2, i32 0, null, null, null} ; [ DW_TAG_subroutine_type ] [line 0, size 0, align 0, offset 0] [from ]
+!60 = metadata !{metadata !61, metadata !62, metadata !66}
+!61 = metadata !{i32 786484, i32 0, metadata !14, metadata !"__ioinit", metadata !"__ioinit", metadata !"_ZStL8__ioinit", metadata !40, i32 74, metadata !"_ZTSNSt8ios_base4InitE", i32 1, i32 1, %"class.std::ios_base::Init"* @_ZStL8__ioinit, null} ; [ DW_TAG_variable ] [__ioinit] [line 74] [local] [def]
+!62 = metadata !{i32 786484, i32 0, metadata !50, metadata !"weight_rom", metadata !"weight_rom", metadata !"", metadata !45, i32 229, metadata !63, i32 1, i32 1, [252 x float]* @_ZZ8frontEndiiPfS_S_S_S_S_S_S_S_E10weight_rom, null} ; [ DW_TAG_variable ] [weight_rom] [line 229] [local] [def]
+!63 = metadata !{i32 786433, null, null, metadata !"", i32 0, i64 8064, i64 32, i32 0, i32 0, metadata !49, metadata !64, i32 0, null, null, null} ; [ DW_TAG_array_type ] [line 0, size 8064, align 32, offset 0] [from float]
+!64 = metadata !{metadata !65}
+!65 = metadata !{i32 786465, i64 0, i64 252}      ; [ DW_TAG_subrange_type ] [0, 251]
+!66 = metadata !{i32 786484, i32 0, metadata !50, metadata !"lnReturnA", metadata !"lnReturnA", metadata !"", metadata !45, i32 237, metadata !63, i32 1, i32 1, [252 x float]* @_ZZ8frontEndiiPfS_S_S_S_S_S_S_S_E9lnReturnA, null} ; [ DW_TAG_variable ] [lnReturnA] [line 237] [local] [def]
+!67 = metadata !{metadata !68, metadata !72, metadata !76, metadata !78, metadata !81, metadata !84, metadata !85, metadata !92, metadata !95, metadata !96, metadata !99}
+!68 = metadata !{i32 786490, metadata !69, metadata !71, i32 56} ; [ DW_TAG_imported_module ]
+!69 = metadata !{i32 786489, metadata !70, null, metadata !"__gnu_debug", i32 54} ; [ DW_TAG_namespace ] [__gnu_debug] [line 54]
+!70 = metadata !{metadata !"/opt/Xilinx/SDSoC/2014.4/SDK/2014.4/gnu/arm/lin/arm-xilinx-linux-gnueabi/include/c++/4.8.3/debug/debug.h", metadata !"/home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease"}
+!71 = metadata !{i32 786489, metadata !70, metadata !14, metadata !"__debug", i32 48} ; [ DW_TAG_namespace ] [__debug] [line 48]
+!72 = metadata !{i32 786440, metadata !73, metadata !75, i32 44} ; [ DW_TAG_imported_declaration ]
+!73 = metadata !{i32 786489, metadata !74, null, metadata !"__gnu_cxx", i32 68} ; [ DW_TAG_namespace ] [__gnu_cxx] [line 68]
+!74 = metadata !{metadata !"/opt/Xilinx/SDSoC/2014.4/SDK/2014.4/gnu/arm/lin/arm-xilinx-linux-gnueabi/include/c++/4.8.3/bits/cpp_type_traits.h", metadata !"/home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease"}
+!75 = metadata !{i32 786454, metadata !15, metadata !14, metadata !"size_t", i32 186, i64 0, i64 0, i64 0, i32 0, metadata !31} ; [ DW_TAG_typedef ] [size_t] [line 186, size 0, align 0, offset 0] [from unsigned int]
+!76 = metadata !{i32 786440, metadata !73, metadata !77, i32 45} ; [ DW_TAG_imported_declaration ]
+!77 = metadata !{i32 786454, metadata !15, metadata !14, metadata !"ptrdiff_t", i32 187, i64 0, i64 0, i64 0, i32 0, metadata !8} ; [ DW_TAG_typedef ] [ptrdiff_t] [line 187, size 0, align 0, offset 0] [from int]
+!78 = metadata !{i32 786440, metadata !14, metadata !79, i32 64} ; [ DW_TAG_imported_declaration ]
+!79 = metadata !{i32 786454, metadata !5, null, metadata !"mbstate_t", i32 106, i64 0, i64 0, i64 0, i32 0, metadata !80} ; [ DW_TAG_typedef ] [mbstate_t] [line 106, size 0, align 0, offset 0] [from __mbstate_t]
+!80 = metadata !{i32 786454, metadata !5, null, metadata !"__mbstate_t", i32 94, i64 0, i64 0, i64 0, i32 0, metadata !"_ZTS11__mbstate_t"} ; [ DW_TAG_typedef ] [__mbstate_t] [line 94, size 0, align 0, offset 0] [from _ZTS11__mbstate_t]
+!81 = metadata !{i32 786440, metadata !14, metadata !82, i32 139} ; [ DW_TAG_imported_declaration ]
+!82 = metadata !{i32 786454, metadata !83, null, metadata !"wint_t", i32 353, i64 0, i64 0, i64 0, i32 0, metadata !31} ; [ DW_TAG_typedef ] [wint_t] [line 353, size 0, align 0, offset 0] [from unsigned int]
+!83 = metadata !{metadata !"/opt/Xilinx/SDSoC/2014.4/SDK/2014.4/gnu/arm/lin/lib/gcc/arm-xilinx-linux-gnueabi/4.8.3/include/stddef.h", metadata !"/home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease"}
+!84 = metadata !{i32 786440, metadata !14, metadata !"_ZTS5lconv", i32 53} ; [ DW_TAG_imported_declaration ]
+!85 = metadata !{i32 786440, metadata !14, metadata !86, i32 82} ; [ DW_TAG_imported_declaration ]
+!86 = metadata !{i32 786454, metadata !87, null, metadata !"wctrans_t", i32 186, i64 0, i64 0, i64 0, i32 0, metadata !88} ; [ DW_TAG_typedef ] [wctrans_t] [line 186, size 0, align 0, offset 0] [from ]
+!87 = metadata !{metadata !"/opt/Xilinx/SDSoC/2014.4/SDK/2014.4/gnu/arm/lin/arm-xilinx-linux-gnueabi/libc/usr/include/wctype.h", metadata !"/home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease"}
+!88 = metadata !{i32 786447, null, null, metadata !"", i32 0, i64 32, i64 32, i64 0, i32 0, metadata !89} ; [ DW_TAG_pointer_type ] [line 0, size 32, align 32, offset 0] [from ]
+!89 = metadata !{i32 786470, null, null, metadata !"", i32 0, i64 0, i64 0, i64 0, i32 0, metadata !90} ; [ DW_TAG_const_type ] [line 0, size 0, align 0, offset 0] [from __int32_t]
+!90 = metadata !{i32 786454, metadata !91, null, metadata !"__int32_t", i32 40, i64 0, i64 0, i64 0, i32 0, metadata !8} ; [ DW_TAG_typedef ] [__int32_t] [line 40, size 0, align 0, offset 0] [from int]
+!91 = metadata !{metadata !"/opt/Xilinx/SDSoC/2014.4/SDK/2014.4/gnu/arm/lin/arm-xilinx-linux-gnueabi/libc/usr/include/bits/types.h", metadata !"/home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease"}
+!92 = metadata !{i32 786440, metadata !14, metadata !93, i32 83} ; [ DW_TAG_imported_declaration ]
+!93 = metadata !{i32 786454, metadata !87, null, metadata !"wctype_t", i32 52, i64 0, i64 0, i64 0, i32 0, metadata !94} ; [ DW_TAG_typedef ] [wctype_t] [line 52, size 0, align 0, offset 0] [from long unsigned int]
+!94 = metadata !{i32 786468, null, null, metadata !"long unsigned int", i32 0, i64 32, i64 32, i64 0, i32 0, i32 7} ; [ DW_TAG_base_type ] [long unsigned int] [line 0, size 32, align 32, offset 0, enc DW_ATE_unsigned]
+!95 = metadata !{i32 786440, metadata !14, metadata !82, i32 84} ; [ DW_TAG_imported_declaration ]
+!96 = metadata !{i32 786440, metadata !0, metadata !97, i32 673, metadata !"abi"} ; [ DW_TAG_imported_declaration ]
+!97 = metadata !{i32 786489, metadata !98, null, metadata !"__cxxabiv1", i32 39} ; [ DW_TAG_namespace ] [__cxxabiv1] [line 39]
+!98 = metadata !{metadata !"/opt/Xilinx/SDSoC/2014.4/SDK/2014.4/gnu/arm/lin/arm-xilinx-linux-gnueabi/include/c++/4.8.3/bits/cxxabi_forced.h", metadata !"/home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease"}
+!99 = metadata !{i32 786490, metadata !0, metadata !14, i32 39} ; [ DW_TAG_imported_module ]
+!100 = metadata !{%"class.std::ios_base::Init"* (%"class.std::ios_base::Init"*)* @_ZNSt8ios_base4InitC1Ev}
+!101 = metadata !{metadata !"void."}
+!102 = metadata !{%"class.std::ios_base::Init"* (%"class.std::ios_base::Init"*)* @_ZNSt8ios_base4InitD1Ev}
+!103 = metadata !{void (i32, i32, float*, float*)* @_Z20correlation_accel_v3iiPfS_}
+!104 = metadata !{metadata !"void.int.0.int.0.float [2520000].1.float [49995000].1"}
+!105 = metadata !{void (i32, i32, float*, float*, float*, float*, float*, float*, float*, float*, float*)* @_Z8frontEndiiPfS_S_S_S_S_S_S_S_}
+!106 = metadata !{metadata !"void.int.0.int.0.float [2520000].1.float [NUMBER_OF_INDICES - 1].1.float [NUMBER_OF_INDICES - 1].1.float [NUMBER_OF_INDICES - 1].1.float [NUMBER_OF_INDICES - 1].1.float [NUMBER_OF_INDICES - 1].1.float [NUMBER_OF_INDICES - 1].1.float [NUMBER_OF_INDICES - 1].1.float [NUMBER_OF_INDICES - 1].1"}
+!107 = metadata !{void (i32, i32, float*, float*, float*, float*, float*, float*, float*, float*, float*)* @_Z7backEndiiPfS_S_S_S_S_S_S_S_}
+!108 = metadata !{metadata !"void.int.0.int.0.float [NUMBER_OF_INDICES - 1].1.float [NUMBER_OF_INDICES - 1].1.float [NUMBER_OF_INDICES - 1].1.float [NUMBER_OF_INDICES - 1].1.float [NUMBER_OF_INDICES - 1].1.float [NUMBER_OF_INDICES - 1].1.float [NUMBER_OF_INDICES - 1].1.float [NUMBER_OF_INDICES - 1].1.float [49995000].1"}
+!109 = metadata !{void (float*, i32)* @_ZL15weight_rom_initPfi}
+!110 = metadata !{metadata !"void.float [252].1.int.0"}
+!111 = metadata !{float (float)* @logf}
+!112 = metadata !{metadata !"float.float.0"}
+!113 = metadata !{float (float)* @sqrtf}
+!114 = metadata !{metadata !"/opt/Xilinx/SDSoC/2014.4/SDK/2014.4/gnu/arm/lin/arm-xilinx-linux-gnueabi/include/c++/4.8.3/bits/ios_base.h"}
+!115 = metadata !{metadata !"../src/correlation_accel_v3.hpp"}
+!116 = metadata !{metadata !"/opt/Xilinx/SDSoC/2014.4/SDK/2014.4/gnu/arm/lin/arm-xilinx-linux-gnueabi/libc/usr/include/bits/mathcalls.h"}
+!117 = metadata !{metadata !"in_indices,number_of_indices*number_of_days,,,AXIDMA_SIMPLE,AFI,0,, out_correlation,number_of_indices-1,,,AXIDMA_SIMPLE,AFI,0,, "}
+!118 = metadata !{i32 2, metadata !"Dwarf Version", i32 4}
+!119 = metadata !{i32 2, metadata !"Debug Info Version", i32 1}
+!120 = metadata !{i32 1, metadata !"wchar_size", i32 4}
+!121 = metadata !{i32 1, metadata !"min_enum_size", i32 4}
+!122 = metadata !{metadata !"clang version 3.5.0 (tags/RELEASE_350/final)"}
+!123 = metadata !{i32 74, i32 25, metadata !38, null}
+!124 = metadata !{i32 786689, metadata !43, metadata !"number_of_days", metadata !45, i32 16777259, metadata !8, i32 0, i32 0} ; [ DW_TAG_arg_variable ] [number_of_days] [line 43]
+!125 = metadata !{i32 43, i32 14, metadata !43, null}
+!126 = metadata !{i32 786689, metadata !43, metadata !"number_of_indices", metadata !45, i32 33554476, metadata !8, i32 0, i32 0} ; [ DW_TAG_arg_variable ] [number_of_indices] [line 44]
+!127 = metadata !{i32 44, i32 14, metadata !43, null}
+!128 = metadata !{i32 786689, metadata !43, metadata !"in_indices", metadata !45, i32 50331694, metadata !48, i32 0, i32 0} ; [ DW_TAG_arg_variable ] [in_indices] [line 46]
+!129 = metadata !{i32 46, i32 15, metadata !43, null}
+!130 = metadata !{i32 786689, metadata !43, metadata !"out_correlation", metadata !45, i32 67108911, metadata !48, i32 0, i32 0} ; [ DW_TAG_arg_variable ] [out_correlation] [line 47]
+!131 = metadata !{i32 47, i32 17, metadata !43, null}
+!132 = metadata !{i32 786688, metadata !43, metadata !"NUMBER_OF_DAYS", metadata !45, i32 65, metadata !133, i32 0, i32 0} ; [ DW_TAG_auto_variable ] [NUMBER_OF_DAYS] [line 65]
+!133 = metadata !{i32 786470, null, null, metadata !"", i32 0, i64 0, i64 0, i64 0, i32 0, metadata !8} ; [ DW_TAG_const_type ] [line 0, size 0, align 0, offset 0] [from int]
+!134 = metadata !{i32 65, i32 12, metadata !43, null}
+!135 = metadata !{i32 65, i32 2, metadata !43, null}
+!136 = metadata !{i32 786688, metadata !43, metadata !"NUMBER_OF_INDICES", metadata !45, i32 66, metadata !133, i32 0, i32 0} ; [ DW_TAG_auto_variable ] [NUMBER_OF_INDICES] [line 66]
+!137 = metadata !{i32 66, i32 12, metadata !43, null}
+!138 = metadata !{i32 66, i32 2, metadata !43, null}
+!139 = metadata !{i32 78, i32 2, metadata !43, null}
+!140 = metadata !{i32 786688, metadata !43, metadata !"sum_weight", metadata !45, i32 78, metadata !141, i32 8192, i32 0} ; [ DW_TAG_auto_variable ] [sum_weight] [line 78]
+!141 = metadata !{i32 786433, null, null, metadata !"", i32 0, i64 0, i64 32, i32 0, i32 0, metadata !49, metadata !142, i32 0, null, null, null} ; [ DW_TAG_array_type ] [line 0, size 0, align 32, offset 0] [from float]
+!142 = metadata !{metadata !143}
+!143 = metadata !{i32 786465, i64 0, i64 -1}      ; [ DW_TAG_subrange_type ] [unbounded]
+!144 = metadata !{i32 78, i32 8, metadata !43, null}
+!145 = metadata !{i32 79, i32 2, metadata !43, null}
+!146 = metadata !{i32 786688, metadata !43, metadata !"sum_return", metadata !45, i32 79, metadata !141, i32 8192, i32 0} ; [ DW_TAG_auto_variable ] [sum_return] [line 79]
+!147 = metadata !{i32 79, i32 8, metadata !43, null}
+!148 = metadata !{i32 80, i32 2, metadata !43, null}
+!149 = metadata !{i32 786688, metadata !43, metadata !"sum_weight_returnSquare", metadata !45, i32 80, metadata !141, i32 8192, i32 0} ; [ DW_TAG_auto_variable ] [sum_weight_returnSquare] [line 80]
+!150 = metadata !{i32 80, i32 8, metadata !43, null}
+!151 = metadata !{i32 81, i32 2, metadata !43, null}
+!152 = metadata !{i32 786688, metadata !43, metadata !"sum_weight_return", metadata !45, i32 81, metadata !141, i32 8192, i32 0} ; [ DW_TAG_auto_variable ] [sum_weight_return] [line 81]
+!153 = metadata !{i32 81, i32 8, metadata !43, null}
+!154 = metadata !{i32 82, i32 2, metadata !43, null}
+!155 = metadata !{i32 786688, metadata !43, metadata !"sum_weight_returnA_returnB", metadata !45, i32 82, metadata !141, i32 8192, i32 0} ; [ DW_TAG_auto_variable ] [sum_weight_returnA_returnB] [line 82]
+!156 = metadata !{i32 82, i32 8, metadata !43, null}
+!157 = metadata !{i32 83, i32 2, metadata !43, null}
+!158 = metadata !{i32 786688, metadata !43, metadata !"sum_returnA", metadata !45, i32 83, metadata !141, i32 8192, i32 0} ; [ DW_TAG_auto_variable ] [sum_returnA] [line 83]
+!159 = metadata !{i32 83, i32 8, metadata !43, null}
+!160 = metadata !{i32 84, i32 2, metadata !43, null}
+!161 = metadata !{i32 786688, metadata !43, metadata !"sum_weight_returnSquareA", metadata !45, i32 84, metadata !141, i32 8192, i32 0} ; [ DW_TAG_auto_variable ] [sum_weight_returnSquareA] [line 84]
+!162 = metadata !{i32 84, i32 8, metadata !43, null}
+!163 = metadata !{i32 85, i32 2, metadata !43, null}
+!164 = metadata !{i32 786688, metadata !43, metadata !"sum_weight_returnA", metadata !45, i32 85, metadata !141, i32 8192, i32 0} ; [ DW_TAG_auto_variable ] [sum_weight_returnA] [line 85]
+!165 = metadata !{i32 85, i32 8, metadata !43, null}
+!166 = metadata !{i32 117, i32 2, metadata !43, null}
+!167 = metadata !{i32 131, i32 2, metadata !43, null}
+!168 = metadata !{i32 148, i32 1, metadata !43, null}
+!169 = metadata !{i32 786689, metadata !50, metadata !"NUMBER_OF_DAYS", metadata !45, i32 16777427, metadata !8, i32 0, i32 0} ; [ DW_TAG_arg_variable ] [NUMBER_OF_DAYS] [line 211]
+!170 = metadata !{i32 211, i32 9, metadata !50, null}
+!171 = metadata !{i32 786689, metadata !50, metadata !"NUMBER_OF_INDICES", metadata !45, i32 33554644, metadata !8, i32 0, i32 0} ; [ DW_TAG_arg_variable ] [NUMBER_OF_INDICES] [line 212]
+!172 = metadata !{i32 212, i32 9, metadata !50, null}
+!173 = metadata !{i32 786689, metadata !50, metadata !"in_indices", metadata !45, i32 50331861, metadata !48, i32 0, i32 0} ; [ DW_TAG_arg_variable ] [in_indices] [line 213]
+!174 = metadata !{i32 213, i32 11, metadata !50, null}
+!175 = metadata !{i32 786689, metadata !50, metadata !"sum_weight_out", metadata !45, i32 67109079, metadata !48, i32 0, i32 0} ; [ DW_TAG_arg_variable ] [sum_weight_out] [line 215]
+!176 = metadata !{i32 215, i32 11, metadata !50, null}
+!177 = metadata !{i32 786689, metadata !50, metadata !"sum_return_out", metadata !45, i32 83886296, metadata !48, i32 0, i32 0} ; [ DW_TAG_arg_variable ] [sum_return_out] [line 216]
+!178 = metadata !{i32 216, i32 11, metadata !50, null}
+!179 = metadata !{i32 786689, metadata !50, metadata !"sum_weight_returnSquare_out", metadata !45, i32 100663513, metadata !48, i32 0, i32 0} ; [ DW_TAG_arg_variable ] [sum_weight_returnSquare_out] [line 217]
+!180 = metadata !{i32 217, i32 11, metadata !50, null}
+!181 = metadata !{i32 786689, metadata !50, metadata !"sum_weight_return_out", metadata !45, i32 117440730, metadata !48, i32 0, i32 0} ; [ DW_TAG_arg_variable ] [sum_weight_return_out] [line 218]
+!182 = metadata !{i32 218, i32 11, metadata !50, null}
+!183 = metadata !{i32 786689, metadata !50, metadata !"sum_weight_returnA_returnB_out", metadata !45, i32 134217947, metadata !48, i32 0, i32 0} ; [ DW_TAG_arg_variable ] [sum_weight_returnA_returnB_out] [line 219]
+!184 = metadata !{i32 219, i32 11, metadata !50, null}
+!185 = metadata !{i32 786689, metadata !50, metadata !"sum_returnA_out", metadata !45, i32 150995164, metadata !48, i32 0, i32 0} ; [ DW_TAG_arg_variable ] [sum_returnA_out] [line 220]
+!186 = metadata !{i32 220, i32 11, metadata !50, null}
+!187 = metadata !{i32 786689, metadata !50, metadata !"sum_weight_returnSquareA_out", metadata !45, i32 167772381, metadata !48, i32 0, i32 0} ; [ DW_TAG_arg_variable ] [sum_weight_returnSquareA_out] [line 221]
+!188 = metadata !{i32 221, i32 11, metadata !50, null}
+!189 = metadata !{i32 786689, metadata !50, metadata !"sum_weight_returnA_out", metadata !45, i32 184549598, metadata !48, i32 0, i32 0} ; [ DW_TAG_arg_variable ] [sum_weight_returnA_out] [line 222]
+!190 = metadata !{i32 222, i32 11, metadata !50, null}
+!191 = metadata !{i32 230, i32 2, metadata !50, null}
+!192 = metadata !{i32 786688, metadata !50, metadata !"sum_weight", metadata !45, i32 231, metadata !49, i32 0, i32 0} ; [ DW_TAG_auto_variable ] [sum_weight] [line 231]
+!193 = metadata !{i32 231, i32 8, metadata !50, null}
+!194 = metadata !{i32 231, i32 2, metadata !50, null}
+!195 = metadata !{i32 786688, metadata !50, metadata !"acc_return", metadata !45, i32 240, metadata !196, i32 0, i32 0} ; [ DW_TAG_auto_variable ] [acc_return] [line 240]
+!196 = metadata !{i32 786433, null, null, metadata !"", i32 0, i64 192, i64 32, i32 0, i32 0, metadata !49, metadata !197, i32 0, null, null, null} ; [ DW_TAG_array_type ] [line 0, size 192, align 32, offset 0] [from float]
+!197 = metadata !{metadata !198}
+!198 = metadata !{i32 786465, i64 0, i64 6}       ; [ DW_TAG_subrange_type ] [0, 5]
+!199 = metadata !{i32 240, i32 8, metadata !50, null}
+!200 = metadata !{i32 786688, metadata !50, metadata !"acc_weight_returnSquare", metadata !45, i32 241, metadata !196, i32 0, i32 0} ; [ DW_TAG_auto_variable ] [acc_weight_returnSquare] [line 241]
+!201 = metadata !{i32 241, i32 8, metadata !50, null}
+!202 = metadata !{i32 786688, metadata !50, metadata !"acc_weight_return", metadata !45, i32 242, metadata !196, i32 0, i32 0} ; [ DW_TAG_auto_variable ] [acc_weight_return] [line 242]
+!203 = metadata !{i32 242, i32 8, metadata !50, null}
+!204 = metadata !{i32 786688, metadata !50, metadata !"acc_weight_returnA_returnB", metadata !45, i32 243, metadata !196, i32 0, i32 0} ; [ DW_TAG_auto_variable ] [acc_weight_returnA_returnB] [line 243]
+!205 = metadata !{i32 243, i32 8, metadata !50, null}
+!206 = metadata !{i32 786688, metadata !50, metadata !"shift_reg", metadata !45, i32 245, metadata !207, i32 0, i32 0} ; [ DW_TAG_auto_variable ] [shift_reg] [line 245]
+!207 = metadata !{i32 786433, null, null, metadata !"", i32 0, i64 64, i64 32, i32 0, i32 0, metadata !49, metadata !208, i32 0, null, null, null} ; [ DW_TAG_array_type ] [line 0, size 64, align 32, offset 0] [from float]
+!208 = metadata !{metadata !209}
+!209 = metadata !{i32 786465, i64 0, i64 2}       ; [ DW_TAG_subrange_type ] [0, 1]
+!210 = metadata !{i32 245, i32 8, metadata !50, null}
+!211 = metadata !{i32 786688, metadata !50, metadata !"sum_returnA", metadata !45, i32 252, metadata !49, i32 0, i32 0} ; [ DW_TAG_auto_variable ] [sum_returnA] [line 252]
+!212 = metadata !{i32 252, i32 8, metadata !50, null}
+!213 = metadata !{i32 252, i32 2, metadata !50, null}
+!214 = metadata !{i32 786688, metadata !50, metadata !"sum_weight_returnSquareA", metadata !45, i32 253, metadata !49, i32 0, i32 0} ; [ DW_TAG_auto_variable ] [sum_weight_returnSquareA] [line 253]
+!215 = metadata !{i32 253, i32 8, metadata !50, null}
+!216 = metadata !{i32 253, i32 2, metadata !50, null}
+!217 = metadata !{i32 786688, metadata !50, metadata !"sum_weight_returnA", metadata !45, i32 254, metadata !49, i32 0, i32 0} ; [ DW_TAG_auto_variable ] [sum_weight_returnA] [line 254]
+!218 = metadata !{i32 254, i32 8, metadata !50, null}
+!219 = metadata !{i32 254, i32 2, metadata !50, null}
+!220 = metadata !{i32 786688, metadata !221, metadata !"i", metadata !45, i32 261, metadata !8, i32 0, i32 0} ; [ DW_TAG_auto_variable ] [i] [line 261]
+!221 = metadata !{i32 786443, metadata !44, metadata !50, i32 261, i32 3, i32 0, i32 0} ; [ DW_TAG_lexical_block ] [/home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease//home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/src/correlation_accel_v3.cpp]
+!222 = metadata !{i32 261, i32 11, metadata !221, null}
+!223 = metadata !{i32 261, i32 7, metadata !221, null}
+!224 = metadata !{i32 261, i32 7, metadata !225, null}
+!225 = metadata !{i32 786443, metadata !44, metadata !226, i32 261, i32 7, i32 2, i32 27} ; [ DW_TAG_lexical_block ] [/home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease//home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/src/correlation_accel_v3.cpp]
+!226 = metadata !{i32 786443, metadata !44, metadata !221, i32 261, i32 7, i32 1, i32 26} ; [ DW_TAG_lexical_block ] [/home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease//home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/src/correlation_accel_v3.cpp]
+!227 = metadata !{i32 265, i32 4, metadata !228, null}
+!228 = metadata !{i32 786443, metadata !44, metadata !221, i32 261, i32 43, i32 0, i32 1} ; [ DW_TAG_lexical_block ] [/home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease//home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/src/correlation_accel_v3.cpp]
+!229 = metadata !{i32 266, i32 4, metadata !228, null}
+!230 = metadata !{i32 267, i32 4, metadata !228, null}
+!231 = metadata !{i32 268, i32 4, metadata !228, null}
+!232 = metadata !{i32 269, i32 2, metadata !228, null}
+!233 = metadata !{i32 261, i32 39, metadata !221, null}
+!234 = metadata !{i32 282, i32 12, metadata !50, null}
+!235 = metadata !{i32 786688, metadata !236, metadata !"i", metadata !45, i32 286, metadata !8, i32 0, i32 0} ; [ DW_TAG_auto_variable ] [i] [line 286]
+!236 = metadata !{i32 786443, metadata !44, metadata !50, i32 286, i32 3, i32 0, i32 2} ; [ DW_TAG_lexical_block ] [/home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease//home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/src/correlation_accel_v3.cpp]
+!237 = metadata !{i32 286, i32 11, metadata !236, null}
+!238 = metadata !{i32 286, i32 7, metadata !236, null}
+!239 = metadata !{i32 286, i32 7, metadata !240, null}
+!240 = metadata !{i32 786443, metadata !44, metadata !241, i32 286, i32 7, i32 2, i32 29} ; [ DW_TAG_lexical_block ] [/home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease//home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/src/correlation_accel_v3.cpp]
+!241 = metadata !{i32 786443, metadata !44, metadata !236, i32 286, i32 7, i32 1, i32 28} ; [ DW_TAG_lexical_block ] [/home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease//home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/src/correlation_accel_v3.cpp]
+!242 = metadata !{i32 311, i32 7, metadata !243, null}
+!243 = metadata !{i32 786443, metadata !44, metadata !244, i32 311, i32 7, i32 0, i32 4} ; [ DW_TAG_lexical_block ] [/home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease//home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/src/correlation_accel_v3.cpp]
+!244 = metadata !{i32 786443, metadata !44, metadata !236, i32 286, i32 47, i32 0, i32 3} ; [ DW_TAG_lexical_block ] [/home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease//home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/src/correlation_accel_v3.cpp]
+!245 = metadata !{i32 312, i32 16, metadata !246, null}
+!246 = metadata !{i32 786443, metadata !44, metadata !243, i32 311, i32 14, i32 0, i32 5} ; [ DW_TAG_lexical_block ] [/home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease//home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/src/correlation_accel_v3.cpp]
+!247 = metadata !{i32 313, i32 4, metadata !246, null}
+!248 = metadata !{i32 315, i32 14, metadata !249, null}
+!249 = metadata !{i32 786443, metadata !44, metadata !243, i32 314, i32 18, i32 0, i32 6} ; [ DW_TAG_lexical_block ] [/home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease//home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/src/correlation_accel_v3.cpp]
+!250 = metadata !{i32 316, i32 14, metadata !249, null}
+!251 = metadata !{i32 786688, metadata !244, metadata !"lnReturn", metadata !45, i32 322, metadata !49, i32 0, i32 0} ; [ DW_TAG_auto_variable ] [lnReturn] [line 322]
+!252 = metadata !{i32 322, i32 10, metadata !244, null}
+!253 = metadata !{i32 322, i32 26, metadata !244, null}
+!254 = metadata !{i32 786688, metadata !244, metadata !"weight", metadata !45, i32 323, metadata !49, i32 0, i32 0} ; [ DW_TAG_auto_variable ] [weight] [line 323]
+!255 = metadata !{i32 323, i32 10, metadata !244, null}
+!256 = metadata !{i32 323, i32 4, metadata !244, null}
+!257 = metadata !{i32 786688, metadata !244, metadata !"channel", metadata !45, i32 326, metadata !8, i32 0, i32 0} ; [ DW_TAG_auto_variable ] [channel] [line 326]
+!258 = metadata !{i32 326, i32 8, metadata !244, null}
+!259 = metadata !{i32 326, i32 4, metadata !244, null}
+!260 = metadata !{i32 328, i32 4, metadata !244, null}
+!261 = metadata !{i32 331, i32 4, metadata !244, null}
+!262 = metadata !{i32 334, i32 4, metadata !244, null}
+!263 = metadata !{i32 337, i32 4, metadata !244, null}
+!264 = metadata !{i32 338, i32 3, metadata !244, null}
+!265 = metadata !{i32 286, i32 43, metadata !236, null}
+!266 = metadata !{i32 338, i32 3, metadata !236, null}
+!267 = metadata !{i32 786688, metadata !268, metadata !"i", metadata !45, i32 342, metadata !8, i32 0, i32 0} ; [ DW_TAG_auto_variable ] [i] [line 342]
+!268 = metadata !{i32 786443, metadata !44, metadata !50, i32 342, i32 2, i32 0, i32 7} ; [ DW_TAG_lexical_block ] [/home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease//home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/src/correlation_accel_v3.cpp]
+!269 = metadata !{i32 342, i32 10, metadata !268, null}
+!270 = metadata !{i32 342, i32 6, metadata !268, null}
+!271 = metadata !{i32 342, i32 6, metadata !272, null}
+!272 = metadata !{i32 786443, metadata !44, metadata !273, i32 342, i32 6, i32 2, i32 31} ; [ DW_TAG_lexical_block ] [/home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease//home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/src/correlation_accel_v3.cpp]
+!273 = metadata !{i32 786443, metadata !44, metadata !268, i32 342, i32 6, i32 1, i32 30} ; [ DW_TAG_lexical_block ] [/home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease//home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/src/correlation_accel_v3.cpp]
+!274 = metadata !{i32 346, i32 3, metadata !275, null}
+!275 = metadata !{i32 786443, metadata !44, metadata !268, i32 342, i32 42, i32 0, i32 8} ; [ DW_TAG_lexical_block ] [/home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease//home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/src/correlation_accel_v3.cpp]
+!276 = metadata !{i32 347, i32 3, metadata !275, null}
+!277 = metadata !{i32 348, i32 3, metadata !275, null}
+!278 = metadata !{i32 349, i32 2, metadata !275, null}
+!279 = metadata !{i32 342, i32 38, metadata !268, null}
+!280 = metadata !{i32 786688, metadata !281, metadata !"column_index", metadata !45, i32 354, metadata !8, i32 0, i32 0} ; [ DW_TAG_auto_variable ] [column_index] [line 354]
+!281 = metadata !{i32 786443, metadata !44, metadata !50, i32 354, i32 2, i32 0, i32 9} ; [ DW_TAG_lexical_block ] [/home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease//home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/src/correlation_accel_v3.cpp]
+!282 = metadata !{i32 354, i32 10, metadata !281, null}
+!283 = metadata !{i32 354, i32 6, metadata !281, null}
+!284 = metadata !{i32 354, i32 6, metadata !285, null}
+!285 = metadata !{i32 786443, metadata !44, metadata !286, i32 354, i32 6, i32 3, i32 40} ; [ DW_TAG_lexical_block ] [/home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease//home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/src/correlation_accel_v3.cpp]
+!286 = metadata !{i32 786443, metadata !44, metadata !281, i32 354, i32 6, i32 1, i32 32} ; [ DW_TAG_lexical_block ] [/home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease//home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/src/correlation_accel_v3.cpp]
+!287 = metadata !{i32 354, i32 78, metadata !288, null}
+!288 = metadata !{i32 786443, metadata !44, metadata !289, i32 354, i32 78, i32 2, i32 33} ; [ DW_TAG_lexical_block ] [/home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease//home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/src/correlation_accel_v3.cpp]
+!289 = metadata !{i32 786443, metadata !44, metadata !281, i32 354, i32 78, i32 0, i32 10} ; [ DW_TAG_lexical_block ] [/home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease//home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/src/correlation_accel_v3.cpp]
+!290 = metadata !{i32 786688, metadata !291, metadata !"i", metadata !45, i32 357, metadata !8, i32 0, i32 0} ; [ DW_TAG_auto_variable ] [i] [line 357]
+!291 = metadata !{i32 786443, metadata !44, metadata !289, i32 357, i32 4, i32 0, i32 11} ; [ DW_TAG_lexical_block ] [/home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease//home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/src/correlation_accel_v3.cpp]
+!292 = metadata !{i32 357, i32 12, metadata !291, null}
+!293 = metadata !{i32 357, i32 8, metadata !291, null}
+!294 = metadata !{i32 357, i32 8, metadata !295, null}
+!295 = metadata !{i32 786443, metadata !44, metadata !296, i32 357, i32 8, i32 2, i32 35} ; [ DW_TAG_lexical_block ] [/home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease//home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/src/correlation_accel_v3.cpp]
+!296 = metadata !{i32 786443, metadata !44, metadata !291, i32 357, i32 8, i32 1, i32 34} ; [ DW_TAG_lexical_block ] [/home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease//home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/src/correlation_accel_v3.cpp]
+!297 = metadata !{i32 361, i32 5, metadata !298, null}
+!298 = metadata !{i32 786443, metadata !44, metadata !291, i32 357, i32 44, i32 0, i32 12} ; [ DW_TAG_lexical_block ] [/home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease//home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/src/correlation_accel_v3.cpp]
+!299 = metadata !{i32 362, i32 5, metadata !298, null}
+!300 = metadata !{i32 363, i32 5, metadata !298, null}
+!301 = metadata !{i32 364, i32 5, metadata !298, null}
+!302 = metadata !{i32 365, i32 5, metadata !298, null}
+!303 = metadata !{i32 366, i32 4, metadata !298, null}
+!304 = metadata !{i32 357, i32 40, metadata !291, null}
+!305 = metadata !{i32 786688, metadata !289, metadata !"index", metadata !45, i32 368, metadata !8, i32 0, i32 0} ; [ DW_TAG_auto_variable ] [index] [line 368]
+!306 = metadata !{i32 368, i32 8, metadata !289, null}
+!307 = metadata !{i32 368, i32 4, metadata !289, null}
+!308 = metadata !{i32 381, i32 12, metadata !289, null}
+!309 = metadata !{i32 786688, metadata !310, metadata !"i", metadata !45, i32 385, metadata !8, i32 0, i32 0} ; [ DW_TAG_auto_variable ] [i] [line 385]
+!310 = metadata !{i32 786443, metadata !44, metadata !289, i32 385, i32 4, i32 0, i32 13} ; [ DW_TAG_lexical_block ] [/home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease//home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/src/correlation_accel_v3.cpp]
+!311 = metadata !{i32 385, i32 12, metadata !310, null}
+!312 = metadata !{i32 385, i32 8, metadata !310, null}
+!313 = metadata !{i32 385, i32 8, metadata !314, null}
+!314 = metadata !{i32 786443, metadata !44, metadata !315, i32 385, i32 8, i32 2, i32 37} ; [ DW_TAG_lexical_block ] [/home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease//home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/src/correlation_accel_v3.cpp]
+!315 = metadata !{i32 786443, metadata !44, metadata !310, i32 385, i32 8, i32 1, i32 36} ; [ DW_TAG_lexical_block ] [/home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease//home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/src/correlation_accel_v3.cpp]
+!316 = metadata !{i32 410, i32 8, metadata !317, null}
+!317 = metadata !{i32 786443, metadata !44, metadata !318, i32 410, i32 8, i32 0, i32 15} ; [ DW_TAG_lexical_block ] [/home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease//home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/src/correlation_accel_v3.cpp]
+!318 = metadata !{i32 786443, metadata !44, metadata !310, i32 385, i32 48, i32 0, i32 14} ; [ DW_TAG_lexical_block ] [/home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease//home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/src/correlation_accel_v3.cpp]
+!319 = metadata !{i32 411, i32 17, metadata !320, null}
+!320 = metadata !{i32 786443, metadata !44, metadata !317, i32 410, i32 15, i32 0, i32 16} ; [ DW_TAG_lexical_block ] [/home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease//home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/src/correlation_accel_v3.cpp]
+!321 = metadata !{i32 412, i32 5, metadata !320, null}
+!322 = metadata !{i32 414, i32 15, metadata !323, null}
+!323 = metadata !{i32 786443, metadata !44, metadata !317, i32 413, i32 19, i32 0, i32 17} ; [ DW_TAG_lexical_block ] [/home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease//home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/src/correlation_accel_v3.cpp]
+!324 = metadata !{i32 415, i32 15, metadata !323, null}
+!325 = metadata !{i32 786688, metadata !318, metadata !"lnReturn", metadata !45, i32 420, metadata !49, i32 0, i32 0} ; [ DW_TAG_auto_variable ] [lnReturn] [line 420]
+!326 = metadata !{i32 420, i32 11, metadata !318, null}
+!327 = metadata !{i32 420, i32 23, metadata !318, null}
+!328 = metadata !{i32 786688, metadata !318, metadata !"weight", metadata !45, i32 421, metadata !49, i32 0, i32 0} ; [ DW_TAG_auto_variable ] [weight] [line 421]
+!329 = metadata !{i32 421, i32 11, metadata !318, null}
+!330 = metadata !{i32 421, i32 5, metadata !318, null}
+!331 = metadata !{i32 786688, metadata !318, metadata !"channel", metadata !45, i32 424, metadata !8, i32 0, i32 0} ; [ DW_TAG_auto_variable ] [channel] [line 424]
+!332 = metadata !{i32 424, i32 9, metadata !318, null}
+!333 = metadata !{i32 424, i32 5, metadata !318, null}
+!334 = metadata !{i32 427, i32 5, metadata !318, null}
+!335 = metadata !{i32 430, i32 5, metadata !318, null}
+!336 = metadata !{i32 433, i32 5, metadata !318, null}
+!337 = metadata !{i32 436, i32 5, metadata !318, null}
+!338 = metadata !{i32 437, i32 4, metadata !318, null}
+!339 = metadata !{i32 385, i32 44, metadata !310, null}
+!340 = metadata !{i32 786688, metadata !289, metadata !"sum_return", metadata !45, i32 440, metadata !49, i32 0, i32 0} ; [ DW_TAG_auto_variable ] [sum_return] [line 440]
+!341 = metadata !{i32 440, i32 9, metadata !289, null}
+!342 = metadata !{i32 440, i32 3, metadata !289, null}
+!343 = metadata !{i32 786688, metadata !289, metadata !"sum_weight_returnSquare", metadata !45, i32 441, metadata !49, i32 0, i32 0} ; [ DW_TAG_auto_variable ] [sum_weight_returnSquare] [line 441]
+!344 = metadata !{i32 441, i32 9, metadata !289, null}
+!345 = metadata !{i32 441, i32 3, metadata !289, null}
+!346 = metadata !{i32 786688, metadata !289, metadata !"sum_weight_return", metadata !45, i32 442, metadata !49, i32 0, i32 0} ; [ DW_TAG_auto_variable ] [sum_weight_return] [line 442]
+!347 = metadata !{i32 442, i32 9, metadata !289, null}
+!348 = metadata !{i32 442, i32 3, metadata !289, null}
+!349 = metadata !{i32 786688, metadata !289, metadata !"sum_weight_returnA_returnB", metadata !45, i32 443, metadata !49, i32 0, i32 0} ; [ DW_TAG_auto_variable ] [sum_weight_returnA_returnB] [line 443]
+!350 = metadata !{i32 443, i32 9, metadata !289, null}
+!351 = metadata !{i32 443, i32 3, metadata !289, null}
+!352 = metadata !{i32 786688, metadata !353, metadata !"i", metadata !45, i32 446, metadata !8, i32 0, i32 0} ; [ DW_TAG_auto_variable ] [i] [line 446]
+!353 = metadata !{i32 786443, metadata !44, metadata !289, i32 446, i32 3, i32 0, i32 18} ; [ DW_TAG_lexical_block ] [/home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease//home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/src/correlation_accel_v3.cpp]
+!354 = metadata !{i32 446, i32 11, metadata !353, null}
+!355 = metadata !{i32 446, i32 7, metadata !353, null}
+!356 = metadata !{i32 446, i32 7, metadata !357, null}
+!357 = metadata !{i32 786443, metadata !44, metadata !358, i32 446, i32 7, i32 2, i32 39} ; [ DW_TAG_lexical_block ] [/home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease//home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/src/correlation_accel_v3.cpp]
+!358 = metadata !{i32 786443, metadata !44, metadata !353, i32 446, i32 7, i32 1, i32 38} ; [ DW_TAG_lexical_block ] [/home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease//home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/src/correlation_accel_v3.cpp]
+!359 = metadata !{i32 450, i32 4, metadata !360, null}
+!360 = metadata !{i32 786443, metadata !44, metadata !353, i32 446, i32 43, i32 0, i32 19} ; [ DW_TAG_lexical_block ] [/home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease//home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/src/correlation_accel_v3.cpp]
+!361 = metadata !{i32 451, i32 4, metadata !360, null}
+!362 = metadata !{i32 452, i32 4, metadata !360, null}
+!363 = metadata !{i32 453, i32 4, metadata !360, null}
+!364 = metadata !{i32 454, i32 3, metadata !360, null}
+!365 = metadata !{i32 446, i32 39, metadata !353, null}
+!366 = metadata !{i32 786688, metadata !289, metadata !"i", metadata !45, i32 465, metadata !8, i32 0, i32 0} ; [ DW_TAG_auto_variable ] [i] [line 465]
+!367 = metadata !{i32 465, i32 7, metadata !289, null}
+!368 = metadata !{i32 465, i32 3, metadata !289, null}
+!369 = metadata !{i32 466, i32 3, metadata !289, null}
+!370 = metadata !{i32 467, i32 3, metadata !289, null}
+!371 = metadata !{i32 468, i32 3, metadata !289, null}
+!372 = metadata !{i32 469, i32 3, metadata !289, null}
+!373 = metadata !{i32 470, i32 3, metadata !289, null}
+!374 = metadata !{i32 471, i32 3, metadata !289, null}
+!375 = metadata !{i32 472, i32 3, metadata !289, null}
+!376 = metadata !{i32 473, i32 3, metadata !289, null}
+!377 = metadata !{i32 476, i32 1, metadata !289, null}
+!378 = metadata !{i32 354, i32 62, metadata !281, null}
+!379 = metadata !{i32 477, i32 1, metadata !50, null}
+!380 = metadata !{i32 786689, metadata !53, metadata !"NUMBER_OF_DAYS", metadata !45, i32 16777715, metadata !8, i32 0, i32 0} ; [ DW_TAG_arg_variable ] [NUMBER_OF_DAYS] [line 499]
+!381 = metadata !{i32 499, i32 9, metadata !53, null}
+!382 = metadata !{i32 786689, metadata !53, metadata !"NUMBER_OF_INDICES", metadata !45, i32 33554932, metadata !8, i32 0, i32 0} ; [ DW_TAG_arg_variable ] [NUMBER_OF_INDICES] [line 500]
+!383 = metadata !{i32 500, i32 9, metadata !53, null}
+!384 = metadata !{i32 786689, metadata !53, metadata !"sum_weight_in", metadata !45, i32 50332150, metadata !48, i32 0, i32 0} ; [ DW_TAG_arg_variable ] [sum_weight_in] [line 502]
+!385 = metadata !{i32 502, i32 11, metadata !53, null}
+!386 = metadata !{i32 786689, metadata !53, metadata !"sum_return_in", metadata !45, i32 67109367, metadata !48, i32 0, i32 0} ; [ DW_TAG_arg_variable ] [sum_return_in] [line 503]
+!387 = metadata !{i32 503, i32 11, metadata !53, null}
+!388 = metadata !{i32 786689, metadata !53, metadata !"sum_weight_returnSquare_in", metadata !45, i32 83886584, metadata !48, i32 0, i32 0} ; [ DW_TAG_arg_variable ] [sum_weight_returnSquare_in] [line 504]
+!389 = metadata !{i32 504, i32 11, metadata !53, null}
+!390 = metadata !{i32 786689, metadata !53, metadata !"sum_weight_return_in", metadata !45, i32 100663801, metadata !48, i32 0, i32 0} ; [ DW_TAG_arg_variable ] [sum_weight_return_in] [line 505]
+!391 = metadata !{i32 505, i32 11, metadata !53, null}
+!392 = metadata !{i32 786689, metadata !53, metadata !"sum_weight_returnA_returnB_in", metadata !45, i32 117441018, metadata !48, i32 0, i32 0} ; [ DW_TAG_arg_variable ] [sum_weight_returnA_returnB_in] [line 506]
+!393 = metadata !{i32 506, i32 11, metadata !53, null}
+!394 = metadata !{i32 786689, metadata !53, metadata !"sum_returnA_in", metadata !45, i32 134218235, metadata !48, i32 0, i32 0} ; [ DW_TAG_arg_variable ] [sum_returnA_in] [line 507]
+!395 = metadata !{i32 507, i32 11, metadata !53, null}
+!396 = metadata !{i32 786689, metadata !53, metadata !"sum_weight_returnSquareA_in", metadata !45, i32 150995452, metadata !48, i32 0, i32 0} ; [ DW_TAG_arg_variable ] [sum_weight_returnSquareA_in] [line 508]
+!397 = metadata !{i32 508, i32 11, metadata !53, null}
+!398 = metadata !{i32 786689, metadata !53, metadata !"sum_weight_returnA_in", metadata !45, i32 167772669, metadata !48, i32 0, i32 0} ; [ DW_TAG_arg_variable ] [sum_weight_returnA_in] [line 509]
+!399 = metadata !{i32 509, i32 11, metadata !53, null}
+!400 = metadata !{i32 786689, metadata !53, metadata !"out_correlation", metadata !45, i32 184549887, metadata !48, i32 0, i32 0} ; [ DW_TAG_arg_variable ] [out_correlation] [line 511]
+!401 = metadata !{i32 511, i32 11, metadata !53, null}
+!402 = metadata !{i32 786688, metadata !403, metadata !"column_index", metadata !45, i32 515, metadata !8, i32 0, i32 0} ; [ DW_TAG_auto_variable ] [column_index] [line 515]
+!403 = metadata !{i32 786443, metadata !44, metadata !53, i32 515, i32 2, i32 0, i32 20} ; [ DW_TAG_lexical_block ] [/home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease//home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/src/correlation_accel_v3.cpp]
+!404 = metadata !{i32 515, i32 10, metadata !403, null}
+!405 = metadata !{i32 515, i32 6, metadata !403, null}
+!406 = metadata !{i32 515, i32 6, metadata !407, null}
+!407 = metadata !{i32 786443, metadata !44, metadata !408, i32 515, i32 6, i32 2, i32 42} ; [ DW_TAG_lexical_block ] [/home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease//home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/src/correlation_accel_v3.cpp]
+!408 = metadata !{i32 786443, metadata !44, metadata !403, i32 515, i32 6, i32 1, i32 41} ; [ DW_TAG_lexical_block ] [/home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease//home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/src/correlation_accel_v3.cpp]
+!409 = metadata !{i32 786688, metadata !410, metadata !"sum_weight", metadata !45, i32 526, metadata !49, i32 0, i32 0} ; [ DW_TAG_auto_variable ] [sum_weight] [line 526]
+!410 = metadata !{i32 786443, metadata !44, metadata !403, i32 515, i32 77, i32 0, i32 21} ; [ DW_TAG_lexical_block ] [/home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease//home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/src/correlation_accel_v3.cpp]
+!411 = metadata !{i32 526, i32 9, metadata !410, null}
+!412 = metadata !{i32 526, i32 3, metadata !410, null}
+!413 = metadata !{i32 786688, metadata !410, metadata !"sum_return", metadata !45, i32 527, metadata !49, i32 0, i32 0} ; [ DW_TAG_auto_variable ] [sum_return] [line 527]
+!414 = metadata !{i32 527, i32 9, metadata !410, null}
+!415 = metadata !{i32 527, i32 3, metadata !410, null}
+!416 = metadata !{i32 786688, metadata !410, metadata !"sum_weight_returnSquare", metadata !45, i32 528, metadata !49, i32 0, i32 0} ; [ DW_TAG_auto_variable ] [sum_weight_returnSquare] [line 528]
+!417 = metadata !{i32 528, i32 9, metadata !410, null}
+!418 = metadata !{i32 528, i32 3, metadata !410, null}
+!419 = metadata !{i32 786688, metadata !410, metadata !"sum_weight_return", metadata !45, i32 529, metadata !49, i32 0, i32 0} ; [ DW_TAG_auto_variable ] [sum_weight_return] [line 529]
+!420 = metadata !{i32 529, i32 9, metadata !410, null}
+!421 = metadata !{i32 529, i32 3, metadata !410, null}
+!422 = metadata !{i32 786688, metadata !410, metadata !"sum_weight_returnA_returnB", metadata !45, i32 530, metadata !49, i32 0, i32 0} ; [ DW_TAG_auto_variable ] [sum_weight_returnA_returnB] [line 530]
+!423 = metadata !{i32 530, i32 9, metadata !410, null}
+!424 = metadata !{i32 530, i32 3, metadata !410, null}
+!425 = metadata !{i32 786688, metadata !410, metadata !"sum_returnA", metadata !45, i32 531, metadata !49, i32 0, i32 0} ; [ DW_TAG_auto_variable ] [sum_returnA] [line 531]
+!426 = metadata !{i32 531, i32 9, metadata !410, null}
+!427 = metadata !{i32 531, i32 3, metadata !410, null}
+!428 = metadata !{i32 786688, metadata !410, metadata !"sum_weight_returnSquareA", metadata !45, i32 532, metadata !49, i32 0, i32 0} ; [ DW_TAG_auto_variable ] [sum_weight_returnSquareA] [line 532]
+!429 = metadata !{i32 532, i32 9, metadata !410, null}
+!430 = metadata !{i32 532, i32 3, metadata !410, null}
+!431 = metadata !{i32 786688, metadata !410, metadata !"sum_weight_returnA", metadata !45, i32 533, metadata !49, i32 0, i32 0} ; [ DW_TAG_auto_variable ] [sum_weight_returnA] [line 533]
+!432 = metadata !{i32 533, i32 9, metadata !410, null}
+!433 = metadata !{i32 533, i32 3, metadata !410, null}
+!434 = metadata !{i32 786688, metadata !410, metadata !"meanReturnA", metadata !45, i32 536, metadata !49, i32 0, i32 0} ; [ DW_TAG_auto_variable ] [meanReturnA] [line 536]
+!435 = metadata !{i32 536, i32 9, metadata !410, null}
+!436 = metadata !{i32 536, i32 3, metadata !410, null}
+!437 = metadata !{i32 786688, metadata !410, metadata !"meanReturnB", metadata !45, i32 537, metadata !49, i32 0, i32 0} ; [ DW_TAG_auto_variable ] [meanReturnB] [line 537]
+!438 = metadata !{i32 537, i32 9, metadata !410, null}
+!439 = metadata !{i32 537, i32 3, metadata !410, null}
+!440 = metadata !{i32 786688, metadata !410, metadata !"volatilityA", metadata !45, i32 539, metadata !49, i32 0, i32 0} ; [ DW_TAG_auto_variable ] [volatilityA] [line 539]
+!441 = metadata !{i32 539, i32 9, metadata !410, null}
+!442 = metadata !{i32 539, i32 23, metadata !410, null}
+!443 = metadata !{i32 786688, metadata !410, metadata !"volatilityB", metadata !45, i32 542, metadata !49, i32 0, i32 0} ; [ DW_TAG_auto_variable ] [volatilityB] [line 542]
+!444 = metadata !{i32 542, i32 9, metadata !410, null}
+!445 = metadata !{i32 542, i32 23, metadata !410, null}
+!446 = metadata !{i32 786688, metadata !410, metadata !"covariance", metadata !45, i32 545, metadata !49, i32 0, i32 0} ; [ DW_TAG_auto_variable ] [covariance] [line 545]
+!447 = metadata !{i32 545, i32 9, metadata !410, null}
+!448 = metadata !{i32 545, i32 3, metadata !410, null}
+!449 = metadata !{i32 786688, metadata !410, metadata !"corr_temp", metadata !45, i32 549, metadata !49, i32 0, i32 0} ; [ DW_TAG_auto_variable ] [corr_temp] [line 549]
+!450 = metadata !{i32 549, i32 9, metadata !410, null}
+!451 = metadata !{i32 549, i32 3, metadata !410, null}
+!452 = metadata !{i32 562, i32 7, metadata !410, null}
+!453 = metadata !{i32 564, i32 2, metadata !410, null}
+!454 = metadata !{i32 515, i32 62, metadata !403, null}
+!455 = metadata !{i32 565, i32 1, metadata !53, null}
+!456 = metadata !{i32 786689, metadata !54, metadata !"weightRom", metadata !45, i32 16777391, metadata !48, i32 0, i32 0} ; [ DW_TAG_arg_variable ] [weightRom] [line 175]
+!457 = metadata !{i32 175, i32 9, metadata !54, null}
+!458 = metadata !{i32 786689, metadata !54, metadata !"NUMBER_OF_DAYS", metadata !45, i32 33554608, metadata !8, i32 0, i32 0} ; [ DW_TAG_arg_variable ] [NUMBER_OF_DAYS] [line 176]
+!459 = metadata !{i32 176, i32 7, metadata !54, null}
+!460 = metadata !{i32 786688, metadata !54, metadata !"lambda", metadata !45, i32 178, metadata !49, i32 0, i32 0} ; [ DW_TAG_auto_variable ] [lambda] [line 178]
+!461 = metadata !{i32 178, i32 8, metadata !54, null}
+!462 = metadata !{i32 178, i32 2, metadata !54, null}
+!463 = metadata !{i32 179, i32 2, metadata !54, null}
+!464 = metadata !{i32 180, i32 2, metadata !54, null}
+!465 = metadata !{i32 786688, metadata !466, metadata !"i", metadata !45, i32 183, metadata !8, i32 0, i32 0} ; [ DW_TAG_auto_variable ] [i] [line 183]
+!466 = metadata !{i32 786443, metadata !44, metadata !54, i32 183, i32 2, i32 0, i32 22} ; [ DW_TAG_lexical_block ] [/home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease//home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/src/correlation_accel_v3.cpp]
+!467 = metadata !{i32 183, i32 10, metadata !466, null}
+!468 = metadata !{i32 183, i32 6, metadata !466, null}
+!469 = metadata !{i32 183, i32 6, metadata !470, null}
+!470 = metadata !{i32 786443, metadata !44, metadata !471, i32 183, i32 6, i32 2, i32 44} ; [ DW_TAG_lexical_block ] [/home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease//home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/src/correlation_accel_v3.cpp]
+!471 = metadata !{i32 786443, metadata !44, metadata !466, i32 183, i32 6, i32 1, i32 43} ; [ DW_TAG_lexical_block ] [/home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease//home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/src/correlation_accel_v3.cpp]
+!472 = metadata !{i32 184, i32 3, metadata !473, null}
+!473 = metadata !{i32 786443, metadata !44, metadata !466, i32 183, i32 41, i32 0, i32 23} ; [ DW_TAG_lexical_block ] [/home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease//home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/src/correlation_accel_v3.cpp]
+!474 = metadata !{i32 185, i32 2, metadata !473, null}
+!475 = metadata !{i32 183, i32 36, metadata !466, null}
+!476 = metadata !{i32 185, i32 2, metadata !466, null}
+!477 = metadata !{i32 786688, metadata !478, metadata !"i", metadata !45, i32 188, metadata !8, i32 0, i32 0} ; [ DW_TAG_auto_variable ] [i] [line 188]
+!478 = metadata !{i32 786443, metadata !44, metadata !54, i32 188, i32 2, i32 0, i32 24} ; [ DW_TAG_lexical_block ] [/home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease//home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/src/correlation_accel_v3.cpp]
+!479 = metadata !{i32 188, i32 10, metadata !478, null}
+!480 = metadata !{i32 188, i32 6, metadata !478, null}
+!481 = metadata !{i32 188, i32 6, metadata !482, null}
+!482 = metadata !{i32 786443, metadata !44, metadata !483, i32 188, i32 6, i32 2, i32 46} ; [ DW_TAG_lexical_block ] [/home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease//home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/src/correlation_accel_v3.cpp]
+!483 = metadata !{i32 786443, metadata !44, metadata !478, i32 188, i32 6, i32 1, i32 45} ; [ DW_TAG_lexical_block ] [/home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease//home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/src/correlation_accel_v3.cpp]
+!484 = metadata !{i32 189, i32 3, metadata !485, null}
+!485 = metadata !{i32 786443, metadata !44, metadata !478, i32 188, i32 41, i32 0, i32 25} ; [ DW_TAG_lexical_block ] [/home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease//home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/src/correlation_accel_v3.cpp]
+!486 = metadata !{i32 191, i32 2, metadata !485, null}
+!487 = metadata !{i32 188, i32 37, metadata !478, null}
+!488 = metadata !{i32 192, i32 1, metadata !54, null}
+!489 = metadata !{i32 0, i32 0, metadata !490, null}
+!490 = metadata !{i32 786443, metadata !44, metadata !57} ; [ DW_TAG_lexical_block ] [/home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease//home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/src/correlation_accel_v3.cpp]

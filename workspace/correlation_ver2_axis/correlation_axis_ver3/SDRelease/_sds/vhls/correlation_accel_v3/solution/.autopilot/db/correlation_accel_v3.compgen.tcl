@@ -490,7 +490,7 @@ puts "@W \[IMPL-107\] Cannot find ::AESL_LIB_VIRTEX::xil_gen_FIFO, check your pl
 
 # FIFO definition:
 set ID 88
-set FifoName FIFO_correlation_accel_v3_number_of_days14_channel
+set FifoName FIFO_correlation_accel_v3_number_of_indices14_channel
 set CoreName ap_simcore_fifo
 set NumOfStage 2
 set RegisteredInput 0
@@ -551,7 +551,7 @@ puts "@W \[IMPL-107\] Cannot find ::AESL_LIB_VIRTEX::xil_gen_FIFO, check your pl
 
 # FIFO definition:
 set ID 89
-set FifoName FIFO_correlation_accel_v3_number_of_indices15_channel
+set FifoName FIFO_correlation_accel_v3_number_of_days15_channel
 set CoreName ap_simcore_fifo
 set NumOfStage 2
 set RegisteredInput 0

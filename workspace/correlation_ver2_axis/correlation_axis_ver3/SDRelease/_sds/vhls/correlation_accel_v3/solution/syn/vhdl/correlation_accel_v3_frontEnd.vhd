@@ -53,12 +53,12 @@ port (
     sum_weight_returnA_out_V_din : OUT STD_LOGIC_VECTOR (31 downto 0);
     sum_weight_returnA_out_V_full_n : IN STD_LOGIC;
     sum_weight_returnA_out_V_write : OUT STD_LOGIC;
-    NUMBER_OF_DAYS_out_din : OUT STD_LOGIC_VECTOR (31 downto 0);
-    NUMBER_OF_DAYS_out_full_n : IN STD_LOGIC;
-    NUMBER_OF_DAYS_out_write : OUT STD_LOGIC;
     NUMBER_OF_INDICES_out_din : OUT STD_LOGIC_VECTOR (31 downto 0);
     NUMBER_OF_INDICES_out_full_n : IN STD_LOGIC;
-    NUMBER_OF_INDICES_out_write : OUT STD_LOGIC );
+    NUMBER_OF_INDICES_out_write : OUT STD_LOGIC;
+    NUMBER_OF_DAYS_out_din : OUT STD_LOGIC_VECTOR (31 downto 0);
+    NUMBER_OF_DAYS_out_full_n : IN STD_LOGIC;
+    NUMBER_OF_DAYS_out_write : OUT STD_LOGIC );
 end;
 
 
@@ -4481,9 +4481,9 @@ begin
 
 
     -- ap_sig_bdd_805 assign process. --
-    ap_sig_bdd_805_assign_proc : process(ap_start, ap_done_reg, NUMBER_OF_DAYS_out_full_n, NUMBER_OF_INDICES_out_full_n)
+    ap_sig_bdd_805_assign_proc : process(ap_start, ap_done_reg, NUMBER_OF_INDICES_out_full_n, NUMBER_OF_DAYS_out_full_n)
     begin
-                ap_sig_bdd_805 <= ((NUMBER_OF_INDICES_out_full_n = ap_const_logic_0) or (NUMBER_OF_DAYS_out_full_n = ap_const_logic_0) or (ap_start = ap_const_logic_0) or (ap_done_reg = ap_const_logic_1));
+                ap_sig_bdd_805 <= ((NUMBER_OF_DAYS_out_full_n = ap_const_logic_0) or (NUMBER_OF_INDICES_out_full_n = ap_const_logic_0) or (ap_start = ap_const_logic_0) or (ap_done_reg = ap_const_logic_1));
     end process;
 
 

@@ -14,7 +14,7 @@
     <cf:port cf:name="in_indices" cf:portType="stream" cf:direction="out"/>
     <cf:port cf:name="out_correlation" cf:portType="stream" cf:direction="in"/>
   </cf:block>
-  <cf:comp cf:name="datamover_0" xd:componentRef="axi_dma" xd:clockId="2"/>
+  <cf:comp cf:name="datamover_0" xd:componentRef="axi_dma" xd:clockId="2" xd:deviceId="-2"/>
   <cf:comp cf:name="datamover_1" xd:componentRef="axi_dma" xd:clockId="2"/>
   <cf:comp cf:name="zed" xd:componentRef="zed" xd:clockId="2" xd:processor="ARM-A9"/>
   <cf:comp cf:name="correlation_accel_v2_0" xd:componentRef="correlation_accel_v2" xd:clockId="2" xd:deviceId="-3" xd:libraryName="axis_acc_adapter">
@@ -65,7 +65,7 @@
     <cf:dataMover cf:compName="zed" cf:softwareLib="axi_lite"/>
   </cf:connection>
   <cf:connection cf:srcInst="swinst_correlation_accel_v2_0" cf:srcPort="in_indices" cf:dstInst="hwinst_correlation_accel_v2_0" cf:dstPort="in_indices">
-    <cf:dataMover cf:compName="datamover_0" cf:softwareLib="axi_dma_simple"/>
+    <cf:dataMover cf:compName="datamover_0" cf:softwareLib="axi_dma_sg"/>
   </cf:connection>
   <cf:connection cf:srcInst="hwinst_correlation_accel_v2_0" cf:srcPort="out_correlation" cf:dstInst="swinst_correlation_accel_v2_0" cf:dstPort="out_correlation">
     <cf:dataMover cf:compName="datamover_1" cf:softwareLib="axi_dma_simple"/>

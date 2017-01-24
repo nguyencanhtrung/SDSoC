@@ -55,46 +55,82 @@
 
 //----------- Begin Cut here for INSTANTIATION Template ---// INST_TAG
 zed_datamover_0_0 your_instance_name (
-  .s_axi_lite_aclk(s_axi_lite_aclk),                // input wire s_axi_lite_aclk
-  .m_axi_mm2s_aclk(m_axi_mm2s_aclk),                // input wire m_axi_mm2s_aclk
-  .axi_resetn(axi_resetn),                          // input wire axi_resetn
-  .s_axi_lite_awvalid(s_axi_lite_awvalid),          // input wire s_axi_lite_awvalid
-  .s_axi_lite_awready(s_axi_lite_awready),          // output wire s_axi_lite_awready
-  .s_axi_lite_awaddr(s_axi_lite_awaddr),            // input wire [9 : 0] s_axi_lite_awaddr
-  .s_axi_lite_wvalid(s_axi_lite_wvalid),            // input wire s_axi_lite_wvalid
-  .s_axi_lite_wready(s_axi_lite_wready),            // output wire s_axi_lite_wready
-  .s_axi_lite_wdata(s_axi_lite_wdata),              // input wire [31 : 0] s_axi_lite_wdata
-  .s_axi_lite_bresp(s_axi_lite_bresp),              // output wire [1 : 0] s_axi_lite_bresp
-  .s_axi_lite_bvalid(s_axi_lite_bvalid),            // output wire s_axi_lite_bvalid
-  .s_axi_lite_bready(s_axi_lite_bready),            // input wire s_axi_lite_bready
-  .s_axi_lite_arvalid(s_axi_lite_arvalid),          // input wire s_axi_lite_arvalid
-  .s_axi_lite_arready(s_axi_lite_arready),          // output wire s_axi_lite_arready
-  .s_axi_lite_araddr(s_axi_lite_araddr),            // input wire [9 : 0] s_axi_lite_araddr
-  .s_axi_lite_rvalid(s_axi_lite_rvalid),            // output wire s_axi_lite_rvalid
-  .s_axi_lite_rready(s_axi_lite_rready),            // input wire s_axi_lite_rready
-  .s_axi_lite_rdata(s_axi_lite_rdata),              // output wire [31 : 0] s_axi_lite_rdata
-  .s_axi_lite_rresp(s_axi_lite_rresp),              // output wire [1 : 0] s_axi_lite_rresp
-  .m_axi_mm2s_araddr(m_axi_mm2s_araddr),            // output wire [31 : 0] m_axi_mm2s_araddr
-  .m_axi_mm2s_arlen(m_axi_mm2s_arlen),              // output wire [7 : 0] m_axi_mm2s_arlen
-  .m_axi_mm2s_arsize(m_axi_mm2s_arsize),            // output wire [2 : 0] m_axi_mm2s_arsize
-  .m_axi_mm2s_arburst(m_axi_mm2s_arburst),          // output wire [1 : 0] m_axi_mm2s_arburst
-  .m_axi_mm2s_arprot(m_axi_mm2s_arprot),            // output wire [2 : 0] m_axi_mm2s_arprot
-  .m_axi_mm2s_arcache(m_axi_mm2s_arcache),          // output wire [3 : 0] m_axi_mm2s_arcache
-  .m_axi_mm2s_arvalid(m_axi_mm2s_arvalid),          // output wire m_axi_mm2s_arvalid
-  .m_axi_mm2s_arready(m_axi_mm2s_arready),          // input wire m_axi_mm2s_arready
-  .m_axi_mm2s_rdata(m_axi_mm2s_rdata),              // input wire [63 : 0] m_axi_mm2s_rdata
-  .m_axi_mm2s_rresp(m_axi_mm2s_rresp),              // input wire [1 : 0] m_axi_mm2s_rresp
-  .m_axi_mm2s_rlast(m_axi_mm2s_rlast),              // input wire m_axi_mm2s_rlast
-  .m_axi_mm2s_rvalid(m_axi_mm2s_rvalid),            // input wire m_axi_mm2s_rvalid
-  .m_axi_mm2s_rready(m_axi_mm2s_rready),            // output wire m_axi_mm2s_rready
-  .mm2s_prmry_reset_out_n(mm2s_prmry_reset_out_n),  // output wire mm2s_prmry_reset_out_n
-  .m_axis_mm2s_tdata(m_axis_mm2s_tdata),            // output wire [63 : 0] m_axis_mm2s_tdata
-  .m_axis_mm2s_tkeep(m_axis_mm2s_tkeep),            // output wire [7 : 0] m_axis_mm2s_tkeep
-  .m_axis_mm2s_tvalid(m_axis_mm2s_tvalid),          // output wire m_axis_mm2s_tvalid
-  .m_axis_mm2s_tready(m_axis_mm2s_tready),          // input wire m_axis_mm2s_tready
-  .m_axis_mm2s_tlast(m_axis_mm2s_tlast),            // output wire m_axis_mm2s_tlast
-  .mm2s_introut(mm2s_introut),                      // output wire mm2s_introut
-  .axi_dma_tstvec(axi_dma_tstvec)                  // output wire [31 : 0] axi_dma_tstvec
+  .s_axi_lite_aclk(s_axi_lite_aclk),                    // input wire s_axi_lite_aclk
+  .m_axi_sg_aclk(m_axi_sg_aclk),                        // input wire m_axi_sg_aclk
+  .m_axi_mm2s_aclk(m_axi_mm2s_aclk),                    // input wire m_axi_mm2s_aclk
+  .axi_resetn(axi_resetn),                              // input wire axi_resetn
+  .s_axi_lite_awvalid(s_axi_lite_awvalid),              // input wire s_axi_lite_awvalid
+  .s_axi_lite_awready(s_axi_lite_awready),              // output wire s_axi_lite_awready
+  .s_axi_lite_awaddr(s_axi_lite_awaddr),                // input wire [9 : 0] s_axi_lite_awaddr
+  .s_axi_lite_wvalid(s_axi_lite_wvalid),                // input wire s_axi_lite_wvalid
+  .s_axi_lite_wready(s_axi_lite_wready),                // output wire s_axi_lite_wready
+  .s_axi_lite_wdata(s_axi_lite_wdata),                  // input wire [31 : 0] s_axi_lite_wdata
+  .s_axi_lite_bresp(s_axi_lite_bresp),                  // output wire [1 : 0] s_axi_lite_bresp
+  .s_axi_lite_bvalid(s_axi_lite_bvalid),                // output wire s_axi_lite_bvalid
+  .s_axi_lite_bready(s_axi_lite_bready),                // input wire s_axi_lite_bready
+  .s_axi_lite_arvalid(s_axi_lite_arvalid),              // input wire s_axi_lite_arvalid
+  .s_axi_lite_arready(s_axi_lite_arready),              // output wire s_axi_lite_arready
+  .s_axi_lite_araddr(s_axi_lite_araddr),                // input wire [9 : 0] s_axi_lite_araddr
+  .s_axi_lite_rvalid(s_axi_lite_rvalid),                // output wire s_axi_lite_rvalid
+  .s_axi_lite_rready(s_axi_lite_rready),                // input wire s_axi_lite_rready
+  .s_axi_lite_rdata(s_axi_lite_rdata),                  // output wire [31 : 0] s_axi_lite_rdata
+  .s_axi_lite_rresp(s_axi_lite_rresp),                  // output wire [1 : 0] s_axi_lite_rresp
+  .m_axi_sg_awaddr(m_axi_sg_awaddr),                    // output wire [31 : 0] m_axi_sg_awaddr
+  .m_axi_sg_awlen(m_axi_sg_awlen),                      // output wire [7 : 0] m_axi_sg_awlen
+  .m_axi_sg_awsize(m_axi_sg_awsize),                    // output wire [2 : 0] m_axi_sg_awsize
+  .m_axi_sg_awburst(m_axi_sg_awburst),                  // output wire [1 : 0] m_axi_sg_awburst
+  .m_axi_sg_awprot(m_axi_sg_awprot),                    // output wire [2 : 0] m_axi_sg_awprot
+  .m_axi_sg_awcache(m_axi_sg_awcache),                  // output wire [3 : 0] m_axi_sg_awcache
+  .m_axi_sg_awvalid(m_axi_sg_awvalid),                  // output wire m_axi_sg_awvalid
+  .m_axi_sg_awready(m_axi_sg_awready),                  // input wire m_axi_sg_awready
+  .m_axi_sg_wdata(m_axi_sg_wdata),                      // output wire [31 : 0] m_axi_sg_wdata
+  .m_axi_sg_wstrb(m_axi_sg_wstrb),                      // output wire [3 : 0] m_axi_sg_wstrb
+  .m_axi_sg_wlast(m_axi_sg_wlast),                      // output wire m_axi_sg_wlast
+  .m_axi_sg_wvalid(m_axi_sg_wvalid),                    // output wire m_axi_sg_wvalid
+  .m_axi_sg_wready(m_axi_sg_wready),                    // input wire m_axi_sg_wready
+  .m_axi_sg_bresp(m_axi_sg_bresp),                      // input wire [1 : 0] m_axi_sg_bresp
+  .m_axi_sg_bvalid(m_axi_sg_bvalid),                    // input wire m_axi_sg_bvalid
+  .m_axi_sg_bready(m_axi_sg_bready),                    // output wire m_axi_sg_bready
+  .m_axi_sg_araddr(m_axi_sg_araddr),                    // output wire [31 : 0] m_axi_sg_araddr
+  .m_axi_sg_arlen(m_axi_sg_arlen),                      // output wire [7 : 0] m_axi_sg_arlen
+  .m_axi_sg_arsize(m_axi_sg_arsize),                    // output wire [2 : 0] m_axi_sg_arsize
+  .m_axi_sg_arburst(m_axi_sg_arburst),                  // output wire [1 : 0] m_axi_sg_arburst
+  .m_axi_sg_arprot(m_axi_sg_arprot),                    // output wire [2 : 0] m_axi_sg_arprot
+  .m_axi_sg_arcache(m_axi_sg_arcache),                  // output wire [3 : 0] m_axi_sg_arcache
+  .m_axi_sg_arvalid(m_axi_sg_arvalid),                  // output wire m_axi_sg_arvalid
+  .m_axi_sg_arready(m_axi_sg_arready),                  // input wire m_axi_sg_arready
+  .m_axi_sg_rdata(m_axi_sg_rdata),                      // input wire [31 : 0] m_axi_sg_rdata
+  .m_axi_sg_rresp(m_axi_sg_rresp),                      // input wire [1 : 0] m_axi_sg_rresp
+  .m_axi_sg_rlast(m_axi_sg_rlast),                      // input wire m_axi_sg_rlast
+  .m_axi_sg_rvalid(m_axi_sg_rvalid),                    // input wire m_axi_sg_rvalid
+  .m_axi_sg_rready(m_axi_sg_rready),                    // output wire m_axi_sg_rready
+  .m_axi_mm2s_araddr(m_axi_mm2s_araddr),                // output wire [31 : 0] m_axi_mm2s_araddr
+  .m_axi_mm2s_arlen(m_axi_mm2s_arlen),                  // output wire [7 : 0] m_axi_mm2s_arlen
+  .m_axi_mm2s_arsize(m_axi_mm2s_arsize),                // output wire [2 : 0] m_axi_mm2s_arsize
+  .m_axi_mm2s_arburst(m_axi_mm2s_arburst),              // output wire [1 : 0] m_axi_mm2s_arburst
+  .m_axi_mm2s_arprot(m_axi_mm2s_arprot),                // output wire [2 : 0] m_axi_mm2s_arprot
+  .m_axi_mm2s_arcache(m_axi_mm2s_arcache),              // output wire [3 : 0] m_axi_mm2s_arcache
+  .m_axi_mm2s_arvalid(m_axi_mm2s_arvalid),              // output wire m_axi_mm2s_arvalid
+  .m_axi_mm2s_arready(m_axi_mm2s_arready),              // input wire m_axi_mm2s_arready
+  .m_axi_mm2s_rdata(m_axi_mm2s_rdata),                  // input wire [63 : 0] m_axi_mm2s_rdata
+  .m_axi_mm2s_rresp(m_axi_mm2s_rresp),                  // input wire [1 : 0] m_axi_mm2s_rresp
+  .m_axi_mm2s_rlast(m_axi_mm2s_rlast),                  // input wire m_axi_mm2s_rlast
+  .m_axi_mm2s_rvalid(m_axi_mm2s_rvalid),                // input wire m_axi_mm2s_rvalid
+  .m_axi_mm2s_rready(m_axi_mm2s_rready),                // output wire m_axi_mm2s_rready
+  .mm2s_prmry_reset_out_n(mm2s_prmry_reset_out_n),      // output wire mm2s_prmry_reset_out_n
+  .m_axis_mm2s_tdata(m_axis_mm2s_tdata),                // output wire [63 : 0] m_axis_mm2s_tdata
+  .m_axis_mm2s_tkeep(m_axis_mm2s_tkeep),                // output wire [7 : 0] m_axis_mm2s_tkeep
+  .m_axis_mm2s_tvalid(m_axis_mm2s_tvalid),              // output wire m_axis_mm2s_tvalid
+  .m_axis_mm2s_tready(m_axis_mm2s_tready),              // input wire m_axis_mm2s_tready
+  .m_axis_mm2s_tlast(m_axis_mm2s_tlast),                // output wire m_axis_mm2s_tlast
+  .mm2s_cntrl_reset_out_n(mm2s_cntrl_reset_out_n),      // output wire mm2s_cntrl_reset_out_n
+  .m_axis_mm2s_cntrl_tdata(m_axis_mm2s_cntrl_tdata),    // output wire [31 : 0] m_axis_mm2s_cntrl_tdata
+  .m_axis_mm2s_cntrl_tkeep(m_axis_mm2s_cntrl_tkeep),    // output wire [3 : 0] m_axis_mm2s_cntrl_tkeep
+  .m_axis_mm2s_cntrl_tvalid(m_axis_mm2s_cntrl_tvalid),  // output wire m_axis_mm2s_cntrl_tvalid
+  .m_axis_mm2s_cntrl_tready(m_axis_mm2s_cntrl_tready),  // input wire m_axis_mm2s_cntrl_tready
+  .m_axis_mm2s_cntrl_tlast(m_axis_mm2s_cntrl_tlast),    // output wire m_axis_mm2s_cntrl_tlast
+  .mm2s_introut(mm2s_introut),                          // output wire mm2s_introut
+  .axi_dma_tstvec(axi_dma_tstvec)                      // output wire [31 : 0] axi_dma_tstvec
 );
 // INST_TAG_END ------ End INSTANTIATION Template ---------
 

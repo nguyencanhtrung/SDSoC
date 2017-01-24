@@ -21,8 +21,8 @@
 #include "FIFO_correlation_accel_v3_sum_returnA_V.h"
 #include "FIFO_correlation_accel_v3_sum_weight_returnSquareA_V.h"
 #include "FIFO_correlation_accel_v3_sum_weight_returnA_V.h"
-#include "FIFO_correlation_accel_v3_number_of_days14_channel.h"
-#include "FIFO_correlation_accel_v3_number_of_indices15_channel.h"
+#include "FIFO_correlation_accel_v3_number_of_indices14_channel.h"
+#include "FIFO_correlation_accel_v3_number_of_days15_channel.h"
 
 namespace ap_rtl {
 
@@ -76,8 +76,8 @@ struct correlation_accel_v3 : public sc_module {
     FIFO_correlation_accel_v3_sum_returnA_V* sum_returnA_V_U;
     FIFO_correlation_accel_v3_sum_weight_returnSquareA_V* sum_weight_returnSquareA_V_U;
     FIFO_correlation_accel_v3_sum_weight_returnA_V* sum_weight_returnA_V_U;
-    FIFO_correlation_accel_v3_number_of_days14_channel* number_of_days14_channel_U;
-    FIFO_correlation_accel_v3_number_of_indices15_channel* number_of_indices15_channel_U;
+    FIFO_correlation_accel_v3_number_of_indices14_channel* number_of_indices14_channel_U;
+    FIFO_correlation_accel_v3_number_of_days15_channel* number_of_days15_channel_U;
     sc_signal< sc_logic > ap_rst_n_inv;
     sc_signal< sc_logic > correlation_accel_v3_frontEnd_U0_ap_start;
     sc_signal< sc_logic > correlation_accel_v3_frontEnd_U0_ap_done;
@@ -119,12 +119,12 @@ struct correlation_accel_v3 : public sc_module {
     sc_signal< sc_lv<32> > correlation_accel_v3_frontEnd_U0_sum_weight_returnA_out_V_din;
     sc_signal< sc_logic > correlation_accel_v3_frontEnd_U0_sum_weight_returnA_out_V_full_n;
     sc_signal< sc_logic > correlation_accel_v3_frontEnd_U0_sum_weight_returnA_out_V_write;
-    sc_signal< sc_lv<32> > correlation_accel_v3_frontEnd_U0_NUMBER_OF_DAYS_out_din;
-    sc_signal< sc_logic > correlation_accel_v3_frontEnd_U0_NUMBER_OF_DAYS_out_full_n;
-    sc_signal< sc_logic > correlation_accel_v3_frontEnd_U0_NUMBER_OF_DAYS_out_write;
     sc_signal< sc_lv<32> > correlation_accel_v3_frontEnd_U0_NUMBER_OF_INDICES_out_din;
     sc_signal< sc_logic > correlation_accel_v3_frontEnd_U0_NUMBER_OF_INDICES_out_full_n;
     sc_signal< sc_logic > correlation_accel_v3_frontEnd_U0_NUMBER_OF_INDICES_out_write;
+    sc_signal< sc_lv<32> > correlation_accel_v3_frontEnd_U0_NUMBER_OF_DAYS_out_din;
+    sc_signal< sc_logic > correlation_accel_v3_frontEnd_U0_NUMBER_OF_DAYS_out_full_n;
+    sc_signal< sc_logic > correlation_accel_v3_frontEnd_U0_NUMBER_OF_DAYS_out_write;
     sc_signal< sc_logic > correlation_accel_v3_backEnd_U0_ap_start;
     sc_signal< sc_logic > correlation_accel_v3_backEnd_U0_ap_done;
     sc_signal< sc_logic > correlation_accel_v3_backEnd_U0_ap_continue;
@@ -226,20 +226,20 @@ struct correlation_accel_v3 : public sc_module {
     sc_signal< sc_lv<32> > sum_weight_returnA_V_dout;
     sc_signal< sc_logic > sum_weight_returnA_V_empty_n;
     sc_signal< sc_logic > sum_weight_returnA_V_read;
-    sc_signal< sc_logic > number_of_days14_channel_U_ap_dummy_ce;
-    sc_signal< sc_lv<32> > number_of_days14_channel_din;
-    sc_signal< sc_logic > number_of_days14_channel_full_n;
-    sc_signal< sc_logic > number_of_days14_channel_write;
-    sc_signal< sc_lv<32> > number_of_days14_channel_dout;
-    sc_signal< sc_logic > number_of_days14_channel_empty_n;
-    sc_signal< sc_logic > number_of_days14_channel_read;
-    sc_signal< sc_logic > number_of_indices15_channel_U_ap_dummy_ce;
-    sc_signal< sc_lv<32> > number_of_indices15_channel_din;
-    sc_signal< sc_logic > number_of_indices15_channel_full_n;
-    sc_signal< sc_logic > number_of_indices15_channel_write;
-    sc_signal< sc_lv<32> > number_of_indices15_channel_dout;
-    sc_signal< sc_logic > number_of_indices15_channel_empty_n;
-    sc_signal< sc_logic > number_of_indices15_channel_read;
+    sc_signal< sc_logic > number_of_indices14_channel_U_ap_dummy_ce;
+    sc_signal< sc_lv<32> > number_of_indices14_channel_din;
+    sc_signal< sc_logic > number_of_indices14_channel_full_n;
+    sc_signal< sc_logic > number_of_indices14_channel_write;
+    sc_signal< sc_lv<32> > number_of_indices14_channel_dout;
+    sc_signal< sc_logic > number_of_indices14_channel_empty_n;
+    sc_signal< sc_logic > number_of_indices14_channel_read;
+    sc_signal< sc_logic > number_of_days15_channel_U_ap_dummy_ce;
+    sc_signal< sc_lv<32> > number_of_days15_channel_din;
+    sc_signal< sc_logic > number_of_days15_channel_full_n;
+    sc_signal< sc_logic > number_of_days15_channel_write;
+    sc_signal< sc_lv<32> > number_of_days15_channel_dout;
+    sc_signal< sc_logic > number_of_days15_channel_empty_n;
+    sc_signal< sc_logic > number_of_days15_channel_read;
     sc_signal< sc_logic > ap_reg_procdone_correlation_accel_v3_frontEnd_U0;
     sc_signal< sc_logic > ap_sig_hs_done;
     sc_signal< sc_logic > ap_reg_procdone_correlation_accel_v3_backEnd_U0;
@@ -305,14 +305,14 @@ struct correlation_accel_v3 : public sc_module {
     void thread_correlation_accel_v3_frontEnd_U0_sum_weight_returnSquare_out_V_full_n();
     void thread_correlation_accel_v3_frontEnd_U0_sum_weight_return_out_V_full_n();
     void thread_in_indices_TREADY();
-    void thread_number_of_days14_channel_U_ap_dummy_ce();
-    void thread_number_of_days14_channel_din();
-    void thread_number_of_days14_channel_read();
-    void thread_number_of_days14_channel_write();
-    void thread_number_of_indices15_channel_U_ap_dummy_ce();
-    void thread_number_of_indices15_channel_din();
-    void thread_number_of_indices15_channel_read();
-    void thread_number_of_indices15_channel_write();
+    void thread_number_of_days15_channel_U_ap_dummy_ce();
+    void thread_number_of_days15_channel_din();
+    void thread_number_of_days15_channel_read();
+    void thread_number_of_days15_channel_write();
+    void thread_number_of_indices14_channel_U_ap_dummy_ce();
+    void thread_number_of_indices14_channel_din();
+    void thread_number_of_indices14_channel_read();
+    void thread_number_of_indices14_channel_write();
     void thread_out_correlation_TDATA();
     void thread_out_correlation_TDEST();
     void thread_out_correlation_TID();

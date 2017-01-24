@@ -114,12 +114,12 @@ wire    correlation_accel_v3_frontEnd_U0_sum_weight_returnSquareA_out_V_write;
 wire   [31:0] correlation_accel_v3_frontEnd_U0_sum_weight_returnA_out_V_din;
 wire    correlation_accel_v3_frontEnd_U0_sum_weight_returnA_out_V_full_n;
 wire    correlation_accel_v3_frontEnd_U0_sum_weight_returnA_out_V_write;
-wire   [31:0] correlation_accel_v3_frontEnd_U0_NUMBER_OF_DAYS_out_din;
-wire    correlation_accel_v3_frontEnd_U0_NUMBER_OF_DAYS_out_full_n;
-wire    correlation_accel_v3_frontEnd_U0_NUMBER_OF_DAYS_out_write;
 wire   [31:0] correlation_accel_v3_frontEnd_U0_NUMBER_OF_INDICES_out_din;
 wire    correlation_accel_v3_frontEnd_U0_NUMBER_OF_INDICES_out_full_n;
 wire    correlation_accel_v3_frontEnd_U0_NUMBER_OF_INDICES_out_write;
+wire   [31:0] correlation_accel_v3_frontEnd_U0_NUMBER_OF_DAYS_out_din;
+wire    correlation_accel_v3_frontEnd_U0_NUMBER_OF_DAYS_out_full_n;
+wire    correlation_accel_v3_frontEnd_U0_NUMBER_OF_DAYS_out_write;
 reg    correlation_accel_v3_backEnd_U0_ap_start = 1'b0;
 wire    correlation_accel_v3_backEnd_U0_ap_done;
 wire    correlation_accel_v3_backEnd_U0_ap_continue;
@@ -221,20 +221,20 @@ wire    sum_weight_returnA_V_write;
 wire   [31:0] sum_weight_returnA_V_dout;
 wire    sum_weight_returnA_V_empty_n;
 wire    sum_weight_returnA_V_read;
-wire    number_of_days14_channel_U_ap_dummy_ce;
-wire   [31:0] number_of_days14_channel_din;
-wire    number_of_days14_channel_full_n;
-wire    number_of_days14_channel_write;
-wire   [31:0] number_of_days14_channel_dout;
-wire    number_of_days14_channel_empty_n;
-wire    number_of_days14_channel_read;
-wire    number_of_indices15_channel_U_ap_dummy_ce;
-wire   [31:0] number_of_indices15_channel_din;
-wire    number_of_indices15_channel_full_n;
-wire    number_of_indices15_channel_write;
-wire   [31:0] number_of_indices15_channel_dout;
-wire    number_of_indices15_channel_empty_n;
-wire    number_of_indices15_channel_read;
+wire    number_of_indices14_channel_U_ap_dummy_ce;
+wire   [31:0] number_of_indices14_channel_din;
+wire    number_of_indices14_channel_full_n;
+wire    number_of_indices14_channel_write;
+wire   [31:0] number_of_indices14_channel_dout;
+wire    number_of_indices14_channel_empty_n;
+wire    number_of_indices14_channel_read;
+wire    number_of_days15_channel_U_ap_dummy_ce;
+wire   [31:0] number_of_days15_channel_din;
+wire    number_of_days15_channel_full_n;
+wire    number_of_days15_channel_write;
+wire   [31:0] number_of_days15_channel_dout;
+wire    number_of_days15_channel_empty_n;
+wire    number_of_days15_channel_read;
 reg    ap_reg_procdone_correlation_accel_v3_frontEnd_U0 = 1'b0;
 reg    ap_sig_hs_done;
 reg    ap_reg_procdone_correlation_accel_v3_backEnd_U0 = 1'b0;
@@ -285,12 +285,12 @@ correlation_accel_v3_frontEnd correlation_accel_v3_frontEnd_U0(
     .sum_weight_returnA_out_V_din( correlation_accel_v3_frontEnd_U0_sum_weight_returnA_out_V_din ),
     .sum_weight_returnA_out_V_full_n( correlation_accel_v3_frontEnd_U0_sum_weight_returnA_out_V_full_n ),
     .sum_weight_returnA_out_V_write( correlation_accel_v3_frontEnd_U0_sum_weight_returnA_out_V_write ),
-    .NUMBER_OF_DAYS_out_din( correlation_accel_v3_frontEnd_U0_NUMBER_OF_DAYS_out_din ),
-    .NUMBER_OF_DAYS_out_full_n( correlation_accel_v3_frontEnd_U0_NUMBER_OF_DAYS_out_full_n ),
-    .NUMBER_OF_DAYS_out_write( correlation_accel_v3_frontEnd_U0_NUMBER_OF_DAYS_out_write ),
     .NUMBER_OF_INDICES_out_din( correlation_accel_v3_frontEnd_U0_NUMBER_OF_INDICES_out_din ),
     .NUMBER_OF_INDICES_out_full_n( correlation_accel_v3_frontEnd_U0_NUMBER_OF_INDICES_out_full_n ),
-    .NUMBER_OF_INDICES_out_write( correlation_accel_v3_frontEnd_U0_NUMBER_OF_INDICES_out_write )
+    .NUMBER_OF_INDICES_out_write( correlation_accel_v3_frontEnd_U0_NUMBER_OF_INDICES_out_write ),
+    .NUMBER_OF_DAYS_out_din( correlation_accel_v3_frontEnd_U0_NUMBER_OF_DAYS_out_din ),
+    .NUMBER_OF_DAYS_out_full_n( correlation_accel_v3_frontEnd_U0_NUMBER_OF_DAYS_out_full_n ),
+    .NUMBER_OF_DAYS_out_write( correlation_accel_v3_frontEnd_U0_NUMBER_OF_DAYS_out_write )
 );
 
 correlation_accel_v3_backEnd correlation_accel_v3_backEnd_U0(
@@ -446,30 +446,30 @@ FIFO_correlation_accel_v3_sum_weight_returnA_V sum_weight_returnA_V_U(
     .if_read( sum_weight_returnA_V_read )
 );
 
-FIFO_correlation_accel_v3_number_of_days14_channel number_of_days14_channel_U(
+FIFO_correlation_accel_v3_number_of_indices14_channel number_of_indices14_channel_U(
     .clk( ap_clk ),
     .reset( ap_rst_n_inv ),
-    .if_read_ce( number_of_days14_channel_U_ap_dummy_ce ),
-    .if_write_ce( number_of_days14_channel_U_ap_dummy_ce ),
-    .if_din( number_of_days14_channel_din ),
-    .if_full_n( number_of_days14_channel_full_n ),
-    .if_write( number_of_days14_channel_write ),
-    .if_dout( number_of_days14_channel_dout ),
-    .if_empty_n( number_of_days14_channel_empty_n ),
-    .if_read( number_of_days14_channel_read )
+    .if_read_ce( number_of_indices14_channel_U_ap_dummy_ce ),
+    .if_write_ce( number_of_indices14_channel_U_ap_dummy_ce ),
+    .if_din( number_of_indices14_channel_din ),
+    .if_full_n( number_of_indices14_channel_full_n ),
+    .if_write( number_of_indices14_channel_write ),
+    .if_dout( number_of_indices14_channel_dout ),
+    .if_empty_n( number_of_indices14_channel_empty_n ),
+    .if_read( number_of_indices14_channel_read )
 );
 
-FIFO_correlation_accel_v3_number_of_indices15_channel number_of_indices15_channel_U(
+FIFO_correlation_accel_v3_number_of_days15_channel number_of_days15_channel_U(
     .clk( ap_clk ),
     .reset( ap_rst_n_inv ),
-    .if_read_ce( number_of_indices15_channel_U_ap_dummy_ce ),
-    .if_write_ce( number_of_indices15_channel_U_ap_dummy_ce ),
-    .if_din( number_of_indices15_channel_din ),
-    .if_full_n( number_of_indices15_channel_full_n ),
-    .if_write( number_of_indices15_channel_write ),
-    .if_dout( number_of_indices15_channel_dout ),
-    .if_empty_n( number_of_indices15_channel_empty_n ),
-    .if_read( number_of_indices15_channel_read )
+    .if_read_ce( number_of_days15_channel_U_ap_dummy_ce ),
+    .if_write_ce( number_of_days15_channel_U_ap_dummy_ce ),
+    .if_din( number_of_days15_channel_din ),
+    .if_full_n( number_of_days15_channel_full_n ),
+    .if_write( number_of_days15_channel_write ),
+    .if_dout( number_of_days15_channel_dout ),
+    .if_empty_n( number_of_days15_channel_empty_n ),
+    .if_read( number_of_days15_channel_read )
 );
 
 
@@ -547,10 +547,10 @@ begin
 end
 assign ap_sig_hs_continue = ap_const_logic_1;
 assign ap_sig_top_allready = correlation_accel_v3_frontEnd_U0_ap_ready;
-assign correlation_accel_v3_backEnd_U0_NUMBER_OF_DAYS_dout = number_of_days14_channel_dout;
-assign correlation_accel_v3_backEnd_U0_NUMBER_OF_DAYS_empty_n = number_of_days14_channel_empty_n;
-assign correlation_accel_v3_backEnd_U0_NUMBER_OF_INDICES_dout = number_of_indices15_channel_dout;
-assign correlation_accel_v3_backEnd_U0_NUMBER_OF_INDICES_empty_n = number_of_indices15_channel_empty_n;
+assign correlation_accel_v3_backEnd_U0_NUMBER_OF_DAYS_dout = number_of_days15_channel_dout;
+assign correlation_accel_v3_backEnd_U0_NUMBER_OF_DAYS_empty_n = number_of_days15_channel_empty_n;
+assign correlation_accel_v3_backEnd_U0_NUMBER_OF_INDICES_dout = number_of_indices14_channel_dout;
+assign correlation_accel_v3_backEnd_U0_NUMBER_OF_INDICES_empty_n = number_of_indices14_channel_empty_n;
 assign correlation_accel_v3_backEnd_U0_ap_continue = ap_sig_hs_continue;
 assign correlation_accel_v3_backEnd_U0_out_correlation_TREADY = out_correlation_TREADY;
 assign correlation_accel_v3_backEnd_U0_sum_returnA_in_V_dout = sum_returnA_V_dout;
@@ -570,9 +570,9 @@ assign correlation_accel_v3_backEnd_U0_sum_weight_returnSquare_in_V_empty_n = su
 assign correlation_accel_v3_backEnd_U0_sum_weight_return_in_V_dout = sum_weight_return_V_dout;
 assign correlation_accel_v3_backEnd_U0_sum_weight_return_in_V_empty_n = sum_weight_return_V_empty_n;
 assign correlation_accel_v3_frontEnd_U0_NUMBER_OF_DAYS = number_of_days;
-assign correlation_accel_v3_frontEnd_U0_NUMBER_OF_DAYS_out_full_n = number_of_days14_channel_full_n;
+assign correlation_accel_v3_frontEnd_U0_NUMBER_OF_DAYS_out_full_n = number_of_days15_channel_full_n;
 assign correlation_accel_v3_frontEnd_U0_NUMBER_OF_INDICES = number_of_indices;
-assign correlation_accel_v3_frontEnd_U0_NUMBER_OF_INDICES_out_full_n = number_of_indices15_channel_full_n;
+assign correlation_accel_v3_frontEnd_U0_NUMBER_OF_INDICES_out_full_n = number_of_indices14_channel_full_n;
 assign correlation_accel_v3_frontEnd_U0_ap_continue = ap_const_logic_1;
 assign correlation_accel_v3_frontEnd_U0_ap_start = ap_start;
 assign correlation_accel_v3_frontEnd_U0_in_indices_TDATA = in_indices_TDATA;
@@ -592,14 +592,14 @@ assign correlation_accel_v3_frontEnd_U0_sum_weight_returnSquareA_out_V_full_n = 
 assign correlation_accel_v3_frontEnd_U0_sum_weight_returnSquare_out_V_full_n = sum_weight_returnSquare_V_full_n;
 assign correlation_accel_v3_frontEnd_U0_sum_weight_return_out_V_full_n = sum_weight_return_V_full_n;
 assign in_indices_TREADY = correlation_accel_v3_frontEnd_U0_in_indices_TREADY;
-assign number_of_days14_channel_U_ap_dummy_ce = ap_const_logic_1;
-assign number_of_days14_channel_din = correlation_accel_v3_frontEnd_U0_NUMBER_OF_DAYS_out_din;
-assign number_of_days14_channel_read = correlation_accel_v3_backEnd_U0_NUMBER_OF_DAYS_read;
-assign number_of_days14_channel_write = correlation_accel_v3_frontEnd_U0_NUMBER_OF_DAYS_out_write;
-assign number_of_indices15_channel_U_ap_dummy_ce = ap_const_logic_1;
-assign number_of_indices15_channel_din = correlation_accel_v3_frontEnd_U0_NUMBER_OF_INDICES_out_din;
-assign number_of_indices15_channel_read = correlation_accel_v3_backEnd_U0_NUMBER_OF_INDICES_read;
-assign number_of_indices15_channel_write = correlation_accel_v3_frontEnd_U0_NUMBER_OF_INDICES_out_write;
+assign number_of_days15_channel_U_ap_dummy_ce = ap_const_logic_1;
+assign number_of_days15_channel_din = correlation_accel_v3_frontEnd_U0_NUMBER_OF_DAYS_out_din;
+assign number_of_days15_channel_read = correlation_accel_v3_backEnd_U0_NUMBER_OF_DAYS_read;
+assign number_of_days15_channel_write = correlation_accel_v3_frontEnd_U0_NUMBER_OF_DAYS_out_write;
+assign number_of_indices14_channel_U_ap_dummy_ce = ap_const_logic_1;
+assign number_of_indices14_channel_din = correlation_accel_v3_frontEnd_U0_NUMBER_OF_INDICES_out_din;
+assign number_of_indices14_channel_read = correlation_accel_v3_backEnd_U0_NUMBER_OF_INDICES_read;
+assign number_of_indices14_channel_write = correlation_accel_v3_frontEnd_U0_NUMBER_OF_INDICES_out_write;
 assign out_correlation_TDATA = correlation_accel_v3_backEnd_U0_out_correlation_TDATA;
 assign out_correlation_TDEST = correlation_accel_v3_backEnd_U0_out_correlation_TDEST;
 assign out_correlation_TID = correlation_accel_v3_backEnd_U0_out_correlation_TID;

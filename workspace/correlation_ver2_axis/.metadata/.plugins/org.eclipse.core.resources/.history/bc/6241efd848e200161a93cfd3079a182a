@@ -1,0 +1,359 @@
+@I [HLS-0] Workspace /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease/_sds/vhls/correlation_accel_v3/solution opened at Tue Jan 24 16:20:18 CET 2017
+@I [HLS-100] Command 'open_solution' returned 0; elapsed 0Total elapsed time: 0.160 sec.
+@I [HLS-100] Command "set_part  xc7z020clg484-1  "
+@I [HLS-100] Command "add_library xilinx/zynq/zynq:xc7z020:clg484:-1 "
+@I [HLS-100] Command "get_default_platform "
+@I [HLS-100] Command 'get_default_platform' returned 0; elapsed 0Total elapsed time: 0.161 sec.
+@I [HLS-100] Command "license_exists VIVADO_HLS "
+@I [HLS-100] Command 'license_exists' returned 1; elapsed 0Total elapsed time: 0.164 sec.
+@I [HLS-100] Command "license_exists ap_opencl "
+@I [HLS-100] Command 'license_exists' returned 1; elapsed 0Total elapsed time: 0.166 sec.
+@I [HLS-100] Command "license_exists AUTOESL_NI "
+@I [HLS-100] Command 'license_exists' returned 1; elapsed 0Total elapsed time: 0.168 sec.
+@I [HLS-100] Command "license_exists HLS "
+@I [HLS-100] Command 'license_exists' returned 0; elapsed 0Total elapsed time: 0.168 sec.
+@I [HLS-100] Command "open_platform DefaultPlatform "
+@I [HLS-100] Command 'open_platform' returned 0; elapsed 0Total elapsed time: 0.169 sec.
+@I [HLS-100] Command "import_lib /opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/common/technology/xilinx/zynq/zynq "
+@I [HLS-100] Command "source /opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/common/technology/xilinx/common/xilinx.lib "
+@I [HLS-100] Command "source /opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/common/technology/xilinx/interface/xilinx_interface.lib "
+@I [HLS-100] Command "source /opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/common/technology/xilinx/interface/plb46.lib "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.01Total elapsed time: 0.169 sec.
+@I [HLS-100] Command "source /opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/common/technology/xilinx/interface/fsl.lib "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 0.169 sec.
+@I [HLS-100] Command "source /opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/common/technology/xilinx/interface/axi4.lib "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 0.169 sec.
+@I [HLS-100] Command "source /opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/common/technology/xilinx/interface/maxi.lib "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 0.169 sec.
+@I [HLS-100] Command "source /opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/common/technology/xilinx/interface/saxilite.lib "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 0.170 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.01Total elapsed time: 0.170 sec.
+@I [HLS-100] Command "source /opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/common/technology/xilinx/common/dsp48.lib "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 0.170 sec.
+@I [HLS-100] Command "source /opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/common/technology/xilinx/ip/xfir.lib "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 0.170 sec.
+@I [HLS-100] Command "source /opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/common/technology/xilinx/ip/xfft.lib "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 0.170 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.01Total elapsed time: 0.171 sec.
+@I [HLS-100] Command "source /opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/common/technology/xilinx/common/xilinx_old.lib "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 0.172 sec.
+@I [HLS-100] Command "source /opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/common/technology/xilinx/common/xilinx_vivado.lib "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 0.172 sec.
+@I [HLS-100] Command "source /opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/common/technology/xilinx/common/xilinx.hlp "
+@I [HLS-100] Command "source /opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/common/technology/xilinx/common/target_info.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 0.174 sec.
+@I [HLS-100] Command "source /opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/common/technology/xilinx/interface/xilinx_interface.hlp "
+@I [HLS-100] Command "source /opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/common/technology/xilinx/interface/maxi.hlp "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 0.174 sec.
+@I [HLS-100] Command "source /opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/common/technology/xilinx/interface/saxilite.hlp "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 0.174 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 0.174 sec.
+@I [HLS-100] Command "source /opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/common/technology/xilinx/common/dsp48.hlp "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 0.174 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 0.174 sec.
+@I [HLS-100] Command "source /opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/common/technology/xilinx/zynq/dsp48e1.hlp "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 0.174 sec.
+@I [HLS-100] Command "get_default_platform "
+@I [HLS-100] Command 'get_default_platform' returned 0; elapsed 0Total elapsed time: 0.174 sec.
+@I [HLS-100] Command "config_chip_info -quiet -resource  {SLICE 13300}  {LUT 53200}     {FF 106400} {DSP48E 220}   {BRAM 280}  "
+@I [HLS-100] Command 'config_chip_info' returned 0; elapsed 0Total elapsed time: 0.174 sec.
+@I [HLS-100] Command "config_chip_info -quiet -speed medium "
+@I [HLS-100] Command 'config_chip_info' returned 0; elapsed 0Total elapsed time: 0.174 sec.
+@I [HLS-100] Command 'import_lib' returned 0; elapsed 0.01Total elapsed time: 0.175 sec.
+@I [HLS-100] Command "source /opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/common/technology/xilinx/zynq/zynq.gen "
+@I [HLS-100] Command "source /opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/common/technology/xilinx/common/virtex.gen "
+@I [HLS-100] Command "source /opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/common/technology/xilinx/common/xilinx.gen "
+@I [HLS-100] Command "source /opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/common/technology/xilinx/interface/plb46.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 0.176 sec.
+@I [HLS-100] Command "source /opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/common/technology/xilinx/interface/fsl.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 0.176 sec.
+@I [HLS-100] Command "source /opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/common/technology/xilinx/interface/axi4.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 0.177 sec.
+@I [HLS-100] Command "source /opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/common/technology/xilinx/interface/nativeAXI4.gen "
+@I [HLS-100] Command "source /opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/common/technology/xilinx/interface/saxilite.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 0.179 sec.
+@I [HLS-100] Command "source /opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/common/technology/xilinx/interface/maxi.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.01Total elapsed time: 0.182 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.01Total elapsed time: 0.182 sec.
+@I [HLS-100] Command "source /opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/common/technology/xilinx/scripts/xilinxcoregen.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 0.186 sec.
+@I [HLS-100] Command "source /opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/common/technology/xilinx/interface/XilEDKCoreGen.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.01Total elapsed time: 0.191 sec.
+@I [HLS-100] Command "source /opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/common/technology/xilinx/ip/util.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 0.191 sec.
+@I [HLS-100] Command "source /opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/common/technology/xilinx/ip/xfft.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.05Total elapsed time: 0.247 sec.
+@I [HLS-100] Command "source /opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/common/technology/xilinx/ip/xfir.gen "
+@I [HLS-100] Command "source /opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/tps/tcl/tcllib1.11.1/struct/list.tcl "
+@I [HLS-100] Command "source /opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/tps/tcl/tcllib1.11.1/cmdline/cmdline.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 0.255 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 0.255 sec.
+@I [HLS-100] Command "source /opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/tps/tcl/tcllib1.11.1/math/bignum.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 0.258 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.01Total elapsed time: 0.262 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.08Total elapsed time: 0.262 sec.
+@I [HLS-100] Command "source /opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/common/technology/xilinx/common/dsp48.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 0.262 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.09Total elapsed time: 0.263 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.09Total elapsed time: 0.263 sec.
+@I [HLS-100] Command "get_default_platform "
+@I [HLS-100] Command 'get_default_platform' returned 0; elapsed 0Total elapsed time: 0.263 sec.
+@I [HLS-100] Command "config_chip_info -quiet -resource  {SLICE 13300}  {LUT 53200}     {FF 106400} {DSP48E 220}   {BRAM 280}  "
+@I [HLS-100] Command 'config_chip_info' returned 0; elapsed 0Total elapsed time: 0.263 sec.
+@I [HLS-100] Command "config_chip_info -quiet -speed slow "
+@I [HLS-100] Command 'config_chip_info' returned 0; elapsed 0Total elapsed time: 0.263 sec.
+@I [HLS-100] Command 'add_library' returned 0; elapsed 0.1Total elapsed time: 0.530 sec.
+@I [HLS-100] Command "add_library xilinx/zynq/zynq_fpv6 "
+@I [HLS-100] Command "get_default_platform "
+@I [HLS-100] Command 'get_default_platform' returned 0; elapsed 0Total elapsed time: 0.530 sec.
+@I [HLS-100] Command "license_exists VIVADO_HLS "
+@I [HLS-100] Command 'license_exists' returned 1; elapsed 0Total elapsed time: 0.533 sec.
+@I [HLS-100] Command "license_exists ap_opencl "
+@I [HLS-100] Command 'license_exists' returned 1; elapsed 0Total elapsed time: 0.535 sec.
+@I [HLS-100] Command "license_exists AUTOESL_NI "
+@I [HLS-100] Command 'license_exists' returned 1; elapsed 0Total elapsed time: 0.537 sec.
+@I [HLS-100] Command "license_exists HLS "
+@I [HLS-100] Command 'license_exists' returned 0; elapsed 0Total elapsed time: 0.537 sec.
+@I [HLS-100] Command "open_platform DefaultPlatform "
+@I [HLS-100] Command 'open_platform' returned 0; elapsed 0Total elapsed time: 0.537 sec.
+@I [HLS-100] Command "import_lib /opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/common/technology/xilinx/zynq/zynq_fpv6 "
+@I [HLS-100] Command "source /opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/common/technology/xilinx/common/xilinx_fpv7.lib "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 0.539 sec.
+@I [HLS-100] Command "source /opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/common/technology/xilinx/common/xilinx_fpv.hlp "
+@I [HLS-100] Command "source /opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/common/technology/xilinx/common/xilinx.hlp "
+@I [HLS-100] Command "source /opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/common/technology/xilinx/common/target_info.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 0.542 sec.
+@I [HLS-100] Command "source /opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/common/technology/xilinx/interface/xilinx_interface.hlp "
+@I [HLS-100] Command "source /opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/common/technology/xilinx/interface/maxi.hlp "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 0.542 sec.
+@I [HLS-100] Command "source /opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/common/technology/xilinx/interface/saxilite.hlp "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 0.542 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 0.542 sec.
+@I [HLS-100] Command "source /opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/common/technology/xilinx/common/dsp48.hlp "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 0.542 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 0.542 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 0.542 sec.
+@I [HLS-100] Command 'import_lib' returned 0; elapsed 0.01Total elapsed time: 0.545 sec.
+@I [HLS-100] Command "source /opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/common/technology/xilinx/zynq/zynq_fpv6.gen "
+@I [HLS-100] Command "source /opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/common/technology/xilinx/common/xilinx_fpv6.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 0.546 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 0.546 sec.
+@I [HLS-100] Command 'add_library' returned 0; elapsed 0.01Total elapsed time: 0.546 sec.
+@I [HLS-10] Setting target device to ' xc7z020clg484-1 '
+@I [HLS-100] Command 'set_part' returned 0; elapsed 0.11Total elapsed time: 0.546 sec.
+@I [HLS-100] Command "create_clock -period 5.95 "
+@I [HLS-100] Command "config_clock -quiet -name default -period 5.95 -default=false "
+@I [SYN-201] Setting up clock 'default' with a period of 5.95ns.
+@I [HLS-100] Command 'config_clock' returned 0; elapsed 0Total elapsed time: 0.547 sec.
+@I [HLS-100] Command 'create_clock' returned 0; elapsed 0Total elapsed time: 0.547 sec.
+@I [HLS-100] Command "config_rtl -reset_level low "
+@I [HLS-100] Command 'config_rtl' returned 0; elapsed 0Total elapsed time: 0.547 sec.
+@I [HLS-100] Command "csynth_design "
+@I [HLS-100] Command "elaborate -effort=medium -skip_syncheck=0 -lm=0 -skip_cdt=0 -skip_transform=0 -ng=0 -g=0 -opt_fp=0 "
+@I [HLS-10] Analyzing design file '/home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease/_sds/vhls/src/correlation_accel_v3.cpp' ... 
+@0 [HLS-0] Analyzing design file '/home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease/_sds/vhls/src/correlation_accel_v3.cpp' ... 
+@I [HLS-0] Compiling one TU...
+@I [HLS-0] 
+Checking before pre-process: exec clang -fno-limit-debug-info -gcc-toolchain "/opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/lnx64/tools/gcc" -hls  -I/home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/src -Wall -O3 -fmessage-length=0 -MMD -MP -D__SDSCC__ -I/home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/src -D__SDSVHLS__ -I/home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease -w  -D "__asm__(...)=" -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit  -fno-threadsafe-statics -fno-use-cxa-atexit   -I "/opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/lnx64/tools/systemc/include" -I "/opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/include" -I "/opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/include/ap_sysc" -fexceptions "/home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease/_sds/vhls/src/correlation_accel_v3.cpp"  -o "/home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease/_sds/vhls/correlation_accel_v3/solution/.autopilot/db/correlation_accel_v3.pp.00.o"
+
+@I [HLS-0] /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease/_sds/vhls/src/correlation_accel_v3.cpp:93:1: error: no matching function for call to 'frontEnd'
+frontEnd(
+^~~~~~~~
+/home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/src/correlation_accel_v3.hpp:80:6: note: candidate function not viable: no known conversion from 'ap_axiu<32, 1, 1, 1> *' to 'float *' for 3rd argument; 
+void frontEnd(
+     ^
+/home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease/_sds/vhls/src/correlation_accel_v3.cpp:108:2: error: no matching function for call to 'backEnd'
+        backEnd(
+        ^~~~~~~
+/home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/src/correlation_accel_v3.hpp:95:6: note: candidate function not viable: no known conversion from 'hls::stream<float>' to 'float *' for 3rd argument; 
+void backEnd(
+     ^
+/home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease/_sds/vhls/src/correlation_accel_v3.cpp:277:12: error: use of undeclared identifier 'conv1'
+           conv1.ival   = in_indices[0].data;
+           ^
+/home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease/_sds/vhls/src/correlation_accel_v3.cpp:278:27: error: use of undeclared identifier 'conv1'
+           shift_reg[1] = conv1.floatval;
+                          ^
+/home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease/_sds/vhls/src/correlation_accel_v3.cpp:279:12: error: use of undeclared identifier 'tmp1'
+           tmp1.keep    = in_indices[0].keep;
+           ^
+/home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease/_sds/vhls/src/correlation_accel_v3.cpp:280:12: error: use of undeclared identifier 'tmp1'
+           tmp1.strb    = in_indices[0].strb;
+           ^
+/home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease/_sds/vhls/src/correlation_accel_v3.cpp:281:12: error: use of undeclared identifier 'tmp1'
+           tmp1.user    = in_indices[0].user;
+           ^
+/home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease/_sds/vhls/src/correlation_accel_v3.cpp:282:12: error: use of undeclared identifier 'tmp1'
+           tmp1.last    = in_indices[0].last;
+           ^
+/home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease/_sds/vhls/src/correlation_accel_v3.cpp:283:12: error: use of undeclared identifier 'tmp1'
+           tmp1.id      = in_indices[0].id;
+           ^
+/home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease/_sds/vhls/src/correlation_accel_v3.cpp:284:12: error: use of undeclared identifier 'tmp1'
+           tmp1.dest    = in_indices[0].dest;
+           ^
+/home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease/_sds/vhls/src/correlation_accel_v3.cpp:294:16: error: use of undeclared identifier 'conv1'
+               conv1.ival               = in_indices[i].data;
+               ^
+/home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease/_sds/vhls/src/correlation_accel_v3.cpp:295:32: error: use of undeclared identifier 'conv1'
+               shift_reg[0]     = conv1.floatval;
+                                  ^
+/home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease/_sds/vhls/src/correlation_accel_v3.cpp:296:16: error: use of undeclared identifier 'tmp1'
+               tmp1.keep                = in_indices[i].keep;
+               ^
+/home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease/_sds/vhls/src/correlation_accel_v3.cpp:297:16: error: use of undeclared identifier 'tmp1'
+               tmp1.strb                = in_indices[i].strb;
+               ^
+/home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease/_sds/vhls/src/correlation_accel_v3.cpp:298:16: error: use of undeclared identifier 'tmp1'
+               tmp1.user                = in_indices[i].user;
+               ^
+/home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease/_sds/vhls/src/correlation_accel_v3.cpp:299:16: error: use of undeclared identifier 'tmp1'
+               tmp1.last                = in_indices[i].last;
+               ^
+/home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease/_sds/vhls/src/correlation_accel_v3.cpp:300:16: error: use of undeclared identifier 'tmp1'
+               tmp1.id                  = in_indices[i].id;
+               ^
+/home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease/_sds/vhls/src/correlation_accel_v3.cpp:301:16: error: use of undeclared identifier 'tmp1'
+               tmp1.dest                = in_indices[i].dest;
+               ^
+/home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease/_sds/vhls/src/correlation_accel_v3.cpp:305:5: error: use of undeclared identifier 'conv1'
+                                conv1.ival      = in_indices[i].data;
+                                ^
+fatal error: too many errors emitted, stopping now [-ferror-limit=]
+20 errors generated.
+@E [HLS-70] Compilation errors found:
+/home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease/_sds/vhls/src/correlation_accel_v3.cpp:93:1: error: no matching function for call to 'frontEnd'
+frontEnd(
+^~~~~~~~
+/home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/src/correlation_accel_v3.hpp:80:6: note: candidate function not viable: no known conversion from 'ap_axiu<32, 1, 1, 1> *' to 'float *' for 3rd argument; 
+void frontEnd(
+     ^
+/home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease/_sds/vhls/src/correlation_accel_v3.cpp:108:2: error: no matching function for call to 'backEnd'
+        backEnd(
+        ^~~~~~~
+/home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/src/correlation_accel_v3.hpp:95:6: note: candidate function not viable: no known conversion from 'hls::stream<float>' to 'float *' for 3rd argument; 
+void backEnd(
+     ^
+/home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease/_sds/vhls/src/correlation_accel_v3.cpp:277:12: error: use of undeclared identifier 'conv1'
+           conv1.ival   = in_indices[0].data;
+           ^
+/home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease/_sds/vhls/src/correlation_accel_v3.cpp:278:27: error: use of undeclared identifier 'conv1'
+           shift_reg[1] = conv1.floatval;
+                          ^
+/home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease/_sds/vhls/src/correlation_accel_v3.cpp:279:12: error: use of undeclared identifier 'tmp1'
+           tmp1.keep    = in_indices[0].keep;
+           ^
+/home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease/_sds/vhls/src/correlation_accel_v3.cpp:280:12: error: use of undeclared identifier 'tmp1'
+           tmp1.strb    = in_indices[0].strb;
+           ^
+/home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease/_sds/vhls/src/correlation_accel_v3.cpp:281:12: error: use of undeclared identifier 'tmp1'
+           tmp1.user    = in_indices[0].user;
+           ^
+/home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease/_sds/vhls/src/correlation_accel_v3.cpp:282:12: error: use of undeclared identifier 'tmp1'
+           tmp1.last    = in_indices[0].last;
+           ^
+/home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease/_sds/vhls/src/correlation_accel_v3.cpp:283:12: error: use of undeclared identifier 'tmp1'
+           tmp1.id      = in_indices[0].id;
+           ^
+/home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease/_sds/vhls/src/correlation_accel_v3.cpp:284:12: error: use of undeclared identifier 'tmp1'
+           tmp1.dest    = in_indices[0].dest;
+           ^
+/home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease/_sds/vhls/src/correlation_accel_v3.cpp:294:16: error: use of undeclared identifier 'conv1'
+               conv1.ival               = in_indices[i].data;
+               ^
+/home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease/_sds/vhls/src/correlation_accel_v3.cpp:295:32: error: use of undeclared identifier 'conv1'
+               shift_reg[0]     = conv1.floatval;
+                                  ^
+/home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease/_sds/vhls/src/correlation_accel_v3.cpp:296:16: error: use of undeclared identifier 'tmp1'
+               tmp1.keep                = in_indices[i].keep;
+               ^
+/home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease/_sds/vhls/src/correlation_accel_v3.cpp:297:16: error: use of undeclared identifier 'tmp1'
+               tmp1.strb                = in_indices[i].strb;
+               ^
+/home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease/_sds/vhls/src/correlation_accel_v3.cpp:298:16: error: use of undeclared identifier 'tmp1'
+               tmp1.user                = in_indices[i].user;
+               ^
+/home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease/_sds/vhls/src/correlation_accel_v3.cpp:299:16: error: use of undeclared identifier 'tmp1'
+               tmp1.last                = in_indices[i].last;
+               ^
+/home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease/_sds/vhls/src/correlation_accel_v3.cpp:300:16: error: use of undeclared identifier 'tmp1'
+               tmp1.id                  = in_indices[i].id;
+               ^
+/home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease/_sds/vhls/src/correlation_accel_v3.cpp:301:16: error: use of undeclared identifier 'tmp1'
+               tmp1.dest                = in_indices[i].dest;
+               ^
+/home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease/_sds/vhls/src/correlation_accel_v3.cpp:305:5: error: use of undeclared identifier 'conv1'
+                                conv1.ival      = in_indices[i].data;
+                                ^
+fatal error: too many errors emitted, stopping now [-ferror-limit=]
+20 errors generated.
+@E [HLS-0] Compilation errors found:
+/home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease/_sds/vhls/src/correlation_accel_v3.cpp:93:1: error: no matching function for call to 'frontEnd'
+frontEnd(
+^~~~~~~~
+/home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/src/correlation_accel_v3.hpp:80:6: note: candidate function not viable: no known conversion from 'ap_axiu<32, 1, 1, 1> *' to 'float *' for 3rd argument; 
+void frontEnd(
+     ^
+/home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease/_sds/vhls/src/correlation_accel_v3.cpp:108:2: error: no matching function for call to 'backEnd'
+        backEnd(
+        ^~~~~~~
+/home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/src/correlation_accel_v3.hpp:95:6: note: candidate function not viable: no known conversion from 'hls::stream<float>' to 'float *' for 3rd argument; 
+void backEnd(
+     ^
+/home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease/_sds/vhls/src/correlation_accel_v3.cpp:277:12: error: use of undeclared identifier 'conv1'
+           conv1.ival   = in_indices[0].data;
+           ^
+/home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease/_sds/vhls/src/correlation_accel_v3.cpp:278:27: error: use of undeclared identifier 'conv1'
+           shift_reg[1] = conv1.floatval;
+                          ^
+/home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease/_sds/vhls/src/correlation_accel_v3.cpp:279:12: error: use of undeclared identifier 'tmp1'
+           tmp1.keep    = in_indices[0].keep;
+           ^
+/home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease/_sds/vhls/src/correlation_accel_v3.cpp:280:12: error: use of undeclared identifier 'tmp1'
+           tmp1.strb    = in_indices[0].strb;
+           ^
+/home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease/_sds/vhls/src/correlation_accel_v3.cpp:281:12: error: use of undeclared identifier 'tmp1'
+           tmp1.user    = in_indices[0].user;
+           ^
+/home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease/_sds/vhls/src/correlation_accel_v3.cpp:282:12: error: use of undeclared identifier 'tmp1'
+           tmp1.last    = in_indices[0].last;
+           ^
+/home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease/_sds/vhls/src/correlation_accel_v3.cpp:283:12: error: use of undeclared identifier 'tmp1'
+           tmp1.id      = in_indices[0].id;
+           ^
+/home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease/_sds/vhls/src/correlation_accel_v3.cpp:284:12: error: use of undeclared identifier 'tmp1'
+           tmp1.dest    = in_indices[0].dest;
+           ^
+/home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease/_sds/vhls/src/correlation_accel_v3.cpp:294:16: error: use of undeclared identifier 'conv1'
+               conv1.ival               = in_indices[i].data;
+               ^
+/home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease/_sds/vhls/src/correlation_accel_v3.cpp:295:32: error: use of undeclared identifier 'conv1'
+               shift_reg[0]     = conv1.floatval;
+                                  ^
+/home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease/_sds/vhls/src/correlation_accel_v3.cpp:296:16: error: use of undeclared identifier 'tmp1'
+               tmp1.keep                = in_indices[i].keep;
+               ^
+/home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease/_sds/vhls/src/correlation_accel_v3.cpp:297:16: error: use of undeclared identifier 'tmp1'
+               tmp1.strb                = in_indices[i].strb;
+               ^
+/home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease/_sds/vhls/src/correlation_accel_v3.cpp:298:16: error: use of undeclared identifier 'tmp1'
+               tmp1.user                = in_indices[i].user;
+               ^
+/home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease/_sds/vhls/src/correlation_accel_v3.cpp:299:16: error: use of undeclared identifier 'tmp1'
+               tmp1.last                = in_indices[i].last;
+               ^
+/home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease/_sds/vhls/src/correlation_accel_v3.cpp:300:16: error: use of undeclared identifier 'tmp1'
+               tmp1.id                  = in_indices[i].id;
+               ^
+/home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease/_sds/vhls/src/correlation_accel_v3.cpp:301:16: error: use of undeclared identifier 'tmp1'
+               tmp1.dest                = in_indices[i].dest;
+               ^
+/home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease/_sds/vhls/src/correlation_accel_v3.cpp:305:5: error: use of undeclared identifier 'conv1'
+                                conv1.ival      = in_indices[i].data;
+                                ^
+fatal error: too many errors emitted, stopping now [-ferror-limit=]
+20 errors generated.
+@I [HLS-100] Command 'elaborate' returned 2; elapsed 0.01Total elapsed time: 0.965 sec.
+@I [HLS-100] Command 'csynth_design' returned 2; elapsed 0.01Total elapsed time: 0.965 sec.
+@I [HLS-100] Command "cleanup_all "
+@I [HLS-100] Command 'cleanup_all' returned 0; elapsed 0Total elapsed time: 0.966 sec.

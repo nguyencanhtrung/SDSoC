@@ -44895,7 +44895,7 @@ static void weight_rom_init(
 #pragma SDS data copy(in_indices[0: number_of_indices * number_of_days])
 #pragma SDS data copy(out_correlation[0: number_of_indices - 1])
 #pragma SDS data sys_port(in_indices:AFI, out_correlation:AFI)
-#pragma SDS data data_mover(in_indices: AXIDMA_SIMPLE, out_correlation: AXIDMA_SIMPLE)
+#pragma SDS data data_mover(in_indices: AXIDMA_SG, out_correlation: AXIDMA_SIMPLE)
 
 void correlation_accel_v3( int number_of_days, /* CPU in*/
         int number_of_indices, /* CPU in*/

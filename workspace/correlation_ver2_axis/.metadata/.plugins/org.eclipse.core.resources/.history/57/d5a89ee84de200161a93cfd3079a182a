@@ -1,0 +1,108 @@
+(c) Copyright 2012-2015 Xilinx, Inc. All Rights Reserved.
+#-----------------------------------------------------------
+# Tool version  : sds++ 2014.4 20150228
+# Start time    : Tue Jan 24 04:57:33 PM CET 2017
+# Command line  : sds++ -o correlation_axis_ver3.elf ./src/correlation_accel_v3.o ./src/main.o -sds-pf zed
+# Log file      : /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease/_sds/reports/sds.log
+# Journal file  : /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease/_sds/reports/sds.jou
+# Report file   : /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease/_sds/reports/sds.rpt
+#-----------------------------------------------------------
+
+Libraries: 
+Library Paths {}
+INFO: [SDSoC 0-0] Analyzing object files
+arm-xilinx-linux-gnueabi-objcopy -O binary --set-section-flags .xddata=alloc --only-section=.xddata /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease/src/correlation_accel_v3.o /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease/_sds/.data/correlation_accel_v3.o.xml
+arm-xilinx-linux-gnueabi-objcopy -O binary --set-section-flags .xdpp=alloc --only-section=.xdpp /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease/src/correlation_accel_v3.o /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease/_sds/.pp/correlation_accel_v3.ii
+arm-xilinx-linux-gnueabi-objcopy -O binary --set-section-flags .xdfcnmap=alloc --only-section=.xdfcnmap /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease/src/correlation_accel_v3.o /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease/_sds/.cdb/correlation_accel_v3.fcnmap.xml
+arm-xilinx-linux-gnueabi-objcopy -O binary --set-section-flags .xdhlscore=alloc --only-section=.xdhlscore /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease/src/correlation_accel_v3.o /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease/_sds/iprepo/repo/xilinx_com_hls_correlation_accel_v3_1_0/xilinx_com_hls_correlation_accel_v3_1_0.zip
+unzip -u -o /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease/_sds/iprepo/repo/xilinx_com_hls_correlation_accel_v3_1_0/xilinx_com_hls_correlation_accel_v3_1_0.zip -d /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease/_sds/iprepo/repo/xilinx_com_hls_correlation_accel_v3_1_0
+Archive:  /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease/_sds/iprepo/repo/xilinx_com_hls_correlation_accel_v3_1_0/xilinx_com_hls_correlation_accel_v3_1_0.zip
+  inflating: /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease/_sds/iprepo/repo/xilinx_com_hls_correlation_accel_v3_1_0/component.xml  
+  inflating: /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease/_sds/iprepo/repo/xilinx_com_hls_correlation_accel_v3_1_0/hdl/ip/correlation_accel_v3_ap_fadd_7_full_dsp_32.vhd  
+  inflating: /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease/_sds/iprepo/repo/xilinx_com_hls_correlation_accel_v3_1_0/hdl/ip/correlation_accel_v3_ap_fsub_7_full_dsp_32.vhd  
+  inflating: /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease/_sds/iprepo/repo/xilinx_com_hls_correlation_accel_v3_1_0/hdl/ip/correlation_accel_v3_ap_fsqrt_26_no_dsp_32.vhd  
+  inflating: /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease/_sds/iprepo/repo/xilinx_com_hls_correlation_accel_v3_1_0/hdl/ip/correlation_accel_v3_ap_fmul_3_max_dsp_32.vhd  
+  inflating: /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease/_sds/iprepo/repo/xilinx_com_hls_correlation_accel_v3_1_0/hdl/ip/correlation_accel_v3_ap_fdiv_28_no_dsp_32.vhd  
+  inflating: /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease/_sds/iprepo/repo/xilinx_com_hls_correlation_accel_v3_1_0/hdl/ip/correlation_accel_v3_ap_flog_16_full_dsp_32.vhd  
+  inflating: /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease/_sds/iprepo/repo/xilinx_com_hls_correlation_accel_v3_1_0/hdl/ip/correlation_accel_v3_ap_sitofp_6_no_dsp_32.vhd  
+  inflating: /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease/_sds/iprepo/repo/xilinx_com_hls_correlation_accel_v3_1_0/constraints/correlation_accel_v3_ooc.xdc  
+  inflating: /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease/_sds/iprepo/repo/xilinx_com_hls_correlation_accel_v3_1_0/hdl/verilog/FIFO_correlation_accel_v3_sum_returnA_V.v  
+  inflating: /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease/_sds/iprepo/repo/xilinx_com_hls_correlation_accel_v3_1_0/hdl/verilog/correlation_accel_v3_fadd_32ns_32ns_32_9_full_dsp.v  
+  inflating: /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease/_sds/iprepo/repo/xilinx_com_hls_correlation_accel_v3_1_0/hdl/verilog/correlation_accel_v3_frontEnd_acc_weight_returnA_returnB.v  
+  inflating: /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease/_sds/iprepo/repo/xilinx_com_hls_correlation_accel_v3_1_0/hdl/verilog/correlation_accel_v3_urem_32ns_4ns_32_36.v  
+  inflating: /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease/_sds/iprepo/repo/xilinx_com_hls_correlation_accel_v3_1_0/hdl/verilog/correlation_accel_v3_fmul_32ns_32ns_32_5_max_dsp.v  
+  inflating: /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease/_sds/iprepo/repo/xilinx_com_hls_correlation_accel_v3_1_0/hdl/verilog/correlation_accel_v3_frontEnd_weight_rom.v  
+  inflating: /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease/_sds/iprepo/repo/xilinx_com_hls_correlation_accel_v3_1_0/hdl/verilog/FIFO_correlation_accel_v3_sum_weight_V.v  
+  inflating: /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease/_sds/iprepo/repo/xilinx_com_hls_correlation_accel_v3_1_0/hdl/verilog/correlation_accel_v3_frontEnd_lnReturnA_ram.dat  
+  inflating: /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease/_sds/iprepo/repo/xilinx_com_hls_correlation_accel_v3_1_0/hdl/verilog/correlation_accel_v3_frontEnd_weight_rom_ram.dat  
+  inflating: /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease/_sds/iprepo/repo/xilinx_com_hls_correlation_accel_v3_1_0/hdl/verilog/correlation_accel_v3.v  
+  inflating: /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease/_sds/iprepo/repo/xilinx_com_hls_correlation_accel_v3_1_0/hdl/verilog/correlation_accel_v3_frontEnd_acc_return.v  
+  inflating: /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease/_sds/iprepo/repo/xilinx_com_hls_correlation_accel_v3_1_0/hdl/verilog/FIFO_correlation_accel_v3_sum_weight_returnA_V.v  
+  inflating: /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease/_sds/iprepo/repo/xilinx_com_hls_correlation_accel_v3_1_0/hdl/verilog/FIFO_correlation_accel_v3_number_of_days14_channel.v  
+  inflating: /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease/_sds/iprepo/repo/xilinx_com_hls_correlation_accel_v3_1_0/hdl/verilog/correlation_accel_v3_fdiv_32ns_32ns_32_30.v  
+  inflating: /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease/_sds/iprepo/repo/xilinx_com_hls_correlation_accel_v3_1_0/hdl/verilog/FIFO_correlation_accel_v3_sum_weight_returnSquareA_V.v  
+  inflating: /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease/_sds/iprepo/repo/xilinx_com_hls_correlation_accel_v3_1_0/hdl/verilog/FIFO_correlation_accel_v3_sum_weight_returnSquare_V.v  
+  inflating: /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease/_sds/iprepo/repo/xilinx_com_hls_correlation_accel_v3_1_0/hdl/verilog/correlation_accel_v3_frontEnd_lnReturnA.v  
+  inflating: /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease/_sds/iprepo/repo/xilinx_com_hls_correlation_accel_v3_1_0/hdl/verilog/correlation_accel_v3_fsqrt_32ns_32ns_32_28.v  
+  inflating: /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease/_sds/iprepo/repo/xilinx_com_hls_correlation_accel_v3_1_0/hdl/verilog/correlation_accel_v3_fsub_32ns_32ns_32_9_full_dsp.v  
+  inflating: /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease/_sds/iprepo/repo/xilinx_com_hls_correlation_accel_v3_1_0/hdl/verilog/correlation_accel_v3_backEnd.v  
+  inflating: /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease/_sds/iprepo/repo/xilinx_com_hls_correlation_accel_v3_1_0/hdl/verilog/correlation_accel_v3_sitofp_32ns_32_8.v  
+  inflating: /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease/_sds/iprepo/repo/xilinx_com_hls_correlation_accel_v3_1_0/hdl/verilog/FIFO_correlation_accel_v3_sum_return_V.v  
+  inflating: /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease/_sds/iprepo/repo/xilinx_com_hls_correlation_accel_v3_1_0/hdl/verilog/FIFO_correlation_accel_v3_sum_weight_return_V.v  
+  inflating: /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease/_sds/iprepo/repo/xilinx_com_hls_correlation_accel_v3_1_0/hdl/verilog/correlation_accel_v3_frontEnd.v  
+  inflating: /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease/_sds/iprepo/repo/xilinx_com_hls_correlation_accel_v3_1_0/hdl/verilog/FIFO_correlation_accel_v3_sum_weight_returnA_returnB_V.v  
+  inflating: /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease/_sds/iprepo/repo/xilinx_com_hls_correlation_accel_v3_1_0/hdl/verilog/correlation_accel_v3_flog_32ns_32ns_32_18_full_dsp.v  
+  inflating: /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease/_sds/iprepo/repo/xilinx_com_hls_correlation_accel_v3_1_0/hdl/verilog/FIFO_correlation_accel_v3_number_of_indices15_channel.v  
+  inflating: /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease/_sds/iprepo/repo/xilinx_com_hls_correlation_accel_v3_1_0/hdl/vhdl/FIFO_correlation_accel_v3_sum_weight_V.vhd  
+  inflating: /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease/_sds/iprepo/repo/xilinx_com_hls_correlation_accel_v3_1_0/hdl/vhdl/correlation_accel_v3_frontEnd_lnReturnA.vhd  
+  inflating: /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease/_sds/iprepo/repo/xilinx_com_hls_correlation_accel_v3_1_0/hdl/vhdl/correlation_accel_v3_frontEnd.vhd  
+  inflating: /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease/_sds/iprepo/repo/xilinx_com_hls_correlation_accel_v3_1_0/hdl/vhdl/correlation_accel_v3_backEnd.vhd  
+  inflating: /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease/_sds/iprepo/repo/xilinx_com_hls_correlation_accel_v3_1_0/hdl/vhdl/FIFO_correlation_accel_v3_sum_weight_returnA_returnB_V.vhd  
+  inflating: /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease/_sds/iprepo/repo/xilinx_com_hls_correlation_accel_v3_1_0/hdl/vhdl/correlation_accel_v3.vhd  
+  inflating: /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease/_sds/iprepo/repo/xilinx_com_hls_correlation_accel_v3_1_0/hdl/vhdl/FIFO_correlation_accel_v3_number_of_days14_channel.vhd  
+  inflating: /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease/_sds/iprepo/repo/xilinx_com_hls_correlation_accel_v3_1_0/hdl/vhdl/correlation_accel_v3_flog_32ns_32ns_32_18_full_dsp.vhd  
+  inflating: /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease/_sds/iprepo/repo/xilinx_com_hls_correlation_accel_v3_1_0/hdl/vhdl/FIFO_correlation_accel_v3_sum_weight_return_V.vhd  
+  inflating: /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease/_sds/iprepo/repo/xilinx_com_hls_correlation_accel_v3_1_0/hdl/vhdl/FIFO_correlation_accel_v3_sum_weight_returnA_V.vhd  
+  inflating: /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease/_sds/iprepo/repo/xilinx_com_hls_correlation_accel_v3_1_0/hdl/vhdl/correlation_accel_v3_fdiv_32ns_32ns_32_30.vhd  
+  inflating: /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease/_sds/iprepo/repo/xilinx_com_hls_correlation_accel_v3_1_0/hdl/vhdl/correlation_accel_v3_frontEnd_weight_rom.vhd  
+  inflating: /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease/_sds/iprepo/repo/xilinx_com_hls_correlation_accel_v3_1_0/hdl/vhdl/FIFO_correlation_accel_v3_sum_returnA_V.vhd  
+  inflating: /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease/_sds/iprepo/repo/xilinx_com_hls_correlation_accel_v3_1_0/hdl/vhdl/correlation_accel_v3_fsqrt_32ns_32ns_32_28.vhd  
+  inflating: /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease/_sds/iprepo/repo/xilinx_com_hls_correlation_accel_v3_1_0/hdl/vhdl/correlation_accel_v3_frontEnd_acc_weight_returnA_returnB.vhd  
+  inflating: /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease/_sds/iprepo/repo/xilinx_com_hls_correlation_accel_v3_1_0/hdl/vhdl/FIFO_correlation_accel_v3_sum_weight_returnSquareA_V.vhd  
+  inflating: /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease/_sds/iprepo/repo/xilinx_com_hls_correlation_accel_v3_1_0/hdl/vhdl/correlation_accel_v3_sitofp_32ns_32_8.vhd  
+  inflating: /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease/_sds/iprepo/repo/xilinx_com_hls_correlation_accel_v3_1_0/hdl/vhdl/FIFO_correlation_accel_v3_sum_weight_returnSquare_V.vhd  
+  inflating: /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease/_sds/iprepo/repo/xilinx_com_hls_correlation_accel_v3_1_0/hdl/vhdl/correlation_accel_v3_fsub_32ns_32ns_32_9_full_dsp.vhd  
+  inflating: /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease/_sds/iprepo/repo/xilinx_com_hls_correlation_accel_v3_1_0/hdl/vhdl/correlation_accel_v3_frontEnd_acc_return.vhd  
+  inflating: /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease/_sds/iprepo/repo/xilinx_com_hls_correlation_accel_v3_1_0/hdl/vhdl/FIFO_correlation_accel_v3_number_of_indices15_channel.vhd  
+  inflating: /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease/_sds/iprepo/repo/xilinx_com_hls_correlation_accel_v3_1_0/hdl/vhdl/correlation_accel_v3_urem_32ns_4ns_32_36.vhd  
+  inflating: /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease/_sds/iprepo/repo/xilinx_com_hls_correlation_accel_v3_1_0/hdl/vhdl/correlation_accel_v3_fmul_32ns_32ns_32_5_max_dsp.vhd  
+  inflating: /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease/_sds/iprepo/repo/xilinx_com_hls_correlation_accel_v3_1_0/hdl/vhdl/correlation_accel_v3_fadd_32ns_32ns_32_9_full_dsp.vhd  
+  inflating: /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease/_sds/iprepo/repo/xilinx_com_hls_correlation_accel_v3_1_0/hdl/vhdl/FIFO_correlation_accel_v3_sum_return_V.vhd  
+  inflating: /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease/_sds/iprepo/repo/xilinx_com_hls_correlation_accel_v3_1_0/doc/ReleaseNotes.txt  
+  inflating: /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease/_sds/iprepo/repo/xilinx_com_hls_correlation_accel_v3_1_0/misc/logo.png  
+  inflating: /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease/_sds/iprepo/repo/xilinx_com_hls_correlation_accel_v3_1_0/bd/bd.tcl  
+  inflating: /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease/_sds/iprepo/repo/xilinx_com_hls_correlation_accel_v3_1_0/xgui/correlation_accel_v3_v1_0.tcl  
+arm-xilinx-linux-gnueabi-objcopy -O binary --set-section-flags .xdif=alloc --only-section=.xdif /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease/src/correlation_accel_v3.o /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease/_sds/.cdb/correlation_accel_v3_if.xml
+arm-xilinx-linux-gnueabi-objcopy -O binary --set-section-flags .xddata=alloc --only-section=.xddata /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease/src/main.o /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease/_sds/.data/main.o.xml
+build_xd_ip_db  -sdsoc  -sds-pf /opt/Xilinx/SDSoC/2014.4/platforms/zed/zed_hw.pfm  -clkid 1 -ip /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease/_sds/iprepo/repo/xilinx_com_hls_correlation_accel_v3_1_0  -o /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease/_sds/.cdb/xd_ip_db.xml  
+INFO: Using user-defined path for XILINX_XD environment variable /opt/Xilinx/SDSoC/2014.4
+processing accelerators: /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease/_sds/iprepo/repo/xilinx_com_hls_correlation_accel_v3_1_0
+ip_dir: /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease/_sds/iprepo/repo/xilinx_com_hls_correlation_accel_v3_1_0
+xsltproc --stringparam xpath "spirit:component/spirit:name/text()" /opt/Xilinx/SDSoC/2014.4/scripts/xdcc/xpathValueOf.xsl /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease/_sds/iprepo/repo/xilinx_com_hls_correlation_accel_v3_1_0/component.xml
+ip_name: correlation_accel_v3
+INFO: [SDSoC 0-0] Generating data motion network
+llvm-link -o /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease/_sds/.llvm/sdi_all.o /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease/_sds/.llvm/./src/correlation_accel_v3.s /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease/_sds/.llvm/./src/main.s
+XidanePass  --platform zed  --dmclkid 1  --repo /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease/_sds/.cdb/xd_ip_db.xml  --dmdb /opt/Xilinx/SDSoC/2014.4/data/DM.db   -os linux 
+INFO: [SDSoC 0-0] Analyzing hardware accelerators...
+INFO: [SDSoC 0-0] Analyzing callers to hardware accelerators...
+INFO: [SDSoC 0-0] Scheduling data transfer graph for partition 0
+INFO: [SDSoC 0-0] Creating data motion network hardware for partition 0
+INFO: [SDSoC 0-0] Creating software stub functions for partition 0
+ERROR: [SDSoC 0-0] Function correlation_accel_v3 is missing data base index for argument in_indices
+ERROR: [SDSoC 0-0] Function correlation_accel_v3 is missing data base index for argument out_correlation
+INFO: [SDSoC 0-0] Generating data motion network report for partition 0
+INFO: [SDSoC 0-0] Rewriting caller code
+INFO: [SDSoC 0-0] Rewrite /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/src/main.cpp
+INFO: [SDSoC 0-0] Create accelerator stub functions
+stub_gen  -func correlation_accel_v3  -stub /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease/_sds/.llvm/correlation_accel_v3.cfrewrite  -o /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease/_sds/swstubs/correlation_accel_v3.cpp  /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/src/correlation_accel_v3.cpp  --  -c  -target arm-xilinx-linux-gnueabi -mcpu=cortex-a9 -O0 -g -w   -I/opt/Xilinx/SDSoC/2014.4/SDK/2014.4/gnu/arm/lin/arm-xilinx-linux-gnueabi/include/c++/4.8.3  -I/opt/Xilinx/SDSoC/2014.4/SDK/2014.4/gnu/arm/lin/arm-xilinx-linux-gnueabi/include/c++/4.8.3/arm-xilinx-linux-gnueabi  -I/opt/Xilinx/SDSoC/2014.4/SDK/2014.4/gnu/arm/lin/arm-xilinx-linux-gnueabi/include/c++/4.8.3/backward   -I/opt/Xilinx/SDSoC/2014.4/SDK/2014.4/gnu/arm/lin/lib/gcc/arm-xilinx-linux-gnueabi/4.8.3/include  -I/opt/Xilinx/SDSoC/2014.4/SDK/2014.4/gnu/arm/lin/lib/gcc/arm-xilinx-linux-gnueabi/4.8.3/include-fixed  -I/opt/Xilinx/SDSoC/2014.4/SDK/2014.4/gnu/arm/lin/arm-xilinx-linux-gnueabi/include  -I/opt/Xilinx/SDSoC/2014.4/SDK/2014.4/gnu/arm/lin/arm-xilinx-linux-gnueabi/libc/usr/include  -I /opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/include  -I /opt/Xilinx/SDSoC/2014.4/arm-xilinx-linux-gnueabi/include    -I/home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/src -I/home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/src -Wall -O3 -fmessage-length=0 -MMD -MP -D __SDSCC__
+INFO: [SDSoC 0-0] Successfully performed stub generation on file

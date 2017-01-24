@@ -1,0 +1,7 @@
+22:46:56 **** Clean-only build of configuration SDRelease for project correlation_axis_ver3 ****
+make clean 
+rm -rf _sds sd_card  ./src/correlation_accel_v3.o ./src/main.o  ./src/correlation_accel_v3.d ./src/main.d  correlation_axis_ver3.elf
+ 
+
+22:46:56 Build Finished (took 113ms)
+

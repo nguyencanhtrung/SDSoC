@@ -51,10 +51,10 @@ target triple = "x86_64-unknown-linux-gnu"
 @str47 = internal constant [1 x i8] zeroinitializer ; [#uses=6 type=[1 x i8]*]
 @str55 = internal constant [8 x i8] c"ap_fifo\00" ; [#uses=4 type=[8 x i8]*]
 @str57 = internal constant [8 x i8] c"ap_fifo\00" ; [#uses=4 type=[8 x i8]*]
-@str59 = internal constant [25 x i8] c"number_of_days14.channel\00" ; [#uses=1 type=[25 x i8]*]
+@str59 = internal constant [28 x i8] c"number_of_indices14.channel\00" ; [#uses=1 type=[28 x i8]*]
 @str60 = internal constant [1 x i8] zeroinitializer ; [#uses=2 type=[1 x i8]*]
 @str61 = internal constant [8 x i8] c"ap_fifo\00" ; [#uses=4 type=[8 x i8]*]
-@str62 = internal constant [28 x i8] c"number_of_indices15.channel\00" ; [#uses=1 type=[28 x i8]*]
+@str62 = internal constant [25 x i8] c"number_of_days15.channel\00" ; [#uses=1 type=[25 x i8]*]
 @str63 = internal constant [1 x i8] zeroinitializer ; [#uses=2 type=[1 x i8]*]
 @str64 = internal constant [8 x i8] c"ap_fifo\00" ; [#uses=4 type=[8 x i8]*]
 @str67 = internal constant [8 x i8] c"ap_fifo\00" ; [#uses=4 type=[8 x i8]*]
@@ -149,8 +149,8 @@ define void @correlation_accel_v3(i32 %number_of_days, i32 %number_of_indices, i
   call void @llvm.dbg.value(metadata !{i32 %number_of_indices_read}, i64 0, metadata !7), !dbg !1246 ; [debug line = 35:13] [debug variable = number_of_indices]
   %number_of_days_read = call i32 @_ssdm_op_Read.ap_auto.i32(i32 %number_of_days) ; [#uses=1 type=i32]
   call void @llvm.dbg.value(metadata !{i32 %number_of_days_read}, i64 0, metadata !1247), !dbg !1248 ; [debug line = 34:32] [debug variable = number_of_days]
-  %number_of_indices15_channel = alloca i32, align 4 ; [#uses=5 type=i32*]
-  %number_of_days14_channel = alloca i32, align 4 ; [#uses=5 type=i32*]
+  %number_of_days15_channel = alloca i32, align 4 ; [#uses=5 type=i32*]
+  %number_of_indices14_channel = alloca i32, align 4 ; [#uses=5 type=i32*]
   call void (...)* @_ssdm_op_SpecDataflowPipeline(i32 -1, [1 x i8]* @p_str) nounwind, !dbg !1249 ; [debug line = 58:1]
   call void (...)* @_ssdm_op_SpecBitsMap(i32 %number_of_days), !map !1251
   call void (...)* @_ssdm_op_SpecBitsMap(i32 %number_of_indices), !map !1257
@@ -223,21 +223,21 @@ define void @correlation_accel_v3(i32 %number_of_days, i32 %number_of_indices, i
   call void @llvm.dbg.declare(metadata !{float* %sum_returnA_V}, metadata !1445), !dbg !1447 ; [debug line = 70:21] [debug variable = sum_returnA.V]
   call void @llvm.dbg.declare(metadata !{float* %sum_weight_returnSquareA_V}, metadata !1448), !dbg !1450 ; [debug line = 71:21] [debug variable = sum_weight_returnSquareA.V]
   call void @llvm.dbg.declare(metadata !{float* %sum_weight_returnA_V}, metadata !1451), !dbg !1453 ; [debug line = 72:21] [debug variable = sum_weight_returnA.V]
-  call fastcc void @correlation_accel_v3_frontEnd(i32 %number_of_days_read, i32 %number_of_indices_read, i32* %in_indices_data_V, i4* %in_indices_keep_V, i4* %in_indices_strb_V, i1* %in_indices_user_V, i1* %in_indices_last_V, i1* %in_indices_id_V, i1* %in_indices_dest_V, float* %sum_weight_V, float* %sum_return_V, float* %sum_weight_returnSquare_V, float* %sum_weight_return_V, float* %sum_weight_returnA_returnB_V, float* %sum_returnA_V, float* %sum_weight_returnSquareA_V, float* %sum_weight_returnA_V, i32* %number_of_days14_channel, i32* %number_of_indices15_channel), !dbg !1454 ; [debug line = 94:1]
-  %empty_12 = call i32 (...)* @_ssdm_op_SpecChannel([25 x i8]* @str59, i32 1, [1 x i8]* @str60, [1 x i8]* @str60, i32 1, i32 0, i32* %number_of_days14_channel, i32* %number_of_days14_channel) ; [#uses=0 type=i32]
-  call void (...)* @_ssdm_op_SpecInterface(i32* %number_of_days14_channel, [8 x i8]* @str61, i32 0, i32 0, i32 0, i32 0, [8 x i8]* @str61, [8 x i8]* @str61, [8 x i8]* @str61)
-  %empty_13 = call i32 (...)* @_ssdm_op_SpecChannel([28 x i8]* @str62, i32 1, [1 x i8]* @str63, [1 x i8]* @str63, i32 1, i32 0, i32* %number_of_indices15_channel, i32* %number_of_indices15_channel) ; [#uses=0 type=i32]
-  call void (...)* @_ssdm_op_SpecInterface(i32* %number_of_indices15_channel, [8 x i8]* @str64, i32 0, i32 0, i32 0, i32 0, [8 x i8]* @str64, [8 x i8]* @str64, [8 x i8]* @str64)
-  call fastcc void @correlation_accel_v3_backEnd(i32* %number_of_days14_channel, i32* %number_of_indices15_channel, float* %sum_weight_V, float* %sum_return_V, float* %sum_weight_returnSquare_V, float* %sum_weight_return_V, float* %sum_weight_returnA_returnB_V, float* %sum_returnA_V, float* %sum_weight_returnSquareA_V, float* %sum_weight_returnA_V, i32* %out_correlation_data_V, i4* %out_correlation_keep_V, i4* %out_correlation_strb_V, i1* %out_correlation_user_V, i1* %out_correlation_last_V, i1* %out_correlation_id_V, i1* %out_correlation_dest_V), !dbg !1455 ; [debug line = 109:2]
+  call fastcc void @correlation_accel_v3_frontEnd(i32 %number_of_days_read, i32 %number_of_indices_read, i32* %in_indices_data_V, i4* %in_indices_keep_V, i4* %in_indices_strb_V, i1* %in_indices_user_V, i1* %in_indices_last_V, i1* %in_indices_id_V, i1* %in_indices_dest_V, float* %sum_weight_V, float* %sum_return_V, float* %sum_weight_returnSquare_V, float* %sum_weight_return_V, float* %sum_weight_returnA_returnB_V, float* %sum_returnA_V, float* %sum_weight_returnSquareA_V, float* %sum_weight_returnA_V, i32* %number_of_indices14_channel, i32* %number_of_days15_channel), !dbg !1454 ; [debug line = 94:1]
+  %empty_12 = call i32 (...)* @_ssdm_op_SpecChannel([28 x i8]* @str59, i32 1, [1 x i8]* @str60, [1 x i8]* @str60, i32 1, i32 0, i32* %number_of_indices14_channel, i32* %number_of_indices14_channel) ; [#uses=0 type=i32]
+  call void (...)* @_ssdm_op_SpecInterface(i32* %number_of_indices14_channel, [8 x i8]* @str61, i32 0, i32 0, i32 0, i32 0, [8 x i8]* @str61, [8 x i8]* @str61, [8 x i8]* @str61)
+  %empty_13 = call i32 (...)* @_ssdm_op_SpecChannel([25 x i8]* @str62, i32 1, [1 x i8]* @str63, [1 x i8]* @str63, i32 1, i32 0, i32* %number_of_days15_channel, i32* %number_of_days15_channel) ; [#uses=0 type=i32]
+  call void (...)* @_ssdm_op_SpecInterface(i32* %number_of_days15_channel, [8 x i8]* @str64, i32 0, i32 0, i32 0, i32 0, [8 x i8]* @str64, [8 x i8]* @str64, [8 x i8]* @str64)
+  call fastcc void @correlation_accel_v3_backEnd(i32* %number_of_days15_channel, i32* %number_of_indices14_channel, float* %sum_weight_V, float* %sum_return_V, float* %sum_weight_returnSquare_V, float* %sum_weight_return_V, float* %sum_weight_returnA_returnB_V, float* %sum_returnA_V, float* %sum_weight_returnSquareA_V, float* %sum_weight_returnA_V, i32* %out_correlation_data_V, i4* %out_correlation_keep_V, i4* %out_correlation_strb_V, i1* %out_correlation_user_V, i1* %out_correlation_last_V, i1* %out_correlation_id_V, i1* %out_correlation_dest_V), !dbg !1455 ; [debug line = 109:2]
   ret void, !dbg !1456                            ; [debug line = 153:1]
 }
 
 ; [#uses=1]
-define internal fastcc void @correlation_accel_v3_frontEnd(i32 %NUMBER_OF_DAYS, i32 %NUMBER_OF_INDICES, i32* %in_indices_data_V, i4* %in_indices_keep_V, i4* %in_indices_strb_V, i1* %in_indices_user_V, i1* %in_indices_last_V, i1* %in_indices_id_V, i1* %in_indices_dest_V, float* %sum_weight_out_V, float* %sum_return_out_V, float* %sum_weight_returnSquare_out_V, float* %sum_weight_return_out_V, float* %sum_weight_returnA_returnB_out, float* %sum_returnA_out_V, float* %sum_weight_returnSquareA_out_V, float* %sum_weight_returnA_out_V, i32* %NUMBER_OF_DAYS_out, i32* %NUMBER_OF_INDICES_out) {
+define internal fastcc void @correlation_accel_v3_frontEnd(i32 %NUMBER_OF_DAYS, i32 %NUMBER_OF_INDICES, i32* %in_indices_data_V, i4* %in_indices_keep_V, i4* %in_indices_strb_V, i1* %in_indices_user_V, i1* %in_indices_last_V, i1* %in_indices_id_V, i1* %in_indices_dest_V, float* %sum_weight_out_V, float* %sum_return_out_V, float* %sum_weight_returnSquare_out_V, float* %sum_weight_return_out_V, float* %sum_weight_returnA_returnB_out, float* %sum_returnA_out_V, float* %sum_weight_returnSquareA_out_V, float* %sum_weight_returnA_out_V, i32* %NUMBER_OF_INDICES_out, i32* %NUMBER_OF_DAYS_out) {
 entry:
   call void (...)* @_ssdm_op_SpecInterface(i1* %in_indices_dest_V, i1* %in_indices_id_V, i1* %in_indices_last_V, i1* %in_indices_user_V, i4* %in_indices_strb_V, i4* %in_indices_keep_V, i32* %in_indices_data_V, [5 x i8]* @p_str1, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str)
-  call void (...)* @_ssdm_op_SpecInterface(i32* %NUMBER_OF_INDICES_out, [8 x i8]* @str68, i32 0, i32 0, i32 0, i32 0, [8 x i8]* @str68, [8 x i8]* @str68, [8 x i8]* @str68)
-  call void (...)* @_ssdm_op_SpecInterface(i32* %NUMBER_OF_DAYS_out, [8 x i8]* @str67, i32 0, i32 0, i32 0, i32 0, [8 x i8]* @str67, [8 x i8]* @str67, [8 x i8]* @str67)
+  call void (...)* @_ssdm_op_SpecInterface(i32* %NUMBER_OF_DAYS_out, [8 x i8]* @str68, i32 0, i32 0, i32 0, i32 0, [8 x i8]* @str68, [8 x i8]* @str68, [8 x i8]* @str68)
+  call void (...)* @_ssdm_op_SpecInterface(i32* %NUMBER_OF_INDICES_out, [8 x i8]* @str67, i32 0, i32 0, i32 0, i32 0, [8 x i8]* @str67, [8 x i8]* @str67, [8 x i8]* @str67)
   %NUMBER_OF_INDICES_read = call i32 @_ssdm_op_Read.ap_auto.i32(i32 %NUMBER_OF_INDICES) ; [#uses=2 type=i32]
   call void @llvm.dbg.value(metadata !{i32 %NUMBER_OF_INDICES_read}, i64 0, metadata !1457), !dbg !1461 ; [debug line = 202:9] [debug variable = NUMBER_OF_INDICES]
   %NUMBER_OF_DAYS_read = call i32 @_ssdm_op_Read.ap_auto.i32(i32 %NUMBER_OF_DAYS) ; [#uses=3 type=i32]
@@ -253,10 +253,10 @@ entry:
   %acc_weight_returnSquare = alloca [6 x float], align 16 ; [#uses=10 type=[6 x float]*]
   %acc_weight_return = alloca [6 x float], align 16 ; [#uses=10 type=[6 x float]*]
   %acc_weight_returnA_returnB = alloca [6 x float], align 16 ; [#uses=8 type=[6 x float]*]
-  call void (...)* @_ssdm_op_SpecInterface(i32* %NUMBER_OF_INDICES_out, [8 x i8]* @str57, i32 0, i32 0, i32 0, i32 0, [8 x i8]* @str57, [8 x i8]* @str57, [8 x i8]* @str57)
-  call void @_ssdm_op_Write.ap_fifo.i32P(i32* %NUMBER_OF_INDICES_out, i32 %NUMBER_OF_INDICES_read)
-  call void (...)* @_ssdm_op_SpecInterface(i32* %NUMBER_OF_DAYS_out, [8 x i8]* @str55, i32 0, i32 0, i32 0, i32 0, [8 x i8]* @str55, [8 x i8]* @str55, [8 x i8]* @str55)
+  call void (...)* @_ssdm_op_SpecInterface(i32* %NUMBER_OF_DAYS_out, [8 x i8]* @str57, i32 0, i32 0, i32 0, i32 0, [8 x i8]* @str57, [8 x i8]* @str57, [8 x i8]* @str57)
   call void @_ssdm_op_Write.ap_fifo.i32P(i32* %NUMBER_OF_DAYS_out, i32 %NUMBER_OF_DAYS_read)
+  call void (...)* @_ssdm_op_SpecInterface(i32* %NUMBER_OF_INDICES_out, [8 x i8]* @str55, i32 0, i32 0, i32 0, i32 0, [8 x i8]* @str55, [8 x i8]* @str55, [8 x i8]* @str55)
+  call void @_ssdm_op_Write.ap_fifo.i32P(i32* %NUMBER_OF_INDICES_out, i32 %NUMBER_OF_INDICES_read)
   call void (...)* @_ssdm_op_SpecInterface(float* %sum_weight_returnA_out_V, [8 x i8]* @str46, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @str47, [1 x i8]* @str47, [8 x i8]* @str46)
   call void (...)* @_ssdm_op_SpecInterface(float* %sum_weight_returnSquareA_out_V, [8 x i8]* @str42, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @str43, [1 x i8]* @str43, [8 x i8]* @str42)
   call void (...)* @_ssdm_op_SpecInterface(float* %sum_returnA_out_V, [8 x i8]* @str38, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @str39, [1 x i8]* @str39, [8 x i8]* @str38)

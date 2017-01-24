@@ -1,0 +1,13 @@
+digraph CDFG {
+node [shape=record];
+bb0 [shape=record, label = "{bb0|<x0x3973380>SW(2)@0\n|<x0x3975c00>SW(3)@316\n|<x0x3973570>SW(4)@316\n|<x0x39737b0>SW(5)@321\n|<x0x39739e0>SW(6)@321\n|<x0x3973c10>SW(7)@322\n|<x0x3973e40>SW(8)@323\n|<x0x3974070>SW(9)@323\n|<x0x39742a0>SW(10)@324\n|<x0x3975ea0>SW(11)@324\n|<x0x3976080>SW(12)@323\n|<x0x39762c0>SW(13)@327\n|<x0x39764f0>SW(14)@327\n|<x0x3976720>SW(15)@328\n|<x0x3976970>SW(16)@328\n|<x0x3976b80>SW(17)@327\n|<x0x3976dc0>SW(18)@332\n|<x0x3977850>SW(19)@333\n|<x0x39779b0>SW(20)@323\n|<x0x3977be0>SW(21)@337\n|<x0x3976f10>SW(22)@337\n|<x0x3977130>SW(23)@341\n|<x0x3977380>SW(24)@340\n|<x0x39775d0>SW(25)@342\n|<x0x39784e0>SW(26)@343\n|<x0x3978730>SW(27)@347\n|<x0x3978940>SW(28)@347\n|<x0x3978b80>SW(29)@348\n|<x0x3978db0>SW(30)@340\n|<x0x3979000>SW(31)@349\n|<x0x3979220>SW(32)@349\n|<x0x3979460>SW(33)@349\n}"];
+bb1 [shape=record, label = "{bb1|<x0x3979800>SW(34)@0\n|<x0x3979970>SW(35)@0\n|<x0x3979b10>SW(36)@349\n|<x0x3979d40>SW(37)@349\n|<x0x3979f50>SW(38)@349\n}"];
+bb2 [shape=record, label = "{bb2|<x0x39796e0>SW(39)@321\n|<x0x397a5d0>SW(40)@349\n|<x0x397a790>SW(41)@323\n|<x0x397a9c0>SW(42)@340\n|<x0x397ac10>SW(43)@350\n|<x0x397ae30>SW(44)@349\n|<x0x397b060>SW(45)@350\n|<x0x397b270>SW(46)@321\n|<x0x397b4a0>SW(47)@350\n|<x0x397b6b0>SW(48)@350\n|<x0x397b8d0>SW(49)@327\n|<x0x397bb00>SW(50)@348\n|<x0x397bd30>SW(51)@350\n|<x0x3980710>XFER(IN):number_of_days @350, SCALAR\n|<x0x397f2a0>XFER(IN):number_of_indices @350, SCALAR\n|<x0x397f3b0>XFER(IN):in_indices @350, ARRAY\n|<x0x396db80>call 'correlation_accel_v3' in 'main.cpp' @350\n|<x0x3980870>XFER(OUT):out_correlation @350, ARRAY\n|<x0x397bf80>SW(52)@349\n|<x0x397c1b0>SW(53)@356\n|<x0x397c3c0>SW(54)@348\n|<x0x397c5f0>SW(55)@356\n|<x0x397c830>SW(56)@348\n|<x0x397ca70>SW(57)@357\n}"];
+bb3 [shape=record, label = "{bb3|<x0x397cdb0>SW(58)@349\n|<x0x397cfe0>SW(59)@349\n|<x0x397d1f0>SW(60)@349\n|<x0x397d430>SW(61)@349\n}"];
+bb4 [shape=record, label = "{bb4|<x0x397d840>SW(62)@358\n|<x0x397da30>SW(63)@347\n|<x0x397dc70>SW(64)@347\n|<x0x397dea0>SW(65)@358\n|<x0x397e0b0>SW(66)@358\n|<x0x397e2c0>SW(67)@358\n|<x0x397e4d0>SW(68)@358\n|<x0x397e760>SW(69)@358\n|<x0x397e900>SW(70)@358\n|<x0x397eb20>SW(71)@347\n|<x0x397ed60>SW(72)@375\n}"];
+bb0 -> bb1
+bb1 -> bb2
+bb1 -> bb4
+bb2 -> bb3
+bb3 -> bb1
+}

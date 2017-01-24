@@ -839,7 +839,7 @@ entry:0  call void (...)* @_ssdm_op_SpecInterface(i1* %in_indices_dest_V, i1* %i
 
 <node id="23" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="8" op_3_bw="32" op_4_bw="32" op_5_bw="32" op_6_bw="32" op_7_bw="8" op_8_bw="8" op_9_bw="8">
 <![CDATA[
-entry:1  call void (...)* @_ssdm_op_SpecInterface(i32* %NUMBER_OF_INDICES_out, [8 x i8]* @str68, i32 0, i32 0, i32 0, i32 0, [8 x i8]* @str68, [8 x i8]* @str68, [8 x i8]* @str68)
+entry:1  call void (...)* @_ssdm_op_SpecInterface(i32* %NUMBER_OF_DAYS_out, [8 x i8]* @str68, i32 0, i32 0, i32 0, i32 0, [8 x i8]* @str68, [8 x i8]* @str68, [8 x i8]* @str68)
 
 ]]></node>
 <StgValue><ssdm name=""/></StgValue>
@@ -854,7 +854,7 @@ entry:1  call void (...)* @_ssdm_op_SpecInterface(i32* %NUMBER_OF_INDICES_out, [
 
 <node id="24" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="8" op_3_bw="32" op_4_bw="32" op_5_bw="32" op_6_bw="32" op_7_bw="8" op_8_bw="8" op_9_bw="8">
 <![CDATA[
-entry:2  call void (...)* @_ssdm_op_SpecInterface(i32* %NUMBER_OF_DAYS_out, [8 x i8]* @str67, i32 0, i32 0, i32 0, i32 0, [8 x i8]* @str67, [8 x i8]* @str67, [8 x i8]* @str67)
+entry:2  call void (...)* @_ssdm_op_SpecInterface(i32* %NUMBER_OF_INDICES_out, [8 x i8]* @str67, i32 0, i32 0, i32 0, i32 0, [8 x i8]* @str67, [8 x i8]* @str67, [8 x i8]* @str67)
 
 ]]></node>
 <StgValue><ssdm name=""/></StgValue>
@@ -1053,7 +1053,7 @@ entry:14  %acc_weight_returnA_returnB = alloca [6 x float], align 16
 
 <node id="37" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="8" op_3_bw="32" op_4_bw="32" op_5_bw="32" op_6_bw="32" op_7_bw="8" op_8_bw="8" op_9_bw="8">
 <![CDATA[
-entry:15  call void (...)* @_ssdm_op_SpecInterface(i32* %NUMBER_OF_INDICES_out, [8 x i8]* @str57, i32 0, i32 0, i32 0, i32 0, [8 x i8]* @str57, [8 x i8]* @str57, [8 x i8]* @str57)
+entry:15  call void (...)* @_ssdm_op_SpecInterface(i32* %NUMBER_OF_DAYS_out, [8 x i8]* @str57, i32 0, i32 0, i32 0, i32 0, [8 x i8]* @str57, [8 x i8]* @str57, [8 x i8]* @str57)
 
 ]]></node>
 <StgValue><ssdm name=""/></StgValue>
@@ -1068,7 +1068,7 @@ entry:15  call void (...)* @_ssdm_op_SpecInterface(i32* %NUMBER_OF_INDICES_out, 
 
 <node id="38" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="32">
 <![CDATA[
-entry:16  call void @_ssdm_op_Write.ap_fifo.i32P(i32* %NUMBER_OF_INDICES_out, i32 %NUMBER_OF_INDICES_read)
+entry:16  call void @_ssdm_op_Write.ap_fifo.i32P(i32* %NUMBER_OF_DAYS_out, i32 %NUMBER_OF_DAYS_read)
 
 ]]></node>
 <StgValue><ssdm name=""/></StgValue>
@@ -1083,7 +1083,7 @@ entry:16  call void @_ssdm_op_Write.ap_fifo.i32P(i32* %NUMBER_OF_INDICES_out, i3
 
 <node id="39" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="8" op_3_bw="32" op_4_bw="32" op_5_bw="32" op_6_bw="32" op_7_bw="8" op_8_bw="8" op_9_bw="8">
 <![CDATA[
-entry:17  call void (...)* @_ssdm_op_SpecInterface(i32* %NUMBER_OF_DAYS_out, [8 x i8]* @str55, i32 0, i32 0, i32 0, i32 0, [8 x i8]* @str55, [8 x i8]* @str55, [8 x i8]* @str55)
+entry:17  call void (...)* @_ssdm_op_SpecInterface(i32* %NUMBER_OF_INDICES_out, [8 x i8]* @str55, i32 0, i32 0, i32 0, i32 0, [8 x i8]* @str55, [8 x i8]* @str55, [8 x i8]* @str55)
 
 ]]></node>
 <StgValue><ssdm name=""/></StgValue>
@@ -1098,7 +1098,7 @@ entry:17  call void (...)* @_ssdm_op_SpecInterface(i32* %NUMBER_OF_DAYS_out, [8 
 
 <node id="40" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="32">
 <![CDATA[
-entry:18  call void @_ssdm_op_Write.ap_fifo.i32P(i32* %NUMBER_OF_DAYS_out, i32 %NUMBER_OF_DAYS_read)
+entry:18  call void @_ssdm_op_Write.ap_fifo.i32P(i32* %NUMBER_OF_INDICES_out, i32 %NUMBER_OF_INDICES_read)
 
 ]]></node>
 <StgValue><ssdm name=""/></StgValue>
@@ -10173,11 +10173,11 @@ frontEnd.1.exit:0  ret void
 <port id="965" name="sum_weight_returnA_out_V" dir="1" iftype="3">
 <core>FIFO</core><StgValue><ssdm name="sum_weight_returnA_out_V"/></StgValue>
 </port>
-<port id="966" name="NUMBER_OF_DAYS_out" dir="1" iftype="3">
-<core>FIFO</core><StgValue><ssdm name="NUMBER_OF_DAYS_out"/></StgValue>
-</port>
-<port id="967" name="NUMBER_OF_INDICES_out" dir="1" iftype="3">
+<port id="966" name="NUMBER_OF_INDICES_out" dir="1" iftype="3">
 <core>FIFO</core><StgValue><ssdm name="NUMBER_OF_INDICES_out"/></StgValue>
+</port>
+<port id="967" name="NUMBER_OF_DAYS_out" dir="1" iftype="3">
+<core>FIFO</core><StgValue><ssdm name="NUMBER_OF_DAYS_out"/></StgValue>
 </port>
 <port id="968" name="weight_rom" dir="2" iftype="1">
 <core>RAM</core><StgValue><ssdm name="weight_rom"/><MemPortTyVec>2 2 </MemPortTyVec>
@@ -10225,7 +10225,7 @@ frontEnd.1.exit:0  ret void
 </dataflow>
 <dataflow id="990" from="_ssdm_op_SpecInterface" to="stg_128" fromId="970" toId="128">
 </dataflow>
-<dataflow id="991" from="NUMBER_OF_INDICES_out" to="stg_128" fromId="967" toId="128">
+<dataflow id="991" from="NUMBER_OF_DAYS_out" to="stg_128" fromId="967" toId="128">
 </dataflow>
 <dataflow id="993" from="str68" to="stg_128" fromId="992" toId="128">
 </dataflow>
@@ -10245,7 +10245,7 @@ frontEnd.1.exit:0  ret void
 </dataflow>
 <dataflow id="1001" from="_ssdm_op_SpecInterface" to="stg_129" fromId="970" toId="129">
 </dataflow>
-<dataflow id="1002" from="NUMBER_OF_DAYS_out" to="stg_129" fromId="966" toId="129">
+<dataflow id="1002" from="NUMBER_OF_INDICES_out" to="stg_129" fromId="966" toId="129">
 </dataflow>
 <dataflow id="1004" from="str67" to="stg_129" fromId="1003" toId="129">
 </dataflow>
@@ -10293,7 +10293,7 @@ frontEnd.1.exit:0  ret void
 </dataflow>
 <dataflow id="1028" from="_ssdm_op_SpecInterface" to="stg_142" fromId="970" toId="142">
 </dataflow>
-<dataflow id="1029" from="NUMBER_OF_INDICES_out" to="stg_142" fromId="967" toId="142">
+<dataflow id="1029" from="NUMBER_OF_DAYS_out" to="stg_142" fromId="967" toId="142">
 </dataflow>
 <dataflow id="1031" from="str57" to="stg_142" fromId="1030" toId="142">
 </dataflow>
@@ -10313,13 +10313,13 @@ frontEnd.1.exit:0  ret void
 </dataflow>
 <dataflow id="1040" from="_ssdm_op_Write.ap_fifo.i32P" to="stg_143" fromId="1039" toId="143">
 </dataflow>
-<dataflow id="1041" from="NUMBER_OF_INDICES_out" to="stg_143" fromId="967" toId="143">
+<dataflow id="1041" from="NUMBER_OF_DAYS_out" to="stg_143" fromId="967" toId="143">
 </dataflow>
-<dataflow id="1042" from="NUMBER_OF_INDICES_read" to="stg_143" fromId="130" toId="143">
+<dataflow id="1042" from="NUMBER_OF_DAYS_read" to="stg_143" fromId="131" toId="143">
 </dataflow>
 <dataflow id="1043" from="_ssdm_op_SpecInterface" to="stg_144" fromId="970" toId="144">
 </dataflow>
-<dataflow id="1044" from="NUMBER_OF_DAYS_out" to="stg_144" fromId="966" toId="144">
+<dataflow id="1044" from="NUMBER_OF_INDICES_out" to="stg_144" fromId="966" toId="144">
 </dataflow>
 <dataflow id="1046" from="str55" to="stg_144" fromId="1045" toId="144">
 </dataflow>
@@ -10339,9 +10339,9 @@ frontEnd.1.exit:0  ret void
 </dataflow>
 <dataflow id="1054" from="_ssdm_op_Write.ap_fifo.i32P" to="stg_145" fromId="1039" toId="145">
 </dataflow>
-<dataflow id="1055" from="NUMBER_OF_DAYS_out" to="stg_145" fromId="966" toId="145">
+<dataflow id="1055" from="NUMBER_OF_INDICES_out" to="stg_145" fromId="966" toId="145">
 </dataflow>
-<dataflow id="1056" from="NUMBER_OF_DAYS_read" to="stg_145" fromId="131" toId="145">
+<dataflow id="1056" from="NUMBER_OF_INDICES_read" to="stg_145" fromId="130" toId="145">
 </dataflow>
 <dataflow id="1057" from="_ssdm_op_SpecInterface" to="stg_146" fromId="970" toId="146">
 </dataflow>

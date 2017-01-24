@@ -1,0 +1,3153 @@
+
+
+================================================================
+== Vivado HLS Report for 'correlation_accel_v3_frontEnd'
+================================================================
+* Date:           Tue Jan 24 16:57:10 2017
+
+* Version:        2014.4 (Build 1071461 on Tue Nov 18 16:42:57 PM 2014)
+* Project:        correlation_accel_v3
+* Solution:       solution
+* Product family: zynq
+* Target device:  xc7z020clg484-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +---------+-------+----------+------------+
+    |  Clock  | Target| Estimated| Uncertainty|
+    +---------+-------+----------+------------+
+    |default  |   5.95|      5.15|        0.74|
+    +---------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-----+-----+-----+-----+---------+
+    |  Latency  |  Interval | Pipeline|
+    | min | max | min | max |   Type  |
+    +-----+-----+-----+-----+---------+
+    |    ?|    ?|    ?|    ?|   none  |
+    +-----+-----+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +-------------------------------------+------+-------------+----------+-----------+-----------+----------------+----------+
+        |                                     |       Latency      | Iteration|  Initiation Interval  |      Trip      |          |
+        |              Loop Name              |  min |     max     |  Latency |  achieved |   target  |      Count     | Pipelined|
+        +-------------------------------------+------+-------------+----------+-----------+-----------+----------------+----------+
+        |- INIT_WEIGHT_ROM                    |  1500|         1500|         6|          -|          -|             250|    no    |
+        |- COMP_SUM_OF_WEIGHT                 |     0|  25769803740|        12|          -|          -| 0 ~ 2147483645 |    no    |
+        |- ACCUMULATION_LOOP_FIRST_INDEX      |     ?|            ?|        69|          2|          1|               ?|    yes   |
+        |- LAST_ACCUM_LOOP_FIRST_INDEX        |    57|           57|        13|          9|          5|               6|    yes   |
+        |- Loop 5                             |     ?|            ?|         ?|          -|          -| 0 ~ 2147483646 |    no    |
+        | + ACCUMULATION_LOOP_FLOATING_INDEX  |     ?|            ?|        70|          2|          1|               ?|    yes   |
+        | + LAST_ACCUM_LOOP                   |    58|           58|        14|          9|          5|               6|    yes   |
+        +-------------------------------------+------+-------------+----------+-----------+-----------+----------------+----------+
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-------+--------+-------+
+|       Name      | BRAM_18K| DSP48E|   FF   |  LUT  |
++-----------------+---------+-------+--------+-------+
+|Expression       |        -|      -|       -|      -|
+|FIFO             |        -|      -|       -|      -|
+|Instance         |        -|      -|       -|      -|
+|Memory           |        -|      -|       -|      -|
+|Multiplexer      |        -|      -|       -|      -|
+|Register         |        -|      -|       -|      -|
++-----------------+---------+-------+--------+-------+
+|Total            |        0|      0|       0|      0|
++-----------------+---------+-------+--------+-------+
+|Available        |      280|    220|  106400|  53200|
++-----------------+---------+-------+--------+-------+
+|Utilization (%)  |        0|      0|       0|      0|
++-----------------+---------+-------+--------+-------+
+
++ Detail: 
+    * Instance: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    N/A
+
+    * Multiplexer: 
+    N/A
+
+    * Register: 
+    N/A
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
+N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 2
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
++ Individual pipeline summary: 
+  * Pipeline-0: initiation interval (II) = 2, depth = 69
+  * Pipeline-1: initiation interval (II) = 9, depth = 13
+  * Pipeline-2: initiation interval (II) = 2, depth = 70
+  * Pipeline-3: initiation interval (II) = 9, depth = 14
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states: 192
+* Pipeline: 4
+  Pipeline-0: II = 2, D = 69, States = { 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 }
+  Pipeline-1: II = 9, D = 13, States = { 91 92 93 94 95 96 97 98 99 100 101 102 103 }
+  Pipeline-2: II = 2, D = 70, States = { 108 109 110 111 112 113 114 115 116 117 118 119 120 121 122 123 124 125 126 127 128 129 130 131 132 133 134 135 136 137 138 139 140 141 142 143 144 145 146 147 148 149 150 151 152 153 154 155 156 157 158 159 160 161 162 163 164 165 166 167 168 169 170 171 172 173 174 175 176 177 }
+  Pipeline-3: II = 9, D = 14, States = { 178 179 180 181 182 183 184 185 186 187 188 189 190 191 }
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 
+	2  / true
+2 --> 
+	3  / (!exitcond_i_i)
+	8  / (exitcond_i_i)
+3 --> 
+	4  / true
+4 --> 
+	5  / true
+5 --> 
+	6  / true
+6 --> 
+	7  / true
+7 --> 
+	2  / true
+8 --> 
+	9  / (tmp_69_i_i)
+	20  / (!tmp_69_i_i)
+9 --> 
+	10  / true
+10 --> 
+	11  / true
+11 --> 
+	12  / true
+12 --> 
+	13  / true
+13 --> 
+	14  / true
+14 --> 
+	15  / true
+15 --> 
+	16  / true
+16 --> 
+	17  / true
+17 --> 
+	18  / true
+18 --> 
+	19  / true
+19 --> 
+	8  / true
+20 --> 
+	21  / true
+21 --> 
+	22  / true
+22 --> 
+	91  / (tmp_6_i)
+	23  / (!tmp_6_i)
+23 --> 
+	24  / true
+24 --> 
+	25  / true
+25 --> 
+	26  / true
+26 --> 
+	27  / true
+27 --> 
+	28  / true
+28 --> 
+	29  / true
+29 --> 
+	30  / true
+30 --> 
+	31  / true
+31 --> 
+	32  / true
+32 --> 
+	33  / true
+33 --> 
+	34  / true
+34 --> 
+	35  / true
+35 --> 
+	36  / true
+36 --> 
+	37  / true
+37 --> 
+	38  / true
+38 --> 
+	39  / true
+39 --> 
+	40  / true
+40 --> 
+	41  / true
+41 --> 
+	42  / true
+42 --> 
+	43  / true
+43 --> 
+	44  / true
+44 --> 
+	45  / true
+45 --> 
+	46  / true
+46 --> 
+	47  / true
+47 --> 
+	48  / true
+48 --> 
+	49  / true
+49 --> 
+	50  / true
+50 --> 
+	51  / true
+51 --> 
+	52  / true
+52 --> 
+	53  / true
+53 --> 
+	54  / true
+54 --> 
+	55  / true
+55 --> 
+	56  / true
+56 --> 
+	57  / true
+57 --> 
+	58  / true
+58 --> 
+	59  / true
+59 --> 
+	60  / true
+60 --> 
+	61  / true
+61 --> 
+	62  / true
+62 --> 
+	63  / true
+63 --> 
+	64  / true
+64 --> 
+	65  / true
+65 --> 
+	66  / true
+66 --> 
+	67  / true
+67 --> 
+	68  / true
+68 --> 
+	69  / true
+69 --> 
+	70  / true
+70 --> 
+	71  / true
+71 --> 
+	72  / true
+72 --> 
+	73  / true
+73 --> 
+	74  / true
+74 --> 
+	75  / true
+75 --> 
+	76  / true
+76 --> 
+	77  / true
+77 --> 
+	78  / true
+78 --> 
+	79  / true
+79 --> 
+	80  / true
+80 --> 
+	81  / true
+81 --> 
+	82  / true
+82 --> 
+	83  / true
+83 --> 
+	84  / true
+84 --> 
+	85  / true
+85 --> 
+	86  / true
+86 --> 
+	87  / true
+87 --> 
+	88  / true
+88 --> 
+	89  / true
+89 --> 
+	90  / true
+90 --> 
+	22  / true
+91 --> 
+	104  / (exitcond2_i)
+	92  / (!exitcond2_i)
+92 --> 
+	93  / true
+93 --> 
+	94  / true
+94 --> 
+	95  / true
+95 --> 
+	96  / true
+96 --> 
+	97  / true
+97 --> 
+	98  / true
+98 --> 
+	99  / true
+99 --> 
+	100  / true
+100 --> 
+	101  / true
+101 --> 
+	102  / true
+102 --> 
+	103  / true
+103 --> 
+	91  / true
+104 --> 
+	105  / true
+105 --> 
+	106  / (tmp_26_i)
+106 --> 
+	107  / true
+107 --> 
+	108  / true
+108 --> 
+	178  / (tmp_31_i)
+	109  / (!tmp_31_i)
+109 --> 
+	110  / true
+110 --> 
+	111  / true
+111 --> 
+	112  / true
+112 --> 
+	113  / true
+113 --> 
+	114  / true
+114 --> 
+	115  / true
+115 --> 
+	116  / true
+116 --> 
+	117  / true
+117 --> 
+	118  / true
+118 --> 
+	119  / true
+119 --> 
+	120  / true
+120 --> 
+	121  / true
+121 --> 
+	122  / true
+122 --> 
+	123  / true
+123 --> 
+	124  / true
+124 --> 
+	125  / true
+125 --> 
+	126  / true
+126 --> 
+	127  / true
+127 --> 
+	128  / true
+128 --> 
+	129  / true
+129 --> 
+	130  / true
+130 --> 
+	131  / true
+131 --> 
+	132  / true
+132 --> 
+	133  / true
+133 --> 
+	134  / true
+134 --> 
+	135  / true
+135 --> 
+	136  / true
+136 --> 
+	137  / true
+137 --> 
+	138  / true
+138 --> 
+	139  / true
+139 --> 
+	140  / true
+140 --> 
+	141  / true
+141 --> 
+	142  / true
+142 --> 
+	143  / true
+143 --> 
+	144  / true
+144 --> 
+	145  / true
+145 --> 
+	146  / true
+146 --> 
+	147  / true
+147 --> 
+	148  / true
+148 --> 
+	149  / true
+149 --> 
+	150  / true
+150 --> 
+	151  / true
+151 --> 
+	152  / true
+152 --> 
+	153  / true
+153 --> 
+	154  / true
+154 --> 
+	155  / true
+155 --> 
+	156  / true
+156 --> 
+	157  / true
+157 --> 
+	158  / true
+158 --> 
+	159  / true
+159 --> 
+	160  / true
+160 --> 
+	161  / true
+161 --> 
+	162  / true
+162 --> 
+	163  / true
+163 --> 
+	164  / true
+164 --> 
+	165  / true
+165 --> 
+	166  / true
+166 --> 
+	167  / true
+167 --> 
+	168  / true
+168 --> 
+	169  / true
+169 --> 
+	170  / true
+170 --> 
+	171  / true
+171 --> 
+	172  / true
+172 --> 
+	173  / true
+173 --> 
+	174  / true
+174 --> 
+	175  / true
+175 --> 
+	176  / true
+176 --> 
+	177  / true
+177 --> 
+	108  / true
+178 --> 
+	192  / (exitcond_i)
+	179  / (!exitcond_i)
+179 --> 
+	180  / true
+180 --> 
+	181  / true
+181 --> 
+	182  / true
+182 --> 
+	183  / true
+183 --> 
+	184  / true
+184 --> 
+	185  / true
+185 --> 
+	186  / true
+186 --> 
+	187  / true
+187 --> 
+	188  / true
+188 --> 
+	189  / true
+189 --> 
+	190  / true
+190 --> 
+	191  / true
+191 --> 
+	178  / true
+192 --> 
+	105  / true
+* FSM state operations: 
+
+ <State 1>: 2.39ns
+ST_1: stg_193 [1/1] 0.00ns
+entry:0  call void (...)* @_ssdm_op_SpecInterface(i1* %in_indices_dest_V, i1* %in_indices_id_V, i1* %in_indices_last_V, i1* %in_indices_user_V, i4* %in_indices_strb_V, i4* %in_indices_keep_V, i32* %in_indices_data_V, [5 x i8]* @p_str1, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str)
+
+ST_1: stg_194 [1/1] 0.00ns
+entry:1  call void (...)* @_ssdm_op_SpecInterface(i32* %NUMBER_OF_INDICES_out, [8 x i8]* @str68, i32 0, i32 0, i32 0, i32 0, [8 x i8]* @str68, [8 x i8]* @str68, [8 x i8]* @str68)
+
+ST_1: stg_195 [1/1] 0.00ns
+entry:2  call void (...)* @_ssdm_op_SpecInterface(i32* %NUMBER_OF_DAYS_out, [8 x i8]* @str67, i32 0, i32 0, i32 0, i32 0, [8 x i8]* @str67, [8 x i8]* @str67, [8 x i8]* @str67)
+
+ST_1: NUMBER_OF_INDICES_read [1/1] 0.00ns
+entry:3  %NUMBER_OF_INDICES_read = call i32 @_ssdm_op_Read.ap_auto.i32(i32 %NUMBER_OF_INDICES)
+
+ST_1: NUMBER_OF_DAYS_read [1/1] 0.00ns
+entry:4  %NUMBER_OF_DAYS_read = call i32 @_ssdm_op_Read.ap_auto.i32(i32 %NUMBER_OF_DAYS)
+
+ST_1: tmp1_keep_V_i [1/1] 0.00ns
+entry:5  %tmp1_keep_V_i = alloca i4, align 1
+
+ST_1: tmp1_strb_V_i [1/1] 0.00ns
+entry:6  %tmp1_strb_V_i = alloca i4, align 1
+
+ST_1: tmp1_user_V_i [1/1] 0.00ns
+entry:7  %tmp1_user_V_i = alloca i1, align 1
+
+ST_1: tmp1_last_V_i [1/1] 0.00ns
+entry:8  %tmp1_last_V_i = alloca i1, align 1
+
+ST_1: tmp1_id_V_i [1/1] 0.00ns
+entry:9  %tmp1_id_V_i = alloca i1, align 1
+
+ST_1: tmp1_dest_V_i [1/1] 0.00ns
+entry:10  %tmp1_dest_V_i = alloca i1, align 1
+
+ST_1: acc_return [1/1] 0.00ns
+entry:11  %acc_return = alloca [6 x float], align 16
+
+ST_1: acc_weight_returnSquare [1/1] 0.00ns
+entry:12  %acc_weight_returnSquare = alloca [6 x float], align 16
+
+ST_1: acc_weight_return [1/1] 0.00ns
+entry:13  %acc_weight_return = alloca [6 x float], align 16
+
+ST_1: acc_weight_returnA_returnB [1/1] 0.00ns
+entry:14  %acc_weight_returnA_returnB = alloca [6 x float], align 16
+
+ST_1: stg_208 [1/1] 0.00ns
+entry:15  call void (...)* @_ssdm_op_SpecInterface(i32* %NUMBER_OF_INDICES_out, [8 x i8]* @str57, i32 0, i32 0, i32 0, i32 0, [8 x i8]* @str57, [8 x i8]* @str57, [8 x i8]* @str57)
+
+ST_1: stg_209 [1/1] 1.86ns
+entry:16  call void @_ssdm_op_Write.ap_fifo.i32P(i32* %NUMBER_OF_INDICES_out, i32 %NUMBER_OF_INDICES_read)
+
+ST_1: stg_210 [1/1] 0.00ns
+entry:17  call void (...)* @_ssdm_op_SpecInterface(i32* %NUMBER_OF_DAYS_out, [8 x i8]* @str55, i32 0, i32 0, i32 0, i32 0, [8 x i8]* @str55, [8 x i8]* @str55, [8 x i8]* @str55)
+
+ST_1: stg_211 [1/1] 1.86ns
+entry:18  call void @_ssdm_op_Write.ap_fifo.i32P(i32* %NUMBER_OF_DAYS_out, i32 %NUMBER_OF_DAYS_read)
+
+ST_1: stg_212 [1/1] 0.00ns
+entry:19  call void (...)* @_ssdm_op_SpecInterface(float* %sum_weight_returnA_out_V, [8 x i8]* @str46, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @str47, [1 x i8]* @str47, [8 x i8]* @str46)
+
+ST_1: stg_213 [1/1] 0.00ns
+entry:20  call void (...)* @_ssdm_op_SpecInterface(float* %sum_weight_returnSquareA_out_V, [8 x i8]* @str42, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @str43, [1 x i8]* @str43, [8 x i8]* @str42)
+
+ST_1: stg_214 [1/1] 0.00ns
+entry:21  call void (...)* @_ssdm_op_SpecInterface(float* %sum_returnA_out_V, [8 x i8]* @str38, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @str39, [1 x i8]* @str39, [8 x i8]* @str38)
+
+ST_1: stg_215 [1/1] 0.00ns
+entry:22  call void (...)* @_ssdm_op_SpecInterface(float* %sum_weight_returnA_returnB_out, [8 x i8]* @str34, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @str35, [1 x i8]* @str35, [8 x i8]* @str34)
+
+ST_1: stg_216 [1/1] 0.00ns
+entry:23  call void (...)* @_ssdm_op_SpecInterface(float* %sum_weight_return_out_V, [8 x i8]* @str30, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @str31, [1 x i8]* @str31, [8 x i8]* @str30)
+
+ST_1: stg_217 [1/1] 0.00ns
+entry:24  call void (...)* @_ssdm_op_SpecInterface(float* %sum_weight_returnSquare_out_V, [8 x i8]* @str26, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @str27, [1 x i8]* @str27, [8 x i8]* @str26)
+
+ST_1: stg_218 [1/1] 0.00ns
+entry:25  call void (...)* @_ssdm_op_SpecInterface(float* %sum_return_out_V, [8 x i8]* @str22, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @str23, [1 x i8]* @str23, [8 x i8]* @str22)
+
+ST_1: stg_219 [1/1] 0.00ns
+entry:26  call void (...)* @_ssdm_op_SpecInterface(float* %sum_weight_out_V, [8 x i8]* @str18, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @str19, [1 x i8]* @str19, [8 x i8]* @str18)
+
+ST_1: stg_220 [1/1] 2.39ns
+entry:27  store float 1.000000e+00, float* getelementptr inbounds ([252 x float]* @weight_rom, i64 0, i64 0), align 16
+
+ST_1: stg_221 [1/1] 2.39ns
+entry:28  store float 1.000000e+00, float* getelementptr inbounds ([252 x float]* @weight_rom, i64 0, i64 1), align 4
+
+ST_1: stg_222 [1/1] 1.57ns
+entry:29  br label %0
+
+
+ <State 2>: 4.35ns
+ST_2: tmp_i_i [1/1] 0.00ns
+:0  %tmp_i_i = phi float [ 1.000000e+00, %entry ], [ %tmp_i_i_14, %1 ]
+
+ST_2: i_i_i [1/1] 0.00ns
+:1  %i_i_i = phi i8 [ 2, %entry ], [ %i, %1 ]
+
+ST_2: exitcond_i_i [1/1] 2.00ns
+:2  %exitcond_i_i = icmp eq i8 %i_i_i, -4
+
+ST_2: empty [1/1] 0.00ns
+:3  %empty = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 250, i64 250, i64 250)
+
+ST_2: stg_227 [1/1] 1.57ns
+:4  br i1 %exitcond_i_i, label %.preheader.i.i, label %1
+
+ST_2: tmp_i_i_14 [5/5] 4.35ns
+:1  %tmp_i_i_14 = fmul float %tmp_i_i, 0x3FEE147AE0000000
+
+
+ <State 3>: 4.35ns
+ST_3: tmp_i_i_14 [4/5] 4.35ns
+:1  %tmp_i_i_14 = fmul float %tmp_i_i, 0x3FEE147AE0000000
+
+
+ <State 4>: 4.35ns
+ST_4: tmp_i_i_14 [3/5] 4.35ns
+:1  %tmp_i_i_14 = fmul float %tmp_i_i, 0x3FEE147AE0000000
+
+
+ <State 5>: 4.35ns
+ST_5: tmp_i_i_14 [2/5] 4.35ns
+:1  %tmp_i_i_14 = fmul float %tmp_i_i, 0x3FEE147AE0000000
+
+
+ <State 6>: 4.35ns
+ST_6: tmp_i_i_14 [1/5] 4.35ns
+:1  %tmp_i_i_14 = fmul float %tmp_i_i, 0x3FEE147AE0000000
+
+
+ <State 7>: 2.39ns
+ST_7: stg_233 [1/1] 0.00ns
+:0  call void (...)* @_ssdm_op_SpecLoopName([16 x i8]* @p_str11) nounwind
+
+ST_7: tmp_70_i_i [1/1] 0.00ns
+:2  %tmp_70_i_i = zext i8 %i_i_i to i64
+
+ST_7: weight_rom_addr [1/1] 0.00ns
+:3  %weight_rom_addr = getelementptr [252 x float]* @weight_rom, i64 0, i64 %tmp_70_i_i
+
+ST_7: stg_236 [1/1] 2.39ns
+:4  store float %tmp_i_i_14, float* %weight_rom_addr, align 4
+
+ST_7: i [1/1] 1.72ns
+:5  %i = add i8 %i_i_i, 1
+
+ST_7: stg_238 [1/1] 0.00ns
+:6  br label %0
+
+
+ <State 8>: 2.52ns
+ST_8: i1_i_i [1/1] 0.00ns
+.preheader.i.i:0  %i1_i_i = phi i31 [ %i_1, %2 ], [ 2, %0 ]
+
+ST_8: i1_i_cast_i [1/1] 0.00ns
+.preheader.i.i:1  %i1_i_cast_i = zext i31 %i1_i_i to i32
+
+ST_8: tmp_69_i_i [1/1] 2.52ns
+.preheader.i.i:2  %tmp_69_i_i = icmp slt i32 %i1_i_cast_i, %NUMBER_OF_DAYS_read
+
+ST_8: empty_15 [1/1] 0.00ns
+.preheader.i.i:3  %empty_15 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 0, i64 2147483645, i64 0)
+
+ST_8: stg_243 [1/1] 0.00ns
+.preheader.i.i:4  br i1 %tmp_69_i_i, label %2, label %weight_rom_init.exit.i
+
+ST_8: tmp_71_i_i [1/1] 0.00ns
+:1  %tmp_71_i_i = zext i31 %i1_i_i to i64
+
+ST_8: weight_rom_addr_1 [1/1] 0.00ns
+:2  %weight_rom_addr_1 = getelementptr [252 x float]* @weight_rom, i64 0, i64 %tmp_71_i_i
+
+ST_8: weight_rom_load [2/2] 2.39ns
+:3  %weight_rom_load = load float* %weight_rom_addr_1, align 4
+
+ST_8: weight_rom_load_1 [2/2] 2.39ns
+:4  %weight_rom_load_1 = load float* getelementptr inbounds ([252 x float]* @weight_rom, i64 0, i64 0), align 16
+
+ST_8: i_1 [1/1] 2.44ns
+:7  %i_1 = add i31 %i1_i_i, 1
+
+ST_8: acc_return_addr [1/1] 0.00ns
+weight_rom_init.exit.i:1  %acc_return_addr = getelementptr inbounds [6 x float]* %acc_return, i64 0, i64 0
+
+ST_8: stg_250 [1/1] 2.39ns
+weight_rom_init.exit.i:2  store float 0.000000e+00, float* %acc_return_addr, align 16
+
+ST_8: acc_weight_returnSquare_addr [1/1] 0.00ns
+weight_rom_init.exit.i:3  %acc_weight_returnSquare_addr = getelementptr inbounds [6 x float]* %acc_weight_returnSquare, i64 0, i64 0
+
+ST_8: stg_252 [1/1] 2.39ns
+weight_rom_init.exit.i:4  store float 0.000000e+00, float* %acc_weight_returnSquare_addr, align 16
+
+ST_8: acc_weight_return_addr [1/1] 0.00ns
+weight_rom_init.exit.i:5  %acc_weight_return_addr = getelementptr inbounds [6 x float]* %acc_weight_return, i64 0, i64 0
+
+ST_8: stg_254 [1/1] 2.39ns
+weight_rom_init.exit.i:6  store float 0.000000e+00, float* %acc_weight_return_addr, align 16
+
+ST_8: acc_return_addr_1 [1/1] 0.00ns
+weight_rom_init.exit.i:7  %acc_return_addr_1 = getelementptr inbounds [6 x float]* %acc_return, i64 0, i64 1
+
+ST_8: stg_256 [1/1] 2.39ns
+weight_rom_init.exit.i:8  store float 0.000000e+00, float* %acc_return_addr_1, align 4
+
+ST_8: acc_weight_returnSquare_addr_1 [1/1] 0.00ns
+weight_rom_init.exit.i:9  %acc_weight_returnSquare_addr_1 = getelementptr inbounds [6 x float]* %acc_weight_returnSquare, i64 0, i64 1
+
+ST_8: stg_258 [1/1] 2.39ns
+weight_rom_init.exit.i:10  store float 0.000000e+00, float* %acc_weight_returnSquare_addr_1, align 4
+
+ST_8: acc_weight_return_addr_1 [1/1] 0.00ns
+weight_rom_init.exit.i:11  %acc_weight_return_addr_1 = getelementptr inbounds [6 x float]* %acc_weight_return, i64 0, i64 1
+
+ST_8: stg_260 [1/1] 2.39ns
+weight_rom_init.exit.i:12  store float 0.000000e+00, float* %acc_weight_return_addr_1, align 4
+
+
+ <State 9>: 2.39ns
+ST_9: weight_rom_load [1/2] 2.39ns
+:3  %weight_rom_load = load float* %weight_rom_addr_1, align 4
+
+ST_9: weight_rom_load_1 [1/2] 2.39ns
+:4  %weight_rom_load_1 = load float* getelementptr inbounds ([252 x float]* @weight_rom, i64 0, i64 0), align 16
+
+
+ <State 10>: 4.35ns
+ST_10: tmp_72_i_i [9/9] 4.35ns
+:5  %tmp_72_i_i = fadd float %weight_rom_load_1, %weight_rom_load
+
+
+ <State 11>: 4.35ns
+ST_11: tmp_72_i_i [8/9] 4.35ns
+:5  %tmp_72_i_i = fadd float %weight_rom_load_1, %weight_rom_load
+
+
+ <State 12>: 4.35ns
+ST_12: tmp_72_i_i [7/9] 4.35ns
+:5  %tmp_72_i_i = fadd float %weight_rom_load_1, %weight_rom_load
+
+
+ <State 13>: 4.35ns
+ST_13: tmp_72_i_i [6/9] 4.35ns
+:5  %tmp_72_i_i = fadd float %weight_rom_load_1, %weight_rom_load
+
+
+ <State 14>: 4.35ns
+ST_14: tmp_72_i_i [5/9] 4.35ns
+:5  %tmp_72_i_i = fadd float %weight_rom_load_1, %weight_rom_load
+
+
+ <State 15>: 4.35ns
+ST_15: tmp_72_i_i [4/9] 4.35ns
+:5  %tmp_72_i_i = fadd float %weight_rom_load_1, %weight_rom_load
+
+
+ <State 16>: 4.35ns
+ST_16: tmp_72_i_i [3/9] 4.35ns
+:5  %tmp_72_i_i = fadd float %weight_rom_load_1, %weight_rom_load
+
+
+ <State 17>: 4.35ns
+ST_17: tmp_72_i_i [2/9] 4.35ns
+:5  %tmp_72_i_i = fadd float %weight_rom_load_1, %weight_rom_load
+
+
+ <State 18>: 4.35ns
+ST_18: tmp_72_i_i [1/9] 4.35ns
+:5  %tmp_72_i_i = fadd float %weight_rom_load_1, %weight_rom_load
+
+
+ <State 19>: 2.39ns
+ST_19: stg_272 [1/1] 0.00ns
+:0  call void (...)* @_ssdm_op_SpecLoopName([19 x i8]* @p_str12) nounwind
+
+ST_19: stg_273 [1/1] 2.39ns
+:6  store float %tmp_72_i_i, float* getelementptr inbounds ([252 x float]* @weight_rom, i64 0, i64 0), align 16
+
+ST_19: stg_274 [1/1] 0.00ns
+:8  br label %.preheader.i.i
+
+
+ <State 20>: 2.39ns
+ST_20: sum_weight [2/2] 2.39ns
+weight_rom_init.exit.i:0  %sum_weight = load float* getelementptr inbounds ([252 x float]* @weight_rom, i64 0, i64 0), align 16
+
+ST_20: acc_return_addr_2 [1/1] 0.00ns
+weight_rom_init.exit.i:13  %acc_return_addr_2 = getelementptr inbounds [6 x float]* %acc_return, i64 0, i64 2
+
+ST_20: stg_277 [1/1] 2.39ns
+weight_rom_init.exit.i:14  store float 0.000000e+00, float* %acc_return_addr_2, align 8
+
+ST_20: acc_weight_returnSquare_addr_2 [1/1] 0.00ns
+weight_rom_init.exit.i:15  %acc_weight_returnSquare_addr_2 = getelementptr inbounds [6 x float]* %acc_weight_returnSquare, i64 0, i64 2
+
+ST_20: stg_279 [1/1] 2.39ns
+weight_rom_init.exit.i:16  store float 0.000000e+00, float* %acc_weight_returnSquare_addr_2, align 8
+
+ST_20: acc_weight_return_addr_2 [1/1] 0.00ns
+weight_rom_init.exit.i:17  %acc_weight_return_addr_2 = getelementptr inbounds [6 x float]* %acc_weight_return, i64 0, i64 2
+
+ST_20: stg_281 [1/1] 2.39ns
+weight_rom_init.exit.i:18  store float 0.000000e+00, float* %acc_weight_return_addr_2, align 8
+
+ST_20: acc_return_addr_3 [1/1] 0.00ns
+weight_rom_init.exit.i:19  %acc_return_addr_3 = getelementptr inbounds [6 x float]* %acc_return, i64 0, i64 3
+
+ST_20: stg_283 [1/1] 2.39ns
+weight_rom_init.exit.i:20  store float 0.000000e+00, float* %acc_return_addr_3, align 4
+
+ST_20: acc_weight_returnSquare_addr_3 [1/1] 0.00ns
+weight_rom_init.exit.i:21  %acc_weight_returnSquare_addr_3 = getelementptr inbounds [6 x float]* %acc_weight_returnSquare, i64 0, i64 3
+
+ST_20: stg_285 [1/1] 2.39ns
+weight_rom_init.exit.i:22  store float 0.000000e+00, float* %acc_weight_returnSquare_addr_3, align 4
+
+ST_20: acc_weight_return_addr_3 [1/1] 0.00ns
+weight_rom_init.exit.i:23  %acc_weight_return_addr_3 = getelementptr inbounds [6 x float]* %acc_weight_return, i64 0, i64 3
+
+ST_20: stg_287 [1/1] 2.39ns
+weight_rom_init.exit.i:24  store float 0.000000e+00, float* %acc_weight_return_addr_3, align 4
+
+
+ <State 21>: 2.44ns
+ST_21: sum_weight [1/2] 2.39ns
+weight_rom_init.exit.i:0  %sum_weight = load float* getelementptr inbounds ([252 x float]* @weight_rom, i64 0, i64 0), align 16
+
+ST_21: acc_return_addr_4 [1/1] 0.00ns
+weight_rom_init.exit.i:25  %acc_return_addr_4 = getelementptr inbounds [6 x float]* %acc_return, i64 0, i64 4
+
+ST_21: stg_290 [1/1] 2.39ns
+weight_rom_init.exit.i:26  store float 0.000000e+00, float* %acc_return_addr_4, align 16
+
+ST_21: acc_weight_returnSquare_addr_4 [1/1] 0.00ns
+weight_rom_init.exit.i:27  %acc_weight_returnSquare_addr_4 = getelementptr inbounds [6 x float]* %acc_weight_returnSquare, i64 0, i64 4
+
+ST_21: stg_292 [1/1] 2.39ns
+weight_rom_init.exit.i:28  store float 0.000000e+00, float* %acc_weight_returnSquare_addr_4, align 16
+
+ST_21: acc_weight_return_addr_4 [1/1] 0.00ns
+weight_rom_init.exit.i:29  %acc_weight_return_addr_4 = getelementptr inbounds [6 x float]* %acc_weight_return, i64 0, i64 4
+
+ST_21: stg_294 [1/1] 2.39ns
+weight_rom_init.exit.i:30  store float 0.000000e+00, float* %acc_weight_return_addr_4, align 16
+
+ST_21: acc_return_addr_5 [1/1] 0.00ns
+weight_rom_init.exit.i:31  %acc_return_addr_5 = getelementptr inbounds [6 x float]* %acc_return, i64 0, i64 5
+
+ST_21: stg_296 [1/1] 2.39ns
+weight_rom_init.exit.i:32  store float 0.000000e+00, float* %acc_return_addr_5, align 4
+
+ST_21: acc_weight_returnSquare_addr_5 [1/1] 0.00ns
+weight_rom_init.exit.i:33  %acc_weight_returnSquare_addr_5 = getelementptr inbounds [6 x float]* %acc_weight_returnSquare, i64 0, i64 5
+
+ST_21: stg_298 [1/1] 2.39ns
+weight_rom_init.exit.i:34  store float 0.000000e+00, float* %acc_weight_returnSquare_addr_5, align 4
+
+ST_21: acc_weight_return_addr_5 [1/1] 0.00ns
+weight_rom_init.exit.i:35  %acc_weight_return_addr_5 = getelementptr inbounds [6 x float]* %acc_weight_return, i64 0, i64 5
+
+ST_21: stg_300 [1/1] 2.39ns
+weight_rom_init.exit.i:36  store float 0.000000e+00, float* %acc_weight_return_addr_5, align 4
+
+ST_21: in_indices_data_V_read [1/1] 0.00ns
+weight_rom_init.exit.i:37  %in_indices_data_V_read = call i32 @_ssdm_op_Read.axis.volatile.i32P(i32* %in_indices_data_V)
+
+ST_21: tmp_i [1/1] 0.00ns
+weight_rom_init.exit.i:38  %tmp_i = bitcast i32 %in_indices_data_V_read to float
+
+ST_21: tmp1_keep_V [1/1] 0.00ns
+weight_rom_init.exit.i:39  %tmp1_keep_V = call i4 @_ssdm_op_Read.axis.volatile.i4P(i4* %in_indices_keep_V)
+
+ST_21: stg_304 [1/1] 1.57ns
+weight_rom_init.exit.i:40  store volatile i4 %tmp1_keep_V, i4* %tmp1_keep_V_i, align 4
+
+ST_21: tmp1_strb_V [1/1] 0.00ns
+weight_rom_init.exit.i:41  %tmp1_strb_V = call i4 @_ssdm_op_Read.axis.volatile.i4P(i4* %in_indices_strb_V)
+
+ST_21: stg_306 [1/1] 1.57ns
+weight_rom_init.exit.i:42  store volatile i4 %tmp1_strb_V, i4* %tmp1_strb_V_i, align 1
+
+ST_21: tmp1_user_V [1/1] 0.00ns
+weight_rom_init.exit.i:43  %tmp1_user_V = call i1 @_ssdm_op_Read.axis.volatile.i1P(i1* %in_indices_user_V)
+
+ST_21: stg_308 [1/1] 1.57ns
+weight_rom_init.exit.i:44  store volatile i1 %tmp1_user_V, i1* %tmp1_user_V_i, align 2
+
+ST_21: tmp1_last_V [1/1] 0.00ns
+weight_rom_init.exit.i:45  %tmp1_last_V = call i1 @_ssdm_op_Read.axis.volatile.i1P(i1* %in_indices_last_V)
+
+ST_21: stg_310 [1/1] 1.57ns
+weight_rom_init.exit.i:46  store volatile i1 %tmp1_last_V, i1* %tmp1_last_V_i, align 1
+
+ST_21: tmp1_id_V [1/1] 0.00ns
+weight_rom_init.exit.i:47  %tmp1_id_V = call i1 @_ssdm_op_Read.axis.volatile.i1P(i1* %in_indices_id_V)
+
+ST_21: stg_312 [1/1] 1.57ns
+weight_rom_init.exit.i:48  store volatile i1 %tmp1_id_V, i1* %tmp1_id_V_i, align 4
+
+ST_21: tmp1_dest_V [1/1] 0.00ns
+weight_rom_init.exit.i:49  %tmp1_dest_V = call i1 @_ssdm_op_Read.axis.volatile.i1P(i1* %in_indices_dest_V)
+
+ST_21: stg_314 [1/1] 1.57ns
+weight_rom_init.exit.i:50  store volatile i1 %tmp1_dest_V, i1* %tmp1_dest_V_i, align 1
+
+ST_21: tmp_1_i [1/1] 2.44ns
+weight_rom_init.exit.i:51  %tmp_1_i = add nsw i32 %NUMBER_OF_DAYS_read, -1
+
+ST_21: stg_316 [1/1] 1.57ns
+weight_rom_init.exit.i:52  br label %3
+
+
+ <State 22>: 4.09ns
+ST_22: tmp_4_i [1/1] 0.00ns
+:0  %tmp_4_i = phi float [ undef, %weight_rom_init.exit.i ], [ %tmp_14_i, %4 ]
+
+ST_22: tmp_5_i [1/1] 0.00ns
+:1  %tmp_5_i = phi float [ %tmp_i, %weight_rom_init.exit.i ], [ %tmp_5_i_tmp_4_i, %4 ]
+
+ST_22: i1_i [1/1] 0.00ns
+:2  %i1_i = phi i32 [ 1, %weight_rom_init.exit.i ], [ %i_3, %4 ]
+
+ST_22: tmp_6_i [1/1] 2.52ns
+:3  %tmp_6_i = icmp sgt i32 %i1_i, %tmp_1_i
+
+ST_22: stg_321 [1/1] 1.57ns
+:4  br i1 %tmp_6_i, label %.preheader104.i, label %4
+
+ST_22: tmp_7_i [1/1] 2.52ns
+:4  %tmp_7_i = icmp eq i32 %i1_i, 1
+
+ST_22: tmp_5_i_tmp_4_i [1/1] 1.37ns
+:18  %tmp_5_i_tmp_4_i = select i1 %tmp_7_i, float %tmp_5_i, float %tmp_4_i
+
+
+ <State 23>: 3.38ns
+ST_23: in_indices_data_V_read_1 [1/1] 0.00ns
+:5  %in_indices_data_V_read_1 = call i32 @_ssdm_op_Read.axis.volatile.i32P(i32* %in_indices_data_V)
+
+ST_23: in_indices_keep_V_read [1/1] 0.00ns
+:6  %in_indices_keep_V_read = call i4 @_ssdm_op_Read.axis.volatile.i4P(i4* %in_indices_keep_V)
+
+ST_23: stg_326 [1/1] 1.57ns
+:7  store volatile i4 %in_indices_keep_V_read, i4* %tmp1_keep_V_i, align 4
+
+ST_23: in_indices_strb_V_read [1/1] 0.00ns
+:8  %in_indices_strb_V_read = call i4 @_ssdm_op_Read.axis.volatile.i4P(i4* %in_indices_strb_V)
+
+ST_23: stg_328 [1/1] 1.57ns
+:9  store volatile i4 %in_indices_strb_V_read, i4* %tmp1_strb_V_i, align 1
+
+ST_23: in_indices_user_V_read [1/1] 0.00ns
+:10  %in_indices_user_V_read = call i1 @_ssdm_op_Read.axis.volatile.i1P(i1* %in_indices_user_V)
+
+ST_23: stg_330 [1/1] 1.57ns
+:11  store volatile i1 %in_indices_user_V_read, i1* %tmp1_user_V_i, align 2
+
+ST_23: in_indices_last_V_read [1/1] 0.00ns
+:12  %in_indices_last_V_read = call i1 @_ssdm_op_Read.axis.volatile.i1P(i1* %in_indices_last_V)
+
+ST_23: stg_332 [1/1] 1.57ns
+:13  store volatile i1 %in_indices_last_V_read, i1* %tmp1_last_V_i, align 1
+
+ST_23: in_indices_id_V_read [1/1] 0.00ns
+:14  %in_indices_id_V_read = call i1 @_ssdm_op_Read.axis.volatile.i1P(i1* %in_indices_id_V)
+
+ST_23: stg_334 [1/1] 1.57ns
+:15  store volatile i1 %in_indices_id_V_read, i1* %tmp1_id_V_i, align 4
+
+ST_23: in_indices_dest_V_read [1/1] 0.00ns
+:16  %in_indices_dest_V_read = call i1 @_ssdm_op_Read.axis.volatile.i1P(i1* %in_indices_dest_V)
+
+ST_23: stg_336 [1/1] 1.57ns
+:17  store volatile i1 %in_indices_dest_V_read, i1* %tmp1_dest_V_i, align 1
+
+ST_23: tmp_14_i [1/1] 0.00ns
+:19  %tmp_14_i = bitcast i32 %in_indices_data_V_read_1 to float
+
+ST_23: tmp_15_i [30/30] 3.38ns
+:20  %tmp_15_i = fdiv float %tmp_5_i_tmp_4_i, %tmp_14_i
+
+ST_23: i_3 [1/1] 2.44ns
+:47  %i_3 = add nsw i32 %i1_i, 1
+
+
+ <State 24>: 3.38ns
+ST_24: tmp_15_i [29/30] 3.38ns
+:20  %tmp_15_i = fdiv float %tmp_5_i_tmp_4_i, %tmp_14_i
+
+
+ <State 25>: 3.38ns
+ST_25: tmp_15_i [28/30] 3.38ns
+:20  %tmp_15_i = fdiv float %tmp_5_i_tmp_4_i, %tmp_14_i
+
+
+ <State 26>: 3.38ns
+ST_26: tmp_15_i [27/30] 3.38ns
+:20  %tmp_15_i = fdiv float %tmp_5_i_tmp_4_i, %tmp_14_i
+
+
+ <State 27>: 3.38ns
+ST_27: tmp_15_i [26/30] 3.38ns
+:20  %tmp_15_i = fdiv float %tmp_5_i_tmp_4_i, %tmp_14_i
+
+
+ <State 28>: 3.38ns
+ST_28: tmp_15_i [25/30] 3.38ns
+:20  %tmp_15_i = fdiv float %tmp_5_i_tmp_4_i, %tmp_14_i
+
+
+ <State 29>: 3.38ns
+ST_29: tmp_15_i [24/30] 3.38ns
+:20  %tmp_15_i = fdiv float %tmp_5_i_tmp_4_i, %tmp_14_i
+
+
+ <State 30>: 3.38ns
+ST_30: tmp_15_i [23/30] 3.38ns
+:20  %tmp_15_i = fdiv float %tmp_5_i_tmp_4_i, %tmp_14_i
+
+
+ <State 31>: 3.38ns
+ST_31: tmp_15_i [22/30] 3.38ns
+:20  %tmp_15_i = fdiv float %tmp_5_i_tmp_4_i, %tmp_14_i
+
+
+ <State 32>: 3.38ns
+ST_32: tmp_15_i [21/30] 3.38ns
+:20  %tmp_15_i = fdiv float %tmp_5_i_tmp_4_i, %tmp_14_i
+
+
+ <State 33>: 4.62ns
+ST_33: tmp [1/1] 0.00ns
+:0  %tmp = trunc i32 %i1_i to i31
+
+ST_33: tmp_15_i [20/30] 3.38ns
+:20  %tmp_15_i = fdiv float %tmp_5_i_tmp_4_i, %tmp_14_i
+
+ST_33: tmp_16_i [1/1] 0.00ns
+:22  %tmp_16_i = zext i32 %i1_i to i64
+
+ST_33: weight_rom_addr_2 [1/1] 0.00ns
+:23  %weight_rom_addr_2 = getelementptr inbounds [252 x float]* @weight_rom, i64 0, i64 %tmp_16_i
+
+ST_33: weight [2/2] 2.39ns
+:24  %weight = load float* %weight_rom_addr_2, align 4
+
+ST_33: channel [36/36] 4.62ns
+:25  %channel = urem i32 %i1_i, 6
+
+
+ <State 34>: 4.62ns
+ST_34: tmp_15_i [19/30] 3.38ns
+:20  %tmp_15_i = fdiv float %tmp_5_i_tmp_4_i, %tmp_14_i
+
+ST_34: weight [1/2] 2.39ns
+:24  %weight = load float* %weight_rom_addr_2, align 4
+
+ST_34: channel [35/36] 4.62ns
+:25  %channel = urem i32 %i1_i, 6
+
+
+ <State 35>: 4.62ns
+ST_35: tmp_15_i [18/30] 3.38ns
+:20  %tmp_15_i = fdiv float %tmp_5_i_tmp_4_i, %tmp_14_i
+
+ST_35: channel [34/36] 4.62ns
+:25  %channel = urem i32 %i1_i, 6
+
+
+ <State 36>: 4.62ns
+ST_36: tmp_15_i [17/30] 3.38ns
+:20  %tmp_15_i = fdiv float %tmp_5_i_tmp_4_i, %tmp_14_i
+
+ST_36: channel [33/36] 4.62ns
+:25  %channel = urem i32 %i1_i, 6
+
+
+ <State 37>: 4.62ns
+ST_37: tmp_15_i [16/30] 3.38ns
+:20  %tmp_15_i = fdiv float %tmp_5_i_tmp_4_i, %tmp_14_i
+
+ST_37: channel [32/36] 4.62ns
+:25  %channel = urem i32 %i1_i, 6
+
+
+ <State 38>: 4.62ns
+ST_38: tmp_15_i [15/30] 3.38ns
+:20  %tmp_15_i = fdiv float %tmp_5_i_tmp_4_i, %tmp_14_i
+
+ST_38: channel [31/36] 4.62ns
+:25  %channel = urem i32 %i1_i, 6
+
+
+ <State 39>: 4.62ns
+ST_39: tmp_15_i [14/30] 3.38ns
+:20  %tmp_15_i = fdiv float %tmp_5_i_tmp_4_i, %tmp_14_i
+
+ST_39: channel [30/36] 4.62ns
+:25  %channel = urem i32 %i1_i, 6
+
+
+ <State 40>: 4.62ns
+ST_40: tmp_15_i [13/30] 3.38ns
+:20  %tmp_15_i = fdiv float %tmp_5_i_tmp_4_i, %tmp_14_i
+
+ST_40: channel [29/36] 4.62ns
+:25  %channel = urem i32 %i1_i, 6
+
+
+ <State 41>: 4.62ns
+ST_41: tmp_15_i [12/30] 3.38ns
+:20  %tmp_15_i = fdiv float %tmp_5_i_tmp_4_i, %tmp_14_i
+
+ST_41: channel [28/36] 4.62ns
+:25  %channel = urem i32 %i1_i, 6
+
+
+ <State 42>: 4.62ns
+ST_42: tmp_15_i [11/30] 3.38ns
+:20  %tmp_15_i = fdiv float %tmp_5_i_tmp_4_i, %tmp_14_i
+
+ST_42: channel [27/36] 4.62ns
+:25  %channel = urem i32 %i1_i, 6
+
+
+ <State 43>: 4.62ns
+ST_43: tmp_15_i [10/30] 3.38ns
+:20  %tmp_15_i = fdiv float %tmp_5_i_tmp_4_i, %tmp_14_i
+
+ST_43: channel [26/36] 4.62ns
+:25  %channel = urem i32 %i1_i, 6
+
+
+ <State 44>: 4.62ns
+ST_44: tmp_15_i [9/30] 3.38ns
+:20  %tmp_15_i = fdiv float %tmp_5_i_tmp_4_i, %tmp_14_i
+
+ST_44: channel [25/36] 4.62ns
+:25  %channel = urem i32 %i1_i, 6
+
+
+ <State 45>: 4.62ns
+ST_45: tmp_15_i [8/30] 3.38ns
+:20  %tmp_15_i = fdiv float %tmp_5_i_tmp_4_i, %tmp_14_i
+
+ST_45: channel [24/36] 4.62ns
+:25  %channel = urem i32 %i1_i, 6
+
+
+ <State 46>: 4.62ns
+ST_46: tmp_15_i [7/30] 3.38ns
+:20  %tmp_15_i = fdiv float %tmp_5_i_tmp_4_i, %tmp_14_i
+
+ST_46: channel [23/36] 4.62ns
+:25  %channel = urem i32 %i1_i, 6
+
+
+ <State 47>: 4.62ns
+ST_47: tmp_15_i [6/30] 3.38ns
+:20  %tmp_15_i = fdiv float %tmp_5_i_tmp_4_i, %tmp_14_i
+
+ST_47: channel [22/36] 4.62ns
+:25  %channel = urem i32 %i1_i, 6
+
+
+ <State 48>: 4.62ns
+ST_48: tmp_15_i [5/30] 3.38ns
+:20  %tmp_15_i = fdiv float %tmp_5_i_tmp_4_i, %tmp_14_i
+
+ST_48: channel [21/36] 4.62ns
+:25  %channel = urem i32 %i1_i, 6
+
+
+ <State 49>: 4.62ns
+ST_49: tmp_15_i [4/30] 3.38ns
+:20  %tmp_15_i = fdiv float %tmp_5_i_tmp_4_i, %tmp_14_i
+
+ST_49: channel [20/36] 4.62ns
+:25  %channel = urem i32 %i1_i, 6
+
+
+ <State 50>: 4.62ns
+ST_50: tmp_15_i [3/30] 3.38ns
+:20  %tmp_15_i = fdiv float %tmp_5_i_tmp_4_i, %tmp_14_i
+
+ST_50: channel [19/36] 4.62ns
+:25  %channel = urem i32 %i1_i, 6
+
+
+ <State 51>: 4.62ns
+ST_51: tmp_15_i [2/30] 3.38ns
+:20  %tmp_15_i = fdiv float %tmp_5_i_tmp_4_i, %tmp_14_i
+
+ST_51: channel [18/36] 4.62ns
+:25  %channel = urem i32 %i1_i, 6
+
+
+ <State 52>: 4.62ns
+ST_52: tmp_15_i [1/30] 3.38ns
+:20  %tmp_15_i = fdiv float %tmp_5_i_tmp_4_i, %tmp_14_i
+
+ST_52: channel [17/36] 4.62ns
+:25  %channel = urem i32 %i1_i, 6
+
+
+ <State 53>: 5.15ns
+ST_53: lnReturn [18/18] 5.15ns
+:21  %lnReturn = call float @llvm.log.f32(float %tmp_15_i)
+
+ST_53: channel [16/36] 4.62ns
+:25  %channel = urem i32 %i1_i, 6
+
+
+ <State 54>: 5.15ns
+ST_54: lnReturn [17/18] 5.15ns
+:21  %lnReturn = call float @llvm.log.f32(float %tmp_15_i)
+
+ST_54: channel [15/36] 4.62ns
+:25  %channel = urem i32 %i1_i, 6
+
+
+ <State 55>: 5.15ns
+ST_55: lnReturn [16/18] 5.15ns
+:21  %lnReturn = call float @llvm.log.f32(float %tmp_15_i)
+
+ST_55: channel [14/36] 4.62ns
+:25  %channel = urem i32 %i1_i, 6
+
+
+ <State 56>: 5.15ns
+ST_56: lnReturn [15/18] 5.15ns
+:21  %lnReturn = call float @llvm.log.f32(float %tmp_15_i)
+
+ST_56: channel [13/36] 4.62ns
+:25  %channel = urem i32 %i1_i, 6
+
+
+ <State 57>: 5.15ns
+ST_57: lnReturn [14/18] 5.15ns
+:21  %lnReturn = call float @llvm.log.f32(float %tmp_15_i)
+
+ST_57: channel [12/36] 4.62ns
+:25  %channel = urem i32 %i1_i, 6
+
+
+ <State 58>: 5.15ns
+ST_58: lnReturn [13/18] 5.15ns
+:21  %lnReturn = call float @llvm.log.f32(float %tmp_15_i)
+
+ST_58: channel [11/36] 4.62ns
+:25  %channel = urem i32 %i1_i, 6
+
+
+ <State 59>: 5.15ns
+ST_59: lnReturn [12/18] 5.15ns
+:21  %lnReturn = call float @llvm.log.f32(float %tmp_15_i)
+
+ST_59: channel [10/36] 4.62ns
+:25  %channel = urem i32 %i1_i, 6
+
+
+ <State 60>: 5.15ns
+ST_60: lnReturn [11/18] 5.15ns
+:21  %lnReturn = call float @llvm.log.f32(float %tmp_15_i)
+
+ST_60: channel [9/36] 4.62ns
+:25  %channel = urem i32 %i1_i, 6
+
+
+ <State 61>: 5.15ns
+ST_61: lnReturn [10/18] 5.15ns
+:21  %lnReturn = call float @llvm.log.f32(float %tmp_15_i)
+
+ST_61: channel [8/36] 4.62ns
+:25  %channel = urem i32 %i1_i, 6
+
+
+ <State 62>: 5.15ns
+ST_62: lnReturn [9/18] 5.15ns
+:21  %lnReturn = call float @llvm.log.f32(float %tmp_15_i)
+
+ST_62: channel [7/36] 4.62ns
+:25  %channel = urem i32 %i1_i, 6
+
+
+ <State 63>: 5.15ns
+ST_63: lnReturn [8/18] 5.15ns
+:21  %lnReturn = call float @llvm.log.f32(float %tmp_15_i)
+
+ST_63: channel [6/36] 4.62ns
+:25  %channel = urem i32 %i1_i, 6
+
+
+ <State 64>: 5.15ns
+ST_64: lnReturn [7/18] 5.15ns
+:21  %lnReturn = call float @llvm.log.f32(float %tmp_15_i)
+
+ST_64: channel [5/36] 4.62ns
+:25  %channel = urem i32 %i1_i, 6
+
+
+ <State 65>: 5.15ns
+ST_65: lnReturn [6/18] 5.15ns
+:21  %lnReturn = call float @llvm.log.f32(float %tmp_15_i)
+
+ST_65: channel [4/36] 4.62ns
+:25  %channel = urem i32 %i1_i, 6
+
+
+ <State 66>: 5.15ns
+ST_66: lnReturn [5/18] 5.15ns
+:21  %lnReturn = call float @llvm.log.f32(float %tmp_15_i)
+
+ST_66: channel [3/36] 4.62ns
+:25  %channel = urem i32 %i1_i, 6
+
+
+ <State 67>: 5.15ns
+ST_67: lnReturn [4/18] 5.15ns
+:21  %lnReturn = call float @llvm.log.f32(float %tmp_15_i)
+
+ST_67: channel [2/36] 4.62ns
+:25  %channel = urem i32 %i1_i, 6
+
+
+ <State 68>: 5.15ns
+ST_68: lnReturn [3/18] 5.15ns
+:21  %lnReturn = call float @llvm.log.f32(float %tmp_15_i)
+
+ST_68: channel [1/36] 4.62ns
+:25  %channel = urem i32 %i1_i, 6
+
+ST_68: tmp_17_i [1/1] 0.00ns
+:26  %tmp_17_i = zext i32 %channel to i64
+
+ST_68: acc_return_addr_7 [1/1] 0.00ns
+:27  %acc_return_addr_7 = getelementptr inbounds [6 x float]* %acc_return, i64 0, i64 %tmp_17_i
+
+ST_68: acc_weight_returnSquare_addr_7 [1/1] 0.00ns
+:33  %acc_weight_returnSquare_addr_7 = getelementptr inbounds [6 x float]* %acc_weight_returnSquare, i64 0, i64 %tmp_17_i
+
+ST_68: acc_weight_return_addr_7 [1/1] 0.00ns
+:38  %acc_weight_return_addr_7 = getelementptr inbounds [6 x float]* %acc_weight_return, i64 0, i64 %tmp_17_i
+
+
+ <State 69>: 5.15ns
+ST_69: lnReturn [2/18] 5.15ns
+:21  %lnReturn = call float @llvm.log.f32(float %tmp_15_i)
+
+ST_69: acc_return_load_1 [2/2] 2.39ns
+:28  %acc_return_load_1 = load float* %acc_return_addr_7, align 4
+
+
+ <State 70>: 5.15ns
+ST_70: lnReturn [1/18] 5.15ns
+:21  %lnReturn = call float @llvm.log.f32(float %tmp_15_i)
+
+ST_70: acc_return_load_1 [1/2] 2.39ns
+:28  %acc_return_load_1 = load float* %acc_return_addr_7, align 4
+
+
+ <State 71>: 4.83ns
+ST_71: tmp_18_i [9/9] 4.35ns
+:29  %tmp_18_i = fadd float %acc_return_load_1, %lnReturn
+
+ST_71: tmp_19_i [5/5] 4.35ns
+:31  %tmp_19_i = fmul float %lnReturn, %lnReturn
+
+ST_71: tmp_22_i [5/5] 4.35ns
+:37  %tmp_22_i = fmul float %lnReturn, %weight
+
+ST_71: tmp_24_i [1/1] 2.44ns
+:42  %tmp_24_i = add i31 %tmp, -1
+
+ST_71: tmp_25_i [1/1] 0.00ns
+:43  %tmp_25_i = zext i31 %tmp_24_i to i64
+
+ST_71: lnReturnA_addr [1/1] 0.00ns
+:44  %lnReturnA_addr = getelementptr inbounds [252 x float]* @lnReturnA, i64 0, i64 %tmp_25_i
+
+ST_71: stg_440 [1/1] 2.39ns
+:45  store float %lnReturn, float* %lnReturnA_addr, align 4
+
+
+ <State 72>: 4.35ns
+ST_72: tmp_18_i [8/9] 4.35ns
+:29  %tmp_18_i = fadd float %acc_return_load_1, %lnReturn
+
+ST_72: tmp_19_i [4/5] 4.35ns
+:31  %tmp_19_i = fmul float %lnReturn, %lnReturn
+
+ST_72: tmp_22_i [4/5] 4.35ns
+:37  %tmp_22_i = fmul float %lnReturn, %weight
+
+
+ <State 73>: 4.35ns
+ST_73: tmp_18_i [7/9] 4.35ns
+:29  %tmp_18_i = fadd float %acc_return_load_1, %lnReturn
+
+ST_73: tmp_19_i [3/5] 4.35ns
+:31  %tmp_19_i = fmul float %lnReturn, %lnReturn
+
+ST_73: tmp_22_i [3/5] 4.35ns
+:37  %tmp_22_i = fmul float %lnReturn, %weight
+
+
+ <State 74>: 4.35ns
+ST_74: tmp_18_i [6/9] 4.35ns
+:29  %tmp_18_i = fadd float %acc_return_load_1, %lnReturn
+
+ST_74: tmp_19_i [2/5] 4.35ns
+:31  %tmp_19_i = fmul float %lnReturn, %lnReturn
+
+ST_74: tmp_22_i [2/5] 4.35ns
+:37  %tmp_22_i = fmul float %lnReturn, %weight
+
+ST_74: acc_weight_return_load_1 [2/2] 2.39ns
+:39  %acc_weight_return_load_1 = load float* %acc_weight_return_addr_7, align 4
+
+
+ <State 75>: 4.35ns
+ST_75: tmp_18_i [5/9] 4.35ns
+:29  %tmp_18_i = fadd float %acc_return_load_1, %lnReturn
+
+ST_75: tmp_19_i [1/5] 4.35ns
+:31  %tmp_19_i = fmul float %lnReturn, %lnReturn
+
+ST_75: tmp_22_i [1/5] 4.35ns
+:37  %tmp_22_i = fmul float %lnReturn, %weight
+
+ST_75: acc_weight_return_load_1 [1/2] 2.39ns
+:39  %acc_weight_return_load_1 = load float* %acc_weight_return_addr_7, align 4
+
+
+ <State 76>: 4.35ns
+ST_76: tmp_18_i [4/9] 4.35ns
+:29  %tmp_18_i = fadd float %acc_return_load_1, %lnReturn
+
+ST_76: tmp_20_i [5/5] 4.35ns
+:32  %tmp_20_i = fmul float %tmp_19_i, %weight
+
+ST_76: tmp_23_i [9/9] 4.35ns
+:40  %tmp_23_i = fadd float %acc_weight_return_load_1, %tmp_22_i
+
+
+ <State 77>: 4.35ns
+ST_77: tmp_18_i [3/9] 4.35ns
+:29  %tmp_18_i = fadd float %acc_return_load_1, %lnReturn
+
+ST_77: tmp_20_i [4/5] 4.35ns
+:32  %tmp_20_i = fmul float %tmp_19_i, %weight
+
+ST_77: tmp_23_i [8/9] 4.35ns
+:40  %tmp_23_i = fadd float %acc_weight_return_load_1, %tmp_22_i
+
+
+ <State 78>: 4.35ns
+ST_78: tmp_18_i [2/9] 4.35ns
+:29  %tmp_18_i = fadd float %acc_return_load_1, %lnReturn
+
+ST_78: tmp_20_i [3/5] 4.35ns
+:32  %tmp_20_i = fmul float %tmp_19_i, %weight
+
+ST_78: tmp_23_i [7/9] 4.35ns
+:40  %tmp_23_i = fadd float %acc_weight_return_load_1, %tmp_22_i
+
+
+ <State 79>: 4.35ns
+ST_79: tmp_18_i [1/9] 4.35ns
+:29  %tmp_18_i = fadd float %acc_return_load_1, %lnReturn
+
+ST_79: tmp_20_i [2/5] 4.35ns
+:32  %tmp_20_i = fmul float %tmp_19_i, %weight
+
+ST_79: acc_weight_returnSquare_load_1 [2/2] 2.39ns
+:34  %acc_weight_returnSquare_load_1 = load float* %acc_weight_returnSquare_addr_7, align 4
+
+ST_79: tmp_23_i [6/9] 4.35ns
+:40  %tmp_23_i = fadd float %acc_weight_return_load_1, %tmp_22_i
+
+
+ <State 80>: 4.35ns
+ST_80: stg_468 [1/1] 2.39ns
+:30  store float %tmp_18_i, float* %acc_return_addr_7, align 4
+
+ST_80: tmp_20_i [1/5] 4.35ns
+:32  %tmp_20_i = fmul float %tmp_19_i, %weight
+
+ST_80: acc_weight_returnSquare_load_1 [1/2] 2.39ns
+:34  %acc_weight_returnSquare_load_1 = load float* %acc_weight_returnSquare_addr_7, align 4
+
+ST_80: tmp_23_i [5/9] 4.35ns
+:40  %tmp_23_i = fadd float %acc_weight_return_load_1, %tmp_22_i
+
+
+ <State 81>: 4.35ns
+ST_81: tmp_21_i [9/9] 4.35ns
+:35  %tmp_21_i = fadd float %acc_weight_returnSquare_load_1, %tmp_20_i
+
+ST_81: tmp_23_i [4/9] 4.35ns
+:40  %tmp_23_i = fadd float %acc_weight_return_load_1, %tmp_22_i
+
+
+ <State 82>: 4.35ns
+ST_82: tmp_21_i [8/9] 4.35ns
+:35  %tmp_21_i = fadd float %acc_weight_returnSquare_load_1, %tmp_20_i
+
+ST_82: tmp_23_i [3/9] 4.35ns
+:40  %tmp_23_i = fadd float %acc_weight_return_load_1, %tmp_22_i
+
+
+ <State 83>: 4.35ns
+ST_83: tmp_21_i [7/9] 4.35ns
+:35  %tmp_21_i = fadd float %acc_weight_returnSquare_load_1, %tmp_20_i
+
+ST_83: tmp_23_i [2/9] 4.35ns
+:40  %tmp_23_i = fadd float %acc_weight_return_load_1, %tmp_22_i
+
+
+ <State 84>: 4.35ns
+ST_84: tmp_21_i [6/9] 4.35ns
+:35  %tmp_21_i = fadd float %acc_weight_returnSquare_load_1, %tmp_20_i
+
+ST_84: tmp_23_i [1/9] 4.35ns
+:40  %tmp_23_i = fadd float %acc_weight_return_load_1, %tmp_22_i
+
+
+ <State 85>: 4.35ns
+ST_85: tmp_21_i [5/9] 4.35ns
+:35  %tmp_21_i = fadd float %acc_weight_returnSquare_load_1, %tmp_20_i
+
+ST_85: stg_481 [1/1] 2.39ns
+:41  store float %tmp_23_i, float* %acc_weight_return_addr_7, align 4
+
+
+ <State 86>: 4.35ns
+ST_86: tmp_21_i [4/9] 4.35ns
+:35  %tmp_21_i = fadd float %acc_weight_returnSquare_load_1, %tmp_20_i
+
+
+ <State 87>: 4.35ns
+ST_87: tmp_21_i [3/9] 4.35ns
+:35  %tmp_21_i = fadd float %acc_weight_returnSquare_load_1, %tmp_20_i
+
+
+ <State 88>: 4.35ns
+ST_88: tmp_21_i [2/9] 4.35ns
+:35  %tmp_21_i = fadd float %acc_weight_returnSquare_load_1, %tmp_20_i
+
+
+ <State 89>: 4.35ns
+ST_89: tmp_21_i [1/9] 4.35ns
+:35  %tmp_21_i = fadd float %acc_weight_returnSquare_load_1, %tmp_20_i
+
+
+ <State 90>: 2.39ns
+ST_90: stg_486 [1/1] 0.00ns
+:1  call void (...)* @_ssdm_op_SpecLoopName([30 x i8]* @p_str5) nounwind
+
+ST_90: tmp_71_i [1/1] 0.00ns
+:2  %tmp_71_i = call i32 (...)* @_ssdm_op_SpecRegionBegin([30 x i8]* @p_str5)
+
+ST_90: stg_488 [1/1] 0.00ns
+:3  call void (...)* @_ssdm_op_SpecPipeline(i32 1, i32 1, i32 1, i32 0, [1 x i8]* @p_str) nounwind
+
+ST_90: stg_489 [1/1] 2.39ns
+:36  store float %tmp_21_i, float* %acc_weight_returnSquare_addr_7, align 4
+
+ST_90: empty_16 [1/1] 0.00ns
+:46  %empty_16 = call i32 (...)* @_ssdm_op_SpecRegionEnd([30 x i8]* @p_str5, i32 %tmp_71_i)
+
+ST_90: stg_491 [1/1] 0.00ns
+:48  br label %3
+
+
+ <State 91>: 2.39ns
+ST_91: tmp_9 [1/1] 0.00ns
+.preheader104.i:0  %tmp_9 = phi float [ %sum_weight_returnA, %5 ], [ 0.000000e+00, %3 ]
+
+ST_91: tmp_1 [1/1] 0.00ns
+.preheader104.i:1  %tmp_1 = phi float [ %sum_weight_returnSquareA, %5 ], [ 0.000000e+00, %3 ]
+
+ST_91: tmp_2 [1/1] 0.00ns
+.preheader104.i:2  %tmp_2 = phi float [ %sum_returnA, %5 ], [ 0.000000e+00, %3 ]
+
+ST_91: i2_i [1/1] 0.00ns
+.preheader104.i:3  %i2_i = phi i3 [ %i_2, %5 ], [ 0, %3 ]
+
+ST_91: exitcond2_i [1/1] 1.62ns
+.preheader104.i:4  %exitcond2_i = icmp eq i3 %i2_i, -2
+
+ST_91: i_2 [1/1] 0.80ns
+.preheader104.i:5  %i_2 = add i3 %i2_i, 1
+
+ST_91: stg_498 [1/1] 0.00ns
+.preheader104.i:6  br i1 %exitcond2_i, label %.preheader103.i.preheader, label %5
+
+ST_91: tmp_11_i [1/1] 0.00ns
+:4  %tmp_11_i = zext i3 %i2_i to i64
+
+ST_91: acc_return_addr_6 [1/1] 0.00ns
+:5  %acc_return_addr_6 = getelementptr inbounds [6 x float]* %acc_return, i64 0, i64 %tmp_11_i
+
+ST_91: acc_return_load [2/2] 2.39ns
+:6  %acc_return_load = load float* %acc_return_addr_6, align 4
+
+
+ <State 92>: 2.39ns
+ST_92: acc_return_load [1/2] 2.39ns
+:6  %acc_return_load = load float* %acc_return_addr_6, align 4
+
+ST_92: acc_weight_returnSquare_addr_6 [1/1] 0.00ns
+:8  %acc_weight_returnSquare_addr_6 = getelementptr inbounds [6 x float]* %acc_weight_returnSquare, i64 0, i64 %tmp_11_i
+
+ST_92: acc_weight_returnSquare_load [2/2] 2.39ns
+:9  %acc_weight_returnSquare_load = load float* %acc_weight_returnSquare_addr_6, align 4
+
+ST_92: acc_weight_return_addr_6 [1/1] 0.00ns
+:11  %acc_weight_return_addr_6 = getelementptr inbounds [6 x float]* %acc_weight_return, i64 0, i64 %tmp_11_i
+
+ST_92: acc_weight_return_load [2/2] 2.39ns
+:12  %acc_weight_return_load = load float* %acc_weight_return_addr_6, align 4
+
+
+ <State 93>: 4.35ns
+ST_93: sum_returnA [9/9] 4.35ns
+:7  %sum_returnA = fadd float %tmp_2, %acc_return_load
+
+ST_93: acc_weight_returnSquare_load [1/2] 2.39ns
+:9  %acc_weight_returnSquare_load = load float* %acc_weight_returnSquare_addr_6, align 4
+
+ST_93: acc_weight_return_load [1/2] 2.39ns
+:12  %acc_weight_return_load = load float* %acc_weight_return_addr_6, align 4
+
+
+ <State 94>: 4.35ns
+ST_94: sum_returnA [8/9] 4.35ns
+:7  %sum_returnA = fadd float %tmp_2, %acc_return_load
+
+ST_94: sum_weight_returnSquareA [9/9] 4.35ns
+:10  %sum_weight_returnSquareA = fadd float %tmp_1, %acc_weight_returnSquare_load
+
+
+ <State 95>: 4.35ns
+ST_95: sum_returnA [7/9] 4.35ns
+:7  %sum_returnA = fadd float %tmp_2, %acc_return_load
+
+ST_95: sum_weight_returnSquareA [8/9] 4.35ns
+:10  %sum_weight_returnSquareA = fadd float %tmp_1, %acc_weight_returnSquare_load
+
+ST_95: sum_weight_returnA [9/9] 4.35ns
+:13  %sum_weight_returnA = fadd float %tmp_9, %acc_weight_return_load
+
+
+ <State 96>: 4.35ns
+ST_96: sum_returnA [6/9] 4.35ns
+:7  %sum_returnA = fadd float %tmp_2, %acc_return_load
+
+ST_96: sum_weight_returnSquareA [7/9] 4.35ns
+:10  %sum_weight_returnSquareA = fadd float %tmp_1, %acc_weight_returnSquare_load
+
+ST_96: sum_weight_returnA [8/9] 4.35ns
+:13  %sum_weight_returnA = fadd float %tmp_9, %acc_weight_return_load
+
+
+ <State 97>: 4.35ns
+ST_97: sum_returnA [5/9] 4.35ns
+:7  %sum_returnA = fadd float %tmp_2, %acc_return_load
+
+ST_97: sum_weight_returnSquareA [6/9] 4.35ns
+:10  %sum_weight_returnSquareA = fadd float %tmp_1, %acc_weight_returnSquare_load
+
+ST_97: sum_weight_returnA [7/9] 4.35ns
+:13  %sum_weight_returnA = fadd float %tmp_9, %acc_weight_return_load
+
+
+ <State 98>: 4.35ns
+ST_98: sum_returnA [4/9] 4.35ns
+:7  %sum_returnA = fadd float %tmp_2, %acc_return_load
+
+ST_98: sum_weight_returnSquareA [5/9] 4.35ns
+:10  %sum_weight_returnSquareA = fadd float %tmp_1, %acc_weight_returnSquare_load
+
+ST_98: sum_weight_returnA [6/9] 4.35ns
+:13  %sum_weight_returnA = fadd float %tmp_9, %acc_weight_return_load
+
+
+ <State 99>: 4.35ns
+ST_99: sum_returnA [3/9] 4.35ns
+:7  %sum_returnA = fadd float %tmp_2, %acc_return_load
+
+ST_99: sum_weight_returnSquareA [4/9] 4.35ns
+:10  %sum_weight_returnSquareA = fadd float %tmp_1, %acc_weight_returnSquare_load
+
+ST_99: sum_weight_returnA [5/9] 4.35ns
+:13  %sum_weight_returnA = fadd float %tmp_9, %acc_weight_return_load
+
+
+ <State 100>: 4.35ns
+ST_100: sum_returnA [2/9] 4.35ns
+:7  %sum_returnA = fadd float %tmp_2, %acc_return_load
+
+ST_100: sum_weight_returnSquareA [3/9] 4.35ns
+:10  %sum_weight_returnSquareA = fadd float %tmp_1, %acc_weight_returnSquare_load
+
+ST_100: sum_weight_returnA [4/9] 4.35ns
+:13  %sum_weight_returnA = fadd float %tmp_9, %acc_weight_return_load
+
+
+ <State 101>: 4.35ns
+ST_101: sum_returnA [1/9] 4.35ns
+:7  %sum_returnA = fadd float %tmp_2, %acc_return_load
+
+ST_101: sum_weight_returnSquareA [2/9] 4.35ns
+:10  %sum_weight_returnSquareA = fadd float %tmp_1, %acc_weight_returnSquare_load
+
+ST_101: sum_weight_returnA [3/9] 4.35ns
+:13  %sum_weight_returnA = fadd float %tmp_9, %acc_weight_return_load
+
+
+ <State 102>: 4.35ns
+ST_102: sum_weight_returnSquareA [1/9] 4.35ns
+:10  %sum_weight_returnSquareA = fadd float %tmp_1, %acc_weight_returnSquare_load
+
+ST_102: sum_weight_returnA [2/9] 4.35ns
+:13  %sum_weight_returnA = fadd float %tmp_9, %acc_weight_return_load
+
+
+ <State 103>: 4.35ns
+ST_103: empty_17 [1/1] 0.00ns
+:0  %empty_17 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 6, i64 6, i64 6)
+
+ST_103: stg_536 [1/1] 0.00ns
+:1  call void (...)* @_ssdm_op_SpecLoopName([28 x i8]* @p_str6) nounwind
+
+ST_103: tmp_72_i [1/1] 0.00ns
+:2  %tmp_72_i = call i32 (...)* @_ssdm_op_SpecRegionBegin([28 x i8]* @p_str6)
+
+ST_103: stg_538 [1/1] 0.00ns
+:3  call void (...)* @_ssdm_op_SpecPipeline(i32 5, i32 1, i32 1, i32 0, [1 x i8]* @p_str) nounwind
+
+ST_103: sum_weight_returnA [1/9] 4.35ns
+:13  %sum_weight_returnA = fadd float %tmp_9, %acc_weight_return_load
+
+ST_103: empty_18 [1/1] 0.00ns
+:14  %empty_18 = call i32 (...)* @_ssdm_op_SpecRegionEnd([28 x i8]* @p_str6, i32 %tmp_72_i)
+
+ST_103: stg_541 [1/1] 0.00ns
+:15  br label %.preheader104.i
+
+
+ <State 104>: 1.57ns
+ST_104: shift_reg_load1_i [1/1] 0.00ns
+.preheader103.i.preheader:0  %shift_reg_load1_i = alloca float, align 4
+
+ST_104: acc_weight_returnA_returnB_add [1/1] 0.00ns
+.preheader103.i.preheader:1  %acc_weight_returnA_returnB_add = getelementptr inbounds [6 x float]* %acc_weight_returnA_returnB, i64 0, i64 0
+
+ST_104: acc_weight_returnA_returnB_add_1 [1/1] 0.00ns
+.preheader103.i.preheader:2  %acc_weight_returnA_returnB_add_1 = getelementptr inbounds [6 x float]* %acc_weight_returnA_returnB, i64 0, i64 1
+
+ST_104: acc_weight_returnA_returnB_add_2 [1/1] 0.00ns
+.preheader103.i.preheader:3  %acc_weight_returnA_returnB_add_2 = getelementptr inbounds [6 x float]* %acc_weight_returnA_returnB, i64 0, i64 2
+
+ST_104: acc_weight_returnA_returnB_add_3 [1/1] 0.00ns
+.preheader103.i.preheader:4  %acc_weight_returnA_returnB_add_3 = getelementptr inbounds [6 x float]* %acc_weight_returnA_returnB, i64 0, i64 3
+
+ST_104: acc_weight_returnA_returnB_add_4 [1/1] 0.00ns
+.preheader103.i.preheader:5  %acc_weight_returnA_returnB_add_4 = getelementptr inbounds [6 x float]* %acc_weight_returnA_returnB, i64 0, i64 4
+
+ST_104: acc_weight_returnA_returnB_add_5 [1/1] 0.00ns
+.preheader103.i.preheader:6  %acc_weight_returnA_returnB_add_5 = getelementptr inbounds [6 x float]* %acc_weight_returnA_returnB, i64 0, i64 5
+
+ST_104: stg_549 [1/1] 1.57ns
+.preheader103.i.preheader:7  store float %tmp_4_i, float* %shift_reg_load1_i, align 4
+
+ST_104: stg_550 [1/1] 1.57ns
+.preheader103.i.preheader:8  br label %.preheader103.i
+
+
+ <State 105>: 2.52ns
+ST_105: column_index_i [1/1] 0.00ns
+.preheader103.i:0  %column_index_i = phi i31 [ %column_index, %9 ], [ 1, %.preheader103.i.preheader ]
+
+ST_105: column_index_cast_i [1/1] 0.00ns
+.preheader103.i:1  %column_index_cast_i = zext i31 %column_index_i to i32
+
+ST_105: tmp_26_i [1/1] 2.52ns
+.preheader103.i:2  %tmp_26_i = icmp slt i32 %column_index_cast_i, %NUMBER_OF_INDICES_read
+
+ST_105: stg_554 [1/1] 0.00ns
+.preheader103.i:3  br i1 %tmp_26_i, label %.preheader102.0.i, label %frontEnd.1.exit
+
+ST_105: stg_555 [1/1] 2.39ns
+.preheader102.0.i:1  store float 0.000000e+00, float* %acc_return_addr, align 16
+
+ST_105: stg_556 [1/1] 2.39ns
+.preheader102.0.i:2  store float 0.000000e+00, float* %acc_weight_returnSquare_addr, align 16
+
+ST_105: stg_557 [1/1] 2.39ns
+.preheader102.0.i:3  store float 0.000000e+00, float* %acc_weight_return_addr, align 16
+
+ST_105: stg_558 [1/1] 2.39ns
+.preheader102.0.i:4  store float 0.000000e+00, float* %acc_weight_returnA_returnB_add, align 16
+
+ST_105: stg_559 [1/1] 2.39ns
+.preheader102.0.i:5  store float 0.000000e+00, float* %acc_return_addr_1, align 4
+
+ST_105: stg_560 [1/1] 2.39ns
+.preheader102.0.i:6  store float 0.000000e+00, float* %acc_weight_returnSquare_addr_1, align 4
+
+ST_105: stg_561 [1/1] 2.39ns
+.preheader102.0.i:7  store float 0.000000e+00, float* %acc_weight_return_addr_1, align 4
+
+ST_105: stg_562 [1/1] 2.39ns
+.preheader102.0.i:8  store float 0.000000e+00, float* %acc_weight_returnA_returnB_add_1, align 4
+
+ST_105: stg_563 [1/1] 0.00ns
+frontEnd.1.exit:0  ret void
+
+
+ <State 106>: 2.39ns
+ST_106: stg_564 [1/1] 2.39ns
+.preheader102.0.i:9  store float 0.000000e+00, float* %acc_return_addr_2, align 8
+
+ST_106: stg_565 [1/1] 2.39ns
+.preheader102.0.i:10  store float 0.000000e+00, float* %acc_weight_returnSquare_addr_2, align 8
+
+ST_106: stg_566 [1/1] 2.39ns
+.preheader102.0.i:11  store float 0.000000e+00, float* %acc_weight_return_addr_2, align 8
+
+ST_106: stg_567 [1/1] 2.39ns
+.preheader102.0.i:12  store float 0.000000e+00, float* %acc_weight_returnA_returnB_add_2, align 8
+
+ST_106: stg_568 [1/1] 2.39ns
+.preheader102.0.i:13  store float 0.000000e+00, float* %acc_return_addr_3, align 4
+
+ST_106: stg_569 [1/1] 2.39ns
+.preheader102.0.i:14  store float 0.000000e+00, float* %acc_weight_returnSquare_addr_3, align 4
+
+ST_106: stg_570 [1/1] 2.39ns
+.preheader102.0.i:15  store float 0.000000e+00, float* %acc_weight_return_addr_3, align 4
+
+ST_106: stg_571 [1/1] 2.39ns
+.preheader102.0.i:16  store float 0.000000e+00, float* %acc_weight_returnA_returnB_add_3, align 4
+
+
+ <State 107>: 2.39ns
+ST_107: empty_19 [1/1] 0.00ns
+.preheader102.0.i:0  %empty_19 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 0, i64 2147483646, i64 0)
+
+ST_107: stg_573 [1/1] 2.39ns
+.preheader102.0.i:17  store float 0.000000e+00, float* %acc_return_addr_4, align 16
+
+ST_107: stg_574 [1/1] 2.39ns
+.preheader102.0.i:18  store float 0.000000e+00, float* %acc_weight_returnSquare_addr_4, align 16
+
+ST_107: stg_575 [1/1] 2.39ns
+.preheader102.0.i:19  store float 0.000000e+00, float* %acc_weight_return_addr_4, align 16
+
+ST_107: stg_576 [1/1] 2.39ns
+.preheader102.0.i:20  store float 0.000000e+00, float* %acc_weight_returnA_returnB_add_4, align 16
+
+ST_107: stg_577 [1/1] 2.39ns
+.preheader102.0.i:21  store float 0.000000e+00, float* %acc_return_addr_5, align 4
+
+ST_107: stg_578 [1/1] 2.39ns
+.preheader102.0.i:22  store float 0.000000e+00, float* %acc_weight_returnSquare_addr_5, align 4
+
+ST_107: stg_579 [1/1] 2.39ns
+.preheader102.0.i:23  store float 0.000000e+00, float* %acc_weight_return_addr_5, align 4
+
+ST_107: stg_580 [1/1] 2.39ns
+.preheader102.0.i:24  store float 0.000000e+00, float* %acc_weight_returnA_returnB_add_5, align 4
+
+ST_107: in_indices_data_V_read_2 [1/1] 0.00ns
+.preheader102.0.i:25  %in_indices_data_V_read_2 = call i32 @_ssdm_op_Read.axis.volatile.i32P(i32* %in_indices_data_V)
+
+ST_107: tmp_28_i [1/1] 0.00ns
+.preheader102.0.i:26  %tmp_28_i = bitcast i32 %in_indices_data_V_read_2 to float
+
+ST_107: tmp1_keep_V_1 [1/1] 0.00ns
+.preheader102.0.i:27  %tmp1_keep_V_1 = call i4 @_ssdm_op_Read.axis.volatile.i4P(i4* %in_indices_keep_V)
+
+ST_107: stg_584 [1/1] 1.57ns
+.preheader102.0.i:28  store volatile i4 %tmp1_keep_V_1, i4* %tmp1_keep_V_i, align 4
+
+ST_107: tmp1_strb_V_1 [1/1] 0.00ns
+.preheader102.0.i:29  %tmp1_strb_V_1 = call i4 @_ssdm_op_Read.axis.volatile.i4P(i4* %in_indices_strb_V)
+
+ST_107: stg_586 [1/1] 1.57ns
+.preheader102.0.i:30  store volatile i4 %tmp1_strb_V_1, i4* %tmp1_strb_V_i, align 1
+
+ST_107: tmp1_user_V_1 [1/1] 0.00ns
+.preheader102.0.i:31  %tmp1_user_V_1 = call i1 @_ssdm_op_Read.axis.volatile.i1P(i1* %in_indices_user_V)
+
+ST_107: stg_588 [1/1] 1.57ns
+.preheader102.0.i:32  store volatile i1 %tmp1_user_V_1, i1* %tmp1_user_V_i, align 2
+
+ST_107: tmp1_last_V_1 [1/1] 0.00ns
+.preheader102.0.i:33  %tmp1_last_V_1 = call i1 @_ssdm_op_Read.axis.volatile.i1P(i1* %in_indices_last_V)
+
+ST_107: stg_590 [1/1] 1.57ns
+.preheader102.0.i:34  store volatile i1 %tmp1_last_V_1, i1* %tmp1_last_V_i, align 1
+
+ST_107: tmp1_id_V_1 [1/1] 0.00ns
+.preheader102.0.i:35  %tmp1_id_V_1 = call i1 @_ssdm_op_Read.axis.volatile.i1P(i1* %in_indices_id_V)
+
+ST_107: stg_592 [1/1] 1.57ns
+.preheader102.0.i:36  store volatile i1 %tmp1_id_V_1, i1* %tmp1_id_V_i, align 4
+
+ST_107: tmp1_dest_V_1 [1/1] 0.00ns
+.preheader102.0.i:37  %tmp1_dest_V_1 = call i1 @_ssdm_op_Read.axis.volatile.i1P(i1* %in_indices_dest_V)
+
+ST_107: stg_594 [1/1] 1.57ns
+.preheader102.0.i:38  store volatile i1 %tmp1_dest_V_1, i1* %tmp1_dest_V_i, align 1
+
+ST_107: stg_595 [1/1] 1.57ns
+.preheader102.0.i:39  br label %6
+
+
+ <State 108>: 4.09ns
+ST_108: tmp_30_i [1/1] 0.00ns
+:0  %tmp_30_i = phi float [ %tmp_28_i, %.preheader102.0.i ], [ %tmp_30_i_shift_reg_load_i, %7 ]
+
+ST_108: i4_i [1/1] 0.00ns
+:1  %i4_i = phi i32 [ 1, %.preheader102.0.i ], [ %i_5, %7 ]
+
+ST_108: tmp_31_i [1/1] 2.52ns
+:2  %tmp_31_i = icmp sgt i32 %i4_i, %tmp_1_i
+
+ST_108: stg_599 [1/1] 1.57ns
+:3  br i1 %tmp_31_i, label %.preheader.i, label %7
+
+ST_108: shift_reg_load [1/1] 0.00ns
+:0  %shift_reg_load = load float* %shift_reg_load1_i, align 4
+
+ST_108: tmp_32_i [1/1] 2.52ns
+:5  %tmp_32_i = icmp eq i32 %i4_i, 1
+
+ST_108: tmp_30_i_shift_reg_load_i [1/1] 1.37ns
+:19  %tmp_30_i_shift_reg_load_i = select i1 %tmp_32_i, float %tmp_30_i, float %shift_reg_load
+
+
+ <State 109>: 3.38ns
+ST_109: in_indices_data_V_read_3 [1/1] 0.00ns
+:6  %in_indices_data_V_read_3 = call i32 @_ssdm_op_Read.axis.volatile.i32P(i32* %in_indices_data_V)
+
+ST_109: in_indices_keep_V_read_2 [1/1] 0.00ns
+:7  %in_indices_keep_V_read_2 = call i4 @_ssdm_op_Read.axis.volatile.i4P(i4* %in_indices_keep_V)
+
+ST_109: stg_605 [1/1] 1.57ns
+:8  store volatile i4 %in_indices_keep_V_read_2, i4* %tmp1_keep_V_i, align 4
+
+ST_109: in_indices_strb_V_read_2 [1/1] 0.00ns
+:9  %in_indices_strb_V_read_2 = call i4 @_ssdm_op_Read.axis.volatile.i4P(i4* %in_indices_strb_V)
+
+ST_109: stg_607 [1/1] 1.57ns
+:10  store volatile i4 %in_indices_strb_V_read_2, i4* %tmp1_strb_V_i, align 1
+
+ST_109: in_indices_user_V_read_2 [1/1] 0.00ns
+:11  %in_indices_user_V_read_2 = call i1 @_ssdm_op_Read.axis.volatile.i1P(i1* %in_indices_user_V)
+
+ST_109: stg_609 [1/1] 1.57ns
+:12  store volatile i1 %in_indices_user_V_read_2, i1* %tmp1_user_V_i, align 2
+
+ST_109: in_indices_last_V_read_2 [1/1] 0.00ns
+:13  %in_indices_last_V_read_2 = call i1 @_ssdm_op_Read.axis.volatile.i1P(i1* %in_indices_last_V)
+
+ST_109: stg_611 [1/1] 1.57ns
+:14  store volatile i1 %in_indices_last_V_read_2, i1* %tmp1_last_V_i, align 1
+
+ST_109: in_indices_id_V_read_2 [1/1] 0.00ns
+:15  %in_indices_id_V_read_2 = call i1 @_ssdm_op_Read.axis.volatile.i1P(i1* %in_indices_id_V)
+
+ST_109: stg_613 [1/1] 1.57ns
+:16  store volatile i1 %in_indices_id_V_read_2, i1* %tmp1_id_V_i, align 4
+
+ST_109: in_indices_dest_V_read_2 [1/1] 0.00ns
+:17  %in_indices_dest_V_read_2 = call i1 @_ssdm_op_Read.axis.volatile.i1P(i1* %in_indices_dest_V)
+
+ST_109: stg_615 [1/1] 1.57ns
+:18  store volatile i1 %in_indices_dest_V_read_2, i1* %tmp1_dest_V_i, align 1
+
+ST_109: tmp_54_i [1/1] 0.00ns
+:20  %tmp_54_i = bitcast i32 %in_indices_data_V_read_3 to float
+
+ST_109: tmp_55_i [30/30] 3.38ns
+:21  %tmp_55_i = fdiv float %tmp_30_i_shift_reg_load_i, %tmp_54_i
+
+ST_109: i_5 [1/1] 2.44ns
+:54  %i_5 = add nsw i32 %i4_i, 1
+
+ST_109: stg_619 [1/1] 1.57ns
+:55  store float %tmp_54_i, float* %shift_reg_load1_i, align 4
+
+
+ <State 110>: 3.38ns
+ST_110: tmp_55_i [29/30] 3.38ns
+:21  %tmp_55_i = fdiv float %tmp_30_i_shift_reg_load_i, %tmp_54_i
+
+
+ <State 111>: 3.38ns
+ST_111: tmp_55_i [28/30] 3.38ns
+:21  %tmp_55_i = fdiv float %tmp_30_i_shift_reg_load_i, %tmp_54_i
+
+
+ <State 112>: 3.38ns
+ST_112: tmp_55_i [27/30] 3.38ns
+:21  %tmp_55_i = fdiv float %tmp_30_i_shift_reg_load_i, %tmp_54_i
+
+
+ <State 113>: 3.38ns
+ST_113: tmp_55_i [26/30] 3.38ns
+:21  %tmp_55_i = fdiv float %tmp_30_i_shift_reg_load_i, %tmp_54_i
+
+
+ <State 114>: 3.38ns
+ST_114: tmp_55_i [25/30] 3.38ns
+:21  %tmp_55_i = fdiv float %tmp_30_i_shift_reg_load_i, %tmp_54_i
+
+
+ <State 115>: 3.38ns
+ST_115: tmp_55_i [24/30] 3.38ns
+:21  %tmp_55_i = fdiv float %tmp_30_i_shift_reg_load_i, %tmp_54_i
+
+
+ <State 116>: 3.38ns
+ST_116: tmp_55_i [23/30] 3.38ns
+:21  %tmp_55_i = fdiv float %tmp_30_i_shift_reg_load_i, %tmp_54_i
+
+
+ <State 117>: 3.38ns
+ST_117: tmp_55_i [22/30] 3.38ns
+:21  %tmp_55_i = fdiv float %tmp_30_i_shift_reg_load_i, %tmp_54_i
+
+
+ <State 118>: 3.38ns
+ST_118: tmp_55_i [21/30] 3.38ns
+:21  %tmp_55_i = fdiv float %tmp_30_i_shift_reg_load_i, %tmp_54_i
+
+
+ <State 119>: 4.62ns
+ST_119: tmp_4 [1/1] 0.00ns
+:1  %tmp_4 = trunc i32 %i4_i to i31
+
+ST_119: tmp_55_i [20/30] 3.38ns
+:21  %tmp_55_i = fdiv float %tmp_30_i_shift_reg_load_i, %tmp_54_i
+
+ST_119: tmp_56_i [1/1] 0.00ns
+:23  %tmp_56_i = zext i32 %i4_i to i64
+
+ST_119: weight_rom_addr_3 [1/1] 0.00ns
+:24  %weight_rom_addr_3 = getelementptr inbounds [252 x float]* @weight_rom, i64 0, i64 %tmp_56_i
+
+ST_119: weight_1 [2/2] 2.39ns
+:25  %weight_1 = load float* %weight_rom_addr_3, align 4
+
+ST_119: channel_1 [36/36] 4.62ns
+:26  %channel_1 = urem i32 %i4_i, 6
+
+
+ <State 120>: 4.62ns
+ST_120: tmp_55_i [19/30] 3.38ns
+:21  %tmp_55_i = fdiv float %tmp_30_i_shift_reg_load_i, %tmp_54_i
+
+ST_120: weight_1 [1/2] 2.39ns
+:25  %weight_1 = load float* %weight_rom_addr_3, align 4
+
+ST_120: channel_1 [35/36] 4.62ns
+:26  %channel_1 = urem i32 %i4_i, 6
+
+
+ <State 121>: 4.62ns
+ST_121: tmp_55_i [18/30] 3.38ns
+:21  %tmp_55_i = fdiv float %tmp_30_i_shift_reg_load_i, %tmp_54_i
+
+ST_121: channel_1 [34/36] 4.62ns
+:26  %channel_1 = urem i32 %i4_i, 6
+
+
+ <State 122>: 4.62ns
+ST_122: tmp_55_i [17/30] 3.38ns
+:21  %tmp_55_i = fdiv float %tmp_30_i_shift_reg_load_i, %tmp_54_i
+
+ST_122: channel_1 [33/36] 4.62ns
+:26  %channel_1 = urem i32 %i4_i, 6
+
+
+ <State 123>: 4.62ns
+ST_123: tmp_55_i [16/30] 3.38ns
+:21  %tmp_55_i = fdiv float %tmp_30_i_shift_reg_load_i, %tmp_54_i
+
+ST_123: channel_1 [32/36] 4.62ns
+:26  %channel_1 = urem i32 %i4_i, 6
+
+
+ <State 124>: 4.62ns
+ST_124: tmp_55_i [15/30] 3.38ns
+:21  %tmp_55_i = fdiv float %tmp_30_i_shift_reg_load_i, %tmp_54_i
+
+ST_124: channel_1 [31/36] 4.62ns
+:26  %channel_1 = urem i32 %i4_i, 6
+
+
+ <State 125>: 4.62ns
+ST_125: tmp_55_i [14/30] 3.38ns
+:21  %tmp_55_i = fdiv float %tmp_30_i_shift_reg_load_i, %tmp_54_i
+
+ST_125: channel_1 [30/36] 4.62ns
+:26  %channel_1 = urem i32 %i4_i, 6
+
+
+ <State 126>: 4.62ns
+ST_126: tmp_55_i [13/30] 3.38ns
+:21  %tmp_55_i = fdiv float %tmp_30_i_shift_reg_load_i, %tmp_54_i
+
+ST_126: channel_1 [29/36] 4.62ns
+:26  %channel_1 = urem i32 %i4_i, 6
+
+
+ <State 127>: 4.62ns
+ST_127: tmp_55_i [12/30] 3.38ns
+:21  %tmp_55_i = fdiv float %tmp_30_i_shift_reg_load_i, %tmp_54_i
+
+ST_127: channel_1 [28/36] 4.62ns
+:26  %channel_1 = urem i32 %i4_i, 6
+
+
+ <State 128>: 4.62ns
+ST_128: tmp_55_i [11/30] 3.38ns
+:21  %tmp_55_i = fdiv float %tmp_30_i_shift_reg_load_i, %tmp_54_i
+
+ST_128: channel_1 [27/36] 4.62ns
+:26  %channel_1 = urem i32 %i4_i, 6
+
+
+ <State 129>: 4.62ns
+ST_129: tmp_55_i [10/30] 3.38ns
+:21  %tmp_55_i = fdiv float %tmp_30_i_shift_reg_load_i, %tmp_54_i
+
+ST_129: channel_1 [26/36] 4.62ns
+:26  %channel_1 = urem i32 %i4_i, 6
+
+
+ <State 130>: 4.62ns
+ST_130: tmp_55_i [9/30] 3.38ns
+:21  %tmp_55_i = fdiv float %tmp_30_i_shift_reg_load_i, %tmp_54_i
+
+ST_130: channel_1 [25/36] 4.62ns
+:26  %channel_1 = urem i32 %i4_i, 6
+
+
+ <State 131>: 4.62ns
+ST_131: tmp_55_i [8/30] 3.38ns
+:21  %tmp_55_i = fdiv float %tmp_30_i_shift_reg_load_i, %tmp_54_i
+
+ST_131: channel_1 [24/36] 4.62ns
+:26  %channel_1 = urem i32 %i4_i, 6
+
+
+ <State 132>: 4.62ns
+ST_132: tmp_55_i [7/30] 3.38ns
+:21  %tmp_55_i = fdiv float %tmp_30_i_shift_reg_load_i, %tmp_54_i
+
+ST_132: channel_1 [23/36] 4.62ns
+:26  %channel_1 = urem i32 %i4_i, 6
+
+
+ <State 133>: 4.62ns
+ST_133: tmp_55_i [6/30] 3.38ns
+:21  %tmp_55_i = fdiv float %tmp_30_i_shift_reg_load_i, %tmp_54_i
+
+ST_133: channel_1 [22/36] 4.62ns
+:26  %channel_1 = urem i32 %i4_i, 6
+
+
+ <State 134>: 4.62ns
+ST_134: tmp_55_i [5/30] 3.38ns
+:21  %tmp_55_i = fdiv float %tmp_30_i_shift_reg_load_i, %tmp_54_i
+
+ST_134: channel_1 [21/36] 4.62ns
+:26  %channel_1 = urem i32 %i4_i, 6
+
+
+ <State 135>: 4.62ns
+ST_135: tmp_55_i [4/30] 3.38ns
+:21  %tmp_55_i = fdiv float %tmp_30_i_shift_reg_load_i, %tmp_54_i
+
+ST_135: channel_1 [20/36] 4.62ns
+:26  %channel_1 = urem i32 %i4_i, 6
+
+
+ <State 136>: 4.62ns
+ST_136: tmp_55_i [3/30] 3.38ns
+:21  %tmp_55_i = fdiv float %tmp_30_i_shift_reg_load_i, %tmp_54_i
+
+ST_136: channel_1 [19/36] 4.62ns
+:26  %channel_1 = urem i32 %i4_i, 6
+
+
+ <State 137>: 4.62ns
+ST_137: tmp_55_i [2/30] 3.38ns
+:21  %tmp_55_i = fdiv float %tmp_30_i_shift_reg_load_i, %tmp_54_i
+
+ST_137: channel_1 [18/36] 4.62ns
+:26  %channel_1 = urem i32 %i4_i, 6
+
+
+ <State 138>: 4.62ns
+ST_138: tmp_55_i [1/30] 3.38ns
+:21  %tmp_55_i = fdiv float %tmp_30_i_shift_reg_load_i, %tmp_54_i
+
+ST_138: channel_1 [17/36] 4.62ns
+:26  %channel_1 = urem i32 %i4_i, 6
+
+
+ <State 139>: 5.15ns
+ST_139: lnReturn_1 [18/18] 5.15ns
+:22  %lnReturn_1 = call float @llvm.log.f32(float %tmp_55_i)
+
+ST_139: channel_1 [16/36] 4.62ns
+:26  %channel_1 = urem i32 %i4_i, 6
+
+
+ <State 140>: 5.15ns
+ST_140: lnReturn_1 [17/18] 5.15ns
+:22  %lnReturn_1 = call float @llvm.log.f32(float %tmp_55_i)
+
+ST_140: channel_1 [15/36] 4.62ns
+:26  %channel_1 = urem i32 %i4_i, 6
+
+
+ <State 141>: 5.15ns
+ST_141: lnReturn_1 [16/18] 5.15ns
+:22  %lnReturn_1 = call float @llvm.log.f32(float %tmp_55_i)
+
+ST_141: channel_1 [14/36] 4.62ns
+:26  %channel_1 = urem i32 %i4_i, 6
+
+
+ <State 142>: 5.15ns
+ST_142: lnReturn_1 [15/18] 5.15ns
+:22  %lnReturn_1 = call float @llvm.log.f32(float %tmp_55_i)
+
+ST_142: channel_1 [13/36] 4.62ns
+:26  %channel_1 = urem i32 %i4_i, 6
+
+
+ <State 143>: 5.15ns
+ST_143: lnReturn_1 [14/18] 5.15ns
+:22  %lnReturn_1 = call float @llvm.log.f32(float %tmp_55_i)
+
+ST_143: channel_1 [12/36] 4.62ns
+:26  %channel_1 = urem i32 %i4_i, 6
+
+
+ <State 144>: 5.15ns
+ST_144: lnReturn_1 [13/18] 5.15ns
+:22  %lnReturn_1 = call float @llvm.log.f32(float %tmp_55_i)
+
+ST_144: channel_1 [11/36] 4.62ns
+:26  %channel_1 = urem i32 %i4_i, 6
+
+
+ <State 145>: 5.15ns
+ST_145: lnReturn_1 [12/18] 5.15ns
+:22  %lnReturn_1 = call float @llvm.log.f32(float %tmp_55_i)
+
+ST_145: channel_1 [10/36] 4.62ns
+:26  %channel_1 = urem i32 %i4_i, 6
+
+
+ <State 146>: 5.15ns
+ST_146: lnReturn_1 [11/18] 5.15ns
+:22  %lnReturn_1 = call float @llvm.log.f32(float %tmp_55_i)
+
+ST_146: channel_1 [9/36] 4.62ns
+:26  %channel_1 = urem i32 %i4_i, 6
+
+
+ <State 147>: 5.15ns
+ST_147: lnReturn_1 [10/18] 5.15ns
+:22  %lnReturn_1 = call float @llvm.log.f32(float %tmp_55_i)
+
+ST_147: channel_1 [8/36] 4.62ns
+:26  %channel_1 = urem i32 %i4_i, 6
+
+
+ <State 148>: 5.15ns
+ST_148: lnReturn_1 [9/18] 5.15ns
+:22  %lnReturn_1 = call float @llvm.log.f32(float %tmp_55_i)
+
+ST_148: channel_1 [7/36] 4.62ns
+:26  %channel_1 = urem i32 %i4_i, 6
+
+
+ <State 149>: 5.15ns
+ST_149: lnReturn_1 [8/18] 5.15ns
+:22  %lnReturn_1 = call float @llvm.log.f32(float %tmp_55_i)
+
+ST_149: channel_1 [6/36] 4.62ns
+:26  %channel_1 = urem i32 %i4_i, 6
+
+
+ <State 150>: 5.15ns
+ST_150: lnReturn_1 [7/18] 5.15ns
+:22  %lnReturn_1 = call float @llvm.log.f32(float %tmp_55_i)
+
+ST_150: channel_1 [5/36] 4.62ns
+:26  %channel_1 = urem i32 %i4_i, 6
+
+
+ <State 151>: 5.15ns
+ST_151: lnReturn_1 [6/18] 5.15ns
+:22  %lnReturn_1 = call float @llvm.log.f32(float %tmp_55_i)
+
+ST_151: channel_1 [4/36] 4.62ns
+:26  %channel_1 = urem i32 %i4_i, 6
+
+
+ <State 152>: 5.15ns
+ST_152: lnReturn_1 [5/18] 5.15ns
+:22  %lnReturn_1 = call float @llvm.log.f32(float %tmp_55_i)
+
+ST_152: channel_1 [3/36] 4.62ns
+:26  %channel_1 = urem i32 %i4_i, 6
+
+
+ <State 153>: 5.15ns
+ST_153: lnReturn_1 [4/18] 5.15ns
+:22  %lnReturn_1 = call float @llvm.log.f32(float %tmp_55_i)
+
+ST_153: channel_1 [2/36] 4.62ns
+:26  %channel_1 = urem i32 %i4_i, 6
+
+
+ <State 154>: 5.15ns
+ST_154: lnReturn_1 [3/18] 5.15ns
+:22  %lnReturn_1 = call float @llvm.log.f32(float %tmp_55_i)
+
+ST_154: channel_1 [1/36] 4.62ns
+:26  %channel_1 = urem i32 %i4_i, 6
+
+ST_154: tmp_57_i [1/1] 0.00ns
+:27  %tmp_57_i = zext i32 %channel_1 to i64
+
+ST_154: acc_return_addr_9 [1/1] 0.00ns
+:28  %acc_return_addr_9 = getelementptr inbounds [6 x float]* %acc_return, i64 0, i64 %tmp_57_i
+
+ST_154: acc_weight_returnSquare_addr_9 [1/1] 0.00ns
+:34  %acc_weight_returnSquare_addr_9 = getelementptr inbounds [6 x float]* %acc_weight_returnSquare, i64 0, i64 %tmp_57_i
+
+ST_154: acc_weight_return_addr_9 [1/1] 0.00ns
+:39  %acc_weight_return_addr_9 = getelementptr inbounds [6 x float]* %acc_weight_return, i64 0, i64 %tmp_57_i
+
+ST_154: acc_weight_returnA_returnB_add_6 [1/1] 0.00ns
+:49  %acc_weight_returnA_returnB_add_6 = getelementptr inbounds [6 x float]* %acc_weight_returnA_returnB, i64 0, i64 %tmp_57_i
+
+
+ <State 155>: 5.15ns
+ST_155: lnReturn_1 [2/18] 5.15ns
+:22  %lnReturn_1 = call float @llvm.log.f32(float %tmp_55_i)
+
+ST_155: acc_return_load_3 [2/2] 2.39ns
+:29  %acc_return_load_3 = load float* %acc_return_addr_9, align 4
+
+ST_155: tmp_64_i [1/1] 2.44ns
+:43  %tmp_64_i = add i31 %tmp_4, -1
+
+ST_155: tmp_65_i [1/1] 0.00ns
+:44  %tmp_65_i = zext i31 %tmp_64_i to i64
+
+ST_155: lnReturnA_addr_1 [1/1] 0.00ns
+:45  %lnReturnA_addr_1 = getelementptr inbounds [252 x float]* @lnReturnA, i64 0, i64 %tmp_65_i
+
+ST_155: lnReturnA_load [2/2] 2.39ns
+:46  %lnReturnA_load = load float* %lnReturnA_addr_1, align 4
+
+
+ <State 156>: 5.15ns
+ST_156: lnReturn_1 [1/18] 5.15ns
+:22  %lnReturn_1 = call float @llvm.log.f32(float %tmp_55_i)
+
+ST_156: acc_return_load_3 [1/2] 2.39ns
+:29  %acc_return_load_3 = load float* %acc_return_addr_9, align 4
+
+ST_156: lnReturnA_load [1/2] 2.39ns
+:46  %lnReturnA_load = load float* %lnReturnA_addr_1, align 4
+
+
+ <State 157>: 4.35ns
+ST_157: tmp_58_i [9/9] 4.35ns
+:30  %tmp_58_i = fadd float %acc_return_load_3, %lnReturn_1
+
+ST_157: tmp_59_i [5/5] 4.35ns
+:32  %tmp_59_i = fmul float %lnReturn_1, %lnReturn_1
+
+ST_157: tmp_62_i [5/5] 4.35ns
+:38  %tmp_62_i = fmul float %lnReturn_1, %weight_1
+
+ST_157: tmp_66_i [5/5] 4.35ns
+:47  %tmp_66_i = fmul float %lnReturnA_load, %lnReturn_1
+
+
+ <State 158>: 4.35ns
+ST_158: tmp_58_i [8/9] 4.35ns
+:30  %tmp_58_i = fadd float %acc_return_load_3, %lnReturn_1
+
+ST_158: tmp_59_i [4/5] 4.35ns
+:32  %tmp_59_i = fmul float %lnReturn_1, %lnReturn_1
+
+ST_158: tmp_62_i [4/5] 4.35ns
+:38  %tmp_62_i = fmul float %lnReturn_1, %weight_1
+
+ST_158: tmp_66_i [4/5] 4.35ns
+:47  %tmp_66_i = fmul float %lnReturnA_load, %lnReturn_1
+
+
+ <State 159>: 4.35ns
+ST_159: tmp_58_i [7/9] 4.35ns
+:30  %tmp_58_i = fadd float %acc_return_load_3, %lnReturn_1
+
+ST_159: tmp_59_i [3/5] 4.35ns
+:32  %tmp_59_i = fmul float %lnReturn_1, %lnReturn_1
+
+ST_159: tmp_62_i [3/5] 4.35ns
+:38  %tmp_62_i = fmul float %lnReturn_1, %weight_1
+
+ST_159: tmp_66_i [3/5] 4.35ns
+:47  %tmp_66_i = fmul float %lnReturnA_load, %lnReturn_1
+
+
+ <State 160>: 4.35ns
+ST_160: tmp_58_i [6/9] 4.35ns
+:30  %tmp_58_i = fadd float %acc_return_load_3, %lnReturn_1
+
+ST_160: tmp_59_i [2/5] 4.35ns
+:32  %tmp_59_i = fmul float %lnReturn_1, %lnReturn_1
+
+ST_160: tmp_62_i [2/5] 4.35ns
+:38  %tmp_62_i = fmul float %lnReturn_1, %weight_1
+
+ST_160: acc_weight_return_load_3 [2/2] 2.39ns
+:40  %acc_weight_return_load_3 = load float* %acc_weight_return_addr_9, align 4
+
+ST_160: tmp_66_i [2/5] 4.35ns
+:47  %tmp_66_i = fmul float %lnReturnA_load, %lnReturn_1
+
+
+ <State 161>: 4.35ns
+ST_161: tmp_58_i [5/9] 4.35ns
+:30  %tmp_58_i = fadd float %acc_return_load_3, %lnReturn_1
+
+ST_161: tmp_59_i [1/5] 4.35ns
+:32  %tmp_59_i = fmul float %lnReturn_1, %lnReturn_1
+
+ST_161: tmp_62_i [1/5] 4.35ns
+:38  %tmp_62_i = fmul float %lnReturn_1, %weight_1
+
+ST_161: acc_weight_return_load_3 [1/2] 2.39ns
+:40  %acc_weight_return_load_3 = load float* %acc_weight_return_addr_9, align 4
+
+ST_161: tmp_66_i [1/5] 4.35ns
+:47  %tmp_66_i = fmul float %lnReturnA_load, %lnReturn_1
+
+
+ <State 162>: 4.35ns
+ST_162: tmp_58_i [4/9] 4.35ns
+:30  %tmp_58_i = fadd float %acc_return_load_3, %lnReturn_1
+
+ST_162: tmp_60_i [5/5] 4.35ns
+:33  %tmp_60_i = fmul float %tmp_59_i, %weight_1
+
+ST_162: tmp_63_i [9/9] 4.35ns
+:41  %tmp_63_i = fadd float %acc_weight_return_load_3, %tmp_62_i
+
+ST_162: tmp_67_i [5/5] 4.35ns
+:48  %tmp_67_i = fmul float %tmp_66_i, %weight_1
+
+
+ <State 163>: 4.35ns
+ST_163: tmp_58_i [3/9] 4.35ns
+:30  %tmp_58_i = fadd float %acc_return_load_3, %lnReturn_1
+
+ST_163: tmp_60_i [4/5] 4.35ns
+:33  %tmp_60_i = fmul float %tmp_59_i, %weight_1
+
+ST_163: tmp_63_i [8/9] 4.35ns
+:41  %tmp_63_i = fadd float %acc_weight_return_load_3, %tmp_62_i
+
+ST_163: tmp_67_i [4/5] 4.35ns
+:48  %tmp_67_i = fmul float %tmp_66_i, %weight_1
+
+
+ <State 164>: 4.35ns
+ST_164: tmp_58_i [2/9] 4.35ns
+:30  %tmp_58_i = fadd float %acc_return_load_3, %lnReturn_1
+
+ST_164: tmp_60_i [3/5] 4.35ns
+:33  %tmp_60_i = fmul float %tmp_59_i, %weight_1
+
+ST_164: tmp_63_i [7/9] 4.35ns
+:41  %tmp_63_i = fadd float %acc_weight_return_load_3, %tmp_62_i
+
+ST_164: tmp_67_i [3/5] 4.35ns
+:48  %tmp_67_i = fmul float %tmp_66_i, %weight_1
+
+
+ <State 165>: 4.35ns
+ST_165: tmp_58_i [1/9] 4.35ns
+:30  %tmp_58_i = fadd float %acc_return_load_3, %lnReturn_1
+
+ST_165: tmp_60_i [2/5] 4.35ns
+:33  %tmp_60_i = fmul float %tmp_59_i, %weight_1
+
+ST_165: acc_weight_returnSquare_load_3 [2/2] 2.39ns
+:35  %acc_weight_returnSquare_load_3 = load float* %acc_weight_returnSquare_addr_9, align 4
+
+ST_165: tmp_63_i [6/9] 4.35ns
+:41  %tmp_63_i = fadd float %acc_weight_return_load_3, %tmp_62_i
+
+ST_165: tmp_67_i [2/5] 4.35ns
+:48  %tmp_67_i = fmul float %tmp_66_i, %weight_1
+
+
+ <State 166>: 4.35ns
+ST_166: stg_759 [1/1] 2.39ns
+:31  store float %tmp_58_i, float* %acc_return_addr_9, align 4
+
+ST_166: tmp_60_i [1/5] 4.35ns
+:33  %tmp_60_i = fmul float %tmp_59_i, %weight_1
+
+ST_166: acc_weight_returnSquare_load_3 [1/2] 2.39ns
+:35  %acc_weight_returnSquare_load_3 = load float* %acc_weight_returnSquare_addr_9, align 4
+
+ST_166: tmp_63_i [5/9] 4.35ns
+:41  %tmp_63_i = fadd float %acc_weight_return_load_3, %tmp_62_i
+
+ST_166: tmp_67_i [1/5] 4.35ns
+:48  %tmp_67_i = fmul float %tmp_66_i, %weight_1
+
+ST_166: acc_weight_returnA_returnB_loa [2/2] 2.39ns
+:50  %acc_weight_returnA_returnB_loa = load float* %acc_weight_returnA_returnB_add_6, align 4
+
+
+ <State 167>: 4.35ns
+ST_167: tmp_61_i [9/9] 4.35ns
+:36  %tmp_61_i = fadd float %acc_weight_returnSquare_load_3, %tmp_60_i
+
+ST_167: tmp_63_i [4/9] 4.35ns
+:41  %tmp_63_i = fadd float %acc_weight_return_load_3, %tmp_62_i
+
+ST_167: acc_weight_returnA_returnB_loa [1/2] 2.39ns
+:50  %acc_weight_returnA_returnB_loa = load float* %acc_weight_returnA_returnB_add_6, align 4
+
+
+ <State 168>: 4.35ns
+ST_168: tmp_61_i [8/9] 4.35ns
+:36  %tmp_61_i = fadd float %acc_weight_returnSquare_load_3, %tmp_60_i
+
+ST_168: tmp_63_i [3/9] 4.35ns
+:41  %tmp_63_i = fadd float %acc_weight_return_load_3, %tmp_62_i
+
+ST_168: tmp_68_i [9/9] 4.35ns
+:51  %tmp_68_i = fadd float %acc_weight_returnA_returnB_loa, %tmp_67_i
+
+
+ <State 169>: 4.35ns
+ST_169: tmp_61_i [7/9] 4.35ns
+:36  %tmp_61_i = fadd float %acc_weight_returnSquare_load_3, %tmp_60_i
+
+ST_169: tmp_63_i [2/9] 4.35ns
+:41  %tmp_63_i = fadd float %acc_weight_return_load_3, %tmp_62_i
+
+ST_169: tmp_68_i [8/9] 4.35ns
+:51  %tmp_68_i = fadd float %acc_weight_returnA_returnB_loa, %tmp_67_i
+
+
+ <State 170>: 4.35ns
+ST_170: tmp_61_i [6/9] 4.35ns
+:36  %tmp_61_i = fadd float %acc_weight_returnSquare_load_3, %tmp_60_i
+
+ST_170: tmp_63_i [1/9] 4.35ns
+:41  %tmp_63_i = fadd float %acc_weight_return_load_3, %tmp_62_i
+
+ST_170: tmp_68_i [7/9] 4.35ns
+:51  %tmp_68_i = fadd float %acc_weight_returnA_returnB_loa, %tmp_67_i
+
+
+ <State 171>: 4.35ns
+ST_171: tmp_61_i [5/9] 4.35ns
+:36  %tmp_61_i = fadd float %acc_weight_returnSquare_load_3, %tmp_60_i
+
+ST_171: stg_778 [1/1] 2.39ns
+:42  store float %tmp_63_i, float* %acc_weight_return_addr_9, align 4
+
+ST_171: tmp_68_i [6/9] 4.35ns
+:51  %tmp_68_i = fadd float %acc_weight_returnA_returnB_loa, %tmp_67_i
+
+
+ <State 172>: 4.35ns
+ST_172: tmp_61_i [4/9] 4.35ns
+:36  %tmp_61_i = fadd float %acc_weight_returnSquare_load_3, %tmp_60_i
+
+ST_172: tmp_68_i [5/9] 4.35ns
+:51  %tmp_68_i = fadd float %acc_weight_returnA_returnB_loa, %tmp_67_i
+
+
+ <State 173>: 4.35ns
+ST_173: tmp_61_i [3/9] 4.35ns
+:36  %tmp_61_i = fadd float %acc_weight_returnSquare_load_3, %tmp_60_i
+
+ST_173: tmp_68_i [4/9] 4.35ns
+:51  %tmp_68_i = fadd float %acc_weight_returnA_returnB_loa, %tmp_67_i
+
+
+ <State 174>: 4.35ns
+ST_174: tmp_61_i [2/9] 4.35ns
+:36  %tmp_61_i = fadd float %acc_weight_returnSquare_load_3, %tmp_60_i
+
+ST_174: tmp_68_i [3/9] 4.35ns
+:51  %tmp_68_i = fadd float %acc_weight_returnA_returnB_loa, %tmp_67_i
+
+
+ <State 175>: 4.35ns
+ST_175: tmp_61_i [1/9] 4.35ns
+:36  %tmp_61_i = fadd float %acc_weight_returnSquare_load_3, %tmp_60_i
+
+ST_175: tmp_68_i [2/9] 4.35ns
+:51  %tmp_68_i = fadd float %acc_weight_returnA_returnB_loa, %tmp_67_i
+
+
+ <State 176>: 4.35ns
+ST_176: stg_788 [1/1] 2.39ns
+:37  store float %tmp_61_i, float* %acc_weight_returnSquare_addr_9, align 4
+
+ST_176: tmp_68_i [1/9] 4.35ns
+:51  %tmp_68_i = fadd float %acc_weight_returnA_returnB_loa, %tmp_67_i
+
+
+ <State 177>: 2.39ns
+ST_177: stg_790 [1/1] 0.00ns
+:2  call void (...)* @_ssdm_op_SpecLoopName([33 x i8]* @p_str8) nounwind
+
+ST_177: tmp_79_i [1/1] 0.00ns
+:3  %tmp_79_i = call i32 (...)* @_ssdm_op_SpecRegionBegin([33 x i8]* @p_str8)
+
+ST_177: stg_792 [1/1] 0.00ns
+:4  call void (...)* @_ssdm_op_SpecPipeline(i32 1, i32 1, i32 1, i32 0, [1 x i8]* @p_str) nounwind
+
+ST_177: stg_793 [1/1] 2.39ns
+:52  store float %tmp_68_i, float* %acc_weight_returnA_returnB_add_6, align 4
+
+ST_177: empty_20 [1/1] 0.00ns
+:53  %empty_20 = call i32 (...)* @_ssdm_op_SpecRegionEnd([33 x i8]* @p_str8, i32 %tmp_79_i)
+
+ST_177: stg_795 [1/1] 0.00ns
+:56  br label %6
+
+
+ <State 178>: 2.39ns
+ST_178: tmp_8 [1/1] 0.00ns
+.preheader.i:0  %tmp_8 = phi float [ %sum_weight_returnA_returnB, %8 ], [ 0.000000e+00, %6 ]
+
+ST_178: tmp_7 [1/1] 0.00ns
+.preheader.i:1  %tmp_7 = phi float [ %sum_weight_return, %8 ], [ 0.000000e+00, %6 ]
+
+ST_178: tmp_5 [1/1] 0.00ns
+.preheader.i:2  %tmp_5 = phi float [ %sum_weight_returnSquare, %8 ], [ 0.000000e+00, %6 ]
+
+ST_178: tmp_3 [1/1] 0.00ns
+.preheader.i:3  %tmp_3 = phi float [ %sum_return, %8 ], [ 0.000000e+00, %6 ]
+
+ST_178: i8_i [1/1] 0.00ns
+.preheader.i:4  %i8_i = phi i3 [ %i_4, %8 ], [ 0, %6 ]
+
+ST_178: exitcond_i [1/1] 1.62ns
+.preheader.i:5  %exitcond_i = icmp eq i3 %i8_i, -2
+
+ST_178: i_4 [1/1] 0.80ns
+.preheader.i:6  %i_4 = add i3 %i8_i, 1
+
+ST_178: stg_803 [1/1] 0.00ns
+.preheader.i:7  br i1 %exitcond_i, label %9, label %8
+
+ST_178: tmp_i_22 [1/1] 0.00ns
+:4  %tmp_i_22 = zext i3 %i8_i to i64
+
+ST_178: acc_return_addr_8 [1/1] 0.00ns
+:5  %acc_return_addr_8 = getelementptr inbounds [6 x float]* %acc_return, i64 0, i64 %tmp_i_22
+
+ST_178: acc_return_load_2 [2/2] 2.39ns
+:6  %acc_return_load_2 = load float* %acc_return_addr_8, align 4
+
+
+ <State 179>: 2.39ns
+ST_179: acc_return_load_2 [1/2] 2.39ns
+:6  %acc_return_load_2 = load float* %acc_return_addr_8, align 4
+
+ST_179: acc_weight_returnSquare_addr_8 [1/1] 0.00ns
+:8  %acc_weight_returnSquare_addr_8 = getelementptr inbounds [6 x float]* %acc_weight_returnSquare, i64 0, i64 %tmp_i_22
+
+ST_179: acc_weight_returnSquare_load_2 [2/2] 2.39ns
+:9  %acc_weight_returnSquare_load_2 = load float* %acc_weight_returnSquare_addr_8, align 4
+
+
+ <State 180>: 4.35ns
+ST_180: sum_return [9/9] 4.35ns
+:7  %sum_return = fadd float %tmp_3, %acc_return_load_2
+
+ST_180: acc_weight_returnSquare_load_2 [1/2] 2.39ns
+:9  %acc_weight_returnSquare_load_2 = load float* %acc_weight_returnSquare_addr_8, align 4
+
+ST_180: acc_weight_return_addr_8 [1/1] 0.00ns
+:11  %acc_weight_return_addr_8 = getelementptr inbounds [6 x float]* %acc_weight_return, i64 0, i64 %tmp_i_22
+
+ST_180: acc_weight_return_load_2 [2/2] 2.39ns
+:12  %acc_weight_return_load_2 = load float* %acc_weight_return_addr_8, align 4
+
+ST_180: acc_weight_returnA_returnB_add_7 [1/1] 0.00ns
+:14  %acc_weight_returnA_returnB_add_7 = getelementptr inbounds [6 x float]* %acc_weight_returnA_returnB, i64 0, i64 %tmp_i_22
+
+ST_180: acc_weight_returnA_returnB_loa_1 [2/2] 2.39ns
+:15  %acc_weight_returnA_returnB_loa_1 = load float* %acc_weight_returnA_returnB_add_7, align 4
+
+
+ <State 181>: 4.35ns
+ST_181: sum_return [8/9] 4.35ns
+:7  %sum_return = fadd float %tmp_3, %acc_return_load_2
+
+ST_181: sum_weight_returnSquare [9/9] 4.35ns
+:10  %sum_weight_returnSquare = fadd float %tmp_5, %acc_weight_returnSquare_load_2
+
+ST_181: acc_weight_return_load_2 [1/2] 2.39ns
+:12  %acc_weight_return_load_2 = load float* %acc_weight_return_addr_8, align 4
+
+ST_181: acc_weight_returnA_returnB_loa_1 [1/2] 2.39ns
+:15  %acc_weight_returnA_returnB_loa_1 = load float* %acc_weight_returnA_returnB_add_7, align 4
+
+
+ <State 182>: 4.35ns
+ST_182: sum_return [7/9] 4.35ns
+:7  %sum_return = fadd float %tmp_3, %acc_return_load_2
+
+ST_182: sum_weight_returnSquare [8/9] 4.35ns
+:10  %sum_weight_returnSquare = fadd float %tmp_5, %acc_weight_returnSquare_load_2
+
+ST_182: sum_weight_return [9/9] 4.35ns
+:13  %sum_weight_return = fadd float %tmp_7, %acc_weight_return_load_2
+
+
+ <State 183>: 4.35ns
+ST_183: sum_return [6/9] 4.35ns
+:7  %sum_return = fadd float %tmp_3, %acc_return_load_2
+
+ST_183: sum_weight_returnSquare [7/9] 4.35ns
+:10  %sum_weight_returnSquare = fadd float %tmp_5, %acc_weight_returnSquare_load_2
+
+ST_183: sum_weight_return [8/9] 4.35ns
+:13  %sum_weight_return = fadd float %tmp_7, %acc_weight_return_load_2
+
+ST_183: sum_weight_returnA_returnB [9/9] 4.35ns
+:16  %sum_weight_returnA_returnB = fadd float %tmp_8, %acc_weight_returnA_returnB_loa_1
+
+
+ <State 184>: 4.35ns
+ST_184: sum_return [5/9] 4.35ns
+:7  %sum_return = fadd float %tmp_3, %acc_return_load_2
+
+ST_184: sum_weight_returnSquare [6/9] 4.35ns
+:10  %sum_weight_returnSquare = fadd float %tmp_5, %acc_weight_returnSquare_load_2
+
+ST_184: sum_weight_return [7/9] 4.35ns
+:13  %sum_weight_return = fadd float %tmp_7, %acc_weight_return_load_2
+
+ST_184: sum_weight_returnA_returnB [8/9] 4.35ns
+:16  %sum_weight_returnA_returnB = fadd float %tmp_8, %acc_weight_returnA_returnB_loa_1
+
+
+ <State 185>: 4.35ns
+ST_185: sum_return [4/9] 4.35ns
+:7  %sum_return = fadd float %tmp_3, %acc_return_load_2
+
+ST_185: sum_weight_returnSquare [5/9] 4.35ns
+:10  %sum_weight_returnSquare = fadd float %tmp_5, %acc_weight_returnSquare_load_2
+
+ST_185: sum_weight_return [6/9] 4.35ns
+:13  %sum_weight_return = fadd float %tmp_7, %acc_weight_return_load_2
+
+ST_185: sum_weight_returnA_returnB [7/9] 4.35ns
+:16  %sum_weight_returnA_returnB = fadd float %tmp_8, %acc_weight_returnA_returnB_loa_1
+
+
+ <State 186>: 4.35ns
+ST_186: sum_return [3/9] 4.35ns
+:7  %sum_return = fadd float %tmp_3, %acc_return_load_2
+
+ST_186: sum_weight_returnSquare [4/9] 4.35ns
+:10  %sum_weight_returnSquare = fadd float %tmp_5, %acc_weight_returnSquare_load_2
+
+ST_186: sum_weight_return [5/9] 4.35ns
+:13  %sum_weight_return = fadd float %tmp_7, %acc_weight_return_load_2
+
+ST_186: sum_weight_returnA_returnB [6/9] 4.35ns
+:16  %sum_weight_returnA_returnB = fadd float %tmp_8, %acc_weight_returnA_returnB_loa_1
+
+
+ <State 187>: 4.35ns
+ST_187: sum_return [2/9] 4.35ns
+:7  %sum_return = fadd float %tmp_3, %acc_return_load_2
+
+ST_187: sum_weight_returnSquare [3/9] 4.35ns
+:10  %sum_weight_returnSquare = fadd float %tmp_5, %acc_weight_returnSquare_load_2
+
+ST_187: sum_weight_return [4/9] 4.35ns
+:13  %sum_weight_return = fadd float %tmp_7, %acc_weight_return_load_2
+
+ST_187: sum_weight_returnA_returnB [5/9] 4.35ns
+:16  %sum_weight_returnA_returnB = fadd float %tmp_8, %acc_weight_returnA_returnB_loa_1
+
+
+ <State 188>: 4.35ns
+ST_188: sum_return [1/9] 4.35ns
+:7  %sum_return = fadd float %tmp_3, %acc_return_load_2
+
+ST_188: sum_weight_returnSquare [2/9] 4.35ns
+:10  %sum_weight_returnSquare = fadd float %tmp_5, %acc_weight_returnSquare_load_2
+
+ST_188: sum_weight_return [3/9] 4.35ns
+:13  %sum_weight_return = fadd float %tmp_7, %acc_weight_return_load_2
+
+ST_188: sum_weight_returnA_returnB [4/9] 4.35ns
+:16  %sum_weight_returnA_returnB = fadd float %tmp_8, %acc_weight_returnA_returnB_loa_1
+
+
+ <State 189>: 4.35ns
+ST_189: sum_weight_returnSquare [1/9] 4.35ns
+:10  %sum_weight_returnSquare = fadd float %tmp_5, %acc_weight_returnSquare_load_2
+
+ST_189: sum_weight_return [2/9] 4.35ns
+:13  %sum_weight_return = fadd float %tmp_7, %acc_weight_return_load_2
+
+ST_189: sum_weight_returnA_returnB [3/9] 4.35ns
+:16  %sum_weight_returnA_returnB = fadd float %tmp_8, %acc_weight_returnA_returnB_loa_1
+
+
+ <State 190>: 4.35ns
+ST_190: sum_weight_return [1/9] 4.35ns
+:13  %sum_weight_return = fadd float %tmp_7, %acc_weight_return_load_2
+
+ST_190: sum_weight_returnA_returnB [2/9] 4.35ns
+:16  %sum_weight_returnA_returnB = fadd float %tmp_8, %acc_weight_returnA_returnB_loa_1
+
+
+ <State 191>: 4.35ns
+ST_191: empty_21 [1/1] 0.00ns
+:0  %empty_21 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 6, i64 6, i64 6)
+
+ST_191: stg_853 [1/1] 0.00ns
+:1  call void (...)* @_ssdm_op_SpecLoopName([16 x i8]* @p_str9) nounwind
+
+ST_191: tmp_81_i [1/1] 0.00ns
+:2  %tmp_81_i = call i32 (...)* @_ssdm_op_SpecRegionBegin([16 x i8]* @p_str9)
+
+ST_191: stg_855 [1/1] 0.00ns
+:3  call void (...)* @_ssdm_op_SpecPipeline(i32 5, i32 1, i32 1, i32 0, [1 x i8]* @p_str) nounwind
+
+ST_191: sum_weight_returnA_returnB [1/9] 4.35ns
+:16  %sum_weight_returnA_returnB = fadd float %tmp_8, %acc_weight_returnA_returnB_loa_1
+
+ST_191: empty_23 [1/1] 0.00ns
+:17  %empty_23 = call i32 (...)* @_ssdm_op_SpecRegionEnd([16 x i8]* @p_str9, i32 %tmp_81_i)
+
+ST_191: stg_858 [1/1] 0.00ns
+:18  br label %.preheader.i
+
+
+ <State 192>: 2.44ns
+ST_192: stg_859 [1/1] 1.86ns
+:0  call void @_ssdm_op_Write.ap_fifo.volatile.floatP(float* %sum_weight_out_V, float %sum_weight)
+
+ST_192: stg_860 [1/1] 1.86ns
+:1  call void @_ssdm_op_Write.ap_fifo.volatile.floatP(float* %sum_return_out_V, float %tmp_3)
+
+ST_192: stg_861 [1/1] 1.86ns
+:2  call void @_ssdm_op_Write.ap_fifo.volatile.floatP(float* %sum_weight_returnSquare_out_V, float %tmp_5)
+
+ST_192: stg_862 [1/1] 1.86ns
+:3  call void @_ssdm_op_Write.ap_fifo.volatile.floatP(float* %sum_weight_return_out_V, float %tmp_7)
+
+ST_192: stg_863 [1/1] 1.86ns
+:4  call void @_ssdm_op_Write.ap_fifo.volatile.floatP(float* %sum_weight_returnA_returnB_out, float %tmp_8)
+
+ST_192: stg_864 [1/1] 1.86ns
+:5  call void @_ssdm_op_Write.ap_fifo.volatile.floatP(float* %sum_returnA_out_V, float %tmp_2)
+
+ST_192: stg_865 [1/1] 1.86ns
+:6  call void @_ssdm_op_Write.ap_fifo.volatile.floatP(float* %sum_weight_returnSquareA_out_V, float %tmp_1)
+
+ST_192: stg_866 [1/1] 1.86ns
+:7  call void @_ssdm_op_Write.ap_fifo.volatile.floatP(float* %sum_weight_returnA_out_V, float %tmp_9)
+
+ST_192: column_index [1/1] 2.44ns
+:8  %column_index = add i31 %column_index_i, 1
+
+ST_192: stg_868 [1/1] 0.00ns
+:9  br label %.preheader103.i
+
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+	State 8
+	State 9
+	State 10
+	State 11
+	State 12
+	State 13
+	State 14
+	State 15
+	State 16
+	State 17
+	State 18
+	State 19
+	State 20
+	State 21
+	State 22
+	State 23
+	State 24
+	State 25
+	State 26
+	State 27
+	State 28
+	State 29
+	State 30
+	State 31
+	State 32
+	State 33
+	State 34
+	State 35
+	State 36
+	State 37
+	State 38
+	State 39
+	State 40
+	State 41
+	State 42
+	State 43
+	State 44
+	State 45
+	State 46
+	State 47
+	State 48
+	State 49
+	State 50
+	State 51
+	State 52
+	State 53
+	State 54
+	State 55
+	State 56
+	State 57
+	State 58
+	State 59
+	State 60
+	State 61
+	State 62
+	State 63
+	State 64
+	State 65
+	State 66
+	State 67
+	State 68
+	State 69
+	State 70
+	State 71
+	State 72
+	State 73
+	State 74
+	State 75
+	State 76
+	State 77
+	State 78
+	State 79
+	State 80
+	State 81
+	State 82
+	State 83
+	State 84
+	State 85
+	State 86
+	State 87
+	State 88
+	State 89
+	State 90
+	State 91
+	State 92
+	State 93
+	State 94
+	State 95
+	State 96
+	State 97
+	State 98
+	State 99
+	State 100
+	State 101
+	State 102
+	State 103
+	State 104
+	State 105
+	State 106
+	State 107
+	State 108
+	State 109
+	State 110
+	State 111
+	State 112
+	State 113
+	State 114
+	State 115
+	State 116
+	State 117
+	State 118
+	State 119
+	State 120
+	State 121
+	State 122
+	State 123
+	State 124
+	State 125
+	State 126
+	State 127
+	State 128
+	State 129
+	State 130
+	State 131
+	State 132
+	State 133
+	State 134
+	State 135
+	State 136
+	State 137
+	State 138
+	State 139
+	State 140
+	State 141
+	State 142
+	State 143
+	State 144
+	State 145
+	State 146
+	State 147
+	State 148
+	State 149
+	State 150
+	State 151
+	State 152
+	State 153
+	State 154
+	State 155
+	State 156
+	State 157
+	State 158
+	State 159
+	State 160
+	State 161
+	State 162
+	State 163
+	State 164
+	State 165
+	State 166
+	State 167
+	State 168
+	State 169
+	State 170
+	State 171
+	State 172
+	State 173
+	State 174
+	State 175
+	State 176
+	State 177
+	State 178
+	State 179
+	State 180
+	State 181
+	State 182
+	State 183
+	State 184
+	State 185
+	State 186
+	State 187
+	State 188
+	State 189
+	State 190
+	State 191
+	State 192
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

@@ -1,0 +1,14 @@
+void _p0_mmult_0(float A[1024], float B[1024], float C[1024]);
+void _p0_mmult_0(float A[1024], float B[1024], float C[1024])
+{
+  switch_to_next_partition(0);
+  cf_send_i(&(_p0_swinst_mmult_0.A), A, 1024 * 4, &_p0_request_0);
+  cf_send_i(&(_p0_swinst_mmult_0.B), B, 1024 * 4, &_p0_request_1);
+
+  cf_receive_i(&(_p0_swinst_mmult_0.C), C, 1024 * 4, &_p0_mmult_0_num_C, &_p0_request_2);
+
+  cf_wait(_p0_request_0);
+  cf_wait(_p0_request_1);
+  cf_wait(_p0_request_2);
+}
+

@@ -1,11 +1,11 @@
 digraph dm_graph {
 v0 [label = "v0:main" ,style=filled];
-v1 [label = "v1:XFER(IN):number_of_days @350, SCALAR\nAXILITE(mm2s) on GP(PS to ACC)\n" ,style=filled,fillcolor = green];
-v2 [label = "v2:XFER(IN):number_of_indices @350, SCALAR\nAXILITE(mm2s) on GP(PS to ACC)\n" ,style=filled,fillcolor = green];
-v3 [label = "v3:XFER(IN):in_indices @350, ARRAY\nCPU\nAXIDMA_SIMPLE(mm2s) on AFI(PS to ACC)\n" ,style=filled,fillcolor = green];
-v4 [label = "v4:call 'correlation_accel_v2' in 'main.cpp' @350\nACC\n" ,style=filled,fillcolor = red];
-v5 [label = "v5:XFER(OUT):out_correlation @350, ARRAY\nCPU\nAXIDMA_SIMPLE(s2mm) on AFI(ACC to PS)\n" ,style=filled,fillcolor = yellow];
-v6 [label = "v6:cf_wait(): \nXFER(IN):number_of_indices @350, SCALAR\nAXILITE(mm2s) on GP(PS to ACC)\nXFER(IN):in_indices @350, ARRAY\nCPU\nAXIDMA_SIMPLE(mm2s) on AFI(PS to ACC)\nXFER(OUT):out_correlation @350, ARRAY\nCPU\nAXIDMA_SIMPLE(s2mm) on AFI(ACC to PS)\nXFER(IN):number_of_days @350, SCALAR\nAXILITE(mm2s) on GP(PS to ACC)\n\nCPU\nCPU\nCPU\nCPU\n" ,style=filled,fillcolor = cyan];
+v1 [label = "v1:XFER(IN):number_of_days @368, SCALAR\nAXILITE(mm2s) on GP(PS to ACC)\n" ,style=filled,fillcolor = green];
+v2 [label = "v2:XFER(IN):number_of_indices @368, SCALAR\nAXILITE(mm2s) on GP(PS to ACC)\n" ,style=filled,fillcolor = green];
+v3 [label = "v3:XFER(IN):in_indices @368, ARRAY\nCPU\nAXIDMA_SG(mm2s) on AFI(PS to ACC)\n" ,style=filled,fillcolor = green];
+v4 [label = "v4:call 'correlation_accel_v2' in 'main.cpp' @368\nACC\n" ,style=filled,fillcolor = red];
+v5 [label = "v5:XFER(OUT):out_correlation @368, ARRAY\nCPU\nAXIDMA_SIMPLE(s2mm) on AFI(ACC to PS)\n" ,style=filled,fillcolor = yellow];
+v6 [label = "v6:cf_wait(): \nXFER(IN):number_of_indices @368, SCALAR\nAXILITE(mm2s) on GP(PS to ACC)\nXFER(IN):in_indices @368, ARRAY\nCPU\nAXIDMA_SG(mm2s) on AFI(PS to ACC)\nXFER(IN):number_of_days @368, SCALAR\nAXILITE(mm2s) on GP(PS to ACC)\nXFER(OUT):out_correlation @368, ARRAY\nCPU\nAXIDMA_SIMPLE(s2mm) on AFI(ACC to PS)\n\nCPU\nCPU\nCPU\nCPU\n" ,style=filled,fillcolor = cyan];
 subgraph cluster0 {
 v1;
 v2;
@@ -13,7 +13,7 @@ v3;
 v4;
 v5;
 v6;
-label = "call 'correlation_accel_v2' in 'main.cpp' @350\nACC\n";
+label = "call 'correlation_accel_v2' in 'main.cpp' @368\nACC\n";
 }
 v1 -> v4 [label = "0"];
 v2 -> v4 [label = "0"];

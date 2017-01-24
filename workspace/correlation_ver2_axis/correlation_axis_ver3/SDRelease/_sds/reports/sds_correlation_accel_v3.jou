@@ -1,7 +1,7 @@
 (c) Copyright 2012-2015 Xilinx, Inc. All Rights Reserved.
 #-----------------------------------------------------------
 # Tool version  : sds++ 2014.4 20150228
-# Start time    : Tue Jan 24 05:43:23 PM CET 2017
+# Start time    : Tue Jan 24 10:47:44 PM CET 2017
 # Command line  : sds++ -Wall -O3 -I../src -c -fmessage-length=0 -MTsrc/correlation_accel_v3.o -sds-hw correlation_accel_v3 correlation_accel_v3.cpp -clkid 2 -sds-end -MMD -MP -MFsrc/correlation_accel_v3.d -MTsrc/correlation_accel_v3.d -o src/correlation_accel_v3.o ../src/correlation_accel_v3.cpp -sds-pf zed
 # Log file      : /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease/_sds/reports/sds_correlation_accel_v3.log
 # Journal file  : /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease/_sds/reports/sds_correlation_accel_v3.jou
@@ -38,4 +38,4 @@ arm-xilinx-linux-gnueabi-objcopy --add-section .xdpp=/home/trungnguyen/SDSoC/wor
 arm-xilinx-linux-gnueabi-objcopy --add-section .xdfcnmap=/home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease/_sds/.llvm/correlation_accel_v3.fcnmap.xml /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease/_sds/swstubs/correlation_accel_v3.o
 arm-xilinx-linux-gnueabi-objcopy --add-section .xdhlscore=/home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease/_sds/vhls/correlation_accel_v3/solution/impl/ip/xilinx_com_hls_correlation_accel_v3_1_0.zip /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease/_sds/swstubs/correlation_accel_v3.o
 arm-xilinx-linux-gnueabi-objcopy --add-section .xdif=/home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease/_sds/.llvm/correlation_accel_v3_if.xml /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease/_sds/swstubs/correlation_accel_v3.o
-# sds++ completed at Tue Jan 24 05:44:18 PM CET 2017
+# sds++ completed at Tue Jan 24 10:48:40 PM CET 2017

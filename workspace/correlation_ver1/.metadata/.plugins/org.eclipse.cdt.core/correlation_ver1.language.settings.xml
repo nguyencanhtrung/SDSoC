@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<project>
+	<configuration id="com.xilinx.sdk.apf.toolchain.configuration.debug.643090533" name="SDDebug">
+		<extension point="org.eclipse.cdt.core.LanguageSettingsProvider">
+			<provider id="org.eclipse.cdt.ui.UserLanguageSettingsProvider">
+				<language id="org.eclipse.cdt.core.gcc">
+					<resource project-relative-path="">
+						<entry kind="includePath" name="/opt/Xilinx/SDSoC/2014.4/arm-xilinx-eabi/include">
+							<flag value="BUILTIN|LOCAL"/>
+						</entry>
+					</resource>
+				</language>
+			</provider>
+		</extension>
+	</configuration>
+	<configuration id="com.xilinx.sdk.apf.toolchain.configuration.release.494507008" name="SDRelease">
+		<extension point="org.eclipse.cdt.core.LanguageSettingsProvider">
+			<provider id="org.eclipse.cdt.ui.UserLanguageSettingsProvider">
+				<language id="org.eclipse.cdt.core.gcc">
+					<resource project-relative-path="">
+						<entry kind="includePath" name="/opt/Xilinx/SDSoC/2014.4/arm-xilinx-eabi/include">
+							<flag value="BUILTIN|LOCAL"/>
+						</entry>
+					</resource>
+				</language>
+			</provider>
+		</extension>
+	</configuration>
+	<configuration id="com.xilinx.sdk.apf.toolchain.configuration.estimate.1264452327" name="SDEstimate">
+		<extension point="org.eclipse.cdt.core.LanguageSettingsProvider">
+			<provider id="org.eclipse.cdt.ui.UserLanguageSettingsProvider">
+				<language id="org.eclipse.cdt.core.gcc">
+					<resource project-relative-path="">
+						<entry kind="includePath" name="/opt/Xilinx/SDSoC/2014.4/arm-xilinx-eabi/include">
+							<flag value="BUILTIN|LOCAL"/>
+						</entry>
+					</resource>
+				</language>
+			</provider>
+		</extension>
+	</configuration>
+</project>

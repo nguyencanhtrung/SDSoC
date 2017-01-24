@@ -25,8 +25,8 @@ set C_modelArgList {
 	{ sum_returnA_out_V float 32 regular {fifo 1 volatile }  }
 	{ sum_weight_returnSquareA_out_V float 32 regular {fifo 1 volatile }  }
 	{ sum_weight_returnA_out_V float 32 regular {fifo 1 volatile }  }
-	{ NUMBER_OF_DAYS_out int 32 regular {fifo 1}  }
 	{ NUMBER_OF_INDICES_out int 32 regular {fifo 1}  }
+	{ NUMBER_OF_DAYS_out int 32 regular {fifo 1}  }
 }
 set C_modelArgMapList {[ 
 	{ "Name" : "NUMBER_OF_DAYS", "interface" : "wire", "bitwidth" : 32} , 
@@ -46,8 +46,8 @@ set C_modelArgMapList {[
  	{ "Name" : "sum_returnA_out_V", "interface" : "fifo", "bitwidth" : 32} , 
  	{ "Name" : "sum_weight_returnSquareA_out_V", "interface" : "fifo", "bitwidth" : 32} , 
  	{ "Name" : "sum_weight_returnA_out_V", "interface" : "fifo", "bitwidth" : 32} , 
- 	{ "Name" : "NUMBER_OF_DAYS_out", "interface" : "fifo", "bitwidth" : 32} , 
- 	{ "Name" : "NUMBER_OF_INDICES_out", "interface" : "fifo", "bitwidth" : 32} ]}
+ 	{ "Name" : "NUMBER_OF_INDICES_out", "interface" : "fifo", "bitwidth" : 32} , 
+ 	{ "Name" : "NUMBER_OF_DAYS_out", "interface" : "fifo", "bitwidth" : 32} ]}
 # RTL Port declarations: 
 set portNum 48
 set portList { 
@@ -93,12 +93,12 @@ set portList {
 	{ sum_weight_returnA_out_V_din sc_out sc_lv 32 signal 16 } 
 	{ sum_weight_returnA_out_V_full_n sc_in sc_logic 1 signal 16 } 
 	{ sum_weight_returnA_out_V_write sc_out sc_logic 1 signal 16 } 
-	{ NUMBER_OF_DAYS_out_din sc_out sc_lv 32 signal 17 } 
-	{ NUMBER_OF_DAYS_out_full_n sc_in sc_logic 1 signal 17 } 
-	{ NUMBER_OF_DAYS_out_write sc_out sc_logic 1 signal 17 } 
-	{ NUMBER_OF_INDICES_out_din sc_out sc_lv 32 signal 18 } 
-	{ NUMBER_OF_INDICES_out_full_n sc_in sc_logic 1 signal 18 } 
-	{ NUMBER_OF_INDICES_out_write sc_out sc_logic 1 signal 18 } 
+	{ NUMBER_OF_INDICES_out_din sc_out sc_lv 32 signal 17 } 
+	{ NUMBER_OF_INDICES_out_full_n sc_in sc_logic 1 signal 17 } 
+	{ NUMBER_OF_INDICES_out_write sc_out sc_logic 1 signal 17 } 
+	{ NUMBER_OF_DAYS_out_din sc_out sc_lv 32 signal 18 } 
+	{ NUMBER_OF_DAYS_out_full_n sc_in sc_logic 1 signal 18 } 
+	{ NUMBER_OF_DAYS_out_write sc_out sc_logic 1 signal 18 } 
 }
 set NewPortList {[ 
 	{ "name": "ap_clk", "direction": "in", "datatype": "sc_logic", "bitwidth":1, "type": "clock", "bundle":{"name": "ap_clk", "role": "default" }} , 
@@ -143,12 +143,12 @@ set NewPortList {[
  	{ "name": "sum_weight_returnA_out_V_din", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "sum_weight_returnA_out_V", "role": "din" }} , 
  	{ "name": "sum_weight_returnA_out_V_full_n", "direction": "in", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "sum_weight_returnA_out_V", "role": "full_n" }} , 
  	{ "name": "sum_weight_returnA_out_V_write", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "sum_weight_returnA_out_V", "role": "write" }} , 
- 	{ "name": "NUMBER_OF_DAYS_out_din", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "NUMBER_OF_DAYS_out", "role": "din" }} , 
- 	{ "name": "NUMBER_OF_DAYS_out_full_n", "direction": "in", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "NUMBER_OF_DAYS_out", "role": "full_n" }} , 
- 	{ "name": "NUMBER_OF_DAYS_out_write", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "NUMBER_OF_DAYS_out", "role": "write" }} , 
  	{ "name": "NUMBER_OF_INDICES_out_din", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "NUMBER_OF_INDICES_out", "role": "din" }} , 
  	{ "name": "NUMBER_OF_INDICES_out_full_n", "direction": "in", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "NUMBER_OF_INDICES_out", "role": "full_n" }} , 
- 	{ "name": "NUMBER_OF_INDICES_out_write", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "NUMBER_OF_INDICES_out", "role": "write" }}  ]}
+ 	{ "name": "NUMBER_OF_INDICES_out_write", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "NUMBER_OF_INDICES_out", "role": "write" }} , 
+ 	{ "name": "NUMBER_OF_DAYS_out_din", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "NUMBER_OF_DAYS_out", "role": "din" }} , 
+ 	{ "name": "NUMBER_OF_DAYS_out_full_n", "direction": "in", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "NUMBER_OF_DAYS_out", "role": "full_n" }} , 
+ 	{ "name": "NUMBER_OF_DAYS_out_write", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "NUMBER_OF_DAYS_out", "role": "write" }}  ]}
 set Spec2ImplPortList { 
 	NUMBER_OF_DAYS { ap_none {  { NUMBER_OF_DAYS in_data 0 32 } } }
 	NUMBER_OF_INDICES { ap_none {  { NUMBER_OF_INDICES in_data 0 32 } } }
@@ -167,6 +167,6 @@ set Spec2ImplPortList {
 	sum_returnA_out_V { ap_fifo {  { sum_returnA_out_V_din fifo_data 1 32 }  { sum_returnA_out_V_full_n fifo_status 0 1 }  { sum_returnA_out_V_write fifo_update 1 1 } } }
 	sum_weight_returnSquareA_out_V { ap_fifo {  { sum_weight_returnSquareA_out_V_din fifo_data 1 32 }  { sum_weight_returnSquareA_out_V_full_n fifo_status 0 1 }  { sum_weight_returnSquareA_out_V_write fifo_update 1 1 } } }
 	sum_weight_returnA_out_V { ap_fifo {  { sum_weight_returnA_out_V_din fifo_data 1 32 }  { sum_weight_returnA_out_V_full_n fifo_status 0 1 }  { sum_weight_returnA_out_V_write fifo_update 1 1 } } }
-	NUMBER_OF_DAYS_out { ap_fifo {  { NUMBER_OF_DAYS_out_din fifo_data 1 32 }  { NUMBER_OF_DAYS_out_full_n fifo_status 0 1 }  { NUMBER_OF_DAYS_out_write fifo_update 1 1 } } }
 	NUMBER_OF_INDICES_out { ap_fifo {  { NUMBER_OF_INDICES_out_din fifo_data 1 32 }  { NUMBER_OF_INDICES_out_full_n fifo_status 0 1 }  { NUMBER_OF_INDICES_out_write fifo_update 1 1 } } }
+	NUMBER_OF_DAYS_out { ap_fifo {  { NUMBER_OF_DAYS_out_din fifo_data 1 32 }  { NUMBER_OF_DAYS_out_full_n fifo_status 0 1 }  { NUMBER_OF_DAYS_out_write fifo_update 1 1 } } }
 }

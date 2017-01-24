@@ -320,6 +320,7 @@ int main(int argc, char* argv[])
      *----------------------------------------------------------*/
     int number_of_days_per_index    = 252;
     int all_indices_size 			= 10000 * number_of_days_per_index * sizeof(float);
+
     float *indices_buff             = NULL;
     indices_buff                    = (float *)sds_mmap((void *) 0x11000000, 
     										all_indices_size,
@@ -334,12 +335,42 @@ int main(int argc, char* argv[])
             							499500 * sizeof(float),
             							correlation_sw);
 
+    /*
+    float *indices_buff             = NULL;
+    float *correlation_buff         = NULL;
+    float *correlation_sw 			= NULL;
+    indices_buff 					= (float *)sds_alloc(all_indices_size);
+    correlation_buff 				= (float *)sds_alloc(49995000 * sizeof(float));
+    correlation_sw 					= (float *)sds_alloc(499500 * sizeof(float));
+	if(indices_buff != NULL){
+		printf("indices_buff is allocated.\n");
+	}else {
+		return -1;
+	}
+
+
+	if (correlation_buff!= NULL){
+			printf("correlation_buff is allocated.\n");
+	} else {
+		return -1;
+	}
+
+	if (correlation_sw != NULL) {
+		printf("correlation_sw is allocated.\n");
+	} else {
+		return -1;
+	}
+	*/
     indices_init((uint32_t)indices_buff);
    // Xil_DCacheFlushRange(indices_buff, all_indices_size);
 
     int number_of_indices;
+    int debug = 0;
     printf("Number of indices: \r\n");
     scanf("%d" , &number_of_indices);
+    printf("\r\n");
+    printf("Debug?: \r\n");
+    scanf("%d" , &debug);
     printf("\r\n");
     /************************************************************
 	*	 	Step 2: Hardware computation       					*
@@ -359,18 +390,24 @@ int main(int argc, char* argv[])
 	/************************************************************
 	 *		Step 3: Software computation					  	*
 	 *----------------------------------------------------------*/
-//    correlation_golden(		indices_buff,
-//                            number_of_indices,
-//                            number_of_days_per_index,
-//                            correlation_sw);
+    if(debug == 1) {
+    correlation_golden(		indices_buff,
+                            number_of_indices,
+                            number_of_days_per_index,
+                            correlation_sw);
 //    TIME_STAMP_SW;
      /************************************************************
      *      Step 4: Compare results                             *
      *----------------------------------------------------------*/
-//    int number_of_result = number_of_indices * (number_of_indices - 1) / 2;
-//    bool status;
-//    status = checkResult(  correlation_buff, correlation_sw,
-//    						number_of_result,
-//    						(float)ALLOW_ERR_THRES);
+    int number_of_result = number_of_indices * (number_of_indices - 1) / 2;
+    bool status;
+    status = checkResult(  correlation_buff, correlation_sw,
+    						number_of_result,
+    						(float)ALLOW_ERR_THRES);
+    }
+
+    sds_free(indices_buff);
+    sds_free(correlation_buff);
+    sds_free(correlation_sw);
     return 0;
 }

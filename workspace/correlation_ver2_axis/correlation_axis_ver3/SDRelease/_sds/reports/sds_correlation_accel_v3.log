@@ -1,7 +1,7 @@
 (c) Copyright 2012-2015 Xilinx, Inc. All Rights Reserved.
 #-----------------------------------------------------------
 # Tool version  : sds++ 2014.4 20150228
-# Start time    : Tue Jan 24 05:43:23 PM CET 2017
+# Start time    : Tue Jan 24 10:47:44 PM CET 2017
 # Command line  : sds++ -Wall -O3 -I../src -c -fmessage-length=0 -MTsrc/correlation_accel_v3.o -sds-hw correlation_accel_v3 correlation_accel_v3.cpp -clkid 2 -sds-end -MMD -MP -MFsrc/correlation_accel_v3.d -MTsrc/correlation_accel_v3.d -o src/correlation_accel_v3.o ../src/correlation_accel_v3.cpp -sds-pf zed
 # Log file      : /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease/_sds/reports/sds_correlation_accel_v3.log
 # Journal file  : /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease/_sds/reports/sds_correlation_accel_v3.jou
@@ -24,7 +24,7 @@ INFO: [SDSoC 0-0] Moving function correlation_accel_v3 to Programmable Logic
 ================================================================
 @I [LIC-101] Checked out feature [HLS]
 @I [HLS-10] Running '/opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/bin/unwrapped/lnx64.o/vivado_hls'
-            for user 'trungnguyen' on host 'verratnix.zmk.uni-kl.de' (Linux_x86_64 version 2.6.32-573.18.1.el6.x86_64) on Tue Jan 24 17:43:24 CET 2017
+            for user 'trungnguyen' on host 'verratnix.zmk.uni-kl.de' (Linux_x86_64 version 2.6.32-573.18.1.el6.x86_64) on Tue Jan 24 22:47:45 CET 2017
             in directory '/home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease/_sds/vhls'
 @I [HLS-10] Creating and opening project '/home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease/_sds/vhls/correlation_accel_v3'.
 @I [HLS-10] Adding design file '/home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease/_sds/vhls/src/correlation_accel_v3.cpp' to the project
@@ -60,7 +60,7 @@ INFO: [SDSoC 0-0] Moving function correlation_accel_v3 to Programmable Logic
 @W [XFORM-124] Array 'in_indices.dest.V' (/home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease/_sds/vhls/src/correlation_accel_v3.cpp:37) may have improper streaming access(es), possible reasons: (1) some entries are accessed more than once; (2) some entries are not used; (3) the entries are not accessed in sequential order.
 @W [XFORM-542] Cannot flatten a loop nest 'Loop-5' (/home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease/_sds/vhls/src/correlation_accel_v3.cpp:366:26) in function 'frontEnd' : 
                more than one sub loop.
-@I [HLS-111] Elapsed time: 3.67 seconds; current memory usage: 86.6 MB.
+@I [HLS-111] Elapsed time: 3.73 seconds; current memory usage: 86.6 MB.
 @I [HLS-10] Starting hardware synthesis ...
 @I [HLS-10] Synthesizing 'correlation_accel_v3' ...
 @I [HLS-10] ----------------------------------------------------------------
@@ -97,7 +97,7 @@ INFO: [SDSoC 0-0] Moving function correlation_accel_v3 to Programmable Logic
 @I [SCHED-61] Pipelining loop 'Loop 1'.
 @I [SCHED-61] Pipelining result: Target II: 1, Final II: 1, Depth: 88.
 @I [SCHED-11] Finished scheduling.
-@I [HLS-111] Elapsed time: 0.17 seconds; current memory usage: 90.7 MB.
+@I [HLS-111] Elapsed time: 0.18 seconds; current memory usage: 90.8 MB.
 @I [HLS-10] ----------------------------------------------------------------
 @I [HLS-10] -- Exploring micro-architecture for module 'correlation_accel_v3_backEnd' 
 @I [HLS-10] ----------------------------------------------------------------
@@ -106,14 +106,14 @@ INFO: [SDSoC 0-0] Moving function correlation_accel_v3 to Programmable Logic
 @I [BIND-101] Exploring resource sharing.
 @I [BIND-101] Binding ...
 @I [BIND-100] Finished micro-architecture generation.
-@I [HLS-111] Elapsed time: 0.02 seconds; current memory usage: 91.5 MB.
+@I [HLS-111] Elapsed time: 0.02 seconds; current memory usage: 91.6 MB.
 @I [HLS-10] ----------------------------------------------------------------
 @I [HLS-10] -- Scheduling module 'correlation_accel_v3' 
 @I [HLS-10] ----------------------------------------------------------------
 @I [SCHED-11] Starting scheduling ...
 @W [SCHED-71] Latency directive discarded for region correlation_accel_v3since region contains function calls with variable latency.
 @I [SCHED-11] Finished scheduling.
-@I [HLS-111] Elapsed time: 0.05 seconds; current memory usage: 91.7 MB.
+@I [HLS-111] Elapsed time: 0.06 seconds; current memory usage: 91.7 MB.
 @I [HLS-10] ----------------------------------------------------------------
 @I [HLS-10] -- Exploring micro-architecture for module 'correlation_accel_v3' 
 @I [HLS-10] ----------------------------------------------------------------
@@ -132,7 +132,7 @@ INFO: [SDSoC 0-0] Moving function correlation_accel_v3 to Programmable Logic
 @I [RTGEN-100] Generating core module 'correlation_accel_v3_fmul_32ns_32ns_32_4_max_dsp': 5 instance(s).
 @I [RTGEN-100] Generating core module 'correlation_accel_v3_urem_32ns_4ns_32_36': 2 instance(s).
 @I [RTGEN-100] Finished creating RTL model for 'correlation_accel_v3_frontEnd'.
-@I [HLS-111] Elapsed time: 0.17 seconds; current memory usage: 94.8 MB.
+@I [HLS-111] Elapsed time: 0.18 seconds; current memory usage: 94.8 MB.
 @I [HLS-10] ----------------------------------------------------------------
 @I [HLS-10] -- Generating RTL for module 'correlation_accel_v3_backEnd' 
 @I [HLS-10] ----------------------------------------------------------------
@@ -143,7 +143,7 @@ INFO: [SDSoC 0-0] Moving function correlation_accel_v3 to Programmable Logic
 @I [RTGEN-100] Generating core module 'correlation_accel_v3_fsub_32ns_32ns_32_5_full_dsp': 4 instance(s).
 @I [RTGEN-100] Generating core module 'correlation_accel_v3_sitofp_32ns_32_6': 1 instance(s).
 @I [RTGEN-100] Finished creating RTL model for 'correlation_accel_v3_backEnd'.
-@I [HLS-111] Elapsed time: 0.29 seconds; current memory usage: 102 MB.
+@I [HLS-111] Elapsed time: 0.28 seconds; current memory usage: 102 MB.
 @I [HLS-10] ----------------------------------------------------------------
 @I [HLS-10] -- Generating RTL for module 'correlation_accel_v3' 
 @I [HLS-10] ----------------------------------------------------------------
@@ -211,8 +211,8 @@ INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'correlation_accel
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1704] No user IP repositories specified
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/opt/Xilinx/SDSoC/2014.4/Vivado/2014.4/data/ip'.
-INFO: [Common 17-206] Exiting Vivado at Tue Jan 24 17:44:04 2017...
-@I [HLS-112] Total elapsed time: 53.684 seconds; peak memory usage: 104 MB.
+INFO: [Common 17-206] Exiting Vivado at Tue Jan 24 22:48:27 2017...
+@I [HLS-112] Total elapsed time: 55.755 seconds; peak memory usage: 104 MB.
 @I [LIC-101] Checked in feature [HLS]
 xsltproc --output component.xml  /opt/Xilinx/SDSoC/2014.4/scripts/xsd/xdFixAximmAddrSpaceProperty.xsl  component.xml
 zip -u xilinx_com_hls_correlation_accel_v3_1_0.zip component.xml
@@ -231,4 +231,4 @@ arm-xilinx-linux-gnueabi-objcopy --add-section .xdfcnmap=/home/trungnguyen/SDSoC
 arm-xilinx-linux-gnueabi-objcopy --add-section .xdhlscore=/home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease/_sds/vhls/correlation_accel_v3/solution/impl/ip/xilinx_com_hls_correlation_accel_v3_1_0.zip /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease/_sds/swstubs/correlation_accel_v3.o
 arm-xilinx-linux-gnueabi-objcopy --add-section .xdif=/home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease/_sds/.llvm/correlation_accel_v3_if.xml /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease/_sds/swstubs/correlation_accel_v3.o
 sds++ log file saved as /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease/_sds/reports/sds_correlation_accel_v3.log
-sds++ completed at Tue Jan 24 05:44:18 PM CET 2017
+sds++ completed at Tue Jan 24 10:48:40 PM CET 2017

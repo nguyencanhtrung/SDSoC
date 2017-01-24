@@ -1,0 +1,55 @@
+#include "mmult.h"
+#include "AESL_pkg.h"
+
+using namespace std;
+
+namespace ap_rtl {
+
+void mmult::thread_hdltv_gen() {
+    const char* dump_tv = std::getenv("AP_WRITE_TV");
+    if (!(dump_tv && string(dump_tv) == "on")) return;
+
+    wait();
+
+    mHdltvinHandle << "[ " << endl;
+    mHdltvoutHandle << "[ " << endl;
+    int ap_cycleNo = 0;
+    while (1) {
+        wait();
+        const char* mComma = ap_cycleNo == 0 ? " " : ", " ;
+        mHdltvinHandle << mComma << "{"  <<  " \"ap_rst_n\" :  \"" << ap_rst_n.read() << "\" ";
+        mHdltvinHandle << " , " <<  " \"A_TDATA\" :  \"" << A_TDATA.read() << "\" ";
+        mHdltvinHandle << " , " <<  " \"A_TVALID\" :  \"" << A_TVALID.read() << "\" ";
+        mHdltvoutHandle << mComma << "{"  <<  " \"A_TREADY\" :  \"" << A_TREADY.read() << "\" ";
+        mHdltvinHandle << " , " <<  " \"A_TKEEP\" :  \"" << A_TKEEP.read() << "\" ";
+        mHdltvinHandle << " , " <<  " \"A_TSTRB\" :  \"" << A_TSTRB.read() << "\" ";
+        mHdltvinHandle << " , " <<  " \"A_TUSER\" :  \"" << A_TUSER.read() << "\" ";
+        mHdltvinHandle << " , " <<  " \"A_TLAST\" :  \"" << A_TLAST.read() << "\" ";
+        mHdltvinHandle << " , " <<  " \"A_TID\" :  \"" << A_TID.read() << "\" ";
+        mHdltvinHandle << " , " <<  " \"A_TDEST\" :  \"" << A_TDEST.read() << "\" ";
+        mHdltvinHandle << " , " <<  " \"B_TDATA\" :  \"" << B_TDATA.read() << "\" ";
+        mHdltvinHandle << " , " <<  " \"B_TVALID\" :  \"" << B_TVALID.read() << "\" ";
+        mHdltvoutHandle << " , " <<  " \"B_TREADY\" :  \"" << B_TREADY.read() << "\" ";
+        mHdltvinHandle << " , " <<  " \"B_TKEEP\" :  \"" << B_TKEEP.read() << "\" ";
+        mHdltvinHandle << " , " <<  " \"B_TSTRB\" :  \"" << B_TSTRB.read() << "\" ";
+        mHdltvinHandle << " , " <<  " \"B_TUSER\" :  \"" << B_TUSER.read() << "\" ";
+        mHdltvinHandle << " , " <<  " \"B_TLAST\" :  \"" << B_TLAST.read() << "\" ";
+        mHdltvinHandle << " , " <<  " \"B_TID\" :  \"" << B_TID.read() << "\" ";
+        mHdltvinHandle << " , " <<  " \"B_TDEST\" :  \"" << B_TDEST.read() << "\" ";
+        mHdltvoutHandle << " , " <<  " \"C_TDATA\" :  \"" << C_TDATA.read() << "\" ";
+        mHdltvoutHandle << " , " <<  " \"C_TVALID\" :  \"" << C_TVALID.read() << "\" ";
+        mHdltvinHandle << " , " <<  " \"C_TREADY\" :  \"" << C_TREADY.read() << "\" ";
+        mHdltvoutHandle << " , " <<  " \"C_TKEEP\" :  \"" << C_TKEEP.read() << "\" ";
+        mHdltvoutHandle << " , " <<  " \"C_TSTRB\" :  \"" << C_TSTRB.read() << "\" ";
+        mHdltvoutHandle << " , " <<  " \"C_TUSER\" :  \"" << C_TUSER.read() << "\" ";
+        mHdltvoutHandle << " , " <<  " \"C_TLAST\" :  \"" << C_TLAST.read() << "\" ";
+        mHdltvoutHandle << " , " <<  " \"C_TID\" :  \"" << C_TID.read() << "\" ";
+        mHdltvoutHandle << " , " <<  " \"C_TDEST\" :  \"" << C_TDEST.read() << "\" ";
+        mHdltvinHandle << "}" << std::endl;
+        mHdltvoutHandle << "}" << std::endl;
+        ap_cycleNo++;
+    }
+}
+
+}
+

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xd:acceleratorMap xmlns:xd="http://www.xilinx.com/xd" xd:functionName="mmult" xd:componentRef="mmult" xd:initiationInterval="5421" xd:clockPeriod="5.950000" xd:sequential="true" xd:hostMachine="64">
+  <xd:arg xd:name="A[].data" xd:originalName="A" xd:direction="in" xd:interfaceRef="A" xd:busTypeRef="axis" xd:arraySize="1024" xd:dataWidth="32"/>
+  <xd:arg xd:name="A[].keep" xd:originalName="A" xd:direction="in" xd:interfaceRef="A" xd:busTypeRef="axis" xd:arraySize="1024" xd:dataWidth="4"/>
+  <xd:arg xd:name="A[].strb" xd:originalName="A" xd:direction="in" xd:interfaceRef="A" xd:busTypeRef="axis" xd:arraySize="1024" xd:dataWidth="4"/>
+  <xd:arg xd:name="A[].user" xd:originalName="A" xd:direction="in" xd:interfaceRef="A" xd:busTypeRef="axis" xd:arraySize="1024" xd:dataWidth="1"/>
+  <xd:arg xd:name="A[].last" xd:originalName="A" xd:direction="in" xd:interfaceRef="A" xd:busTypeRef="axis" xd:arraySize="1024" xd:dataWidth="1"/>
+  <xd:arg xd:name="A[].id" xd:originalName="A" xd:direction="in" xd:interfaceRef="A" xd:busTypeRef="axis" xd:arraySize="1024" xd:dataWidth="1"/>
+  <xd:arg xd:name="A[].dest" xd:originalName="A" xd:direction="in" xd:interfaceRef="A" xd:busTypeRef="axis" xd:arraySize="1024" xd:dataWidth="1"/>
+  <xd:arg xd:name="B[].data" xd:originalName="B" xd:direction="in" xd:interfaceRef="B" xd:busTypeRef="axis" xd:arraySize="1024" xd:dataWidth="32"/>
+  <xd:arg xd:name="B[].keep" xd:originalName="B" xd:direction="in" xd:interfaceRef="B" xd:busTypeRef="axis" xd:arraySize="1024" xd:dataWidth="4"/>
+  <xd:arg xd:name="B[].strb" xd:originalName="B" xd:direction="in" xd:interfaceRef="B" xd:busTypeRef="axis" xd:arraySize="1024" xd:dataWidth="4"/>
+  <xd:arg xd:name="B[].user" xd:originalName="B" xd:direction="in" xd:interfaceRef="B" xd:busTypeRef="axis" xd:arraySize="1024" xd:dataWidth="1"/>
+  <xd:arg xd:name="B[].last" xd:originalName="B" xd:direction="in" xd:interfaceRef="B" xd:busTypeRef="axis" xd:arraySize="1024" xd:dataWidth="1"/>
+  <xd:arg xd:name="B[].id" xd:originalName="B" xd:direction="in" xd:interfaceRef="B" xd:busTypeRef="axis" xd:arraySize="1024" xd:dataWidth="1"/>
+  <xd:arg xd:name="B[].dest" xd:originalName="B" xd:direction="in" xd:interfaceRef="B" xd:busTypeRef="axis" xd:arraySize="1024" xd:dataWidth="1"/>
+  <xd:arg xd:name="C[].data" xd:originalName="C" xd:direction="out" xd:interfaceRef="C" xd:busTypeRef="axis" xd:arraySize="1024" xd:dataWidth="32"/>
+  <xd:arg xd:name="C[].keep" xd:originalName="C" xd:direction="out" xd:interfaceRef="C" xd:busTypeRef="axis" xd:arraySize="1024" xd:dataWidth="4"/>
+  <xd:arg xd:name="C[].strb" xd:originalName="C" xd:direction="out" xd:interfaceRef="C" xd:busTypeRef="axis" xd:arraySize="1024" xd:dataWidth="4"/>
+  <xd:arg xd:name="C[].user" xd:originalName="C" xd:direction="out" xd:interfaceRef="C" xd:busTypeRef="axis" xd:arraySize="1024" xd:dataWidth="1"/>
+  <xd:arg xd:name="C[].last" xd:originalName="C" xd:direction="out" xd:interfaceRef="C" xd:busTypeRef="axis" xd:arraySize="1024" xd:dataWidth="1"/>
+  <xd:arg xd:name="C[].id" xd:originalName="C" xd:direction="out" xd:interfaceRef="C" xd:busTypeRef="axis" xd:arraySize="1024" xd:dataWidth="1"/>
+  <xd:arg xd:name="C[].dest" xd:originalName="C" xd:direction="out" xd:interfaceRef="C" xd:busTypeRef="axis" xd:arraySize="1024" xd:dataWidth="1"/>
+  <xd:latencyEstimates xd:best-case="5420" xd:worst-case="5420" xd:average-case="5420"/>
+  <xd:resourceEstimates xd:LUT="17975" xd:FF="12231" xd:BRAM="34" xd:DSP="80"/>
+</xd:acceleratorMap>

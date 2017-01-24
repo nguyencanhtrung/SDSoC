@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xd:component xmlns:xd="http://www.xilinx.com/xd" xd:vendor="xilinx.com" xd:library="xd" xd:name="top" xd:version="1.00" xd:type="design">
+    <xd:repository>
+    <xd:file xd:name="xd_ip_db.xml"/>
+  </xd:repository>
+    <xd:instance xd:name="zed" xd:componentRef="zed"/>
+    <xd:instance xd:name="correlation_accel_v1_0" xd:componentRef="correlation_accel_v1"/>
+    <xd:instance xd:name="correlation_accel_v1_0_if" xd:componentRef="axis_accelerator_adapter">
+    <xd:parameter xd:name="C_OUTPUT_SCALAR_0_WIDTH" xd:value="32"/>
+    <xd:parameter xd:name="C_INPUT_SCALAR_0_WIDTH" xd:value="32"/>
+    <xd:parameter xd:name="C_INPUT_SCALAR_1_WIDTH" xd:value="32"/>
+    <xd:parameter xd:name="C_INPUT_SCALAR_2_WIDTH" xd:value="32"/>
+    <xd:parameter xd:name="C_INPUT_SCALAR_3_WIDTH" xd:value="32"/>
+    <xd:parameter xd:name="C_N_OUTPUT_ARGS" xd:value="0"/>
+    <xd:parameter xd:name="C_N_INPUT_ARGS" xd:value="0"/>
+    <xd:parameter xd:name="C_N_INPUT_SCALARS" xd:value="4"/>
+    <xd:parameter xd:name="C_N_OUTPUT_SCALARS" xd:value="1"/>
+  </xd:instance>
+    <xd:instance xd:name="axi_interconnect_M_AXI_GP0" xd:componentRef="axi_interconnect">
+    <xd:parameter xd:name="NUM_MI" xd:value="1"/>
+    <xd:parameter xd:name="NUM_SI" xd:value="1"/>
+    <xd:parameter xd:name="STRATEGY" xd:value="2"/>
+    <xd:parameter xd:name="M00_HAS_REGSLICE" xd:value="1"/>
+    <xd:parameter xd:name="S00_HAS_REGSLICE" xd:value="1"/>
+  </xd:instance>
+    <xd:instance xd:name="axi_interconnect_S_AXI_HP0" xd:componentRef="axi_interconnect">
+    <xd:parameter xd:name="NUM_MI" xd:value="1"/>
+    <xd:parameter xd:name="NUM_SI" xd:value="1"/>
+    <xd:parameter xd:name="STRATEGY" xd:value="2"/>
+    <xd:parameter xd:name="M00_HAS_REGSLICE" xd:value="1"/>
+    <xd:parameter xd:name="M00_HAS_DATA_FIFO" xd:value="2"/>
+    <xd:parameter xd:name="S00_HAS_REGSLICE" xd:value="1"/>
+    <xd:parameter xd:name="S00_HAS_DATA_FIFO" xd:value="2"/>
+  </xd:instance>
+    <xd:instance xd:name="ps7_irq_const" xd:componentRef="xlconstant">
+    <xd:parameter xd:name="CONST_WIDTH" xd:value="1"/>
+    <xd:parameter xd:name="CONST_VAL" xd:value="0"/>
+  </xd:instance>
+    <xd:connection>
+    <xd:port xd:name="aresetn" xd:instanceRef="correlation_accel_v1_0_if"/>
+    <xd:port xd:name="ap_rst_n" xd:instanceRef="correlation_accel_v1_0"/>
+  </xd:connection>
+    <xd:connection>
+    <xd:busInterface xd:name="ap_ctrl" xd:instanceRef="correlation_accel_v1_0_if"/>
+    <xd:busInterface xd:name="ap_ctrl" xd:instanceRef="correlation_accel_v1_0"/>
+  </xd:connection>
+    <xd:connection>
+    <xd:port xd:name="ap_return" xd:instanceRef="correlation_accel_v1_0"/>
+    <xd:port xd:name="ap_oscalar_0_din" xd:instanceRef="correlation_accel_v1_0_if"/>
+  </xd:connection>
+    <xd:connection>
+    <xd:port xd:name="ap_iscalar_0_dout" xd:instanceRef="correlation_accel_v1_0_if"/>
+    <xd:port xd:name="number_of_days" xd:instanceRef="correlation_accel_v1_0"/>
+  </xd:connection>
+    <xd:connection>
+    <xd:port xd:name="ap_iscalar_1_dout" xd:instanceRef="correlation_accel_v1_0_if"/>
+    <xd:port xd:name="number_of_indices" xd:instanceRef="correlation_accel_v1_0"/>
+  </xd:connection>
+    <xd:connection>
+    <xd:port xd:name="ap_iscalar_2_dout" xd:instanceRef="correlation_accel_v1_0_if"/>
+    <xd:port xd:name="in_indices" xd:instanceRef="correlation_accel_v1_0"/>
+  </xd:connection>
+    <xd:connection>
+    <xd:port xd:name="ap_iscalar_3_dout" xd:instanceRef="correlation_accel_v1_0_if"/>
+    <xd:port xd:name="out_correlation" xd:instanceRef="correlation_accel_v1_0"/>
+  </xd:connection>
+    <xd:connection>
+    <xd:busInterface xd:name="M_AXI_GP0" xd:instanceRef="zed"/>
+    <xd:busInterface xd:name="S00_AXI" xd:instanceRef="axi_interconnect_M_AXI_GP0"/>
+  </xd:connection>
+    <xd:connection>
+    <xd:busInterface xd:name="M00_AXI" xd:instanceRef="axi_interconnect_S_AXI_HP0"/>
+    <xd:busInterface xd:name="S_AXI_HP0" xd:instanceRef="zed"/>
+  </xd:connection>
+    <xd:connection>
+    <xd:busInterface xd:name="m_axi_gmem32" xd:instanceRef="correlation_accel_v1_0"/>
+    <xd:busInterface xd:name="S00_AXI" xd:instanceRef="axi_interconnect_S_AXI_HP0"/>
+  </xd:connection>
+    <xd:connection>
+    <xd:busInterface xd:name="M00_AXI" xd:instanceRef="axi_interconnect_M_AXI_GP0"/>
+    <xd:busInterface xd:name="S_AXI" xd:instanceRef="correlation_accel_v1_0_if"/>
+  </xd:connection>
+    <xd:connection>
+    <xd:port xd:name="ps7_FCLK_CLK1" xd:instanceRef="zed"/>
+    <xd:port xd:name="M_AXI_GP0_ACLK" xd:instanceRef="zed"/>
+    <xd:port xd:name="S_AXI_HP0_ACLK" xd:instanceRef="zed"/>
+    <xd:port xd:name="ap_clk" xd:instanceRef="correlation_accel_v1_0"/>
+    <xd:port xd:name="s_axi_aclk" xd:instanceRef="correlation_accel_v1_0_if"/>
+    <xd:port xd:name="aclk" xd:instanceRef="correlation_accel_v1_0_if"/>
+    <xd:port xd:name="ACLK" xd:instanceRef="axi_interconnect_M_AXI_GP0"/>
+    <xd:port xd:name="S00_ACLK" xd:instanceRef="axi_interconnect_M_AXI_GP0"/>
+    <xd:port xd:name="M00_ACLK" xd:instanceRef="axi_interconnect_M_AXI_GP0"/>
+    <xd:port xd:name="ACLK" xd:instanceRef="axi_interconnect_S_AXI_HP0"/>
+    <xd:port xd:name="M00_ACLK" xd:instanceRef="axi_interconnect_S_AXI_HP0"/>
+    <xd:port xd:name="S00_ACLK" xd:instanceRef="axi_interconnect_S_AXI_HP0"/>
+  </xd:connection>
+    <xd:connection>
+    <xd:port xd:name="proc_sys_reset_1_interconnect_aresetn" xd:instanceRef="zed"/>
+    <xd:port xd:name="ARESETN" xd:instanceRef="axi_interconnect_M_AXI_GP0"/>
+    <xd:port xd:name="S00_ARESETN" xd:instanceRef="axi_interconnect_M_AXI_GP0"/>
+    <xd:port xd:name="M00_ARESETN" xd:instanceRef="axi_interconnect_M_AXI_GP0"/>
+    <xd:port xd:name="ARESETN" xd:instanceRef="axi_interconnect_S_AXI_HP0"/>
+    <xd:port xd:name="M00_ARESETN" xd:instanceRef="axi_interconnect_S_AXI_HP0"/>
+    <xd:port xd:name="S00_ARESETN" xd:instanceRef="axi_interconnect_S_AXI_HP0"/>
+  </xd:connection>
+    <xd:connection>
+    <xd:port xd:name="proc_sys_reset_1_peripheral_aresetn" xd:instanceRef="zed"/>
+    <xd:port xd:name="s_axi_aresetn" xd:instanceRef="correlation_accel_v1_0_if"/>
+  </xd:connection>
+    <xd:connection>
+    <xd:port xd:name="dout" xd:instanceRef="ps7_irq_const"/>
+    <xd:port xd:name="In0" xd:instanceRef="zed"/>
+  </xd:connection>
+</xd:component>

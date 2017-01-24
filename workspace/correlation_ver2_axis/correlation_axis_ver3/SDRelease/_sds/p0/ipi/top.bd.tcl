@@ -31,7 +31,9 @@ set datamover_0 [create_bd_cell -type ip -vlnv xilinx.com:ip:axi_dma:7.1 datamov
 set_property -dict [ list \
   CONFIG.C_DLYTMR_RESOLUTION {1250} \
   CONFIG.C_SG_LENGTH_WIDTH {23} \
-  CONFIG.C_INCLUDE_SG {0} \
+  CONFIG.C_INCLUDE_SG {1} \
+  CONFIG.C_SG_USE_STSAPP_LENGTH {0} \
+  CONFIG.C_SG_INCLUDE_STSCNTRL_STRM {1} \
   CONFIG.C_INCLUDE_MM2S {1} \
   CONFIG.C_INCLUDE_S2MM {0} \
   CONFIG.C_INCLUDE_MM2S_SF {1} \
@@ -100,7 +102,7 @@ set axi_interconnect_S_AXI_HP0 [create_bd_cell -type ip -vlnv xilinx.com:ip:axi_
   
 set_property -dict [ list \
   CONFIG.NUM_MI {1} \
-  CONFIG.NUM_SI {2} \
+  CONFIG.NUM_SI {3} \
   CONFIG.STRATEGY {2} \
   CONFIG.M00_HAS_REGSLICE {1} \
   CONFIG.M00_HAS_DATA_FIFO {2} \
@@ -108,7 +110,23 @@ set_property -dict [ list \
   CONFIG.S00_HAS_DATA_FIFO {2} \
   CONFIG.S01_HAS_REGSLICE {1} \
   CONFIG.S01_HAS_DATA_FIFO {2} \
+  CONFIG.S02_HAS_REGSLICE {1} \
+  CONFIG.S02_HAS_DATA_FIFO {2} \
   ] $axi_interconnect_S_AXI_HP0
+
+#---------------------------
+# Instantiating axis_rtr_datamover_0
+#---------------------------
+set axis_rtr_datamover_0 [create_bd_cell -type ip -vlnv xilinx.com:ip:axi_stream_router:1.0 axis_rtr_datamover_0]
+  
+set_property -dict [ list \
+  CONFIG.C_NUM_MASTER_SLOTS {1} \
+  CONFIG.C_NUM_SLAVE_SLOTS {0} \
+  CONFIG.C_M_AXIS_RXD_TDATA_WIDTH {64} \
+  CONFIG.C_S_AXIS_TXD_TDATA_WIDTH {64} \
+  CONFIG.C_M_AXIS_TDATA_WIDTH {64} \
+  CONFIG.C_S_AXIS_TDATA_WIDTH {64} \
+  ] $axis_rtr_datamover_0
 
 #---------------------------
 # Instantiating axis_dwc_datamover_0_txd_0
@@ -148,6 +166,7 @@ connect_bd_net  \
 connect_bd_net  \
   [get_bd_pins /ps7/FCLK_CLK2] \
   [get_bd_pins /datamover_0/s_axi_lite_aclk] \
+  [get_bd_pins /datamover_0/m_axi_sg_aclk] \
   [get_bd_pins /datamover_0/m_axi_mm2s_aclk] \
   [get_bd_pins /datamover_1/s_axi_lite_aclk] \
   [get_bd_pins /datamover_1/m_axi_s2mm_aclk] \
@@ -165,6 +184,12 @@ connect_bd_net  \
   [get_bd_pins /axi_interconnect_S_AXI_HP0/M00_ACLK] \
   [get_bd_pins /axi_interconnect_S_AXI_HP0/S00_ACLK] \
   [get_bd_pins /axi_interconnect_S_AXI_HP0/S01_ACLK] \
+  [get_bd_pins /axi_interconnect_S_AXI_HP0/S02_ACLK] \
+  [get_bd_pins /axis_rtr_datamover_0/M_AXIS_0_ACLK] \
+  [get_bd_pins /axis_rtr_datamover_0/s_axis_txd_aclk] \
+  [get_bd_pins /axis_rtr_datamover_0/s_axis_txc_aclk] \
+  [get_bd_pins /axis_rtr_datamover_0/m_axis_rxd_aclk] \
+  [get_bd_pins /axis_rtr_datamover_0/m_axis_rxs_aclk] \
   [get_bd_pins /axis_dwc_datamover_0_txd_0/aclk] \
   [get_bd_pins /axis_dwc_datamover_1_rxd_0/aclk] \
 
@@ -179,12 +204,17 @@ connect_bd_net  \
   [get_bd_pins /axi_interconnect_S_AXI_HP0/M00_ARESETN] \
   [get_bd_pins /axi_interconnect_S_AXI_HP0/S00_ARESETN] \
   [get_bd_pins /axi_interconnect_S_AXI_HP0/S01_ARESETN] \
+  [get_bd_pins /axi_interconnect_S_AXI_HP0/S02_ARESETN] \
 
 connect_bd_net  \
   [get_bd_pins /proc_sys_reset_2/peripheral_aresetn] \
   [get_bd_pins /datamover_0/axi_resetn] \
   [get_bd_pins /datamover_1/axi_resetn] \
   [get_bd_pins /correlation_accel_v3_0_if/s_axi_aresetn] \
+  [get_bd_pins /axis_rtr_datamover_0/m_axis_rxs_aresetn] \
+  [get_bd_pins /axis_rtr_datamover_0/m_axis_rxd_aresetn] \
+  [get_bd_pins /axis_rtr_datamover_0/s_axis_txc_aresetn] \
+  [get_bd_pins /axis_rtr_datamover_0/s_axis_txd_aresetn] \
   [get_bd_pins /axis_dwc_datamover_0_txd_0/aresetn] \
   [get_bd_pins /axis_dwc_datamover_1_rxd_0/aresetn] \
 
@@ -217,11 +247,23 @@ connect_bd_intf_net \
   [get_bd_intf_pins /datamover_0/S_AXI_LITE] \
 
 connect_bd_intf_net \
-  [get_bd_intf_pins /datamover_0/M_AXI_MM2S] \
+  [get_bd_intf_pins /datamover_0/M_AXI_SG] \
   [get_bd_intf_pins /axi_interconnect_S_AXI_HP0/S00_AXI] \
 
 connect_bd_intf_net \
+  [get_bd_intf_pins /datamover_0/M_AXI_MM2S] \
+  [get_bd_intf_pins /axi_interconnect_S_AXI_HP0/S01_AXI] \
+
+connect_bd_intf_net \
   [get_bd_intf_pins /datamover_0/M_AXIS_MM2S] \
+  [get_bd_intf_pins /axis_rtr_datamover_0/s_axis_txd] \
+
+connect_bd_intf_net \
+  [get_bd_intf_pins /datamover_0/M_AXIS_CNTRL] \
+  [get_bd_intf_pins /axis_rtr_datamover_0/s_axis_txc] \
+
+connect_bd_intf_net \
+  [get_bd_intf_pins /axis_rtr_datamover_0/M_AXIS_0] \
   [get_bd_intf_pins /axis_dwc_datamover_0_txd_0/S_AXIS] \
 
 connect_bd_intf_net \
@@ -234,7 +276,7 @@ connect_bd_intf_net \
 
 connect_bd_intf_net \
   [get_bd_intf_pins /datamover_1/M_AXI_S2MM] \
-  [get_bd_intf_pins /axi_interconnect_S_AXI_HP0/S01_AXI] \
+  [get_bd_intf_pins /axi_interconnect_S_AXI_HP0/S02_AXI] \
 
 connect_bd_intf_net \
   [get_bd_intf_pins /correlation_accel_v3_0/out_correlation] \

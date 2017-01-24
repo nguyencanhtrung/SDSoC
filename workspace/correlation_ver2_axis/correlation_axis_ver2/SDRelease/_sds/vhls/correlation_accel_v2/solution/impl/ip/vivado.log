@@ -2,8 +2,8 @@
 # Vivado v2014.4 (64-bit)
 # SW Build 1071353 on Tue Nov 18 16:48:31 MST 2014
 # IP Build 1071914 on Wed Nov 19 05:30:59 MST 2014
-# Start of session at: Wed Nov  2 16:00:29 2016
-# Process ID: 14676
+# Start of session at: Tue Jan 24 22:27:32 2017
+# Process ID: 1991
 # Log file: /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver2/SDRelease/_sds/vhls/correlation_accel_v2/solution/impl/ip/vivado.log
 # Journal file: /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver2/SDRelease/_sds/vhls/correlation_accel_v2/solution/impl/ip/vivado.jou
 #-----------------------------------------------------------
@@ -28,4 +28,4 @@ INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'correlation_accel
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1704] No user IP repositories specified
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/opt/Xilinx/SDSoC/2014.4/Vivado/2014.4/data/ip'.
-INFO: [Common 17-206] Exiting Vivado at Wed Nov  2 16:00:35 2016...
+INFO: [Common 17-206] Exiting Vivado at Tue Jan 24 22:27:39 2017...

@@ -90,6 +90,8 @@ set rc [catch {
   set_property processing_order LATE [get_files /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease/_sds/p0/ipi/zed.srcs/sources_1/bd/zed/ip/zed_correlation_accel_v3_0_if_0/zed_correlation_accel_v3_0_if_0.xdc]
   read_xdc -ref zed_correlation_accel_v3_0_if_0 /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease/_sds/p0/ipi/zed.srcs/sources_1/bd/zed/ip/zed_correlation_accel_v3_0_if_0/zed_correlation_accel_v3_0_if_0_clocks.xdc
   set_property processing_order LATE [get_files /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease/_sds/p0/ipi/zed.srcs/sources_1/bd/zed/ip/zed_correlation_accel_v3_0_if_0/zed_correlation_accel_v3_0_if_0_clocks.xdc]
+  read_xdc -ref zed_auto_us_df_0 -cells inst /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease/_sds/p0/ipi/zed.srcs/sources_1/bd/zed/ip/zed_auto_us_df_0/zed_auto_us_df_0_clocks.xdc
+  set_property processing_order LATE [get_files /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease/_sds/p0/ipi/zed.srcs/sources_1/bd/zed/ip/zed_auto_us_df_0/zed_auto_us_df_0_clocks.xdc]
   link_design -top zed_wrapper -part xc7z020clg484-1
   close_msg_db -file init_design.pb
 } RESULT]

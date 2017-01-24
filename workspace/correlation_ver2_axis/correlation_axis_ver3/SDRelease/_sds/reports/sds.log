@@ -1,7 +1,7 @@
 (c) Copyright 2012-2015 Xilinx, Inc. All Rights Reserved.
 #-----------------------------------------------------------
 # Tool version  : sds++ 2014.4 20150228
-# Start time    : Tue Jan 24 05:44:20 PM CET 2017
+# Start time    : Tue Jan 24 10:48:43 PM CET 2017
 # Command line  : sds++ -o correlation_axis_ver3.elf ./src/correlation_accel_v3.o ./src/main.o -sds-pf zed -dmclkid 2
 # Log file      : /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease/_sds/reports/sds.log
 # Journal file  : /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease/_sds/reports/sds.jou
@@ -30,7 +30,9 @@ Archive:  /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_ax
   inflating: /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease/_sds/iprepo/repo/xilinx_com_hls_correlation_accel_v3_1_0/hdl/verilog/correlation_accel_v3_fsub_32ns_32ns_32_5_full_dsp.v  
   inflating: /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease/_sds/iprepo/repo/xilinx_com_hls_correlation_accel_v3_1_0/hdl/verilog/correlation_accel_v3_frontEnd_acc_weight_returnA_returnB.v  
   inflating: /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease/_sds/iprepo/repo/xilinx_com_hls_correlation_accel_v3_1_0/hdl/verilog/correlation_accel_v3_urem_32ns_4ns_32_36.v  
+  inflating: /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease/_sds/iprepo/repo/xilinx_com_hls_correlation_accel_v3_1_0/hdl/verilog/FIFO_correlation_accel_v3_number_of_indices14_channel.v  
   inflating: /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease/_sds/iprepo/repo/xilinx_com_hls_correlation_accel_v3_1_0/hdl/verilog/correlation_accel_v3_frontEnd_weight_rom.v  
+  inflating: /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease/_sds/iprepo/repo/xilinx_com_hls_correlation_accel_v3_1_0/hdl/verilog/FIFO_correlation_accel_v3_number_of_days15_channel.v  
   inflating: /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease/_sds/iprepo/repo/xilinx_com_hls_correlation_accel_v3_1_0/hdl/verilog/FIFO_correlation_accel_v3_sum_weight_V.v  
   inflating: /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease/_sds/iprepo/repo/xilinx_com_hls_correlation_accel_v3_1_0/hdl/verilog/correlation_accel_v3_frontEnd_lnReturnA_ram.dat  
   inflating: /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease/_sds/iprepo/repo/xilinx_com_hls_correlation_accel_v3_1_0/hdl/verilog/correlation_accel_v3_flog_32ns_32ns_32_13_full_dsp.v  
@@ -40,7 +42,6 @@ Archive:  /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_ax
   inflating: /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease/_sds/iprepo/repo/xilinx_com_hls_correlation_accel_v3_1_0/hdl/verilog/correlation_accel_v3_frontEnd_acc_return.v  
   inflating: /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease/_sds/iprepo/repo/xilinx_com_hls_correlation_accel_v3_1_0/hdl/verilog/FIFO_correlation_accel_v3_sum_weight_returnA_V.v  
   inflating: /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease/_sds/iprepo/repo/xilinx_com_hls_correlation_accel_v3_1_0/hdl/verilog/correlation_accel_v3_fmul_32ns_32ns_32_4_max_dsp.v  
-  inflating: /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease/_sds/iprepo/repo/xilinx_com_hls_correlation_accel_v3_1_0/hdl/verilog/FIFO_correlation_accel_v3_number_of_days14_channel.v  
   inflating: /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease/_sds/iprepo/repo/xilinx_com_hls_correlation_accel_v3_1_0/hdl/verilog/correlation_accel_v3_fdiv_32ns_32ns_32_16.v  
   inflating: /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease/_sds/iprepo/repo/xilinx_com_hls_correlation_accel_v3_1_0/hdl/verilog/FIFO_correlation_accel_v3_sum_weight_returnSquareA_V.v  
   inflating: /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease/_sds/iprepo/repo/xilinx_com_hls_correlation_accel_v3_1_0/hdl/verilog/FIFO_correlation_accel_v3_sum_weight_returnSquare_V.v  
@@ -51,7 +52,6 @@ Archive:  /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_ax
   inflating: /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease/_sds/iprepo/repo/xilinx_com_hls_correlation_accel_v3_1_0/hdl/verilog/FIFO_correlation_accel_v3_sum_weight_return_V.v  
   inflating: /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease/_sds/iprepo/repo/xilinx_com_hls_correlation_accel_v3_1_0/hdl/verilog/correlation_accel_v3_frontEnd.v  
   inflating: /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease/_sds/iprepo/repo/xilinx_com_hls_correlation_accel_v3_1_0/hdl/verilog/FIFO_correlation_accel_v3_sum_weight_returnA_returnB_V.v  
-  inflating: /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease/_sds/iprepo/repo/xilinx_com_hls_correlation_accel_v3_1_0/hdl/verilog/FIFO_correlation_accel_v3_number_of_indices15_channel.v  
   inflating: /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease/_sds/iprepo/repo/xilinx_com_hls_correlation_accel_v3_1_0/hdl/verilog/correlation_accel_v3_fsqrt_32ns_32ns_32_16.v  
   inflating: /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease/_sds/iprepo/repo/xilinx_com_hls_correlation_accel_v3_1_0/hdl/vhdl/FIFO_correlation_accel_v3_sum_weight_V.vhd  
   inflating: /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease/_sds/iprepo/repo/xilinx_com_hls_correlation_accel_v3_1_0/hdl/vhdl/correlation_accel_v3_frontEnd_lnReturnA.vhd  
@@ -62,8 +62,8 @@ Archive:  /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_ax
   inflating: /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease/_sds/iprepo/repo/xilinx_com_hls_correlation_accel_v3_1_0/hdl/vhdl/correlation_accel_v3_flog_32ns_32ns_32_13_full_dsp.vhd  
   inflating: /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease/_sds/iprepo/repo/xilinx_com_hls_correlation_accel_v3_1_0/hdl/vhdl/correlation_accel_v3.vhd  
   inflating: /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease/_sds/iprepo/repo/xilinx_com_hls_correlation_accel_v3_1_0/hdl/vhdl/correlation_accel_v3_fdiv_32ns_32ns_32_16.vhd  
-  inflating: /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease/_sds/iprepo/repo/xilinx_com_hls_correlation_accel_v3_1_0/hdl/vhdl/FIFO_correlation_accel_v3_number_of_days14_channel.vhd  
   inflating: /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease/_sds/iprepo/repo/xilinx_com_hls_correlation_accel_v3_1_0/hdl/vhdl/correlation_accel_v3_fadd_32ns_32ns_32_5_full_dsp.vhd  
+  inflating: /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease/_sds/iprepo/repo/xilinx_com_hls_correlation_accel_v3_1_0/hdl/vhdl/FIFO_correlation_accel_v3_number_of_indices14_channel.vhd  
   inflating: /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease/_sds/iprepo/repo/xilinx_com_hls_correlation_accel_v3_1_0/hdl/vhdl/FIFO_correlation_accel_v3_sum_weight_return_V.vhd  
   inflating: /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease/_sds/iprepo/repo/xilinx_com_hls_correlation_accel_v3_1_0/hdl/vhdl/FIFO_correlation_accel_v3_sum_weight_returnA_V.vhd  
   inflating: /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease/_sds/iprepo/repo/xilinx_com_hls_correlation_accel_v3_1_0/hdl/vhdl/correlation_accel_v3_frontEnd_weight_rom.vhd  
@@ -73,8 +73,8 @@ Archive:  /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_ax
   inflating: /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease/_sds/iprepo/repo/xilinx_com_hls_correlation_accel_v3_1_0/hdl/vhdl/FIFO_correlation_accel_v3_sum_weight_returnSquareA_V.vhd  
   inflating: /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease/_sds/iprepo/repo/xilinx_com_hls_correlation_accel_v3_1_0/hdl/vhdl/correlation_accel_v3_fsqrt_32ns_32ns_32_16.vhd  
   inflating: /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease/_sds/iprepo/repo/xilinx_com_hls_correlation_accel_v3_1_0/hdl/vhdl/FIFO_correlation_accel_v3_sum_weight_returnSquare_V.vhd  
+  inflating: /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease/_sds/iprepo/repo/xilinx_com_hls_correlation_accel_v3_1_0/hdl/vhdl/FIFO_correlation_accel_v3_number_of_days15_channel.vhd  
   inflating: /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease/_sds/iprepo/repo/xilinx_com_hls_correlation_accel_v3_1_0/hdl/vhdl/correlation_accel_v3_frontEnd_acc_return.vhd  
-  inflating: /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease/_sds/iprepo/repo/xilinx_com_hls_correlation_accel_v3_1_0/hdl/vhdl/FIFO_correlation_accel_v3_number_of_indices15_channel.vhd  
   inflating: /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease/_sds/iprepo/repo/xilinx_com_hls_correlation_accel_v3_1_0/hdl/vhdl/correlation_accel_v3_urem_32ns_4ns_32_36.vhd  
   inflating: /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease/_sds/iprepo/repo/xilinx_com_hls_correlation_accel_v3_1_0/hdl/vhdl/correlation_accel_v3_sitofp_32ns_32_6.vhd  
   inflating: /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease/_sds/iprepo/repo/xilinx_com_hls_correlation_accel_v3_1_0/hdl/vhdl/FIFO_correlation_accel_v3_sum_return_V.vhd  
@@ -110,14 +110,14 @@ xsltproc  -o /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation
          /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease/_sds/.llvm/apsys_0.xml
 INFO: [SDSoC 0-0] Creating block diagram (BD), address map, port information and device registration for partition 0 (this may take a few minutes)
 system_linker -cf-input /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease/_sds/.llvm/apsys_0.xml -cf-output-dir _sds/p0 -ip-db /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease/_sds/.cdb/xd_ip_db.xml -ip-repo /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease/_sds/iprepo/repo -sds-pf /opt/Xilinx/SDSoC/2014.4/platforms/zed:linux -software-only   -sdsoc
-system_linker started at Tue Jan 24 05:44:22 PM CET 2017
+system_linker started at Tue Jan 24 10:48:45 PM CET 2017
 INFO: [SDSoC 0-0] Creating hardware project files
 INFO: [SDSoC 0-0] Creating Vivado block design
 INFO: [SDSoC 0-0] Creating block diagram (BD) and address map
 INFO: [SDSoC 0-0] Copying address map
 INFO: [SDSoC 0-0] Creating port and device registration data
 /opt/Xilinx/SDSoC/2014.4/bin/cf2sw -i apsys_0.xml -r /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease/_sds/.cdb/xd_ip_db.xml -a address_map.xml -pollMode 0    -n
-system_linker completed at Tue Jan 24 05:45:07 PM CET 2017
+system_linker completed at Tue Jan 24 10:49:36 PM CET 2017
 INFO: [SDSoC 0-0] Prepare hardware access API functions
 INFO: [SDSoC 0-0] Compile hardware access API functions
 INFO: [SDSoC 0-0] Compile accelerator stub functions
@@ -165,9 +165,12 @@ arm-xilinx-linux-gnueabi-g++ -c /home/trungnguyen/SDSoC/workspace/correlation_ve
 /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease/_sds/swstubs/main.cpp:42:171: warning: use of 'll' length modifier with 'f' type character [-Wformat=]
  #define TIME_STAMP_ACCEL  { clock_end = sds_clock_counter(); printf("Time in second for hardware version: %llf \n", (float)(clock_end-clock_start)/(float)COUNT_PER_SECOND); clock_start = sds_clock_counter();  }
                                                                                                                                                                            ^
-/home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease/_sds/swstubs/main.cpp:359:5: note: in expansion of macro 'TIME_STAMP_ACCEL'
+/home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease/_sds/swstubs/main.cpp:390:5: note: in expansion of macro 'TIME_STAMP_ACCEL'
      TIME_STAMP_ACCEL;
      ^
+/home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease/_sds/swstubs/main.cpp:404:10: warning: variable 'status' set but not used [-Wunused-but-set-variable]
+     bool status;
+          ^
 /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease/_sds/swstubs/main.cpp: In function 'bool indices_init(uint32_t)':
 /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease/_sds/swstubs/main.cpp:96:1: warning: control reaches end of non-void function [-Wreturn-type]
  }
@@ -175,9 +178,6 @@ arm-xilinx-linux-gnueabi-g++ -c /home/trungnguyen/SDSoC/workspace/correlation_ve
 /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/src/correlation_accel_v3.hpp: At global scope:
 /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/src/correlation_accel_v3.hpp:67:13: warning: 'void weight_rom_init(float*, int)' declared 'static' but never defined [-Wunused-function]
  static void weight_rom_init(
-             ^
-/home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease/_sds/swstubs/main.cpp:287:13: warning: 'bool checkResult(float*, float*, int, float)' defined but not used [-Wunused-function]
- static bool checkResult(   float *hw_result, float *sw_result,
              ^
 arm-xilinx-linux-gnueabi-ar crs /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease/_sds/swstubs/libcorrelation_axis_ver3.a /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease/_sds/swstubs/devreg.o /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease/_sds/swstubs/portinfo.o /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease/_sds/swstubs/cf_stub.o /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease/_sds/swstubs/correlation_accel_v3.o
 INFO: [SDSoC 0-0] Link application ELF file
@@ -187,36 +187,36 @@ INFO: [SDSoC 0-0] Enable generation of hardware programming files
 INFO: [SDSoC 0-0] Enable generation of boot files
 INFO: [SDSoC 0-0] Calling system_linker for partition 0
 system_linker -cf-input /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease/_sds/.llvm/apsys_0.xml -cf-output-dir _sds/p0 -ip-db /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease/_sds/.cdb/xd_ip_db.xml -ip-repo /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease/_sds/iprepo/repo -sds-pf /opt/Xilinx/SDSoC/2014.4/platforms/zed:linux -bitstream -bit-name correlation_axis_ver3.elf.bit -boot-files   -mdev-no-swgen -mdev-no-xsd -sdsoc -sd-output-dir _sds/p0/sd_card -bit-binary -elf /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease/_sds/swstubs/correlation_axis_ver3.elf
-system_linker started at Tue Jan 24 05:45:09 PM CET 2017
+system_linker started at Tue Jan 24 10:49:38 PM CET 2017
 INFO: [SDSoC 0-0] Generating bitstream for platform zed.
       This may take some time to complete
-... [17:45:29] Starting synth_design
-... [17:45:34] Starting RTL Elaboration : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 1048.043 ; gain = 214.555 ; free physical = 10849 ; free virtual = 21609
-... [17:50:39] Start Loading Part and Timing Information
-... [17:50:39] Start Applying 'set_property' XDC Constraints
-... [17:50:49] Start RTL Component Statistics 
-... [17:50:49] Start RTL Hierarchical Component Statistics 
-... [17:50:49] Start Part Resource Summary
-... [17:50:49] Start Parallel Synthesis Optimization  : Time (s): cpu = 00:05:29 ; elapsed = 00:05:27 . Memory (MB): peak = 2032.977 ; gain = 1199.488 ; free physical = 10327 ; free virtual = 20961
-... [17:50:49] Start Cross Boundary Optimization
-... [17:50:59] Start Area Optimization
-... [17:51:19] Start Timing Optimization
-... [17:51:29] Start Applying XDC Timing Constraints
-... [17:51:39] Start Technology Mapping
-... [17:52:14] Start IO Insertion
-... [17:52:14] Start Flattening Before IO Insertion
-... [17:52:14] Start Final Netlist Cleanup
-... [17:52:14] Start Renaming Generated Instances
-... [17:52:19] Start Rebuilding User Hierarchy
-... [17:52:24] Start Writing Synthesis Report
-... [17:52:56] Starting DRC Task
-... [17:53:06] Starting Logic Optimization Task
-... [17:53:16] Starting Power Optimization Task
-... [17:53:21] Starting PowerOpt Patch Enables Task
-... [17:53:31] Starting Placer Task
-... [17:54:31] Starting Routing Task
+... [22:49:52] Starting synth_design
+... [22:50:02] Starting RTL Elaboration : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 1055.043 ; gain = 221.555 ; free physical = 9722 ; free virtual = 21509
+... [22:56:42] Start Loading Part and Timing Information
+... [22:56:42] Start Applying 'set_property' XDC Constraints
+... [22:56:57] Start RTL Component Statistics 
+... [22:56:57] Start RTL Hierarchical Component Statistics 
+... [22:56:57] Start Part Resource Summary
+... [22:57:07] Start Cross Boundary Optimization
+... [22:57:12] Start Area Optimization
+... [22:57:27] Start Timing Optimization
+... [22:57:37] Start Applying XDC Timing Constraints
+... [22:57:47] Start Technology Mapping
+... [22:58:22] Start IO Insertion
+... [22:58:22] Start Flattening Before IO Insertion
+... [22:58:22] Start Final Netlist Cleanup
+... [22:58:27] Start Renaming Generated Instances
+... [22:58:32] Start Rebuilding User Hierarchy
+... [22:58:37] Start Writing Synthesis Report
+... [22:59:19] Starting DRC Task
+... [22:59:29] Starting Logic Optimization Task
+... [22:59:39] Starting Power Optimization Task
+... [22:59:44] Starting PowerOpt Patch Enables Task
+... [22:59:54] Starting Placer Task
+... [23:00:59] Starting Routing Task
+CRITICAL WARNING: [Timing 38-282] The design failed to meet the timing requirements. Please see the timing summary report for details on the timing violations.
 INFO: [SDSoC 0-0] Creating boot files
-system_linker completed at Tue Jan 24 05:55:57 PM CET 2017
-All user specified timing constraints are met.
+system_linker completed at Tue Jan 24 11:02:45 PM CET 2017
+Timing constraints are not met.
 sds++ log file saved as /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease/_sds/reports/sds.log
-sds++ completed at Tue Jan 24 05:55:57 PM CET 2017
+sds++ completed at Tue Jan 24 11:02:45 PM CET 2017

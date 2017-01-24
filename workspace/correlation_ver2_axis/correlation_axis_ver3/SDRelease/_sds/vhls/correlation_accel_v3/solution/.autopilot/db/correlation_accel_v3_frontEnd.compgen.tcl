@@ -968,21 +968,6 @@ eval "cg_default_interface_gen_dc { \
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
     id 35 \
-    name NUMBER_OF_DAYS_out \
-    type fifo \
-    dir O \
-    reset_level 1 \
-    sync_rst true \
-    corename dc_NUMBER_OF_DAYS_out \
-    op interface \
-    ports { NUMBER_OF_DAYS_out_din { O 32 vector } NUMBER_OF_DAYS_out_full_n { I 1 bit } NUMBER_OF_DAYS_out_write { O 1 bit } } \
-} "
-}
-
-# Direct connection:
-if {${::AESL::PGuard_autoexp_gen}} {
-eval "cg_default_interface_gen_dc { \
-    id 36 \
     name NUMBER_OF_INDICES_out \
     type fifo \
     dir O \
@@ -991,6 +976,21 @@ eval "cg_default_interface_gen_dc { \
     corename dc_NUMBER_OF_INDICES_out \
     op interface \
     ports { NUMBER_OF_INDICES_out_din { O 32 vector } NUMBER_OF_INDICES_out_full_n { I 1 bit } NUMBER_OF_INDICES_out_write { O 1 bit } } \
+} "
+}
+
+# Direct connection:
+if {${::AESL::PGuard_autoexp_gen}} {
+eval "cg_default_interface_gen_dc { \
+    id 36 \
+    name NUMBER_OF_DAYS_out \
+    type fifo \
+    dir O \
+    reset_level 1 \
+    sync_rst true \
+    corename dc_NUMBER_OF_DAYS_out \
+    op interface \
+    ports { NUMBER_OF_DAYS_out_din { O 32 vector } NUMBER_OF_DAYS_out_full_n { I 1 bit } NUMBER_OF_DAYS_out_write { O 1 bit } } \
 } "
 }
 

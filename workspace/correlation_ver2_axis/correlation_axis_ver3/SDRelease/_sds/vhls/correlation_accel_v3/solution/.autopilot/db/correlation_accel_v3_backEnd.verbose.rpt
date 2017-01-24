@@ -3,7 +3,7 @@
 ================================================================
 == Vivado HLS Report for 'correlation_accel_v3_backEnd'
 ================================================================
-* Date:           Tue Jan 24 17:43:57 2017
+* Date:           Tue Jan 24 22:48:19 2017
 
 * Version:        2014.4 (Build 1071461 on Tue Nov 18 16:42:57 PM 2014)
 * Project:        correlation_accel_v3
@@ -1535,23 +1535,23 @@ STG Binding:
 - Is pipelined: 0
 - Is top level: 0
 Port [ Return ] is wired: 1; IO mode=ap_ctrl_hs:ce=0
-Port [ NUMBER_OF_DAYS]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=3; mode=0x426c7e0; pingpong=0; private_global=0; IO mode=ap_fifo:ce=0
-Port [ NUMBER_OF_INDICES]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=3; mode=0x4f12180; pingpong=0; private_global=0; IO mode=ap_fifo:ce=0
-Port [ sum_weight_in_V]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=3; mode=0x43ab2f0; pingpong=0; private_global=0; IO mode=ap_fifo:ce=0
-Port [ sum_return_in_V]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=3; mode=0x4d75a30; pingpong=0; private_global=0; IO mode=ap_fifo:ce=0
-Port [ sum_weight_returnSquare_in_V]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=3; mode=0x52058c0; pingpong=0; private_global=0; IO mode=ap_fifo:ce=0
-Port [ sum_weight_return_in_V]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=3; mode=0x52059c0; pingpong=0; private_global=0; IO mode=ap_fifo:ce=0
-Port [ sum_weight_returnA_returnB_in_s]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=3; mode=0x438a660; pingpong=0; private_global=0; IO mode=ap_fifo:ce=0
-Port [ sum_returnA_in_V]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=3; mode=0x52458f0; pingpong=0; private_global=0; IO mode=ap_fifo:ce=0
-Port [ sum_weight_returnSquareA_in_V]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=3; mode=0x5240fa0; pingpong=0; private_global=0; IO mode=ap_fifo:ce=0
-Port [ sum_weight_returnA_in_V]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=3; mode=0x45e3c10; pingpong=0; private_global=0; IO mode=ap_fifo:ce=0
-Port [ out_correlation_data_V]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=1; type=0; mode=0x4d35c70; pingpong=0; private_global=0; IO mode=axis:ce=0
-Port [ out_correlation_keep_V]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=1; type=0; mode=0x4eb04b0; pingpong=0; private_global=0; IO mode=axis:ce=0
-Port [ out_correlation_strb_V]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=1; type=0; mode=0x525b5e0; pingpong=0; private_global=0; IO mode=axis:ce=0
-Port [ out_correlation_user_V]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=1; type=0; mode=0x523ffb0; pingpong=0; private_global=0; IO mode=axis:ce=0
-Port [ out_correlation_last_V]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=1; type=0; mode=0x52c69b0; pingpong=0; private_global=0; IO mode=axis:ce=0
-Port [ out_correlation_id_V]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=1; type=0; mode=0x45eabb0; pingpong=0; private_global=0; IO mode=axis:ce=0
-Port [ out_correlation_dest_V]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=1; type=0; mode=0x4641bb0; pingpong=0; private_global=0; IO mode=axis:ce=0
+Port [ NUMBER_OF_DAYS]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=3; mode=0x3f54090; pingpong=0; private_global=0; IO mode=ap_fifo:ce=0
+Port [ NUMBER_OF_INDICES]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=3; mode=0x3eaa5b0; pingpong=0; private_global=0; IO mode=ap_fifo:ce=0
+Port [ sum_weight_in_V]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=3; mode=0x3886df0; pingpong=0; private_global=0; IO mode=ap_fifo:ce=0
+Port [ sum_return_in_V]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=3; mode=0x3c7d0a0; pingpong=0; private_global=0; IO mode=ap_fifo:ce=0
+Port [ sum_weight_returnSquare_in_V]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=3; mode=0x3eca7b0; pingpong=0; private_global=0; IO mode=ap_fifo:ce=0
+Port [ sum_weight_return_in_V]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=3; mode=0x3f5cb30; pingpong=0; private_global=0; IO mode=ap_fifo:ce=0
+Port [ sum_weight_returnA_returnB_in_s]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=3; mode=0x3f60490; pingpong=0; private_global=0; IO mode=ap_fifo:ce=0
+Port [ sum_returnA_in_V]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=3; mode=0x3950ed0; pingpong=0; private_global=0; IO mode=ap_fifo:ce=0
+Port [ sum_weight_returnSquareA_in_V]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=3; mode=0x3bf9fe0; pingpong=0; private_global=0; IO mode=ap_fifo:ce=0
+Port [ sum_weight_returnA_in_V]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=3; mode=0x3bfa040; pingpong=0; private_global=0; IO mode=ap_fifo:ce=0
+Port [ out_correlation_data_V]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=1; type=0; mode=0x326dab0; pingpong=0; private_global=0; IO mode=axis:ce=0
+Port [ out_correlation_keep_V]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=1; type=0; mode=0x38412b0; pingpong=0; private_global=0; IO mode=axis:ce=0
+Port [ out_correlation_strb_V]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=1; type=0; mode=0x3154180; pingpong=0; private_global=0; IO mode=axis:ce=0
+Port [ out_correlation_user_V]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=1; type=0; mode=0x3f3be10; pingpong=0; private_global=0; IO mode=axis:ce=0
+Port [ out_correlation_last_V]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=1; type=0; mode=0x3ec8c80; pingpong=0; private_global=0; IO mode=axis:ce=0
+Port [ out_correlation_id_V]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=1; type=0; mode=0x3c62a20; pingpong=0; private_global=0; IO mode=axis:ce=0
+Port [ out_correlation_dest_V]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=1; type=0; mode=0x3922200; pingpong=0; private_global=0; IO mode=axis:ce=0
 ---------------- STG Properties END ------------------
 
 ---------------- Datapath Model BEGIN ----------------

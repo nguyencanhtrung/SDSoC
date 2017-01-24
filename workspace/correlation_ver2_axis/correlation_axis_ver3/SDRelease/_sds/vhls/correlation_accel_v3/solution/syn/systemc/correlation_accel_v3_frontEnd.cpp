@@ -924,8 +924,8 @@ correlation_accel_v3_frontEnd::correlation_accel_v3_frontEnd(sc_module_name name
     SC_METHOD(thread_ap_sig_bdd_805);
     sensitive << ( ap_start );
     sensitive << ( ap_done_reg );
-    sensitive << ( NUMBER_OF_DAYS_out_full_n );
     sensitive << ( NUMBER_OF_INDICES_out_full_n );
+    sensitive << ( NUMBER_OF_DAYS_out_full_n );
 
     SC_METHOD(thread_ap_sig_bdd_817);
     sensitive << ( ap_CS_fsm );
@@ -2086,12 +2086,12 @@ correlation_accel_v3_frontEnd::correlation_accel_v3_frontEnd(sc_module_name name
     sc_trace(mVcdFile, sum_weight_returnA_out_V_din, "(port)sum_weight_returnA_out_V_din");
     sc_trace(mVcdFile, sum_weight_returnA_out_V_full_n, "(port)sum_weight_returnA_out_V_full_n");
     sc_trace(mVcdFile, sum_weight_returnA_out_V_write, "(port)sum_weight_returnA_out_V_write");
-    sc_trace(mVcdFile, NUMBER_OF_DAYS_out_din, "(port)NUMBER_OF_DAYS_out_din");
-    sc_trace(mVcdFile, NUMBER_OF_DAYS_out_full_n, "(port)NUMBER_OF_DAYS_out_full_n");
-    sc_trace(mVcdFile, NUMBER_OF_DAYS_out_write, "(port)NUMBER_OF_DAYS_out_write");
     sc_trace(mVcdFile, NUMBER_OF_INDICES_out_din, "(port)NUMBER_OF_INDICES_out_din");
     sc_trace(mVcdFile, NUMBER_OF_INDICES_out_full_n, "(port)NUMBER_OF_INDICES_out_full_n");
     sc_trace(mVcdFile, NUMBER_OF_INDICES_out_write, "(port)NUMBER_OF_INDICES_out_write");
+    sc_trace(mVcdFile, NUMBER_OF_DAYS_out_din, "(port)NUMBER_OF_DAYS_out_din");
+    sc_trace(mVcdFile, NUMBER_OF_DAYS_out_full_n, "(port)NUMBER_OF_DAYS_out_full_n");
+    sc_trace(mVcdFile, NUMBER_OF_DAYS_out_write, "(port)NUMBER_OF_DAYS_out_write");
 #endif
 #ifdef __HLS_TRACE_LEVEL_INT__
     sc_trace(mVcdFile, ap_done_reg, "ap_done_reg");
@@ -4991,7 +4991,7 @@ void correlation_accel_v3_frontEnd::thread_ap_sig_bdd_781() {
 }
 
 void correlation_accel_v3_frontEnd::thread_ap_sig_bdd_805() {
-    ap_sig_bdd_805 = (esl_seteq<1,1,1>(NUMBER_OF_INDICES_out_full_n.read(), ap_const_logic_0) || esl_seteq<1,1,1>(NUMBER_OF_DAYS_out_full_n.read(), ap_const_logic_0) || esl_seteq<1,1,1>(ap_start.read(), ap_const_logic_0) || esl_seteq<1,1,1>(ap_done_reg.read(), ap_const_logic_1));
+    ap_sig_bdd_805 = (esl_seteq<1,1,1>(NUMBER_OF_DAYS_out_full_n.read(), ap_const_logic_0) || esl_seteq<1,1,1>(NUMBER_OF_INDICES_out_full_n.read(), ap_const_logic_0) || esl_seteq<1,1,1>(ap_start.read(), ap_const_logic_0) || esl_seteq<1,1,1>(ap_done_reg.read(), ap_const_logic_1));
 }
 
 void correlation_accel_v3_frontEnd::thread_ap_sig_bdd_817() {

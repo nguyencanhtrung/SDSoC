@@ -1417,8 +1417,8 @@
         <xilinx:taxonomy>/VIVADO_HLS_IP</xilinx:taxonomy>
       </xilinx:taxonomies>
       <xilinx:displayName>Correlation_accel_v2</xilinx:displayName>
-      <xilinx:coreRevision>1611021600</xilinx:coreRevision>
-      <xilinx:coreCreationDateTime>2016-11-02T15:00:35Z</xilinx:coreCreationDateTime>
+      <xilinx:coreRevision>1701242227</xilinx:coreRevision>
+      <xilinx:coreCreationDateTime>2017-01-24T21:27:39Z</xilinx:coreCreationDateTime>
     </xilinx:coreExtensions>
     <xilinx:packagingInfo>
       <xilinx:xilinxVersion>2014.4</xilinx:xilinxVersion>

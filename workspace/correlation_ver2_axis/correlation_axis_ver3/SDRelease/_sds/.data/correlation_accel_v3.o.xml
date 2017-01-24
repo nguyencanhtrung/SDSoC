@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xd:data xmlns:xd="http://www.xilinx.com/xd">
+  <xd:accel name="correlation_accel_v3" platform="zed" aem="false" compiler="g++" srcfile="correlation_accel_v3.cpp" srcpath="/home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/src" flags="-I/home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/src -I/home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/src -Wall -O3 -fmessage-length=0 -MMD -MP -D __SDSCC__" clk_id="2" ip_requires_adapter="1" ip_is_rtl="0" vlnv="" is_opencl="0" asmfile="correlation_accel_v3.s"/>
+</xd:data>

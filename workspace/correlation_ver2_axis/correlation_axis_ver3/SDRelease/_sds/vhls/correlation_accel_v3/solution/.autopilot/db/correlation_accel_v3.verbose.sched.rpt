@@ -1,0 +1,335 @@
+
+
+================================================================
+== Vivado HLS Report for 'correlation_accel_v3'
+================================================================
+* Date:           Tue Jan 24 17:43:56 2017
+
+* Version:        2014.4 (Build 1071461 on Tue Nov 18 16:42:57 PM 2014)
+* Project:        correlation_accel_v3
+* Solution:       solution
+* Product family: zynq
+* Target device:  xc7z020clg484-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +---------+-------+----------+------------+
+    |  Clock  | Target| Estimated| Uncertainty|
+    +---------+-------+----------+------------+
+    |default  |   8.50|      9.65|        1.06|
+    +---------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-----+-----+-----+-----+----------+
+    |  Latency  |  Interval | Pipeline |
+    | min | max | min | max |   Type   |
+    +-----+-----+-----+-----+----------+
+    |    ?|    ?|    ?|    ?| dataflow |
+    +-----+-----+-----+-----+----------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-------+--------+-------+
+|       Name      | BRAM_18K| DSP48E|   FF   |  LUT  |
++-----------------+---------+-------+--------+-------+
+|Expression       |        -|      -|       -|      -|
+|FIFO             |        -|      -|       -|      -|
+|Instance         |        -|      -|       -|      -|
+|Memory           |        -|      -|       -|      -|
+|Multiplexer      |        -|      -|       -|      -|
+|Register         |        -|      -|       -|      -|
++-----------------+---------+-------+--------+-------+
+|Total            |        0|      0|       0|      0|
++-----------------+---------+-------+--------+-------+
+|Available        |      280|    220|  106400|  53200|
++-----------------+---------+-------+--------+-------+
+|Utilization (%)  |        0|      0|       0|      0|
++-----------------+---------+-------+--------+-------+
+
++ Detail: 
+    * Instance: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    N/A
+
+    * Multiplexer: 
+    N/A
+
+    * Register: 
+    N/A
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
+N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 1
+ResetActiveHigh: 1
+IsCombinational: 2
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states: 4
+* Pipeline: 0
+* Dataflow Pipeline: 1
+  DF-Pipeline-0: Size = 4, States = { 1 2 3 4 }
+
+* FSM state transitions: 
+1 --> 
+	2  / true
+2 --> 
+	3  / true
+3 --> 
+	4  / true
+4 --> 
+* FSM state operations: 
+
+ <State 1>: 1.86ns
+ST_1: number_of_indices_read [1/1] 0.00ns
+:0  %number_of_indices_read = call i32 @_ssdm_op_Read.ap_auto.i32(i32 %number_of_indices)
+
+ST_1: number_of_days_read [1/1] 0.00ns
+:1  %number_of_days_read = call i32 @_ssdm_op_Read.ap_auto.i32(i32 %number_of_days)
+
+ST_1: number_of_indices15_channel [1/1] 0.00ns
+:2  %number_of_indices15_channel = alloca i32, align 4
+
+ST_1: number_of_days14_channel [1/1] 0.00ns
+:3  %number_of_days14_channel = alloca i32, align 4
+
+ST_1: sum_weight_V [1/1] 0.00ns
+:22  %sum_weight_V = alloca float, align 4
+
+ST_1: sum_return_V [1/1] 0.00ns
+:25  %sum_return_V = alloca float, align 4
+
+ST_1: sum_weight_returnSquare_V [1/1] 0.00ns
+:28  %sum_weight_returnSquare_V = alloca float, align 4
+
+ST_1: sum_weight_return_V [1/1] 0.00ns
+:31  %sum_weight_return_V = alloca float, align 4
+
+ST_1: sum_weight_returnA_returnB_V [1/1] 0.00ns
+:34  %sum_weight_returnA_returnB_V = alloca float, align 4
+
+ST_1: sum_returnA_V [1/1] 0.00ns
+:37  %sum_returnA_V = alloca float, align 4
+
+ST_1: sum_weight_returnSquareA_V [1/1] 0.00ns
+:40  %sum_weight_returnSquareA_V = alloca float, align 4
+
+ST_1: sum_weight_returnA_V [1/1] 0.00ns
+:43  %sum_weight_returnA_V = alloca float, align 4
+
+ST_1: stg_17 [2/2] 1.86ns
+:50  call fastcc void @correlation_accel_v3_frontEnd(i32 %number_of_days_read, i32 %number_of_indices_read, i32* %in_indices_data_V, i4* %in_indices_keep_V, i4* %in_indices_strb_V, i1* %in_indices_user_V, i1* %in_indices_last_V, i1* %in_indices_id_V, i1* %in_indices_dest_V, float* %sum_weight_V, float* %sum_return_V, float* %sum_weight_returnSquare_V, float* %sum_weight_return_V, float* %sum_weight_returnA_returnB_V, float* %sum_returnA_V, float* %sum_weight_returnSquareA_V, float* %sum_weight_returnA_V, i32* %number_of_days14_channel, i32* %number_of_indices15_channel)
+
+
+ <State 2>: 0.00ns
+ST_2: stg_18 [1/2] 0.00ns
+:50  call fastcc void @correlation_accel_v3_frontEnd(i32 %number_of_days_read, i32 %number_of_indices_read, i32* %in_indices_data_V, i4* %in_indices_keep_V, i4* %in_indices_strb_V, i1* %in_indices_user_V, i1* %in_indices_last_V, i1* %in_indices_id_V, i1* %in_indices_dest_V, float* %sum_weight_V, float* %sum_return_V, float* %sum_weight_returnSquare_V, float* %sum_weight_return_V, float* %sum_weight_returnA_returnB_V, float* %sum_returnA_V, float* %sum_weight_returnSquareA_V, float* %sum_weight_returnA_V, i32* %number_of_days14_channel, i32* %number_of_indices15_channel)
+
+
+ <State 3>: 0.00ns
+ST_3: stg_19 [2/2] 0.00ns
+:55  call fastcc void @correlation_accel_v3_backEnd(i32* %number_of_days14_channel, i32* %number_of_indices15_channel, float* %sum_weight_V, float* %sum_return_V, float* %sum_weight_returnSquare_V, float* %sum_weight_return_V, float* %sum_weight_returnA_returnB_V, float* %sum_returnA_V, float* %sum_weight_returnSquareA_V, float* %sum_weight_returnA_V, i32* %out_correlation_data_V, i4* %out_correlation_keep_V, i4* %out_correlation_strb_V, i1* %out_correlation_user_V, i1* %out_correlation_last_V, i1* %out_correlation_id_V, i1* %out_correlation_dest_V)
+
+
+ <State 4>: 6.08ns
+ST_4: stg_20 [1/1] 0.00ns
+:4  call void (...)* @_ssdm_op_SpecDataflowPipeline(i32 -1, [1 x i8]* @p_str) nounwind
+
+ST_4: stg_21 [1/1] 0.00ns
+:5  call void (...)* @_ssdm_op_SpecBitsMap(i32 %number_of_days), !map !7
+
+ST_4: stg_22 [1/1] 0.00ns
+:6  call void (...)* @_ssdm_op_SpecBitsMap(i32 %number_of_indices), !map !13
+
+ST_4: stg_23 [1/1] 0.00ns
+:7  call void (...)* @_ssdm_op_SpecBitsMap(i32* %in_indices_data_V), !map !17
+
+ST_4: stg_24 [1/1] 0.00ns
+:8  call void (...)* @_ssdm_op_SpecBitsMap(i4* %in_indices_keep_V), !map !23
+
+ST_4: stg_25 [1/1] 0.00ns
+:9  call void (...)* @_ssdm_op_SpecBitsMap(i4* %in_indices_strb_V), !map !27
+
+ST_4: stg_26 [1/1] 0.00ns
+:10  call void (...)* @_ssdm_op_SpecBitsMap(i1* %in_indices_user_V), !map !31
+
+ST_4: stg_27 [1/1] 0.00ns
+:11  call void (...)* @_ssdm_op_SpecBitsMap(i1* %in_indices_last_V), !map !35
+
+ST_4: stg_28 [1/1] 0.00ns
+:12  call void (...)* @_ssdm_op_SpecBitsMap(i1* %in_indices_id_V), !map !39
+
+ST_4: stg_29 [1/1] 0.00ns
+:13  call void (...)* @_ssdm_op_SpecBitsMap(i1* %in_indices_dest_V), !map !43
+
+ST_4: stg_30 [1/1] 0.00ns
+:14  call void (...)* @_ssdm_op_SpecBitsMap(i32* %out_correlation_data_V), !map !47
+
+ST_4: stg_31 [1/1] 0.00ns
+:15  call void (...)* @_ssdm_op_SpecBitsMap(i4* %out_correlation_keep_V), !map !53
+
+ST_4: stg_32 [1/1] 0.00ns
+:16  call void (...)* @_ssdm_op_SpecBitsMap(i4* %out_correlation_strb_V), !map !57
+
+ST_4: stg_33 [1/1] 0.00ns
+:17  call void (...)* @_ssdm_op_SpecBitsMap(i1* %out_correlation_user_V), !map !61
+
+ST_4: stg_34 [1/1] 0.00ns
+:18  call void (...)* @_ssdm_op_SpecBitsMap(i1* %out_correlation_last_V), !map !65
+
+ST_4: stg_35 [1/1] 0.00ns
+:19  call void (...)* @_ssdm_op_SpecBitsMap(i1* %out_correlation_id_V), !map !69
+
+ST_4: stg_36 [1/1] 0.00ns
+:20  call void (...)* @_ssdm_op_SpecBitsMap(i1* %out_correlation_dest_V), !map !73
+
+ST_4: stg_37 [1/1] 0.00ns
+:21  call void (...)* @_ssdm_op_SpecTopModule([21 x i8]* @str) nounwind
+
+ST_4: empty [1/1] 0.00ns
+:23  %empty = call i32 (...)* @_ssdm_op_SpecChannel([13 x i8]* @str16, i32 1, [1 x i8]* @str17, [1 x i8]* @str17, i32 252, i32 252, float* %sum_weight_V, float* %sum_weight_V)
+
+ST_4: stg_39 [1/1] 0.00ns
+:24  call void (...)* @_ssdm_op_SpecInterface(float* %sum_weight_V, [8 x i8]* @str18, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @str19, [1 x i8]* @str19, [8 x i8]* @str18)
+
+ST_4: empty_5 [1/1] 0.00ns
+:26  %empty_5 = call i32 (...)* @_ssdm_op_SpecChannel([13 x i8]* @str20, i32 1, [1 x i8]* @str21, [1 x i8]* @str21, i32 252, i32 252, float* %sum_return_V, float* %sum_return_V)
+
+ST_4: stg_41 [1/1] 0.00ns
+:27  call void (...)* @_ssdm_op_SpecInterface(float* %sum_return_V, [8 x i8]* @str22, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @str23, [1 x i8]* @str23, [8 x i8]* @str22)
+
+ST_4: empty_6 [1/1] 0.00ns
+:29  %empty_6 = call i32 (...)* @_ssdm_op_SpecChannel([26 x i8]* @str24, i32 1, [1 x i8]* @str25, [1 x i8]* @str25, i32 252, i32 252, float* %sum_weight_returnSquare_V, float* %sum_weight_returnSquare_V)
+
+ST_4: stg_43 [1/1] 0.00ns
+:30  call void (...)* @_ssdm_op_SpecInterface(float* %sum_weight_returnSquare_V, [8 x i8]* @str26, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @str27, [1 x i8]* @str27, [8 x i8]* @str26)
+
+ST_4: empty_7 [1/1] 0.00ns
+:32  %empty_7 = call i32 (...)* @_ssdm_op_SpecChannel([20 x i8]* @str28, i32 1, [1 x i8]* @str29, [1 x i8]* @str29, i32 252, i32 252, float* %sum_weight_return_V, float* %sum_weight_return_V)
+
+ST_4: stg_45 [1/1] 0.00ns
+:33  call void (...)* @_ssdm_op_SpecInterface(float* %sum_weight_return_V, [8 x i8]* @str30, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @str31, [1 x i8]* @str31, [8 x i8]* @str30)
+
+ST_4: empty_8 [1/1] 0.00ns
+:35  %empty_8 = call i32 (...)* @_ssdm_op_SpecChannel([29 x i8]* @str32, i32 1, [1 x i8]* @str33, [1 x i8]* @str33, i32 252, i32 252, float* %sum_weight_returnA_returnB_V, float* %sum_weight_returnA_returnB_V)
+
+ST_4: stg_47 [1/1] 0.00ns
+:36  call void (...)* @_ssdm_op_SpecInterface(float* %sum_weight_returnA_returnB_V, [8 x i8]* @str34, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @str35, [1 x i8]* @str35, [8 x i8]* @str34)
+
+ST_4: empty_9 [1/1] 0.00ns
+:38  %empty_9 = call i32 (...)* @_ssdm_op_SpecChannel([14 x i8]* @str36, i32 1, [1 x i8]* @str37, [1 x i8]* @str37, i32 252, i32 252, float* %sum_returnA_V, float* %sum_returnA_V)
+
+ST_4: stg_49 [1/1] 0.00ns
+:39  call void (...)* @_ssdm_op_SpecInterface(float* %sum_returnA_V, [8 x i8]* @str38, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @str39, [1 x i8]* @str39, [8 x i8]* @str38)
+
+ST_4: empty_10 [1/1] 0.00ns
+:41  %empty_10 = call i32 (...)* @_ssdm_op_SpecChannel([27 x i8]* @str40, i32 1, [1 x i8]* @str41, [1 x i8]* @str41, i32 252, i32 252, float* %sum_weight_returnSquareA_V, float* %sum_weight_returnSquareA_V)
+
+ST_4: stg_51 [1/1] 0.00ns
+:42  call void (...)* @_ssdm_op_SpecInterface(float* %sum_weight_returnSquareA_V, [8 x i8]* @str42, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @str43, [1 x i8]* @str43, [8 x i8]* @str42)
+
+ST_4: empty_11 [1/1] 0.00ns
+:44  %empty_11 = call i32 (...)* @_ssdm_op_SpecChannel([21 x i8]* @str44, i32 1, [1 x i8]* @str45, [1 x i8]* @str45, i32 252, i32 252, float* %sum_weight_returnA_V, float* %sum_weight_returnA_V)
+
+ST_4: stg_53 [1/1] 0.00ns
+:45  call void (...)* @_ssdm_op_SpecInterface(float* %sum_weight_returnA_V, [8 x i8]* @str46, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @str47, [1 x i8]* @str47, [8 x i8]* @str46)
+
+ST_4: stg_54 [1/1] 0.00ns
+:46  call void (...)* @_ssdm_op_SpecLatency(i32 1, i32 65535, [1 x i8]* @p_str) nounwind
+
+ST_4: stg_55 [1/1] 0.00ns
+:47  call void (...)* @_ssdm_op_SpecInterface(i32* %out_correlation_data_V, i4* %out_correlation_keep_V, i4* %out_correlation_strb_V, i1* %out_correlation_user_V, i1* %out_correlation_last_V, i1* %out_correlation_id_V, i1* %out_correlation_dest_V, [5 x i8]* @p_str1, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str)
+
+ST_4: stg_56 [1/1] 0.00ns
+:48  call void (...)* @_ssdm_op_SpecInterface(i32* %in_indices_data_V, i4* %in_indices_keep_V, i4* %in_indices_strb_V, i1* %in_indices_user_V, i1* %in_indices_last_V, i1* %in_indices_id_V, i1* %in_indices_dest_V, [5 x i8]* @p_str1, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str)
+
+ST_4: stg_57 [1/1] 0.00ns
+:49  call void (...)* @_ssdm_op_SpecInterface(i32 0, [11 x i8]* @p_str2, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str) nounwind
+
+ST_4: empty_12 [1/1] 0.00ns
+:51  %empty_12 = call i32 (...)* @_ssdm_op_SpecChannel([25 x i8]* @str59, i32 1, [1 x i8]* @str60, [1 x i8]* @str60, i32 1, i32 0, i32* %number_of_days14_channel, i32* %number_of_days14_channel)
+
+ST_4: stg_59 [1/1] 0.00ns
+:52  call void (...)* @_ssdm_op_SpecInterface(i32* %number_of_days14_channel, [8 x i8]* @str61, i32 0, i32 0, i32 0, i32 0, [8 x i8]* @str61, [8 x i8]* @str61, [8 x i8]* @str61)
+
+ST_4: empty_13 [1/1] 0.00ns
+:53  %empty_13 = call i32 (...)* @_ssdm_op_SpecChannel([28 x i8]* @str62, i32 1, [1 x i8]* @str63, [1 x i8]* @str63, i32 1, i32 0, i32* %number_of_indices15_channel, i32* %number_of_indices15_channel)
+
+ST_4: stg_61 [1/1] 0.00ns
+:54  call void (...)* @_ssdm_op_SpecInterface(i32* %number_of_indices15_channel, [8 x i8]* @str64, i32 0, i32 0, i32 0, i32 0, [8 x i8]* @str64, [8 x i8]* @str64, [8 x i8]* @str64)
+
+ST_4: stg_62 [1/2] 6.08ns
+:55  call fastcc void @correlation_accel_v3_backEnd(i32* %number_of_days14_channel, i32* %number_of_indices15_channel, float* %sum_weight_V, float* %sum_return_V, float* %sum_weight_returnSquare_V, float* %sum_weight_return_V, float* %sum_weight_returnA_returnB_V, float* %sum_returnA_V, float* %sum_weight_returnSquareA_V, float* %sum_weight_returnA_V, i32* %out_correlation_data_V, i4* %out_correlation_keep_V, i4* %out_correlation_strb_V, i1* %out_correlation_user_V, i1* %out_correlation_last_V, i1* %out_correlation_id_V, i1* %out_correlation_dest_V)
+
+ST_4: stg_63 [1/1] 0.00ns
+:56  ret void
+
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

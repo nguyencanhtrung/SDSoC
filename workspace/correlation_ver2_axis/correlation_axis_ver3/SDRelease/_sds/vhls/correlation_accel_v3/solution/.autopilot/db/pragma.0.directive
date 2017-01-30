@@ -108,49 +108,49 @@
 <directive functionLabel="" functionName="correlation_accel_v3" label="">
 <pragma name="STREAM">
 <option name="variable" positionalBoolean="4" value="sum_weight"/>
-<option name="depth" value="252"/>
+<option name="depth" value="2"/>
 </pragma>
 </directive>
 <directive functionLabel="" functionName="correlation_accel_v3" label="">
 <pragma name="STREAM">
 <option name="variable" positionalBoolean="4" value="sum_return"/>
-<option name="depth" value="252"/>
+<option name="depth" value="2"/>
 </pragma>
 </directive>
 <directive functionLabel="" functionName="correlation_accel_v3" label="">
 <pragma name="STREAM">
 <option name="variable" positionalBoolean="4" value="sum_weight_returnSquare"/>
-<option name="depth" value="252"/>
+<option name="depth" value="2"/>
 </pragma>
 </directive>
 <directive functionLabel="" functionName="correlation_accel_v3" label="">
 <pragma name="STREAM">
 <option name="variable" positionalBoolean="4" value="sum_weight_return"/>
-<option name="depth" value="252"/>
+<option name="depth" value="2"/>
 </pragma>
 </directive>
 <directive functionLabel="" functionName="correlation_accel_v3" label="">
 <pragma name="STREAM">
 <option name="variable" positionalBoolean="4" value="sum_weight_returnA_returnB"/>
-<option name="depth" value="252"/>
+<option name="depth" value="2"/>
 </pragma>
 </directive>
 <directive functionLabel="" functionName="correlation_accel_v3" label="">
 <pragma name="STREAM">
 <option name="variable" positionalBoolean="4" value="sum_returnA"/>
-<option name="depth" value="252"/>
+<option name="depth" value="2"/>
 </pragma>
 </directive>
 <directive functionLabel="" functionName="correlation_accel_v3" label="">
 <pragma name="STREAM">
 <option name="variable" positionalBoolean="4" value="sum_weight_returnSquareA"/>
-<option name="depth" value="252"/>
+<option name="depth" value="2"/>
 </pragma>
 </directive>
 <directive functionLabel="" functionName="correlation_accel_v3" label="">
 <pragma name="STREAM">
 <option name="variable" positionalBoolean="4" value="sum_weight_returnA"/>
-<option name="depth" value="252"/>
+<option name="depth" value="2"/>
 </pragma>
 </directive>
 <directive functionLabel="" functionName="frontEnd" label="">
@@ -180,11 +180,6 @@
 <directive functionLabel="" functionName="frontEnd" label="">
 <pragma name="PIPELINE">
 <option name="II" value="5"/>
-</pragma>
-</directive>
-<directive functionLabel="" functionName="backEnd" label="">
-<pragma name="PIPELINE">
-<option name="II" value="1"/>
 </pragma>
 </directive>
 </sourceFile>

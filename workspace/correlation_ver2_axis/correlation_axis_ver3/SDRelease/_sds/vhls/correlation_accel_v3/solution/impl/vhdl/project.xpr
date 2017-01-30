@@ -6,7 +6,7 @@
 <Project Version="7" Minor="2" Path="/home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease/_sds/vhls/correlation_accel_v3/solution/impl/vhdl/project.xpr">
   <DefaultLaunch Dir="$PRUNDIR"/>
   <Configuration>
-    <Option Name="Id" Val="4c5568a7bd6340569c65fae31f60577c"/>
+    <Option Name="Id" Val="9a2980b71bfd43aca72054b024ee75da"/>
     <Option Name="Part" Val="xc7z020clg484-1"/>
     <Option Name="CompiledLibDir" Val="$PCACHEDIR/compile_simlib"/>
     <Option Name="TargetLanguage" Val="VHDL"/>
@@ -101,12 +101,6 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/correlation_accel_v3_fsub_32ns_32ns_32_5_full_dsp.vhd">
-        <FileInfo>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
       <File Path="$PPRDIR/FIFO_correlation_accel_v3_sum_returnA_V.vhd">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
@@ -132,6 +126,12 @@
         </FileInfo>
       </File>
       <File Path="$PPRDIR/FIFO_correlation_accel_v3_sum_weight_returnSquare_V.vhd">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PPRDIR/correlation_accel_v3_faddfsub_32ns_32ns_32_5_full_dsp.vhd">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
@@ -195,7 +195,7 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/ip/correlation_accel_v3_ap_fsub_3_full_dsp_32/correlation_accel_v3_ap_fsub_3_full_dsp_32.xci">
+      <File Path="$PSRCDIR/sources_1/ip/correlation_accel_v3_ap_faddfsub_3_full_dsp_32/correlation_accel_v3_ap_faddfsub_3_full_dsp_32.xci">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>

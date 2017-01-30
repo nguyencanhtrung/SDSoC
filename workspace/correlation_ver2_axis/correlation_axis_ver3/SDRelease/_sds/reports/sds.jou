@@ -1,7 +1,7 @@
 (c) Copyright 2012-2015 Xilinx, Inc. All Rights Reserved.
 #-----------------------------------------------------------
 # Tool version  : sds++ 2014.4 20150228
-# Start time    : Tue Jan 24 10:48:43 PM CET 2017
+# Start time    : Mon Jan 30 01:44:50 PM CET 2017
 # Command line  : sds++ -o correlation_axis_ver3.elf ./src/correlation_accel_v3.o ./src/main.o -sds-pf zed -dmclkid 2
 # Log file      : /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease/_sds/reports/sds.log
 # Journal file  : /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease/_sds/reports/sds.jou
@@ -61,5 +61,5 @@ cd /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3
 # INFO: [SDSoC 0-0] Enable generation of boot files
 # INFO: [SDSoC 0-0] Calling system_linker for partition 0
 system_linker -cf-input /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease/_sds/.llvm/apsys_0.xml -cf-output-dir _sds/p0 -ip-db /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease/_sds/.cdb/xd_ip_db.xml -ip-repo /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease/_sds/iprepo/repo -sds-pf /opt/Xilinx/SDSoC/2014.4/platforms/zed:linux -bitstream -bit-name correlation_axis_ver3.elf.bit -boot-files   -mdev-no-swgen -mdev-no-xsd -sdsoc -sd-output-dir _sds/p0/sd_card -bit-binary -elf /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease/_sds/swstubs/correlation_axis_ver3.elf
-# Timing constraints are not met.
-# sds++ completed at Tue Jan 24 11:02:45 PM CET 2017
+# All user specified timing constraints are met.
+# sds++ completed at Mon Jan 30 01:57:49 PM CET 2017

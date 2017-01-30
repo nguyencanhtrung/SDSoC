@@ -11,9 +11,8 @@ target triple = "x86_64-unknown-linux-gnu"
 @p_str6 = private unnamed_addr constant [28 x i8] c"LAST_ACCUM_LOOP_FIRST_INDEX\00", align 1
 @p_str8 = private unnamed_addr constant [33 x i8] c"ACCUMULATION_LOOP_FLOATING_INDEX\00", align 1
 @p_str9 = private unnamed_addr constant [16 x i8] c"LAST_ACCUM_LOOP\00", align 1
-@p_str10 = private unnamed_addr constant [12 x i8] c"hls_label_3\00", align 1
-@p_str11 = private unnamed_addr constant [16 x i8] c"INIT_WEIGHT_ROM\00", align 1
-@p_str12 = private unnamed_addr constant [19 x i8] c"COMP_SUM_OF_WEIGHT\00", align 1
+@p_str10 = private unnamed_addr constant [16 x i8] c"INIT_WEIGHT_ROM\00", align 1
+@p_str11 = private unnamed_addr constant [19 x i8] c"COMP_SUM_OF_WEIGHT\00", align 1
 @llvm_global_ctors_0 = appending global [1 x i32] [i32 65535]
 @llvm_global_ctors_1 = appending global [1 x void ()*] [void ()* @_GLOBAL__I_a]
 @str = internal constant [21 x i8] c"correlation_accel_v3\00"
@@ -151,28 +150,28 @@ define void @correlation_accel_v3(i32 %number_of_days, i32 %number_of_indices, i
   call void (...)* @_ssdm_op_SpecBitsMap(i1* %out_correlation_dest_V), !map !73
   call void (...)* @_ssdm_op_SpecTopModule([21 x i8]* @str) nounwind
   %sum_weight_V = alloca float, align 4
-  %empty = call i32 (...)* @_ssdm_op_SpecChannel([13 x i8]* @str16, i32 1, [1 x i8]* @str17, [1 x i8]* @str17, i32 252, i32 252, float* %sum_weight_V, float* %sum_weight_V)
+  %empty = call i32 (...)* @_ssdm_op_SpecChannel([13 x i8]* @str16, i32 1, [1 x i8]* @str17, [1 x i8]* @str17, i32 2, i32 2, float* %sum_weight_V, float* %sum_weight_V)
   call void (...)* @_ssdm_op_SpecInterface(float* %sum_weight_V, [8 x i8]* @str18, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @str19, [1 x i8]* @str19, [8 x i8]* @str18)
   %sum_return_V = alloca float, align 4
-  %empty_5 = call i32 (...)* @_ssdm_op_SpecChannel([13 x i8]* @str20, i32 1, [1 x i8]* @str21, [1 x i8]* @str21, i32 252, i32 252, float* %sum_return_V, float* %sum_return_V)
+  %empty_5 = call i32 (...)* @_ssdm_op_SpecChannel([13 x i8]* @str20, i32 1, [1 x i8]* @str21, [1 x i8]* @str21, i32 2, i32 2, float* %sum_return_V, float* %sum_return_V)
   call void (...)* @_ssdm_op_SpecInterface(float* %sum_return_V, [8 x i8]* @str22, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @str23, [1 x i8]* @str23, [8 x i8]* @str22)
   %sum_weight_returnSquare_V = alloca float, align 4
-  %empty_6 = call i32 (...)* @_ssdm_op_SpecChannel([26 x i8]* @str24, i32 1, [1 x i8]* @str25, [1 x i8]* @str25, i32 252, i32 252, float* %sum_weight_returnSquare_V, float* %sum_weight_returnSquare_V)
+  %empty_6 = call i32 (...)* @_ssdm_op_SpecChannel([26 x i8]* @str24, i32 1, [1 x i8]* @str25, [1 x i8]* @str25, i32 2, i32 2, float* %sum_weight_returnSquare_V, float* %sum_weight_returnSquare_V)
   call void (...)* @_ssdm_op_SpecInterface(float* %sum_weight_returnSquare_V, [8 x i8]* @str26, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @str27, [1 x i8]* @str27, [8 x i8]* @str26)
   %sum_weight_return_V = alloca float, align 4
-  %empty_7 = call i32 (...)* @_ssdm_op_SpecChannel([20 x i8]* @str28, i32 1, [1 x i8]* @str29, [1 x i8]* @str29, i32 252, i32 252, float* %sum_weight_return_V, float* %sum_weight_return_V)
+  %empty_7 = call i32 (...)* @_ssdm_op_SpecChannel([20 x i8]* @str28, i32 1, [1 x i8]* @str29, [1 x i8]* @str29, i32 2, i32 2, float* %sum_weight_return_V, float* %sum_weight_return_V)
   call void (...)* @_ssdm_op_SpecInterface(float* %sum_weight_return_V, [8 x i8]* @str30, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @str31, [1 x i8]* @str31, [8 x i8]* @str30)
   %sum_weight_returnA_returnB_V = alloca float, align 4
-  %empty_8 = call i32 (...)* @_ssdm_op_SpecChannel([29 x i8]* @str32, i32 1, [1 x i8]* @str33, [1 x i8]* @str33, i32 252, i32 252, float* %sum_weight_returnA_returnB_V, float* %sum_weight_returnA_returnB_V)
+  %empty_8 = call i32 (...)* @_ssdm_op_SpecChannel([29 x i8]* @str32, i32 1, [1 x i8]* @str33, [1 x i8]* @str33, i32 2, i32 2, float* %sum_weight_returnA_returnB_V, float* %sum_weight_returnA_returnB_V)
   call void (...)* @_ssdm_op_SpecInterface(float* %sum_weight_returnA_returnB_V, [8 x i8]* @str34, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @str35, [1 x i8]* @str35, [8 x i8]* @str34)
   %sum_returnA_V = alloca float, align 4
-  %empty_9 = call i32 (...)* @_ssdm_op_SpecChannel([14 x i8]* @str36, i32 1, [1 x i8]* @str37, [1 x i8]* @str37, i32 252, i32 252, float* %sum_returnA_V, float* %sum_returnA_V)
+  %empty_9 = call i32 (...)* @_ssdm_op_SpecChannel([14 x i8]* @str36, i32 1, [1 x i8]* @str37, [1 x i8]* @str37, i32 2, i32 2, float* %sum_returnA_V, float* %sum_returnA_V)
   call void (...)* @_ssdm_op_SpecInterface(float* %sum_returnA_V, [8 x i8]* @str38, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @str39, [1 x i8]* @str39, [8 x i8]* @str38)
   %sum_weight_returnSquareA_V = alloca float, align 4
-  %empty_10 = call i32 (...)* @_ssdm_op_SpecChannel([27 x i8]* @str40, i32 1, [1 x i8]* @str41, [1 x i8]* @str41, i32 252, i32 252, float* %sum_weight_returnSquareA_V, float* %sum_weight_returnSquareA_V)
+  %empty_10 = call i32 (...)* @_ssdm_op_SpecChannel([27 x i8]* @str40, i32 1, [1 x i8]* @str41, [1 x i8]* @str41, i32 2, i32 2, float* %sum_weight_returnSquareA_V, float* %sum_weight_returnSquareA_V)
   call void (...)* @_ssdm_op_SpecInterface(float* %sum_weight_returnSquareA_V, [8 x i8]* @str42, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @str43, [1 x i8]* @str43, [8 x i8]* @str42)
   %sum_weight_returnA_V = alloca float, align 4
-  %empty_11 = call i32 (...)* @_ssdm_op_SpecChannel([21 x i8]* @str44, i32 1, [1 x i8]* @str45, [1 x i8]* @str45, i32 252, i32 252, float* %sum_weight_returnA_V, float* %sum_weight_returnA_V)
+  %empty_11 = call i32 (...)* @_ssdm_op_SpecChannel([21 x i8]* @str44, i32 1, [1 x i8]* @str45, [1 x i8]* @str45, i32 2, i32 2, float* %sum_weight_returnA_V, float* %sum_weight_returnA_V)
   call void (...)* @_ssdm_op_SpecInterface(float* %sum_weight_returnA_V, [8 x i8]* @str46, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @str47, [1 x i8]* @str47, [8 x i8]* @str46)
   call void (...)* @_ssdm_op_SpecLatency(i32 1, i32 65535, [1 x i8]* @p_str) nounwind
   call void (...)* @_ssdm_op_SpecInterface(i32* %out_correlation_data_V, i4* %out_correlation_keep_V, i4* %out_correlation_strb_V, i1* %out_correlation_user_V, i1* %out_correlation_last_V, i1* %out_correlation_id_V, i1* %out_correlation_dest_V, [5 x i8]* @p_str1, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str)
@@ -228,7 +227,7 @@ entry:
   br i1 %exitcond_i_i, label %.preheader.i.i, label %1
 
 ; <label>:1                                       ; preds = %0
-  call void (...)* @_ssdm_op_SpecLoopName([16 x i8]* @p_str11) nounwind
+  call void (...)* @_ssdm_op_SpecLoopName([16 x i8]* @p_str10) nounwind
   %tmp_i_i_14 = fmul float %tmp_i_i, 0x3FEE147AE0000000
   %tmp_70_i_i = zext i8 %i_i_i to i64
   %weight_rom_addr = getelementptr [252 x float]* @weight_rom, i64 0, i64 %tmp_70_i_i
@@ -244,7 +243,7 @@ entry:
   br i1 %tmp_69_i_i, label %2, label %weight_rom_init.exit.i
 
 ; <label>:2                                       ; preds = %.preheader.i.i
-  call void (...)* @_ssdm_op_SpecLoopName([19 x i8]* @p_str12) nounwind
+  call void (...)* @_ssdm_op_SpecLoopName([19 x i8]* @p_str11) nounwind
   %tmp_71_i_i = zext i31 %i1_i_i to i64
   %weight_rom_addr_1 = getelementptr [252 x float]* @weight_rom, i64 0, i64 %tmp_71_i_i
   %weight_rom_load = load float* %weight_rom_addr_1, align 4
@@ -589,11 +588,10 @@ entry:
   %column_index_i = phi i31 [ 1, %entry ], [ %column_index, %1 ]
   %column_index_cast_i = zext i31 %column_index_i to i32
   %tmp_2_i = icmp slt i32 %column_index_cast_i, %NUMBER_OF_INDICES_read
+  %empty = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 0, i64 2147483646, i64 0)
   br i1 %tmp_2_i, label %1, label %backEnd.1.exit
 
 ; <label>:1                                       ; preds = %0
-  %empty = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 0, i64 2147483646, i64 0)
-  %tmp_3_i = call i32 (...)* @_ssdm_op_SpecRegionBegin([12 x i8]* @p_str10)
   %tmp = call float @_ssdm_op_Read.ap_fifo.volatile.floatP(float* %sum_weight_in_V)
   %tmp_10 = call float @_ssdm_op_Read.ap_fifo.volatile.floatP(float* %sum_return_in_V)
   %tmp_11 = call float @_ssdm_op_Read.ap_fifo.volatile.floatP(float* %sum_weight_returnSquare_in_V)
@@ -604,40 +602,38 @@ entry:
   %tmp_16 = call float @_ssdm_op_Read.ap_fifo.volatile.floatP(float* %sum_weight_returnA_in_V)
   %meanReturnA = fdiv float %tmp_14, %tmp_i_24
   %meanReturnB = fdiv float %tmp_10, %tmp_i_24
-  %tmp_12_i = fmul float %meanReturnA, 2.000000e+00
-  %tmp_13_i = fmul float %tmp_12_i, %tmp_16
-  %tmp_14_i = fsub float %tmp_15, %tmp_13_i
-  %tmp_15_i = fdiv float %tmp_14_i, %tmp
-  %tmp_16_i = fmul float %meanReturnA, %meanReturnA
-  %tmp_17_i = fadd float %tmp_15_i, %tmp_16_i
-  %volatilityA = call float @llvm.sqrt.f32(float %tmp_17_i)
-  %tmp_18_i = fmul float %meanReturnB, 2.000000e+00
-  %tmp_19_i = fmul float %tmp_18_i, %tmp_12
-  %tmp_20_i = fsub float %tmp_11, %tmp_19_i
-  %tmp_21_i = fdiv float %tmp_20_i, %tmp
-  %tmp_22_i = fmul float %meanReturnB, %meanReturnB
-  %tmp_23_i = fadd float %tmp_21_i, %tmp_22_i
-  %volatilityB = call float @llvm.sqrt.f32(float %tmp_23_i)
-  %tmp_24_i = fmul float %meanReturnA, %tmp_12
-  %tmp_25_i = fsub float %tmp_13, %tmp_24_i
-  %tmp_26_i = fmul float %meanReturnB, %tmp_16
-  %tmp_27_i = fsub float %tmp_25_i, %tmp_26_i
-  %tmp_28_i = fdiv float %tmp_27_i, %tmp
-  %tmp_29_i = fmul float %meanReturnA, %meanReturnB
-  %covariance = fadd float %tmp_28_i, %tmp_29_i
-  %tmp_30_i = fmul float %volatilityA, %volatilityB
-  %corr_temp = fdiv float %covariance, %tmp_30_i
-  call void (...)* @_ssdm_op_SpecPipeline(i32 1, i32 1, i32 1, i32 0, [1 x i8]* @p_str) nounwind
+  %tmp_11_i = fmul float %meanReturnA, 2.000000e+00
+  %tmp_12_i = fmul float %tmp_11_i, %tmp_16
+  %tmp_13_i = fsub float %tmp_15, %tmp_12_i
+  %tmp_14_i = fdiv float %tmp_13_i, %tmp
+  %tmp_15_i = fmul float %meanReturnA, %meanReturnA
+  %tmp_16_i = fadd float %tmp_14_i, %tmp_15_i
+  %volatilityA = call float @llvm.sqrt.f32(float %tmp_16_i)
+  %tmp_17_i = fmul float %meanReturnB, 2.000000e+00
+  %tmp_18_i = fmul float %tmp_17_i, %tmp_12
+  %tmp_19_i = fsub float %tmp_11, %tmp_18_i
+  %tmp_20_i = fdiv float %tmp_19_i, %tmp
+  %tmp_21_i = fmul float %meanReturnB, %meanReturnB
+  %tmp_22_i = fadd float %tmp_20_i, %tmp_21_i
+  %volatilityB = call float @llvm.sqrt.f32(float %tmp_22_i)
+  %tmp_23_i = fmul float %meanReturnA, %tmp_12
+  %tmp_24_i = fsub float %tmp_13, %tmp_23_i
+  %tmp_25_i = fmul float %meanReturnB, %tmp_16
+  %tmp_26_i = fsub float %tmp_24_i, %tmp_25_i
+  %tmp_27_i = fdiv float %tmp_26_i, %tmp
+  %tmp_28_i = fmul float %meanReturnA, %meanReturnB
+  %covariance = fadd float %tmp_27_i, %tmp_28_i
+  %tmp_29_i = fmul float %volatilityA, %volatilityB
+  %corr_temp = fdiv float %covariance, %tmp_29_i
   %val_assign = bitcast float %corr_temp to i32
   call void @_ssdm_op_Write.axis.volatile.i32P(i32* %out_correlation_data_V, i32 %val_assign)
   call void @_ssdm_op_Write.axis.volatile.i4P(i4* %out_correlation_keep_V, i4 -1)
   call void @_ssdm_op_Write.axis.volatile.i4P(i4* %out_correlation_strb_V, i4 1)
   call void @_ssdm_op_Write.axis.volatile.i1P(i1* %out_correlation_user_V, i1 false)
-  %tmp_33_i = icmp eq i32 %column_index_cast_i, %tmp_1_i
-  call void @_ssdm_op_Write.axis.volatile.i1P(i1* %out_correlation_last_V, i1 %tmp_33_i)
+  %tmp_32_i = icmp eq i32 %column_index_cast_i, %tmp_1_i
+  call void @_ssdm_op_Write.axis.volatile.i1P(i1* %out_correlation_last_V, i1 %tmp_32_i)
   call void @_ssdm_op_Write.axis.volatile.i1P(i1* %out_correlation_id_V, i1 false)
   call void @_ssdm_op_Write.axis.volatile.i1P(i1* %out_correlation_dest_V, i1 false)
-  %empty_25 = call i32 (...)* @_ssdm_op_SpecRegionEnd([12 x i8]* @p_str10, i32 %tmp_3_i)
   %column_index = add i31 %column_index_i, 1
   br label %0
 

@@ -958,6 +958,10 @@
     <spirit:fileSet>
       <spirit:name>xilinx_verilogsynthesis_view_fileset</spirit:name>
       <spirit:file>
+        <spirit:name>hdl/ip/correlation_accel_v3_ap_faddfsub_3_full_dsp_32.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
         <spirit:name>hdl/ip/correlation_accel_v3_ap_fsqrt_14_no_dsp_32.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
@@ -967,10 +971,6 @@
       </spirit:file>
       <spirit:file>
         <spirit:name>hdl/ip/correlation_accel_v3_ap_fdiv_14_no_dsp_32.vhd</spirit:name>
-        <spirit:fileType>vhdlSource</spirit:fileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>hdl/ip/correlation_accel_v3_ap_fsub_3_full_dsp_32.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
@@ -997,15 +997,15 @@
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/correlation_accel_v3_fsub_32ns_32ns_32_5_full_dsp.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-      </spirit:file>
-      <spirit:file>
         <spirit:name>hdl/verilog/correlation_accel_v3_frontEnd_acc_weight_returnA_returnB.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
         <spirit:name>hdl/verilog/correlation_accel_v3_urem_32ns_4ns_32_36.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>hdl/verilog/correlation_accel_v3_faddfsub_32ns_32ns_32_5_full_dsp.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
@@ -1118,15 +1118,15 @@
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/correlation_accel_v3_fsub_32ns_32ns_32_5_full_dsp.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-      </spirit:file>
-      <spirit:file>
         <spirit:name>hdl/verilog/correlation_accel_v3_frontEnd_acc_weight_returnA_returnB.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
         <spirit:name>hdl/verilog/correlation_accel_v3_urem_32ns_4ns_32_36.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>hdl/verilog/correlation_accel_v3_faddfsub_32ns_32ns_32_5_full_dsp.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
@@ -1222,6 +1222,10 @@
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
+        <spirit:name>hdl/ip/correlation_accel_v3_ap_faddfsub_3_full_dsp_32.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
         <spirit:name>hdl/ip/correlation_accel_v3_ap_fsqrt_14_no_dsp_32.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
@@ -1231,10 +1235,6 @@
       </spirit:file>
       <spirit:file>
         <spirit:name>hdl/ip/correlation_accel_v3_ap_fdiv_14_no_dsp_32.vhd</spirit:name>
-        <spirit:fileType>vhdlSource</spirit:fileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>hdl/ip/correlation_accel_v3_ap_fsub_3_full_dsp_32.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
@@ -1263,6 +1263,10 @@
     <spirit:fileSet>
       <spirit:name>xilinx_vhdlsynthesis_view_fileset</spirit:name>
       <spirit:file>
+        <spirit:name>hdl/ip/correlation_accel_v3_ap_faddfsub_3_full_dsp_32.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
         <spirit:name>hdl/ip/correlation_accel_v3_ap_fsqrt_14_no_dsp_32.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
@@ -1272,10 +1276,6 @@
       </spirit:file>
       <spirit:file>
         <spirit:name>hdl/ip/correlation_accel_v3_ap_fdiv_14_no_dsp_32.vhd</spirit:name>
-        <spirit:fileType>vhdlSource</spirit:fileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>hdl/ip/correlation_accel_v3_ap_fsub_3_full_dsp_32.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
@@ -1354,10 +1354,6 @@
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/correlation_accel_v3_fsub_32ns_32ns_32_5_full_dsp.vhd</spirit:name>
-        <spirit:fileType>vhdlSource</spirit:fileType>
-      </spirit:file>
-      <spirit:file>
         <spirit:name>hdl/vhdl/FIFO_correlation_accel_v3_sum_returnA_V.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
@@ -1375,6 +1371,10 @@
       </spirit:file>
       <spirit:file>
         <spirit:name>hdl/vhdl/FIFO_correlation_accel_v3_sum_weight_returnSquare_V.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>hdl/vhdl/correlation_accel_v3_faddfsub_32ns_32ns_32_5_full_dsp.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
@@ -1396,7 +1396,7 @@
       <spirit:file>
         <spirit:name>hdl/vhdl/FIFO_correlation_accel_v3_sum_return_V.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
-        <spirit:userFileType>CHECKSUM_9a6fda72</spirit:userFileType>
+        <spirit:userFileType>CHECKSUM_4b916a5e</spirit:userFileType>
       </spirit:file>
     </spirit:fileSet>
     <spirit:fileSet>
@@ -1468,10 +1468,6 @@
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/correlation_accel_v3_fsub_32ns_32ns_32_5_full_dsp.vhd</spirit:name>
-        <spirit:fileType>vhdlSource</spirit:fileType>
-      </spirit:file>
-      <spirit:file>
         <spirit:name>hdl/vhdl/FIFO_correlation_accel_v3_sum_returnA_V.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
@@ -1489,6 +1485,10 @@
       </spirit:file>
       <spirit:file>
         <spirit:name>hdl/vhdl/FIFO_correlation_accel_v3_sum_weight_returnSquare_V.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>hdl/vhdl/correlation_accel_v3_faddfsub_32ns_32ns_32_5_full_dsp.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
@@ -1512,6 +1512,10 @@
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
+        <spirit:name>hdl/ip/correlation_accel_v3_ap_faddfsub_3_full_dsp_32.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
         <spirit:name>hdl/ip/correlation_accel_v3_ap_fsqrt_14_no_dsp_32.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
@@ -1521,10 +1525,6 @@
       </spirit:file>
       <spirit:file>
         <spirit:name>hdl/ip/correlation_accel_v3_ap_fdiv_14_no_dsp_32.vhd</spirit:name>
-        <spirit:fileType>vhdlSource</spirit:fileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>hdl/ip/correlation_accel_v3_ap_fsub_3_full_dsp_32.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
@@ -1625,8 +1625,8 @@
         <xilinx:taxonomy>/VIVADO_HLS_IP</xilinx:taxonomy>
       </xilinx:taxonomies>
       <xilinx:displayName>Correlation_accel_v3</xilinx:displayName>
-      <xilinx:coreRevision>1701242248</xilinx:coreRevision>
-      <xilinx:coreCreationDateTime>2017-01-24T21:48:27Z</xilinx:coreCreationDateTime>
+      <xilinx:coreRevision>1701301344</xilinx:coreRevision>
+      <xilinx:coreCreationDateTime>2017-01-30T12:44:32Z</xilinx:coreCreationDateTime>
     </xilinx:coreExtensions>
     <xilinx:packagingInfo>
       <xilinx:xilinxVersion>2014.4</xilinx:xilinxVersion>

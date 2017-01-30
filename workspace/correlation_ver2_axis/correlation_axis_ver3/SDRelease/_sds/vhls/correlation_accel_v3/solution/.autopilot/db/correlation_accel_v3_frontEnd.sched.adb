@@ -21176,23 +21176,6 @@
 		<count>4</count>
 		<item_version>0</item_version>
 		<item class_id="35" tracking_level="1" version="0" object_id="_1071">
-			<region_name>ACCUMULATION_LOOP_FIRST_INDEX</region_name>
-			<basic_blocks>
-				<count>2</count>
-				<item_version>0</item_version>
-				<item>142</item>
-				<item>192</item>
-			</basic_blocks>
-			<nodes>
-				<count>0</count>
-				<item_version>0</item_version>
-			</nodes>
-			<anchor_node>-1</anchor_node>
-			<region_type>8</region_type>
-			<interval>1</interval>
-			<pipe_depth>43</pipe_depth>
-		</item>
-		<item class_id_reference="35" object_id="_1072">
 			<region_name>LAST_ACCUM_LOOP_FIRST_INDEX</region_name>
 			<basic_blocks>
 				<count>2</count>
@@ -21209,7 +21192,7 @@
 			<interval>5</interval>
 			<pipe_depth>9</pipe_depth>
 		</item>
-		<item class_id_reference="35" object_id="_1073">
+		<item class_id_reference="35" object_id="_1072">
 			<region_name>ACCUMULATION_LOOP_FLOATING_INDEX</region_name>
 			<basic_blocks>
 				<count>2</count>
@@ -21226,7 +21209,7 @@
 			<interval>1</interval>
 			<pipe_depth>43</pipe_depth>
 		</item>
-		<item class_id_reference="35" object_id="_1074">
+		<item class_id_reference="35" object_id="_1073">
 			<region_name>LAST_ACCUM_LOOP</region_name>
 			<basic_blocks>
 				<count>2</count>
@@ -21242,6 +21225,23 @@
 			<region_type>8</region_type>
 			<interval>5</interval>
 			<pipe_depth>10</pipe_depth>
+		</item>
+		<item class_id_reference="35" object_id="_1074">
+			<region_name>ACCUMULATION_LOOP_FIRST_INDEX</region_name>
+			<basic_blocks>
+				<count>2</count>
+				<item_version>0</item_version>
+				<item>142</item>
+				<item>192</item>
+			</basic_blocks>
+			<nodes>
+				<count>0</count>
+				<item_version>0</item_version>
+			</nodes>
+			<anchor_node>-1</anchor_node>
+			<region_type>8</region_type>
+			<interval>1</interval>
+			<pipe_depth>43</pipe_depth>
 		</item>
 	</regions>
 	<dp_fu_nodes class_id="36" tracking_level="0" version="0">

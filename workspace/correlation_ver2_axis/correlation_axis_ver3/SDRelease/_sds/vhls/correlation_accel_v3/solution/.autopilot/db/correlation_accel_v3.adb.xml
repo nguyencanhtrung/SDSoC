@@ -541,7 +541,7 @@
 
 <node id="42" bw="32" op_0_bw="32" op_1_bw="8" op_2_bw="32" op_3_bw="8" op_4_bw="8" op_5_bw="32" op_6_bw="32" op_7_bw="32" op_8_bw="32">
 <![CDATA[
-:23  %empty = call i32 (...)* @_ssdm_op_SpecChannel([13 x i8]* @str16, i32 1, [1 x i8]* @str17, [1 x i8]* @str17, i32 252, i32 252, float* %sum_weight_V, float* %sum_weight_V)
+:23  %empty = call i32 (...)* @_ssdm_op_SpecChannel([13 x i8]* @str16, i32 1, [1 x i8]* @str17, [1 x i8]* @str17, i32 2, i32 2, float* %sum_weight_V, float* %sum_weight_V)
 
 ]]></node>
 <StgValue><ssdm name="empty"/></StgValue>
@@ -571,7 +571,7 @@
 
 <node id="45" bw="32" op_0_bw="32" op_1_bw="8" op_2_bw="32" op_3_bw="8" op_4_bw="8" op_5_bw="32" op_6_bw="32" op_7_bw="32" op_8_bw="32">
 <![CDATA[
-:26  %empty_5 = call i32 (...)* @_ssdm_op_SpecChannel([13 x i8]* @str20, i32 1, [1 x i8]* @str21, [1 x i8]* @str21, i32 252, i32 252, float* %sum_return_V, float* %sum_return_V)
+:26  %empty_5 = call i32 (...)* @_ssdm_op_SpecChannel([13 x i8]* @str20, i32 1, [1 x i8]* @str21, [1 x i8]* @str21, i32 2, i32 2, float* %sum_return_V, float* %sum_return_V)
 
 ]]></node>
 <StgValue><ssdm name="empty_5"/></StgValue>
@@ -601,7 +601,7 @@
 
 <node id="48" bw="32" op_0_bw="32" op_1_bw="8" op_2_bw="32" op_3_bw="8" op_4_bw="8" op_5_bw="32" op_6_bw="32" op_7_bw="32" op_8_bw="32">
 <![CDATA[
-:29  %empty_6 = call i32 (...)* @_ssdm_op_SpecChannel([26 x i8]* @str24, i32 1, [1 x i8]* @str25, [1 x i8]* @str25, i32 252, i32 252, float* %sum_weight_returnSquare_V, float* %sum_weight_returnSquare_V)
+:29  %empty_6 = call i32 (...)* @_ssdm_op_SpecChannel([26 x i8]* @str24, i32 1, [1 x i8]* @str25, [1 x i8]* @str25, i32 2, i32 2, float* %sum_weight_returnSquare_V, float* %sum_weight_returnSquare_V)
 
 ]]></node>
 <StgValue><ssdm name="empty_6"/></StgValue>
@@ -631,7 +631,7 @@
 
 <node id="51" bw="32" op_0_bw="32" op_1_bw="8" op_2_bw="32" op_3_bw="8" op_4_bw="8" op_5_bw="32" op_6_bw="32" op_7_bw="32" op_8_bw="32">
 <![CDATA[
-:32  %empty_7 = call i32 (...)* @_ssdm_op_SpecChannel([20 x i8]* @str28, i32 1, [1 x i8]* @str29, [1 x i8]* @str29, i32 252, i32 252, float* %sum_weight_return_V, float* %sum_weight_return_V)
+:32  %empty_7 = call i32 (...)* @_ssdm_op_SpecChannel([20 x i8]* @str28, i32 1, [1 x i8]* @str29, [1 x i8]* @str29, i32 2, i32 2, float* %sum_weight_return_V, float* %sum_weight_return_V)
 
 ]]></node>
 <StgValue><ssdm name="empty_7"/></StgValue>
@@ -661,7 +661,7 @@
 
 <node id="54" bw="32" op_0_bw="32" op_1_bw="8" op_2_bw="32" op_3_bw="8" op_4_bw="8" op_5_bw="32" op_6_bw="32" op_7_bw="32" op_8_bw="32">
 <![CDATA[
-:35  %empty_8 = call i32 (...)* @_ssdm_op_SpecChannel([29 x i8]* @str32, i32 1, [1 x i8]* @str33, [1 x i8]* @str33, i32 252, i32 252, float* %sum_weight_returnA_returnB_V, float* %sum_weight_returnA_returnB_V)
+:35  %empty_8 = call i32 (...)* @_ssdm_op_SpecChannel([29 x i8]* @str32, i32 1, [1 x i8]* @str33, [1 x i8]* @str33, i32 2, i32 2, float* %sum_weight_returnA_returnB_V, float* %sum_weight_returnA_returnB_V)
 
 ]]></node>
 <StgValue><ssdm name="empty_8"/></StgValue>
@@ -691,7 +691,7 @@
 
 <node id="57" bw="32" op_0_bw="32" op_1_bw="8" op_2_bw="32" op_3_bw="8" op_4_bw="8" op_5_bw="32" op_6_bw="32" op_7_bw="32" op_8_bw="32">
 <![CDATA[
-:38  %empty_9 = call i32 (...)* @_ssdm_op_SpecChannel([14 x i8]* @str36, i32 1, [1 x i8]* @str37, [1 x i8]* @str37, i32 252, i32 252, float* %sum_returnA_V, float* %sum_returnA_V)
+:38  %empty_9 = call i32 (...)* @_ssdm_op_SpecChannel([14 x i8]* @str36, i32 1, [1 x i8]* @str37, [1 x i8]* @str37, i32 2, i32 2, float* %sum_returnA_V, float* %sum_returnA_V)
 
 ]]></node>
 <StgValue><ssdm name="empty_9"/></StgValue>
@@ -721,7 +721,7 @@
 
 <node id="60" bw="32" op_0_bw="32" op_1_bw="8" op_2_bw="32" op_3_bw="8" op_4_bw="8" op_5_bw="32" op_6_bw="32" op_7_bw="32" op_8_bw="32">
 <![CDATA[
-:41  %empty_10 = call i32 (...)* @_ssdm_op_SpecChannel([27 x i8]* @str40, i32 1, [1 x i8]* @str41, [1 x i8]* @str41, i32 252, i32 252, float* %sum_weight_returnSquareA_V, float* %sum_weight_returnSquareA_V)
+:41  %empty_10 = call i32 (...)* @_ssdm_op_SpecChannel([27 x i8]* @str40, i32 1, [1 x i8]* @str41, [1 x i8]* @str41, i32 2, i32 2, float* %sum_weight_returnSquareA_V, float* %sum_weight_returnSquareA_V)
 
 ]]></node>
 <StgValue><ssdm name="empty_10"/></StgValue>
@@ -751,7 +751,7 @@
 
 <node id="63" bw="32" op_0_bw="32" op_1_bw="8" op_2_bw="32" op_3_bw="8" op_4_bw="8" op_5_bw="32" op_6_bw="32" op_7_bw="32" op_8_bw="32">
 <![CDATA[
-:44  %empty_11 = call i32 (...)* @_ssdm_op_SpecChannel([21 x i8]* @str44, i32 1, [1 x i8]* @str45, [1 x i8]* @str45, i32 252, i32 252, float* %sum_weight_returnA_V, float* %sum_weight_returnA_V)
+:44  %empty_11 = call i32 (...)* @_ssdm_op_SpecChannel([21 x i8]* @str44, i32 1, [1 x i8]* @str45, [1 x i8]* @str45, i32 2, i32 2, float* %sum_weight_returnA_V, float* %sum_weight_returnA_V)
 
 ]]></node>
 <StgValue><ssdm name="empty_11"/></StgValue>

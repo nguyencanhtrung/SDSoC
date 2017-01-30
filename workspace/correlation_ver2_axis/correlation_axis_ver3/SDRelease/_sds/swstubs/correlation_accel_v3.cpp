@@ -67,14 +67,14 @@ void correlation_accel_v3(
 	hls::stream<float> sum_weight_returnSquareA;
 	hls::stream<float> sum_weight_returnA;
 
-#pragma HLS STREAM variable=sum_weight depth=252
-#pragma HLS STREAM variable=sum_return depth=252
-#pragma HLS STREAM variable=sum_weight_returnSquare depth=252
-#pragma HLS STREAM variable=sum_weight_return depth=252
-#pragma HLS STREAM variable=sum_weight_returnA_returnB depth=252
-#pragma HLS STREAM variable=sum_returnA depth=252
-#pragma HLS STREAM variable=sum_weight_returnSquareA depth=252
-#pragma HLS STREAM variable=sum_weight_returnA depth=252
+#pragma HLS STREAM variable=sum_weight depth=2
+#pragma HLS STREAM variable=sum_return depth=2
+#pragma HLS STREAM variable=sum_weight_returnSquare depth=2
+#pragma HLS STREAM variable=sum_weight_return depth=2
+#pragma HLS STREAM variable=sum_weight_returnA_returnB depth=2
+#pragma HLS STREAM variable=sum_returnA depth=2
+#pragma HLS STREAM variable=sum_weight_returnSquareA depth=2
+#pragma HLS STREAM variable=sum_weight_returnA depth=2
 #else
 	float sum_weight[NUMBER_OF_INDICES - 1];
 	float sum_return[NUMBER_OF_INDICES - 1];
@@ -601,7 +601,7 @@ void backEnd(
 		float corr_temp = covariance / (volatilityA * volatilityB);
 
 		#ifdef __SDSVHLS__
-		#pragma HLS PIPELINE II=1
+		//#pragma HLS PIPELINE II=1
 			   conv1.floatval 							= corr_temp;
 			   out_correlation[column_index - 1].data  	= conv1.ival;
 			   out_correlation[column_index - 1].keep  	= 15;

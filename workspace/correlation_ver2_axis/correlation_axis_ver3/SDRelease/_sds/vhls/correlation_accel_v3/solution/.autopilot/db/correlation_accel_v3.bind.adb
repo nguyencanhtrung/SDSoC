@@ -1876,7 +1876,7 @@
 						<name>sum_weight_V</name>
 						<ssdmobj_id>41</ssdmobj_id>
 						<ctype>0</ctype>
-						<depth>252</depth>
+						<depth>2</depth>
 						<bitwidth>32</bitwidth>
 						<source class_id_reference="28" object_id="_173">
 							<port class_id_reference="29" object_id="_174">
@@ -1900,7 +1900,7 @@
 						<name>sum_return_V</name>
 						<ssdmobj_id>44</ssdmobj_id>
 						<ctype>0</ctype>
-						<depth>252</depth>
+						<depth>2</depth>
 						<bitwidth>32</bitwidth>
 						<source class_id_reference="28" object_id="_178">
 							<port class_id_reference="29" object_id="_179">
@@ -1924,7 +1924,7 @@
 						<name>sum_weight_returnSquare_V</name>
 						<ssdmobj_id>47</ssdmobj_id>
 						<ctype>0</ctype>
-						<depth>252</depth>
+						<depth>2</depth>
 						<bitwidth>32</bitwidth>
 						<source class_id_reference="28" object_id="_183">
 							<port class_id_reference="29" object_id="_184">
@@ -1948,7 +1948,7 @@
 						<name>sum_weight_return_V</name>
 						<ssdmobj_id>50</ssdmobj_id>
 						<ctype>0</ctype>
-						<depth>252</depth>
+						<depth>2</depth>
 						<bitwidth>32</bitwidth>
 						<source class_id_reference="28" object_id="_188">
 							<port class_id_reference="29" object_id="_189">
@@ -1972,7 +1972,7 @@
 						<name>sum_weight_returnA_returnB_V</name>
 						<ssdmobj_id>53</ssdmobj_id>
 						<ctype>0</ctype>
-						<depth>252</depth>
+						<depth>2</depth>
 						<bitwidth>32</bitwidth>
 						<source class_id_reference="28" object_id="_193">
 							<port class_id_reference="29" object_id="_194">
@@ -1996,7 +1996,7 @@
 						<name>sum_returnA_V</name>
 						<ssdmobj_id>56</ssdmobj_id>
 						<ctype>0</ctype>
-						<depth>252</depth>
+						<depth>2</depth>
 						<bitwidth>32</bitwidth>
 						<source class_id_reference="28" object_id="_198">
 							<port class_id_reference="29" object_id="_199">
@@ -2020,7 +2020,7 @@
 						<name>sum_weight_returnSquareA_V</name>
 						<ssdmobj_id>59</ssdmobj_id>
 						<ctype>0</ctype>
-						<depth>252</depth>
+						<depth>2</depth>
 						<bitwidth>32</bitwidth>
 						<source class_id_reference="28" object_id="_203">
 							<port class_id_reference="29" object_id="_204">
@@ -2044,7 +2044,7 @@
 						<name>sum_weight_returnA_V</name>
 						<ssdmobj_id>62</ssdmobj_id>
 						<ctype>0</ctype>
-						<depth>252</depth>
+						<depth>2</depth>
 						<bitwidth>32</bitwidth>
 						<source class_id_reference="28" object_id="_208">
 							<port class_id_reference="29" object_id="_209">
@@ -2913,17 +2913,17 @@
 			<second>
 				<count>2</count>
 				<item_version>0</item_version>
-				<item>74</item>
-				<item>74</item>
+				<item>69</item>
+				<item>69</item>
 			</second>
 		</item>
 		<item>
-			<first>231</first>
+			<first>239</first>
 			<second>
 				<count>2</count>
 				<item_version>0</item_version>
-				<item>69</item>
-				<item>69</item>
+				<item>74</item>
+				<item>74</item>
 			</second>
 		</item>
 	</dp_fu_nodes>
@@ -3015,7 +3015,7 @@
 		<count>2</count>
 		<item_version>0</item_version>
 		<item>
-			<first>grp_correlation_accel_v3_backEnd_fu_203</first>
+			<first>grp_correlation_accel_v3_backEnd_fu_239</first>
 			<second>
 				<count>2</count>
 				<item_version>0</item_version>
@@ -3024,7 +3024,7 @@
 			</second>
 		</item>
 		<item>
-			<first>grp_correlation_accel_v3_frontEnd_fu_231</first>
+			<first>grp_correlation_accel_v3_frontEnd_fu_203</first>
 			<second>
 				<count>2</count>
 				<item_version>0</item_version>

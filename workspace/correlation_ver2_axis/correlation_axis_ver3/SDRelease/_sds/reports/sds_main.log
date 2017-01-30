@@ -1,7 +1,7 @@
 (c) Copyright 2012-2015 Xilinx, Inc. All Rights Reserved.
 #-----------------------------------------------------------
 # Tool version  : sds++ 2014.4 20150228
-# Start time    : Tue Jan 24 10:48:41 PM CET 2017
+# Start time    : Mon Jan 30 01:44:48 PM CET 2017
 # Command line  : sds++ -Wall -O3 -I../src -c -fmessage-length=0 -MTsrc/main.o -MMD -MP -MFsrc/main.d -MTsrc/main.d -o src/main.o ../src/main.cpp -sds-pf zed
 # Log file      : /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease/_sds/reports/sds_main.log
 # Journal file  : /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease/_sds/reports/sds_main.jou
@@ -32,4 +32,4 @@ arm-xilinx-linux-gnueabi-g++ -c -I../src -Wall -O3 -fmessage-length=0 -MMD -MP -
              ^
 arm-xilinx-linux-gnueabi-objcopy --add-section .xdsdata=/home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease/_sds/swstubs/main.xml src/main.o
 sds++ log file saved as /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease/_sds/reports/sds_main.log
-sds++ completed at Tue Jan 24 10:48:42 PM CET 2017
+sds++ completed at Mon Jan 30 01:44:49 PM CET 2017

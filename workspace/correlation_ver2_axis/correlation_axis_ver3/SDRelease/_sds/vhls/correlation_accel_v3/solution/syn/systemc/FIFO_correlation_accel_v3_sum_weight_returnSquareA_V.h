@@ -12,8 +12,8 @@
 using namespace std;
 SC_MODULE(FIFO_correlation_accel_v3_sum_weight_returnSquareA_V) {
     static const unsigned int DATA_WIDTH = 32;
-    static const unsigned int ADDR_WIDTH = 8;
-    static const unsigned int FIFO_correlation_accel_v3_sum_weight_returnSquareA_V_depth = 253;
+    static const unsigned int ADDR_WIDTH = 2;
+    static const unsigned int FIFO_correlation_accel_v3_sum_weight_returnSquareA_V_depth = 3;
     sc_core::sc_in_clk clk;
     sc_core::sc_in< sc_dt::sc_logic > reset;
     sc_core::sc_out< sc_dt::sc_logic > if_empty_n;

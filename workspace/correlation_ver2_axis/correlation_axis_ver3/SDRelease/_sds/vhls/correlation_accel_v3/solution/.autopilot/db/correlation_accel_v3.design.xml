@@ -5,14 +5,14 @@
 <ModuleName>correlation_accel_v3</ModuleName>
 <InstancesList>
 <Instance>
-<InstName>grp_correlation_accel_v3_frontEnd_fu_231</InstName>
+<InstName>grp_correlation_accel_v3_frontEnd_fu_203</InstName>
 <ModuleName>correlation_accel_v3_frontEnd</ModuleName>
-<ID>231</ID>
+<ID>203</ID>
 </Instance>
 <Instance>
-<InstName>grp_correlation_accel_v3_backEnd_fu_203</InstName>
+<InstName>grp_correlation_accel_v3_backEnd_fu_239</InstName>
 <ModuleName>correlation_accel_v3_backEnd</ModuleName>
-<ID>203</ID>
+<ID>239</ID>
 </Instance>
 </InstancesList>
 </TopModule>
@@ -645,10 +645,10 @@
 <EstimatedClockPeriod>7.26</EstimatedClockPeriod>
 </SummaryOfTimingAnalysis>
 <SummaryOfOverallLatency>
-<Best-caseLatency>8</Best-caseLatency>
+<Best-caseLatency>7</Best-caseLatency>
 <Average-caseLatency>undef</Average-caseLatency>
-<Worst-caseLatency>2147483740</Worst-caseLatency>
-<PipelineInitiationInterval>8 ~ 2147483740</PipelineInitiationInterval>
+<Worst-caseLatency>186831077209</Worst-caseLatency>
+<PipelineInitiationInterval>7 ~ 186831077209</PipelineInitiationInterval>
 <PipelineType>none</PipelineType>
 </SummaryOfOverallLatency>
 <SummaryOfLoopLatency>
@@ -660,17 +660,17 @@
 <max>2147483646</max>
 </range>
 </TripCount>
-<Latency>0 ~ 2147483732</Latency>
-<PipelineII>1</PipelineII>
-<PipelineDepth>88</PipelineDepth>
+<Latency>0 ~ 186831077202</Latency>
+<IterationLatency>87</IterationLatency>
+<PipelineDepth>87</PipelineDepth>
 </Loop1>
 </SummaryOfLoopLatency>
 </PerformanceEstimates>
 <AreaEstimates>
 <Resources>
-<DSP48E>44</DSP48E>
-<FF>10087</FF>
-<LUT>14314</LUT>
+<DSP48E>13</DSP48E>
+<FF>4660</FF>
+<LUT>6337</LUT>
 <BRAM_18K>0</BRAM_18K>
 <SLICE>0</SLICE>
 </Resources>
@@ -1203,10 +1203,10 @@
 </PerformanceEstimates>
 <AreaEstimates>
 <Resources>
-<BRAM_18K>19</BRAM_18K>
-<DSP48E>80</DSP48E>
-<FF>17826</FF>
-<LUT>25028</LUT>
+<BRAM_18K>3</BRAM_18K>
+<DSP48E>49</DSP48E>
+<FF>11959</FF>
+<LUT>16867</LUT>
 <SLICE>0</SLICE>
 </Resources>
 </AreaEstimates>

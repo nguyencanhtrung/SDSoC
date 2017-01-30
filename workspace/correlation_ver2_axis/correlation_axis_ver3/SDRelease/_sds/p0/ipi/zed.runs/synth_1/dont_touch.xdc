@@ -151,7 +151,7 @@ set_property DONT_TOUCH TRUE [get_cells [split [join [get_cells -hier -filter {R
 # XDC: bd/zed/ip/zed_datamover_1_0/zed_datamover_1_0_clocks.xdc
 #dup# set_property DONT_TOUCH TRUE [get_cells [split [join [get_cells -hier -filter {REF_NAME==zed_datamover_1_0 || ORIG_REF_NAME==zed_datamover_1_0}] {/U0 }]/U0 ]]
 
-# XDC: ipshared/xilinx.com/correlation_accel_v3_v1_0/96104959/constraints/correlation_accel_v3_ooc.xdc
+# XDC: ipshared/xilinx.com/correlation_accel_v3_v1_0/b20db5ce/constraints/correlation_accel_v3_ooc.xdc
 
 # XDC: bd/zed/ip/zed_correlation_accel_v3_0_if_0/zed_correlation_accel_v3_0_if_0_ooc.xdc
 

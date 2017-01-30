@@ -44994,14 +44994,14 @@ void correlation_accel_v3( int number_of_days, /* CPU in*/
  hls::stream<float> sum_weight_returnSquareA;
  hls::stream<float> sum_weight_returnA;
 
-#pragma HLS STREAM variable=&sum_weight depth=252
-#pragma HLS STREAM variable=&sum_return depth=252
-#pragma HLS STREAM variable=&sum_weight_returnSquare depth=252
-#pragma HLS STREAM variable=&sum_weight_return depth=252
-#pragma HLS STREAM variable=&sum_weight_returnA_returnB depth=252
-#pragma HLS STREAM variable=&sum_returnA depth=252
-#pragma HLS STREAM variable=&sum_weight_returnSquareA depth=252
-#pragma HLS STREAM variable=&sum_weight_returnA depth=252
+#pragma HLS STREAM variable=&sum_weight depth=2
+#pragma HLS STREAM variable=&sum_return depth=2
+#pragma HLS STREAM variable=&sum_weight_returnSquare depth=2
+#pragma HLS STREAM variable=&sum_weight_return depth=2
+#pragma HLS STREAM variable=&sum_weight_returnA_returnB depth=2
+#pragma HLS STREAM variable=&sum_returnA depth=2
+#pragma HLS STREAM variable=&sum_weight_returnSquareA depth=2
+#pragma HLS STREAM variable=&sum_weight_returnA depth=2
 #94 "/home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease/_sds/vhls/src/correlation_accel_v3.cpp"
 frontEnd(
     NUMBER_OF_DAYS,
@@ -45351,7 +45351,7 @@ void backEnd(
           float floatval;
      } conv1;
 
- for(int column_index = 1; column_index < NUMBER_OF_INDICES; column_index++){_ssdm_RegionBegin("hls_label_3");
+ for(int column_index = 1; column_index < NUMBER_OF_INDICES; column_index++){
 
   float sum_weight = sum_weight_in.read();
   float sum_return = sum_return_in.read();
@@ -45379,8 +45379,8 @@ void backEnd(
   float corr_temp = covariance / (volatilityA * volatilityB);
 
 
-#pragma HLS PIPELINE II=1
- conv1.floatval = corr_temp;
+  //#pragma HLS PIPELINE II=1
+      conv1.floatval = corr_temp;
       out_correlation[column_index - 1].data = conv1.ival;
       out_correlation[column_index - 1].keep = 15;
       out_correlation[column_index - 1].strb = 1;
@@ -45391,5 +45391,5 @@ void backEnd(
 
 
 
- _ssdm_RegionEnd("hls_label_3");}
+ }
 }

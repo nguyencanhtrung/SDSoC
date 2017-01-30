@@ -18,5 +18,5 @@
   <xd:arg xd:name="out_correlation.id" xd:swRootName="out_correlation" xd:direction="out" xd:busInterfaceRef="out_correlation" xd:hwName="out_correlation" xd:portInterfaceType="axis" xd:arraySize="49995000" xd:dataWidth="1"/>
   <xd:arg xd:name="out_correlation.dest" xd:swRootName="out_correlation" xd:direction="out" xd:busInterfaceRef="out_correlation" xd:hwName="out_correlation" xd:portInterfaceType="axis" xd:arraySize="49995000" xd:dataWidth="1"/>
   <xd:latencyEstimates xd:best-case="undef" xd:worst-case="undef" xd:average-case="undef"/>
-  <xd:resourceEstimates xd:LUT="25028" xd:FF="17826" xd:BRAM="19" xd:DSP="80"/>
+  <xd:resourceEstimates xd:LUT="16867" xd:FF="11959" xd:BRAM="3" xd:DSP="49"/>
 </xd:acceleratorMap>

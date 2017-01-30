@@ -45027,14 +45027,14 @@ _ssdm_op_SpecDataflowPipeline(-1, "");
  hls::stream<float> sum_weight_returnSquareA;
  hls::stream<float> sum_weight_returnA;
 
-_ssdm_SpecStream( &sum_weight, 0, 252, "");
-_ssdm_SpecStream( &sum_return, 0, 252, "");
-_ssdm_SpecStream( &sum_weight_returnSquare, 0, 252, "");
-_ssdm_SpecStream( &sum_weight_return, 0, 252, "");
-_ssdm_SpecStream( &sum_weight_returnA_returnB, 0, 252, "");
-_ssdm_SpecStream( &sum_returnA, 0, 252, "");
-_ssdm_SpecStream( &sum_weight_returnSquareA, 0, 252, "");
-_ssdm_SpecStream( &sum_weight_returnA, 0, 252, "");
+_ssdm_SpecStream( &sum_weight, 0, 2, "");
+_ssdm_SpecStream( &sum_return, 0, 2, "");
+_ssdm_SpecStream( &sum_weight_returnSquare, 0, 2, "");
+_ssdm_SpecStream( &sum_weight_return, 0, 2, "");
+_ssdm_SpecStream( &sum_weight_returnA_returnB, 0, 2, "");
+_ssdm_SpecStream( &sum_returnA, 0, 2, "");
+_ssdm_SpecStream( &sum_weight_returnSquareA, 0, 2, "");
+_ssdm_SpecStream( &sum_weight_returnA, 0, 2, "");
 # 94 "/home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease/_sds/vhls/src/correlation_accel_v3.cpp"
 frontEnd(
     NUMBER_OF_DAYS,
@@ -45384,7 +45384,7 @@ void backEnd(
           float floatval;
      } conv1;
 
- for(int column_index = 1; column_index < NUMBER_OF_INDICES; column_index++){_ssdm_RegionBegin("hls_label_3");
+ for(int column_index = 1; column_index < NUMBER_OF_INDICES; column_index++){
 
   float sum_weight = sum_weight_in.read();
   float sum_return = sum_return_in.read();
@@ -45412,8 +45412,8 @@ void backEnd(
   float corr_temp = covariance / (volatilityA * volatilityB);
 
 
-_ssdm_op_SpecPipeline(1, 1, 1, 0, "");
- conv1.floatval = corr_temp;
+  //#pragma HLS PIPELINE II=1
+      conv1.floatval = corr_temp;
       out_correlation[column_index - 1].data = conv1.ival;
       out_correlation[column_index - 1].keep = 15;
       out_correlation[column_index - 1].strb = 1;
@@ -45424,5 +45424,5 @@ _ssdm_op_SpecPipeline(1, 1, 1, 0, "");
 
 
 
- _ssdm_RegionEnd("hls_label_3");}
+ }
 }

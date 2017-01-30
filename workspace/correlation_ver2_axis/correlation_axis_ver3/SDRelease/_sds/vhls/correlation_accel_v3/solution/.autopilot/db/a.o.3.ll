@@ -2,7 +2,7 @@
 target datalayout = "e-p:64:64:64-i1:8:8-i8:8:8-i16:16:16-i32:32:32-i64:64:64-f32:32:32-f64:64:64-v64:64:64-v128:128:128-a0:0:64-s0:64:64-f80:128:128-n8:16:32:64-S128"
 target triple = "x86_64-unknown-linux-gnu"
 
-@p_str = private unnamed_addr constant [1 x i8] zeroinitializer, align 1 ; [#uses=22 type=[1 x i8]*]
+@p_str = private unnamed_addr constant [1 x i8] zeroinitializer, align 1 ; [#uses=21 type=[1 x i8]*]
 @p_str1 = private unnamed_addr constant [5 x i8] c"axis\00", align 1 ; [#uses=4 type=[5 x i8]*]
 @p_str2 = private unnamed_addr constant [11 x i8] c"ap_ctrl_hs\00", align 1 ; [#uses=1 type=[11 x i8]*]
 @weight_rom = internal unnamed_addr global [252 x float] zeroinitializer, align 16 ; [#uses=6 type=[252 x float]*]
@@ -11,9 +11,8 @@ target triple = "x86_64-unknown-linux-gnu"
 @p_str6 = private unnamed_addr constant [28 x i8] c"LAST_ACCUM_LOOP_FIRST_INDEX\00", align 1 ; [#uses=3 type=[28 x i8]*]
 @p_str8 = private unnamed_addr constant [33 x i8] c"ACCUMULATION_LOOP_FLOATING_INDEX\00", align 1 ; [#uses=3 type=[33 x i8]*]
 @p_str9 = private unnamed_addr constant [16 x i8] c"LAST_ACCUM_LOOP\00", align 1 ; [#uses=3 type=[16 x i8]*]
-@p_str10 = private unnamed_addr constant [12 x i8] c"hls_label_3\00", align 1 ; [#uses=2 type=[12 x i8]*]
-@p_str11 = private unnamed_addr constant [16 x i8] c"INIT_WEIGHT_ROM\00", align 1 ; [#uses=1 type=[16 x i8]*]
-@p_str12 = private unnamed_addr constant [19 x i8] c"COMP_SUM_OF_WEIGHT\00", align 1 ; [#uses=1 type=[19 x i8]*]
+@p_str10 = private unnamed_addr constant [16 x i8] c"INIT_WEIGHT_ROM\00", align 1 ; [#uses=1 type=[16 x i8]*]
+@p_str11 = private unnamed_addr constant [19 x i8] c"COMP_SUM_OF_WEIGHT\00", align 1 ; [#uses=1 type=[19 x i8]*]
 @llvm_global_ctors_0 = appending global [1 x i32] [i32 65535] ; [#uses=0 type=[1 x i32]*]
 @llvm_global_ctors_1 = appending global [1 x void ()*] [void ()* @_GLOBAL__I_a] ; [#uses=0 type=[1 x void ()*]*]
 @str = internal constant [21 x i8] c"correlation_accel_v3\00" ; [#uses=1 type=[21 x i8]*]
@@ -89,7 +88,7 @@ entry:
   ret void
 }
 
-; [#uses=5]
+; [#uses=4]
 define weak void @_ssdm_op_SpecPipeline(...) nounwind {
 entry:
   ret void
@@ -113,13 +112,13 @@ declare float @llvm.log.f32(float) nounwind readonly
 ; [#uses=2]
 declare float @llvm.sqrt.f32(float) nounwind readonly
 
-; [#uses=5]
+; [#uses=4]
 define weak i32 @_ssdm_op_SpecRegionBegin(...) {
 entry:
   ret i32 0
 }
 
-; [#uses=5]
+; [#uses=4]
 define weak i32 @_ssdm_op_SpecRegionEnd(...) {
 entry:
   ret i32 0
@@ -170,28 +169,28 @@ define void @correlation_accel_v3(i32 %number_of_days, i32 %number_of_indices, i
   call void (...)* @_ssdm_op_SpecBitsMap(i1* %out_correlation_dest_V), !map !1317
   call void (...)* @_ssdm_op_SpecTopModule([21 x i8]* @str) nounwind
   %sum_weight_V = alloca float, align 4           ; [#uses=5 type=float*]
-  %empty = call i32 (...)* @_ssdm_op_SpecChannel([13 x i8]* @str16, i32 1, [1 x i8]* @str17, [1 x i8]* @str17, i32 252, i32 252, float* %sum_weight_V, float* %sum_weight_V) ; [#uses=0 type=i32]
+  %empty = call i32 (...)* @_ssdm_op_SpecChannel([13 x i8]* @str16, i32 1, [1 x i8]* @str17, [1 x i8]* @str17, i32 2, i32 2, float* %sum_weight_V, float* %sum_weight_V) ; [#uses=0 type=i32]
   call void (...)* @_ssdm_op_SpecInterface(float* %sum_weight_V, [8 x i8]* @str18, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @str19, [1 x i8]* @str19, [8 x i8]* @str18)
   %sum_return_V = alloca float, align 4           ; [#uses=5 type=float*]
-  %empty_5 = call i32 (...)* @_ssdm_op_SpecChannel([13 x i8]* @str20, i32 1, [1 x i8]* @str21, [1 x i8]* @str21, i32 252, i32 252, float* %sum_return_V, float* %sum_return_V) ; [#uses=0 type=i32]
+  %empty_5 = call i32 (...)* @_ssdm_op_SpecChannel([13 x i8]* @str20, i32 1, [1 x i8]* @str21, [1 x i8]* @str21, i32 2, i32 2, float* %sum_return_V, float* %sum_return_V) ; [#uses=0 type=i32]
   call void (...)* @_ssdm_op_SpecInterface(float* %sum_return_V, [8 x i8]* @str22, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @str23, [1 x i8]* @str23, [8 x i8]* @str22)
   %sum_weight_returnSquare_V = alloca float, align 4 ; [#uses=5 type=float*]
-  %empty_6 = call i32 (...)* @_ssdm_op_SpecChannel([26 x i8]* @str24, i32 1, [1 x i8]* @str25, [1 x i8]* @str25, i32 252, i32 252, float* %sum_weight_returnSquare_V, float* %sum_weight_returnSquare_V) ; [#uses=0 type=i32]
+  %empty_6 = call i32 (...)* @_ssdm_op_SpecChannel([26 x i8]* @str24, i32 1, [1 x i8]* @str25, [1 x i8]* @str25, i32 2, i32 2, float* %sum_weight_returnSquare_V, float* %sum_weight_returnSquare_V) ; [#uses=0 type=i32]
   call void (...)* @_ssdm_op_SpecInterface(float* %sum_weight_returnSquare_V, [8 x i8]* @str26, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @str27, [1 x i8]* @str27, [8 x i8]* @str26)
   %sum_weight_return_V = alloca float, align 4    ; [#uses=5 type=float*]
-  %empty_7 = call i32 (...)* @_ssdm_op_SpecChannel([20 x i8]* @str28, i32 1, [1 x i8]* @str29, [1 x i8]* @str29, i32 252, i32 252, float* %sum_weight_return_V, float* %sum_weight_return_V) ; [#uses=0 type=i32]
+  %empty_7 = call i32 (...)* @_ssdm_op_SpecChannel([20 x i8]* @str28, i32 1, [1 x i8]* @str29, [1 x i8]* @str29, i32 2, i32 2, float* %sum_weight_return_V, float* %sum_weight_return_V) ; [#uses=0 type=i32]
   call void (...)* @_ssdm_op_SpecInterface(float* %sum_weight_return_V, [8 x i8]* @str30, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @str31, [1 x i8]* @str31, [8 x i8]* @str30)
   %sum_weight_returnA_returnB_V = alloca float, align 4 ; [#uses=5 type=float*]
-  %empty_8 = call i32 (...)* @_ssdm_op_SpecChannel([29 x i8]* @str32, i32 1, [1 x i8]* @str33, [1 x i8]* @str33, i32 252, i32 252, float* %sum_weight_returnA_returnB_V, float* %sum_weight_returnA_returnB_V) ; [#uses=0 type=i32]
+  %empty_8 = call i32 (...)* @_ssdm_op_SpecChannel([29 x i8]* @str32, i32 1, [1 x i8]* @str33, [1 x i8]* @str33, i32 2, i32 2, float* %sum_weight_returnA_returnB_V, float* %sum_weight_returnA_returnB_V) ; [#uses=0 type=i32]
   call void (...)* @_ssdm_op_SpecInterface(float* %sum_weight_returnA_returnB_V, [8 x i8]* @str34, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @str35, [1 x i8]* @str35, [8 x i8]* @str34)
   %sum_returnA_V = alloca float, align 4          ; [#uses=5 type=float*]
-  %empty_9 = call i32 (...)* @_ssdm_op_SpecChannel([14 x i8]* @str36, i32 1, [1 x i8]* @str37, [1 x i8]* @str37, i32 252, i32 252, float* %sum_returnA_V, float* %sum_returnA_V) ; [#uses=0 type=i32]
+  %empty_9 = call i32 (...)* @_ssdm_op_SpecChannel([14 x i8]* @str36, i32 1, [1 x i8]* @str37, [1 x i8]* @str37, i32 2, i32 2, float* %sum_returnA_V, float* %sum_returnA_V) ; [#uses=0 type=i32]
   call void (...)* @_ssdm_op_SpecInterface(float* %sum_returnA_V, [8 x i8]* @str38, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @str39, [1 x i8]* @str39, [8 x i8]* @str38)
   %sum_weight_returnSquareA_V = alloca float, align 4 ; [#uses=5 type=float*]
-  %empty_10 = call i32 (...)* @_ssdm_op_SpecChannel([27 x i8]* @str40, i32 1, [1 x i8]* @str41, [1 x i8]* @str41, i32 252, i32 252, float* %sum_weight_returnSquareA_V, float* %sum_weight_returnSquareA_V) ; [#uses=0 type=i32]
+  %empty_10 = call i32 (...)* @_ssdm_op_SpecChannel([27 x i8]* @str40, i32 1, [1 x i8]* @str41, [1 x i8]* @str41, i32 2, i32 2, float* %sum_weight_returnSquareA_V, float* %sum_weight_returnSquareA_V) ; [#uses=0 type=i32]
   call void (...)* @_ssdm_op_SpecInterface(float* %sum_weight_returnSquareA_V, [8 x i8]* @str42, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @str43, [1 x i8]* @str43, [8 x i8]* @str42)
   %sum_weight_returnA_V = alloca float, align 4   ; [#uses=5 type=float*]
-  %empty_11 = call i32 (...)* @_ssdm_op_SpecChannel([21 x i8]* @str44, i32 1, [1 x i8]* @str45, [1 x i8]* @str45, i32 252, i32 252, float* %sum_weight_returnA_V, float* %sum_weight_returnA_V) ; [#uses=0 type=i32]
+  %empty_11 = call i32 (...)* @_ssdm_op_SpecChannel([21 x i8]* @str44, i32 1, [1 x i8]* @str45, [1 x i8]* @str45, i32 2, i32 2, float* %sum_weight_returnA_V, float* %sum_weight_returnA_V) ; [#uses=0 type=i32]
   call void (...)* @_ssdm_op_SpecInterface(float* %sum_weight_returnA_V, [8 x i8]* @str46, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @str47, [1 x i8]* @str47, [8 x i8]* @str46)
   call void (...)* @_ssdm_op_SpecLatency(i32 1, i32 65535, [1 x i8]* @p_str) nounwind, !dbg !1321 ; [debug line = 50:1]
   call void (...)* @_ssdm_op_SpecInterface(i32* %out_correlation_data_V, i4* %out_correlation_keep_V, i4* %out_correlation_strb_V, i1* %out_correlation_user_V, i1* %out_correlation_last_V, i1* %out_correlation_id_V, i1* %out_correlation_dest_V, [5 x i8]* @p_str1, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str)
@@ -295,7 +294,7 @@ entry:
   br i1 %exitcond_i_i, label %.preheader.i.i, label %1, !dbg !1509 ; [debug line = 188:15@242:2]
 
 ; <label>:1                                       ; preds = %0
-  call void (...)* @_ssdm_op_SpecLoopName([16 x i8]* @p_str11) nounwind, !dbg !1511 ; [debug line = 188:46@242:2]
+  call void (...)* @_ssdm_op_SpecLoopName([16 x i8]* @p_str10) nounwind, !dbg !1511 ; [debug line = 188:46@242:2]
   %tmp_i_i_14 = fmul float %tmp_i_i, 0x3FEE147AE0000000, !dbg !1513 ; [#uses=2 type=float] [debug line = 189:3@242:2]
   %tmp_70_i_i = zext i8 %i_i_i to i64, !dbg !1513 ; [#uses=1 type=i64] [debug line = 189:3@242:2]
   %weight_rom_addr = getelementptr [252 x float]* @weight_rom, i64 0, i64 %tmp_70_i_i, !dbg !1513 ; [#uses=1 type=float*] [debug line = 189:3@242:2]
@@ -312,7 +311,7 @@ entry:
   br i1 %tmp_69_i_i, label %2, label %weight_rom_init.exit.i, !dbg !1516 ; [debug line = 193:15@242:2]
 
 ; <label>:2                                       ; preds = %.preheader.i.i
-  call void (...)* @_ssdm_op_SpecLoopName([19 x i8]* @p_str12) nounwind, !dbg !1518 ; [debug line = 193:42@242:2]
+  call void (...)* @_ssdm_op_SpecLoopName([19 x i8]* @p_str11) nounwind, !dbg !1518 ; [debug line = 193:42@242:2]
   %tmp_71_i_i = zext i31 %i1_i_i to i64, !dbg !1520 ; [#uses=1 type=i64] [debug line = 194:3@242:2]
   %weight_rom_addr_1 = getelementptr [252 x float]* @weight_rom, i64 0, i64 %tmp_71_i_i, !dbg !1520 ; [#uses=1 type=float*] [debug line = 194:3@242:2]
   %weight_rom_load = load float* %weight_rom_addr_1, align 4, !dbg !1520 ; [#uses=1 type=float] [debug line = 194:3@242:2]
@@ -735,90 +734,87 @@ entry:
   %column_index_i = phi i31 [ 1, %entry ], [ %column_index, %1 ] ; [#uses=2 type=i31]
   %column_index_cast_i = zext i31 %column_index_i to i32, !dbg !1804 ; [#uses=2 type=i32] [debug line = 534:26]
   %tmp_2_i = icmp slt i32 %column_index_cast_i, %NUMBER_OF_INDICES_read, !dbg !1804 ; [#uses=1 type=i1] [debug line = 534:26]
+  %empty = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 0, i64 2147483646, i64 0) ; [#uses=0 type=i32]
   br i1 %tmp_2_i, label %1, label %backEnd.1.exit, !dbg !1804 ; [debug line = 534:26]
 
 ; <label>:1                                       ; preds = %0
-  %empty = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 0, i64 2147483646, i64 0) ; [#uses=0 type=i32]
-  %tmp_3_i = call i32 (...)* @_ssdm_op_SpecRegionBegin([12 x i8]* @p_str10), !dbg !1805 ; [#uses=1 type=i32] [debug line = 534:78]
-  call void @llvm.dbg.value(metadata !{float* %sum_weight_in_V}, i64 0, metadata !1806), !dbg !1809 ; [debug line = 129:56@536:22] [debug variable = stream<float>.V]
-  %tmp = call float @_ssdm_op_Read.ap_fifo.volatile.floatP(float* %sum_weight_in_V), !dbg !1811 ; [#uses=3 type=float] [debug line = 131:9@536:22]
-  call void @llvm.dbg.value(metadata !{float %tmp}, i64 0, metadata !1813), !dbg !1811 ; [debug line = 131:9@536:22] [debug variable = tmp]
-  call void @llvm.dbg.value(metadata !{float %tmp}, i64 0, metadata !1814), !dbg !1810 ; [debug line = 536:22] [debug variable = sum_weight]
-  call void @llvm.dbg.value(metadata !{float* %sum_return_in_V}, i64 0, metadata !1806), !dbg !1815 ; [debug line = 129:56@537:22] [debug variable = stream<float>.V]
-  %tmp_10 = call float @_ssdm_op_Read.ap_fifo.volatile.floatP(float* %sum_return_in_V), !dbg !1817 ; [#uses=1 type=float] [debug line = 131:9@537:22]
-  call void @llvm.dbg.value(metadata !{float %tmp_10}, i64 0, metadata !1813), !dbg !1817 ; [debug line = 131:9@537:22] [debug variable = tmp]
-  call void @llvm.dbg.value(metadata !{float %tmp_10}, i64 0, metadata !1818), !dbg !1816 ; [debug line = 537:22] [debug variable = sum_return]
-  call void @llvm.dbg.value(metadata !{float* %sum_weight_returnSquare_in_V}, i64 0, metadata !1806), !dbg !1819 ; [debug line = 129:56@538:35] [debug variable = stream<float>.V]
-  %tmp_11 = call float @_ssdm_op_Read.ap_fifo.volatile.floatP(float* %sum_weight_returnSquare_in_V), !dbg !1821 ; [#uses=1 type=float] [debug line = 131:9@538:35]
-  call void @llvm.dbg.value(metadata !{float %tmp_11}, i64 0, metadata !1813), !dbg !1821 ; [debug line = 131:9@538:35] [debug variable = tmp]
-  call void @llvm.dbg.value(metadata !{float %tmp_11}, i64 0, metadata !1822), !dbg !1820 ; [debug line = 538:35] [debug variable = sum_weight_returnSquare]
-  call void @llvm.dbg.value(metadata !{float* %sum_weight_return_in_V}, i64 0, metadata !1806), !dbg !1823 ; [debug line = 129:56@539:29] [debug variable = stream<float>.V]
-  %tmp_12 = call float @_ssdm_op_Read.ap_fifo.volatile.floatP(float* %sum_weight_return_in_V), !dbg !1825 ; [#uses=2 type=float] [debug line = 131:9@539:29]
-  call void @llvm.dbg.value(metadata !{float %tmp_12}, i64 0, metadata !1813), !dbg !1825 ; [debug line = 131:9@539:29] [debug variable = tmp]
-  call void @llvm.dbg.value(metadata !{float %tmp_12}, i64 0, metadata !1826), !dbg !1824 ; [debug line = 539:29] [debug variable = sum_weight_return]
-  call void @llvm.dbg.value(metadata !{float* %sum_weight_returnA_returnB_in_s}, i64 0, metadata !1806), !dbg !1827 ; [debug line = 129:56@540:37] [debug variable = stream<float>.V]
-  %tmp_13 = call float @_ssdm_op_Read.ap_fifo.volatile.floatP(float* %sum_weight_returnA_returnB_in_s), !dbg !1829 ; [#uses=1 type=float] [debug line = 131:9@540:37]
-  call void @llvm.dbg.value(metadata !{float %tmp_13}, i64 0, metadata !1813), !dbg !1829 ; [debug line = 131:9@540:37] [debug variable = tmp]
-  call void @llvm.dbg.value(metadata !{float %tmp_13}, i64 0, metadata !1830), !dbg !1828 ; [debug line = 540:37] [debug variable = sum_weight_returnA_returnB]
-  call void @llvm.dbg.value(metadata !{float* %sum_returnA_in_V}, i64 0, metadata !1806), !dbg !1831 ; [debug line = 129:56@541:22] [debug variable = stream<float>.V]
-  %tmp_14 = call float @_ssdm_op_Read.ap_fifo.volatile.floatP(float* %sum_returnA_in_V), !dbg !1833 ; [#uses=1 type=float] [debug line = 131:9@541:22]
-  call void @llvm.dbg.value(metadata !{float %tmp_14}, i64 0, metadata !1813), !dbg !1833 ; [debug line = 131:9@541:22] [debug variable = tmp]
-  call void @llvm.dbg.value(metadata !{float %tmp_14}, i64 0, metadata !1834), !dbg !1832 ; [debug line = 541:22] [debug variable = sum_returnA]
-  call void @llvm.dbg.value(metadata !{float* %sum_weight_returnSquareA_in_V}, i64 0, metadata !1806), !dbg !1835 ; [debug line = 129:56@542:36] [debug variable = stream<float>.V]
-  %tmp_15 = call float @_ssdm_op_Read.ap_fifo.volatile.floatP(float* %sum_weight_returnSquareA_in_V), !dbg !1837 ; [#uses=1 type=float] [debug line = 131:9@542:36]
-  call void @llvm.dbg.value(metadata !{float %tmp_15}, i64 0, metadata !1813), !dbg !1837 ; [debug line = 131:9@542:36] [debug variable = tmp]
-  call void @llvm.dbg.value(metadata !{float %tmp_15}, i64 0, metadata !1838), !dbg !1836 ; [debug line = 542:36] [debug variable = sum_weight_returnSquareA]
-  call void @llvm.dbg.value(metadata !{float* %sum_weight_returnA_in_V}, i64 0, metadata !1806), !dbg !1839 ; [debug line = 129:56@543:30] [debug variable = stream<float>.V]
-  %tmp_16 = call float @_ssdm_op_Read.ap_fifo.volatile.floatP(float* %sum_weight_returnA_in_V), !dbg !1841 ; [#uses=2 type=float] [debug line = 131:9@543:30]
-  call void @llvm.dbg.value(metadata !{float %tmp_16}, i64 0, metadata !1813), !dbg !1841 ; [debug line = 131:9@543:30] [debug variable = tmp]
-  call void @llvm.dbg.value(metadata !{float %tmp_16}, i64 0, metadata !1842), !dbg !1840 ; [debug line = 543:30] [debug variable = sum_weight_returnA]
+  call void @llvm.dbg.value(metadata !{float* %sum_weight_in_V}, i64 0, metadata !1805), !dbg !1808 ; [debug line = 129:56@536:22] [debug variable = stream<float>.V]
+  %tmp = call float @_ssdm_op_Read.ap_fifo.volatile.floatP(float* %sum_weight_in_V), !dbg !1810 ; [#uses=3 type=float] [debug line = 131:9@536:22]
+  call void @llvm.dbg.value(metadata !{float %tmp}, i64 0, metadata !1812), !dbg !1810 ; [debug line = 131:9@536:22] [debug variable = tmp]
+  call void @llvm.dbg.value(metadata !{float %tmp}, i64 0, metadata !1813), !dbg !1809 ; [debug line = 536:22] [debug variable = sum_weight]
+  call void @llvm.dbg.value(metadata !{float* %sum_return_in_V}, i64 0, metadata !1805), !dbg !1814 ; [debug line = 129:56@537:22] [debug variable = stream<float>.V]
+  %tmp_10 = call float @_ssdm_op_Read.ap_fifo.volatile.floatP(float* %sum_return_in_V), !dbg !1816 ; [#uses=1 type=float] [debug line = 131:9@537:22]
+  call void @llvm.dbg.value(metadata !{float %tmp_10}, i64 0, metadata !1812), !dbg !1816 ; [debug line = 131:9@537:22] [debug variable = tmp]
+  call void @llvm.dbg.value(metadata !{float %tmp_10}, i64 0, metadata !1817), !dbg !1815 ; [debug line = 537:22] [debug variable = sum_return]
+  call void @llvm.dbg.value(metadata !{float* %sum_weight_returnSquare_in_V}, i64 0, metadata !1805), !dbg !1818 ; [debug line = 129:56@538:35] [debug variable = stream<float>.V]
+  %tmp_11 = call float @_ssdm_op_Read.ap_fifo.volatile.floatP(float* %sum_weight_returnSquare_in_V), !dbg !1820 ; [#uses=1 type=float] [debug line = 131:9@538:35]
+  call void @llvm.dbg.value(metadata !{float %tmp_11}, i64 0, metadata !1812), !dbg !1820 ; [debug line = 131:9@538:35] [debug variable = tmp]
+  call void @llvm.dbg.value(metadata !{float %tmp_11}, i64 0, metadata !1821), !dbg !1819 ; [debug line = 538:35] [debug variable = sum_weight_returnSquare]
+  call void @llvm.dbg.value(metadata !{float* %sum_weight_return_in_V}, i64 0, metadata !1805), !dbg !1822 ; [debug line = 129:56@539:29] [debug variable = stream<float>.V]
+  %tmp_12 = call float @_ssdm_op_Read.ap_fifo.volatile.floatP(float* %sum_weight_return_in_V), !dbg !1824 ; [#uses=2 type=float] [debug line = 131:9@539:29]
+  call void @llvm.dbg.value(metadata !{float %tmp_12}, i64 0, metadata !1812), !dbg !1824 ; [debug line = 131:9@539:29] [debug variable = tmp]
+  call void @llvm.dbg.value(metadata !{float %tmp_12}, i64 0, metadata !1825), !dbg !1823 ; [debug line = 539:29] [debug variable = sum_weight_return]
+  call void @llvm.dbg.value(metadata !{float* %sum_weight_returnA_returnB_in_s}, i64 0, metadata !1805), !dbg !1826 ; [debug line = 129:56@540:37] [debug variable = stream<float>.V]
+  %tmp_13 = call float @_ssdm_op_Read.ap_fifo.volatile.floatP(float* %sum_weight_returnA_returnB_in_s), !dbg !1828 ; [#uses=1 type=float] [debug line = 131:9@540:37]
+  call void @llvm.dbg.value(metadata !{float %tmp_13}, i64 0, metadata !1812), !dbg !1828 ; [debug line = 131:9@540:37] [debug variable = tmp]
+  call void @llvm.dbg.value(metadata !{float %tmp_13}, i64 0, metadata !1829), !dbg !1827 ; [debug line = 540:37] [debug variable = sum_weight_returnA_returnB]
+  call void @llvm.dbg.value(metadata !{float* %sum_returnA_in_V}, i64 0, metadata !1805), !dbg !1830 ; [debug line = 129:56@541:22] [debug variable = stream<float>.V]
+  %tmp_14 = call float @_ssdm_op_Read.ap_fifo.volatile.floatP(float* %sum_returnA_in_V), !dbg !1832 ; [#uses=1 type=float] [debug line = 131:9@541:22]
+  call void @llvm.dbg.value(metadata !{float %tmp_14}, i64 0, metadata !1812), !dbg !1832 ; [debug line = 131:9@541:22] [debug variable = tmp]
+  call void @llvm.dbg.value(metadata !{float %tmp_14}, i64 0, metadata !1833), !dbg !1831 ; [debug line = 541:22] [debug variable = sum_returnA]
+  call void @llvm.dbg.value(metadata !{float* %sum_weight_returnSquareA_in_V}, i64 0, metadata !1805), !dbg !1834 ; [debug line = 129:56@542:36] [debug variable = stream<float>.V]
+  %tmp_15 = call float @_ssdm_op_Read.ap_fifo.volatile.floatP(float* %sum_weight_returnSquareA_in_V), !dbg !1836 ; [#uses=1 type=float] [debug line = 131:9@542:36]
+  call void @llvm.dbg.value(metadata !{float %tmp_15}, i64 0, metadata !1812), !dbg !1836 ; [debug line = 131:9@542:36] [debug variable = tmp]
+  call void @llvm.dbg.value(metadata !{float %tmp_15}, i64 0, metadata !1837), !dbg !1835 ; [debug line = 542:36] [debug variable = sum_weight_returnSquareA]
+  call void @llvm.dbg.value(metadata !{float* %sum_weight_returnA_in_V}, i64 0, metadata !1805), !dbg !1838 ; [debug line = 129:56@543:30] [debug variable = stream<float>.V]
+  %tmp_16 = call float @_ssdm_op_Read.ap_fifo.volatile.floatP(float* %sum_weight_returnA_in_V), !dbg !1840 ; [#uses=2 type=float] [debug line = 131:9@543:30]
+  call void @llvm.dbg.value(metadata !{float %tmp_16}, i64 0, metadata !1812), !dbg !1840 ; [debug line = 131:9@543:30] [debug variable = tmp]
+  call void @llvm.dbg.value(metadata !{float %tmp_16}, i64 0, metadata !1841), !dbg !1839 ; [debug line = 543:30] [debug variable = sum_weight_returnA]
   %meanReturnA = fdiv float %tmp_14, %tmp_i_24, !dbg !1799 ; [#uses=5 type=float] [debug line = 555:62]
-  call void @llvm.dbg.value(metadata !{float %meanReturnA}, i64 0, metadata !1843), !dbg !1799 ; [debug line = 555:62] [debug variable = meanReturnA]
-  %meanReturnB = fdiv float %tmp_10, %tmp_i_24, !dbg !1844 ; [#uses=5 type=float] [debug line = 556:61]
-  call void @llvm.dbg.value(metadata !{float %meanReturnB}, i64 0, metadata !1845), !dbg !1844 ; [debug line = 556:61] [debug variable = meanReturnB]
-  %tmp_12_i = fmul float %meanReturnA, 2.000000e+00, !dbg !1846 ; [#uses=1 type=float] [debug line = 558:23]
-  %tmp_13_i = fmul float %tmp_12_i, %tmp_16, !dbg !1846 ; [#uses=1 type=float] [debug line = 558:23]
-  %tmp_14_i = fsub float %tmp_15, %tmp_13_i, !dbg !1846 ; [#uses=1 type=float] [debug line = 558:23]
-  %tmp_15_i = fdiv float %tmp_14_i, %tmp, !dbg !1846 ; [#uses=1 type=float] [debug line = 558:23]
-  %tmp_16_i = fmul float %meanReturnA, %meanReturnA, !dbg !1846 ; [#uses=1 type=float] [debug line = 558:23]
-  %tmp_17_i = fadd float %tmp_15_i, %tmp_16_i, !dbg !1846 ; [#uses=1 type=float] [debug line = 558:23]
-  %volatilityA = call float @llvm.sqrt.f32(float %tmp_17_i), !dbg !1846 ; [#uses=1 type=float] [debug line = 558:23]
-  call void @llvm.dbg.value(metadata !{float %volatilityA}, i64 0, metadata !1847), !dbg !1846 ; [debug line = 558:23] [debug variable = volatilityA]
-  %tmp_18_i = fmul float %meanReturnB, 2.000000e+00, !dbg !1848 ; [#uses=1 type=float] [debug line = 561:23]
-  %tmp_19_i = fmul float %tmp_18_i, %tmp_12, !dbg !1848 ; [#uses=1 type=float] [debug line = 561:23]
-  %tmp_20_i = fsub float %tmp_11, %tmp_19_i, !dbg !1848 ; [#uses=1 type=float] [debug line = 561:23]
-  %tmp_21_i = fdiv float %tmp_20_i, %tmp, !dbg !1848 ; [#uses=1 type=float] [debug line = 561:23]
-  %tmp_22_i = fmul float %meanReturnB, %meanReturnB, !dbg !1848 ; [#uses=1 type=float] [debug line = 561:23]
-  %tmp_23_i = fadd float %tmp_21_i, %tmp_22_i, !dbg !1848 ; [#uses=1 type=float] [debug line = 561:23]
-  %volatilityB = call float @llvm.sqrt.f32(float %tmp_23_i), !dbg !1848 ; [#uses=1 type=float] [debug line = 561:23]
-  call void @llvm.dbg.value(metadata !{float %volatilityB}, i64 0, metadata !1849), !dbg !1848 ; [debug line = 561:23] [debug variable = volatilityB]
-  %tmp_24_i = fmul float %meanReturnA, %tmp_12, !dbg !1850 ; [#uses=1 type=float] [debug line = 564:159]
-  %tmp_25_i = fsub float %tmp_13, %tmp_24_i, !dbg !1850 ; [#uses=1 type=float] [debug line = 564:159]
-  %tmp_26_i = fmul float %meanReturnB, %tmp_16, !dbg !1850 ; [#uses=1 type=float] [debug line = 564:159]
-  %tmp_27_i = fsub float %tmp_25_i, %tmp_26_i, !dbg !1850 ; [#uses=1 type=float] [debug line = 564:159]
-  %tmp_28_i = fdiv float %tmp_27_i, %tmp, !dbg !1850 ; [#uses=1 type=float] [debug line = 564:159]
-  %tmp_29_i = fmul float %meanReturnA, %meanReturnB, !dbg !1850 ; [#uses=1 type=float] [debug line = 564:159]
-  %covariance = fadd float %tmp_28_i, %tmp_29_i, !dbg !1850 ; [#uses=1 type=float] [debug line = 564:159]
-  call void @llvm.dbg.value(metadata !{float %covariance}, i64 0, metadata !1851), !dbg !1850 ; [debug line = 564:159] [debug variable = covariance]
-  %tmp_30_i = fmul float %volatilityA, %volatilityB, !dbg !1852 ; [#uses=1 type=float] [debug line = 568:61]
-  %corr_temp = fdiv float %covariance, %tmp_30_i, !dbg !1852 ; [#uses=1 type=float] [debug line = 568:61]
-  call void @llvm.dbg.value(metadata !{float %corr_temp}, i64 0, metadata !1853), !dbg !1852 ; [debug line = 568:61] [debug variable = corr_temp]
-  call void (...)* @_ssdm_op_SpecPipeline(i32 1, i32 1, i32 1, i32 0, [1 x i8]* @p_str) nounwind, !dbg !1854 ; [debug line = 571:1]
-  %val_assign = bitcast float %corr_temp to i32, !dbg !1855 ; [#uses=1 type=i32] [debug line = 572:2]
-  call void @llvm.dbg.value(metadata !{i32 %val_assign}, i64 0, metadata !1856), !dbg !1858 ; [debug line = 250:55@573:7] [debug variable = val]
-  call void @llvm.dbg.value(metadata !{i32 %val_assign}, i64 0, metadata !1860), !dbg !1862 ; [debug line = 250:55@250:77@573:7] [debug variable = val]
-  call void @_ssdm_op_Write.axis.volatile.i32P(i32* %out_correlation_data_V, i32 %val_assign), !dbg !1864 ; [debug line = 277:10@573:7]
-  call void @_ssdm_op_Write.axis.volatile.i4P(i4* %out_correlation_keep_V, i4 -1), !dbg !1867 ; [debug line = 277:10@574:7]
-  call void @_ssdm_op_Write.axis.volatile.i4P(i4* %out_correlation_strb_V, i4 1), !dbg !1871 ; [debug line = 277:10@575:7]
-  call void @_ssdm_op_Write.axis.volatile.i1P(i1* %out_correlation_user_V, i1 false), !dbg !1873 ; [debug line = 277:10@576:7]
-  %tmp_33_i = icmp eq i32 %column_index_cast_i, %tmp_1_i, !dbg !1803 ; [#uses=1 type=i1] [debug line = 577:7]
-  call void @_ssdm_op_Write.axis.volatile.i1P(i1* %out_correlation_last_V, i1 %tmp_33_i), !dbg !1877 ; [debug line = 277:10@577:7]
-  call void @_ssdm_op_Write.axis.volatile.i1P(i1* %out_correlation_id_V, i1 false), !dbg !1878 ; [debug line = 277:10@578:7]
-  call void @_ssdm_op_Write.axis.volatile.i1P(i1* %out_correlation_dest_V, i1 false), !dbg !1880 ; [debug line = 277:10@579:7]
-  %empty_25 = call i32 (...)* @_ssdm_op_SpecRegionEnd([12 x i8]* @p_str10, i32 %tmp_3_i), !dbg !1882 ; [#uses=0 type=i32] [debug line = 583:2]
-  %column_index = add i31 %column_index_i, 1, !dbg !1883 ; [#uses=1 type=i31] [debug line = 534:62]
-  call void @llvm.dbg.value(metadata !{i31 %column_index}, i64 0, metadata !1884), !dbg !1883 ; [debug line = 534:62] [debug variable = column_index]
-  br label %0, !dbg !1883                         ; [debug line = 534:62]
+  call void @llvm.dbg.value(metadata !{float %meanReturnA}, i64 0, metadata !1842), !dbg !1799 ; [debug line = 555:62] [debug variable = meanReturnA]
+  %meanReturnB = fdiv float %tmp_10, %tmp_i_24, !dbg !1843 ; [#uses=5 type=float] [debug line = 556:61]
+  call void @llvm.dbg.value(metadata !{float %meanReturnB}, i64 0, metadata !1844), !dbg !1843 ; [debug line = 556:61] [debug variable = meanReturnB]
+  %tmp_11_i = fmul float %meanReturnA, 2.000000e+00, !dbg !1845 ; [#uses=1 type=float] [debug line = 558:23]
+  %tmp_12_i = fmul float %tmp_11_i, %tmp_16, !dbg !1845 ; [#uses=1 type=float] [debug line = 558:23]
+  %tmp_13_i = fsub float %tmp_15, %tmp_12_i, !dbg !1845 ; [#uses=1 type=float] [debug line = 558:23]
+  %tmp_14_i = fdiv float %tmp_13_i, %tmp, !dbg !1845 ; [#uses=1 type=float] [debug line = 558:23]
+  %tmp_15_i = fmul float %meanReturnA, %meanReturnA, !dbg !1845 ; [#uses=1 type=float] [debug line = 558:23]
+  %tmp_16_i = fadd float %tmp_14_i, %tmp_15_i, !dbg !1845 ; [#uses=1 type=float] [debug line = 558:23]
+  %volatilityA = call float @llvm.sqrt.f32(float %tmp_16_i), !dbg !1845 ; [#uses=1 type=float] [debug line = 558:23]
+  call void @llvm.dbg.value(metadata !{float %volatilityA}, i64 0, metadata !1846), !dbg !1845 ; [debug line = 558:23] [debug variable = volatilityA]
+  %tmp_17_i = fmul float %meanReturnB, 2.000000e+00, !dbg !1847 ; [#uses=1 type=float] [debug line = 561:23]
+  %tmp_18_i = fmul float %tmp_17_i, %tmp_12, !dbg !1847 ; [#uses=1 type=float] [debug line = 561:23]
+  %tmp_19_i = fsub float %tmp_11, %tmp_18_i, !dbg !1847 ; [#uses=1 type=float] [debug line = 561:23]
+  %tmp_20_i = fdiv float %tmp_19_i, %tmp, !dbg !1847 ; [#uses=1 type=float] [debug line = 561:23]
+  %tmp_21_i = fmul float %meanReturnB, %meanReturnB, !dbg !1847 ; [#uses=1 type=float] [debug line = 561:23]
+  %tmp_22_i = fadd float %tmp_20_i, %tmp_21_i, !dbg !1847 ; [#uses=1 type=float] [debug line = 561:23]
+  %volatilityB = call float @llvm.sqrt.f32(float %tmp_22_i), !dbg !1847 ; [#uses=1 type=float] [debug line = 561:23]
+  call void @llvm.dbg.value(metadata !{float %volatilityB}, i64 0, metadata !1848), !dbg !1847 ; [debug line = 561:23] [debug variable = volatilityB]
+  %tmp_23_i = fmul float %meanReturnA, %tmp_12, !dbg !1849 ; [#uses=1 type=float] [debug line = 564:159]
+  %tmp_24_i = fsub float %tmp_13, %tmp_23_i, !dbg !1849 ; [#uses=1 type=float] [debug line = 564:159]
+  %tmp_25_i = fmul float %meanReturnB, %tmp_16, !dbg !1849 ; [#uses=1 type=float] [debug line = 564:159]
+  %tmp_26_i = fsub float %tmp_24_i, %tmp_25_i, !dbg !1849 ; [#uses=1 type=float] [debug line = 564:159]
+  %tmp_27_i = fdiv float %tmp_26_i, %tmp, !dbg !1849 ; [#uses=1 type=float] [debug line = 564:159]
+  %tmp_28_i = fmul float %meanReturnA, %meanReturnB, !dbg !1849 ; [#uses=1 type=float] [debug line = 564:159]
+  %covariance = fadd float %tmp_27_i, %tmp_28_i, !dbg !1849 ; [#uses=1 type=float] [debug line = 564:159]
+  call void @llvm.dbg.value(metadata !{float %covariance}, i64 0, metadata !1850), !dbg !1849 ; [debug line = 564:159] [debug variable = covariance]
+  %tmp_29_i = fmul float %volatilityA, %volatilityB, !dbg !1851 ; [#uses=1 type=float] [debug line = 568:61]
+  %corr_temp = fdiv float %covariance, %tmp_29_i, !dbg !1851 ; [#uses=1 type=float] [debug line = 568:61]
+  call void @llvm.dbg.value(metadata !{float %corr_temp}, i64 0, metadata !1852), !dbg !1851 ; [debug line = 568:61] [debug variable = corr_temp]
+  %val_assign = bitcast float %corr_temp to i32, !dbg !1853 ; [#uses=1 type=i32] [debug line = 572:7]
+  call void @llvm.dbg.value(metadata !{i32 %val_assign}, i64 0, metadata !1854), !dbg !1856 ; [debug line = 250:55@573:7] [debug variable = val]
+  call void @llvm.dbg.value(metadata !{i32 %val_assign}, i64 0, metadata !1858), !dbg !1860 ; [debug line = 250:55@250:77@573:7] [debug variable = val]
+  call void @_ssdm_op_Write.axis.volatile.i32P(i32* %out_correlation_data_V, i32 %val_assign), !dbg !1862 ; [debug line = 277:10@573:7]
+  call void @_ssdm_op_Write.axis.volatile.i4P(i4* %out_correlation_keep_V, i4 -1), !dbg !1865 ; [debug line = 277:10@574:7]
+  call void @_ssdm_op_Write.axis.volatile.i4P(i4* %out_correlation_strb_V, i4 1), !dbg !1869 ; [debug line = 277:10@575:7]
+  call void @_ssdm_op_Write.axis.volatile.i1P(i1* %out_correlation_user_V, i1 false), !dbg !1871 ; [debug line = 277:10@576:7]
+  %tmp_32_i = icmp eq i32 %column_index_cast_i, %tmp_1_i, !dbg !1803 ; [#uses=1 type=i1] [debug line = 577:7]
+  call void @_ssdm_op_Write.axis.volatile.i1P(i1* %out_correlation_last_V, i1 %tmp_32_i), !dbg !1875 ; [debug line = 277:10@577:7]
+  call void @_ssdm_op_Write.axis.volatile.i1P(i1* %out_correlation_id_V, i1 false), !dbg !1876 ; [debug line = 277:10@578:7]
+  call void @_ssdm_op_Write.axis.volatile.i1P(i1* %out_correlation_dest_V, i1 false), !dbg !1878 ; [debug line = 277:10@579:7]
+  %column_index = add i31 %column_index_i, 1, !dbg !1880 ; [#uses=1 type=i31] [debug line = 534:62]
+  call void @llvm.dbg.value(metadata !{i31 %column_index}, i64 0, metadata !1881), !dbg !1880 ; [debug line = 534:62] [debug variable = column_index]
+  br label %0, !dbg !1880                         ; [debug line = 534:62]
 
 backEnd.1.exit:                                   ; preds = %0
   ret void
@@ -2722,83 +2718,80 @@ declare i31 @_ssdm_op_PartSelect.i31.i32.i32.i32(i32, i32, i32) nounwind readnon
 !1802 = metadata !{i32 786443, metadata !1760, i32 526, i32 1, metadata !9, i32 20} ; [ DW_TAG_lexical_block ]
 !1803 = metadata !{i32 577, i32 7, metadata !1800, null}
 !1804 = metadata !{i32 534, i32 26, metadata !1801, null}
-!1805 = metadata !{i32 534, i32 78, metadata !1800, null}
-!1806 = metadata !{i32 790531, metadata !1807, metadata !"stream<float>.V", null, i32 129, metadata !1702, i32 0, i32 0} ; [ DW_TAG_arg_variable_field ]
-!1807 = metadata !{i32 786689, metadata !1808, metadata !"this", metadata !1384, i32 16777345, metadata !1701, i32 64, i32 0} ; [ DW_TAG_arg_variable ]
-!1808 = metadata !{i32 786478, i32 0, metadata !1383, metadata !"read", metadata !"read", metadata !"_ZN3hls6streamIfE4readEv", metadata !1384, i32 129, metadata !1419, i1 false, i1 true, i32 0, i32 0, null, i32 256, i1 false, null, null, metadata !1418, metadata !35, i32 129} ; [ DW_TAG_subprogram ]
-!1809 = metadata !{i32 129, i32 56, metadata !1808, metadata !1810}
-!1810 = metadata !{i32 536, i32 22, metadata !1800, null}
-!1811 = metadata !{i32 131, i32 9, metadata !1812, metadata !1810}
-!1812 = metadata !{i32 786443, metadata !1808, i32 129, i32 63, metadata !1384, i32 35} ; [ DW_TAG_lexical_block ]
-!1813 = metadata !{i32 786688, metadata !1812, metadata !"tmp", metadata !1384, i32 130, metadata !92, i32 0, i32 0} ; [ DW_TAG_auto_variable ]
-!1814 = metadata !{i32 786688, metadata !1800, metadata !"sum_weight", metadata !9, i32 536, metadata !92, i32 0, i32 0} ; [ DW_TAG_auto_variable ]
-!1815 = metadata !{i32 129, i32 56, metadata !1808, metadata !1816}
-!1816 = metadata !{i32 537, i32 22, metadata !1800, null}
-!1817 = metadata !{i32 131, i32 9, metadata !1812, metadata !1816}
-!1818 = metadata !{i32 786688, metadata !1800, metadata !"sum_return", metadata !9, i32 537, metadata !92, i32 0, i32 0} ; [ DW_TAG_auto_variable ]
-!1819 = metadata !{i32 129, i32 56, metadata !1808, metadata !1820}
-!1820 = metadata !{i32 538, i32 35, metadata !1800, null}
-!1821 = metadata !{i32 131, i32 9, metadata !1812, metadata !1820}
-!1822 = metadata !{i32 786688, metadata !1800, metadata !"sum_weight_returnSquare", metadata !9, i32 538, metadata !92, i32 0, i32 0} ; [ DW_TAG_auto_variable ]
-!1823 = metadata !{i32 129, i32 56, metadata !1808, metadata !1824}
-!1824 = metadata !{i32 539, i32 29, metadata !1800, null}
-!1825 = metadata !{i32 131, i32 9, metadata !1812, metadata !1824}
-!1826 = metadata !{i32 786688, metadata !1800, metadata !"sum_weight_return", metadata !9, i32 539, metadata !92, i32 0, i32 0} ; [ DW_TAG_auto_variable ]
-!1827 = metadata !{i32 129, i32 56, metadata !1808, metadata !1828}
-!1828 = metadata !{i32 540, i32 37, metadata !1800, null}
-!1829 = metadata !{i32 131, i32 9, metadata !1812, metadata !1828}
-!1830 = metadata !{i32 786688, metadata !1800, metadata !"sum_weight_returnA_returnB", metadata !9, i32 540, metadata !92, i32 0, i32 0} ; [ DW_TAG_auto_variable ]
-!1831 = metadata !{i32 129, i32 56, metadata !1808, metadata !1832}
-!1832 = metadata !{i32 541, i32 22, metadata !1800, null}
-!1833 = metadata !{i32 131, i32 9, metadata !1812, metadata !1832}
-!1834 = metadata !{i32 786688, metadata !1800, metadata !"sum_returnA", metadata !9, i32 541, metadata !92, i32 0, i32 0} ; [ DW_TAG_auto_variable ]
-!1835 = metadata !{i32 129, i32 56, metadata !1808, metadata !1836}
-!1836 = metadata !{i32 542, i32 36, metadata !1800, null}
-!1837 = metadata !{i32 131, i32 9, metadata !1812, metadata !1836}
-!1838 = metadata !{i32 786688, metadata !1800, metadata !"sum_weight_returnSquareA", metadata !9, i32 542, metadata !92, i32 0, i32 0} ; [ DW_TAG_auto_variable ]
-!1839 = metadata !{i32 129, i32 56, metadata !1808, metadata !1840}
-!1840 = metadata !{i32 543, i32 30, metadata !1800, null}
-!1841 = metadata !{i32 131, i32 9, metadata !1812, metadata !1840}
-!1842 = metadata !{i32 786688, metadata !1800, metadata !"sum_weight_returnA", metadata !9, i32 543, metadata !92, i32 0, i32 0} ; [ DW_TAG_auto_variable ]
-!1843 = metadata !{i32 786688, metadata !1800, metadata !"meanReturnA", metadata !9, i32 555, metadata !92, i32 0, i32 0} ; [ DW_TAG_auto_variable ]
-!1844 = metadata !{i32 556, i32 61, metadata !1800, null}
-!1845 = metadata !{i32 786688, metadata !1800, metadata !"meanReturnB", metadata !9, i32 556, metadata !92, i32 0, i32 0} ; [ DW_TAG_auto_variable ]
-!1846 = metadata !{i32 558, i32 23, metadata !1800, null}
-!1847 = metadata !{i32 786688, metadata !1800, metadata !"volatilityA", metadata !9, i32 558, metadata !92, i32 0, i32 0} ; [ DW_TAG_auto_variable ]
-!1848 = metadata !{i32 561, i32 23, metadata !1800, null}
-!1849 = metadata !{i32 786688, metadata !1800, metadata !"volatilityB", metadata !9, i32 561, metadata !92, i32 0, i32 0} ; [ DW_TAG_auto_variable ]
-!1850 = metadata !{i32 564, i32 159, metadata !1800, null}
-!1851 = metadata !{i32 786688, metadata !1800, metadata !"covariance", metadata !9, i32 564, metadata !92, i32 0, i32 0} ; [ DW_TAG_auto_variable ]
-!1852 = metadata !{i32 568, i32 61, metadata !1800, null}
-!1853 = metadata !{i32 786688, metadata !1800, metadata !"corr_temp", metadata !9, i32 568, metadata !92, i32 0, i32 0} ; [ DW_TAG_auto_variable ]
-!1854 = metadata !{i32 571, i32 1, metadata !1800, null}
-!1855 = metadata !{i32 572, i32 2, metadata !1800, null}
-!1856 = metadata !{i32 786689, metadata !1857, metadata !"val", metadata !19, i32 33554682, metadata !12, i32 0, i32 0} ; [ DW_TAG_arg_variable ]
-!1857 = metadata !{i32 786478, i32 0, null, metadata !"ap_uint", metadata !"ap_uint", metadata !"_ZN7ap_uintILi32EEC1Ei", metadata !19, i32 250, metadata !616, i1 false, i1 true, i32 0, i32 0, null, i32 256, i1 false, null, null, metadata !615, metadata !35, i32 250} ; [ DW_TAG_subprogram ]
-!1858 = metadata !{i32 250, i32 55, metadata !1857, metadata !1859}
-!1859 = metadata !{i32 573, i32 7, metadata !1800, null}
-!1860 = metadata !{i32 786689, metadata !1861, metadata !"val", metadata !19, i32 33554682, metadata !12, i32 0, i32 0} ; [ DW_TAG_arg_variable ]
-!1861 = metadata !{i32 786478, i32 0, null, metadata !"ap_uint", metadata !"ap_uint", metadata !"_ZN7ap_uintILi32EEC2Ei", metadata !19, i32 250, metadata !616, i1 false, i1 true, i32 0, i32 0, null, i32 256, i1 false, null, null, metadata !615, metadata !35, i32 250} ; [ DW_TAG_subprogram ]
-!1862 = metadata !{i32 250, i32 55, metadata !1861, metadata !1863}
-!1863 = metadata !{i32 250, i32 77, metadata !1857, metadata !1859}
-!1864 = metadata !{i32 277, i32 10, metadata !1865, metadata !1859}
-!1865 = metadata !{i32 786443, metadata !1866, i32 276, i32 92, metadata !19, i32 34} ; [ DW_TAG_lexical_block ]
-!1866 = metadata !{i32 786478, i32 0, null, metadata !"operator=", metadata !"operator=", metadata !"_ZN7ap_uintILi32EEaSERKS0_", metadata !19, i32 276, metadata !654, i1 false, i1 true, i32 0, i32 0, null, i32 256, i1 false, null, null, metadata !657, metadata !35, i32 276} ; [ DW_TAG_subprogram ]
-!1867 = metadata !{i32 277, i32 10, metadata !1868, metadata !1870}
-!1868 = metadata !{i32 786443, metadata !1869, i32 276, i32 92, metadata !19, i32 30} ; [ DW_TAG_lexical_block ]
-!1869 = metadata !{i32 786478, i32 0, null, metadata !"operator=", metadata !"operator=", metadata !"_ZN7ap_uintILi4EEaSERKS0_", metadata !19, i32 276, metadata !945, i1 false, i1 true, i32 0, i32 0, null, i32 256, i1 false, null, null, metadata !948, metadata !35, i32 276} ; [ DW_TAG_subprogram ]
-!1870 = metadata !{i32 574, i32 7, metadata !1800, null}
-!1871 = metadata !{i32 277, i32 10, metadata !1868, metadata !1872}
-!1872 = metadata !{i32 575, i32 7, metadata !1800, null}
-!1873 = metadata !{i32 277, i32 10, metadata !1874, metadata !1876}
-!1874 = metadata !{i32 786443, metadata !1875, i32 276, i32 92, metadata !19, i32 26} ; [ DW_TAG_lexical_block ]
-!1875 = metadata !{i32 786478, i32 0, null, metadata !"operator=", metadata !"operator=", metadata !"_ZN7ap_uintILi1EEaSERKS0_", metadata !19, i32 276, metadata !1233, i1 false, i1 true, i32 0, i32 0, null, i32 256, i1 false, null, null, metadata !1236, metadata !35, i32 276} ; [ DW_TAG_subprogram ]
-!1876 = metadata !{i32 576, i32 7, metadata !1800, null}
-!1877 = metadata !{i32 277, i32 10, metadata !1874, metadata !1803}
-!1878 = metadata !{i32 277, i32 10, metadata !1874, metadata !1879}
-!1879 = metadata !{i32 578, i32 7, metadata !1800, null}
-!1880 = metadata !{i32 277, i32 10, metadata !1874, metadata !1881}
-!1881 = metadata !{i32 579, i32 7, metadata !1800, null}
-!1882 = metadata !{i32 583, i32 2, metadata !1800, null}
-!1883 = metadata !{i32 534, i32 62, metadata !1801, null}
-!1884 = metadata !{i32 786688, metadata !1801, metadata !"column_index", metadata !9, i32 534, metadata !12, i32 0, i32 0} ; [ DW_TAG_auto_variable ]
+!1805 = metadata !{i32 790531, metadata !1806, metadata !"stream<float>.V", null, i32 129, metadata !1702, i32 0, i32 0} ; [ DW_TAG_arg_variable_field ]
+!1806 = metadata !{i32 786689, metadata !1807, metadata !"this", metadata !1384, i32 16777345, metadata !1701, i32 64, i32 0} ; [ DW_TAG_arg_variable ]
+!1807 = metadata !{i32 786478, i32 0, metadata !1383, metadata !"read", metadata !"read", metadata !"_ZN3hls6streamIfE4readEv", metadata !1384, i32 129, metadata !1419, i1 false, i1 true, i32 0, i32 0, null, i32 256, i1 false, null, null, metadata !1418, metadata !35, i32 129} ; [ DW_TAG_subprogram ]
+!1808 = metadata !{i32 129, i32 56, metadata !1807, metadata !1809}
+!1809 = metadata !{i32 536, i32 22, metadata !1800, null}
+!1810 = metadata !{i32 131, i32 9, metadata !1811, metadata !1809}
+!1811 = metadata !{i32 786443, metadata !1807, i32 129, i32 63, metadata !1384, i32 35} ; [ DW_TAG_lexical_block ]
+!1812 = metadata !{i32 786688, metadata !1811, metadata !"tmp", metadata !1384, i32 130, metadata !92, i32 0, i32 0} ; [ DW_TAG_auto_variable ]
+!1813 = metadata !{i32 786688, metadata !1800, metadata !"sum_weight", metadata !9, i32 536, metadata !92, i32 0, i32 0} ; [ DW_TAG_auto_variable ]
+!1814 = metadata !{i32 129, i32 56, metadata !1807, metadata !1815}
+!1815 = metadata !{i32 537, i32 22, metadata !1800, null}
+!1816 = metadata !{i32 131, i32 9, metadata !1811, metadata !1815}
+!1817 = metadata !{i32 786688, metadata !1800, metadata !"sum_return", metadata !9, i32 537, metadata !92, i32 0, i32 0} ; [ DW_TAG_auto_variable ]
+!1818 = metadata !{i32 129, i32 56, metadata !1807, metadata !1819}
+!1819 = metadata !{i32 538, i32 35, metadata !1800, null}
+!1820 = metadata !{i32 131, i32 9, metadata !1811, metadata !1819}
+!1821 = metadata !{i32 786688, metadata !1800, metadata !"sum_weight_returnSquare", metadata !9, i32 538, metadata !92, i32 0, i32 0} ; [ DW_TAG_auto_variable ]
+!1822 = metadata !{i32 129, i32 56, metadata !1807, metadata !1823}
+!1823 = metadata !{i32 539, i32 29, metadata !1800, null}
+!1824 = metadata !{i32 131, i32 9, metadata !1811, metadata !1823}
+!1825 = metadata !{i32 786688, metadata !1800, metadata !"sum_weight_return", metadata !9, i32 539, metadata !92, i32 0, i32 0} ; [ DW_TAG_auto_variable ]
+!1826 = metadata !{i32 129, i32 56, metadata !1807, metadata !1827}
+!1827 = metadata !{i32 540, i32 37, metadata !1800, null}
+!1828 = metadata !{i32 131, i32 9, metadata !1811, metadata !1827}
+!1829 = metadata !{i32 786688, metadata !1800, metadata !"sum_weight_returnA_returnB", metadata !9, i32 540, metadata !92, i32 0, i32 0} ; [ DW_TAG_auto_variable ]
+!1830 = metadata !{i32 129, i32 56, metadata !1807, metadata !1831}
+!1831 = metadata !{i32 541, i32 22, metadata !1800, null}
+!1832 = metadata !{i32 131, i32 9, metadata !1811, metadata !1831}
+!1833 = metadata !{i32 786688, metadata !1800, metadata !"sum_returnA", metadata !9, i32 541, metadata !92, i32 0, i32 0} ; [ DW_TAG_auto_variable ]
+!1834 = metadata !{i32 129, i32 56, metadata !1807, metadata !1835}
+!1835 = metadata !{i32 542, i32 36, metadata !1800, null}
+!1836 = metadata !{i32 131, i32 9, metadata !1811, metadata !1835}
+!1837 = metadata !{i32 786688, metadata !1800, metadata !"sum_weight_returnSquareA", metadata !9, i32 542, metadata !92, i32 0, i32 0} ; [ DW_TAG_auto_variable ]
+!1838 = metadata !{i32 129, i32 56, metadata !1807, metadata !1839}
+!1839 = metadata !{i32 543, i32 30, metadata !1800, null}
+!1840 = metadata !{i32 131, i32 9, metadata !1811, metadata !1839}
+!1841 = metadata !{i32 786688, metadata !1800, metadata !"sum_weight_returnA", metadata !9, i32 543, metadata !92, i32 0, i32 0} ; [ DW_TAG_auto_variable ]
+!1842 = metadata !{i32 786688, metadata !1800, metadata !"meanReturnA", metadata !9, i32 555, metadata !92, i32 0, i32 0} ; [ DW_TAG_auto_variable ]
+!1843 = metadata !{i32 556, i32 61, metadata !1800, null}
+!1844 = metadata !{i32 786688, metadata !1800, metadata !"meanReturnB", metadata !9, i32 556, metadata !92, i32 0, i32 0} ; [ DW_TAG_auto_variable ]
+!1845 = metadata !{i32 558, i32 23, metadata !1800, null}
+!1846 = metadata !{i32 786688, metadata !1800, metadata !"volatilityA", metadata !9, i32 558, metadata !92, i32 0, i32 0} ; [ DW_TAG_auto_variable ]
+!1847 = metadata !{i32 561, i32 23, metadata !1800, null}
+!1848 = metadata !{i32 786688, metadata !1800, metadata !"volatilityB", metadata !9, i32 561, metadata !92, i32 0, i32 0} ; [ DW_TAG_auto_variable ]
+!1849 = metadata !{i32 564, i32 159, metadata !1800, null}
+!1850 = metadata !{i32 786688, metadata !1800, metadata !"covariance", metadata !9, i32 564, metadata !92, i32 0, i32 0} ; [ DW_TAG_auto_variable ]
+!1851 = metadata !{i32 568, i32 61, metadata !1800, null}
+!1852 = metadata !{i32 786688, metadata !1800, metadata !"corr_temp", metadata !9, i32 568, metadata !92, i32 0, i32 0} ; [ DW_TAG_auto_variable ]
+!1853 = metadata !{i32 572, i32 7, metadata !1800, null}
+!1854 = metadata !{i32 786689, metadata !1855, metadata !"val", metadata !19, i32 33554682, metadata !12, i32 0, i32 0} ; [ DW_TAG_arg_variable ]
+!1855 = metadata !{i32 786478, i32 0, null, metadata !"ap_uint", metadata !"ap_uint", metadata !"_ZN7ap_uintILi32EEC1Ei", metadata !19, i32 250, metadata !616, i1 false, i1 true, i32 0, i32 0, null, i32 256, i1 false, null, null, metadata !615, metadata !35, i32 250} ; [ DW_TAG_subprogram ]
+!1856 = metadata !{i32 250, i32 55, metadata !1855, metadata !1857}
+!1857 = metadata !{i32 573, i32 7, metadata !1800, null}
+!1858 = metadata !{i32 786689, metadata !1859, metadata !"val", metadata !19, i32 33554682, metadata !12, i32 0, i32 0} ; [ DW_TAG_arg_variable ]
+!1859 = metadata !{i32 786478, i32 0, null, metadata !"ap_uint", metadata !"ap_uint", metadata !"_ZN7ap_uintILi32EEC2Ei", metadata !19, i32 250, metadata !616, i1 false, i1 true, i32 0, i32 0, null, i32 256, i1 false, null, null, metadata !615, metadata !35, i32 250} ; [ DW_TAG_subprogram ]
+!1860 = metadata !{i32 250, i32 55, metadata !1859, metadata !1861}
+!1861 = metadata !{i32 250, i32 77, metadata !1855, metadata !1857}
+!1862 = metadata !{i32 277, i32 10, metadata !1863, metadata !1857}
+!1863 = metadata !{i32 786443, metadata !1864, i32 276, i32 92, metadata !19, i32 34} ; [ DW_TAG_lexical_block ]
+!1864 = metadata !{i32 786478, i32 0, null, metadata !"operator=", metadata !"operator=", metadata !"_ZN7ap_uintILi32EEaSERKS0_", metadata !19, i32 276, metadata !654, i1 false, i1 true, i32 0, i32 0, null, i32 256, i1 false, null, null, metadata !657, metadata !35, i32 276} ; [ DW_TAG_subprogram ]
+!1865 = metadata !{i32 277, i32 10, metadata !1866, metadata !1868}
+!1866 = metadata !{i32 786443, metadata !1867, i32 276, i32 92, metadata !19, i32 30} ; [ DW_TAG_lexical_block ]
+!1867 = metadata !{i32 786478, i32 0, null, metadata !"operator=", metadata !"operator=", metadata !"_ZN7ap_uintILi4EEaSERKS0_", metadata !19, i32 276, metadata !945, i1 false, i1 true, i32 0, i32 0, null, i32 256, i1 false, null, null, metadata !948, metadata !35, i32 276} ; [ DW_TAG_subprogram ]
+!1868 = metadata !{i32 574, i32 7, metadata !1800, null}
+!1869 = metadata !{i32 277, i32 10, metadata !1866, metadata !1870}
+!1870 = metadata !{i32 575, i32 7, metadata !1800, null}
+!1871 = metadata !{i32 277, i32 10, metadata !1872, metadata !1874}
+!1872 = metadata !{i32 786443, metadata !1873, i32 276, i32 92, metadata !19, i32 26} ; [ DW_TAG_lexical_block ]
+!1873 = metadata !{i32 786478, i32 0, null, metadata !"operator=", metadata !"operator=", metadata !"_ZN7ap_uintILi1EEaSERKS0_", metadata !19, i32 276, metadata !1233, i1 false, i1 true, i32 0, i32 0, null, i32 256, i1 false, null, null, metadata !1236, metadata !35, i32 276} ; [ DW_TAG_subprogram ]
+!1874 = metadata !{i32 576, i32 7, metadata !1800, null}
+!1875 = metadata !{i32 277, i32 10, metadata !1872, metadata !1803}
+!1876 = metadata !{i32 277, i32 10, metadata !1872, metadata !1877}
+!1877 = metadata !{i32 578, i32 7, metadata !1800, null}
+!1878 = metadata !{i32 277, i32 10, metadata !1872, metadata !1879}
+!1879 = metadata !{i32 579, i32 7, metadata !1800, null}
+!1880 = metadata !{i32 534, i32 62, metadata !1801, null}
+!1881 = metadata !{i32 786688, metadata !1801, metadata !"column_index", metadata !9, i32 534, metadata !12, i32 0, i32 0} ; [ DW_TAG_auto_variable ]

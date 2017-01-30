@@ -1,7 +1,7 @@
 (c) Copyright 2012-2015 Xilinx, Inc. All Rights Reserved.
 #-----------------------------------------------------------
 # Tool version  : sds++ 2014.4 20150228
-# Start time    : Tue Jan 24 10:47:44 PM CET 2017
+# Start time    : Mon Jan 30 01:43:14 PM CET 2017
 # Command line  : sds++ -Wall -O3 -I../src -c -fmessage-length=0 -MTsrc/correlation_accel_v3.o -sds-hw correlation_accel_v3 correlation_accel_v3.cpp -clkid 2 -sds-end -MMD -MP -MFsrc/correlation_accel_v3.d -MTsrc/correlation_accel_v3.d -o src/correlation_accel_v3.o ../src/correlation_accel_v3.cpp -sds-pf zed
 # Log file      : /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease/_sds/reports/sds_correlation_accel_v3.log
 # Journal file  : /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_axis_ver3/SDRelease/_sds/reports/sds_correlation_accel_v3.jou
@@ -37,13 +37,13 @@ High-Level Synthesis
 
     + Detail: 
         * Instance: 
-        +------------------------------------------+-------------------------------+-----+------------+-----+------------+---------+
-        |                                          |                               |      Latency     |     Interval     | Pipeline|
-        |                 Instance                 |             Module            | min |     max    | min |     max    |   Type  |
-        +------------------------------------------+-------------------------------+-----+------------+-----+------------+---------+
-        |grp_correlation_accel_v3_frontEnd_fu_231  |correlation_accel_v3_frontEnd  |    ?|           ?|    ?|           ?|   none  |
-        |grp_correlation_accel_v3_backEnd_fu_203   |correlation_accel_v3_backEnd   |    8|  2147483740|    8|  2147483740|   none  |
-        +------------------------------------------+-------------------------------+-----+------------+-----+------------+---------+
+        +------------------------------------------+-------------------------------+-----+--------------+-----+--------------+---------+
+        |                                          |                               |       Latency      |      Interval      | Pipeline|
+        |                 Instance                 |             Module            | min |      max     | min |      max     |   Type  |
+        +------------------------------------------+-------------------------------+-----+--------------+-----+--------------+---------+
+        |grp_correlation_accel_v3_frontEnd_fu_203  |correlation_accel_v3_frontEnd  |    ?|             ?|    ?|             ?|   none  |
+        |grp_correlation_accel_v3_backEnd_fu_239   |correlation_accel_v3_backEnd   |    7|  186831077209|    7|  186831077209|   none  |
+        +------------------------------------------+-------------------------------+-----+--------------+-----+--------------+---------+
 
         * Loop: 
         N/A
@@ -58,50 +58,50 @@ High-Level Synthesis
 |       Name      | BRAM_18K| DSP48E|   FF   |  LUT  |
 +-----------------+---------+-------+--------+-------+
 |Expression       |        -|      -|       -|      -|
-|FIFO             |       16|      -|     490|    624|
-|Instance         |        3|     80|   17332|  24404|
+|FIFO             |        0|      -|      50|    440|
+|Instance         |        3|     49|   11905|  16427|
 |Memory           |        -|      -|       -|      -|
 |Multiplexer      |        -|      -|       -|      -|
 |Register         |        -|      -|       4|      -|
 +-----------------+---------+-------+--------+-------+
-|Total            |       19|     80|   17826|  25028|
+|Total            |        3|     49|   11959|  16867|
 +-----------------+---------+-------+--------+-------+
 |Available        |      280|    220|  106400|  53200|
 +-----------------+---------+-------+--------+-------+
-|Utilization (%)  |        6|     36|      16|     47|
+|Utilization (%)  |        1|     22|      11|     31|
 +-----------------+---------+-------+--------+-------+
 
 + Detail: 
     * Instance: 
-    +----------------------------------+-------------------------------+---------+-------+-------+-------+
-    |             Instance             |             Module            | BRAM_18K| DSP48E|   FF  |  LUT  |
-    +----------------------------------+-------------------------------+---------+-------+-------+-------+
-    |correlation_accel_v3_backEnd_U0   |correlation_accel_v3_backEnd   |        0|     44|  10087|  14314|
-    |correlation_accel_v3_frontEnd_U0  |correlation_accel_v3_frontEnd  |        3|     36|   7245|  10090|
-    +----------------------------------+-------------------------------+---------+-------+-------+-------+
-    |Total                             |                               |        3|     80|  17332|  24404|
-    +----------------------------------+-------------------------------+---------+-------+-------+-------+
+    +----------------------------------+-------------------------------+---------+-------+------+-------+
+    |             Instance             |             Module            | BRAM_18K| DSP48E|  FF  |  LUT  |
+    +----------------------------------+-------------------------------+---------+-------+------+-------+
+    |correlation_accel_v3_backEnd_U0   |correlation_accel_v3_backEnd   |        0|     13|  4660|   6337|
+    |correlation_accel_v3_frontEnd_U0  |correlation_accel_v3_frontEnd  |        3|     36|  7245|  10090|
+    +----------------------------------+-------------------------------+---------+-------+------+-------+
+    |Total                             |                               |        3|     49| 11905|  16427|
+    +----------------------------------+-------------------------------+---------+-------+------+-------+
 
     * Memory: 
     N/A
 
     * FIFO: 
-    +--------------------------------+---------+----+----+------+-----+---------+
-    |              Name              | BRAM_18K| FF | LUT| Depth| Bits| Size:D*B|
-    +--------------------------------+---------+----+----+------+-----+---------+
-    |number_of_days15_channel_U      |        0|   5|  44|     1|   32|       32|
-    |number_of_indices14_channel_U   |        0|   5|  44|     1|   32|       32|
-    |sum_returnA_V_U                 |        2|  60|  67|   252|   32|     8064|
-    |sum_return_V_U                  |        2|  60|  67|   252|   32|     8064|
-    |sum_weight_V_U                  |        2|  60|  67|   252|   32|     8064|
-    |sum_weight_returnA_V_U          |        2|  60|  67|   252|   32|     8064|
-    |sum_weight_returnA_returnB_V_U  |        2|  60|  67|   252|   32|     8064|
-    |sum_weight_returnSquareA_V_U    |        2|  60|  67|   252|   32|     8064|
-    |sum_weight_returnSquare_V_U     |        2|  60|  67|   252|   32|     8064|
-    |sum_weight_return_V_U           |        2|  60|  67|   252|   32|     8064|
-    +--------------------------------+---------+----+----+------+-----+---------+
-    |Total                           |       16| 490| 624|  2018|  320|    64576|
-    +--------------------------------+---------+----+----+------+-----+---------+
+    +--------------------------------+---------+---+----+------+-----+---------+
+    |              Name              | BRAM_18K| FF| LUT| Depth| Bits| Size:D*B|
+    +--------------------------------+---------+---+----+------+-----+---------+
+    |number_of_days15_channel_U      |        0|  5|  44|     1|   32|       32|
+    |number_of_indices14_channel_U   |        0|  5|  44|     1|   32|       32|
+    |sum_returnA_V_U                 |        0|  5|  44|     2|   32|       64|
+    |sum_return_V_U                  |        0|  5|  44|     2|   32|       64|
+    |sum_weight_V_U                  |        0|  5|  44|     2|   32|       64|
+    |sum_weight_returnA_V_U          |        0|  5|  44|     2|   32|       64|
+    |sum_weight_returnA_returnB_V_U  |        0|  5|  44|     2|   32|       64|
+    |sum_weight_returnSquareA_V_U    |        0|  5|  44|     2|   32|       64|
+    |sum_weight_returnSquare_V_U     |        0|  5|  44|     2|   32|       64|
+    |sum_weight_return_V_U           |        0|  5|  44|     2|   32|       64|
+    +--------------------------------+---------+---+----+------+-----+---------+
+    |Total                           |        0| 50| 440|    18|  320|      576|
+    +--------------------------------+---------+---+----+------+-----+---------+
 
     * Expression: 
     N/A

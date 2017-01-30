@@ -564,7 +564,7 @@ void backEnd(
 		float corr_temp = covariance / (volatilityA * volatilityB);
 
 		#ifdef __SDSVHLS__
-		#pragma HLS PIPELINE II=1
+		//#pragma HLS PIPELINE II=1
 			   conv1.floatval 							= corr_temp;
 			   out_correlation[column_index - 1].data  	= conv1.ival;
 			   out_correlation[column_index - 1].keep  	= 15;

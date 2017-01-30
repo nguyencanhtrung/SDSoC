@@ -1429,7 +1429,7 @@ entry:29  br label %0
 
 <node id="59" bw="0" op_0_bw="0" op_1_bw="8">
 <![CDATA[
-:0  call void (...)* @_ssdm_op_SpecLoopName([16 x i8]* @p_str11) nounwind
+:0  call void (...)* @_ssdm_op_SpecLoopName([16 x i8]* @p_str10) nounwind
 
 ]]></node>
 <StgValue><ssdm name=""/></StgValue>
@@ -1995,7 +1995,7 @@ weight_rom_init.exit.i:12  store float 0.000000e+00, float* %acc_weight_return_a
 
 <node id="73" bw="0" op_0_bw="0" op_1_bw="8">
 <![CDATA[
-:0  call void (...)* @_ssdm_op_SpecLoopName([19 x i8]* @p_str12) nounwind
+:0  call void (...)* @_ssdm_op_SpecLoopName([19 x i8]* @p_str11) nounwind
 
 ]]></node>
 <StgValue><ssdm name=""/></StgValue>
@@ -10575,7 +10575,7 @@ frontEnd.1.exit:0  ret void
 </dataflow>
 <dataflow id="1189" from="_ssdm_op_SpecLoopName" to="stg_166" fromId="1188" toId="166">
 </dataflow>
-<dataflow id="1191" from="p_str11" to="stg_166" fromId="1190" toId="166">
+<dataflow id="1191" from="p_str10" to="stg_166" fromId="1190" toId="166">
 </dataflow>
 <dataflow id="1192" from="i_i_i" to="tmp_70_i_i" fromId="158" toId="167">
 </dataflow>
@@ -10728,7 +10728,7 @@ frontEnd.1.exit:0  ret void
 </dataflow>
 <dataflow id="1268" from="_ssdm_op_SpecLoopName" to="stg_201" fromId="1188" toId="201">
 </dataflow>
-<dataflow id="1270" from="p_str12" to="stg_201" fromId="1269" toId="201">
+<dataflow id="1270" from="p_str11" to="stg_201" fromId="1269" toId="201">
 </dataflow>
 <dataflow id="1271" from="tmp_72_i_i" to="stg_202" fromId="200" toId="202">
 </dataflow>

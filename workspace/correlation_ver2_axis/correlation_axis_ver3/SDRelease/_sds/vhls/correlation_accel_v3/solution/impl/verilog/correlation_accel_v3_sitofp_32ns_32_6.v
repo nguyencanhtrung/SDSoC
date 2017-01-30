@@ -10,7 +10,7 @@
 
 module correlation_accel_v3_sitofp_32ns_32_6
 #(parameter
-    ID         = 60,
+    ID         = 44,
     NUM_STAGE  = 6,
     din0_WIDTH = 32,
     dout_WIDTH = 32

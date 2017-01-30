@@ -10,7 +10,7 @@ use ieee.std_logic_1164.all;
 
 entity correlation_accel_v3_fsqrt_32ns_32ns_32_16 is
     generic (
-        ID         : integer := 61;
+        ID         : integer := 45;
         NUM_STAGE  : integer := 16;
         din0_WIDTH : integer := 32;
         din1_WIDTH : integer := 32;

@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Tue Jan 24 22:49:16 2017" VIVADOVERSION="2014.4">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Mon Jan 30 13:45:28 2017" VIVADOVERSION="2014.4">
 
   <SYSTEMINFO ARCH="zynq" BOARD="em.avnet.com:zed:part0:1.0" DEVICE="7z020" NAME="zed_imp" PACKAGE="clg484" SPEEDGRADE="-1"/>
 

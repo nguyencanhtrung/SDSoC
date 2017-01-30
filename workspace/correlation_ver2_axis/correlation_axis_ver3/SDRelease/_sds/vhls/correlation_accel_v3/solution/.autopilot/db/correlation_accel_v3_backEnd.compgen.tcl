@@ -1,9 +1,9 @@
 # This script segment is generated automatically by AutoPilot
 
 set id 37
-set name correlation_accel_v3_fsub_32ns_32ns_32_5_full_dsp
-set corename simcore_fsub
-set op fsub
+set name correlation_accel_v3_faddfsub_32ns_32ns_32_5_full_dsp
+set corename simcore_faddfsub
+set op faddfsub
 set stage_num 5
 set max_latency -1
 set registered_input 1
@@ -14,8 +14,8 @@ set in1_width 32
 set in1_signed 0
 set out_width 32
 if {${::AESL::PGuard_simmodel_gen}} {
-if {[info proc ap_gen_simcore_fsub] == "ap_gen_simcore_fsub"} {
-eval "ap_gen_simcore_fsub { \
+if {[info proc ap_gen_simcore_faddfsub] == "ap_gen_simcore_faddfsub"} {
+eval "ap_gen_simcore_faddfsub { \
     id ${id} \
     name ${name} \
     corename ${corename} \
@@ -33,7 +33,7 @@ eval "ap_gen_simcore_fsub { \
     out_width ${out_width} \
 }"
 } else {
-puts "@W \[IMPL-100\] Cannot find ap_gen_simcore_fsub, check your AutoPilot builtin lib"
+puts "@W \[IMPL-100\] Cannot find ap_gen_simcore_faddfsub, check your AutoPilot builtin lib"
 }
 }
 
@@ -43,7 +43,7 @@ if {${::AESL::PGuard_rtl_comp_handler}} {
 }
 
 
-set op fsub
+set op faddfsub
 set corename FAddSub
 if {${::AESL::PGuard_autocg_gen} && (${::AESL::PGuard_autocg_fpip} || ${::AESL::PGuard_autocg_fpv6en})} {
 if {[info proc ::AESL_LIB_XILINX_FPV6::fpv6_gen] == "::AESL_LIB_XILINX_FPV6::fpv6_gen"} {
@@ -70,7 +70,7 @@ puts "@W \[IMPL-101\] Cannot find ::AESL_LIB_XILINX_FPV6::fpv6_gen, check your p
 }
 
 
-set id 60
+set id 44
 set name correlation_accel_v3_sitofp_32ns_32_6
 set corename simcore_sitofp
 set op sitofp
@@ -131,7 +131,7 @@ puts "@W \[IMPL-101\] Cannot find ::AESL_LIB_XILINX_FPV6::fpv6_gen, check your p
 }
 
 
-set id 61
+set id 45
 set name correlation_accel_v3_fsqrt_32ns_32ns_32_16
 set corename simcore_fsqrt
 set op fsqrt
@@ -209,7 +209,7 @@ if {${::AESL::PGuard_autoexp_gen}} {
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::native_axis_add] == "::AESL_LIB_XILADAPTER::native_axis_add"} {
 eval "::AESL_LIB_XILADAPTER::native_axis_add { \
-    id 73 \
+    id 57 \
     name out_correlation_data_V \
     reset_level 1 \
     sync_rst true \
@@ -228,7 +228,7 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::native_axis_add] == "::AESL_LIB_XILADAPTER::native_axis_add"} {
 eval "::AESL_LIB_XILADAPTER::native_axis_add { \
-    id 74 \
+    id 58 \
     name out_correlation_keep_V \
     reset_level 1 \
     sync_rst true \
@@ -247,7 +247,7 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::native_axis_add] == "::AESL_LIB_XILADAPTER::native_axis_add"} {
 eval "::AESL_LIB_XILADAPTER::native_axis_add { \
-    id 75 \
+    id 59 \
     name out_correlation_strb_V \
     reset_level 1 \
     sync_rst true \
@@ -266,7 +266,7 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::native_axis_add] == "::AESL_LIB_XILADAPTER::native_axis_add"} {
 eval "::AESL_LIB_XILADAPTER::native_axis_add { \
-    id 76 \
+    id 60 \
     name out_correlation_user_V \
     reset_level 1 \
     sync_rst true \
@@ -285,7 +285,7 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::native_axis_add] == "::AESL_LIB_XILADAPTER::native_axis_add"} {
 eval "::AESL_LIB_XILADAPTER::native_axis_add { \
-    id 77 \
+    id 61 \
     name out_correlation_last_V \
     reset_level 1 \
     sync_rst true \
@@ -304,7 +304,7 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::native_axis_add] == "::AESL_LIB_XILADAPTER::native_axis_add"} {
 eval "::AESL_LIB_XILADAPTER::native_axis_add { \
-    id 78 \
+    id 62 \
     name out_correlation_id_V \
     reset_level 1 \
     sync_rst true \
@@ -323,7 +323,7 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::native_axis_add] == "::AESL_LIB_XILADAPTER::native_axis_add"} {
 eval "::AESL_LIB_XILADAPTER::native_axis_add { \
-    id 79 \
+    id 63 \
     name out_correlation_dest_V \
     reset_level 1 \
     sync_rst true \
@@ -341,7 +341,7 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 63 \
+    id 47 \
     name NUMBER_OF_DAYS \
     type fifo \
     dir I \
@@ -356,7 +356,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 64 \
+    id 48 \
     name NUMBER_OF_INDICES \
     type fifo \
     dir I \
@@ -371,7 +371,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 65 \
+    id 49 \
     name sum_weight_in_V \
     type fifo \
     dir I \
@@ -386,7 +386,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 66 \
+    id 50 \
     name sum_return_in_V \
     type fifo \
     dir I \
@@ -401,7 +401,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 67 \
+    id 51 \
     name sum_weight_returnSquare_in_V \
     type fifo \
     dir I \
@@ -416,7 +416,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 68 \
+    id 52 \
     name sum_weight_return_in_V \
     type fifo \
     dir I \
@@ -431,7 +431,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 69 \
+    id 53 \
     name sum_weight_returnA_returnB_in_s \
     type fifo \
     dir I \
@@ -446,7 +446,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 70 \
+    id 54 \
     name sum_returnA_in_V \
     type fifo \
     dir I \
@@ -461,7 +461,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 71 \
+    id 55 \
     name sum_weight_returnSquareA_in_V \
     type fifo \
     dir I \
@@ -476,7 +476,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 72 \
+    id 56 \
     name sum_weight_returnA_in_V \
     type fifo \
     dir I \

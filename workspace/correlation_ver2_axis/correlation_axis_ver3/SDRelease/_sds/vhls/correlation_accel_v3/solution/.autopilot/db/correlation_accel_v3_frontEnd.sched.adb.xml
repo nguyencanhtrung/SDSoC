@@ -1425,7 +1425,7 @@ entry:29  br label %0
 
 <node id="59" bw="0" op_0_bw="0" op_1_bw="8">
 <![CDATA[
-:0  call void (...)* @_ssdm_op_SpecLoopName([16 x i8]* @p_str11) nounwind
+:0  call void (...)* @_ssdm_op_SpecLoopName([16 x i8]* @p_str10) nounwind
 
 ]]></node>
 <StgValue><ssdm name=""/></StgValue>
@@ -1991,7 +1991,7 @@ weight_rom_init.exit.i:12  store float 0.000000e+00, float* %acc_weight_return_a
 
 <node id="73" bw="0" op_0_bw="0" op_1_bw="8">
 <![CDATA[
-:0  call void (...)* @_ssdm_op_SpecLoopName([19 x i8]* @p_str12) nounwind
+:0  call void (...)* @_ssdm_op_SpecLoopName([19 x i8]* @p_str11) nounwind
 
 ]]></node>
 <StgValue><ssdm name=""/></StgValue>

@@ -6,162 +6,121 @@
 // ==============================================================
 
 
-`timescale 1ns/1ps
+`timescale 1 ns / 1 ps
 
-module FIFO_correlation_accel_v3_sum_weight_return_V
-#(parameter
-    MEM_STYLE  = "block",
-    DATA_WIDTH = 32,
-    ADDR_WIDTH = 8,
-    DEPTH      = 252
-)
-(
-    // system signal
-    input  wire                  clk,
-    input  wire                  reset,
+module FIFO_correlation_accel_v3_sum_weight_return_V_shiftReg (
+    clk,
+    data,
+    ce,
+    a,
+    q);
 
-    // write
-    output wire                  if_full_n,
-    input  wire                  if_write_ce,
-    input  wire                  if_write,
-    input  wire [DATA_WIDTH-1:0] if_din,
+parameter DATA_WIDTH = 32'd32;
+parameter ADDR_WIDTH = 32'd2;
+parameter DEPTH = 32'd3;
 
-    // read
-    output wire                  if_empty_n,
-    input  wire                  if_read_ce,
-    input  wire                  if_read,
-    output wire [DATA_WIDTH-1:0] if_dout
-);
-//------------------------Parameter----------------------
+input clk;
+input [DATA_WIDTH-1:0] data;
+input ce;
+input [ADDR_WIDTH-1:0] a;
+output [DATA_WIDTH-1:0] q;
 
-//------------------------Local signal-------------------
-(* ram_style = MEM_STYLE *)
-reg  [DATA_WIDTH-1:0] mem[0:DEPTH-1];
-reg  [DATA_WIDTH-1:0] q_buf = 1'b0;
-reg  [ADDR_WIDTH-1:0] waddr = 1'b0;
-reg  [ADDR_WIDTH-1:0] raddr = 1'b0;
-wire [ADDR_WIDTH-1:0] wnext;
-wire [ADDR_WIDTH-1:0] rnext;
-wire                  push;
-wire                  pop;
-reg  [ADDR_WIDTH-1:0] usedw = 1'b0;
-reg                   full_n = 1'b1;
-reg                   empty_n = 1'b0;
-reg  [DATA_WIDTH-1:0] q_tmp = 1'b0;
-reg                   show_ahead = 1'b0;
-reg  [DATA_WIDTH-1:0] dout_buf = 1'b0;
-reg                   dout_valid = 1'b0;
+reg[DATA_WIDTH-1:0] SRL_SIG [0:DEPTH-1];
+integer i;
 
+always @ (posedge clk)
+    begin
+        if (ce)
+        begin
+            for (i=0;i<DEPTH-1;i=i+1)
+                SRL_SIG[i+1] <= SRL_SIG[i];
+            SRL_SIG[0] <= data;
+        end
+    end
 
-//------------------------Instantiation------------------
-
-//------------------------Task and function--------------
-
-//------------------------Body---------------------------
-assign if_full_n  = full_n;
-assign if_empty_n = dout_valid;
-assign if_dout    = dout_buf;
-assign push       = full_n & if_write_ce & if_write;
-assign pop        = empty_n & if_read_ce & (~dout_valid | if_read);
-assign wnext      = !push                ? waddr :
-                    (waddr == DEPTH - 1) ? 1'b0  :
-                    waddr + 1'b1;
-assign rnext      = !pop                 ? raddr :
-                    (raddr == DEPTH - 1) ? 1'b0  :
-                    raddr + 1'b1;
-
-// waddr
-always @(posedge clk) begin
-    if (reset == 1'b1)
-        waddr <= 1'b0;
-    else
-        waddr <= wnext;
-end
-
-// raddr
-always @(posedge clk) begin
-    if (reset == 1'b1)
-        raddr <= 1'b0;
-    else
-        raddr <= rnext;
-end
-
-// usedw
-always @(posedge clk) begin
-    if (reset == 1'b1)
-        usedw <= 1'b0;
-    else if (push & ~pop)
-        usedw <= usedw + 1'b1;
-    else if (~push & pop)
-        usedw <= usedw - 1'b1;
-end
-
-// full_n
-always @(posedge clk) begin
-    if (reset == 1'b1)
-        full_n <= 1'b1;
-    else if (push & ~pop)
-        full_n <= (usedw != DEPTH - 1);
-    else if (~push & pop)
-        full_n <= 1'b1;
-end
-
-// empty_n
-always @(posedge clk) begin
-    if (reset == 1'b1)
-        empty_n <= 1'b0;
-    else if (push & ~pop)
-        empty_n <= 1'b1;
-    else if (~push & pop)
-        empty_n <= (usedw != 1'b1);
-end
-
-// mem
-always @(posedge clk) begin
-    if (push)
-        mem[waddr] <= if_din;
-end
-
-// q_buf
-always @(posedge clk) begin
-    q_buf <= mem[rnext];
-end
-
-// q_tmp
-always @(posedge clk) begin
-    if (reset == 1'b1)
-        q_tmp <= 1'b0;
-    else if (push)
-        q_tmp <= if_din;
-end
-
-// show_ahead
-always @(posedge clk) begin
-    if (reset == 1'b1)
-        show_ahead <= 1'b0;
-    else if (push && usedw == pop)
-        show_ahead <= 1'b1;
-    else
-        show_ahead <= 1'b0;
-end
-
-// dout_buf
-always @(posedge clk) begin
-    if (reset == 1'b1)
-        dout_buf <= 1'b0;
-    else if (pop)
-        dout_buf <= show_ahead? q_tmp : q_buf;
-end
-
-// dout_valid
-always @(posedge clk) begin
-    if (reset == 1'b1)
-        dout_valid <= 1'b0;
-    else if (pop)
-        dout_valid <= 1'b1;
-    else if (if_read_ce & if_read)
-        dout_valid <= 1'b0;
-end
+assign q = SRL_SIG[a];
 
 endmodule
+
+module FIFO_correlation_accel_v3_sum_weight_return_V (
+    clk,
+    reset,
+    if_empty_n,
+    if_read_ce,
+    if_read,
+    if_dout,
+    if_full_n,
+    if_write_ce,
+    if_write,
+    if_din);
+
+parameter MEM_STYLE = "shiftreg";
+parameter DATA_WIDTH = 32'd32;
+parameter ADDR_WIDTH = 32'd2;
+parameter DEPTH = 32'd3;
+
+input clk;
+input reset;
+output if_empty_n;
+input if_read_ce;
+input if_read;
+output[DATA_WIDTH - 1:0] if_dout;
+output if_full_n;
+input if_write_ce;
+input if_write;
+input[DATA_WIDTH - 1:0] if_din;
+
+wire[ADDR_WIDTH - 1:0] shiftReg_addr ;
+wire[DATA_WIDTH - 1:0] shiftReg_data, shiftReg_q;
+reg[ADDR_WIDTH:0] mOutPtr = {(ADDR_WIDTH+1){1'b1}};
+reg internal_empty_n = 0, internal_full_n = 1;
+
+assign if_empty_n = internal_empty_n;
+assign if_full_n = internal_full_n;
+assign shiftReg_data = if_din;
+assign if_dout = shiftReg_q;
+
+always @ (posedge clk) begin
+    if (reset == 1'b1)
+    begin
+        mOutPtr <= ~{ADDR_WIDTH+1{1'b0}};
+        internal_empty_n <= 1'b0;
+        internal_full_n <= 1'b1;
+    end
+    else begin
+        if (((if_read & if_read_ce) == 1 & internal_empty_n == 1) && 
+            ((if_write & if_write_ce) == 0 | internal_full_n == 0))
+        begin
+            mOutPtr <= mOutPtr -1;
+            if (mOutPtr == 0)
+                internal_empty_n <= 1'b0;
+            internal_full_n <= 1'b1;
+        end 
+        else if (((if_read & if_read_ce) == 0 | internal_empty_n == 0) && 
+            ((if_write & if_write_ce) == 1 & internal_full_n == 1))
+        begin
+            mOutPtr <= mOutPtr +1;
+            internal_empty_n <= 1'b1;
+            if (mOutPtr == DEPTH-2)
+                internal_full_n <= 1'b0;
+        end 
+    end
+end
+
+assign shiftReg_addr = mOutPtr[ADDR_WIDTH] == 1'b0 ? mOutPtr[ADDR_WIDTH-1:0]:{ADDR_WIDTH{1'b0}};
+assign shiftReg_ce = (if_write & if_write_ce) & internal_full_n;
+
+FIFO_correlation_accel_v3_sum_weight_return_V_shiftReg 
+#(
+    .DATA_WIDTH(DATA_WIDTH),
+    .ADDR_WIDTH(ADDR_WIDTH),
+    .DEPTH(DEPTH))
+U_FIFO_correlation_accel_v3_sum_weight_return_V_ram (
+    .clk(clk),
+    .data(shiftReg_data),
+    .ce(shiftReg_ce),
+    .a(shiftReg_addr),
+    .q(shiftReg_q));
+
+endmodule  
 

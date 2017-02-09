@@ -21,22 +21,22 @@
  * 					Changing v0.03 to ultilize parallelism 				*
  * 		- v2.00 :   Move to SDSoC										*
  *																		*
+ * 		- v4.00 : 	Most throughput-optimized architecture 				*
  *************************************************************************/
-#include "correlation_accel_v3.hpp"
+#include "correlation_accel_v4.hpp"
 
 
 
 /*=======================================================================*/
 /****************** 	TOP FUNCTION - CORE 	**************************/
 /*=======================================================================*/
-#ifdef __SDSVHLS__
-
-void correlation_accel_v4(		int 	number_of_days,										/* CPU in*/
-								int 	number_of_indices,									/* CPU in*/
+#ifdef __SDSVHLS__ 	// Version for Vivado HLS
+void correlation_accel_v4(		int 	number_of_days,										/* CPU in - AXI-lite*/
+								int 	number_of_indices,									/* CPU in - AXI-lite*/
 
 								ap_axiu<32,1,1,1> in_indices[MAX_NUM_INDICES * MAX_NUM_DAYS],
            						ap_axiu<32,1,1,1> out_correlation[MAX_NUM_INDICES / 2 * (MAX_NUM_INDICES - 1)] )
-#else
+#else	// Version for simulation
 void correlation_accel_v4(
 								int 	number_of_days,										/* CPU in*/
 								int 	number_of_indices,									/* CPU in*/
@@ -46,105 +46,232 @@ void correlation_accel_v4(
 								)
 #endif
 {
-
 #ifdef __SDSVHLS__
-#pragma HLS interface axis  port=out_correlation
-#pragma HLS interface axis  port=in_indices
-#pragma HLS interface ap_ctrl_hs port=return
-#pragma HLS DATAFLOW
+	#pragma HLS interface axis  port=out_correlation
+	#pragma HLS interface axis  port=in_indices
+	#pragma HLS interface ap_ctrl_hs port=return
+	#pragma HLS DATAFLOW
 #endif
 
 	const int NUMBER_OF_DAYS 			= number_of_days;
 	const int NUMBER_OF_INDICES 		= number_of_indices;
 
 #ifdef __SDSVHLS__
-	hls::stream<float> sum_weight;
-	hls::stream<float> sum_return;
-	hls::stream<float> sum_weight_returnSquare;
-	hls::stream<float> sum_weight_return;
-	hls::stream<float> sum_weight_returnA_returnB;
-	hls::stream<float> sum_returnA;
-	hls::stream<float> sum_weight_returnSquareA;
-	hls::stream<float> sum_weight_returnA;
+	hls::stream<float> ln_returnA_c1;
+	hls::stream<float> weight_returnSquareA_c1;
+	hls::stream<float> weight_returnA_c1;
 
-#pragma HLS STREAM variable=sum_weight depth=2
-#pragma HLS STREAM variable=sum_return depth=2
-#pragma HLS STREAM variable=sum_weight_returnSquare depth=2
-#pragma HLS STREAM variable=sum_weight_return depth=2
-#pragma HLS STREAM variable=sum_weight_returnA_returnB depth=2
-#pragma HLS STREAM variable=sum_returnA depth=2
-#pragma HLS STREAM variable=sum_weight_returnSquareA depth=2
-#pragma HLS STREAM variable=sum_weight_returnA depth=2
+	hls::stream<float> ln_returnA_c2;
+	hls::stream<float> weight_returnSquareA_c2;
+	hls::stream<float> weight_returnA_c2;
+
+	hls::stream<float> sum_weight_c1;
+	hls::stream<float> ln_returnB_c1;
+	hls::stream<float> weight_returnSquareB_c1;
+	hls::stream<float> weight_returnB_c1;
+	hls::stream<float> weight_returnA_returnB_c1;
+
+	hls::stream<float> sum_weight_c2;
+	hls::stream<float> ln_returnB_c2;
+	hls::stream<float> weight_returnSquareB_c2;
+	hls::stream<float> weight_returnB_c2;
+	hls::stream<float> weight_returnA_returnB_c2;
+
+	#pragma HLS STREAM variable=ln_returnA_c1 depth=2
+	#pragma HLS STREAM variable=weight_returnSquareA_c1 depth=2
+	#pragma HLS STREAM variable=weight_returnA_c1 depth=2
+
+	#pragma HLS STREAM variable=ln_returnA_c2 depth=2
+	#pragma HLS STREAM variable=weight_returnSquareA_c2 depth=2
+	#pragma HLS STREAM variable=weight_returnA_c2 depth=2
+
+	#pragma HLS STREAM variable=sum_weight_c1 depth=2
+	#pragma HLS STREAM variable=ln_returnB_c1 depth=2
+	#pragma HLS STREAM variable=weight_returnSquareB_c1 depth=2
+	#pragma HLS STREAM variable=weight_returnB_c1 depth=2
+	#pragma HLS STREAM variable=weight_returnA_returnB_c1 depth=2
+
+	#pragma HLS STREAM variable=sum_weight_c2 depth=2
+	#pragma HLS STREAM variable=ln_returnB_c2 depth=2
+	#pragma HLS STREAM variable=weight_returnSquareB_c2 depth=2
+	#pragma HLS STREAM variable=weight_returnB_c2 depth=2
+	#pragma HLS STREAM variable=weight_returnA_returnB_c2 depth=2
+
+	hls::stream<float> sum_weight_stage2_c1;
+	hls::stream<float> sum_return_stage2_c1;
+	hls::stream<float> sum_weight_returnSquare_stage2_c1;
+	hls::stream<float> sum_weight_return_stage2_c1;
+	hls::stream<float> sum_weight_returnA_returnB_stage2_c1;
+	hls::stream<float> sum_returnA_stage2_c1;
+	hls::stream<float> sum_weight_returnSquareA_stage2_c1;
+	hls::stream<float> sum_weight_returnA_stage2_c1;
+
+	hls::stream<float> sum_weight_stage2_c2;
+	hls::stream<float> sum_return_stage2_c2;
+	hls::stream<float> sum_weight_returnSquare_stage2_c2;
+	hls::stream<float> sum_weight_return_stage2_c2;
+	hls::stream<float> sum_weight_returnA_returnB_stage2_c2;
+	hls::stream<float> sum_returnA_stage2_c2;
+	hls::stream<float> sum_weight_returnSquareA_stage2_c2;
+	hls::stream<float> sum_weight_returnA_stage2_c2;
+
+
+	#pragma HLS STREAM variable=sum_weight_stage2_c1 depth=2
+	#pragma HLS STREAM variable=sum_return_stage2_c1 depth=2
+	#pragma HLS STREAM variable=sum_weight_returnSquare_stage2_c1 depth=2
+	#pragma HLS STREAM variable=sum_weight_return_stage2_c1 depth=2
+	#pragma HLS STREAM variable=sum_weight_returnA_returnB_stage2_c1 depth=2
+	#pragma HLS STREAM variable=sum_returnA_stage2_c1 depth=2
+	#pragma HLS STREAM variable=sum_weight_returnSquareA_stage2_c1 depth=2
+	#pragma HLS STREAM variable=sum_weight_returnA_stage2_c1 depth=2
+
+
+	#pragma HLS STREAM variable=sum_weight_stage2_c2 depth=2
+	#pragma HLS STREAM variable=sum_return_stage2_c2 depth=2
+	#pragma HLS STREAM variable=sum_weight_returnSquare_stage2_c2 depth=2
+	#pragma HLS STREAM variable=sum_weight_return_stage2_c2 depth=2
+	#pragma HLS STREAM variable=sum_weight_returnA_returnB_stage2_c2 depth=2
+	#pragma HLS STREAM variable=sum_returnA_stage2_c2 depth=2
+	#pragma HLS STREAM variable=sum_weight_returnSquareA_stage2_c2 depth=2
+	#pragma HLS STREAM variable=sum_weight_returnA_stage2_c2 depth=2
+
 #else
-	float sum_weight[NUMBER_OF_INDICES - 1];
-	float sum_return[NUMBER_OF_INDICES - 1];
-	float sum_weight_returnSquare[NUMBER_OF_INDICES - 1];
-	float sum_weight_return[NUMBER_OF_INDICES - 1];
-	float sum_weight_returnA_returnB[NUMBER_OF_INDICES - 1];
-	float sum_returnA[NUMBER_OF_INDICES - 1];
-	float sum_weight_returnSquareA[NUMBER_OF_INDICES - 1];
-	float sum_weight_returnA[NUMBER_OF_INDICES - 1];
+	float ln_returnA_c1[MAX_HALF_NUM_INDICES * MAX_NUM_RETURNS];
+	float weight_returnSquareA_c1[MAX_HALF_NUM_INDICES * MAX_NUM_RETURNS];
+	float weight_returnA_c1[MAX_HALF_NUM_INDICES * MAX_NUM_RETURNS];
+
+	float ln_returnA_c2[MAX_HALF_NUM_INDICES * MAX_NUM_RETURNS];
+	float weight_returnSquareA_c2[MAX_HALF_NUM_INDICES * MAX_NUM_RETURNS];
+	float weight_returnA_c2[MAX_HALF_NUM_INDICES * MAX_NUM_RETURNS];
+
+	float sum_weight_c1[MAX_HALF_NUM_INDICES * MAX_NUM_RETURNS];
+	float ln_returnB_c1[MAX_HALF_NUM_INDICES * MAX_NUM_RETURNS];
+	float weight_returnSquareB_c1[MAX_HALF_NUM_INDICES * MAX_NUM_RETURNS];
+	float weight_returnB_c1[MAX_HALF_NUM_INDICES * MAX_NUM_RETURNS];
+	float weight_returnA_returnB_c1[MAX_HALF_NUM_INDICES * MAX_NUM_RETURNS];
+
+	float sum_weight_c2[MAX_HALF_NUM_INDICES * MAX_NUM_RETURNS];
+	float ln_returnB_c2[MAX_HALF_NUM_INDICES * MAX_NUM_RETURNS];
+	float weight_returnSquareB_c2[MAX_HALF_NUM_INDICES * MAX_NUM_RETURNS];
+	float weight_returnB_c2[MAX_HALF_NUM_INDICES * MAX_NUM_RETURNS];
+	float weight_returnA_returnB_c2[MAX_HALF_NUM_INDICES * MAX_NUM_RETURNS];
+
+	float sum_weight_stage2_c1[MAX_HALF_NUM_INDICES];
+	float sum_return_stage2_c1[MAX_HALF_NUM_INDICES];
+	float sum_weight_returnSquare_stage2_c1[MAX_HALF_NUM_INDICES];
+	float sum_weight_return_stage2_c1[MAX_HALF_NUM_INDICES];
+	float sum_weight_returnA_returnB_stage2_c1[MAX_HALF_NUM_INDICES];
+	float sum_returnA_stage2_c1[MAX_HALF_NUM_INDICES];
+	float sum_weight_returnSquareA_stage2_c1[MAX_HALF_NUM_INDICES];
+	float sum_weight_returnA_stage2_c1[MAX_HALF_NUM_INDICES];
+
+
+	float sum_weight_stage2_c2[MAX_HALF_NUM_INDICES];
+	float sum_return_stage2_c2[MAX_HALF_NUM_INDICES];
+	float sum_weight_returnSquare_stage2_c2[MAX_HALF_NUM_INDICES];
+	float sum_weight_return_stage2_c2[MAX_HALF_NUM_INDICES];
+	float sum_weight_returnA_returnB_stage2_c2[MAX_HALF_NUM_INDICES];
+	float sum_returnA_stage2_c2[MAX_HALF_NUM_INDICES];
+	float sum_weight_returnSquareA_stage2_c2[MAX_HALF_NUM_INDICES];
+	float sum_weight_returnA_stage2_c2[MAX_HALF_NUM_INDICES];
 #endif
 
-#ifdef __SDSVHLS__
-frontEnd(
-				NUMBER_OF_DAYS,
-				NUMBER_OF_INDICES,
-				in_indices,
-
-				sum_weight,
-				sum_return,
-				sum_weight_returnSquare,
-				sum_weight_return,
-				sum_weight_returnA_returnB,
-				sum_returnA,
-				sum_weight_returnSquareA,
-				sum_weight_returnA
-);
-
-	backEnd(
-				NUMBER_OF_DAYS,
-				NUMBER_OF_INDICES,
-				sum_weight,
-				sum_return,
-				sum_weight_returnSquare,
-				sum_weight_return,
-				sum_weight_returnA_returnB,
-				sum_returnA,
-				sum_weight_returnSquareA,
-				sum_weight_returnA,
-				out_correlation);
-#else
 	frontEnd(
 				NUMBER_OF_DAYS,
 				NUMBER_OF_INDICES,
 				in_indices,
 
-				sum_weight,
-				sum_return,
-				sum_weight_returnSquare,
-				sum_weight_return,
-				sum_weight_returnA,
-				sum_returnA,
-				sum_weight_returnSquareA,
-				sum_weight_returnA
-);
+				ln_returnA_c1,
+				weight_returnSquareA_c1,
+				weight_returnA_c1,
+
+				ln_returnA_c2,
+				weight_returnSquareA_c2,
+				weight_returnA_c2,
+
+				sum_weight_c1,
+				ln_returnB_c1,
+				weight_returnSquareB_c1,
+				weight_returnB_c1,
+				weight_returnA_returnB_c1,
+
+				sum_weight_c2,
+				ln_returnB_c2,
+				weight_returnSquareB_c2,
+				weight_returnB_c2,
+				weight_returnA_returnB_c2);
+
+	midEnd(
+				NUMBER_OF_DAYS,
+				NUMBER_OF_INDICES,
+				0,
+
+				ln_returnA_c1,
+				weight_returnSquareA_c1,
+				weight_returnA_c1,
+
+				sum_weight_c1,
+				ln_returnB_c1,
+				weight_returnSquareB_c1,
+				weight_returnB_c1,
+				weight_returnA_returnB_c1,
+
+				sum_weight_stage2_c1,
+				sum_return_stage2_c1,
+				sum_weight_returnSquare_stage2_c1,
+				sum_weight_return_stage2_c1,
+				sum_weight_returnA_returnB_stage2_c1,
+				sum_returnA_stage2_c1,
+				sum_weight_returnSquareA_stage2_c1,
+				sum_weight_returnA_stage2_c1);
+
+	midEnd(
+				NUMBER_OF_DAYS,
+				NUMBER_OF_INDICES,
+				1,
+
+				ln_returnA_c2,
+				weight_returnSquareA_c2,
+				weight_returnA_c2,
+
+				sum_weight_c2,
+				ln_returnB_c2,
+				weight_returnSquareB_c2,
+				weight_returnB_c2,
+				weight_returnA_returnB_c2,
+
+				sum_weight_stage2_c2,
+				sum_return_stage2_c2,
+				sum_weight_returnSquare_stage2_c2,
+				sum_weight_return_stage2_c2,
+				sum_weight_returnA_returnB_stage2_c2,
+				sum_returnA_stage2_c2,
+				sum_weight_returnSquareA_stage2_c2,
+				sum_weight_returnA_stage2_c2);
+
 	backEnd(
 				NUMBER_OF_DAYS,
 				NUMBER_OF_INDICES,
 
-				sum_weight,
-				sum_return,
-				sum_weight_returnSquare,
-				sum_weight_return,
-				sum_weight_returnA_returnB,
-				sum_returnA,
-				sum_weight_returnSquareA,
-				sum_weight_returnA,
+				sum_weight_stage2_c1,
+				sum_return_stage2_c1,
+				sum_weight_returnSquare_stage2_c1,
+				sum_weight_return_stage2_c1,
+				sum_weight_returnA_returnB_stage2_c1,
+				sum_returnA_stage2_c1,
+				sum_weight_returnSquareA_stage2_c1,
+				sum_weight_returnA_stage2_c1,
 
-				out_correlation
-	);
-#endif
+				sum_weight_stage2_c2,
+				sum_return_stage2_c2,
+				sum_weight_returnSquare_stage2_c2,
+				sum_weight_return_stage2_c2,
+				sum_weight_returnA_returnB_stage2_c2,
+				sum_returnA_stage2_c2,
+				sum_weight_returnSquareA_stage2_c2,
+				sum_weight_returnA_stage2_c2,
+
+				out_correlation);
 
 }
 
@@ -191,9 +318,11 @@ static void weight_rom_init(
 																	* weight */
 	}
 }
-//--------------------------------------------------------------------------
+/**********************     FRONT_END BLOCK     *****************************
+ *																			*
+ ****************************************************************************/
 #ifdef __SDSVHLS__
-void frontEnd(
+	void frontEnd(
 				int NUMBER_OF_DAYS,
 				int NUMBER_OF_INDICES,
 				ap_axiu<32,1,1,1> in_indices[MAX_NUM_INDICES * MAX_NUM_DAYS],
@@ -218,34 +347,31 @@ void frontEnd(
 				hls::stream<float> &weight_returnB_out_c2,
 				hls::stream<float> &weight_returnA_returnB_out_c2)
 #else
-void frontEnd(
+	void frontEnd(
 				int NUMBER_OF_DAYS,
 				int NUMBER_OF_INDICES,
 				float in_indices[MAX_NUM_INDICES * MAX_NUM_DAYS],
 
-				float ln_returnA_out_c1[MAX_NUM_INDICES * MAX_NUM_DAYS],
-				float weight_returnSquareA_out_c1[MAX_NUM_INDICES * MAX_NUM_DAYS],
-				float weight_returnA_out_c1[MAX_NUM_INDICES * MAX_NUM_DAYS],
+				float ln_returnA_out_c1[MAX_HALF_NUM_INDICES * MAX_NUM_RETURNS],
+				float weight_returnSquareA_out_c1[MAX_HALF_NUM_INDICES * MAX_NUM_RETURNS],
+				float weight_returnA_out_c1[MAX_HALF_NUM_INDICES * MAX_NUM_RETURNS],
 
-				float ln_returnA_out_c2[MAX_NUM_INDICES * MAX_NUM_DAYS],
-				float weight_returnSquareA_out_c2[MAX_NUM_INDICES * MAX_NUM_DAYS],
-				float weight_returnA_out_c2[MAX_NUM_INDICES * MAX_NUM_DAYS],
+				float ln_returnA_out_c2[MAX_HALF_NUM_INDICES * MAX_NUM_RETURNS],
+				float weight_returnSquareA_out_c2[MAX_HALF_NUM_INDICES * MAX_NUM_RETURNS],
+				float weight_returnA_out_c2[MAX_HALF_NUM_INDICES * MAX_NUM_RETURNS],
 
-				float sum_weight_out_c1[MAX_NUM_INDICES * MAX_NUM_DAYS],
-				float ln_returnB_out_c1[MAX_NUM_INDICES * MAX_NUM_DAYS],
-				float weight_returnSquareB_out_c1[MAX_NUM_INDICES * MAX_NUM_DAYS],
-				float weight_returnB_out_c1[MAX_NUM_INDICES * MAX_NUM_DAYS],
-				float weight_returnA_returnB_out_c1[MAX_NUM_INDICES * MAX_NUM_DAYS],
+				float sum_weight_out_c1[MAX_HALF_NUM_INDICES * MAX_NUM_RETURNS],
+				float ln_returnB_out_c1[MAX_HALF_NUM_INDICES * MAX_NUM_RETURNS],
+				float weight_returnSquareB_out_c1[MAX_HALF_NUM_INDICES * MAX_NUM_RETURNS],
+				float weight_returnB_out_c1[MAX_HALF_NUM_INDICES * MAX_NUM_RETURNS],
+				float weight_returnA_returnB_out_c1[MAX_HALF_NUM_INDICES * MAX_NUM_RETURNS],
 
-				float sum_weight_out_c2[MAX_NUM_INDICES * MAX_NUM_DAYS],
-				float ln_returnB_out_c2[MAX_NUM_INDICES * MAX_NUM_DAYS],
-				float weight_returnSquareB_out_c2[MAX_NUM_INDICES * MAX_NUM_DAYS],
-				float weight_returnB_out_c2[MAX_NUM_INDICES * MAX_NUM_DAYS],
-				float weight_returnA_returnB_out_c2[MAX_NUM_INDICES * MAX_NUM_DAYS]
-)
+				float sum_weight_out_c2[MAX_HALF_NUM_INDICES * MAX_NUM_RETURNS],
+				float ln_returnB_out_c2[MAX_HALF_NUM_INDICES * MAX_NUM_RETURNS],
+				float weight_returnSquareB_out_c2[MAX_HALF_NUM_INDICES * MAX_NUM_RETURNS],
+				float weight_returnB_out_c2[MAX_HALF_NUM_INDICES * MAX_NUM_RETURNS],
+				float weight_returnA_returnB_out_c2[MAX_HALF_NUM_INDICES * MAX_NUM_RETURNS])
 #endif
-
-
 {
 #ifdef __SDSVHLS__
 	volatile ap_axiu<32,1,1,1> tmp1;
@@ -267,6 +393,9 @@ void frontEnd(
 	// BRAM Declaration to store lnReturn of the first index of a row
 	static float lnReturnA[BRAM_ROM_SIZE];
 	float shift_reg[2];
+
+	int index_c1 = 0;
+	int index_c2 = 0;
 
 	#ifdef __SDSVHLS__
 	#pragma HLS ARRAY_PARTITION variable=shift_reg complete dim=1
@@ -416,47 +545,260 @@ void frontEnd(
 				weight_returnA_returnB_out_c2	<< weight_returnA_returnB_temp;
 			}
 			#else
-			if(column_index % 2 == 1) {
-				ln_returnA_out_c1[index + i] 				= lnReturnA_temp;
-				weight_returnSquareA_out_c1[index + i] 		= weight_returnSquareA_temp;
-				weight_returnA_out_c1[index + i] 			= weight_returnA_temp;
+			if(column_index % 1 == 0) {
+				ln_returnA_out_c1[index_c1] 			= lnReturnA_temp;
+				weight_returnSquareA_out_c1[index_c1] 	= weight_returnSquareA_temp;
+				weight_returnA_out_c1[index_c1] 		= weight_returnA_temp;
 
-				sum_weight_out_c1[index + i]				= weight_rom[0];
-				ln_returnB_out_c1[index + i]				= lnReturn;
-				weight_returnSquareB_out_c1[index + i]		= weight_returnSquareB_temp;
-				weight_returnB_out_c1[index + i]			= weight_returnB_temp;
-				weight_returnA_returnB_out_c1[index + i]	= weight_returnA_returnB_temp;
+				sum_weight_out_c1[index_c1]				= weight_rom[0];
+				ln_returnB_out_c1[index_c1]				= lnReturn;
+				weight_returnSquareB_out_c1[index_c1]	= weight_returnSquareB_temp;
+				weight_returnB_out_c1[index_c1]			= weight_returnB_temp;
+				weight_returnA_returnB_out_c1[index_c1]	= weight_returnA_returnB_temp;
+				index_c1++;
 			} else {
-				ln_returnA_out_c2[index + i] 				= lnReturnA_temp;
-				weight_returnSquareA_out_c2[index + i] 		= weight_returnSquareA_temp;
-				weight_returnA_out_c2[index + i] 			= weight_returnA_temp;
+				ln_returnA_out_c2[index_c2] 			= lnReturnA_temp;
+				weight_returnSquareA_out_c2[index_c2] 	= weight_returnSquareA_temp;
+				weight_returnA_out_c2[index_c2] 		= weight_returnA_temp;
 
-				sum_weight_out_c2[index + i]				= weight_rom[0];
-				ln_returnB_out_c2[index + i]				= lnReturn;
-				weight_returnSquareB_out_c2[index + i]		= weight_returnSquareB_temp;
-				weight_returnB_out_c2[index + i]			= weight_returnB_temp;
-				weight_returnA_returnB_out_c2[index + i]	= weight_returnA_returnB_temp;
+				sum_weight_out_c2[index_c2]				= weight_rom[0];
+				ln_returnB_out_c2[index_c2]				= lnReturn;
+				weight_returnSquareB_out_c2[index_c2]	= weight_returnSquareB_temp;
+				weight_returnB_out_c2[index_c2]			= weight_returnB_temp;
+				weight_returnA_returnB_out_c2[index_c2]	= weight_returnA_returnB_temp;
+				index_c2++;
 			}
 			#endif
 
 			}
 	}
 }
+//------------------------------------------------------------------
+//------------------------------------------------------------------
+//------------------------------------------------------------------
+//------------------------------------------------------------------
+//------------------------------------------------------------------
+#ifdef __SDSVHLS__
+void midEnd(
+		int NUMBER_OF_DAYS,
+		int NUMBER_OF_INDICES,
+		int channel,
 
-//--------------------------------------------
+		hls::stream<float> &ln_returnA_in,
+		hls::stream<float> &weight_returnSquareA_in,
+		hls::stream<float> &weight_returnA_in,
+
+		hls::stream<float> &sum_weight_in,
+		hls::stream<float> &ln_returnB_in,
+		hls::stream<float> &weight_returnSquareB_in,
+		hls::stream<float> &weight_returnB_in,
+		hls::stream<float> &weight_returnA_returnB_in,
+
+		hls::stream<float> &sum_weight_out,
+		hls::stream<float> &sum_return_out,
+		hls::stream<float> &sum_weight_returnSquare_out,
+		hls::stream<float> &sum_weight_return_out,
+		hls::stream<float> &sum_weight_returnA_returnB_out,
+		hls::stream<float> &sum_returnA_out,
+		hls::stream<float> &sum_weight_returnSquareA_out,
+		hls::stream<float> &sum_weight_returnA_out
+)
+#else
+void midEnd(
+		int NUMBER_OF_DAYS,
+		int NUMBER_OF_INDICES,
+		int channel, 										// 0: up -- 1: down
+
+		float ln_returnA_in[MAX_HALF_NUM_INDICES * MAX_NUM_RETURNS],
+		float weight_returnSquareA_in[MAX_HALF_NUM_INDICES * MAX_NUM_RETURNS],
+		float weight_returnA_in[MAX_HALF_NUM_INDICES * MAX_NUM_RETURNS],
+
+		float sum_weight_in[MAX_HALF_NUM_INDICES * MAX_NUM_RETURNS],
+		float ln_returnB_in[MAX_HALF_NUM_INDICES * MAX_NUM_RETURNS],
+		float weight_returnSquareB_in[MAX_HALF_NUM_INDICES * MAX_NUM_RETURNS],
+		float weight_returnB_in[MAX_HALF_NUM_INDICES * MAX_NUM_RETURNS],
+		float weight_returnA_returnB_in[MAX_HALF_NUM_INDICES * MAX_NUM_RETURNS],
+
+		float sum_weight_out[MAX_HALF_NUM_INDICES],
+		float sum_return_out[MAX_HALF_NUM_INDICES],
+		float sum_weight_returnSquare_out[MAX_HALF_NUM_INDICES],
+		float sum_weight_return_out[MAX_HALF_NUM_INDICES],
+		float sum_weight_returnA_returnB_out[MAX_HALF_NUM_INDICES],
+		float sum_returnA_out[MAX_HALF_NUM_INDICES],
+		float sum_weight_returnSquareA_out[MAX_HALF_NUM_INDICES],
+		float sum_weight_returnA_out[MAX_HALF_NUM_INDICES]
+)
+#endif
+{
+// Upper bound for accumulation blocks
+int upper_bound 	= (int)((NUMBER_OF_INDICES - channel)/2);
+for(int column_index = 1; column_index <= upper_bound; column_index++){
+		// Channels to store accumulation
+		float acc_returnA[ACCUM_PARTITION];
+		float acc_weight_returnSquareA[ACCUM_PARTITION];
+		float acc_weight_returnA[ACCUM_PARTITION];
+
+		float acc_returnB[ACCUM_PARTITION];
+		float acc_weight_returnSquareB[ACCUM_PARTITION];
+		float acc_weight_returnB[ACCUM_PARTITION];
+
+		float acc_weight_returnA_returnB[ACCUM_PARTITION];
+
+		float sum_returnA 					= 0.0f;
+		float sum_weight_returnSquareA 		= 0.0f;
+		float sum_weight_returnA 			= 0.0f;
+
+		float sum_returnB 					= 0.0f;
+		float sum_weight_returnSquareB 		= 0.0f;
+		float sum_weight_returnB 			= 0.0f;
+		
+		float sum_weight_returnA_returnB 	= 0.0f;
+		float sum_weight  					= 0.0f;
+
+
+		int index 							= column_index * NUMBER_OF_DAYS;
+		int index_channel 					= (column_index - 1) * (NUMBER_OF_DAYS-1);
+
+		RESET_REGISTERS:
+		for(int i = 0; i < ACCUM_PARTITION; i++){
+		#ifdef __SDSVHLS__
+		#pragma HLS UNROLL		/*< FULLY UNROLL */
+		#endif
+			acc_returnB[i] 					= 0.0f;
+			acc_weight_returnSquareB[i]		= 0.0f;
+			acc_weight_returnB[i]			= 0.0f;
+			
+			acc_weight_returnA_returnB[i]	= 0.0f;
+
+			acc_returnA[i] 					= 0.0f;
+			acc_weight_returnSquareA[i]		= 0.0f;
+			acc_weight_returnA[i] 			= 0.0f;
+		}
+
+
+		ACCUMULATIONS:
+		for(int i = 1; i <= NUMBER_OF_DAYS - 1; i++){
+
+			float lnReturnA_temp;
+			float weight_returnA_temp;
+			float weight_returnSquareA_temp;
+
+			float lnReturnB_temp;
+			float weight_returnB_temp;
+			float weight_returnSquareB_temp;
+
+			float weight_returnA_returnB_temp;
+
+			int channel_id 				= i % ACCUM_PARTITION;
+
+		#ifdef __SDSVHLS__
+		#pragma HLS PIPELINE
+			sum_weight 					= sum_weight_in.read();
+
+			lnReturnA_temp				= ln_returnA_in.read();
+			weight_returnA_temp			= weight_returnA_in.read();
+			weight_returnSquareA_temp 	= weight_returnSquareA_in.read();
+
+			lnReturnB_temp				= ln_returnB_in.read();
+			weight_returnB_temp			= weight_returnB_in.read();
+			weight_returnSquareB_temp 	= weight_returnSquareB_in.read();
+
+			weight_returnA_returnB_temp	= weight_returnA_returnB_in.read();
+		#else
+			sum_weight 					= sum_weight_in[(i - 1) + index_channel];
+			lnReturnA_temp				= ln_returnA_in[(i - 1) + index_channel];
+			weight_returnA_temp			= weight_returnA_in[(i - 1) + index_channel];
+			weight_returnSquareA_temp 	= weight_returnSquareA_in[(i - 1) + index_channel];
+
+			lnReturnB_temp				= ln_returnB_in[(i - 1) + index_channel];
+			weight_returnB_temp			= weight_returnB_in[(i - 1) + index_channel];
+			weight_returnSquareB_temp 	= weight_returnSquareB_in[(i - 1) + index_channel];
+			weight_returnA_returnB_temp	= weight_returnA_returnB_in[(i - 1) + index_channel];
+		#endif
+			acc_returnA[channel_id] 				+= lnReturnA_temp;
+			acc_weight_returnSquareA[channel_id]	+= weight_returnSquareA_temp;
+			acc_weight_returnA[channel_id] 			+= weight_returnA_temp;
+
+			acc_returnB[channel_id] 				+= lnReturnB_temp;
+			acc_weight_returnSquareB[channel_id]	+= weight_returnSquareB_temp;
+			acc_weight_returnB[channel_id]			+= weight_returnB_temp;
+
+			acc_weight_returnA_returnB[channel_id]	+= weight_returnA_returnB_temp;
+		}
+
+
+		LAST_ACCUM_LOOP:
+		for(int i = 0; i < ACCUM_PARTITION; i++){
+		#ifdef __SDSVHLS__
+		#pragma HLS PIPELINE II=5
+		#endif
+			sum_returnA 							+= acc_returnA[i];
+			sum_weight_returnSquareA 				+= acc_weight_returnSquareA[i];
+			sum_weight_returnA 						+= acc_weight_returnA[i];
+
+			sum_returnB 							+= acc_return[i];
+			sum_weight_returnSquareB				+= acc_weight_returnSquare[i];
+			sum_weight_returnB 						+= acc_weight_return[i];
+			sum_weight_returnA_returnB 				+= acc_weight_returnA_returnB[i];
+		}
+
+		#ifdef __SDSVHLS__
+			sum_weight_out 							<< sum_weight;
+
+			sum_return_out							<< sum_returnB;
+			sum_weight_returnSquare_out				<< sum_weight_returnSquareB;
+			sum_weight_return_out					<< sum_weight_returnB;
+
+			sum_weight_returnA_returnB_out			<< sum_weight_returnA_returnB;
+
+			sum_returnA_out							<< sum_returnA;
+			sum_weight_returnSquareA_out			<< sum_weight_returnSquareA;
+			sum_weight_returnA_out					<< sum_weight_returnA;
+		#else
+			sum_weight_out[column_index - 1] 					= sum_weight;
+
+			sum_return_out[column_index - 1]					= sum_returnB;
+			sum_weight_returnSquare_out[column_index - 1]		= sum_weight_returnSquareB;
+			sum_weight_return_out[column_index - 1]				= sum_weight_returnB;
+
+			sum_weight_returnA_returnB_out[column_index - 1]	= sum_weight_returnA_returnB;
+			
+			sum_returnA_out[column_index - 1]					= sum_returnA;
+			sum_weight_returnSquareA_out[column_index - 1]		= sum_weight_returnSquareA;
+			sum_weight_returnA_out[column_index - 1]			= sum_weight_returnA;
+		#endif
+	}
+}
+
+
+//------------------------------------------------------------------
+//------------------------------------------------------------------
+//------------------------------------------------------------------
+//------------------------------------------------------------------
+//------------------------------------------------------------------
+//------------------------------------------------------------------
 #ifdef __SDSVHLS__
 void backEnd(
 				int NUMBER_OF_DAYS,
 				int NUMBER_OF_INDICES,
 
-				hls::stream<float> &sum_weight_in,
-				hls::stream<float> &sum_return_in,
-				hls::stream<float> &sum_weight_returnSquare_in,
-				hls::stream<float> &sum_weight_return_in,
-				hls::stream<float> &sum_weight_returnA_returnB_in,
-				hls::stream<float> &sum_returnA_in,
-				hls::stream<float> &sum_weight_returnSquareA_in,
-				hls::stream<float> &sum_weight_returnA_in,
+				hls::stream<float> &sum_weight_in_c1,
+				hls::stream<float> &sum_return_in_c1,
+				hls::stream<float> &sum_weight_returnSquare_in_c1,
+				hls::stream<float> &sum_weight_return_in_c1,
+				hls::stream<float> &sum_weight_returnA_returnB_in_c1,
+				hls::stream<float> &sum_returnA_in_c1,
+				hls::stream<float> &sum_weight_returnSquareA_in_c1,
+				hls::stream<float> &sum_weight_returnA_in_c1,
+
+				hls::stream<float> &sum_weight_in_c2,
+				hls::stream<float> &sum_return_in_c2,
+				hls::stream<float> &sum_weight_returnSquare_in_c2,
+				hls::stream<float> &sum_weight_return_in_c2,
+				hls::stream<float> &sum_weight_returnA_returnB_in_c2,
+				hls::stream<float> &sum_returnA_in_c2,
+				hls::stream<float> &sum_weight_returnSquareA_in_c2,
+				hls::stream<float> &sum_weight_returnA_in_c2
 
 				ap_axiu<32,1,1,1> out_correlation[MAX_NUM_INDICES / 2 * (MAX_NUM_INDICES - 1)]
 )
@@ -465,14 +807,23 @@ void backEnd(
 				int NUMBER_OF_DAYS,
 				int NUMBER_OF_INDICES,
 
-				float sum_weight_in[MAX_NUM_INDICES],
-				float sum_return_in[MAX_NUM_INDICES],
-				float sum_weight_returnSquare_in[MAX_NUM_INDICES],
-				float sum_weight_return_in[MAX_NUM_INDICES],
-				float sum_weight_returnA_returnB_in[MAX_NUM_INDICES],
-				float sum_returnA_in[MAX_NUM_INDICES],
-				float sum_weight_returnSquareA_in[MAX_NUM_INDICES],
-				float sum_weight_returnA_in[MAX_NUM_INDICES],
+				float sum_weight_in_c1[MAX_HALF_NUM_INDICES],
+				float sum_return_in_c1[MAX_HALF_NUM_INDICES],
+				float sum_weight_returnSquare_in_c1[MAX_HALF_NUM_INDICES],
+				float sum_weight_return_in_c1[MAX_HALF_NUM_INDICES],
+				float sum_weight_returnA_returnB_in_c1[MAX_HALF_NUM_INDICES],
+				float sum_returnA_in_c1[MAX_HALF_NUM_INDICES],
+				float sum_weight_returnSquareA_in_c1[MAX_HALF_NUM_INDICES],
+				float sum_weight_returnA_in_c1[MAX_HALF_NUM_INDICES],
+
+				float sum_weight_in_c2[MAX_HALF_NUM_INDICES],
+				float sum_return_in_c2[MAX_HALF_NUM_INDICES],
+				float sum_weight_returnSquare_in_c2[MAX_HALF_NUM_INDICES],
+				float sum_weight_return_in_c2[MAX_HALF_NUM_INDICES],
+				float sum_weight_returnA_returnB_in_c2[MAX_HALF_NUM_INDICES],
+				float sum_returnA_in_c2[MAX_HALF_NUM_INDICES],
+				float sum_weight_returnSquareA_in_c2[MAX_HALF_NUM_INDICES],
+				float sum_weight_returnA_in_c2[MAX_HALF_NUM_INDICES],
 
 				float out_correlation[MAX_NUM_INDICES / 2 * (MAX_NUM_INDICES - 1)]
 )
@@ -485,26 +836,65 @@ void backEnd(
           float floatval;
      } conv1;
 #endif
+
+    int index_c1 = 0;
+    int index_c2 = 0;
+
+	float sum_weight;
+	float sum_return;
+	float sum_weight_returnSquare;
+	float sum_weight_return;
+
+	float sum_weight_returnA_returnB;
+
+	float sum_returnA;
+	float sum_weight_returnSquareA;
+	float sum_weight_returnA;
+
 	for(int column_index = 1; column_index < NUMBER_OF_INDICES; column_index++){
-	#ifdef __SDSVHLS__
-		float sum_weight 				= sum_weight_in.read();
-		float sum_return 				= sum_return_in.read();
-		float sum_weight_returnSquare 	= sum_weight_returnSquare_in.read();
-		float sum_weight_return 		= sum_weight_return_in.read();
-		float sum_weight_returnA_returnB= sum_weight_returnA_returnB_in.read();
-		float sum_returnA			 	=sum_returnA_in.read();
-		float sum_weight_returnSquareA	= sum_weight_returnSquareA_in.read();
-		float sum_weight_returnA		= sum_weight_returnA_in.read();
-	#else
-		float sum_weight 				= sum_weight_in[column_index - 1];
-		float sum_return 				= sum_return_in[column_index - 1];
-		float sum_weight_returnSquare 	= sum_weight_returnSquare_in[column_index - 1];
-		float sum_weight_return 		= sum_weight_return_in[column_index - 1];
-		float sum_weight_returnA_returnB= sum_weight_returnA_returnB_in[column_index - 1];
-		float sum_returnA			 	=sum_returnA_in[column_index - 1];
-		float sum_weight_returnSquareA	= sum_weight_returnSquareA_in[column_index - 1];
-		float sum_weight_returnA		= sum_weight_returnA_in[column_index - 1];
-	#endif
+		if(column_index % 2 == 1){
+			#ifdef __SDSVHLS__
+				sum_weight 				= sum_weight_in_c1.read();
+				sum_return 				= sum_return_in_c1.read();
+				sum_weight_returnSquare = sum_weight_returnSquare_in_c1.read();
+				sum_weight_return 		= sum_weight_return_in_c1.read();
+				sum_weight_returnA_returnB= sum_weight_returnA_returnB_in_c1.read();
+				sum_returnA			 	=sum_returnA_in_c1.read();
+				sum_weight_returnSquareA= sum_weight_returnSquareA_in_c1.read();
+				sum_weight_returnA		= sum_weight_returnA_in_c1.read();
+			#else
+				sum_weight 				= sum_weight_in_c1[index_c1];
+				sum_return 				= sum_return_in_c1[index_c1];
+				sum_weight_returnSquare = sum_weight_returnSquare_in_c1[index_c1];
+				sum_weight_return 		= sum_weight_return_in_c1[index_c1];
+				sum_weight_returnA_returnB= sum_weight_returnA_returnB_in_c1[index_c1];
+				sum_returnA			 	=sum_returnA_in_c1[index_c1];
+				sum_weight_returnSquareA= sum_weight_returnSquareA_in_c1[index_c1];
+				sum_weight_returnA		= sum_weight_returnA_in_c1[index_c1];
+			#endif
+			index_c1++;
+	} else {
+			#ifdef __SDSVHLS__
+				sum_weight 				= sum_weight_in_c2.read();
+				sum_return 				= sum_return_in_c2.read();
+				sum_weight_returnSquare = sum_weight_returnSquare_in_c2.read();
+				sum_weight_return 		= sum_weight_return_in_c2.read();
+				sum_weight_returnA_returnB= sum_weight_returnA_returnB_in_c2.read();
+				sum_returnA			 	=sum_returnA_in_c2.read();
+				sum_weight_returnSquareA= sum_weight_returnSquareA_in_c2.read();
+				sum_weight_returnA		= sum_weight_returnA_in_c2.read();
+			#else
+				sum_weight 				= sum_weight_in_c2[index_c2];
+				sum_return 				= sum_return_in_c2[index_c2];
+				sum_weight_returnSquare = sum_weight_returnSquare_in_c2[index_c2];
+				sum_weight_return 		= sum_weight_return_in_c2[index_c2];
+				sum_weight_returnA_returnB= sum_weight_returnA_returnB_in_c2[index_c2];
+				sum_returnA			 	=sum_returnA_in_c2[index_c2];
+				sum_weight_returnSquareA= sum_weight_returnSquareA_in_c2[index_c2];
+				sum_weight_returnA		= sum_weight_returnA_in_c2[index_c2];
+			#endif
+			index_c2++;
+	}
 		// 3: Compute Volatility, Covariance and Correlation
 		float meanReturnA =  sum_returnA / float(NUMBER_OF_DAYS - 1);
 		float meanReturnB =  sum_return / float(NUMBER_OF_DAYS - 1);
@@ -536,177 +926,3 @@ void backEnd(
 		#endif
 	}
 }
-//------------------------------------------------------------------
-#ifdef __SDSVHLS__
-void midEnd(
-		int NUMBER_OF_DAYS,
-		int NUMBER_OF_INDICES,
-
-		hls::stream<float> &ln_returnA_in,
-		hls::stream<float> &weight_returnSquareA_in,
-		hls::stream<float> &weight_returnA_in,
-
-		hls::stream<float> &sum_weight_in,
-		hls::stream<float> &ln_returnB_in,
-		hls::stream<float> &weight_returnSquareB_in,
-		hls::stream<float> &weight_returnB_in,
-		hls::stream<float> &weight_returnA_returnB_in,
-
-		hls::stream<float> &sum_weight_out,
-		hls::stream<float> &sum_return_out,
-		hls::stream<float> &sum_weight_returnSquare_out,
-		hls::stream<float> &sum_weight_return_out,
-		hls::stream<float> &sum_weight_returnA_returnB_out,
-		hls::stream<float> &sum_returnA_out,
-		hls::stream<float> &sum_weight_returnSquareA_out,
-		hls::stream<float> &sum_weight_returnA_out
-)
-#else
-void midEnd(
-		int NUMBER_OF_DAYS,
-		int NUMBER_OF_INDICES,
-
-		float ln_returnA_in[MAX_NUM_INDICES * MAX_NUM_DAYS],
-		float weight_returnSquareA_in[MAX_NUM_INDICES * MAX_NUM_DAYS],
-		float weight_returnA_in[MAX_NUM_INDICES * MAX_NUM_DAYS],
-
-		float sum_weight_in[MAX_NUM_INDICES * MAX_NUM_DAYS],
-		float ln_returnB_in[MAX_NUM_INDICES * MAX_NUM_DAYS],
-		float weight_returnSquareB_in[MAX_NUM_INDICES * MAX_NUM_DAYS],
-		float weight_returnB_in[MAX_NUM_INDICES * MAX_NUM_DAYS],
-		float weight_returnA_returnB_in[MAX_NUM_INDICES * MAX_NUM_DAYS],
-
-		float sum_weight_out[MAX_NUM_INDICES],
-		float sum_return_out[MAX_NUM_INDICES],
-		float sum_weight_returnSquare_out[MAX_NUM_INDICES],
-		float sum_weight_return_out[MAX_NUM_INDICES],
-		float sum_weight_returnA_returnB_out[MAX_NUM_INDICES],
-		float sum_returnA_out[MAX_NUM_INDICES],
-		float sum_weight_returnSquareA_out[MAX_NUM_INDICES],
-		float sum_weight_returnA_out[MAX_NUM_INDICES]
-)
-#endif
-
-{
-for(int column_index = 1; column_index < NUMBER_OF_INDICES; column_index++){
-		// Channels to store accumulation
-		float acc_return[ACCUM_PARTITION];
-		float acc_weight_returnSquare[ACCUM_PARTITION];
-		float acc_weight_return[ACCUM_PARTITION];
-		float acc_weight_returnA_returnB[ACCUM_PARTITION];
-
-		float acc_returnA[ACCUM_PARTITION];
-		float acc_weight_returnSquareA[ACCUM_PARTITION];
-		float acc_weight_returnA[ACCUM_PARTITION];
-
-		RESET_REGISTERS:
-		for(int i = 0; i < ACCUM_PARTITION; i++){
-		#ifdef __SDSVHLS__
-		#pragma HLS UNROLL		/*< FULLY UNROLL */
-		#endif
-			acc_return[i] 					= 0.0f;
-			acc_weight_returnSquare[i]		= 0.0f;
-			acc_weight_return[i]			= 0.0f;
-			acc_weight_returnA_returnB[i]	= 0.0f;
-
-			acc_returnA[i] 					= 0.0f;
-			acc_weight_returnSquareA[i]		= 0.0f;
-			acc_weight_returnA[i] 			= 0.0f;
-		}
-
-		int index = column_index * NUMBER_OF_DAYS;
-		int index_channel = (column_index - 1) * (NUMBER_OF_DAYS-1);
-
-		float sum_return 					= 0.0f;
-		float sum_weight_returnSquare 		= 0.0f;
-		float sum_weight_return 			= 0.0f;
-		float sum_weight_returnA_returnB 	= 0.0f;
-		float sum_weight  					= 0.0f;
-
-		float sum_returnA 					= 0.0f;
-		float sum_weight_returnSquareA 		= 0.0f;
-		float sum_weight_returnA 			= 0.0f;
-
-		for(int i = 1; i <= NUMBER_OF_DAYS - 1; i++){
-
-			float lnReturnA_temp;
-			float weight_returnA_temp;
-			float weight_returnSquareA_temp;
-
-			float lnReturnB_temp;
-			float weight_returnB_temp;
-			float weight_returnSquareB_temp;
-			float weight_returnA_returnB_temp;
-
-		#ifdef __SDSVHLS__
-		#pragma HLS PIPELINE
-			sum_weight 					= sum_weight_in.read();
-			lnReturnA_temp				= ln_returnA_in.read();
-			weight_returnA_temp			= weight_returnA_in.read();
-			weight_returnSquareA_temp 	= weight_returnSquareA_in.read();
-
-			lnReturnB_temp				= ln_returnB_in.read();
-			weight_returnB_temp			= weight_returnB_in.read();
-			weight_returnSquareB_temp 	= weight_returnSquareB_in.read();
-			weight_returnA_returnB_temp	= weight_returnA_returnB_in.read();
-		#else
-			sum_weight 					= sum_weight_in[(i - 1) + index_channel];
-			lnReturnA_temp				= ln_returnA_in[(i - 1) + index_channel];
-			weight_returnA_temp			= weight_returnA_in[(i - 1) + index_channel];
-			weight_returnSquareA_temp 	= weight_returnSquareA_in[(i - 1) + index_channel];
-
-			lnReturnB_temp				= ln_returnB_in[(i - 1) + index_channel];
-			weight_returnB_temp			= weight_returnB_in[(i - 1) + index_channel];
-			weight_returnSquareB_temp 	= weight_returnSquareB_in[(i - 1) + index_channel];
-			weight_returnA_returnB_temp	= weight_returnA_returnB_in[(i - 1) + index_channel];
-		#endif
-			acc_return[i % ACCUM_PARTITION] 					+= lnReturnB_temp;
-			acc_weight_returnSquare[i % ACCUM_PARTITION]		+= weight_returnSquareB_temp;
-			acc_weight_return[i % ACCUM_PARTITION]				+= weight_returnB_temp;
-			acc_weight_returnA_returnB[i % ACCUM_PARTITION]		+= weight_returnA_returnB_temp;
-
-			acc_returnA[i % ACCUM_PARTITION] 					+= lnReturnA_temp;
-			acc_weight_returnSquareA[i % ACCUM_PARTITION]		+= weight_returnSquareA_temp;
-			acc_weight_returnA[i % ACCUM_PARTITION] 			+= weight_returnA_temp;
-		}
-
-
-		LAST_ACCUM_LOOP:
-		for(int i = 0; i < ACCUM_PARTITION; i++){
-		#ifdef __SDSVHLS__
-		#pragma HLS PIPELINE II=5
-		#endif
-
-			sum_returnA 				+= acc_returnA;
-			sum_weight_returnSquareA 	+= acc_weight_returnSquareA;
-			sum_weight_returnA 			+= acc_weight_returnA;
-
-			sum_return 					+= acc_return[i];
-			sum_weight_returnSquare		+= acc_weight_returnSquare[i];
-			sum_weight_return 			+= acc_weight_return[i];
-			sum_weight_returnA_returnB 	+= acc_weight_returnA_returnB[i];
-		}
-
-		#ifdef __SDSVHLS__
-		sum_weight_out 						<< sum_weight;
-		sum_return_out						<< sum_return;
-		sum_weight_returnSquare_out			<< sum_weight_returnSquare;
-		sum_weight_return_out				<< sum_weight_return;
-		sum_weight_returnA_returnB_out		<< sum_weight_returnA_returnB;
-		sum_returnA_out						<< sum_returnA;
-		sum_weight_returnSquareA_out		<< sum_weight_returnSquareA;
-		sum_weight_returnA_out				<< sum_weight_returnA;
-		#else
-		sum_weight_out[column_index - 1] 					= sum_weight;
-		sum_return_out[column_index - 1]					= sum_return;
-		sum_weight_returnSquare_out[column_index - 1]		= sum_weight_returnSquare;
-		sum_weight_return_out[column_index - 1]				= sum_weight_return;
-		sum_weight_returnA_returnB_out[column_index - 1]	= sum_weight_returnA_returnB;
-		sum_returnA_out[column_index - 1]					= sum_returnA;
-		sum_weight_returnSquareA_out[column_index - 1]		= sum_weight_returnSquareA;
-		sum_weight_returnA_out[column_index - 1]			= sum_weight_returnA;
-		#endif
-	}
-}
-
-

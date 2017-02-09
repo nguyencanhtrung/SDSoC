@@ -53,6 +53,9 @@ using namespace std;
 #define MAX_NUM_INDICES 	10000
 #define MAX_NUM_DAYS 		252
 
+#define MAX_HALF_NUM_INDICES 5000
+#define MAX_NUM_RETURNS 	 251
+
 #define ACCUM_PARTITION  	6
 
 /*-------------------------- Type definition ------------------------*/
@@ -87,70 +90,176 @@ void correlation_accel_v4(
 								float   out_correlation[MAX_NUM_INDICES / 2 * (MAX_NUM_INDICES - 1)]);
 #endif
 
+//------------------------------------------------------------------
+//------------------------------------------------------------------
+//------------------------------------------------------------------
+//------------------------------------------------------------------
+//------------------------------------------------------------------
+//------------------------------------------------------------------
 #ifdef __SDSVHLS__
-void frontEnd(
+	void frontEnd(
 				int NUMBER_OF_DAYS,
 				int NUMBER_OF_INDICES,
 				ap_axiu<32,1,1,1> in_indices[MAX_NUM_INDICES * MAX_NUM_DAYS],
 
-				hls::stream<float> &sum_weight_out,
-				hls::stream<float> &sum_return_out,
-				hls::stream<float> &sum_weight_returnSquare_out,
-				hls::stream<float> &sum_weight_return_out,
-				hls::stream<float> &sum_weight_returnA_returnB_out,
-				hls::stream<float> &sum_returnA_out,
-				hls::stream<float> &sum_weight_returnSquareA_out,
-				hls::stream<float> &sum_weight_returnA_out
-);
+				hls::stream<float> &ln_returnA_out_c1,
+				hls::stream<float> &weight_returnSquareA_out_c1,
+				hls::stream<float> &weight_returnA_out_c1,
+
+				hls::stream<float> &ln_returnA_out_c2,
+				hls::stream<float> &weight_returnSquareA_out_c2,
+				hls::stream<float> &weight_returnA_out_c2,
+
+				hls::stream<float> &sum_weight_out_c1,
+				hls::stream<float> &ln_returnB_out_c1,
+				hls::stream<float> &weight_returnSquareB_out_c1,
+				hls::stream<float> &weight_returnB_out_c1,
+				hls::stream<float> &weight_returnA_returnB_out_c1,
+
+				hls::stream<float> &sum_weight_out_c2,
+				hls::stream<float> &ln_returnB_out_c2,
+				hls::stream<float> &weight_returnSquareB_out_c2,
+				hls::stream<float> &weight_returnB_out_c2,
+				hls::stream<float> &weight_returnA_returnB_out_c2)
 #else
-void frontEnd(
+	void frontEnd(
 				int NUMBER_OF_DAYS,
 				int NUMBER_OF_INDICES,
 				float in_indices[MAX_NUM_INDICES * MAX_NUM_DAYS],
 
-				float sum_weight_out[MAX_NUM_INDICES],
-				float sum_return_out[MAX_NUM_INDICES],
-				float sum_weight_returnSquare_out[MAX_NUM_INDICES],
-				float sum_weight_return_out[MAX_NUM_INDICES],
-				float sum_weight_returnA_returnB_out[MAX_NUM_INDICES],
-				float sum_returnA_out[MAX_NUM_INDICES],
-				float sum_weight_returnSquareA_out[MAX_NUM_INDICES],
-				float sum_weight_returnA_out[MAX_NUM_INDICES]
-);
+				float ln_returnA_out_c1[MAX_HALF_NUM_INDICES * MAX_NUM_RETURNS],
+				float weight_returnSquareA_out_c1[MAX_HALF_NUM_INDICES * MAX_NUM_RETURNS],
+				float weight_returnA_out_c1[MAX_HALF_NUM_INDICES * MAX_NUM_RETURNS],
+
+				float ln_returnA_out_c2[MAX_HALF_NUM_INDICES * MAX_NUM_RETURNS],
+				float weight_returnSquareA_out_c2[MAX_HALF_NUM_INDICES * MAX_NUM_RETURNS],
+				float weight_returnA_out_c2[MAX_HALF_NUM_INDICES * MAX_NUM_RETURNS],
+
+				float sum_weight_out_c1[MAX_HALF_NUM_INDICES * MAX_NUM_RETURNS],
+				float ln_returnB_out_c1[MAX_HALF_NUM_INDICES * MAX_NUM_RETURNS],
+				float weight_returnSquareB_out_c1[MAX_HALF_NUM_INDICES * MAX_NUM_RETURNS],
+				float weight_returnB_out_c1[MAX_HALF_NUM_INDICES * MAX_NUM_RETURNS],
+				float weight_returnA_returnB_out_c1[MAX_HALF_NUM_INDICES * MAX_NUM_RETURNS],
+
+				float sum_weight_out_c2[MAX_HALF_NUM_INDICES * MAX_NUM_RETURNS],
+				float ln_returnB_out_c2[MAX_HALF_NUM_INDICES * MAX_NUM_RETURNS],
+				float weight_returnSquareB_out_c2[MAX_HALF_NUM_INDICES * MAX_NUM_RETURNS],
+				float weight_returnB_out_c2[MAX_HALF_NUM_INDICES * MAX_NUM_RETURNS],
+				float weight_returnA_returnB_out_c2[MAX_HALF_NUM_INDICES * MAX_NUM_RETURNS])
 #endif
 
+//------------------------------------------------------------------
+//------------------------------------------------------------------
+//------------------------------------------------------------------
+//------------------------------------------------------------------
+//------------------------------------------------------------------
+#ifdef __SDSVHLS__
+void midEnd(
+		int NUMBER_OF_DAYS,
+		int NUMBER_OF_INDICES,
+		int channel,
+
+		hls::stream<float> &ln_returnA_in,
+		hls::stream<float> &weight_returnSquareA_in,
+		hls::stream<float> &weight_returnA_in,
+
+		hls::stream<float> &sum_weight_in,
+		hls::stream<float> &ln_returnB_in,
+		hls::stream<float> &weight_returnSquareB_in,
+		hls::stream<float> &weight_returnB_in,
+		hls::stream<float> &weight_returnA_returnB_in,
+
+		hls::stream<float> &sum_weight_out,
+		hls::stream<float> &sum_return_out,
+		hls::stream<float> &sum_weight_returnSquare_out,
+		hls::stream<float> &sum_weight_return_out,
+		hls::stream<float> &sum_weight_returnA_returnB_out,
+		hls::stream<float> &sum_returnA_out,
+		hls::stream<float> &sum_weight_returnSquareA_out,
+		hls::stream<float> &sum_weight_returnA_out
+)
+#else
+void midEnd(
+		int NUMBER_OF_DAYS,
+		int NUMBER_OF_INDICES,
+		int channel, 										// 0: up -- 1: down
+
+		float ln_returnA_in[MAX_HALF_NUM_INDICES * MAX_NUM_RETURNS],
+		float weight_returnSquareA_in[MAX_HALF_NUM_INDICES * MAX_NUM_RETURNS],
+		float weight_returnA_in[MAX_HALF_NUM_INDICES * MAX_NUM_RETURNS],
+
+		float sum_weight_in[MAX_HALF_NUM_INDICES * MAX_NUM_RETURNS],
+		float ln_returnB_in[MAX_HALF_NUM_INDICES * MAX_NUM_RETURNS],
+		float weight_returnSquareB_in[MAX_HALF_NUM_INDICES * MAX_NUM_RETURNS],
+		float weight_returnB_in[MAX_HALF_NUM_INDICES * MAX_NUM_RETURNS],
+		float weight_returnA_returnB_in[MAX_HALF_NUM_INDICES * MAX_NUM_RETURNS],
+
+		float sum_weight_out[MAX_HALF_NUM_INDICES],
+		float sum_return_out[MAX_HALF_NUM_INDICES],
+		float sum_weight_returnSquare_out[MAX_HALF_NUM_INDICES],
+		float sum_weight_return_out[MAX_HALF_NUM_INDICES],
+		float sum_weight_returnA_returnB_out[MAX_HALF_NUM_INDICES],
+		float sum_returnA_out[MAX_HALF_NUM_INDICES],
+		float sum_weight_returnSquareA_out[MAX_HALF_NUM_INDICES],
+		float sum_weight_returnA_out[MAX_HALF_NUM_INDICES]
+)
+#endif
+
+//------------------------------------------------------------------
+//------------------------------------------------------------------
+//------------------------------------------------------------------
+//------------------------------------------------------------------
+//------------------------------------------------------------------
+//------------------------------------------------------------------
 #ifdef __SDSVHLS__
 void backEnd(
 				int NUMBER_OF_DAYS,
 				int NUMBER_OF_INDICES,
 
-				hls::stream<float> &sum_weight_in,
-				hls::stream<float> &sum_return_in,
-				hls::stream<float> &sum_weight_returnSquare_in,
-				hls::stream<float> &sum_weight_return_in,
-				hls::stream<float> &sum_weight_returnA_returnB_in,
-				hls::stream<float> &sum_returnA_in,
-				hls::stream<float> &sum_weight_returnSquareA_in,
-				hls::stream<float> &sum_weight_returnA_in,
+				hls::stream<float> &sum_weight_in_c1,
+				hls::stream<float> &sum_return_in_c1,
+				hls::stream<float> &sum_weight_returnSquare_in_c1,
+				hls::stream<float> &sum_weight_return_in_c1,
+				hls::stream<float> &sum_weight_returnA_returnB_in_c1,
+				hls::stream<float> &sum_returnA_in_c1,
+				hls::stream<float> &sum_weight_returnSquareA_in_c1,
+				hls::stream<float> &sum_weight_returnA_in_c1,
+
+				hls::stream<float> &sum_weight_in_c2,
+				hls::stream<float> &sum_return_in_c2,
+				hls::stream<float> &sum_weight_returnSquare_in_c2,
+				hls::stream<float> &sum_weight_return_in_c2,
+				hls::stream<float> &sum_weight_returnA_returnB_in_c2,
+				hls::stream<float> &sum_returnA_in_c2,
+				hls::stream<float> &sum_weight_returnSquareA_in_c2,
+				hls::stream<float> &sum_weight_returnA_in_c2
 
 				ap_axiu<32,1,1,1> out_correlation[MAX_NUM_INDICES / 2 * (MAX_NUM_INDICES - 1)]
-);
+)
 #else
 void backEnd(
 				int NUMBER_OF_DAYS,
 				int NUMBER_OF_INDICES,
 
-				float sum_weight_in[MAX_NUM_INDICES],
-				float sum_return_in[MAX_NUM_INDICES],
-				float sum_weight_returnSquare_in[MAX_NUM_INDICES],
-				float sum_weight_return_in[MAX_NUM_INDICES],
-				float sum_weight_returnA_returnB_in[MAX_NUM_INDICES],
-				float sum_returnA_in[MAX_NUM_INDICES],
-				float sum_weight_returnSquareA_in[MAX_NUM_INDICES],
-				float sum_weight_returnA_in[MAX_NUM_INDICES],
+				float sum_weight_in_c1[MAX_HALF_NUM_INDICES],
+				float sum_return_in_c1[MAX_HALF_NUM_INDICES],
+				float sum_weight_returnSquare_in_c1[MAX_HALF_NUM_INDICES],
+				float sum_weight_return_in_c1[MAX_HALF_NUM_INDICES],
+				float sum_weight_returnA_returnB_in_c1[MAX_HALF_NUM_INDICES],
+				float sum_returnA_in_c1[MAX_HALF_NUM_INDICES],
+				float sum_weight_returnSquareA_in_c1[MAX_HALF_NUM_INDICES],
+				float sum_weight_returnA_in_c1[MAX_HALF_NUM_INDICES],
+
+				float sum_weight_in_c2[MAX_HALF_NUM_INDICES],
+				float sum_return_in_c2[MAX_HALF_NUM_INDICES],
+				float sum_weight_returnSquare_in_c2[MAX_HALF_NUM_INDICES],
+				float sum_weight_return_in_c2[MAX_HALF_NUM_INDICES],
+				float sum_weight_returnA_returnB_in_c2[MAX_HALF_NUM_INDICES],
+				float sum_returnA_in_c2[MAX_HALF_NUM_INDICES],
+				float sum_weight_returnSquareA_in_c2[MAX_HALF_NUM_INDICES],
+				float sum_weight_returnA_in_c2[MAX_HALF_NUM_INDICES],
 
 				float out_correlation[MAX_NUM_INDICES / 2 * (MAX_NUM_INDICES - 1)]
-);
+)
 #endif
-
 #endif

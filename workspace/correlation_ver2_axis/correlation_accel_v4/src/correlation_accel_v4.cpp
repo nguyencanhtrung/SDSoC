@@ -521,7 +521,7 @@ static void weight_rom_init(
 			float weight_returnSquareB_temp 	= lnReturn * lnReturn * weight;
 			float weight_returnA_returnB_temp 	= lnReturnA_temp * lnReturn * weight;
 
-			#ifdef __SDSVHLS_
+			#ifdef __SDSVHLS__
 			if(column_index % 2 == 1) {
 				ln_returnA_out_c1 				<< lnReturnA_temp;
 				weight_returnSquareA_out_c1 	<< weight_returnSquareA_temp;
@@ -736,9 +736,9 @@ for(int column_index = 1; column_index <= upper_bound; column_index++){
 			sum_weight_returnSquareA 				+= acc_weight_returnSquareA[i];
 			sum_weight_returnA 						+= acc_weight_returnA[i];
 
-			sum_returnB 							+= acc_return[i];
-			sum_weight_returnSquareB				+= acc_weight_returnSquare[i];
-			sum_weight_returnB 						+= acc_weight_return[i];
+			sum_returnB 							+= acc_returnB[i];
+			sum_weight_returnSquareB				+= acc_weight_returnSquareB[i];
+			sum_weight_returnB 						+= acc_weight_returnB[i];
 			sum_weight_returnA_returnB 				+= acc_weight_returnA_returnB[i];
 		}
 
@@ -798,7 +798,7 @@ void backEnd(
 				hls::stream<float> &sum_weight_returnA_returnB_in_c2,
 				hls::stream<float> &sum_returnA_in_c2,
 				hls::stream<float> &sum_weight_returnSquareA_in_c2,
-				hls::stream<float> &sum_weight_returnA_in_c2
+				hls::stream<float> &sum_weight_returnA_in_c2,
 
 				ap_axiu<32,1,1,1> out_correlation[MAX_NUM_INDICES / 2 * (MAX_NUM_INDICES - 1)]
 )

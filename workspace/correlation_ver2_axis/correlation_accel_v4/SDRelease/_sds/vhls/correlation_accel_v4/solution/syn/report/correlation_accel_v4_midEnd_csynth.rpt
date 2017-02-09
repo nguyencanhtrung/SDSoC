@@ -1,0 +1,414 @@
+
+
+================================================================
+== Vivado HLS Report for 'correlation_accel_v4_midEnd'
+================================================================
+* Date:           Thu Feb  9 13:42:54 2017
+
+* Version:        2014.4 (Build 1071461 on Tue Nov 18 16:42:57 PM 2014)
+* Project:        correlation_accel_v4
+* Solution:       solution
+* Product family: zynq
+* Target device:  xc7z020clg484-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +---------+-------+----------+------------+
+    |  Clock  | Target| Estimated| Uncertainty|
+    +---------+-------+----------+------------+
+    |default  |   8.50|      9.65|        1.06|
+    +---------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-----+-----+-----+-----+---------+
+    |  Latency  |  Interval | Pipeline|
+    | min | max | min | max |   Type  |
+    +-----+-----+-----+-----+---------+
+    |    ?|    ?|    ?|    ?|   none  |
+    +-----+-----+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +--------------------+-----+-----+----------+-----------+-----------+------+----------+
+        |                    |  Latency  | Iteration|  Initiation Interval  | Trip |          |
+        |      Loop Name     | min | max |  Latency |  achieved |   target  | Count| Pipelined|
+        +--------------------+-----+-----+----------+-----------+-----------+------+----------+
+        |- Loop 1            |    ?|    ?|         ?|          -|          -|     ?|    no    |
+        | + ACCUMULATIONS    |    ?|    ?|        41|          1|          1|     ?|    yes   |
+        | + LAST_ACCUM_LOOP  |   34|   34|        10|          5|          5|     6|    yes   |
+        +--------------------+-----+-----+----------+-----------+-----------+------+----------+
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-------+--------+-------+
+|       Name      | BRAM_18K| DSP48E|   FF   |  LUT  |
++-----------------+---------+-------+--------+-------+
+|Expression       |        -|      -|       0|    281|
+|FIFO             |        -|      -|       -|      -|
+|Instance         |        -|     14|    2765|   4060|
+|Memory           |        0|      -|     448|     21|
+|Multiplexer      |        -|      -|       -|    951|
+|Register         |        -|      -|    1272|     55|
++-----------------+---------+-------+--------+-------+
+|Total            |        0|     14|    4485|   5368|
++-----------------+---------+-------+--------+-------+
+|Available        |      280|    220|  106400|  53200|
++-----------------+---------+-------+--------+-------+
+|Utilization (%)  |        0|      6|       4|     10|
++-----------------+---------+-------+--------+-------+
+
++ Detail: 
+    * Instance: 
+    +-------------------------------------------------------+---------------------------------------------------+---------+-------+------+------+
+    |                        Instance                       |                       Module                      | BRAM_18K| DSP48E|  FF  |  LUT |
+    +-------------------------------------------------------+---------------------------------------------------+---------+-------+------+------+
+    |correlation_accel_v4_fadd_32ns_32ns_32_5_full_dsp_U43  |correlation_accel_v4_fadd_32ns_32ns_32_5_full_dsp  |        0|      2|   205|   390|
+    |correlation_accel_v4_fadd_32ns_32ns_32_5_full_dsp_U44  |correlation_accel_v4_fadd_32ns_32ns_32_5_full_dsp  |        0|      2|   205|   390|
+    |correlation_accel_v4_fadd_32ns_32ns_32_5_full_dsp_U45  |correlation_accel_v4_fadd_32ns_32ns_32_5_full_dsp  |        0|      2|   205|   390|
+    |correlation_accel_v4_fadd_32ns_32ns_32_5_full_dsp_U46  |correlation_accel_v4_fadd_32ns_32ns_32_5_full_dsp  |        0|      2|   205|   390|
+    |correlation_accel_v4_fadd_32ns_32ns_32_5_full_dsp_U47  |correlation_accel_v4_fadd_32ns_32ns_32_5_full_dsp  |        0|      2|   205|   390|
+    |correlation_accel_v4_fadd_32ns_32ns_32_5_full_dsp_U48  |correlation_accel_v4_fadd_32ns_32ns_32_5_full_dsp  |        0|      2|   205|   390|
+    |correlation_accel_v4_fadd_32ns_32ns_32_5_full_dsp_U49  |correlation_accel_v4_fadd_32ns_32ns_32_5_full_dsp  |        0|      2|   205|   390|
+    |correlation_accel_v4_srem_32ns_4ns_32_36_U50           |correlation_accel_v4_srem_32ns_4ns_32_36           |        0|      0|  1330|  1330|
+    +-------------------------------------------------------+---------------------------------------------------+---------+-------+------+------+
+    |Total                                                  |                                                   |        0|     14|  2765|  4060|
+    +-------------------------------------------------------+---------------------------------------------------+---------+-------+------+------+
+
+    * Memory: 
+    +------------------------------+-----------------------------------------+---------+----+----+------+-----+------+-------------+
+    |            Memory            |                  Module                 | BRAM_18K| FF | LUT| Words| Bits| Banks| W*Bits*Banks|
+    +------------------------------+-----------------------------------------+---------+----+----+------+-----+------+-------------+
+    |acc_returnA_U                 |correlation_accel_v4_midEnd_acc_returnA  |        0|  64|   3|     6|   32|     1|          192|
+    |acc_weight_returnSquareA_U    |correlation_accel_v4_midEnd_acc_returnA  |        0|  64|   3|     6|   32|     1|          192|
+    |acc_weight_returnA_U          |correlation_accel_v4_midEnd_acc_returnA  |        0|  64|   3|     6|   32|     1|          192|
+    |acc_returnB_U                 |correlation_accel_v4_midEnd_acc_returnA  |        0|  64|   3|     6|   32|     1|          192|
+    |acc_weight_returnSquareB_U    |correlation_accel_v4_midEnd_acc_returnA  |        0|  64|   3|     6|   32|     1|          192|
+    |acc_weight_returnB_U          |correlation_accel_v4_midEnd_acc_returnA  |        0|  64|   3|     6|   32|     1|          192|
+    |acc_weight_returnA_returnB_U  |correlation_accel_v4_midEnd_acc_returnA  |        0|  64|   3|     6|   32|     1|          192|
+    +------------------------------+-----------------------------------------+---------+----+----+------+-----+------+-------------+
+    |Total                         |                                         |        0| 448|  21|    42|  224|     7|         1344|
+    +------------------------------+-----------------------------------------+---------+----+----+------+-----+------+-------------+
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +-------------------------+----------+-------+---+----+------------+------------+
+    |      Variable Name      | Operation| DSP48E| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +-------------------------+----------+-------+---+----+------------+------------+
+    |column_index_fu_1135_p2  |     +    |      0|  0|  32|          32|           1|
+    |i_1_fu_1123_p2           |     +    |      0|  0|   3|           3|           1|
+    |i_fu_1100_p2             |     +    |      0|  0|  32|          32|           1|
+    |tmp_i_fu_1079_p2         |     +    |      0|  0|  32|          32|           2|
+    |p_neg_i_fu_1034_p2       |     -    |      0|  0|  32|           1|          32|
+    |p_neg_t_i_fu_1063_p2     |     -    |      0|  0|  32|           1|          32|
+    |upper_bound_fu_1072_p3   |  Select  |      0|  0|  32|           1|          32|
+    |exitcond_i_fu_1117_p2    |   icmp   |      0|  0|   3|           3|           3|
+    |tmp_1_i_fu_1084_p2       |   icmp   |      0|  0|  40|          32|          32|
+    |tmp_9_i_fu_1089_p2       |   icmp   |      0|  0|  40|          32|          32|
+    |ap_sig_bdd_227           |    or    |      0|  0|   1|           1|           1|
+    |ap_sig_bdd_384           |    or    |      0|  0|   1|           1|           1|
+    |ap_sig_bdd_721           |    or    |      0|  0|   1|           1|           1|
+    +-------------------------+----------+-------+---+----+------------+------------+
+    |Total                    |          |      0|  0| 281|         172|         171|
+    +-------------------------+----------+-------+---+----+------------+------------+
+
+    * Multiplexer: 
+    +-------------------------------------+----+-----------+-----+-----------+
+    |                 Name                | LUT| Input Size| Bits| Total Bits|
+    +-------------------------------------+----+-----------+-----+-----------+
+    |acc_returnA_address0                 |   3|          6|    3|         18|
+    |acc_returnA_address1                 |   3|          5|    3|         15|
+    |acc_returnA_d1                       |  32|          3|   32|         96|
+    |acc_returnB_address0                 |   3|          6|    3|         18|
+    |acc_returnB_address1                 |   3|          5|    3|         15|
+    |acc_returnB_d1                       |  32|          3|   32|         96|
+    |acc_weight_returnA_address0          |   3|          6|    3|         18|
+    |acc_weight_returnA_address1          |   3|          5|    3|         15|
+    |acc_weight_returnA_d1                |  32|          3|   32|         96|
+    |acc_weight_returnA_returnB_address0  |   3|          6|    3|         18|
+    |acc_weight_returnA_returnB_address1  |   3|          5|    3|         15|
+    |acc_weight_returnA_returnB_d1        |  32|          3|   32|         96|
+    |acc_weight_returnB_address0          |   3|          6|    3|         18|
+    |acc_weight_returnB_address1          |   3|          5|    3|         15|
+    |acc_weight_returnB_d1                |  32|          3|   32|         96|
+    |acc_weight_returnSquareA_address0    |   3|          6|    3|         18|
+    |acc_weight_returnSquareA_address1    |   3|          5|    3|         15|
+    |acc_weight_returnSquareA_d1          |  32|          3|   32|         96|
+    |acc_weight_returnSquareB_address0    |   3|          6|    3|         18|
+    |acc_weight_returnSquareB_address1    |   3|          5|    3|         15|
+    |acc_weight_returnSquareB_d1          |  32|          3|   32|         96|
+    |ap_NS_fsm                            |   6|         13|    1|         13|
+    |ap_reg_ppiten_pp0_it40               |   1|          2|    1|          2|
+    |column_index_i_reg_795               |  32|          2|   32|         64|
+    |grp_fu_935_p0                        |  32|          6|   32|        192|
+    |grp_fu_935_p1                        |  32|          6|   32|        192|
+    |grp_fu_941_p0                        |  32|          5|   32|        160|
+    |grp_fu_941_p1                        |  32|          5|   32|        160|
+    |i1_i_phi_fu_824_p4                   |  32|          2|   32|         64|
+    |i1_i_reg_820                         |  32|          2|   32|         64|
+    |i2_i_phi_fu_927_p4                   |   3|          2|    3|          6|
+    |i2_i_reg_923                         |   3|          2|    3|          6|
+    |tmp_2_reg_832                        |  32|          2|   32|         64|
+    |tmp_3_phi_fu_850_p4                  |  32|          2|   32|         64|
+    |tmp_3_reg_845                        |  32|          2|   32|         64|
+    |tmp_4_phi_fu_863_p4                  |  32|          2|   32|         64|
+    |tmp_4_reg_858                        |  32|          2|   32|         64|
+    |tmp_5_phi_fu_876_p4                  |  32|          2|   32|         64|
+    |tmp_5_reg_871                        |  32|          2|   32|         64|
+    |tmp_6_phi_fu_889_p4                  |  32|          2|   32|         64|
+    |tmp_6_reg_884                        |  32|          2|   32|         64|
+    |tmp_7_phi_fu_902_p4                  |  32|          2|   32|         64|
+    |tmp_7_reg_897                        |  32|          2|   32|         64|
+    |tmp_8_phi_fu_915_p4                  |  32|          2|   32|         64|
+    |tmp_8_reg_910                        |  32|          2|   32|         64|
+    |tmp_9_reg_807                        |  32|          2|   32|         64|
+    +-------------------------------------+----+-----------+-----+-----------+
+    |Total                                | 951|        173|  946|       2722|
+    +-------------------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +-------------------------------------------+----+----+-----+-----------+
+    |                    Name                   | FF | LUT| Bits| Const Bits|
+    +-------------------------------------------+----+----+-----+-----------+
+    |NUMBER_OF_DAYS_read_reg_1141               |  32|   0|   32|          0|
+    |acc_returnA_addr_1_reg_1226                |   0|   0|    3|          3|
+    |acc_returnA_addr_2_reg_1261                |   0|   0|    3|          3|
+    |acc_returnA_addr_3_reg_1296                |   0|   0|    3|          3|
+    |acc_returnA_addr_4_reg_1331                |   0|   0|    3|          3|
+    |acc_returnA_addr_5_reg_1366                |   0|   0|    3|          3|
+    |acc_returnA_addr_6_reg_1433                |   3|   0|    3|          0|
+    |acc_returnA_addr_reg_1191                  |   0|   0|    3|          3|
+    |acc_returnB_addr_1_reg_1206                |   0|   0|    3|          3|
+    |acc_returnB_addr_2_reg_1241                |   0|   0|    3|          3|
+    |acc_returnB_addr_3_reg_1276                |   0|   0|    3|          3|
+    |acc_returnB_addr_4_reg_1311                |   0|   0|    3|          3|
+    |acc_returnB_addr_5_reg_1346                |   0|   0|    3|          3|
+    |acc_returnB_addr_6_reg_1451                |   3|   0|    3|          0|
+    |acc_returnB_addr_reg_1171                  |   0|   0|    3|          3|
+    |acc_weight_returnA_addr_1_reg_1236         |   0|   0|    3|          3|
+    |acc_weight_returnA_addr_2_reg_1271         |   0|   0|    3|          3|
+    |acc_weight_returnA_addr_3_reg_1306         |   0|   0|    3|          3|
+    |acc_weight_returnA_addr_4_reg_1341         |   0|   0|    3|          3|
+    |acc_weight_returnA_addr_5_reg_1376         |   0|   0|    3|          3|
+    |acc_weight_returnA_addr_6_reg_1445         |   3|   0|    3|          0|
+    |acc_weight_returnA_addr_reg_1201           |   0|   0|    3|          3|
+    |acc_weight_returnA_returnB_add_1_reg_1221  |   0|   0|    3|          3|
+    |acc_weight_returnA_returnB_add_2_reg_1256  |   0|   0|    3|          3|
+    |acc_weight_returnA_returnB_add_3_reg_1291  |   0|   0|    3|          3|
+    |acc_weight_returnA_returnB_add_4_reg_1326  |   0|   0|    3|          3|
+    |acc_weight_returnA_returnB_add_5_reg_1361  |   0|   0|    3|          3|
+    |acc_weight_returnA_returnB_add_6_reg_1469  |   3|   0|    3|          0|
+    |acc_weight_returnA_returnB_add_reg_1186    |   0|   0|    3|          3|
+    |acc_weight_returnB_addr_1_reg_1216         |   0|   0|    3|          3|
+    |acc_weight_returnB_addr_2_reg_1251         |   0|   0|    3|          3|
+    |acc_weight_returnB_addr_3_reg_1286         |   0|   0|    3|          3|
+    |acc_weight_returnB_addr_4_reg_1321         |   0|   0|    3|          3|
+    |acc_weight_returnB_addr_5_reg_1356         |   0|   0|    3|          3|
+    |acc_weight_returnB_addr_6_reg_1463         |   3|   0|    3|          0|
+    |acc_weight_returnB_addr_reg_1181           |   0|   0|    3|          3|
+    |acc_weight_returnSquareA_addr_1_reg_1231   |   0|   0|    3|          3|
+    |acc_weight_returnSquareA_addr_2_reg_1266   |   0|   0|    3|          3|
+    |acc_weight_returnSquareA_addr_3_reg_1301   |   0|   0|    3|          3|
+    |acc_weight_returnSquareA_addr_4_reg_1336   |   0|   0|    3|          3|
+    |acc_weight_returnSquareA_addr_5_reg_1371   |   0|   0|    3|          3|
+    |acc_weight_returnSquareA_addr_6_reg_1439   |   3|   0|    3|          0|
+    |acc_weight_returnSquareA_addr_reg_1196     |   0|   0|    3|          3|
+    |acc_weight_returnSquareB_addr_1_reg_1211   |   0|   0|    3|          3|
+    |acc_weight_returnSquareB_addr_2_reg_1246   |   0|   0|    3|          3|
+    |acc_weight_returnSquareB_addr_3_reg_1281   |   0|   0|    3|          3|
+    |acc_weight_returnSquareB_addr_4_reg_1316   |   0|   0|    3|          3|
+    |acc_weight_returnSquareB_addr_5_reg_1351   |   0|   0|    3|          3|
+    |acc_weight_returnSquareB_addr_6_reg_1457   |   3|   0|    3|          0|
+    |acc_weight_returnSquareB_addr_reg_1176     |   0|   0|    3|          3|
+    |ap_CS_fsm                                  |  12|   0|   12|          0|
+    |ap_done_reg                                |   1|   0|    1|          0|
+    |ap_reg_ppiten_pp0_it0                      |   1|   0|    1|          0|
+    |ap_reg_ppiten_pp0_it1                      |   1|   0|    1|          0|
+    |ap_reg_ppiten_pp0_it10                     |   1|   0|    1|          0|
+    |ap_reg_ppiten_pp0_it11                     |   1|   0|    1|          0|
+    |ap_reg_ppiten_pp0_it12                     |   1|   0|    1|          0|
+    |ap_reg_ppiten_pp0_it13                     |   1|   0|    1|          0|
+    |ap_reg_ppiten_pp0_it14                     |   1|   0|    1|          0|
+    |ap_reg_ppiten_pp0_it15                     |   1|   0|    1|          0|
+    |ap_reg_ppiten_pp0_it16                     |   1|   0|    1|          0|
+    |ap_reg_ppiten_pp0_it17                     |   1|   0|    1|          0|
+    |ap_reg_ppiten_pp0_it18                     |   1|   0|    1|          0|
+    |ap_reg_ppiten_pp0_it19                     |   1|   0|    1|          0|
+    |ap_reg_ppiten_pp0_it2                      |   1|   0|    1|          0|
+    |ap_reg_ppiten_pp0_it20                     |   1|   0|    1|          0|
+    |ap_reg_ppiten_pp0_it21                     |   1|   0|    1|          0|
+    |ap_reg_ppiten_pp0_it22                     |   1|   0|    1|          0|
+    |ap_reg_ppiten_pp0_it23                     |   1|   0|    1|          0|
+    |ap_reg_ppiten_pp0_it24                     |   1|   0|    1|          0|
+    |ap_reg_ppiten_pp0_it25                     |   1|   0|    1|          0|
+    |ap_reg_ppiten_pp0_it26                     |   1|   0|    1|          0|
+    |ap_reg_ppiten_pp0_it27                     |   1|   0|    1|          0|
+    |ap_reg_ppiten_pp0_it28                     |   1|   0|    1|          0|
+    |ap_reg_ppiten_pp0_it29                     |   1|   0|    1|          0|
+    |ap_reg_ppiten_pp0_it3                      |   1|   0|    1|          0|
+    |ap_reg_ppiten_pp0_it30                     |   1|   0|    1|          0|
+    |ap_reg_ppiten_pp0_it31                     |   1|   0|    1|          0|
+    |ap_reg_ppiten_pp0_it32                     |   1|   0|    1|          0|
+    |ap_reg_ppiten_pp0_it33                     |   1|   0|    1|          0|
+    |ap_reg_ppiten_pp0_it34                     |   1|   0|    1|          0|
+    |ap_reg_ppiten_pp0_it35                     |   1|   0|    1|          0|
+    |ap_reg_ppiten_pp0_it36                     |   1|   0|    1|          0|
+    |ap_reg_ppiten_pp0_it37                     |   1|   0|    1|          0|
+    |ap_reg_ppiten_pp0_it38                     |   1|   0|    1|          0|
+    |ap_reg_ppiten_pp0_it39                     |   1|   0|    1|          0|
+    |ap_reg_ppiten_pp0_it4                      |   1|   0|    1|          0|
+    |ap_reg_ppiten_pp0_it40                     |   1|   0|    1|          0|
+    |ap_reg_ppiten_pp0_it5                      |   1|   0|    1|          0|
+    |ap_reg_ppiten_pp0_it6                      |   1|   0|    1|          0|
+    |ap_reg_ppiten_pp0_it7                      |   1|   0|    1|          0|
+    |ap_reg_ppiten_pp0_it8                      |   1|   0|    1|          0|
+    |ap_reg_ppiten_pp0_it9                      |   1|   0|    1|          0|
+    |ap_reg_ppiten_pp1_it0                      |   1|   0|    1|          0|
+    |ap_reg_ppiten_pp1_it1                      |   1|   0|    1|          0|
+    |ap_reg_ppstg_exitcond_i_reg_1475_pp1_it1   |   1|   0|    1|          0|
+    |column_index_i_reg_795                     |  32|   0|   32|          0|
+    |exitcond_i_reg_1475                        |   1|   0|    1|          0|
+    |i1_i_reg_820                               |  32|   0|   32|          0|
+    |i2_i_reg_923                               |   3|   0|    3|          0|
+    |i_1_reg_1479                               |   3|   0|    3|          0|
+    |i_reg_1388                                 |  32|   0|   32|          0|
+    |p_lshr_f_i_reg_1156                        |  31|   0|   31|          0|
+    |p_lshr_i_reg_1151                          |  31|   0|   31|          0|
+    |reg_1002                                   |  32|   0|   32|          0|
+    |reg_1008                                   |  32|   0|   32|          0|
+    |reg_1014                                   |  32|   0|   32|          0|
+    |reg_1020                                   |  32|   0|   32|          0|
+    |reg_984                                    |  32|   0|   32|          0|
+    |reg_990                                    |  32|   0|   32|          0|
+    |reg_996                                    |  32|   0|   32|          0|
+    |sum_returnA_reg_1528                       |  32|   0|   32|          0|
+    |sum_returnB_reg_1543                       |  32|   0|   32|          0|
+    |sum_weight_returnA_reg_1538                |  32|   0|   32|          0|
+    |sum_weight_returnB_reg_1553                |  32|   0|   32|          0|
+    |sum_weight_returnSquareA_reg_1533          |  32|   0|   32|          0|
+    |sum_weight_returnSquareB_reg_1548          |  32|   0|   32|          0|
+    |tmp_18_reg_1393                            |  32|   0|   32|          0|
+    |tmp_19_reg_1398                            |  32|   0|   32|          0|
+    |tmp_20_reg_1403                            |  32|   0|   32|          0|
+    |tmp_21_reg_1408                            |  32|   0|   32|          0|
+    |tmp_22_reg_1413                            |  32|   0|   32|          0|
+    |tmp_23_reg_1418                            |  32|   0|   32|          0|
+    |tmp_24_reg_1423                            |  32|   0|   32|          0|
+    |tmp_25_reg_1428                            |  32|   0|   32|          0|
+    |tmp_2_reg_832                              |  32|   0|   32|          0|
+    |tmp_3_reg_845                              |  32|   0|   32|          0|
+    |tmp_43_i_reg_1484                          |   3|   0|   64|         61|
+    |tmp_4_reg_858                              |  32|   0|   32|          0|
+    |tmp_5_reg_871                              |  32|   0|   32|          0|
+    |tmp_6_reg_884                              |  32|   0|   32|          0|
+    |tmp_7_reg_897                              |  32|   0|   32|          0|
+    |tmp_8_reg_910                              |  32|   0|   32|          0|
+    |tmp_9_i_reg_1384                           |   1|   0|    1|          0|
+    |tmp_9_reg_807                              |  32|   0|   32|          0|
+    |tmp_i_reg_1166                             |  32|   0|   32|          0|
+    |tmp_reg_1146                               |   1|   0|    1|          0|
+    |upper_bound_reg_1161                       |  32|   0|   32|          0|
+    |acc_returnA_addr_6_reg_1433                |   0|   3|    3|          0|
+    |acc_returnB_addr_6_reg_1451                |   0|   3|    3|          0|
+    |acc_weight_returnA_addr_6_reg_1445         |   0|   3|    3|          0|
+    |acc_weight_returnA_returnB_add_6_reg_1469  |   0|   3|    3|          0|
+    |acc_weight_returnB_addr_6_reg_1463         |   0|   3|    3|          0|
+    |acc_weight_returnSquareA_addr_6_reg_1439   |   0|   3|    3|          0|
+    |acc_weight_returnSquareB_addr_6_reg_1457   |   0|   3|    3|          0|
+    |tmp_18_reg_1393                            |   0|  32|   32|          0|
+    |tmp_9_i_reg_1384                           |   0|   2|    1|          0|
+    +-------------------------------------------+----+----+-----+-----------+
+    |Total                                      |1272|  55| 1513|        187|
+    +-------------------------------------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++---------------------------------------+-----+-----+------------+--------------------------------+--------------+
+|               RTL Ports               | Dir | Bits|  Protocol  |          Source Object         |    C Type    |
++---------------------------------------+-----+-----+------------+--------------------------------+--------------+
+|ap_clk                                 |  in |    1| ap_ctrl_hs |   correlation_accel_v4_midEnd  | return value |
+|ap_rst                                 |  in |    1| ap_ctrl_hs |   correlation_accel_v4_midEnd  | return value |
+|ap_start                               |  in |    1| ap_ctrl_hs |   correlation_accel_v4_midEnd  | return value |
+|ap_done                                | out |    1| ap_ctrl_hs |   correlation_accel_v4_midEnd  | return value |
+|ap_continue                            |  in |    1| ap_ctrl_hs |   correlation_accel_v4_midEnd  | return value |
+|ap_idle                                | out |    1| ap_ctrl_hs |   correlation_accel_v4_midEnd  | return value |
+|ap_ready                               | out |    1| ap_ctrl_hs |   correlation_accel_v4_midEnd  | return value |
+|NUMBER_OF_DAYS_dout                    |  in |   32|   ap_fifo  |         NUMBER_OF_DAYS         |    pointer   |
+|NUMBER_OF_DAYS_empty_n                 |  in |    1|   ap_fifo  |         NUMBER_OF_DAYS         |    pointer   |
+|NUMBER_OF_DAYS_read                    | out |    1|   ap_fifo  |         NUMBER_OF_DAYS         |    pointer   |
+|NUMBER_OF_INDICES_dout                 |  in |   32|   ap_fifo  |        NUMBER_OF_INDICES       |    pointer   |
+|NUMBER_OF_INDICES_empty_n              |  in |    1|   ap_fifo  |        NUMBER_OF_INDICES       |    pointer   |
+|NUMBER_OF_INDICES_read                 | out |    1|   ap_fifo  |        NUMBER_OF_INDICES       |    pointer   |
+|ln_returnA_in_V_dout                   |  in |   32|   ap_fifo  |         ln_returnA_in_V        |    pointer   |
+|ln_returnA_in_V_empty_n                |  in |    1|   ap_fifo  |         ln_returnA_in_V        |    pointer   |
+|ln_returnA_in_V_read                   | out |    1|   ap_fifo  |         ln_returnA_in_V        |    pointer   |
+|weight_returnSquareA_in_V_dout         |  in |   32|   ap_fifo  |    weight_returnSquareA_in_V   |    pointer   |
+|weight_returnSquareA_in_V_empty_n      |  in |    1|   ap_fifo  |    weight_returnSquareA_in_V   |    pointer   |
+|weight_returnSquareA_in_V_read         | out |    1|   ap_fifo  |    weight_returnSquareA_in_V   |    pointer   |
+|weight_returnA_in_V_dout               |  in |   32|   ap_fifo  |       weight_returnA_in_V      |    pointer   |
+|weight_returnA_in_V_empty_n            |  in |    1|   ap_fifo  |       weight_returnA_in_V      |    pointer   |
+|weight_returnA_in_V_read               | out |    1|   ap_fifo  |       weight_returnA_in_V      |    pointer   |
+|sum_weight_in_V_dout                   |  in |   32|   ap_fifo  |         sum_weight_in_V        |    pointer   |
+|sum_weight_in_V_empty_n                |  in |    1|   ap_fifo  |         sum_weight_in_V        |    pointer   |
+|sum_weight_in_V_read                   | out |    1|   ap_fifo  |         sum_weight_in_V        |    pointer   |
+|ln_returnB_in_V_dout                   |  in |   32|   ap_fifo  |         ln_returnB_in_V        |    pointer   |
+|ln_returnB_in_V_empty_n                |  in |    1|   ap_fifo  |         ln_returnB_in_V        |    pointer   |
+|ln_returnB_in_V_read                   | out |    1|   ap_fifo  |         ln_returnB_in_V        |    pointer   |
+|weight_returnSquareB_in_V_dout         |  in |   32|   ap_fifo  |    weight_returnSquareB_in_V   |    pointer   |
+|weight_returnSquareB_in_V_empty_n      |  in |    1|   ap_fifo  |    weight_returnSquareB_in_V   |    pointer   |
+|weight_returnSquareB_in_V_read         | out |    1|   ap_fifo  |    weight_returnSquareB_in_V   |    pointer   |
+|weight_returnB_in_V_dout               |  in |   32|   ap_fifo  |       weight_returnB_in_V      |    pointer   |
+|weight_returnB_in_V_empty_n            |  in |    1|   ap_fifo  |       weight_returnB_in_V      |    pointer   |
+|weight_returnB_in_V_read               | out |    1|   ap_fifo  |       weight_returnB_in_V      |    pointer   |
+|weight_returnA_returnB_in_V_dout       |  in |   32|   ap_fifo  |   weight_returnA_returnB_in_V  |    pointer   |
+|weight_returnA_returnB_in_V_empty_n    |  in |    1|   ap_fifo  |   weight_returnA_returnB_in_V  |    pointer   |
+|weight_returnA_returnB_in_V_read       | out |    1|   ap_fifo  |   weight_returnA_returnB_in_V  |    pointer   |
+|sum_weight_out_V_din                   | out |   32|   ap_fifo  |        sum_weight_out_V        |    pointer   |
+|sum_weight_out_V_full_n                |  in |    1|   ap_fifo  |        sum_weight_out_V        |    pointer   |
+|sum_weight_out_V_write                 | out |    1|   ap_fifo  |        sum_weight_out_V        |    pointer   |
+|sum_return_out_V_din                   | out |   32|   ap_fifo  |        sum_return_out_V        |    pointer   |
+|sum_return_out_V_full_n                |  in |    1|   ap_fifo  |        sum_return_out_V        |    pointer   |
+|sum_return_out_V_write                 | out |    1|   ap_fifo  |        sum_return_out_V        |    pointer   |
+|sum_weight_returnSquare_out_V_din      | out |   32|   ap_fifo  |  sum_weight_returnSquare_out_V |    pointer   |
+|sum_weight_returnSquare_out_V_full_n   |  in |    1|   ap_fifo  |  sum_weight_returnSquare_out_V |    pointer   |
+|sum_weight_returnSquare_out_V_write    | out |    1|   ap_fifo  |  sum_weight_returnSquare_out_V |    pointer   |
+|sum_weight_return_out_V_din            | out |   32|   ap_fifo  |     sum_weight_return_out_V    |    pointer   |
+|sum_weight_return_out_V_full_n         |  in |    1|   ap_fifo  |     sum_weight_return_out_V    |    pointer   |
+|sum_weight_return_out_V_write          | out |    1|   ap_fifo  |     sum_weight_return_out_V    |    pointer   |
+|sum_weight_returnA_returnB_out_din     | out |   32|   ap_fifo  | sum_weight_returnA_returnB_out |    pointer   |
+|sum_weight_returnA_returnB_out_full_n  |  in |    1|   ap_fifo  | sum_weight_returnA_returnB_out |    pointer   |
+|sum_weight_returnA_returnB_out_write   | out |    1|   ap_fifo  | sum_weight_returnA_returnB_out |    pointer   |
+|sum_returnA_out_V_din                  | out |   32|   ap_fifo  |        sum_returnA_out_V       |    pointer   |
+|sum_returnA_out_V_full_n               |  in |    1|   ap_fifo  |        sum_returnA_out_V       |    pointer   |
+|sum_returnA_out_V_write                | out |    1|   ap_fifo  |        sum_returnA_out_V       |    pointer   |
+|sum_weight_returnSquareA_out_V_din     | out |   32|   ap_fifo  | sum_weight_returnSquareA_out_V |    pointer   |
+|sum_weight_returnSquareA_out_V_full_n  |  in |    1|   ap_fifo  | sum_weight_returnSquareA_out_V |    pointer   |
+|sum_weight_returnSquareA_out_V_write   | out |    1|   ap_fifo  | sum_weight_returnSquareA_out_V |    pointer   |
+|sum_weight_returnA_out_V_din           | out |   32|   ap_fifo  |    sum_weight_returnA_out_V    |    pointer   |
+|sum_weight_returnA_out_V_full_n        |  in |    1|   ap_fifo  |    sum_weight_returnA_out_V    |    pointer   |
+|sum_weight_returnA_out_V_write         | out |    1|   ap_fifo  |    sum_weight_returnA_out_V    |    pointer   |
+|NUMBER_OF_DAYS_out_din                 | out |   32|   ap_fifo  |       NUMBER_OF_DAYS_out       |    pointer   |
+|NUMBER_OF_DAYS_out_full_n              |  in |    1|   ap_fifo  |       NUMBER_OF_DAYS_out       |    pointer   |
+|NUMBER_OF_DAYS_out_write               | out |    1|   ap_fifo  |       NUMBER_OF_DAYS_out       |    pointer   |
+|NUMBER_OF_INDICES_out_din              | out |   32|   ap_fifo  |      NUMBER_OF_INDICES_out     |    pointer   |
+|NUMBER_OF_INDICES_out_full_n           |  in |    1|   ap_fifo  |      NUMBER_OF_INDICES_out     |    pointer   |
+|NUMBER_OF_INDICES_out_write            | out |    1|   ap_fifo  |      NUMBER_OF_INDICES_out     |    pointer   |
++---------------------------------------+-----+-----+------------+--------------------------------+--------------+
+

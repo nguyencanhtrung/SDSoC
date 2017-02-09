@@ -120,7 +120,7 @@ void correlation_accel_v4(
 				hls::stream<float> &ln_returnB_out_c2,
 				hls::stream<float> &weight_returnSquareB_out_c2,
 				hls::stream<float> &weight_returnB_out_c2,
-				hls::stream<float> &weight_returnA_returnB_out_c2)
+				hls::stream<float> &weight_returnA_returnB_out_c2);
 #else
 	void frontEnd(
 				int NUMBER_OF_DAYS,
@@ -145,7 +145,7 @@ void correlation_accel_v4(
 				float ln_returnB_out_c2[MAX_HALF_NUM_INDICES * MAX_NUM_RETURNS],
 				float weight_returnSquareB_out_c2[MAX_HALF_NUM_INDICES * MAX_NUM_RETURNS],
 				float weight_returnB_out_c2[MAX_HALF_NUM_INDICES * MAX_NUM_RETURNS],
-				float weight_returnA_returnB_out_c2[MAX_HALF_NUM_INDICES * MAX_NUM_RETURNS])
+				float weight_returnA_returnB_out_c2[MAX_HALF_NUM_INDICES * MAX_NUM_RETURNS]);
 #endif
 
 //------------------------------------------------------------------
@@ -177,7 +177,7 @@ void midEnd(
 		hls::stream<float> &sum_returnA_out,
 		hls::stream<float> &sum_weight_returnSquareA_out,
 		hls::stream<float> &sum_weight_returnA_out
-)
+);
 #else
 void midEnd(
 		int NUMBER_OF_DAYS,
@@ -202,7 +202,7 @@ void midEnd(
 		float sum_returnA_out[MAX_HALF_NUM_INDICES],
 		float sum_weight_returnSquareA_out[MAX_HALF_NUM_INDICES],
 		float sum_weight_returnA_out[MAX_HALF_NUM_INDICES]
-)
+);
 #endif
 
 //------------------------------------------------------------------
@@ -232,10 +232,10 @@ void backEnd(
 				hls::stream<float> &sum_weight_returnA_returnB_in_c2,
 				hls::stream<float> &sum_returnA_in_c2,
 				hls::stream<float> &sum_weight_returnSquareA_in_c2,
-				hls::stream<float> &sum_weight_returnA_in_c2
+				hls::stream<float> &sum_weight_returnA_in_c2,
 
 				ap_axiu<32,1,1,1> out_correlation[MAX_NUM_INDICES / 2 * (MAX_NUM_INDICES - 1)]
-)
+);
 #else
 void backEnd(
 				int NUMBER_OF_DAYS,
@@ -260,6 +260,6 @@ void backEnd(
 				float sum_weight_returnA_in_c2[MAX_HALF_NUM_INDICES],
 
 				float out_correlation[MAX_NUM_INDICES / 2 * (MAX_NUM_INDICES - 1)]
-)
+);
 #endif
 #endif

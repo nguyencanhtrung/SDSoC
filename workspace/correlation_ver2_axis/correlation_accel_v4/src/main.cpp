@@ -29,7 +29,7 @@
  #include <stdint.h>		/*< For uint32_t */
  //#include <cmath>			/*< Math lib for C-simulation */
 
- #include "correlation_accel_v3.hpp"
+ #include "correlation_accel_v4.hpp"
  #include "sds_lib.h"
 /*-----------------------------------
  * API for Timing       			*

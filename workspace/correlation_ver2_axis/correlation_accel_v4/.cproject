@@ -41,6 +41,14 @@
 							</tool>
 						</toolChain>
 					</folderInfo>
+					<fileInfo id="com.xilinx.sdk.apf.linux.toolchain.configuration.debug.1990479863.src/correlation_accel_v4.cpp" name="correlation_accel_v4.cpp" rcbsApplicability="disable" resourcePath="src/correlation_accel_v4.cpp" toolsToInvoke="com.xilinx.sdk.apf.linux.toolchain.cxx.compiler.1821489610.991532270">
+						<tool id="com.xilinx.sdk.apf.linux.toolchain.cxx.compiler.1821489610.991532270" name="SDS++ Linux Compiler" superClass="com.xilinx.sdk.apf.linux.toolchain.cxx.compiler.1821489610">
+							<option id="com.xilinx.sdk.apf.linux.accel.functions.701992509" superClass="com.xilinx.sdk.apf.linux.accel.functions" valueType="stringList">
+								<listOptionValue builtIn="false" value="correlation_accel_v4 correlation_accel_v4.cpp"/>
+							</option>
+							<inputType id="com.xilinx.sdk.apf.linux.cxx.compiler.input.99730443" name="C++ source files" superClass="com.xilinx.sdk.apf.linux.cxx.compiler.input"/>
+						</tool>
+					</fileInfo>
 					<sourceEntries>
 						<entry excluding="**/_sds/iprepo/|**/_sds/p0/|**/_sds/vhls/" flags="VALUE_WORKSPACE_PATH" kind="sourcePath" name=""/>
 					</sourceEntries>
@@ -88,6 +96,14 @@
 							</tool>
 						</toolChain>
 					</folderInfo>
+					<fileInfo id="com.xilinx.sdk.apf.linux.toolchain.configuration.release.1018934111.src/correlation_accel_v4.cpp" name="correlation_accel_v4.cpp" rcbsApplicability="disable" resourcePath="src/correlation_accel_v4.cpp" toolsToInvoke="com.xilinx.sdk.apf.linux.toolchain.release.cxx.compiler.946713085.1134489783">
+						<tool id="com.xilinx.sdk.apf.linux.toolchain.release.cxx.compiler.946713085.1134489783" name="SDS++ Linux Compiler" superClass="com.xilinx.sdk.apf.linux.toolchain.release.cxx.compiler.946713085">
+							<option id="com.xilinx.sdk.apf.linux.accel.functions.1216546810" superClass="com.xilinx.sdk.apf.linux.accel.functions" valueType="stringList">
+								<listOptionValue builtIn="false" value="correlation_accel_v4 correlation_accel_v4.cpp"/>
+							</option>
+							<inputType id="com.xilinx.sdk.apf.linux.cxx.compiler.input.2079352658" name="C++ source files" superClass="com.xilinx.sdk.apf.linux.cxx.compiler.input"/>
+						</tool>
+					</fileInfo>
 					<sourceEntries>
 						<entry excluding="**/_sds/iprepo/|**/_sds/p0/|**/_sds/vhls/" flags="VALUE_WORKSPACE_PATH" kind="sourcePath" name=""/>
 					</sourceEntries>
@@ -127,6 +143,9 @@
 								<inputType id="com.xilinx.sdk.apf.linux.cxx.compiler.input.1132599002" name="C++ source files" superClass="com.xilinx.sdk.apf.linux.cxx.compiler.input"/>
 							</tool>
 							<tool id="com.xilinx.sdk.apf.linux.toolchain.linker.1724075258" name="SDS++ Linux Linker" superClass="com.xilinx.sdk.apf.linux.toolchain.linker">
+								<option id="com.xilinx.sdk.apf.linux.linker.instrument.functions.1830101447" superClass="com.xilinx.sdk.apf.linux.linker.instrument.functions" valueType="stringList">
+									<listOptionValue builtIn="false" value=" correlation_accel_v4"/>
+								</option>
 								<inputType id="xilinx.gnu.linker.input.1121536108" superClass="xilinx.gnu.linker.input">
 									<additionalInput kind="additionalinputdependency" paths="$(USER_OBJS)"/>
 									<additionalInput kind="additionalinput" paths="$(LIBS)"/>
@@ -135,6 +154,14 @@
 							</tool>
 						</toolChain>
 					</folderInfo>
+					<fileInfo id="com.xilinx.sdk.apf.linux.toolchain.configuration.estimate.724499539.src/correlation_accel_v4.cpp" name="correlation_accel_v4.cpp" rcbsApplicability="disable" resourcePath="src/correlation_accel_v4.cpp" toolsToInvoke="com.xilinx.sdk.apf.linux.toolchain.estimate.cxx.compiler.1127558168.2066865701">
+						<tool id="com.xilinx.sdk.apf.linux.toolchain.estimate.cxx.compiler.1127558168.2066865701" name="SDS++ Linux Compiler" superClass="com.xilinx.sdk.apf.linux.toolchain.estimate.cxx.compiler.1127558168">
+							<option id="com.xilinx.sdk.apf.linux.accel.functions.1886533742" superClass="com.xilinx.sdk.apf.linux.accel.functions" valueType="stringList">
+								<listOptionValue builtIn="false" value="correlation_accel_v4 correlation_accel_v4.cpp"/>
+							</option>
+							<inputType id="com.xilinx.sdk.apf.linux.cxx.compiler.input.1825046476" name="C++ source files" superClass="com.xilinx.sdk.apf.linux.cxx.compiler.input"/>
+						</tool>
+					</fileInfo>
 					<sourceEntries>
 						<entry excluding="**/_sds/iprepo/|**/_sds/p0/|**/_sds/vhls/" flags="VALUE_WORKSPACE_PATH" kind="sourcePath" name=""/>
 					</sourceEntries>
@@ -150,4 +177,5 @@
 	<storageModule moduleId="scannerConfiguration">
 		<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId=""/>
 	</storageModule>
+	<storageModule moduleId="refreshScope"/>
 </cproject>

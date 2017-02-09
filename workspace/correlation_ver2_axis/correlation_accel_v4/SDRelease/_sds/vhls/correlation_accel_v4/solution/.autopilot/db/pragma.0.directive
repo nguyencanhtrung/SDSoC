@@ -1,0 +1,325 @@
+<AutoPilot:ProjectResources xmlns:AutoPilot="com.autoesl.autopilot.ui.directiveView">
+<sourceFile name="">
+<directive functionLabel="" functionName="and_reduce" label="">
+<pragma name="UNROLL"/>
+</directive>
+<directive functionLabel="" functionName="or_reduce" label="">
+<pragma name="UNROLL"/>
+</directive>
+<directive functionLabel="" functionName="xor_reduce" label="">
+<pragma name="UNROLL"/>
+</directive>
+<directive functionLabel="" functionName="overflow_adjust" label="">
+<pragma name="INLINE">
+<option name="self" positionalBoolean="type" value=""/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="quantization_adjust" label="">
+<pragma name="INLINE">
+<option name="self" positionalBoolean="type" value=""/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="ap_fixed_base" label="">
+<pragma name="INLINE">
+<option name="self" positionalBoolean="type" value=""/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="ap_fixed_base" label="">
+<pragma name="INLINE">
+<option name="self" positionalBoolean="type" value=""/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="to_double" label="">
+<pragma name="INLINE">
+<option name="self" positionalBoolean="type" value=""/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="to_float" label="">
+<pragma name="INLINE">
+<option name="self" positionalBoolean="type" value=""/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="operator &lt;&lt;" label="">
+<pragma name="INLINE">
+<option name="self" positionalBoolean="type" value=""/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="operator &lt;&lt;" label="">
+<pragma name="INLINE">
+<option name="self" positionalBoolean="type" value=""/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="operator &gt;&gt;" label="">
+<pragma name="INLINE">
+<option name="self" positionalBoolean="type" value=""/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="operator &gt;&gt;" label="">
+<pragma name="INLINE">
+<option name="self" positionalBoolean="type" value=""/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="operator &lt;&lt;=" label="">
+<pragma name="INLINE">
+<option name="self" positionalBoolean="type" value=""/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="operator &lt;&lt;=" label="">
+<pragma name="INLINE">
+<option name="self" positionalBoolean="type" value=""/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="operator &gt;&gt;=" label="">
+<pragma name="INLINE">
+<option name="self" positionalBoolean="type" value=""/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="operator &gt;&gt;=" label="">
+<pragma name="INLINE">
+<option name="self" positionalBoolean="type" value=""/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="correlation_accel_v4" label="">
+<pragma name="LATENCY">
+<option name="min" value="1"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="correlation_accel_v4" label="">
+<pragma name="INTERFACE">
+<option name="axis" positionalBoolean="mode" value=""/>
+<option name="port" positionalBoolean="4" value="out_correlation"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="correlation_accel_v4" label="">
+<pragma name="INTERFACE">
+<option name="axis" positionalBoolean="mode" value=""/>
+<option name="port" positionalBoolean="4" value="in_indices"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="correlation_accel_v4" label="">
+<pragma name="INTERFACE">
+<option name="ap_ctrl_hs" positionalBoolean="mode" value=""/>
+<option name="port" positionalBoolean="4" value="return"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="correlation_accel_v4" label="">
+<pragma name="DATAFLOW"/>
+</directive>
+<directive functionLabel="" functionName="correlation_accel_v4" label="">
+<pragma name="STREAM">
+<option name="variable" positionalBoolean="4" value="ln_returnA_c1"/>
+<option name="depth" value="2"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="correlation_accel_v4" label="">
+<pragma name="STREAM">
+<option name="variable" positionalBoolean="4" value="weight_returnSquareA_c1"/>
+<option name="depth" value="2"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="correlation_accel_v4" label="">
+<pragma name="STREAM">
+<option name="variable" positionalBoolean="4" value="weight_returnA_c1"/>
+<option name="depth" value="2"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="correlation_accel_v4" label="">
+<pragma name="STREAM">
+<option name="variable" positionalBoolean="4" value="ln_returnA_c2"/>
+<option name="depth" value="2"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="correlation_accel_v4" label="">
+<pragma name="STREAM">
+<option name="variable" positionalBoolean="4" value="weight_returnSquareA_c2"/>
+<option name="depth" value="2"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="correlation_accel_v4" label="">
+<pragma name="STREAM">
+<option name="variable" positionalBoolean="4" value="weight_returnA_c2"/>
+<option name="depth" value="2"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="correlation_accel_v4" label="">
+<pragma name="STREAM">
+<option name="variable" positionalBoolean="4" value="sum_weight_c1"/>
+<option name="depth" value="2"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="correlation_accel_v4" label="">
+<pragma name="STREAM">
+<option name="variable" positionalBoolean="4" value="ln_returnB_c1"/>
+<option name="depth" value="2"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="correlation_accel_v4" label="">
+<pragma name="STREAM">
+<option name="variable" positionalBoolean="4" value="weight_returnSquareB_c1"/>
+<option name="depth" value="2"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="correlation_accel_v4" label="">
+<pragma name="STREAM">
+<option name="variable" positionalBoolean="4" value="weight_returnB_c1"/>
+<option name="depth" value="2"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="correlation_accel_v4" label="">
+<pragma name="STREAM">
+<option name="variable" positionalBoolean="4" value="weight_returnA_returnB_c1"/>
+<option name="depth" value="2"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="correlation_accel_v4" label="">
+<pragma name="STREAM">
+<option name="variable" positionalBoolean="4" value="sum_weight_c2"/>
+<option name="depth" value="2"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="correlation_accel_v4" label="">
+<pragma name="STREAM">
+<option name="variable" positionalBoolean="4" value="ln_returnB_c2"/>
+<option name="depth" value="2"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="correlation_accel_v4" label="">
+<pragma name="STREAM">
+<option name="variable" positionalBoolean="4" value="weight_returnSquareB_c2"/>
+<option name="depth" value="2"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="correlation_accel_v4" label="">
+<pragma name="STREAM">
+<option name="variable" positionalBoolean="4" value="weight_returnB_c2"/>
+<option name="depth" value="2"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="correlation_accel_v4" label="">
+<pragma name="STREAM">
+<option name="variable" positionalBoolean="4" value="weight_returnA_returnB_c2"/>
+<option name="depth" value="2"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="correlation_accel_v4" label="">
+<pragma name="STREAM">
+<option name="variable" positionalBoolean="4" value="sum_weight_stage2_c1"/>
+<option name="depth" value="2"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="correlation_accel_v4" label="">
+<pragma name="STREAM">
+<option name="variable" positionalBoolean="4" value="sum_return_stage2_c1"/>
+<option name="depth" value="2"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="correlation_accel_v4" label="">
+<pragma name="STREAM">
+<option name="variable" positionalBoolean="4" value="sum_weight_returnSquare_stage2_c1"/>
+<option name="depth" value="2"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="correlation_accel_v4" label="">
+<pragma name="STREAM">
+<option name="variable" positionalBoolean="4" value="sum_weight_return_stage2_c1"/>
+<option name="depth" value="2"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="correlation_accel_v4" label="">
+<pragma name="STREAM">
+<option name="variable" positionalBoolean="4" value="sum_weight_returnA_returnB_stage2_c1"/>
+<option name="depth" value="2"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="correlation_accel_v4" label="">
+<pragma name="STREAM">
+<option name="variable" positionalBoolean="4" value="sum_returnA_stage2_c1"/>
+<option name="depth" value="2"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="correlation_accel_v4" label="">
+<pragma name="STREAM">
+<option name="variable" positionalBoolean="4" value="sum_weight_returnSquareA_stage2_c1"/>
+<option name="depth" value="2"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="correlation_accel_v4" label="">
+<pragma name="STREAM">
+<option name="variable" positionalBoolean="4" value="sum_weight_returnA_stage2_c1"/>
+<option name="depth" value="2"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="correlation_accel_v4" label="">
+<pragma name="STREAM">
+<option name="variable" positionalBoolean="4" value="sum_weight_stage2_c2"/>
+<option name="depth" value="2"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="correlation_accel_v4" label="">
+<pragma name="STREAM">
+<option name="variable" positionalBoolean="4" value="sum_return_stage2_c2"/>
+<option name="depth" value="2"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="correlation_accel_v4" label="">
+<pragma name="STREAM">
+<option name="variable" positionalBoolean="4" value="sum_weight_returnSquare_stage2_c2"/>
+<option name="depth" value="2"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="correlation_accel_v4" label="">
+<pragma name="STREAM">
+<option name="variable" positionalBoolean="4" value="sum_weight_return_stage2_c2"/>
+<option name="depth" value="2"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="correlation_accel_v4" label="">
+<pragma name="STREAM">
+<option name="variable" positionalBoolean="4" value="sum_weight_returnA_returnB_stage2_c2"/>
+<option name="depth" value="2"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="correlation_accel_v4" label="">
+<pragma name="STREAM">
+<option name="variable" positionalBoolean="4" value="sum_returnA_stage2_c2"/>
+<option name="depth" value="2"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="correlation_accel_v4" label="">
+<pragma name="STREAM">
+<option name="variable" positionalBoolean="4" value="sum_weight_returnSquareA_stage2_c2"/>
+<option name="depth" value="2"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="correlation_accel_v4" label="">
+<pragma name="STREAM">
+<option name="variable" positionalBoolean="4" value="sum_weight_returnA_stage2_c2"/>
+<option name="depth" value="2"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="frontEnd" label="">
+<pragma name="ARRAY_PARTITION">
+<option name="variable" positionalBoolean="4" value="shift_reg"/>
+<option name="complete" positionalBoolean="type" value=""/>
+<option name="dim" value="1"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="frontEnd" label="">
+<pragma name="PIPELINE"/>
+</directive>
+<directive functionLabel="" functionName="frontEnd" label="">
+<pragma name="PIPELINE"/>
+</directive>
+<directive functionLabel="" functionName="midEnd" label="">
+<pragma name="UNROLL"/>
+</directive>
+<directive functionLabel="" functionName="midEnd" label="">
+<pragma name="PIPELINE"/>
+</directive>
+<directive functionLabel="" functionName="midEnd" label="">
+<pragma name="PIPELINE">
+<option name="II" value="5"/>
+</pragma>
+</directive>
+</sourceFile>
+</AutoPilot:ProjectResources>

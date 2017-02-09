@@ -1,0 +1,1727 @@
+@I [HLS-0] Workspace /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_accel_v4/SDRelease/_sds/vhls/correlation_accel_v4/solution opened at Thu Feb 09 13:42:11 CET 2017
+@I [HLS-100] Command 'open_solution' returned 0; elapsed 0Total elapsed time: 0.158 sec.
+@I [HLS-100] Command "set_part  xc7z020clg484-1  "
+@I [HLS-100] Command "add_library xilinx/zynq/zynq:xc7z020:clg484:-1 "
+@I [HLS-100] Command "get_default_platform "
+@I [HLS-100] Command 'get_default_platform' returned 0; elapsed 0Total elapsed time: 0.160 sec.
+@I [HLS-100] Command "license_exists VIVADO_HLS "
+@I [HLS-100] Command 'license_exists' returned 1; elapsed 0Total elapsed time: 0.162 sec.
+@I [HLS-100] Command "license_exists ap_opencl "
+@I [HLS-100] Command 'license_exists' returned 1; elapsed 0Total elapsed time: 0.164 sec.
+@I [HLS-100] Command "license_exists AUTOESL_NI "
+@I [HLS-100] Command 'license_exists' returned 1; elapsed 0Total elapsed time: 0.167 sec.
+@I [HLS-100] Command "license_exists HLS "
+@I [HLS-100] Command 'license_exists' returned 0; elapsed 0Total elapsed time: 0.167 sec.
+@I [HLS-100] Command "open_platform DefaultPlatform "
+@I [HLS-100] Command 'open_platform' returned 0; elapsed 0Total elapsed time: 0.167 sec.
+@I [HLS-100] Command "import_lib /opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/common/technology/xilinx/zynq/zynq "
+@I [HLS-100] Command "source /opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/common/technology/xilinx/common/xilinx.lib "
+@I [HLS-100] Command "source /opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/common/technology/xilinx/interface/xilinx_interface.lib "
+@I [HLS-100] Command "source /opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/common/technology/xilinx/interface/plb46.lib "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 0.167 sec.
+@I [HLS-100] Command "source /opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/common/technology/xilinx/interface/fsl.lib "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 0.167 sec.
+@I [HLS-100] Command "source /opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/common/technology/xilinx/interface/axi4.lib "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 0.168 sec.
+@I [HLS-100] Command "source /opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/common/technology/xilinx/interface/maxi.lib "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 0.168 sec.
+@I [HLS-100] Command "source /opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/common/technology/xilinx/interface/saxilite.lib "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 0.168 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 0.168 sec.
+@I [HLS-100] Command "source /opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/common/technology/xilinx/common/dsp48.lib "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 0.168 sec.
+@I [HLS-100] Command "source /opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/common/technology/xilinx/ip/xfir.lib "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 0.168 sec.
+@I [HLS-100] Command "source /opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/common/technology/xilinx/ip/xfft.lib "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 0.168 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 0.169 sec.
+@I [HLS-100] Command "source /opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/common/technology/xilinx/common/xilinx_old.lib "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 0.171 sec.
+@I [HLS-100] Command "source /opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/common/technology/xilinx/common/xilinx_vivado.lib "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 0.171 sec.
+@I [HLS-100] Command "source /opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/common/technology/xilinx/common/xilinx.hlp "
+@I [HLS-100] Command "source /opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/common/technology/xilinx/common/target_info.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 0.172 sec.
+@I [HLS-100] Command "source /opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/common/technology/xilinx/interface/xilinx_interface.hlp "
+@I [HLS-100] Command "source /opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/common/technology/xilinx/interface/maxi.hlp "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 0.172 sec.
+@I [HLS-100] Command "source /opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/common/technology/xilinx/interface/saxilite.hlp "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 0.172 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 0.172 sec.
+@I [HLS-100] Command "source /opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/common/technology/xilinx/common/dsp48.hlp "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 0.172 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 0.173 sec.
+@I [HLS-100] Command "source /opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/common/technology/xilinx/zynq/dsp48e1.hlp "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 0.173 sec.
+@I [HLS-100] Command "get_default_platform "
+@I [HLS-100] Command 'get_default_platform' returned 0; elapsed 0Total elapsed time: 0.173 sec.
+@I [HLS-100] Command "config_chip_info -quiet -resource  {SLICE 13300}  {LUT 53200}     {FF 106400} {DSP48E 220}   {BRAM 280}  "
+@I [HLS-100] Command 'config_chip_info' returned 0; elapsed 0Total elapsed time: 0.173 sec.
+@I [HLS-100] Command "config_chip_info -quiet -speed medium "
+@I [HLS-100] Command 'config_chip_info' returned 0; elapsed 0Total elapsed time: 0.173 sec.
+@I [HLS-100] Command 'import_lib' returned 0; elapsed 0.01Total elapsed time: 0.173 sec.
+@I [HLS-100] Command "source /opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/common/technology/xilinx/zynq/zynq.gen "
+@I [HLS-100] Command "source /opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/common/technology/xilinx/common/virtex.gen "
+@I [HLS-100] Command "source /opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/common/technology/xilinx/common/xilinx.gen "
+@I [HLS-100] Command "source /opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/common/technology/xilinx/interface/plb46.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 0.174 sec.
+@I [HLS-100] Command "source /opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/common/technology/xilinx/interface/fsl.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 0.175 sec.
+@I [HLS-100] Command "source /opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/common/technology/xilinx/interface/axi4.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 0.176 sec.
+@I [HLS-100] Command "source /opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/common/technology/xilinx/interface/nativeAXI4.gen "
+@I [HLS-100] Command "source /opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/common/technology/xilinx/interface/saxilite.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 0.177 sec.
+@I [HLS-100] Command "source /opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/common/technology/xilinx/interface/maxi.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.01Total elapsed time: 0.181 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.01Total elapsed time: 0.181 sec.
+@I [HLS-100] Command "source /opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/common/technology/xilinx/scripts/xilinxcoregen.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 0.185 sec.
+@I [HLS-100] Command "source /opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/common/technology/xilinx/interface/XilEDKCoreGen.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 0.189 sec.
+@I [HLS-100] Command "source /opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/common/technology/xilinx/ip/util.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 0.189 sec.
+@I [HLS-100] Command "source /opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/common/technology/xilinx/ip/xfft.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.06Total elapsed time: 0.245 sec.
+@I [HLS-100] Command "source /opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/common/technology/xilinx/ip/xfir.gen "
+@I [HLS-100] Command "source /opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/tps/tcl/tcllib1.11.1/struct/list.tcl "
+@I [HLS-100] Command "source /opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/tps/tcl/tcllib1.11.1/cmdline/cmdline.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 0.254 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 0.254 sec.
+@I [HLS-100] Command "source /opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/tps/tcl/tcllib1.11.1/math/bignum.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 0.257 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.01Total elapsed time: 0.260 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.08Total elapsed time: 0.260 sec.
+@I [HLS-100] Command "source /opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/common/technology/xilinx/common/dsp48.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 0.261 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.08Total elapsed time: 0.261 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.08Total elapsed time: 0.261 sec.
+@I [HLS-100] Command "get_default_platform "
+@I [HLS-100] Command 'get_default_platform' returned 0; elapsed 0Total elapsed time: 0.261 sec.
+@I [HLS-100] Command "config_chip_info -quiet -resource  {SLICE 13300}  {LUT 53200}     {FF 106400} {DSP48E 220}   {BRAM 280}  "
+@I [HLS-100] Command 'config_chip_info' returned 0; elapsed 0Total elapsed time: 0.261 sec.
+@I [HLS-100] Command "config_chip_info -quiet -speed slow "
+@I [HLS-100] Command 'config_chip_info' returned 0; elapsed 0Total elapsed time: 0.261 sec.
+@I [HLS-100] Command 'add_library' returned 0; elapsed 0.1Total elapsed time: 0.262 sec.
+@I [HLS-100] Command "add_library xilinx/zynq/zynq_fpv6 "
+@I [HLS-100] Command "get_default_platform "
+@I [HLS-100] Command 'get_default_platform' returned 0; elapsed 0Total elapsed time: 0.262 sec.
+@I [HLS-100] Command "license_exists VIVADO_HLS "
+@I [HLS-100] Command 'license_exists' returned 1; elapsed 0.01Total elapsed time: 0.265 sec.
+@I [HLS-100] Command "license_exists ap_opencl "
+@I [HLS-100] Command 'license_exists' returned 1; elapsed 0Total elapsed time: 0.267 sec.
+@I [HLS-100] Command "license_exists AUTOESL_NI "
+@I [HLS-100] Command 'license_exists' returned 1; elapsed 0Total elapsed time: 0.269 sec.
+@I [HLS-100] Command "license_exists HLS "
+@I [HLS-100] Command 'license_exists' returned 0; elapsed 0Total elapsed time: 0.269 sec.
+@I [HLS-100] Command "open_platform DefaultPlatform "
+@I [HLS-100] Command 'open_platform' returned 0; elapsed 0Total elapsed time: 0.269 sec.
+@I [HLS-100] Command "import_lib /opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/common/technology/xilinx/zynq/zynq_fpv6 "
+@I [HLS-100] Command "source /opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/common/technology/xilinx/common/xilinx_fpv7.lib "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 0.270 sec.
+@I [HLS-100] Command "source /opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/common/technology/xilinx/common/xilinx_fpv.hlp "
+@I [HLS-100] Command "source /opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/common/technology/xilinx/common/xilinx.hlp "
+@I [HLS-100] Command "source /opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/common/technology/xilinx/common/target_info.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 0.273 sec.
+@I [HLS-100] Command "source /opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/common/technology/xilinx/interface/xilinx_interface.hlp "
+@I [HLS-100] Command "source /opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/common/technology/xilinx/interface/maxi.hlp "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 0.273 sec.
+@I [HLS-100] Command "source /opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/common/technology/xilinx/interface/saxilite.hlp "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 0.274 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 0.274 sec.
+@I [HLS-100] Command "source /opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/common/technology/xilinx/common/dsp48.hlp "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 0.274 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.01Total elapsed time: 0.274 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.01Total elapsed time: 0.274 sec.
+@I [HLS-100] Command 'import_lib' returned 0; elapsed 0.01Total elapsed time: 0.277 sec.
+@I [HLS-100] Command "source /opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/common/technology/xilinx/zynq/zynq_fpv6.gen "
+@I [HLS-100] Command "source /opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/common/technology/xilinx/common/xilinx_fpv6.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 0.277 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 0.277 sec.
+@I [HLS-100] Command 'add_library' returned 0; elapsed 0.02Total elapsed time: 0.278 sec.
+@I [HLS-10] Setting target device to ' xc7z020clg484-1 '
+@I [HLS-100] Command 'set_part' returned 0; elapsed 0.12Total elapsed time: 0.278 sec.
+@I [HLS-100] Command "create_clock -period 8.5 "
+@I [HLS-100] Command "config_clock -quiet -name default -period 8.5 -default=false "
+@I [SYN-201] Setting up clock 'default' with a period of 8.5ns.
+@I [HLS-100] Command 'config_clock' returned 0; elapsed 0Total elapsed time: 0.279 sec.
+@I [HLS-100] Command 'create_clock' returned 0; elapsed 0Total elapsed time: 0.279 sec.
+@I [HLS-100] Command "config_rtl -reset_level low "
+@I [HLS-100] Command 'config_rtl' returned 0; elapsed 0Total elapsed time: 0.279 sec.
+@I [HLS-100] Command "csynth_design "
+@I [HLS-100] Command "elaborate -effort=medium -skip_syncheck=0 -lm=0 -skip_cdt=0 -skip_transform=0 -ng=0 -g=0 -opt_fp=0 "
+@I [HLS-10] Analyzing design file '/home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_accel_v4/SDRelease/_sds/vhls/src/correlation_accel_v4.cpp' ... 
+@0 [HLS-0] Analyzing design file '/home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_accel_v4/SDRelease/_sds/vhls/src/correlation_accel_v4.cpp' ... 
+@I [HLS-0] Compiling one TU...
+@I [HLS-0] 
+Checking before pre-process: exec clang -fno-limit-debug-info -gcc-toolchain "/opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/lnx64/tools/gcc" -hls  -I/home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_accel_v4/src -Wall -O3 -fmessage-length=0 -MMD -MP -D__SDSCC__ -I/home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_accel_v4/src -D__SDSVHLS__ -I/home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_accel_v4/SDRelease -w  -D "__asm__(...)=" -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit  -fno-threadsafe-statics -fno-use-cxa-atexit   -I "/opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/lnx64/tools/systemc/include" -I "/opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/include" -I "/opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/include/ap_sysc" -fexceptions "/home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_accel_v4/SDRelease/_sds/vhls/src/correlation_accel_v4.cpp"  -o "/home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_accel_v4/SDRelease/_sds/vhls/correlation_accel_v4/solution/.autopilot/db/correlation_accel_v4.pp.00.o"
+
+@I [HLS-0] Syntax Checker time: 0 seconds per iteration
+@I [HLS-0] 
+Source preprocessing: exec clang -fno-limit-debug-info -gcc-toolchain "/opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/lnx64/tools/gcc" -hls -fno-exceptions  -D__llvm__  -CC -E "/home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_accel_v4/SDRelease/_sds/vhls/src/correlation_accel_v4.cpp"   -I/home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_accel_v4/src -Wall -O3 -fmessage-length=0 -MMD -MP -D__SDSCC__ -I/home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_accel_v4/src -D__SDSVHLS__ -I/home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_accel_v4/SDRelease -w  -D "__asm__(...)=" -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit  -fno-threadsafe-statics -fno-use-cxa-atexit -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "/opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/common/technology/autopilot" -I "/opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D "__asm__(...)="  -o "/home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_accel_v4/SDRelease/_sds/vhls/correlation_accel_v4/solution/.autopilot/db/correlation_accel_v4.pp.0.cpp"
+
+@I [HLS-0] GCC PP time: 0 seconds per iteration
+@I [HLS-100] Command "list_core -type functional_unit "
+@I [HLS-100] Command 'list_core' returned 0; elapsed 0Total elapsed time: 0.940 sec.
+@I [HLS-0] Marker-Pragma convertor: /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_accel_v4/SDRelease/_sds/vhls/correlation_accel_v4/solution/.autopilot/db/correlation_accel_v4.pp.0.cpp /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_accel_v4/SDRelease/_sds/vhls/correlation_accel_v4/solution/.autopilot/db/correlation_accel_v4.pp.0.cpp.ap-line.cpp /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_accel_v4/SDRelease/_sds/vhls/correlation_accel_v4/solution/.autopilot/db/correlation_accel_v4.pp.0.cpp.ap-line.cpp.CXX 1
+@I [HLS-0] 
+Source processor: exec /opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/tps/lnx64/jre/bin/java -Xmx512m -classpath   "/opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/lib/classes/autopilot.sourceprocessor.jar:/opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/lib/classes/org.eclipse.cdt.core_5.3.0.xilinx_patch.jar:/opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/lib/classes/org.eclipse.core.runtime_3.7.0.v20110110.jar:/opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/lib/classes/org.eclipse.equinox.common_3.6.0.v20110523.jar:/opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/lib/classes/com.ibm.icu_4.4.2.v20110208.jar:/opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/lib/classes/jargs.jar:/opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/lnx64/tools/eclipse/plugins/org.eclipse.emf.common_2.10.0.v20140514-1158.jar:/opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/lnx64/tools/eclipse/plugins/org.eclipse.emf.ecore_2.10.0.v20140514-1158.jar:/opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/lnx64/tools/eclipse/plugins/org.eclipse.emf.ecore.xmi_2.10.0.v20140514-1158.jar:/opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/lnx64/tools/eclipse/plugins/com.autoesl.autopilot.ui.directiveFileModel_1.0.0.jar:/opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/lnx64/tools/eclipse/plugins/com.autoesl.autopilot.ui.common_1.0.0.jar"  autopilot.sourceprocessor.CParser  "/home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_accel_v4/SDRelease/_sds/vhls/correlation_accel_v4/solution/.autopilot/db/correlation_accel_v4.pp.0.cpp.ap-line.cpp"  -m "correlation_accel_v4" -o "/home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_accel_v4/SDRelease/_sds/vhls/correlation_accel_v4/solution/.autopilot/db/correlation_accel_v4.pp.0.cpp.ap-cdt.cpp" --ad --pc --pp --directive /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_accel_v4/SDRelease/_sds/vhls/correlation_accel_v4/solution/solution.directive --source /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_accel_v4/SDRelease/_sds/vhls/src/correlation_accel_v4.cpp --error /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_accel_v4/SDRelease/_sds/vhls/correlation_accel_v4/solution/.autopilot/db --funcunit "AddSub AddSub_DSP AddSubnS DAddSub_fulldsp DAddSub_nodsp DDiv DExp_fulldsp DExp_meddsp DExp_nodsp DLog_fulldsp DLog_meddsp DLog_nodsp DMul_fulldsp DMul_maxdsp DMul_meddsp DMul_nodsp DRSqrt DRecip DSqrt DivnS FAddSub_fulldsp FAddSub_nodsp FDiv FExp_fulldsp FExp_meddsp FExp_nodsp FLog_fulldsp FLog_meddsp FLog_nodsp FMul_fulldsp FMul_maxdsp FMul_meddsp FMul_nodsp FRSqrt_fulldsp FRSqrt_nodsp FRecip_fulldsp FRecip_nodsp FSqrt Mul Mul2S Mul3S Mul4S Mul5S Mul6S MulnS" --ve --vetcl /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_accel_v4/SDRelease/_sds/vhls/correlation_accel_v4/solution/.autopilot/db --lp --ca --es --gf --df --pd --p2d /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_accel_v4/SDRelease/_sds/vhls/correlation_accel_v4/solution/.autopilot/db --sd --scff /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_accel_v4/SDRelease/_sds/vhls/correlation_accel_v4/solution/.autopilot/db/.systemc_flag
+
+@I [HLS-0] Error:Syntax error in source:for (__decltype(__n + 0) __niter = __n;
+Error:Missing ; in source:t
+Error:Syntax error in source:)
+ *__first = __value;
+Error:Syntax error in source:for (__decltype(__n + 0) __niter = __n;
+Error:Missing ; in source:t
+Error:Syntax error in source:)
+ *__first = __tmp;
+@I [HLS-0] Marker-Pragma convertor: /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_accel_v4/SDRelease/_sds/vhls/correlation_accel_v4/solution/.autopilot/db/correlation_accel_v4.pp.0.cpp.ap-cdt.cpp /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_accel_v4/SDRelease/_sds/vhls/correlation_accel_v4/solution/.autopilot/db/correlation_accel_v4.pragma.0.cpp /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_accel_v4/SDRelease/_sds/vhls/correlation_accel_v4/solution/.autopilot/db/correlation_accel_v4.pragma.0.cpp.ap-line.CXX 0
+@I [HLS-100] Command "source /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_accel_v4/SDRelease/_sds/vhls/correlation_accel_v4/solution/.autopilot/db/pragma.status.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 33.209 sec.
+@I [HLS-0] CDT processor time: 32 seconds per iteration
+@I [HLS-0] Pragma handling time: 0 seconds per iteration
+@I [HLS-0] 
+Source preprocessing: exec clang -fno-limit-debug-info -gcc-toolchain "/opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/lnx64/tools/gcc" -hls -fno-exceptions  -D__llvm__  -CC -E "/home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_accel_v4/SDRelease/_sds/vhls/correlation_accel_v4/solution/.autopilot/db/correlation_accel_v4.pragma.1.cpp"   -I/home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_accel_v4/src -Wall -O3 -fmessage-length=0 -MMD -MP -D__SDSCC__ -I/home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_accel_v4/src -D__SDSVHLS__ -I/home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_accel_v4/SDRelease -w  -D "__asm__(...)=" -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit  -fno-threadsafe-statics -fno-use-cxa-atexit -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "/opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/common/technology/autopilot" -I "/opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D "__asm__(...)="  -o "/home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_accel_v4/SDRelease/_sds/vhls/correlation_accel_v4/solution/.autopilot/db/correlation_accel_v4.pragma.2.cpp"
+
+@I [HLS-0] exec clang -fno-limit-debug-info -gcc-toolchain /opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/lnx64/tools/gcc -hls -fno-exceptions  -D__llvm__  -w  "/home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_accel_v4/SDRelease/_sds/vhls/correlation_accel_v4/solution/.autopilot/db/correlation_accel_v4.pragma.2.cpp"  -I/home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_accel_v4/src -Wall -O3 -fmessage-length=0 -MMD -MP -D__SDSCC__ -I/home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_accel_v4/src -D__SDSVHLS__ -I/home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_accel_v4/SDRelease -w  -D "__asm__(...)=" -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "/opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/common/technology/autopilot" -I "/opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -g -o "/home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_accel_v4/SDRelease/_sds/vhls/correlation_accel_v4/solution/.autopilot/db/correlation_accel_v4.g.bc"
+@I [HLS-100] Command "source /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_accel_v4/SDRelease/_sds/vhls/correlation_accel_v4/solution/.autopilot/db/ve_warning.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 34.183 sec.
+@I [HLS-10] Validating synthesis directives ...
+@0 [HLS-0] Validating synthesis directives ...
+@I [HLS-100] Command "source /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_accel_v4/SDRelease/_sds/vhls/correlation_accel_v4/solution/.autopilot/db/pragma.status.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 34.183 sec.
+@I [HLS-0] Linking all ...
+@I [HLS-0] exec llvm-ld  "/home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_accel_v4/SDRelease/_sds/vhls/correlation_accel_v4/solution/.autopilot/db/correlation_accel_v4.bc"  -disable-opt  -L/opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/lnx64/lib -lm_basic -o "/home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_accel_v4/SDRelease/_sds/vhls/correlation_accel_v4/solution/.autopilot/db/a.o.pre"
+@I [HLS-0] Link time: 0 seconds per iteration
+@I [HLS-0] Linking all ...
+@I [HLS-0] exec llvm-ld  "/home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_accel_v4/SDRelease/_sds/vhls/correlation_accel_v4/solution/.autopilot/db/correlation_accel_v4.g.bc"  -disable-opt  -L/opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/lnx64/lib -lm_basic -o "/home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_accel_v4/SDRelease/_sds/vhls/correlation_accel_v4/solution/.autopilot/db/a.g.pre"
+@I [HLS-0] Link time: 0 seconds per iteration
+@I [HLS-100] Command "opt_and_import_c a -opt_level=2 -skip_syncheck=0 -ng=0 "
+@I [HLS-100] Command "cleanup_all_models "
+@I [HLS-100] Command 'cleanup_all_models' returned 0; elapsed 0Total elapsed time: 34.504 sec.
+@I [HLS-10] Starting code transformations ...
+@0 [HLS-0] Starting code transformations ...
+@I [HLS-0] std xform: transform -hls -share-std-xform -always-inline -promote-dbg-pointer  -interface-preproc  -scalarrepl -mem2reg -keep-read-access -instcombine -dce  -promote-dbg-pointer  -bitop-raise  -indvars -loop-simplify -xunroll  -constprop -instcombine -simplifycfg -indvars  -simplifycfg -dce -globaldce  -basicaa  -simplifycfg -mem2reg -globalopt  -global-constprop -deadargelim -instcombine -simplifycfg  -prune-eh -simplifycfg  -scalarrepl -instcombine -reassociate -licm  -simplifycfg -loop-simplify -indvars -instcombine  -simplifycfg -mem2reg -loop-simplify -indvars -instcombine  -gvn -gvn -instcombine -adce  -break-crit-edges  -simplifycfg -loop-delete  -global-array-opt -dce -dse -adce  -find-syn-modules -top correlation_accel_v4  -deadargelim  -mem2reg -instcombine -dce  -presyn-prepare -auto-rom-infer  -interface-preproc  -syn-check -check-rec-only  -find-region -simplifycfg -func-extr -function-inline  -mem2reg -instcombine -dce   -gvn -globaldce -adce -adse  -constprop -instcombine -bit-constprop  -instcombine -dce -simplifycfg -bitop-raise  -simplifycfg -dce -loop-delete -reassociate  -globalopt -global-privatize -mem2reg -dce  -global-constprop -pointer-simplify -constprop -dce  -func-inst -deadargelim  -promote-dbg-pointer  -norm-name   /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_accel_v4/SDRelease/_sds/vhls/correlation_accel_v4/solution/.autopilot/db/a.g.0.bc -o /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_accel_v4/SDRelease/_sds/vhls/correlation_accel_v4/solution/.autopilot/db/a.g.1.bc -f  -phase std-opt
+@I [HLS-0] Std xform time: 0 seconds per iteration
+@I [HLS-10] Checking synthesizability ...
+@0 [HLS-0] Checking synthesizability ...
+@I [HLS-0] syn check 1/2: transform -hls -syn-check -check-rec-only -disaggr -scalarrepl -norm-name -dce  -mem2reg -instcombine -function-uniquify  -directive-preproc -function-uniquify -directive-preproc -mem2reg -dse -dce -auto-rom-infer -dce  -array-normalize -instcombine -dce  -array-seg-normalize -instcombine -dce  -array-flatten -instcombine -dce  -array-burst -dce  -deadargelim -promote-global-argument  -function-inline -dce  -doublePtrSimplify -doublePtrElim -dce  -doublePtrSimplify -promote-dbg-pointer  -dce -scalarrepl -dse -adse -instcombine  -ptrLegalization  -simplifycfg -dce -instcombine  -pointer-simplify -ptrArgReplace -dce -instcombine   -disaggr -scalarrepl -norm-name -dce  -mem2reg -instcombine -ptrLegalization   -simplifycfg -deadargelim  -instcombine -dce -inst-simplify -function-uniquify  -directive-preproc -function-uniquify -directive-preproc -mem2reg -dse -dce  -globaldce    /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_accel_v4/SDRelease/_sds/vhls/correlation_accel_v4/solution/.autopilot/db/a.g.1.bc -o /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_accel_v4/SDRelease/_sds/vhls/correlation_accel_v4/solution/.autopilot/db/a.g.2.prechk.bc -f
+@I [XFORM-602] Inlining function 'weight_rom_init' into 'frontEnd' (/home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_accel_v4/SDRelease/_sds/vhls/src/correlation_accel_v4.cpp:391) automatically.
+@I [HLS-0] Syn check 1/2 time: 1 seconds per iteration
+@I [HLS-0] syn check 2/2: transform -syn-check   /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_accel_v4/SDRelease/_sds/vhls/correlation_accel_v4/solution/.autopilot/db/a.g.2.prechk.bc -o /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_accel_v4/SDRelease/_sds/vhls/correlation_accel_v4/solution/.autopilot/db/a.g.2.bc -f  -phase syn-check
+@I [HLS-0] Syn check 2/2 time: 0 seconds per iteration
+@I [HLS-0] Compiler optimizing ...
+@I [HLS-0] Share syncheck's 1.bc for syn flow: copy /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_accel_v4/SDRelease/_sds/vhls/correlation_accel_v4/solution/.autopilot/db/a.g.1.bc to /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_accel_v4/SDRelease/_sds/vhls/correlation_accel_v4/solution/.autopilot/db/a.o.1.bc
+@I [HLS-0] presyn 1: transform -hls -tmp /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_accel_v4/SDRelease/_sds/vhls/correlation_accel_v4/solution/.autopilot/db -type-info -function-uniquify  -directive-preproc -function-uniquify -directive-preproc -mem2reg -dse -dce  -disaggr -scalarrepl -norm-name -deadargelim  -mem2reg -instcombine -dce -auto-rom-infer -dce -function-uniquify  -directive-preproc -function-uniquify -directive-preproc -mem2reg -dse -dce  -func-buffer -dce -array-normalize  -func-legal -instcombine -gvn -constprop -dce   -ptrArgReplace -mem2reg -instcombine -dce  -array-seg-normalize -deadargelim  -instcombine -dce  -pointer-simplify -dce  -port-alignment -dce  -interface-preproc  -data-pack -instcombine -dce   -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn  -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce  -loop-simplify -indvars -instcombine  -gvn -loop-simplify -mem2reg -dce -simplifycfg  -find-region -instcombine  -auto-loop-pipeline  -inst-simplify  -interface-preproc  -indvars -auto-loop-unroll -loop-simplify -loop-bound -xunroll  -constprop -instcombine -simplifycfg -indvars  -simplifycfg -dce -globaldce  -gvn -disable-agg-range -inst-simplify  -constprop -simplifycfg -dce  -pointer-simplify -dce  -globalopt -constprop -dce  -array-promote -constprop -instcombine -dce -auto-par -instcombine -dce  -array-transform-check  -array-partition -instcombine -simplifycfg -dce  -ptrArgReplace -global-constprop -deadargelim -mem2reg  -func-legal -instcombine -dce -global-constprop -deadargelim -mem2reg  -instcombine -simplifycfg -dce  -array-reshape -instcombine -simplifycfg -dce   -mem-intrinsic-preproc -dce  -global-privatize  -mem2reg -globaldce  -promote-global-argument  -ptrArgReplace -mem2reg -instcombine -dce  -globalopt -mergereturn -simplify-global-access -mem2reg -dce  -pointer-simplify -dce  -functionattrs  -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn  -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce  -inst-simplify -dce -norm-name  -function-inline  -func-inst -constprop -instcombine -simplifycfg -dce  -func-legal -dce   -directive-preproc -function-uniquify -directive-preproc -mem2reg -dse -dce  -loop-bound  -arraycheck -bitwidthmin -on-by-dataflow  -loop-delete -instcombine -simplifycfg -dce -loop-simplify -simplifycfg -loop-stream -instcombine -simplifycfg -dce -globaldce  -funstream-prep -function-stream -dce -globaldce  -array-streaming -instcombine -simplifycfg -dce    -group-axi-access    -simplifycfg -dce -loop-delete  -norm-name  /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_accel_v4/SDRelease/_sds/vhls/correlation_accel_v4/solution/.autopilot/db/a.o.1.bc -o /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_accel_v4/SDRelease/_sds/vhls/correlation_accel_v4/solution/.autopilot/db/a.o.1.tmp.bc -f
+@I [XFORM-501] Unrolling loop 'RESET_REGISTERS' (/home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_accel_v4/SDRelease/_sds/vhls/src/correlation_accel_v4.cpp:667) in function 'midEnd' completely.
+@I [XFORM-101] Partitioning array 'shift_reg' (/home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_accel_v4/SDRelease/_sds/vhls/src/correlation_accel_v4.cpp:399) in dimension 1 completely.
+@I [XFORM-602] Inlining function 'weight_rom_init' into 'frontEnd' (/home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_accel_v4/SDRelease/_sds/vhls/src/correlation_accel_v4.cpp:391) automatically.
+@I [XFORM-712] Applying dataflow to function 'correlation_accel_v4' (/home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_accel_v4/SDRelease/_sds/vhls/src/correlation_accel_v4.cpp:34), detected/extracted 4 process function(s):
+	 'frontEnd'
+	 'midEnd'
+	 'midEnd.1'
+	 'backEnd'.
+@W [XFORM-124] Array 'out_correlation.data.V' (/home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_accel_v4/SDRelease/_sds/vhls/src/correlation_accel_v4.cpp:38) may have improper streaming access(es), possible reasons: (1) some entries are accessed more than once; (2) some entries are not used; (3) the entries are not accessed in sequential order.
+@W [XFORM-124] Array 'out_correlation.keep.V' (/home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_accel_v4/SDRelease/_sds/vhls/src/correlation_accel_v4.cpp:38) may have improper streaming access(es), possible reasons: (1) some entries are accessed more than once; (2) some entries are not used; (3) the entries are not accessed in sequential order.
+@W [XFORM-124] Array 'out_correlation.strb.V' (/home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_accel_v4/SDRelease/_sds/vhls/src/correlation_accel_v4.cpp:38) may have improper streaming access(es), possible reasons: (1) some entries are accessed more than once; (2) some entries are not used; (3) the entries are not accessed in sequential order.
+@W [XFORM-124] Array 'out_correlation.user.V' (/home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_accel_v4/SDRelease/_sds/vhls/src/correlation_accel_v4.cpp:38) may have improper streaming access(es), possible reasons: (1) some entries are accessed more than once; (2) some entries are not used; (3) the entries are not accessed in sequential order.
+@W [XFORM-124] Array 'out_correlation.last.V' (/home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_accel_v4/SDRelease/_sds/vhls/src/correlation_accel_v4.cpp:38) may have improper streaming access(es), possible reasons: (1) some entries are accessed more than once; (2) some entries are not used; (3) the entries are not accessed in sequential order.
+@W [XFORM-124] Array 'out_correlation.id.V' (/home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_accel_v4/SDRelease/_sds/vhls/src/correlation_accel_v4.cpp:38) may have improper streaming access(es), possible reasons: (1) some entries are accessed more than once; (2) some entries are not used; (3) the entries are not accessed in sequential order.
+@W [XFORM-124] Array 'out_correlation.dest.V' (/home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_accel_v4/SDRelease/_sds/vhls/src/correlation_accel_v4.cpp:38) may have improper streaming access(es), possible reasons: (1) some entries are accessed more than once; (2) some entries are not used; (3) the entries are not accessed in sequential order.
+@W [XFORM-124] Array 'in_indices.data.V' (/home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_accel_v4/SDRelease/_sds/vhls/src/correlation_accel_v4.cpp:37) may have improper streaming access(es), possible reasons: (1) some entries are accessed more than once; (2) some entries are not used; (3) the entries are not accessed in sequential order.
+@W [XFORM-124] Array 'in_indices.keep.V' (/home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_accel_v4/SDRelease/_sds/vhls/src/correlation_accel_v4.cpp:37) may have improper streaming access(es), possible reasons: (1) some entries are accessed more than once; (2) some entries are not used; (3) the entries are not accessed in sequential order.
+@W [XFORM-124] Array 'in_indices.strb.V' (/home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_accel_v4/SDRelease/_sds/vhls/src/correlation_accel_v4.cpp:37) may have improper streaming access(es), possible reasons: (1) some entries are accessed more than once; (2) some entries are not used; (3) the entries are not accessed in sequential order.
+@W [XFORM-124] Array 'in_indices.user.V' (/home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_accel_v4/SDRelease/_sds/vhls/src/correlation_accel_v4.cpp:37) may have improper streaming access(es), possible reasons: (1) some entries are accessed more than once; (2) some entries are not used; (3) the entries are not accessed in sequential order.
+@W [XFORM-124] Array 'in_indices.last.V' (/home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_accel_v4/SDRelease/_sds/vhls/src/correlation_accel_v4.cpp:37) may have improper streaming access(es), possible reasons: (1) some entries are accessed more than once; (2) some entries are not used; (3) the entries are not accessed in sequential order.
+@W [XFORM-124] Array 'in_indices.id.V' (/home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_accel_v4/SDRelease/_sds/vhls/src/correlation_accel_v4.cpp:37) may have improper streaming access(es), possible reasons: (1) some entries are accessed more than once; (2) some entries are not used; (3) the entries are not accessed in sequential order.
+@W [XFORM-124] Array 'in_indices.dest.V' (/home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_accel_v4/SDRelease/_sds/vhls/src/correlation_accel_v4.cpp:37) may have improper streaming access(es), possible reasons: (1) some entries are accessed more than once; (2) some entries are not used; (3) the entries are not accessed in sequential order.
+@I [HLS-0] Presyn 1 time: 2 seconds per iteration
+@I [HLS-0] presyn 2: transform -hls -keep-callgraph -scalarrepl -mem2reg  -port-alignment -dce  -indvars -loop-bound  -inst-simplify -instcombine -dce  -merge-array-access -mem2reg -dce  -clean-region -mergereturn -if-conv  -instcombine -dce -constprop  -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn  -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce  -scalarrepl -mem2reg  -global-constprop -deadargelim -deadargelim  -instcombine -dce -simplifycfg    -ptrArgReplace -mem2reg -function-inline  -mem2reg -instcombine -dce -expr-balance  -instcombine -dce  -bitwidthmin  -directive-preproc  -inst-rectify -instcombine -dce  -functionattrs  -constprop -instcombine -bit-constprop  -simplify-global-access  -globalopt -globaldce  -inst-simplify -instcombine -elimdeaddata -dce  -loop-delete -simplifycfg   -norm-name /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_accel_v4/SDRelease/_sds/vhls/correlation_accel_v4/solution/.autopilot/db/a.o.1.tmp.bc -o /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_accel_v4/SDRelease/_sds/vhls/correlation_accel_v4/solution/.autopilot/db/a.o.2.bc -f  -phase presyn
+@I [HLS-0] Presyn 2 time: 1 seconds per iteration
+@I [HLS-0] build ssdm: transform -hls -function-uniquify -auto-function-inline  -loop-simplify -indvars -licm -loop-dep  -loop-bound -licm -loop-simplify -flattenloopnest  -array-flatten -gvn -instcombine -dce  -array-map -dce -func-legal  -gvn -adce -instcombine -cfgopt -simplifycfg -loop-simplify   -array-burst -promote-global-argument -dce  -axi4-lower -array-seg-normalize  -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -gvn -gvn  -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -dse -adse -adce -licm  -inst-simplify -dce  -globaldce -array-streaming -instcombine  -dce   -deadargelim -doublePtrSimplify  -doublePtrElim -dce -doublePtrSimplify -promote-dbg-pointer  -dce -scalarrepl -mem2reg -disaggr -norm-name -mem2reg  -instcombine  -dse -adse -adce -ptrLegalization -dce -auto-rom-infer -array-flatten -dce -instcombine  -loop-rot -constprop -cfgopt -simplifycfg -indvars -pointer-simplify -dce -loop-bound  -loop-simplify -loop-preproc  -constprop -gvn -mem2reg -instcombine -dce  -loop-merge -dce  -bitwidthmin  -interface-preproc -interface-gen  -directive-preproc -inst-simplify -dce  -gvn -mem2reg -instcombine -dce -adse  -loop-bound  -instcombine -cfgopt -simplifycfg -loop-simplify  -clean-region -io-protocol  -find-region -mem2reg  -loop-simplify -phi-opt -bitop-raise  -inst-simplify -inst-rectify -instcombine -adce -deadargelim  -cfgopt -simplifycfg -strip-dead-prototypes  -interface-lower -bitop-lower -intrinsic-lower  -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa  -inst-simplify -simplifycfg   -mergereturn -inst-simplify -inst-rectify  -dce -bitop-lower  -loop-rewind -pointer-simplify -dce -cfgopt  -norm-name -legalize -read-loop-dep -dce -bitwidth   -cdfg-build  /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_accel_v4/SDRelease/_sds/vhls/correlation_accel_v4/solution/.autopilot/db/a.o.2.bc -o /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_accel_v4/SDRelease/_sds/vhls/correlation_accel_v4/solution/.autopilot/db/a.o.3.bc -f  -phase build-ssdm
+@W [XFORM-542] Cannot flatten a loop nest 'Loop-1' (/home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_accel_v4/SDRelease/_sds/vhls/src/correlation_accel_v4.cpp:639:25) in function 'midEnd' : 
+               more than one sub loop.
+@W [XFORM-542] Cannot flatten a loop nest 'Loop-1' (/home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_accel_v4/SDRelease/_sds/vhls/src/correlation_accel_v4.cpp:639:25) in function 'midEnd.1' : 
+               more than one sub loop.
+@W [XFORM-542] Cannot flatten a loop nest 'Loop-4' (/home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_accel_v4/SDRelease/_sds/vhls/src/correlation_accel_v4.cpp:467:26) in function 'frontEnd' : 
+               the outer loop is not a perfect loop.
+@I [HLS-0] Build ssdm time: 1 seconds per iteration
+@I [HLS-0] Finish building internal data model.
+@I [HLS-100] Command 'opt_and_import_c' returned 0; elapsed 6.81Total elapsed time: 41.973 sec.
+@I [HLS-111] Elapsed time: 7.82 seconds; current memory usage: 110 MB.
+@I [HLS-100] Command 'elaborate' returned 0; elapsed 7.56Total elapsed time: 41.973 sec.
+@I [HLS-100] Command "autosyn "
+@I [HLS-10] Starting hardware synthesis ...
+@0 [HLS-0] Starting hardware synthesis ...
+@I [HLS-0] Synthesizing C/C++ design ...
+@I [HLS-10] Synthesizing 'correlation_accel_v4' ...
+@0 [HLS-0] Synthesizing 'correlation_accel_v4' ...
+@I [HLS-100] Command "ap_set_top_model correlation_accel_v4 "
+@W [SYN-103] Legalizing function name 'correlation_accel_v4_midEnd.1' to 'correlation_accel_v4_midEnd_1'.
+@I [HLS-100] Command 'ap_set_top_model' returned 0; elapsed 0Total elapsed time: 41.974 sec.
+@I [HLS-100] Command "get_model_list correlation_accel_v4 -filter all-wo-channel -topdown "
+@I [HLS-100] Command 'get_model_list' returned 0; elapsed 0Total elapsed time: 41.974 sec.
+@I [HLS-100] Command "preproc_iomode -model correlation_accel_v4 "
+@I [HLS-100] Command 'preproc_iomode' returned 0; elapsed 0Total elapsed time: 41.975 sec.
+@I [HLS-100] Command "preproc_iomode -model correlation_accel_v4_backEnd "
+@I [HLS-100] Command 'preproc_iomode' returned 0; elapsed 0Total elapsed time: 41.975 sec.
+@I [HLS-100] Command "preproc_iomode -model correlation_accel_v4_midEnd.1 "
+@I [HLS-100] Command 'preproc_iomode' returned 0; elapsed 0Total elapsed time: 41.975 sec.
+@I [HLS-100] Command "preproc_iomode -model correlation_accel_v4_midEnd "
+@I [HLS-100] Command 'preproc_iomode' returned 0; elapsed 0Total elapsed time: 41.975 sec.
+@I [HLS-100] Command "preproc_iomode -model correlation_accel_v4_frontEnd "
+@I [HLS-100] Command 'preproc_iomode' returned 0; elapsed 0Total elapsed time: 41.975 sec.
+@I [HLS-100] Command "get_model_list correlation_accel_v4 -filter all-wo-channel "
+@I [HLS-100] Command 'get_model_list' returned 0; elapsed 0Total elapsed time: 41.975 sec.
+@I [HLS-0] Model list for configure: correlation_accel_v4_frontEnd correlation_accel_v4_midEnd correlation_accel_v4_midEnd.1 correlation_accel_v4_backEnd correlation_accel_v4
+@I [HLS-0] Configuring Module : correlation_accel_v4_frontEnd ...
+@I [HLS-100] Command "set_default_model correlation_accel_v4_frontEnd "
+@I [HLS-100] Command 'set_default_model' returned 0; elapsed 0Total elapsed time: 41.976 sec.
+@I [HLS-100] Command "apply_spec_resource_limit correlation_accel_v4_frontEnd "
+@I [HLS-100] Command 'apply_spec_resource_limit' returned 0; elapsed 0Total elapsed time: 41.976 sec.
+@I [HLS-0] Configuring Module : correlation_accel_v4_midEnd ...
+@I [HLS-100] Command "set_default_model correlation_accel_v4_midEnd "
+@I [HLS-100] Command 'set_default_model' returned 0; elapsed 0Total elapsed time: 41.976 sec.
+@I [HLS-100] Command "apply_spec_resource_limit correlation_accel_v4_midEnd "
+@I [HLS-100] Command 'apply_spec_resource_limit' returned 0; elapsed 0Total elapsed time: 41.976 sec.
+@I [HLS-0] Configuring Module : correlation_accel_v4_midEnd.1 ...
+@I [HLS-100] Command "set_default_model correlation_accel_v4_midEnd.1 "
+@I [HLS-100] Command 'set_default_model' returned 0; elapsed 0Total elapsed time: 41.976 sec.
+@I [HLS-100] Command "apply_spec_resource_limit correlation_accel_v4_midEnd.1 "
+@I [HLS-100] Command 'apply_spec_resource_limit' returned 0; elapsed 0Total elapsed time: 41.976 sec.
+@I [HLS-0] Configuring Module : correlation_accel_v4_backEnd ...
+@I [HLS-100] Command "set_default_model correlation_accel_v4_backEnd "
+@I [HLS-100] Command 'set_default_model' returned 0; elapsed 0Total elapsed time: 41.976 sec.
+@I [HLS-100] Command "apply_spec_resource_limit correlation_accel_v4_backEnd "
+@I [HLS-100] Command 'apply_spec_resource_limit' returned 0; elapsed 0Total elapsed time: 41.976 sec.
+@I [HLS-0] Configuring Module : correlation_accel_v4 ...
+@I [HLS-100] Command "set_default_model correlation_accel_v4 "
+@I [HLS-100] Command 'set_default_model' returned 0; elapsed 0Total elapsed time: 41.976 sec.
+@I [HLS-100] Command "apply_spec_resource_limit correlation_accel_v4 "
+@I [HLS-100] Command 'apply_spec_resource_limit' returned 0; elapsed 0Total elapsed time: 41.976 sec.
+@I [HLS-0] Model list for preprocess: correlation_accel_v4_frontEnd correlation_accel_v4_midEnd correlation_accel_v4_midEnd.1 correlation_accel_v4_backEnd correlation_accel_v4
+@I [HLS-0] Preprocessing Module: correlation_accel_v4_frontEnd ...
+@I [HLS-100] Command "set_default_model correlation_accel_v4_frontEnd "
+@I [HLS-100] Command 'set_default_model' returned 0; elapsed 0Total elapsed time: 41.976 sec.
+@I [HLS-100] Command "cdfg_preprocess -model correlation_accel_v4_frontEnd "
+@I [HLS-100] Command 'cdfg_preprocess' returned 0; elapsed 0.02Total elapsed time: 41.999 sec.
+@I [HLS-100] Command "rtl_gen_preprocess correlation_accel_v4_frontEnd "
+@I [HLS-100] Command 'rtl_gen_preprocess' returned 0; elapsed 0Total elapsed time: 41.999 sec.
+@I [HLS-0] Preprocessing Module: correlation_accel_v4_midEnd ...
+@I [HLS-100] Command "set_default_model correlation_accel_v4_midEnd "
+@I [HLS-100] Command 'set_default_model' returned 0; elapsed 0Total elapsed time: 41.999 sec.
+@I [HLS-100] Command "cdfg_preprocess -model correlation_accel_v4_midEnd "
+@I [HLS-100] Command 'cdfg_preprocess' returned 0; elapsed 0Total elapsed time: 42.1 sec.
+@I [HLS-100] Command "rtl_gen_preprocess correlation_accel_v4_midEnd "
+@I [HLS-100] Command 'rtl_gen_preprocess' returned 0; elapsed 0Total elapsed time: 42.2 sec.
+@I [HLS-0] Preprocessing Module: correlation_accel_v4_midEnd.1 ...
+@I [HLS-100] Command "set_default_model correlation_accel_v4_midEnd.1 "
+@I [HLS-100] Command 'set_default_model' returned 0; elapsed 0Total elapsed time: 42.2 sec.
+@I [HLS-100] Command "cdfg_preprocess -model correlation_accel_v4_midEnd.1 "
+@I [HLS-100] Command 'cdfg_preprocess' returned 0; elapsed 0Total elapsed time: 42.4 sec.
+@I [HLS-100] Command "rtl_gen_preprocess correlation_accel_v4_midEnd.1 "
+@I [HLS-100] Command 'rtl_gen_preprocess' returned 0; elapsed 0Total elapsed time: 42.4 sec.
+@I [HLS-0] Preprocessing Module: correlation_accel_v4_backEnd ...
+@I [HLS-100] Command "set_default_model correlation_accel_v4_backEnd "
+@I [HLS-100] Command 'set_default_model' returned 0; elapsed 0Total elapsed time: 42.4 sec.
+@I [HLS-100] Command "cdfg_preprocess -model correlation_accel_v4_backEnd "
+@I [HLS-100] Command 'cdfg_preprocess' returned 0; elapsed 0Total elapsed time: 42.7 sec.
+@I [HLS-100] Command "rtl_gen_preprocess correlation_accel_v4_backEnd "
+@I [HLS-100] Command 'rtl_gen_preprocess' returned 0; elapsed 0Total elapsed time: 42.7 sec.
+@I [HLS-0] Preprocessing Module: correlation_accel_v4 ...
+@I [HLS-100] Command "set_default_model correlation_accel_v4 "
+@I [HLS-100] Command 'set_default_model' returned 0; elapsed 0Total elapsed time: 42.7 sec.
+@I [HLS-100] Command "cdfg_preprocess -model correlation_accel_v4 "
+@I [HLS-100] Command 'cdfg_preprocess' returned 0; elapsed 0.01Total elapsed time: 42.8 sec.
+@I [HLS-100] Command "rtl_gen_preprocess correlation_accel_v4 "
+@I [HLS-100] Command 'rtl_gen_preprocess' returned 0; elapsed 0Total elapsed time: 42.8 sec.
+@I [HLS-0] Model list for synthesis: correlation_accel_v4_frontEnd correlation_accel_v4_midEnd correlation_accel_v4_midEnd.1 correlation_accel_v4_backEnd correlation_accel_v4
+@I [HLS-10] ----------------------------------------------------------------
+@0 [HLS-0] ----------------------------------------------------------------
+@I [HLS-10] -- Scheduling module 'correlation_accel_v4_frontEnd' 
+@0 [HLS-0] -- Scheduling module 'correlation_accel_v4_frontEnd' 
+@I [HLS-10] ----------------------------------------------------------------
+@0 [HLS-0] ----------------------------------------------------------------
+@I [HLS-100] Command "set_default_model correlation_accel_v4_frontEnd "
+@I [HLS-100] Command 'set_default_model' returned 0; elapsed 0Total elapsed time: 42.9 sec.
+@I [HLS-100] Command "schedule -model correlation_accel_v4_frontEnd "
+@I [SCHED-11] Starting scheduling ...
+@I [SCHED-61] Pipelining loop 'LOOP_FIRST_INDEX'.
+@I [SCHED-61] Pipelining result: Target II: 1, Final II: 1, Depth: 31.
+@I [SCHED-61] Pipelining loop 'ACCUMULATION_LOOP_FLOATING_INDEX'.
+@I [SCHED-61] Pipelining result: Target II: 1, Final II: 1, Depth: 39.
+@I [SCHED-11] Finished scheduling.
+@I [HLS-100] Command 'schedule' returned 0; elapsed 0.21Total elapsed time: 42.315 sec.
+@I [HLS-111] Elapsed time: 0.24 seconds; current memory usage: 111 MB.
+@I [HLS-100] Command "report -o /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_accel_v4/SDRelease/_sds/vhls/correlation_accel_v4/solution/.autopilot/db/correlation_accel_v4_frontEnd.verbose.sched.rpt -verbose -f "
+@I [HLS-100] Command 'report' returned 0; elapsed 0.01Total elapsed time: 42.339 sec.
+@I [HLS-100] Command "db_write -o /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_accel_v4/SDRelease/_sds/vhls/correlation_accel_v4/solution/.autopilot/db/correlation_accel_v4_frontEnd.sched.adb -f "
+@I [HLS-100] Command 'db_write' returned 0; elapsed 0.02Total elapsed time: 42.368 sec.
+@I [HLS-0] Finish scheduling correlation_accel_v4_frontEnd.
+@I [HLS-10] ----------------------------------------------------------------
+@0 [HLS-0] ----------------------------------------------------------------
+@I [HLS-10] -- Exploring micro-architecture for module 'correlation_accel_v4_frontEnd' 
+@0 [HLS-0] -- Exploring micro-architecture for module 'correlation_accel_v4_frontEnd' 
+@I [HLS-10] ----------------------------------------------------------------
+@0 [HLS-0] ----------------------------------------------------------------
+@I [HLS-100] Command "set_default_model correlation_accel_v4_frontEnd "
+@I [HLS-100] Command 'set_default_model' returned 0; elapsed 0Total elapsed time: 42.369 sec.
+@I [HLS-100] Command "bind -model correlation_accel_v4_frontEnd "
+@I [BIND-110] clear=
+@I [BIND-110] debug=
+@I [BIND-110] drf=
+@I [BIND-110] effort=
+@I [BIND-110] fast_refine=
+@I [BIND-110] fu_weight=[ 0.0 -- 1.0 ]
+@I [BIND-110] global_opt=
+@I [BIND-110] gsearch=
+@I [BIND-110] help=
+@I [BIND-110] help-hidden=
+@I [BIND-110] min_mem_port=
+@I [BIND-110] min_op=
+@I [BIND-110] minreg=
+@I [BIND-110] ml=
+@I [BIND-110] model=correlation_accel_v4_frontEnd
+@I [BIND-110] no_false_path=
+@I [BIND-110] no_min_op=
+@I [BIND-110] normalize=
+@I [BIND-110] quiet=
+@I [BIND-110] refine=
+@I [BIND-110] reg_weight=[ 0.0 -- 1.0 ]
+@I [BIND-110] search=
+@I [BIND-110] tight_delay=
+@I [BIND-110] verbose=
+@I [BIND-110] wFF=
+@I [BIND-110] wFU=
+@I [BIND-110] wMUX=
+@I [BIND-110] wNET=
+@I [BIND-100] Starting micro-architecture generation ...
+@I [BIND-101] Performing variable lifetime analysis.
+@I [BIND-101] Exploring resource sharing.
+@I [BIND-101] Binding ...
+@I [BIND-100] Finished micro-architecture generation.
+@I [HLS-100] Command 'bind' returned 0; elapsed 0.01Total elapsed time: 42.387 sec.
+@I [HLS-111] Elapsed time: 0.04 seconds; current memory usage: 112 MB.
+@I [HLS-100] Command "report -o /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_accel_v4/SDRelease/_sds/vhls/correlation_accel_v4/solution/.autopilot/db/correlation_accel_v4_frontEnd.verbose.bind.rpt -verbose -f "
+@I [HLS-100] Command 'report' returned 0; elapsed 0.02Total elapsed time: 42.414 sec.
+@I [HLS-100] Command "db_write -o /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_accel_v4/SDRelease/_sds/vhls/correlation_accel_v4/solution/.autopilot/db/correlation_accel_v4_frontEnd.bind.adb -f "
+@I [HLS-100] Command 'db_write' returned 0; elapsed 0.03Total elapsed time: 42.434 sec.
+@I [HLS-0] Finish binding correlation_accel_v4_frontEnd.
+@I [HLS-10] ----------------------------------------------------------------
+@0 [HLS-0] ----------------------------------------------------------------
+@I [HLS-10] -- Scheduling module 'correlation_accel_v4_midEnd' 
+@0 [HLS-0] -- Scheduling module 'correlation_accel_v4_midEnd' 
+@I [HLS-10] ----------------------------------------------------------------
+@0 [HLS-0] ----------------------------------------------------------------
+@I [HLS-100] Command "set_default_model correlation_accel_v4_midEnd "
+@I [HLS-100] Command 'set_default_model' returned 0; elapsed 0Total elapsed time: 42.434 sec.
+@I [HLS-100] Command "schedule -model correlation_accel_v4_midEnd "
+@I [SCHED-11] Starting scheduling ...
+@I [SCHED-61] Pipelining loop 'ACCUMULATIONS'.
+@I [SCHED-61] Pipelining result: Target II: 1, Final II: 1, Depth: 41.
+@I [SCHED-61] Pipelining loop 'LAST_ACCUM_LOOP'.
+@I [SCHED-61] Pipelining result: Target II: 5, Final II: 5, Depth: 10.
+@W [SCHED-21] Estimated clock period (9.65ns) exceeds the target (target clock period: 8.5ns, clock uncertainty: 1.06ns, effective delay budget: 7.44ns).
+@W [SCHED-21] The critical path consists of the following:
+	'load' operation ('acc_returnA_load', /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_accel_v4/SDRelease/_sds/vhls/src/correlation_accel_v4.cpp:722) on array 'acc_returnA' (2.39 ns)
+	'fadd' operation ('tmp_27_i', /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_accel_v4/SDRelease/_sds/vhls/src/correlation_accel_v4.cpp:722) (7.26 ns)
+@I [SCHED-11] Finished scheduling.
+@I [HLS-100] Command 'schedule' returned 0; elapsed 0.2Total elapsed time: 42.630 sec.
+@I [HLS-111] Elapsed time: 0.25 seconds; current memory usage: 113 MB.
+@I [HLS-100] Command "report -o /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_accel_v4/SDRelease/_sds/vhls/correlation_accel_v4/solution/.autopilot/db/correlation_accel_v4_midEnd.verbose.sched.rpt -verbose -f "
+@I [HLS-100] Command 'report' returned 0; elapsed 0.01Total elapsed time: 42.645 sec.
+@I [HLS-100] Command "db_write -o /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_accel_v4/SDRelease/_sds/vhls/correlation_accel_v4/solution/.autopilot/db/correlation_accel_v4_midEnd.sched.adb -f "
+@I [HLS-100] Command 'db_write' returned 0; elapsed 0.02Total elapsed time: 42.663 sec.
+@I [HLS-0] Finish scheduling correlation_accel_v4_midEnd.
+@I [HLS-10] ----------------------------------------------------------------
+@0 [HLS-0] ----------------------------------------------------------------
+@I [HLS-10] -- Exploring micro-architecture for module 'correlation_accel_v4_midEnd' 
+@0 [HLS-0] -- Exploring micro-architecture for module 'correlation_accel_v4_midEnd' 
+@I [HLS-10] ----------------------------------------------------------------
+@0 [HLS-0] ----------------------------------------------------------------
+@I [HLS-100] Command "set_default_model correlation_accel_v4_midEnd "
+@I [HLS-100] Command 'set_default_model' returned 0; elapsed 0Total elapsed time: 42.664 sec.
+@I [HLS-100] Command "bind -model correlation_accel_v4_midEnd "
+@I [BIND-110] clear=
+@I [BIND-110] debug=
+@I [BIND-110] drf=
+@I [BIND-110] effort=
+@I [BIND-110] fast_refine=
+@I [BIND-110] fu_weight=[ 0.0 -- 1.0 ]
+@I [BIND-110] global_opt=
+@I [BIND-110] gsearch=
+@I [BIND-110] help=
+@I [BIND-110] help-hidden=
+@I [BIND-110] min_mem_port=
+@I [BIND-110] min_op=
+@I [BIND-110] minreg=
+@I [BIND-110] ml=
+@I [BIND-110] model=correlation_accel_v4_midEnd
+@I [BIND-110] no_false_path=
+@I [BIND-110] no_min_op=
+@I [BIND-110] normalize=
+@I [BIND-110] quiet=
+@I [BIND-110] refine=
+@I [BIND-110] reg_weight=[ 0.0 -- 1.0 ]
+@I [BIND-110] search=
+@I [BIND-110] tight_delay=
+@I [BIND-110] verbose=
+@I [BIND-110] wFF=
+@I [BIND-110] wFU=
+@I [BIND-110] wMUX=
+@I [BIND-110] wNET=
+@I [BIND-100] Starting micro-architecture generation ...
+@I [BIND-101] Performing variable lifetime analysis.
+@I [BIND-101] Exploring resource sharing.
+@I [BIND-101] Binding ...
+@I [BIND-100] Finished micro-architecture generation.
+@I [HLS-100] Command 'bind' returned 0; elapsed 0.01Total elapsed time: 42.673 sec.
+@I [HLS-111] Elapsed time: 0.04 seconds; current memory usage: 114 MB.
+@I [HLS-100] Command "report -o /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_accel_v4/SDRelease/_sds/vhls/correlation_accel_v4/solution/.autopilot/db/correlation_accel_v4_midEnd.verbose.bind.rpt -verbose -f "
+@I [HLS-100] Command 'report' returned 0; elapsed 0.02Total elapsed time: 42.700 sec.
+@I [HLS-100] Command "db_write -o /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_accel_v4/SDRelease/_sds/vhls/correlation_accel_v4/solution/.autopilot/db/correlation_accel_v4_midEnd.bind.adb -f "
+@I [HLS-100] Command 'db_write' returned 0; elapsed 0.02Total elapsed time: 42.720 sec.
+@I [HLS-0] Finish binding correlation_accel_v4_midEnd.
+@I [HLS-10] ----------------------------------------------------------------
+@0 [HLS-0] ----------------------------------------------------------------
+@I [HLS-10] -- Scheduling module 'correlation_accel_v4_midEnd_1' 
+@0 [HLS-0] -- Scheduling module 'correlation_accel_v4_midEnd_1' 
+@I [HLS-10] ----------------------------------------------------------------
+@0 [HLS-0] ----------------------------------------------------------------
+@I [HLS-100] Command "set_default_model correlation_accel_v4_midEnd.1 "
+@I [HLS-100] Command 'set_default_model' returned 0; elapsed 0Total elapsed time: 42.721 sec.
+@I [HLS-100] Command "schedule -model correlation_accel_v4_midEnd.1 "
+@I [SCHED-11] Starting scheduling ...
+@I [SCHED-61] Pipelining loop 'ACCUMULATIONS'.
+@I [SCHED-61] Pipelining result: Target II: 1, Final II: 1, Depth: 41.
+@I [SCHED-61] Pipelining loop 'LAST_ACCUM_LOOP'.
+@I [SCHED-61] Pipelining result: Target II: 5, Final II: 5, Depth: 10.
+@W [SCHED-21] Estimated clock period (9.65ns) exceeds the target (target clock period: 8.5ns, clock uncertainty: 1.06ns, effective delay budget: 7.44ns).
+@W [SCHED-21] The critical path consists of the following:
+	'load' operation ('acc_returnA_load', /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_accel_v4/SDRelease/_sds/vhls/src/correlation_accel_v4.cpp:722) on array 'acc_returnA' (2.39 ns)
+	'fadd' operation ('tmp_27_i', /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_accel_v4/SDRelease/_sds/vhls/src/correlation_accel_v4.cpp:722) (7.26 ns)
+@I [SCHED-11] Finished scheduling.
+@I [HLS-100] Command 'schedule' returned 0; elapsed 0.19Total elapsed time: 42.908 sec.
+@I [HLS-111] Elapsed time: 0.23 seconds; current memory usage: 115 MB.
+@I [HLS-100] Command "report -o /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_accel_v4/SDRelease/_sds/vhls/correlation_accel_v4/solution/.autopilot/db/correlation_accel_v4_midEnd_1.verbose.sched.rpt -verbose -f "
+@I [HLS-100] Command 'report' returned 0; elapsed 0.01Total elapsed time: 42.921 sec.
+@I [HLS-100] Command "db_write -o /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_accel_v4/SDRelease/_sds/vhls/correlation_accel_v4/solution/.autopilot/db/correlation_accel_v4_midEnd_1.sched.adb -f "
+@I [HLS-100] Command 'db_write' returned 0; elapsed 0.02Total elapsed time: 42.940 sec.
+@I [HLS-0] Finish scheduling correlation_accel_v4_midEnd.1.
+@I [HLS-10] ----------------------------------------------------------------
+@0 [HLS-0] ----------------------------------------------------------------
+@I [HLS-10] -- Exploring micro-architecture for module 'correlation_accel_v4_midEnd_1' 
+@0 [HLS-0] -- Exploring micro-architecture for module 'correlation_accel_v4_midEnd_1' 
+@I [HLS-10] ----------------------------------------------------------------
+@0 [HLS-0] ----------------------------------------------------------------
+@I [HLS-100] Command "set_default_model correlation_accel_v4_midEnd.1 "
+@I [HLS-100] Command 'set_default_model' returned 0; elapsed 0Total elapsed time: 42.940 sec.
+@I [HLS-100] Command "bind -model correlation_accel_v4_midEnd.1 "
+@I [BIND-110] clear=
+@I [BIND-110] debug=
+@I [BIND-110] drf=
+@I [BIND-110] effort=
+@I [BIND-110] fast_refine=
+@I [BIND-110] fu_weight=[ 0.0 -- 1.0 ]
+@I [BIND-110] global_opt=
+@I [BIND-110] gsearch=
+@I [BIND-110] help=
+@I [BIND-110] help-hidden=
+@I [BIND-110] min_mem_port=
+@I [BIND-110] min_op=
+@I [BIND-110] minreg=
+@I [BIND-110] ml=
+@I [BIND-110] model=correlation_accel_v4_midEnd.1
+@I [BIND-110] no_false_path=
+@I [BIND-110] no_min_op=
+@I [BIND-110] normalize=
+@I [BIND-110] quiet=
+@I [BIND-110] refine=
+@I [BIND-110] reg_weight=[ 0.0 -- 1.0 ]
+@I [BIND-110] search=
+@I [BIND-110] tight_delay=
+@I [BIND-110] verbose=
+@I [BIND-110] wFF=
+@I [BIND-110] wFU=
+@I [BIND-110] wMUX=
+@I [BIND-110] wNET=
+@I [BIND-100] Starting micro-architecture generation ...
+@I [BIND-101] Performing variable lifetime analysis.
+@I [BIND-101] Exploring resource sharing.
+@I [BIND-101] Binding ...
+@I [BIND-100] Finished micro-architecture generation.
+@I [HLS-100] Command 'bind' returned 0; elapsed 0.01Total elapsed time: 42.950 sec.
+@I [HLS-111] Elapsed time: 0.04 seconds; current memory usage: 116 MB.
+@I [HLS-100] Command "report -o /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_accel_v4/SDRelease/_sds/vhls/correlation_accel_v4/solution/.autopilot/db/correlation_accel_v4_midEnd_1.verbose.bind.rpt -verbose -f "
+@I [HLS-100] Command 'report' returned 0; elapsed 0.03Total elapsed time: 42.976 sec.
+@I [HLS-100] Command "db_write -o /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_accel_v4/SDRelease/_sds/vhls/correlation_accel_v4/solution/.autopilot/db/correlation_accel_v4_midEnd_1.bind.adb -f "
+@I [HLS-100] Command 'db_write' returned 0; elapsed 0.03Total elapsed time: 42.997 sec.
+@I [HLS-0] Finish binding correlation_accel_v4_midEnd.1.
+@I [HLS-10] ----------------------------------------------------------------
+@0 [HLS-0] ----------------------------------------------------------------
+@I [HLS-10] -- Scheduling module 'correlation_accel_v4_backEnd' 
+@0 [HLS-0] -- Scheduling module 'correlation_accel_v4_backEnd' 
+@I [HLS-10] ----------------------------------------------------------------
+@0 [HLS-0] ----------------------------------------------------------------
+@I [HLS-100] Command "set_default_model correlation_accel_v4_backEnd "
+@I [HLS-100] Command 'set_default_model' returned 0; elapsed 0Total elapsed time: 42.997 sec.
+@I [HLS-100] Command "schedule -model correlation_accel_v4_backEnd "
+@I [SCHED-11] Starting scheduling ...
+@I [SCHED-11] Finished scheduling.
+@I [HLS-100] Command 'schedule' returned 0; elapsed 0.16Total elapsed time: 43.168 sec.
+@I [HLS-111] Elapsed time: 0.22 seconds; current memory usage: 116 MB.
+@I [HLS-100] Command "report -o /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_accel_v4/SDRelease/_sds/vhls/correlation_accel_v4/solution/.autopilot/db/correlation_accel_v4_backEnd.verbose.sched.rpt -verbose -f "
+@I [HLS-100] Command 'report' returned 0; elapsed 0.02Total elapsed time: 43.180 sec.
+@I [HLS-100] Command "db_write -o /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_accel_v4/SDRelease/_sds/vhls/correlation_accel_v4/solution/.autopilot/db/correlation_accel_v4_backEnd.sched.adb -f "
+@I [HLS-100] Command 'db_write' returned 0; elapsed 0.01Total elapsed time: 43.193 sec.
+@I [HLS-0] Finish scheduling correlation_accel_v4_backEnd.
+@I [HLS-10] ----------------------------------------------------------------
+@0 [HLS-0] ----------------------------------------------------------------
+@I [HLS-10] -- Exploring micro-architecture for module 'correlation_accel_v4_backEnd' 
+@0 [HLS-0] -- Exploring micro-architecture for module 'correlation_accel_v4_backEnd' 
+@I [HLS-10] ----------------------------------------------------------------
+@0 [HLS-0] ----------------------------------------------------------------
+@I [HLS-100] Command "set_default_model correlation_accel_v4_backEnd "
+@I [HLS-100] Command 'set_default_model' returned 0; elapsed 0Total elapsed time: 43.193 sec.
+@I [HLS-100] Command "bind -model correlation_accel_v4_backEnd "
+@I [BIND-110] clear=
+@I [BIND-110] debug=
+@I [BIND-110] drf=
+@I [BIND-110] effort=
+@I [BIND-110] fast_refine=
+@I [BIND-110] fu_weight=[ 0.0 -- 1.0 ]
+@I [BIND-110] global_opt=
+@I [BIND-110] gsearch=
+@I [BIND-110] help=
+@I [BIND-110] help-hidden=
+@I [BIND-110] min_mem_port=
+@I [BIND-110] min_op=
+@I [BIND-110] minreg=
+@I [BIND-110] ml=
+@I [BIND-110] model=correlation_accel_v4_backEnd
+@I [BIND-110] no_false_path=
+@I [BIND-110] no_min_op=
+@I [BIND-110] normalize=
+@I [BIND-110] quiet=
+@I [BIND-110] refine=
+@I [BIND-110] reg_weight=[ 0.0 -- 1.0 ]
+@I [BIND-110] search=
+@I [BIND-110] tight_delay=
+@I [BIND-110] verbose=
+@I [BIND-110] wFF=
+@I [BIND-110] wFU=
+@I [BIND-110] wMUX=
+@I [BIND-110] wNET=
+@I [BIND-100] Starting micro-architecture generation ...
+@I [BIND-101] Performing variable lifetime analysis.
+@I [BIND-101] Exploring resource sharing.
+@I [BIND-101] Binding ...
+@I [BIND-100] Finished micro-architecture generation.
+@I [HLS-100] Command 'bind' returned 0; elapsed 0.01Total elapsed time: 43.202 sec.
+@I [HLS-111] Elapsed time: 0.04 seconds; current memory usage: 117 MB.
+@I [HLS-100] Command "report -o /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_accel_v4/SDRelease/_sds/vhls/correlation_accel_v4/solution/.autopilot/db/correlation_accel_v4_backEnd.verbose.bind.rpt -verbose -f "
+@I [HLS-100] Command 'report' returned 0; elapsed 0.02Total elapsed time: 43.224 sec.
+@I [HLS-100] Command "db_write -o /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_accel_v4/SDRelease/_sds/vhls/correlation_accel_v4/solution/.autopilot/db/correlation_accel_v4_backEnd.bind.adb -f "
+@I [HLS-100] Command 'db_write' returned 0; elapsed 0.01Total elapsed time: 43.239 sec.
+@I [HLS-0] Finish binding correlation_accel_v4_backEnd.
+@I [HLS-10] ----------------------------------------------------------------
+@0 [HLS-0] ----------------------------------------------------------------
+@I [HLS-10] -- Scheduling module 'correlation_accel_v4' 
+@0 [HLS-0] -- Scheduling module 'correlation_accel_v4' 
+@I [HLS-10] ----------------------------------------------------------------
+@0 [HLS-0] ----------------------------------------------------------------
+@I [HLS-100] Command "set_default_model correlation_accel_v4 "
+@I [HLS-100] Command 'set_default_model' returned 0; elapsed 0Total elapsed time: 43.239 sec.
+@I [HLS-100] Command "schedule -model correlation_accel_v4 "
+@I [SCHED-11] Starting scheduling ...
+@W [SCHED-71] Latency directive discarded for region correlation_accel_v4since region contains function calls with variable latency.
+@I [SCHED-11] Finished scheduling.
+@I [HLS-100] Command 'schedule' returned 0; elapsed 0.07Total elapsed time: 43.305 sec.
+@I [HLS-111] Elapsed time: 0.1 seconds; current memory usage: 117 MB.
+@I [HLS-100] Command "report -o /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_accel_v4/SDRelease/_sds/vhls/correlation_accel_v4/solution/.autopilot/db/correlation_accel_v4.verbose.sched.rpt -verbose -f "
+@I [HLS-100] Command 'report' returned 0; elapsed 0.01Total elapsed time: 43.312 sec.
+@I [HLS-100] Command "db_write -o /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_accel_v4/SDRelease/_sds/vhls/correlation_accel_v4/solution/.autopilot/db/correlation_accel_v4.sched.adb -f "
+@I [HLS-100] Command 'db_write' returned 0; elapsed 0Total elapsed time: 43.321 sec.
+@I [HLS-0] Finish scheduling correlation_accel_v4.
+@I [HLS-10] ----------------------------------------------------------------
+@0 [HLS-0] ----------------------------------------------------------------
+@I [HLS-10] -- Exploring micro-architecture for module 'correlation_accel_v4' 
+@0 [HLS-0] -- Exploring micro-architecture for module 'correlation_accel_v4' 
+@I [HLS-10] ----------------------------------------------------------------
+@0 [HLS-0] ----------------------------------------------------------------
+@I [HLS-100] Command "set_default_model correlation_accel_v4 "
+@I [HLS-100] Command 'set_default_model' returned 0; elapsed 0Total elapsed time: 43.321 sec.
+@I [HLS-100] Command "bind -model correlation_accel_v4 "
+@I [BIND-110] clear=
+@I [BIND-110] debug=
+@I [BIND-110] drf=
+@I [BIND-110] effort=
+@I [BIND-110] fast_refine=
+@I [BIND-110] fu_weight=[ 0.0 -- 1.0 ]
+@I [BIND-110] global_opt=
+@I [BIND-110] gsearch=
+@I [BIND-110] help=
+@I [BIND-110] help-hidden=
+@I [BIND-110] min_mem_port=
+@I [BIND-110] min_op=
+@I [BIND-110] minreg=
+@I [BIND-110] ml=
+@I [BIND-110] model=correlation_accel_v4
+@I [BIND-110] no_false_path=
+@I [BIND-110] no_min_op=
+@I [BIND-110] normalize=
+@I [BIND-110] quiet=
+@I [BIND-110] refine=
+@I [BIND-110] reg_weight=[ 0.0 -- 1.0 ]
+@I [BIND-110] search=
+@I [BIND-110] tight_delay=
+@I [BIND-110] verbose=
+@I [BIND-110] wFF=
+@I [BIND-110] wFU=
+@I [BIND-110] wMUX=
+@I [BIND-110] wNET=
+@I [BIND-100] Starting micro-architecture generation ...
+@I [BIND-101] Performing variable lifetime analysis.
+@I [BIND-101] Exploring resource sharing.
+@I [BIND-101] Binding ...
+@I [BIND-100] Finished micro-architecture generation.
+@I [HLS-100] Command 'bind' returned 0; elapsed 0.05Total elapsed time: 43.375 sec.
+@I [HLS-111] Elapsed time: 0.07 seconds; current memory usage: 118 MB.
+@I [HLS-100] Command "report -o /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_accel_v4/SDRelease/_sds/vhls/correlation_accel_v4/solution/.autopilot/db/correlation_accel_v4.verbose.bind.rpt -verbose -f "
+@I [HLS-100] Command 'report' returned 0; elapsed 0.05Total elapsed time: 43.428 sec.
+@I [HLS-100] Command "db_write -o /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_accel_v4/SDRelease/_sds/vhls/correlation_accel_v4/solution/.autopilot/db/correlation_accel_v4.bind.adb -f "
+@I [HLS-100] Command 'db_write' returned 0; elapsed 0.01Total elapsed time: 43.438 sec.
+@I [HLS-0] Finish binding correlation_accel_v4.
+@I [HLS-100] Command "get_model_list correlation_accel_v4 -filter all-wo-channel "
+@I [HLS-100] Command 'get_model_list' returned 0; elapsed 0Total elapsed time: 43.438 sec.
+@I [HLS-0] Preprocessing for RTLGen ...
+@I [HLS-100] Command "rtl_gen_preprocess correlation_accel_v4_frontEnd "
+@I [HLS-100] Command 'rtl_gen_preprocess' returned 0; elapsed 0Total elapsed time: 43.438 sec.
+@I [HLS-100] Command "rtl_gen_preprocess correlation_accel_v4_midEnd "
+@I [HLS-100] Command 'rtl_gen_preprocess' returned 0; elapsed 0Total elapsed time: 43.439 sec.
+@I [HLS-100] Command "rtl_gen_preprocess correlation_accel_v4_midEnd.1 "
+@I [HLS-100] Command 'rtl_gen_preprocess' returned 0; elapsed 0Total elapsed time: 43.439 sec.
+@I [HLS-100] Command "rtl_gen_preprocess correlation_accel_v4_backEnd "
+@I [HLS-100] Command 'rtl_gen_preprocess' returned 0; elapsed 0Total elapsed time: 43.439 sec.
+@I [HLS-100] Command "rtl_gen_preprocess correlation_accel_v4 "
+@I [HLS-100] Command 'rtl_gen_preprocess' returned 0; elapsed 0Total elapsed time: 43.440 sec.
+@I [HLS-0] Model list for RTL generation: correlation_accel_v4_frontEnd correlation_accel_v4_midEnd correlation_accel_v4_midEnd.1 correlation_accel_v4_backEnd correlation_accel_v4
+@I [HLS-10] ----------------------------------------------------------------
+@0 [HLS-0] ----------------------------------------------------------------
+@I [HLS-10] -- Generating RTL for module 'correlation_accel_v4_frontEnd' 
+@0 [HLS-0] -- Generating RTL for module 'correlation_accel_v4_frontEnd' 
+@I [HLS-10] ----------------------------------------------------------------
+@0 [HLS-0] ----------------------------------------------------------------
+@I [HLS-100] Command "create_rtl_model correlation_accel_v4_frontEnd -vendor xilinx -mg_file /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_accel_v4/SDRelease/_sds/vhls/correlation_accel_v4/solution/.autopilot/db/correlation_accel_v4_frontEnd.compgen.tcl "
+@I [RTGEN-100] Generating core module 'correlation_accel_v4_fadd_32ns_32ns_32_5_full_dsp': 1 instance(s).
+@I [RTGEN-100] Generating core module 'correlation_accel_v4_fdiv_32ns_32ns_32_16': 1 instance(s).
+@I [RTGEN-100] Generating core module 'correlation_accel_v4_flog_32ns_32ns_32_13_full_dsp': 1 instance(s).
+@I [RTGEN-100] Generating core module 'correlation_accel_v4_fmul_32ns_32ns_32_4_max_dsp': 8 instance(s).
+@I [RTGEN-100] Finished creating RTL model for 'correlation_accel_v4_frontEnd'.
+@I [HLS-100] Command 'create_rtl_model' returned 0; elapsed 0.08Total elapsed time: 43.521 sec.
+@I [HLS-111] Elapsed time: 0.14 seconds; current memory usage: 120 MB.
+@I [HLS-100] Command "source /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_accel_v4/SDRelease/_sds/vhls/correlation_accel_v4/solution/.autopilot/db/correlation_accel_v4.rtl_wrap.cfg.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 43.521 sec.
+@I [HLS-100] Command "gen_rtl correlation_accel_v4_frontEnd -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_accel_v4/SDRelease/_sds/vhls/correlation_accel_v4/solution/syn/systemc/correlation_accel_v4_frontEnd -synmodules correlation_accel_v4_frontEnd correlation_accel_v4_midEnd correlation_accel_v4_midEnd.1 correlation_accel_v4_backEnd correlation_accel_v4 "
+@I [HLS-100] Command 'gen_rtl' returned 0; elapsed 0.01Total elapsed time: 43.574 sec.
+@I [HLS-100] Command "gen_rtl correlation_accel_v4_frontEnd -style xilinx -f -lang vhdl -o /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_accel_v4/SDRelease/_sds/vhls/correlation_accel_v4/solution/syn/vhdl/correlation_accel_v4_frontEnd "
+@I [HLS-100] Command 'gen_rtl' returned 0; elapsed 0Total elapsed time: 43.584 sec.
+@I [HLS-100] Command "gen_rtl correlation_accel_v4_frontEnd -style xilinx -f -lang vlog -o /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_accel_v4/SDRelease/_sds/vhls/correlation_accel_v4/solution/syn/verilog/correlation_accel_v4_frontEnd "
+@I [HLS-100] Command 'gen_rtl' returned 0; elapsed 0Total elapsed time: 43.589 sec.
+@I [HLS-100] Command "gen_tb_info correlation_accel_v4_frontEnd -o /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_accel_v4/SDRelease/_sds/vhls/correlation_accel_v4/solution/.autopilot/db/correlation_accel_v4_frontEnd -p /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_accel_v4/SDRelease/_sds/vhls/correlation_accel_v4/solution/.autopilot/db "
+@I [HLS-100] Command 'gen_tb_info' returned 0; elapsed 0Total elapsed time: 43.590 sec.
+@I [HLS-100] Command "report -model correlation_accel_v4_frontEnd -o /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_accel_v4/SDRelease/_sds/vhls/correlation_accel_v4/solution/syn/report/correlation_accel_v4_frontEnd_csynth.rpt -f "
+@I [HLS-100] Command 'report' returned 0; elapsed 0.01Total elapsed time: 43.600 sec.
+@I [HLS-100] Command "report -model correlation_accel_v4_frontEnd -o /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_accel_v4/SDRelease/_sds/vhls/correlation_accel_v4/solution/syn/report/correlation_accel_v4_frontEnd_csynth.xml -f -x "
+@I [HLS-100] Command 'report' returned 0; elapsed 0.01Total elapsed time: 43.608 sec.
+@I [HLS-100] Command "report -model correlation_accel_v4_frontEnd -o /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_accel_v4/SDRelease/_sds/vhls/correlation_accel_v4/solution/.autopilot/db/correlation_accel_v4_frontEnd.verbose.rpt -verbose -f "
+@I [HLS-100] Command 'report' returned 0; elapsed 0.04Total elapsed time: 43.646 sec.
+@I [HLS-100] Command "db_write -model correlation_accel_v4_frontEnd -o /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_accel_v4/SDRelease/_sds/vhls/correlation_accel_v4/solution/.autopilot/db/correlation_accel_v4_frontEnd.adb -f "
+@I [HLS-100] Command 'db_write' returned 0; elapsed 0.03Total elapsed time: 43.674 sec.
+@I [HLS-10] ----------------------------------------------------------------
+@0 [HLS-0] ----------------------------------------------------------------
+@I [HLS-10] -- Generating RTL for module 'correlation_accel_v4_midEnd' 
+@0 [HLS-0] -- Generating RTL for module 'correlation_accel_v4_midEnd' 
+@I [HLS-10] ----------------------------------------------------------------
+@0 [HLS-0] ----------------------------------------------------------------
+@I [HLS-100] Command "create_rtl_model correlation_accel_v4_midEnd -vendor xilinx -mg_file /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_accel_v4/SDRelease/_sds/vhls/correlation_accel_v4/solution/.autopilot/db/correlation_accel_v4_midEnd.compgen.tcl "
+@I [RTGEN-100] Generating core module 'correlation_accel_v4_fadd_32ns_32ns_32_5_full_dsp': 7 instance(s).
+@I [RTGEN-100] Generating core module 'correlation_accel_v4_srem_32ns_4ns_32_36': 1 instance(s).
+@I [RTGEN-100] Finished creating RTL model for 'correlation_accel_v4_midEnd'.
+@I [HLS-100] Command 'create_rtl_model' returned 0; elapsed 0.06Total elapsed time: 43.764 sec.
+@I [HLS-111] Elapsed time: 0.19 seconds; current memory usage: 125 MB.
+@I [HLS-100] Command "source /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_accel_v4/SDRelease/_sds/vhls/correlation_accel_v4/solution/.autopilot/db/correlation_accel_v4.rtl_wrap.cfg.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 43.764 sec.
+@I [HLS-100] Command "gen_rtl correlation_accel_v4_midEnd -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_accel_v4/SDRelease/_sds/vhls/correlation_accel_v4/solution/syn/systemc/correlation_accel_v4_midEnd -synmodules correlation_accel_v4_frontEnd correlation_accel_v4_midEnd correlation_accel_v4_midEnd.1 correlation_accel_v4_backEnd correlation_accel_v4 "
+@I [HLS-100] Command 'gen_rtl' returned 0; elapsed 0Total elapsed time: 43.782 sec.
+@I [HLS-100] Command "gen_rtl correlation_accel_v4_midEnd -style xilinx -f -lang vhdl -o /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_accel_v4/SDRelease/_sds/vhls/correlation_accel_v4/solution/syn/vhdl/correlation_accel_v4_midEnd "
+@I [HLS-100] Command 'gen_rtl' returned 0; elapsed 0.01Total elapsed time: 43.785 sec.
+@I [HLS-100] Command "gen_rtl correlation_accel_v4_midEnd -style xilinx -f -lang vlog -o /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_accel_v4/SDRelease/_sds/vhls/correlation_accel_v4/solution/syn/verilog/correlation_accel_v4_midEnd "
+@I [HLS-100] Command 'gen_rtl' returned 0; elapsed 0Total elapsed time: 43.789 sec.
+@I [HLS-100] Command "gen_tb_info correlation_accel_v4_midEnd -o /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_accel_v4/SDRelease/_sds/vhls/correlation_accel_v4/solution/.autopilot/db/correlation_accel_v4_midEnd -p /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_accel_v4/SDRelease/_sds/vhls/correlation_accel_v4/solution/.autopilot/db "
+@I [HLS-100] Command 'gen_tb_info' returned 0; elapsed 0Total elapsed time: 43.790 sec.
+@I [HLS-100] Command "report -model correlation_accel_v4_midEnd -o /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_accel_v4/SDRelease/_sds/vhls/correlation_accel_v4/solution/syn/report/correlation_accel_v4_midEnd_csynth.rpt -f "
+@I [HLS-100] Command 'report' returned 0; elapsed 0.01Total elapsed time: 43.800 sec.
+@I [HLS-100] Command "report -model correlation_accel_v4_midEnd -o /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_accel_v4/SDRelease/_sds/vhls/correlation_accel_v4/solution/syn/report/correlation_accel_v4_midEnd_csynth.xml -f -x "
+@I [HLS-100] Command 'report' returned 0; elapsed 0.01Total elapsed time: 43.808 sec.
+@I [HLS-100] Command "report -model correlation_accel_v4_midEnd -o /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_accel_v4/SDRelease/_sds/vhls/correlation_accel_v4/solution/.autopilot/db/correlation_accel_v4_midEnd.verbose.rpt -verbose -f "
+@I [HLS-100] Command 'report' returned 0; elapsed 0.04Total elapsed time: 43.845 sec.
+@I [HLS-100] Command "db_write -model correlation_accel_v4_midEnd -o /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_accel_v4/SDRelease/_sds/vhls/correlation_accel_v4/solution/.autopilot/db/correlation_accel_v4_midEnd.adb -f "
+@I [HLS-100] Command 'db_write' returned 0; elapsed 0.02Total elapsed time: 43.875 sec.
+@I [HLS-10] ----------------------------------------------------------------
+@0 [HLS-0] ----------------------------------------------------------------
+@I [HLS-10] -- Generating RTL for module 'correlation_accel_v4_midEnd_1' 
+@0 [HLS-0] -- Generating RTL for module 'correlation_accel_v4_midEnd_1' 
+@I [HLS-10] ----------------------------------------------------------------
+@0 [HLS-0] ----------------------------------------------------------------
+@I [HLS-100] Command "create_rtl_model correlation_accel_v4_midEnd.1 -vendor xilinx -mg_file /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_accel_v4/SDRelease/_sds/vhls/correlation_accel_v4/solution/.autopilot/db/correlation_accel_v4_midEnd_1.compgen.tcl "
+@I [RTGEN-100] Generating core module 'correlation_accel_v4_fadd_32ns_32ns_32_5_full_dsp': 7 instance(s).
+@I [RTGEN-100] Generating core module 'correlation_accel_v4_srem_32ns_4ns_32_36': 1 instance(s).
+@I [RTGEN-100] Finished creating RTL model for 'correlation_accel_v4_midEnd_1'.
+@I [HLS-100] Command 'create_rtl_model' returned 0; elapsed 0.06Total elapsed time: 43.967 sec.
+@I [HLS-111] Elapsed time: 0.19 seconds; current memory usage: 130 MB.
+@I [HLS-100] Command "source /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_accel_v4/SDRelease/_sds/vhls/correlation_accel_v4/solution/.autopilot/db/correlation_accel_v4.rtl_wrap.cfg.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 43.967 sec.
+@I [HLS-100] Command "gen_rtl correlation_accel_v4_midEnd.1 -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_accel_v4/SDRelease/_sds/vhls/correlation_accel_v4/solution/syn/systemc/correlation_accel_v4_midEnd_1 -synmodules correlation_accel_v4_frontEnd correlation_accel_v4_midEnd correlation_accel_v4_midEnd.1 correlation_accel_v4_backEnd correlation_accel_v4 "
+@I [HLS-100] Command 'gen_rtl' returned 0; elapsed 0Total elapsed time: 43.972 sec.
+@I [HLS-100] Command "gen_rtl correlation_accel_v4_midEnd.1 -style xilinx -f -lang vhdl -o /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_accel_v4/SDRelease/_sds/vhls/correlation_accel_v4/solution/syn/vhdl/correlation_accel_v4_midEnd_1 "
+@I [HLS-100] Command 'gen_rtl' returned 0; elapsed 0.01Total elapsed time: 43.975 sec.
+@I [HLS-100] Command "gen_rtl correlation_accel_v4_midEnd.1 -style xilinx -f -lang vlog -o /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_accel_v4/SDRelease/_sds/vhls/correlation_accel_v4/solution/syn/verilog/correlation_accel_v4_midEnd_1 "
+@I [HLS-100] Command 'gen_rtl' returned 0; elapsed 0Total elapsed time: 43.979 sec.
+@I [HLS-100] Command "gen_tb_info correlation_accel_v4_midEnd.1 -o /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_accel_v4/SDRelease/_sds/vhls/correlation_accel_v4/solution/.autopilot/db/correlation_accel_v4_midEnd_1 -p /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_accel_v4/SDRelease/_sds/vhls/correlation_accel_v4/solution/.autopilot/db "
+@I [HLS-100] Command 'gen_tb_info' returned 0; elapsed 0Total elapsed time: 43.979 sec.
+@I [HLS-100] Command "report -model correlation_accel_v4_midEnd.1 -o /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_accel_v4/SDRelease/_sds/vhls/correlation_accel_v4/solution/syn/report/correlation_accel_v4_midEnd_1_csynth.rpt -f "
+@I [HLS-100] Command 'report' returned 0; elapsed 0.01Total elapsed time: 43.989 sec.
+@I [HLS-100] Command "report -model correlation_accel_v4_midEnd.1 -o /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_accel_v4/SDRelease/_sds/vhls/correlation_accel_v4/solution/syn/report/correlation_accel_v4_midEnd_1_csynth.xml -f -x "
+@I [HLS-100] Command 'report' returned 0; elapsed 0.01Total elapsed time: 43.997 sec.
+@I [HLS-100] Command "report -model correlation_accel_v4_midEnd.1 -o /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_accel_v4/SDRelease/_sds/vhls/correlation_accel_v4/solution/.autopilot/db/correlation_accel_v4_midEnd_1.verbose.rpt -verbose -f "
+@I [HLS-100] Command 'report' returned 0; elapsed 0.03Total elapsed time: 44.34 sec.
+@I [HLS-100] Command "db_write -model correlation_accel_v4_midEnd.1 -o /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_accel_v4/SDRelease/_sds/vhls/correlation_accel_v4/solution/.autopilot/db/correlation_accel_v4_midEnd_1.adb -f "
+@I [HLS-100] Command 'db_write' returned 0; elapsed 0.03Total elapsed time: 44.64 sec.
+@I [HLS-10] ----------------------------------------------------------------
+@0 [HLS-0] ----------------------------------------------------------------
+@I [HLS-10] -- Generating RTL for module 'correlation_accel_v4_backEnd' 
+@0 [HLS-0] -- Generating RTL for module 'correlation_accel_v4_backEnd' 
+@I [HLS-10] ----------------------------------------------------------------
+@0 [HLS-0] ----------------------------------------------------------------
+@I [HLS-100] Command "create_rtl_model correlation_accel_v4_backEnd -vendor xilinx -mg_file /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_accel_v4/SDRelease/_sds/vhls/correlation_accel_v4/solution/.autopilot/db/correlation_accel_v4_backEnd.compgen.tcl "
+@I [RTGEN-100] Generating core module 'correlation_accel_v4_faddfsub_32ns_32ns_32_5_full_dsp': 2 instance(s).
+@I [RTGEN-100] Generating core module 'correlation_accel_v4_fdiv_32ns_32ns_32_16': 2 instance(s).
+@I [RTGEN-100] Generating core module 'correlation_accel_v4_fmul_32ns_32ns_32_4_max_dsp': 3 instance(s).
+@I [RTGEN-100] Generating core module 'correlation_accel_v4_fsqrt_32ns_32ns_32_16': 2 instance(s).
+@I [RTGEN-100] Generating core module 'correlation_accel_v4_sitofp_32ns_32_6': 1 instance(s).
+@I [RTGEN-100] Finished creating RTL model for 'correlation_accel_v4_backEnd'.
+@I [HLS-100] Command 'create_rtl_model' returned 0; elapsed 0.06Total elapsed time: 44.156 sec.
+@I [HLS-111] Elapsed time: 0.19 seconds; current memory usage: 134 MB.
+@I [HLS-100] Command "source /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_accel_v4/SDRelease/_sds/vhls/correlation_accel_v4/solution/.autopilot/db/correlation_accel_v4.rtl_wrap.cfg.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 44.156 sec.
+@I [HLS-100] Command "gen_rtl correlation_accel_v4_backEnd -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_accel_v4/SDRelease/_sds/vhls/correlation_accel_v4/solution/syn/systemc/correlation_accel_v4_backEnd -synmodules correlation_accel_v4_frontEnd correlation_accel_v4_midEnd correlation_accel_v4_midEnd.1 correlation_accel_v4_backEnd correlation_accel_v4 "
+@I [HLS-100] Command 'gen_rtl' returned 0; elapsed 0Total elapsed time: 44.159 sec.
+@I [HLS-100] Command "gen_rtl correlation_accel_v4_backEnd -style xilinx -f -lang vhdl -o /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_accel_v4/SDRelease/_sds/vhls/correlation_accel_v4/solution/syn/vhdl/correlation_accel_v4_backEnd "
+@I [HLS-100] Command 'gen_rtl' returned 0; elapsed 0Total elapsed time: 44.161 sec.
+@I [HLS-100] Command "gen_rtl correlation_accel_v4_backEnd -style xilinx -f -lang vlog -o /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_accel_v4/SDRelease/_sds/vhls/correlation_accel_v4/solution/syn/verilog/correlation_accel_v4_backEnd "
+@I [HLS-100] Command 'gen_rtl' returned 0; elapsed 0.01Total elapsed time: 44.164 sec.
+@I [HLS-100] Command "gen_tb_info correlation_accel_v4_backEnd -o /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_accel_v4/SDRelease/_sds/vhls/correlation_accel_v4/solution/.autopilot/db/correlation_accel_v4_backEnd -p /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_accel_v4/SDRelease/_sds/vhls/correlation_accel_v4/solution/.autopilot/db "
+@I [HLS-100] Command 'gen_tb_info' returned 0; elapsed 0Total elapsed time: 44.164 sec.
+@I [HLS-100] Command "report -model correlation_accel_v4_backEnd -o /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_accel_v4/SDRelease/_sds/vhls/correlation_accel_v4/solution/syn/report/correlation_accel_v4_backEnd_csynth.rpt -f "
+@I [HLS-100] Command 'report' returned 0; elapsed 0Total elapsed time: 44.170 sec.
+@I [HLS-100] Command "report -model correlation_accel_v4_backEnd -o /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_accel_v4/SDRelease/_sds/vhls/correlation_accel_v4/solution/syn/report/correlation_accel_v4_backEnd_csynth.xml -f -x "
+@I [HLS-100] Command 'report' returned 0; elapsed 0.01Total elapsed time: 44.175 sec.
+@I [HLS-100] Command "report -model correlation_accel_v4_backEnd -o /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_accel_v4/SDRelease/_sds/vhls/correlation_accel_v4/solution/.autopilot/db/correlation_accel_v4_backEnd.verbose.rpt -verbose -f "
+@I [HLS-100] Command 'report' returned 0; elapsed 0.03Total elapsed time: 44.204 sec.
+@I [HLS-100] Command "db_write -model correlation_accel_v4_backEnd -o /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_accel_v4/SDRelease/_sds/vhls/correlation_accel_v4/solution/.autopilot/db/correlation_accel_v4_backEnd.adb -f "
+@I [HLS-100] Command 'db_write' returned 0; elapsed 0.02Total elapsed time: 44.224 sec.
+@I [HLS-10] ----------------------------------------------------------------
+@0 [HLS-0] ----------------------------------------------------------------
+@I [HLS-10] -- Generating RTL for module 'correlation_accel_v4' 
+@0 [HLS-0] -- Generating RTL for module 'correlation_accel_v4' 
+@I [HLS-10] ----------------------------------------------------------------
+@0 [HLS-0] ----------------------------------------------------------------
+@I [HLS-100] Command "create_rtl_model correlation_accel_v4 -vendor xilinx -mg_file /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_accel_v4/SDRelease/_sds/vhls/correlation_accel_v4/solution/.autopilot/db/correlation_accel_v4.compgen.tcl "
+@I [RTGEN-500] Setting interface mode on port 'correlation_accel_v4/number_of_days' to 'ap_none'.
+@I [RTGEN-500] Setting interface mode on port 'correlation_accel_v4/number_of_indices' to 'ap_none'.
+@I [RTGEN-500] Setting interface mode on port 'correlation_accel_v4/in_indices_data_V' to 'axis'.
+@I [RTGEN-500] Setting interface mode on port 'correlation_accel_v4/in_indices_keep_V' to 'axis'.
+@I [RTGEN-500] Setting interface mode on port 'correlation_accel_v4/in_indices_strb_V' to 'axis'.
+@I [RTGEN-500] Setting interface mode on port 'correlation_accel_v4/in_indices_user_V' to 'axis'.
+@I [RTGEN-500] Setting interface mode on port 'correlation_accel_v4/in_indices_last_V' to 'axis'.
+@I [RTGEN-500] Setting interface mode on port 'correlation_accel_v4/in_indices_id_V' to 'axis'.
+@I [RTGEN-500] Setting interface mode on port 'correlation_accel_v4/in_indices_dest_V' to 'axis'.
+@I [RTGEN-500] Setting interface mode on port 'correlation_accel_v4/out_correlation_data_V' to 'axis'.
+@I [RTGEN-500] Setting interface mode on port 'correlation_accel_v4/out_correlation_keep_V' to 'axis'.
+@I [RTGEN-500] Setting interface mode on port 'correlation_accel_v4/out_correlation_strb_V' to 'axis'.
+@I [RTGEN-500] Setting interface mode on port 'correlation_accel_v4/out_correlation_user_V' to 'axis'.
+@I [RTGEN-500] Setting interface mode on port 'correlation_accel_v4/out_correlation_last_V' to 'axis'.
+@I [RTGEN-500] Setting interface mode on port 'correlation_accel_v4/out_correlation_id_V' to 'axis'.
+@I [RTGEN-500] Setting interface mode on port 'correlation_accel_v4/out_correlation_dest_V' to 'axis'.
+@I [RTGEN-500] Setting interface mode on function 'correlation_accel_v4' to 'ap_ctrl_hs'.
+@I [RTGEN-100] Finished creating RTL model for 'correlation_accel_v4'.
+@I [HLS-100] Command 'create_rtl_model' returned 0; elapsed 0Total elapsed time: 44.245 sec.
+@I [HLS-111] Elapsed time: 0.08 seconds; current memory usage: 138 MB.
+@I [HLS-100] Command "source /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_accel_v4/SDRelease/_sds/vhls/correlation_accel_v4/solution/.autopilot/db/correlation_accel_v4.rtl_wrap.cfg.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 44.245 sec.
+@I [HLS-100] Command "gen_rtl correlation_accel_v4 -istop -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_accel_v4/SDRelease/_sds/vhls/correlation_accel_v4/solution/syn/systemc/correlation_accel_v4 -synmodules correlation_accel_v4_frontEnd correlation_accel_v4_midEnd correlation_accel_v4_midEnd.1 correlation_accel_v4_backEnd correlation_accel_v4 "
+@I [HLS-100] Command 'gen_rtl' returned 0; elapsed 0Total elapsed time: 44.247 sec.
+@I [HLS-100] Command "gen_rtl correlation_accel_v4 -istop -style xilinx -f -lang vhdl -o /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_accel_v4/SDRelease/_sds/vhls/correlation_accel_v4/solution/syn/vhdl/correlation_accel_v4 "
+@I [HLS-100] Command 'gen_rtl' returned 0; elapsed 0.02Total elapsed time: 44.264 sec.
+@I [HLS-100] Command "gen_rtl correlation_accel_v4 -istop -style xilinx -f -lang vlog -o /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_accel_v4/SDRelease/_sds/vhls/correlation_accel_v4/solution/syn/verilog/correlation_accel_v4 "
+@I [HLS-100] Command 'gen_rtl' returned 0; elapsed 0.02Total elapsed time: 44.279 sec.
+@I [HLS-100] Command "export_constraint_db -o /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_accel_v4/SDRelease/_sds/vhls/correlation_accel_v4/solution/.autopilot/db/correlation_accel_v4.constraint.tcl -f -tool general "
+@I [HLS-100] Command 'export_constraint_db' returned 0; elapsed 0Total elapsed time: 44.279 sec.
+@I [HLS-100] Command "report -model correlation_accel_v4 -o /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_accel_v4/SDRelease/_sds/vhls/correlation_accel_v4/solution/.autopilot/db/correlation_accel_v4.design.xml -verbose -f -dv "
+@I [HLS-100] Command 'report' returned 0; elapsed 0.09Total elapsed time: 44.360 sec.
+@I [HLS-100] Command "gen_tb_info correlation_accel_v4 -o /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_accel_v4/SDRelease/_sds/vhls/correlation_accel_v4/solution/.autopilot/db/correlation_accel_v4 -p /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_accel_v4/SDRelease/_sds/vhls/correlation_accel_v4/solution/.autopilot/db "
+@I [HLS-100] Command 'gen_tb_info' returned 0; elapsed 0Total elapsed time: 44.360 sec.
+@I [HLS-100] Command "report -model correlation_accel_v4 -o /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_accel_v4/SDRelease/_sds/vhls/correlation_accel_v4/solution/syn/report/correlation_accel_v4_csynth.rpt -f "
+@I [HLS-100] Command 'report' returned 0; elapsed 0.01Total elapsed time: 44.376 sec.
+@I [HLS-100] Command "report -model correlation_accel_v4 -o /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_accel_v4/SDRelease/_sds/vhls/correlation_accel_v4/solution/syn/report/correlation_accel_v4_csynth.xml -f -x "
+@I [HLS-100] Command 'report' returned 0; elapsed 0.02Total elapsed time: 44.390 sec.
+@I [HLS-100] Command "report -model correlation_accel_v4 -o /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_accel_v4/SDRelease/_sds/vhls/correlation_accel_v4/solution/.autopilot/db/correlation_accel_v4.verbose.rpt -verbose -f "
+@I [HLS-100] Command 'report' returned 0; elapsed 0.06Total elapsed time: 44.459 sec.
+@I [HLS-100] Command "db_write -model correlation_accel_v4 -o /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_accel_v4/SDRelease/_sds/vhls/correlation_accel_v4/solution/.autopilot/db/correlation_accel_v4.adb -f "
+@I [HLS-100] Command 'db_write' returned 0; elapsed 0.03Total elapsed time: 44.483 sec.
+@I [HLS-100] Command "sc_get_clocks correlation_accel_v4 "
+@I [HLS-100] Command 'sc_get_clocks' returned 0; elapsed 0Total elapsed time: 44.494 sec.
+@I [HLS-100] Command "sc_get_portdomain correlation_accel_v4 "
+@I [HLS-100] Command 'sc_get_portdomain' returned 0; elapsed 0Total elapsed time: 44.494 sec.
+@I [HLS-0] Model list for RTL component generation: correlation_accel_v4_frontEnd correlation_accel_v4_midEnd correlation_accel_v4_midEnd.1 correlation_accel_v4_backEnd correlation_accel_v4
+@I [HLS-0] Handling components in module [correlation_accel_v4_frontEnd] ... 
+@I [HLS-100] Command "source /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_accel_v4/SDRelease/_sds/vhls/correlation_accel_v4/solution/.autopilot/db/correlation_accel_v4_frontEnd.compgen.tcl "
+@I [HLS-0] Found component correlation_accel_v4_fadd_32ns_32ns_32_5_full_dsp.
+@I [HLS-0] Append model correlation_accel_v4_fadd_32ns_32ns_32_5_full_dsp
+@I [HLS-0] Found component correlation_accel_v4_fmul_32ns_32ns_32_4_max_dsp.
+@I [HLS-0] Append model correlation_accel_v4_fmul_32ns_32ns_32_4_max_dsp
+@I [HLS-0] Found component correlation_accel_v4_fdiv_32ns_32ns_32_16.
+@I [HLS-0] Append model correlation_accel_v4_fdiv_32ns_32ns_32_16
+@I [HLS-0] Found component correlation_accel_v4_flog_32ns_32ns_32_13_full_dsp.
+@I [HLS-0] Append model correlation_accel_v4_flog_32ns_32ns_32_13_full_dsp
+@I [HLS-0] Found component correlation_accel_v4_frontEnd_weight_rom.
+@I [HLS-0] Append model correlation_accel_v4_frontEnd_weight_rom
+@I [HLS-0] Found component correlation_accel_v4_frontEnd_lnReturnA.
+@I [HLS-0] Append model correlation_accel_v4_frontEnd_lnReturnA
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 44.495 sec.
+@I [HLS-0] Handling components in module [correlation_accel_v4_midEnd] ... 
+@I [HLS-100] Command "source /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_accel_v4/SDRelease/_sds/vhls/correlation_accel_v4/solution/.autopilot/db/correlation_accel_v4_midEnd.compgen.tcl "
+@I [HLS-0] Found component correlation_accel_v4_srem_32ns_4ns_32_36.
+@I [HLS-0] Append model correlation_accel_v4_srem_32ns_4ns_32_36
+@I [HLS-0] Found component correlation_accel_v4_midEnd_acc_returnA.
+@I [HLS-0] Append model correlation_accel_v4_midEnd_acc_returnA
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 44.496 sec.
+@I [HLS-0] Handling components in module [correlation_accel_v4_midEnd_1] ... 
+@I [HLS-100] Command "source /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_accel_v4/SDRelease/_sds/vhls/correlation_accel_v4/solution/.autopilot/db/correlation_accel_v4_midEnd_1.compgen.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 44.496 sec.
+@I [HLS-0] Handling components in module [correlation_accel_v4_backEnd] ... 
+@I [HLS-100] Command "source /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_accel_v4/SDRelease/_sds/vhls/correlation_accel_v4/solution/.autopilot/db/correlation_accel_v4_backEnd.compgen.tcl "
+@I [HLS-0] Found component correlation_accel_v4_faddfsub_32ns_32ns_32_5_full_dsp.
+@I [HLS-0] Append model correlation_accel_v4_faddfsub_32ns_32ns_32_5_full_dsp
+@I [HLS-0] Found component correlation_accel_v4_sitofp_32ns_32_6.
+@I [HLS-0] Append model correlation_accel_v4_sitofp_32ns_32_6
+@I [HLS-0] Found component correlation_accel_v4_fsqrt_32ns_32ns_32_16.
+@I [HLS-0] Append model correlation_accel_v4_fsqrt_32ns_32ns_32_16
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 44.496 sec.
+@I [HLS-0] Handling components in module [correlation_accel_v4] ... 
+@I [HLS-100] Command "source /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_accel_v4/SDRelease/_sds/vhls/correlation_accel_v4/solution/.autopilot/db/correlation_accel_v4.compgen.tcl "
+@I [HLS-0] Found component FIFO_correlation_accel_v4_ln_returnA_c1_V.
+@I [HLS-0] Append model FIFO_correlation_accel_v4_ln_returnA_c1_V
+@I [HLS-0] Found component FIFO_correlation_accel_v4_weight_returnSquareA_c1_V.
+@I [HLS-0] Append model FIFO_correlation_accel_v4_weight_returnSquareA_c1_V
+@I [HLS-0] Found component FIFO_correlation_accel_v4_weight_returnA_c1_V.
+@I [HLS-0] Append model FIFO_correlation_accel_v4_weight_returnA_c1_V
+@I [HLS-0] Found component FIFO_correlation_accel_v4_ln_returnA_c2_V.
+@I [HLS-0] Append model FIFO_correlation_accel_v4_ln_returnA_c2_V
+@I [HLS-0] Found component FIFO_correlation_accel_v4_weight_returnSquareA_c2_V.
+@I [HLS-0] Append model FIFO_correlation_accel_v4_weight_returnSquareA_c2_V
+@I [HLS-0] Found component FIFO_correlation_accel_v4_weight_returnA_c2_V.
+@I [HLS-0] Append model FIFO_correlation_accel_v4_weight_returnA_c2_V
+@I [HLS-0] Found component FIFO_correlation_accel_v4_sum_weight_c1_V.
+@I [HLS-0] Append model FIFO_correlation_accel_v4_sum_weight_c1_V
+@I [HLS-0] Found component FIFO_correlation_accel_v4_ln_returnB_c1_V.
+@I [HLS-0] Append model FIFO_correlation_accel_v4_ln_returnB_c1_V
+@I [HLS-0] Found component FIFO_correlation_accel_v4_weight_returnSquareB_c1_V.
+@I [HLS-0] Append model FIFO_correlation_accel_v4_weight_returnSquareB_c1_V
+@I [HLS-0] Found component FIFO_correlation_accel_v4_weight_returnB_c1_V.
+@I [HLS-0] Append model FIFO_correlation_accel_v4_weight_returnB_c1_V
+@I [HLS-0] Found component FIFO_correlation_accel_v4_weight_returnA_returnB_c1_V.
+@I [HLS-0] Append model FIFO_correlation_accel_v4_weight_returnA_returnB_c1_V
+@I [HLS-0] Found component FIFO_correlation_accel_v4_sum_weight_c2_V.
+@I [HLS-0] Append model FIFO_correlation_accel_v4_sum_weight_c2_V
+@I [HLS-0] Found component FIFO_correlation_accel_v4_ln_returnB_c2_V.
+@I [HLS-0] Append model FIFO_correlation_accel_v4_ln_returnB_c2_V
+@I [HLS-0] Found component FIFO_correlation_accel_v4_weight_returnSquareB_c2_V.
+@I [HLS-0] Append model FIFO_correlation_accel_v4_weight_returnSquareB_c2_V
+@I [HLS-0] Found component FIFO_correlation_accel_v4_weight_returnB_c2_V.
+@I [HLS-0] Append model FIFO_correlation_accel_v4_weight_returnB_c2_V
+@I [HLS-0] Found component FIFO_correlation_accel_v4_weight_returnA_returnB_c2_V.
+@I [HLS-0] Append model FIFO_correlation_accel_v4_weight_returnA_returnB_c2_V
+@I [HLS-0] Found component FIFO_correlation_accel_v4_number_of_days15_channel.
+@I [HLS-0] Append model FIFO_correlation_accel_v4_number_of_days15_channel
+@I [HLS-0] Found component FIFO_correlation_accel_v4_number_of_days16_channel.
+@I [HLS-0] Append model FIFO_correlation_accel_v4_number_of_days16_channel
+@I [HLS-0] Found component FIFO_correlation_accel_v4_number_of_indices17_channel.
+@I [HLS-0] Append model FIFO_correlation_accel_v4_number_of_indices17_channel
+@I [HLS-0] Found component FIFO_correlation_accel_v4_number_of_indices18_channel.
+@I [HLS-0] Append model FIFO_correlation_accel_v4_number_of_indices18_channel
+@I [HLS-0] Found component FIFO_correlation_accel_v4_sum_weight_stage2_c1_V.
+@I [HLS-0] Append model FIFO_correlation_accel_v4_sum_weight_stage2_c1_V
+@I [HLS-0] Found component FIFO_correlation_accel_v4_sum_return_stage2_c1_V.
+@I [HLS-0] Append model FIFO_correlation_accel_v4_sum_return_stage2_c1_V
+@I [HLS-0] Found component FIFO_correlation_accel_v4_sum_weight_returnSquare_stage2.
+@I [HLS-0] Append model FIFO_correlation_accel_v4_sum_weight_returnSquare_stage2
+@I [HLS-0] Found component FIFO_correlation_accel_v4_sum_weight_return_stage2_c1_V.
+@I [HLS-0] Append model FIFO_correlation_accel_v4_sum_weight_return_stage2_c1_V
+@I [HLS-0] Found component FIFO_correlation_accel_v4_sum_weight_returnA_returnB_sta.
+@I [HLS-0] Append model FIFO_correlation_accel_v4_sum_weight_returnA_returnB_sta
+@I [HLS-0] Found component FIFO_correlation_accel_v4_sum_returnA_stage2_c1_V.
+@I [HLS-0] Append model FIFO_correlation_accel_v4_sum_returnA_stage2_c1_V
+@I [HLS-0] Found component FIFO_correlation_accel_v4_sum_weight_returnSquareA_stage.
+@I [HLS-0] Append model FIFO_correlation_accel_v4_sum_weight_returnSquareA_stage
+@I [HLS-0] Found component FIFO_correlation_accel_v4_sum_weight_returnA_stage2_c1_V.
+@I [HLS-0] Append model FIFO_correlation_accel_v4_sum_weight_returnA_stage2_c1_V
+@I [HLS-0] Found component FIFO_correlation_accel_v4_number_of_days19_channel.
+@I [HLS-0] Append model FIFO_correlation_accel_v4_number_of_days19_channel
+@I [HLS-0] Found component FIFO_correlation_accel_v4_number_of_indices20_channel.
+@I [HLS-0] Append model FIFO_correlation_accel_v4_number_of_indices20_channel
+@I [HLS-0] Found component FIFO_correlation_accel_v4_sum_weight_stage2_c2_V.
+@I [HLS-0] Append model FIFO_correlation_accel_v4_sum_weight_stage2_c2_V
+@I [HLS-0] Found component FIFO_correlation_accel_v4_sum_return_stage2_c2_V.
+@I [HLS-0] Append model FIFO_correlation_accel_v4_sum_return_stage2_c2_V
+@I [HLS-0] Found component FIFO_correlation_accel_v4_sum_weight_returnSquare_stage2_1.
+@I [HLS-0] Append model FIFO_correlation_accel_v4_sum_weight_returnSquare_stage2_1
+@I [HLS-0] Found component FIFO_correlation_accel_v4_sum_weight_return_stage2_c2_V.
+@I [HLS-0] Append model FIFO_correlation_accel_v4_sum_weight_return_stage2_c2_V
+@I [HLS-0] Found component FIFO_correlation_accel_v4_sum_weight_returnA_returnB_sta_1.
+@I [HLS-0] Append model FIFO_correlation_accel_v4_sum_weight_returnA_returnB_sta_1
+@I [HLS-0] Found component FIFO_correlation_accel_v4_sum_returnA_stage2_c2_V.
+@I [HLS-0] Append model FIFO_correlation_accel_v4_sum_returnA_stage2_c2_V
+@I [HLS-0] Found component FIFO_correlation_accel_v4_sum_weight_returnSquareA_stage_1.
+@I [HLS-0] Append model FIFO_correlation_accel_v4_sum_weight_returnSquareA_stage_1
+@I [HLS-0] Found component FIFO_correlation_accel_v4_sum_weight_returnA_stage2_c2_V.
+@I [HLS-0] Append model FIFO_correlation_accel_v4_sum_weight_returnA_stage2_c2_V
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 44.498 sec.
+@I [HLS-0] Append model correlation_accel_v4_frontEnd
+@I [HLS-0] Append model correlation_accel_v4_midEnd
+@I [HLS-0] Append model correlation_accel_v4_midEnd_1
+@I [HLS-0] Append model correlation_accel_v4_backEnd
+@I [HLS-0] Append model correlation_accel_v4
+@I [HLS-0] Generating RTL model list ...
+@I [HLS-0] All models in this session: correlation_accel_v4_fadd_32ns_32ns_32_5_full_dsp correlation_accel_v4_fmul_32ns_32ns_32_4_max_dsp correlation_accel_v4_fdiv_32ns_32ns_32_16 correlation_accel_v4_flog_32ns_32ns_32_13_full_dsp correlation_accel_v4_frontEnd_weight_rom correlation_accel_v4_frontEnd_lnReturnA correlation_accel_v4_srem_32ns_4ns_32_36 correlation_accel_v4_midEnd_acc_returnA correlation_accel_v4_faddfsub_32ns_32ns_32_5_full_dsp correlation_accel_v4_sitofp_32ns_32_6 correlation_accel_v4_fsqrt_32ns_32ns_32_16 FIFO_correlation_accel_v4_ln_returnA_c1_V FIFO_correlation_accel_v4_weight_returnSquareA_c1_V FIFO_correlation_accel_v4_weight_returnA_c1_V FIFO_correlation_accel_v4_ln_returnA_c2_V FIFO_correlation_accel_v4_weight_returnSquareA_c2_V FIFO_correlation_accel_v4_weight_returnA_c2_V FIFO_correlation_accel_v4_sum_weight_c1_V FIFO_correlation_accel_v4_ln_returnB_c1_V FIFO_correlation_accel_v4_weight_returnSquareB_c1_V FIFO_correlation_accel_v4_weight_returnB_c1_V FIFO_correlation_accel_v4_weight_returnA_returnB_c1_V FIFO_correlation_accel_v4_sum_weight_c2_V FIFO_correlation_accel_v4_ln_returnB_c2_V FIFO_correlation_accel_v4_weight_returnSquareB_c2_V FIFO_correlation_accel_v4_weight_returnB_c2_V FIFO_correlation_accel_v4_weight_returnA_returnB_c2_V FIFO_correlation_accel_v4_number_of_days15_channel FIFO_correlation_accel_v4_number_of_days16_channel FIFO_correlation_accel_v4_number_of_indices17_channel FIFO_correlation_accel_v4_number_of_indices18_channel FIFO_correlation_accel_v4_sum_weight_stage2_c1_V FIFO_correlation_accel_v4_sum_return_stage2_c1_V FIFO_correlation_accel_v4_sum_weight_returnSquare_stage2 FIFO_correlation_accel_v4_sum_weight_return_stage2_c1_V FIFO_correlation_accel_v4_sum_weight_returnA_returnB_sta FIFO_correlation_accel_v4_sum_returnA_stage2_c1_V FIFO_correlation_accel_v4_sum_weight_returnSquareA_stage FIFO_correlation_accel_v4_sum_weight_returnA_stage2_c1_V FIFO_correlation_accel_v4_number_of_days19_channel FIFO_correlation_accel_v4_number_of_indices20_channel FIFO_correlation_accel_v4_sum_weight_stage2_c2_V FIFO_correlation_accel_v4_sum_return_stage2_c2_V FIFO_correlation_accel_v4_sum_weight_returnSquare_stage2_1 FIFO_correlation_accel_v4_sum_weight_return_stage2_c2_V FIFO_correlation_accel_v4_sum_weight_returnA_returnB_sta_1 FIFO_correlation_accel_v4_sum_returnA_stage2_c2_V FIFO_correlation_accel_v4_sum_weight_returnSquareA_stage_1 FIFO_correlation_accel_v4_sum_weight_returnA_stage2_c2_V correlation_accel_v4_frontEnd correlation_accel_v4_midEnd correlation_accel_v4_midEnd_1 correlation_accel_v4_backEnd correlation_accel_v4
+@I [HLS-0] To file: write model correlation_accel_v4_fadd_32ns_32ns_32_5_full_dsp
+@I [HLS-0] To file: write model correlation_accel_v4_fmul_32ns_32ns_32_4_max_dsp
+@I [HLS-0] To file: write model correlation_accel_v4_fdiv_32ns_32ns_32_16
+@I [HLS-0] To file: write model correlation_accel_v4_flog_32ns_32ns_32_13_full_dsp
+@I [HLS-0] To file: write model correlation_accel_v4_frontEnd_weight_rom
+@I [HLS-0] To file: write model correlation_accel_v4_frontEnd_lnReturnA
+@I [HLS-0] To file: write model correlation_accel_v4_srem_32ns_4ns_32_36
+@I [HLS-0] To file: write model correlation_accel_v4_midEnd_acc_returnA
+@I [HLS-0] To file: write model correlation_accel_v4_faddfsub_32ns_32ns_32_5_full_dsp
+@I [HLS-0] To file: write model correlation_accel_v4_sitofp_32ns_32_6
+@I [HLS-0] To file: write model correlation_accel_v4_fsqrt_32ns_32ns_32_16
+@I [HLS-0] To file: write model FIFO_correlation_accel_v4_ln_returnA_c1_V
+@I [HLS-0] To file: write model FIFO_correlation_accel_v4_weight_returnSquareA_c1_V
+@I [HLS-0] To file: write model FIFO_correlation_accel_v4_weight_returnA_c1_V
+@I [HLS-0] To file: write model FIFO_correlation_accel_v4_ln_returnA_c2_V
+@I [HLS-0] To file: write model FIFO_correlation_accel_v4_weight_returnSquareA_c2_V
+@I [HLS-0] To file: write model FIFO_correlation_accel_v4_weight_returnA_c2_V
+@I [HLS-0] To file: write model FIFO_correlation_accel_v4_sum_weight_c1_V
+@I [HLS-0] To file: write model FIFO_correlation_accel_v4_ln_returnB_c1_V
+@I [HLS-0] To file: write model FIFO_correlation_accel_v4_weight_returnSquareB_c1_V
+@I [HLS-0] To file: write model FIFO_correlation_accel_v4_weight_returnB_c1_V
+@I [HLS-0] To file: write model FIFO_correlation_accel_v4_weight_returnA_returnB_c1_V
+@I [HLS-0] To file: write model FIFO_correlation_accel_v4_sum_weight_c2_V
+@I [HLS-0] To file: write model FIFO_correlation_accel_v4_ln_returnB_c2_V
+@I [HLS-0] To file: write model FIFO_correlation_accel_v4_weight_returnSquareB_c2_V
+@I [HLS-0] To file: write model FIFO_correlation_accel_v4_weight_returnB_c2_V
+@I [HLS-0] To file: write model FIFO_correlation_accel_v4_weight_returnA_returnB_c2_V
+@I [HLS-0] To file: write model FIFO_correlation_accel_v4_number_of_days15_channel
+@I [HLS-0] To file: write model FIFO_correlation_accel_v4_number_of_days16_channel
+@I [HLS-0] To file: write model FIFO_correlation_accel_v4_number_of_indices17_channel
+@I [HLS-0] To file: write model FIFO_correlation_accel_v4_number_of_indices18_channel
+@I [HLS-0] To file: write model FIFO_correlation_accel_v4_sum_weight_stage2_c1_V
+@I [HLS-0] To file: write model FIFO_correlation_accel_v4_sum_return_stage2_c1_V
+@I [HLS-0] To file: write model FIFO_correlation_accel_v4_sum_weight_returnSquare_stage2
+@I [HLS-0] To file: write model FIFO_correlation_accel_v4_sum_weight_return_stage2_c1_V
+@I [HLS-0] To file: write model FIFO_correlation_accel_v4_sum_weight_returnA_returnB_sta
+@I [HLS-0] To file: write model FIFO_correlation_accel_v4_sum_returnA_stage2_c1_V
+@I [HLS-0] To file: write model FIFO_correlation_accel_v4_sum_weight_returnSquareA_stage
+@I [HLS-0] To file: write model FIFO_correlation_accel_v4_sum_weight_returnA_stage2_c1_V
+@I [HLS-0] To file: write model FIFO_correlation_accel_v4_number_of_days19_channel
+@I [HLS-0] To file: write model FIFO_correlation_accel_v4_number_of_indices20_channel
+@I [HLS-0] To file: write model FIFO_correlation_accel_v4_sum_weight_stage2_c2_V
+@I [HLS-0] To file: write model FIFO_correlation_accel_v4_sum_return_stage2_c2_V
+@I [HLS-0] To file: write model FIFO_correlation_accel_v4_sum_weight_returnSquare_stage2_1
+@I [HLS-0] To file: write model FIFO_correlation_accel_v4_sum_weight_return_stage2_c2_V
+@I [HLS-0] To file: write model FIFO_correlation_accel_v4_sum_weight_returnA_returnB_sta_1
+@I [HLS-0] To file: write model FIFO_correlation_accel_v4_sum_returnA_stage2_c2_V
+@I [HLS-0] To file: write model FIFO_correlation_accel_v4_sum_weight_returnSquareA_stage_1
+@I [HLS-0] To file: write model FIFO_correlation_accel_v4_sum_weight_returnA_stage2_c2_V
+@I [HLS-0] To file: write model correlation_accel_v4_frontEnd
+@I [HLS-0] To file: write model correlation_accel_v4_midEnd
+@I [HLS-0] To file: write model correlation_accel_v4_midEnd_1
+@I [HLS-0] To file: write model correlation_accel_v4_backEnd
+@I [HLS-0] To file: write model correlation_accel_v4
+@I [HLS-0] Finished generating RTL model list.
+
+
+@I [HLS-0] RTL Generation done.
+@I [HLS-0] CAS Generation done.
+@I [HLS-0] CBC Generation done.
+@I [HLS-100] Command "export_ssdm /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_accel_v4/SDRelease/_sds/vhls/correlation_accel_v4/solution/.autopilot/db/a.export.ll "
+@I [HLS-100] Command 'export_ssdm' returned 0; elapsed 0Total elapsed time: 44.499 sec.
+@I [HLS-100] Command "source /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_accel_v4/SDRelease/_sds/vhls/correlation_accel_v4/solution/.autopilot/db/global.setting.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 44.501 sec.
+@I [HLS-100] Command "source /opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/common/technology/generic/autopilot/common.gen "
+@I [HLS-100] Command "source /opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/common/technology/generic/autopilot/APCoreGen.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 44.530 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 44.530 sec.
+@I [HLS-100] Command "source /opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/common/technology/generic/autopilot/op.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 44.531 sec.
+@I [HLS-100] Command "source /opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/common/technology/generic/autopilot/op_simcore.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.01Total elapsed time: 44.532 sec.
+@I [HLS-100] Command "source /opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/common/technology/generic/autopilot/interface.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 44.544 sec.
+@I [HLS-100] Command "source /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_accel_v4/SDRelease/_sds/vhls/correlation_accel_v4/solution/.autopilot/db/global.setting.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 44.544 sec.
+@I [HLS-100] Command "source /opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/common/technology/xilinx/zynq/zynq.gen "
+@I [HLS-100] Command "source /opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/common/technology/xilinx/common/virtex.gen "
+@I [HLS-100] Command "source /opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/common/technology/xilinx/common/xilinx.gen "
+@I [HLS-100] Command "source /opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/common/technology/xilinx/interface/plb46.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 44.545 sec.
+@I [HLS-100] Command "source /opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/common/technology/xilinx/interface/fsl.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 44.545 sec.
+@I [HLS-100] Command "source /opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/common/technology/xilinx/interface/axi4.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 44.546 sec.
+@I [HLS-100] Command "source /opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/common/technology/xilinx/interface/nativeAXI4.gen "
+@I [HLS-100] Command "source /opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/common/technology/xilinx/interface/saxilite.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 44.548 sec.
+@I [HLS-100] Command "source /opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/common/technology/xilinx/interface/maxi.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 44.552 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 44.552 sec.
+@I [HLS-100] Command "source /opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/common/technology/xilinx/scripts/xilinxcoregen.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.01Total elapsed time: 44.556 sec.
+@I [HLS-100] Command "source /opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/common/technology/xilinx/interface/XilEDKCoreGen.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 44.560 sec.
+@I [HLS-100] Command "source /opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/common/technology/xilinx/ip/util.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 44.560 sec.
+@I [HLS-100] Command "source /opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/common/technology/xilinx/ip/xfft.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.05Total elapsed time: 44.615 sec.
+@I [HLS-100] Command "source /opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/common/technology/xilinx/ip/xfir.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.02Total elapsed time: 44.628 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.08Total elapsed time: 44.628 sec.
+@I [HLS-100] Command "source /opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/common/technology/xilinx/common/dsp48.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 44.629 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.08Total elapsed time: 44.629 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.08Total elapsed time: 44.629 sec.
+@I [HLS-100] Command "source /opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/common/technology/xilinx/zynq/zynq_fpv6.gen "
+@I [HLS-100] Command "source /opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/common/technology/xilinx/common/xilinx_fpv6.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 44.630 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 44.630 sec.
+@I [HLS-100] Command "source /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_accel_v4/SDRelease/_sds/vhls/correlation_accel_v4/solution/.autopilot/db/global.setting.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 44.630 sec.
+@I [HLS-100] Command "source /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_accel_v4/SDRelease/_sds/vhls/correlation_accel_v4/solution/.autopilot/db/global.setting.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 44.631 sec.
+@I [HLS-100] Command "source /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_accel_v4/SDRelease/_sds/vhls/correlation_accel_v4/solution/.autopilot/db/global.setting.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 44.631 sec.
+@I [HLS-100] Command "source /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_accel_v4/SDRelease/_sds/vhls/correlation_accel_v4/solution/.autopilot/db/correlation_accel_v4_frontEnd.compgen.tcl "
+@I [RTMG-278] Implementing memory 'correlation_accel_v4_frontEnd_weight_rom_ram' using block RAMs with power-on initialization.
+@I [RTMG-278] Implementing memory 'correlation_accel_v4_frontEnd_lnReturnA_ram' using block RAMs with power-on initialization.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.02Total elapsed time: 44.676 sec.
+@I [HLS-100] Command "source /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_accel_v4/SDRelease/_sds/vhls/correlation_accel_v4/solution/.autopilot/db/correlation_accel_v4_midEnd.compgen.tcl "
+@I [RTMG-282] Generating pipelined core: 'correlation_accel_v4_srem_32ns_4ns_32_36_div'
+@I [RTMG-278] Implementing memory 'correlation_accel_v4_midEnd_acc_returnA_ram' using distributed RAMs.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.01Total elapsed time: 44.685 sec.
+@I [HLS-100] Command "source /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_accel_v4/SDRelease/_sds/vhls/correlation_accel_v4/solution/.autopilot/db/correlation_accel_v4_midEnd_1.compgen.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 44.685 sec.
+@I [HLS-100] Command "source /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_accel_v4/SDRelease/_sds/vhls/correlation_accel_v4/solution/.autopilot/db/correlation_accel_v4_backEnd.compgen.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.02Total elapsed time: 44.696 sec.
+@I [HLS-100] Command "source /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_accel_v4/SDRelease/_sds/vhls/correlation_accel_v4/solution/.autopilot/db/correlation_accel_v4.compgen.tcl "
+@I [RTMG-285] Implementing FIFO 'FIFO_correlation_accel_v4_ln_returnA_c1_V' using Shift Registers.
+@I [RTMG-285] Implementing FIFO 'FIFO_correlation_accel_v4_weight_returnSquareA_c1_V' using Shift Registers.
+@I [RTMG-285] Implementing FIFO 'FIFO_correlation_accel_v4_weight_returnA_c1_V' using Shift Registers.
+@I [RTMG-285] Implementing FIFO 'FIFO_correlation_accel_v4_ln_returnA_c2_V' using Shift Registers.
+@I [RTMG-285] Implementing FIFO 'FIFO_correlation_accel_v4_weight_returnSquareA_c2_V' using Shift Registers.
+@I [RTMG-285] Implementing FIFO 'FIFO_correlation_accel_v4_weight_returnA_c2_V' using Shift Registers.
+@I [RTMG-285] Implementing FIFO 'FIFO_correlation_accel_v4_sum_weight_c1_V' using Shift Registers.
+@I [RTMG-285] Implementing FIFO 'FIFO_correlation_accel_v4_ln_returnB_c1_V' using Shift Registers.
+@I [RTMG-285] Implementing FIFO 'FIFO_correlation_accel_v4_weight_returnSquareB_c1_V' using Shift Registers.
+@I [RTMG-285] Implementing FIFO 'FIFO_correlation_accel_v4_weight_returnB_c1_V' using Shift Registers.
+@I [RTMG-285] Implementing FIFO 'FIFO_correlation_accel_v4_weight_returnA_returnB_c1_V' using Shift Registers.
+@I [RTMG-285] Implementing FIFO 'FIFO_correlation_accel_v4_sum_weight_c2_V' using Shift Registers.
+@I [RTMG-285] Implementing FIFO 'FIFO_correlation_accel_v4_ln_returnB_c2_V' using Shift Registers.
+@I [RTMG-285] Implementing FIFO 'FIFO_correlation_accel_v4_weight_returnSquareB_c2_V' using Shift Registers.
+@I [RTMG-285] Implementing FIFO 'FIFO_correlation_accel_v4_weight_returnB_c2_V' using Shift Registers.
+@I [RTMG-285] Implementing FIFO 'FIFO_correlation_accel_v4_weight_returnA_returnB_c2_V' using Shift Registers.
+@I [RTMG-285] Implementing FIFO 'FIFO_correlation_accel_v4_sum_weight_stage2_c1_V' using Shift Registers.
+@I [RTMG-285] Implementing FIFO 'FIFO_correlation_accel_v4_sum_return_stage2_c1_V' using Shift Registers.
+@I [RTMG-285] Implementing FIFO 'FIFO_correlation_accel_v4_sum_weight_returnSquare_stage2' using Shift Registers.
+@I [RTMG-285] Implementing FIFO 'FIFO_correlation_accel_v4_sum_weight_return_stage2_c1_V' using Shift Registers.
+@I [RTMG-285] Implementing FIFO 'FIFO_correlation_accel_v4_sum_weight_returnA_returnB_sta' using Shift Registers.
+@I [RTMG-285] Implementing FIFO 'FIFO_correlation_accel_v4_sum_returnA_stage2_c1_V' using Shift Registers.
+@I [RTMG-285] Implementing FIFO 'FIFO_correlation_accel_v4_sum_weight_returnSquareA_stage' using Shift Registers.
+@I [RTMG-285] Implementing FIFO 'FIFO_correlation_accel_v4_sum_weight_returnA_stage2_c1_V' using Shift Registers.
+@I [RTMG-285] Implementing FIFO 'FIFO_correlation_accel_v4_sum_weight_stage2_c2_V' using Shift Registers.
+@I [RTMG-285] Implementing FIFO 'FIFO_correlation_accel_v4_sum_return_stage2_c2_V' using Shift Registers.
+@I [RTMG-285] Implementing FIFO 'FIFO_correlation_accel_v4_sum_weight_returnSquare_stage2_1' using Shift Registers.
+@I [RTMG-285] Implementing FIFO 'FIFO_correlation_accel_v4_sum_weight_return_stage2_c2_V' using Shift Registers.
+@I [RTMG-285] Implementing FIFO 'FIFO_correlation_accel_v4_sum_weight_returnA_returnB_sta_1' using Shift Registers.
+@I [RTMG-285] Implementing FIFO 'FIFO_correlation_accel_v4_sum_returnA_stage2_c2_V' using Shift Registers.
+@I [RTMG-285] Implementing FIFO 'FIFO_correlation_accel_v4_sum_weight_returnSquareA_stage_1' using Shift Registers.
+@I [RTMG-285] Implementing FIFO 'FIFO_correlation_accel_v4_sum_weight_returnA_stage2_c2_V' using Shift Registers.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.06Total elapsed time: 44.764 sec.
+@I [HLS-10] Finished generating all RTL models.
+@0 [HLS-0] Finished generating all RTL models.
+@I [WSYSC-301] Generating RTL SystemC for 'correlation_accel_v4'.
+@I [WVHDL-304] Generating RTL VHDL for 'correlation_accel_v4'.
+@I [WVLOG-307] Generating RTL Verilog for 'correlation_accel_v4'.
+@I [HLS-100] Command 'autosyn' returned 0; elapsed 2.55Total elapsed time: 44.787 sec.
+@I [HLS-100] Command 'csynth_design' returned 0; elapsed 10.11Total elapsed time: 44.787 sec.
+@I [HLS-100] Command "export_design -acc "
+@I [HLS-100] Command "source /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_accel_v4/SDRelease/_sds/vhls/correlation_accel_v4/solution/.autopilot/db/global.setting.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 44.789 sec.
+@I [HLS-100] Command "source /opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/common/technology/generic/autopilot/common.gen "
+@I [HLS-100] Command "source /opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/common/technology/generic/autopilot/APCoreGen.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 44.790 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 44.791 sec.
+@I [HLS-100] Command "source /opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/common/technology/generic/autopilot/op.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 44.791 sec.
+@I [HLS-100] Command "source /opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/common/technology/generic/autopilot/op_simcore.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 44.791 sec.
+@I [HLS-100] Command "source /opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/common/technology/generic/autopilot/interface.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 44.792 sec.
+@I [HLS-100] Command "source /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_accel_v4/SDRelease/_sds/vhls/correlation_accel_v4/solution/.autopilot/db/global.setting.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 44.792 sec.
+@I [HLS-100] Command "source /opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/common/technology/xilinx/zynq/zynq.gen "
+@I [HLS-100] Command "source /opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/common/technology/xilinx/common/virtex.gen "
+@I [HLS-100] Command "source /opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/common/technology/xilinx/common/xilinx.gen "
+@I [HLS-100] Command "source /opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/common/technology/xilinx/interface/plb46.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 44.792 sec.
+@I [HLS-100] Command "source /opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/common/technology/xilinx/interface/fsl.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 44.793 sec.
+@I [HLS-100] Command "source /opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/common/technology/xilinx/interface/axi4.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 44.794 sec.
+@I [HLS-100] Command "source /opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/common/technology/xilinx/interface/nativeAXI4.gen "
+@I [HLS-100] Command "source /opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/common/technology/xilinx/interface/saxilite.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.01Total elapsed time: 44.795 sec.
+@I [HLS-100] Command "source /opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/common/technology/xilinx/interface/maxi.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 44.799 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.01Total elapsed time: 44.799 sec.
+@I [HLS-100] Command "source /opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/common/technology/xilinx/scripts/xilinxcoregen.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 44.803 sec.
+@I [HLS-100] Command "source /opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/common/technology/xilinx/interface/XilEDKCoreGen.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.01Total elapsed time: 44.807 sec.
+@I [HLS-100] Command "source /opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/common/technology/xilinx/ip/util.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 44.807 sec.
+@I [HLS-100] Command "source /opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/common/technology/xilinx/ip/xfft.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.05Total elapsed time: 44.862 sec.
+@I [HLS-100] Command "source /opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/common/technology/xilinx/ip/xfir.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.01Total elapsed time: 44.875 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.08Total elapsed time: 44.875 sec.
+@I [HLS-100] Command "source /opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/common/technology/xilinx/common/dsp48.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 44.876 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.08Total elapsed time: 44.876 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.08Total elapsed time: 44.876 sec.
+@I [HLS-100] Command "source /opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/common/technology/xilinx/zynq/zynq_fpv6.gen "
+@I [HLS-100] Command "source /opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/common/technology/xilinx/common/xilinx_fpv6.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.01Total elapsed time: 44.877 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.01Total elapsed time: 44.877 sec.
+@I [HLS-100] Command "source /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_accel_v4/SDRelease/_sds/vhls/correlation_accel_v4/solution/.autopilot/db/global.setting.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 44.878 sec.
+@I [IMPL-8] Exporting RTL as an IP in IP-XACT.
+@I [HLS-100] Command "source /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_accel_v4/SDRelease/_sds/vhls/correlation_accel_v4/solution/.autopilot/db/global.setting.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 44.880 sec.
+@I [HLS-100] Command "source /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_accel_v4/SDRelease/_sds/vhls/correlation_accel_v4/solution/.autopilot/db/global.setting.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 44.881 sec.
+@I [HLS-100] Command "source /opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/common/technology/generic/autopilot/common.gen "
+@I [HLS-100] Command "source /opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/common/technology/generic/autopilot/APCoreGen.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 44.881 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 44.881 sec.
+@I [HLS-100] Command "source /opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/common/technology/generic/autopilot/op.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 44.882 sec.
+@I [HLS-100] Command "source /opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/common/technology/generic/autopilot/op_simcore.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 44.882 sec.
+@I [HLS-100] Command "source /opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/common/technology/generic/autopilot/interface.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 44.882 sec.
+@I [HLS-100] Command "source /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_accel_v4/SDRelease/_sds/vhls/correlation_accel_v4/solution/.autopilot/db/global.setting.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 44.882 sec.
+@I [HLS-100] Command "source /opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/common/technology/xilinx/zynq/zynq.gen "
+@I [HLS-100] Command "source /opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/common/technology/xilinx/common/virtex.gen "
+@I [HLS-100] Command "source /opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/common/technology/xilinx/common/xilinx.gen "
+@I [HLS-100] Command "source /opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/common/technology/xilinx/interface/plb46.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 44.883 sec.
+@I [HLS-100] Command "source /opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/common/technology/xilinx/interface/fsl.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 44.883 sec.
+@I [HLS-100] Command "source /opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/common/technology/xilinx/interface/axi4.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 44.884 sec.
+@I [HLS-100] Command "source /opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/common/technology/xilinx/interface/nativeAXI4.gen "
+@I [HLS-100] Command "source /opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/common/technology/xilinx/interface/saxilite.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 44.886 sec.
+@I [HLS-100] Command "source /opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/common/technology/xilinx/interface/maxi.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.01Total elapsed time: 44.889 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.01Total elapsed time: 44.889 sec.
+@I [HLS-100] Command "source /opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/common/technology/xilinx/scripts/xilinxcoregen.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 44.893 sec.
+@I [HLS-100] Command "source /opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/common/technology/xilinx/interface/XilEDKCoreGen.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 44.897 sec.
+@I [HLS-100] Command "source /opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/common/technology/xilinx/ip/util.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 44.898 sec.
+@I [HLS-100] Command "source /opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/common/technology/xilinx/ip/xfft.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.06Total elapsed time: 44.952 sec.
+@I [HLS-100] Command "source /opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/common/technology/xilinx/ip/xfir.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.01Total elapsed time: 44.966 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.08Total elapsed time: 44.966 sec.
+@I [HLS-100] Command "source /opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/common/technology/xilinx/common/dsp48.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 44.966 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.08Total elapsed time: 44.966 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.08Total elapsed time: 44.966 sec.
+@I [HLS-100] Command "source /opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/common/technology/xilinx/zynq/zynq_fpv6.gen "
+@I [HLS-100] Command "source /opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/common/technology/xilinx/common/xilinx_fpv6.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 44.967 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 44.967 sec.
+@I [HLS-100] Command "source /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_accel_v4/SDRelease/_sds/vhls/correlation_accel_v4/solution/.autopilot/db/global.setting.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 44.968 sec.
+@I [HLS-100] Command "source /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_accel_v4/SDRelease/_sds/vhls/correlation_accel_v4/solution/.autopilot/db/correlation_accel_v4_frontEnd.compgen.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.01Total elapsed time: 44.974 sec.
+@I [HLS-100] Command "source /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_accel_v4/SDRelease/_sds/vhls/correlation_accel_v4/solution/.autopilot/db/correlation_accel_v4_midEnd.compgen.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 44.975 sec.
+@I [HLS-100] Command "source /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_accel_v4/SDRelease/_sds/vhls/correlation_accel_v4/solution/.autopilot/db/correlation_accel_v4_midEnd_1.compgen.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 44.975 sec.
+@I [HLS-100] Command "source /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_accel_v4/SDRelease/_sds/vhls/correlation_accel_v4/solution/.autopilot/db/correlation_accel_v4_backEnd.compgen.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 44.979 sec.
+@I [HLS-100] Command "source /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_accel_v4/SDRelease/_sds/vhls/correlation_accel_v4/solution/.autopilot/db/correlation_accel_v4.compgen.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.01Total elapsed time: 44.979 sec.
+@I [HLS-100] Command "source /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_accel_v4/SDRelease/_sds/vhls/correlation_accel_v4/solution/.autopilot/db/global.setting.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 44.995 sec.
+@I [HLS-100] Command "source /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_accel_v4/SDRelease/_sds/vhls/correlation_accel_v4/solution/.autopilot/db/correlation_accel_v4_frontEnd.compgen.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 44.996 sec.
+@I [HLS-100] Command "source /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_accel_v4/SDRelease/_sds/vhls/correlation_accel_v4/solution/.autopilot/db/correlation_accel_v4_midEnd.compgen.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 44.996 sec.
+@I [HLS-100] Command "source /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_accel_v4/SDRelease/_sds/vhls/correlation_accel_v4/solution/.autopilot/db/correlation_accel_v4_midEnd_1.compgen.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 44.996 sec.
+@I [HLS-100] Command "source /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_accel_v4/SDRelease/_sds/vhls/correlation_accel_v4/solution/.autopilot/db/correlation_accel_v4_backEnd.compgen.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 44.996 sec.
+@I [HLS-100] Command "source /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_accel_v4/SDRelease/_sds/vhls/correlation_accel_v4/solution/.autopilot/db/correlation_accel_v4.compgen.tcl "
+@I [HLS-100] Command "source /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_accel_v4/SDRelease/_sds/vhls/correlation_accel_v4/solution/.autopilot/db/correlation_accel_v4.rtl_wrap.cfg.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 44.998 sec.
+@I [HLS-100] Command "source /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_accel_v4/SDRelease/_sds/vhls/correlation_accel_v4/solution/.autopilot/db/correlation_accel_v4.rtl_wrap.cfg.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 44.998 sec.
+@I [HLS-100] Command "source /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_accel_v4/SDRelease/_sds/vhls/correlation_accel_v4/solution/.autopilot/db/correlation_accel_v4.tbgen.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 44.999 sec.
+@I [HLS-100] Command "source /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_accel_v4/SDRelease/_sds/vhls/correlation_accel_v4/solution/.autopilot/db/correlation_accel_v4.tbgen.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 44.999 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.02Total elapsed time: 45.19 sec.
+@I [HLS-100] Command "source /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_accel_v4/SDRelease/_sds/vhls/correlation_accel_v4/solution/.autopilot/db/global.setting.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 45.23 sec.
+@I [HLS-100] Command "source /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_accel_v4/SDRelease/_sds/vhls/correlation_accel_v4/solution/.autopilot/db/correlation_accel_v4_frontEnd.compgen.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 45.24 sec.
+@I [HLS-100] Command "source /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_accel_v4/SDRelease/_sds/vhls/correlation_accel_v4/solution/.autopilot/db/correlation_accel_v4_midEnd.compgen.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 45.25 sec.
+@I [HLS-100] Command "source /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_accel_v4/SDRelease/_sds/vhls/correlation_accel_v4/solution/.autopilot/db/correlation_accel_v4_midEnd_1.compgen.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 45.25 sec.
+@I [HLS-100] Command "source /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_accel_v4/SDRelease/_sds/vhls/correlation_accel_v4/solution/.autopilot/db/correlation_accel_v4_backEnd.compgen.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 45.25 sec.
+@I [HLS-100] Command "source /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_accel_v4/SDRelease/_sds/vhls/correlation_accel_v4/solution/.autopilot/db/correlation_accel_v4.compgen.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 45.26 sec.
+@I [HLS-100] Command "source /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_accel_v4/SDRelease/_sds/vhls/correlation_accel_v4/solution/.autopilot/db/global.setting.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 45.141 sec.
+@I [HLS-100] Command "source /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_accel_v4/SDRelease/_sds/vhls/correlation_accel_v4/solution/.autopilot/db/correlation_accel_v4.constraint.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 45.141 sec.
+@I [HLS-100] Command "source /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_accel_v4/SDRelease/_sds/vhls/correlation_accel_v4/solution/.autopilot/db/correlation_accel_v4.rtl_wrap.cfg.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 45.183 sec.
+@I [HLS-100] Command "source /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_accel_v4/SDRelease/_sds/vhls/correlation_accel_v4/solution/.autopilot/db/correlation_accel_v4.rtl_wrap.cfg.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 45.184 sec.
+@I [HLS-100] Command "source /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_accel_v4/SDRelease/_sds/vhls/correlation_accel_v4/solution/.autopilot/db/correlation_accel_v4.tbgen.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 45.184 sec.
+@I [HLS-100] Command "source /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_accel_v4/SDRelease/_sds/vhls/correlation_accel_v4/solution/.autopilot/db/correlation_accel_v4.tbgen.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 45.184 sec.
+@I [HLS-100] Command "source /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_accel_v4/SDRelease/_sds/vhls/correlation_accel_v4/solution/.autopilot/db/correlation_accel_v4.rtl_wrap.cfg.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 45.206 sec.
+@I [HLS-100] Command "source /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_accel_v4/SDRelease/_sds/vhls/correlation_accel_v4/solution/.autopilot/db/correlation_accel_v4.rtl_wrap.cfg.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 45.206 sec.
+@I [HLS-100] Command "source /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_accel_v4/SDRelease/_sds/vhls/correlation_accel_v4/solution/.autopilot/db/correlation_accel_v4.tbgen.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 45.206 sec.
+@I [HLS-100] Command "source /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_accel_v4/SDRelease/_sds/vhls/correlation_accel_v4/solution/.autopilot/db/correlation_accel_v4.tbgen.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.01Total elapsed time: 45.207 sec.
+@I [HLS-100] Command "source /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_accel_v4/SDRelease/_sds/vhls/correlation_accel_v4/solution/.autopilot/db/global.setting.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 45.228 sec.
+@I [HLS-100] Command "source /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_accel_v4/SDRelease/_sds/vhls/correlation_accel_v4/solution/.autopilot/db/global.setting.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 45.232 sec.
+@I [HLS-100] Command "source /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_accel_v4/SDRelease/_sds/vhls/correlation_accel_v4/solution/.autopilot/db/correlation_accel_v4.constraint.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 45.233 sec.
+@I [HLS-100] Command "source /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_accel_v4/SDRelease/_sds/vhls/correlation_accel_v4/solution/.autopilot/db/correlation_accel_v4.constraint.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 45.233 sec.
+@I [HLS-100] Command "source /opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/common/technology/generic/autopilot/common.gen "
+@I [HLS-100] Command "source /opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/common/technology/generic/autopilot/APCoreGen.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 45.237 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 45.237 sec.
+@I [HLS-100] Command "source /opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/common/technology/generic/autopilot/op.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 45.237 sec.
+@I [HLS-100] Command "source /opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/common/technology/generic/autopilot/op_simcore.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 45.238 sec.
+@I [HLS-100] Command "source /opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/common/technology/generic/autopilot/interface.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 45.238 sec.
+@I [HLS-100] Command "source /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_accel_v4/SDRelease/_sds/vhls/correlation_accel_v4/solution/.autopilot/db/global.setting.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 45.238 sec.
+@I [HLS-100] Command "source /opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/common/technology/xilinx/zynq/zynq.gen "
+@I [HLS-100] Command "source /opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/common/technology/xilinx/common/virtex.gen "
+@I [HLS-100] Command "source /opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/common/technology/xilinx/common/xilinx.gen "
+@I [HLS-100] Command "source /opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/common/technology/xilinx/interface/plb46.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 45.239 sec.
+@I [HLS-100] Command "source /opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/common/technology/xilinx/interface/fsl.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 45.239 sec.
+@I [HLS-100] Command "source /opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/common/technology/xilinx/interface/axi4.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 45.240 sec.
+@I [HLS-100] Command "source /opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/common/technology/xilinx/interface/nativeAXI4.gen "
+@I [HLS-100] Command "source /opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/common/technology/xilinx/interface/saxilite.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 45.242 sec.
+@I [HLS-100] Command "source /opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/common/technology/xilinx/interface/maxi.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 45.245 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 45.245 sec.
+@I [HLS-100] Command "source /opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/common/technology/xilinx/scripts/xilinxcoregen.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.01Total elapsed time: 45.249 sec.
+@I [HLS-100] Command "source /opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/common/technology/xilinx/interface/XilEDKCoreGen.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 45.254 sec.
+@I [HLS-100] Command "source /opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/common/technology/xilinx/ip/util.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 45.254 sec.
+@I [HLS-100] Command "source /opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/common/technology/xilinx/ip/xfft.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.06Total elapsed time: 45.309 sec.
+@I [HLS-100] Command "source /opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/common/technology/xilinx/ip/xfir.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.01Total elapsed time: 45.323 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.08Total elapsed time: 45.323 sec.
+@I [HLS-100] Command "source /opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/common/technology/xilinx/common/dsp48.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 45.324 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.08Total elapsed time: 45.324 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.08Total elapsed time: 45.324 sec.
+@I [HLS-100] Command "source /opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/common/technology/xilinx/zynq/zynq_fpv6.gen "
+@I [HLS-100] Command "source /opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/common/technology/xilinx/common/xilinx_fpv6.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 45.325 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 45.325 sec.
+@I [HLS-100] Command "source /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_accel_v4/SDRelease/_sds/vhls/correlation_accel_v4/solution/.autopilot/db/global.setting.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 74.473 sec.
+@I [HLS-100] Command "source /opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/common/technology/generic/autopilot/common.gen "
+@I [HLS-100] Command "source /opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/common/technology/generic/autopilot/APCoreGen.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 74.474 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 74.474 sec.
+@I [HLS-100] Command "source /opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/common/technology/generic/autopilot/op.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 74.475 sec.
+@I [HLS-100] Command "source /opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/common/technology/generic/autopilot/op_simcore.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 74.475 sec.
+@I [HLS-100] Command "source /opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/common/technology/generic/autopilot/interface.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 74.475 sec.
+@I [HLS-100] Command "source /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_accel_v4/SDRelease/_sds/vhls/correlation_accel_v4/solution/.autopilot/db/global.setting.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 74.475 sec.
+@I [HLS-100] Command "source /opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/common/technology/xilinx/zynq/zynq.gen "
+@I [HLS-100] Command "source /opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/common/technology/xilinx/common/virtex.gen "
+@I [HLS-100] Command "source /opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/common/technology/xilinx/common/xilinx.gen "
+@I [HLS-100] Command "source /opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/common/technology/xilinx/interface/plb46.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.01Total elapsed time: 74.477 sec.
+@I [HLS-100] Command "source /opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/common/technology/xilinx/interface/fsl.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 74.478 sec.
+@I [HLS-100] Command "source /opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/common/technology/xilinx/interface/axi4.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 74.479 sec.
+@I [HLS-100] Command "source /opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/common/technology/xilinx/interface/nativeAXI4.gen "
+@I [HLS-100] Command "source /opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/common/technology/xilinx/interface/saxilite.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 74.481 sec.
+@I [HLS-100] Command "source /opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/common/technology/xilinx/interface/maxi.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 74.485 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 74.485 sec.
+@I [HLS-100] Command "source /opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/common/technology/xilinx/scripts/xilinxcoregen.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.01Total elapsed time: 74.490 sec.
+@I [HLS-100] Command "source /opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/common/technology/xilinx/interface/XilEDKCoreGen.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 74.494 sec.
+@I [HLS-100] Command "source /opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/common/technology/xilinx/ip/util.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 74.494 sec.
+@I [HLS-100] Command "source /opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/common/technology/xilinx/ip/xfft.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.06Total elapsed time: 74.551 sec.
+@I [HLS-100] Command "source /opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/common/technology/xilinx/ip/xfir.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.01Total elapsed time: 74.566 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.09Total elapsed time: 74.566 sec.
+@I [HLS-100] Command "source /opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/common/technology/xilinx/common/dsp48.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 74.567 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.09Total elapsed time: 74.567 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.09Total elapsed time: 74.567 sec.
+@I [HLS-100] Command "source /opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/common/technology/xilinx/zynq/zynq_fpv6.gen "
+@I [HLS-100] Command "source /opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/common/technology/xilinx/common/xilinx_fpv6.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.01Total elapsed time: 74.568 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.01Total elapsed time: 74.568 sec.
+@I [HLS-100] Command "source /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_accel_v4/SDRelease/_sds/vhls/correlation_accel_v4/solution/.autopilot/db/global.setting.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 74.568 sec.
+@I [HLS-100] Command "source /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_accel_v4/SDRelease/_sds/vhls/correlation_accel_v4/solution/.autopilot/db/global.setting.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 74.570 sec.
+@I [HLS-100] Command "source /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_accel_v4/SDRelease/_sds/vhls/correlation_accel_v4/solution/.autopilot/db/global.setting.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 74.571 sec.
+@I [HLS-100] Command "source /opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/common/technology/generic/autopilot/common.gen "
+@I [HLS-100] Command "source /opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/common/technology/generic/autopilot/APCoreGen.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 74.572 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 74.573 sec.
+@I [HLS-100] Command "source /opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/common/technology/generic/autopilot/op.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 74.573 sec.
+@I [HLS-100] Command "source /opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/common/technology/generic/autopilot/op_simcore.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 74.573 sec.
+@I [HLS-100] Command "source /opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/common/technology/generic/autopilot/interface.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 74.573 sec.
+@I [HLS-100] Command "source /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_accel_v4/SDRelease/_sds/vhls/correlation_accel_v4/solution/.autopilot/db/global.setting.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 74.574 sec.
+@I [HLS-100] Command "source /opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/common/technology/xilinx/zynq/zynq.gen "
+@I [HLS-100] Command "source /opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/common/technology/xilinx/common/virtex.gen "
+@I [HLS-100] Command "source /opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/common/technology/xilinx/common/xilinx.gen "
+@I [HLS-100] Command "source /opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/common/technology/xilinx/interface/plb46.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 74.574 sec.
+@I [HLS-100] Command "source /opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/common/technology/xilinx/interface/fsl.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 74.575 sec.
+@I [HLS-100] Command "source /opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/common/technology/xilinx/interface/axi4.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 74.576 sec.
+@I [HLS-100] Command "source /opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/common/technology/xilinx/interface/nativeAXI4.gen "
+@I [HLS-100] Command "source /opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/common/technology/xilinx/interface/saxilite.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 74.577 sec.
+@I [HLS-100] Command "source /opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/common/technology/xilinx/interface/maxi.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.01Total elapsed time: 74.581 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.01Total elapsed time: 74.581 sec.
+@I [HLS-100] Command "source /opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/common/technology/xilinx/scripts/xilinxcoregen.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 74.585 sec.
+@I [HLS-100] Command "source /opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/common/technology/xilinx/interface/XilEDKCoreGen.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.01Total elapsed time: 74.589 sec.
+@I [HLS-100] Command "source /opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/common/technology/xilinx/ip/util.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 74.589 sec.
+@I [HLS-100] Command "source /opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/common/technology/xilinx/ip/xfft.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.05Total elapsed time: 74.645 sec.
+@I [HLS-100] Command "source /opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/common/technology/xilinx/ip/xfir.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.02Total elapsed time: 74.660 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.09Total elapsed time: 74.660 sec.
+@I [HLS-100] Command "source /opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/common/technology/xilinx/common/dsp48.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 74.660 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.09Total elapsed time: 74.660 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.09Total elapsed time: 74.660 sec.
+@I [HLS-100] Command "source /opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/common/technology/xilinx/zynq/zynq_fpv6.gen "
+@I [HLS-100] Command "source /opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/common/technology/xilinx/common/xilinx_fpv6.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 74.661 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 74.661 sec.
+@I [HLS-100] Command "source /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_accel_v4/SDRelease/_sds/vhls/correlation_accel_v4/solution/.autopilot/db/global.setting.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 74.662 sec.
+@I [HLS-100] Command "source /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_accel_v4/SDRelease/_sds/vhls/correlation_accel_v4/solution/.autopilot/db/correlation_accel_v4_frontEnd.compgen.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 74.670 sec.
+@I [HLS-100] Command "source /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_accel_v4/SDRelease/_sds/vhls/correlation_accel_v4/solution/.autopilot/db/correlation_accel_v4_midEnd.compgen.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 74.670 sec.
+@I [HLS-100] Command "source /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_accel_v4/SDRelease/_sds/vhls/correlation_accel_v4/solution/.autopilot/db/correlation_accel_v4_midEnd_1.compgen.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 74.670 sec.
+@I [HLS-100] Command "source /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_accel_v4/SDRelease/_sds/vhls/correlation_accel_v4/solution/.autopilot/db/correlation_accel_v4_backEnd.compgen.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.01Total elapsed time: 74.675 sec.
+@I [HLS-100] Command "source /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_accel_v4/SDRelease/_sds/vhls/correlation_accel_v4/solution/.autopilot/db/correlation_accel_v4.compgen.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 74.676 sec.
+@I [HLS-100] Command "source /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_accel_v4/SDRelease/_sds/vhls/correlation_accel_v4/solution/.autopilot/db/global.setting.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 74.720 sec.
+@I [HLS-100] Command "source /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_accel_v4/SDRelease/_sds/vhls/correlation_accel_v4/solution/.autopilot/db/correlation_accel_v4.constraint.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 74.721 sec.
+@I [HLS-100] Command "source /opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/common/technology/generic/autopilot/common.gen "
+@I [HLS-100] Command "source /opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/common/technology/generic/autopilot/APCoreGen.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 74.722 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 74.723 sec.
+@I [HLS-100] Command "source /opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/common/technology/generic/autopilot/op.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 74.723 sec.
+@I [HLS-100] Command "source /opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/common/technology/generic/autopilot/op_simcore.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 74.723 sec.
+@I [HLS-100] Command "source /opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/common/technology/generic/autopilot/interface.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 74.724 sec.
+@I [HLS-100] Command "source /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_accel_v4/SDRelease/_sds/vhls/correlation_accel_v4/solution/.autopilot/db/global.setting.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 74.724 sec.
+@I [HLS-100] Command "source /opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/common/technology/xilinx/zynq/zynq.gen "
+@I [HLS-100] Command "source /opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/common/technology/xilinx/common/virtex.gen "
+@I [HLS-100] Command "source /opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/common/technology/xilinx/common/xilinx.gen "
+@I [HLS-100] Command "source /opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/common/technology/xilinx/interface/plb46.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 74.724 sec.
+@I [HLS-100] Command "source /opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/common/technology/xilinx/interface/fsl.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 74.725 sec.
+@I [HLS-100] Command "source /opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/common/technology/xilinx/interface/axi4.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 74.726 sec.
+@I [HLS-100] Command "source /opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/common/technology/xilinx/interface/nativeAXI4.gen "
+@I [HLS-100] Command "source /opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/common/technology/xilinx/interface/saxilite.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 74.728 sec.
+@I [HLS-100] Command "source /opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/common/technology/xilinx/interface/maxi.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 74.731 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 74.731 sec.
+@I [HLS-100] Command "source /opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/common/technology/xilinx/scripts/xilinxcoregen.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.01Total elapsed time: 74.735 sec.
+@I [HLS-100] Command "source /opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/common/technology/xilinx/interface/XilEDKCoreGen.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 74.739 sec.
+@I [HLS-100] Command "source /opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/common/technology/xilinx/ip/util.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 74.739 sec.
+@I [HLS-100] Command "source /opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/common/technology/xilinx/ip/xfft.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.06Total elapsed time: 74.795 sec.
+@I [HLS-100] Command "source /opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/common/technology/xilinx/ip/xfir.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.01Total elapsed time: 74.809 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.08Total elapsed time: 74.809 sec.
+@I [HLS-100] Command "source /opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/common/technology/xilinx/common/dsp48.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 74.810 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.08Total elapsed time: 74.810 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.08Total elapsed time: 74.810 sec.
+@I [HLS-100] Command "source /opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/common/technology/xilinx/zynq/zynq_fpv6.gen "
+@I [HLS-100] Command "source /opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/common/technology/xilinx/common/xilinx_fpv6.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 74.811 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 74.811 sec.
+@I [HLS-100] Command "source /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_accel_v4/SDRelease/_sds/vhls/correlation_accel_v4/solution/.autopilot/db/global.setting.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 74.815 sec.
+@I [HLS-100] Command "source /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_accel_v4/SDRelease/_sds/vhls/correlation_accel_v4/solution/.autopilot/db/global.setting.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 81.378 sec.
+@I [HLS-100] Command "source /opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/common/technology/generic/autopilot/common.gen "
+@I [HLS-100] Command "source /opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/common/technology/generic/autopilot/APCoreGen.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 81.380 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 81.380 sec.
+@I [HLS-100] Command "source /opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/common/technology/generic/autopilot/op.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 81.380 sec.
+@I [HLS-100] Command "source /opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/common/technology/generic/autopilot/op_simcore.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 81.381 sec.
+@I [HLS-100] Command "source /opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/common/technology/generic/autopilot/interface.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 81.381 sec.
+@I [HLS-100] Command "source /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_accel_v4/SDRelease/_sds/vhls/correlation_accel_v4/solution/.autopilot/db/global.setting.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 81.381 sec.
+@I [HLS-100] Command "source /opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/common/technology/xilinx/zynq/zynq.gen "
+@I [HLS-100] Command "source /opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/common/technology/xilinx/common/virtex.gen "
+@I [HLS-100] Command "source /opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/common/technology/xilinx/common/xilinx.gen "
+@I [HLS-100] Command "source /opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/common/technology/xilinx/interface/plb46.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 81.382 sec.
+@I [HLS-100] Command "source /opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/common/technology/xilinx/interface/fsl.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 81.382 sec.
+@I [HLS-100] Command "source /opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/common/technology/xilinx/interface/axi4.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 81.384 sec.
+@I [HLS-100] Command "source /opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/common/technology/xilinx/interface/nativeAXI4.gen "
+@I [HLS-100] Command "source /opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/common/technology/xilinx/interface/saxilite.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 81.385 sec.
+@I [HLS-100] Command "source /opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/common/technology/xilinx/interface/maxi.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 81.390 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 81.390 sec.
+@I [HLS-100] Command "source /opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/common/technology/xilinx/scripts/xilinxcoregen.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.01Total elapsed time: 81.394 sec.
+@I [HLS-100] Command "source /opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/common/technology/xilinx/interface/XilEDKCoreGen.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 81.399 sec.
+@I [HLS-100] Command "source /opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/common/technology/xilinx/ip/util.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 81.399 sec.
+@I [HLS-100] Command "source /opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/common/technology/xilinx/ip/xfft.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.06Total elapsed time: 81.454 sec.
+@I [HLS-100] Command "source /opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/common/technology/xilinx/ip/xfir.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.01Total elapsed time: 81.469 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.08Total elapsed time: 81.469 sec.
+@I [HLS-100] Command "source /opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/common/technology/xilinx/common/dsp48.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 81.470 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.08Total elapsed time: 81.470 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.08Total elapsed time: 81.470 sec.
+@I [HLS-100] Command "source /opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/common/technology/xilinx/zynq/zynq_fpv6.gen "
+@I [HLS-100] Command "source /opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/common/technology/xilinx/common/xilinx_fpv6.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.01Total elapsed time: 81.471 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.01Total elapsed time: 81.471 sec.
+@I [HLS-100] Command "source /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_accel_v4/SDRelease/_sds/vhls/correlation_accel_v4/solution/.autopilot/db/global.setting.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 81.471 sec.
+@I [HLS-100] Command "source /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_accel_v4/SDRelease/_sds/vhls/correlation_accel_v4/solution/.autopilot/db/global.setting.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 81.473 sec.
+@I [HLS-100] Command "source /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_accel_v4/SDRelease/_sds/vhls/correlation_accel_v4/solution/.autopilot/db/global.setting.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 81.474 sec.
+@I [HLS-100] Command "source /opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/common/technology/generic/autopilot/common.gen "
+@I [HLS-100] Command "source /opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/common/technology/generic/autopilot/APCoreGen.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 81.475 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 81.476 sec.
+@I [HLS-100] Command "source /opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/common/technology/generic/autopilot/op.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 81.476 sec.
+@I [HLS-100] Command "source /opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/common/technology/generic/autopilot/op_simcore.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 81.476 sec.
+@I [HLS-100] Command "source /opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/common/technology/generic/autopilot/interface.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 81.476 sec.
+@I [HLS-100] Command "source /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_accel_v4/SDRelease/_sds/vhls/correlation_accel_v4/solution/.autopilot/db/global.setting.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 81.476 sec.
+@I [HLS-100] Command "source /opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/common/technology/xilinx/zynq/zynq.gen "
+@I [HLS-100] Command "source /opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/common/technology/xilinx/common/virtex.gen "
+@I [HLS-100] Command "source /opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/common/technology/xilinx/common/xilinx.gen "
+@I [HLS-100] Command "source /opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/common/technology/xilinx/interface/plb46.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 81.477 sec.
+@I [HLS-100] Command "source /opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/common/technology/xilinx/interface/fsl.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 81.477 sec.
+@I [HLS-100] Command "source /opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/common/technology/xilinx/interface/axi4.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 81.479 sec.
+@I [HLS-100] Command "source /opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/common/technology/xilinx/interface/nativeAXI4.gen "
+@I [HLS-100] Command "source /opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/common/technology/xilinx/interface/saxilite.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 81.480 sec.
+@I [HLS-100] Command "source /opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/common/technology/xilinx/interface/maxi.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.01Total elapsed time: 81.483 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.01Total elapsed time: 81.483 sec.
+@I [HLS-100] Command "source /opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/common/technology/xilinx/scripts/xilinxcoregen.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 81.488 sec.
+@I [HLS-100] Command "source /opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/common/technology/xilinx/interface/XilEDKCoreGen.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 81.492 sec.
+@I [HLS-100] Command "source /opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/common/technology/xilinx/ip/util.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 81.492 sec.
+@I [HLS-100] Command "source /opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/common/technology/xilinx/ip/xfft.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.06Total elapsed time: 81.546 sec.
+@I [HLS-100] Command "source /opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/common/technology/xilinx/ip/xfir.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.01Total elapsed time: 81.560 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.08Total elapsed time: 81.560 sec.
+@I [HLS-100] Command "source /opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/common/technology/xilinx/common/dsp48.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 81.561 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.08Total elapsed time: 81.561 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.08Total elapsed time: 81.561 sec.
+@I [HLS-100] Command "source /opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/common/technology/xilinx/zynq/zynq_fpv6.gen "
+@I [HLS-100] Command "source /opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/common/technology/xilinx/common/xilinx_fpv6.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 81.562 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 81.562 sec.
+@I [HLS-100] Command "source /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_accel_v4/SDRelease/_sds/vhls/correlation_accel_v4/solution/.autopilot/db/global.setting.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 81.562 sec.
+@I [HLS-100] Command "source /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_accel_v4/SDRelease/_sds/vhls/correlation_accel_v4/solution/.autopilot/db/correlation_accel_v4_frontEnd.compgen.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.01Total elapsed time: 81.570 sec.
+@I [HLS-100] Command "source /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_accel_v4/SDRelease/_sds/vhls/correlation_accel_v4/solution/.autopilot/db/correlation_accel_v4_midEnd.compgen.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 81.570 sec.
+@I [HLS-100] Command "source /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_accel_v4/SDRelease/_sds/vhls/correlation_accel_v4/solution/.autopilot/db/correlation_accel_v4_midEnd_1.compgen.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 81.571 sec.
+@I [HLS-100] Command "source /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_accel_v4/SDRelease/_sds/vhls/correlation_accel_v4/solution/.autopilot/db/correlation_accel_v4_backEnd.compgen.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.01Total elapsed time: 81.575 sec.
+@I [HLS-100] Command "source /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_accel_v4/SDRelease/_sds/vhls/correlation_accel_v4/solution/.autopilot/db/correlation_accel_v4.compgen.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 81.576 sec.
+@I [HLS-100] Command "source /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_accel_v4/SDRelease/_sds/vhls/correlation_accel_v4/solution/.autopilot/db/global.setting.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 81.598 sec.
+@I [HLS-100] Command "source /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_accel_v4/SDRelease/_sds/vhls/correlation_accel_v4/solution/.autopilot/db/correlation_accel_v4.constraint.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 81.599 sec.
+@I [HLS-100] Command "source /opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/common/technology/generic/autopilot/common.gen "
+@I [HLS-100] Command "source /opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/common/technology/generic/autopilot/APCoreGen.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 81.600 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 81.600 sec.
+@I [HLS-100] Command "source /opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/common/technology/generic/autopilot/op.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 81.601 sec.
+@I [HLS-100] Command "source /opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/common/technology/generic/autopilot/op_simcore.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 81.601 sec.
+@I [HLS-100] Command "source /opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/common/technology/generic/autopilot/interface.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 81.601 sec.
+@I [HLS-100] Command "source /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_accel_v4/SDRelease/_sds/vhls/correlation_accel_v4/solution/.autopilot/db/global.setting.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 81.601 sec.
+@I [HLS-100] Command "source /opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/common/technology/xilinx/zynq/zynq.gen "
+@I [HLS-100] Command "source /opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/common/technology/xilinx/common/virtex.gen "
+@I [HLS-100] Command "source /opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/common/technology/xilinx/common/xilinx.gen "
+@I [HLS-100] Command "source /opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/common/technology/xilinx/interface/plb46.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 81.602 sec.
+@I [HLS-100] Command "source /opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/common/technology/xilinx/interface/fsl.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 81.602 sec.
+@I [HLS-100] Command "source /opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/common/technology/xilinx/interface/axi4.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.01Total elapsed time: 81.604 sec.
+@I [HLS-100] Command "source /opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/common/technology/xilinx/interface/nativeAXI4.gen "
+@I [HLS-100] Command "source /opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/common/technology/xilinx/interface/saxilite.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 81.605 sec.
+@I [HLS-100] Command "source /opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/common/technology/xilinx/interface/maxi.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 81.608 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 81.608 sec.
+@I [HLS-100] Command "source /opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/common/technology/xilinx/scripts/xilinxcoregen.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 81.613 sec.
+@I [HLS-100] Command "source /opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/common/technology/xilinx/interface/XilEDKCoreGen.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.01Total elapsed time: 81.617 sec.
+@I [HLS-100] Command "source /opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/common/technology/xilinx/ip/util.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 81.617 sec.
+@I [HLS-100] Command "source /opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/common/technology/xilinx/ip/xfft.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.05Total elapsed time: 81.672 sec.
+@I [HLS-100] Command "source /opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/common/technology/xilinx/ip/xfir.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.02Total elapsed time: 81.686 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.09Total elapsed time: 81.686 sec.
+@I [HLS-100] Command "source /opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/common/technology/xilinx/common/dsp48.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 81.686 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.09Total elapsed time: 81.687 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.09Total elapsed time: 81.687 sec.
+@I [HLS-100] Command "source /opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/common/technology/xilinx/zynq/zynq_fpv6.gen "
+@I [HLS-100] Command "source /opt/Xilinx/SDSoC/2014.4/Vivado_HLS/2014.4/common/technology/xilinx/common/xilinx_fpv6.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 81.688 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 81.688 sec.
+@I [HLS-100] Command "source /home/trungnguyen/SDSoC/workspace/correlation_ver2_axis/correlation_accel_v4/SDRelease/_sds/vhls/correlation_accel_v4/solution/.autopilot/db/global.setting.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 81.691 sec.
+@I [HLS-100] Command 'export_design' returned 0; elapsed 1.1Total elapsed time: 88.90 sec.
+@I [HLS-100] Command "cleanup_all "
+@I [HLS-100] Command 'cleanup_all' returned 0; elapsed 0.02Total elapsed time: 88.112 sec.

@@ -1,0 +1,609 @@
+
+
+================================================================
+== Vivado HLS Report for 'correlation_accel_v4'
+================================================================
+* Date:           Thu Feb  9 13:42:54 2017
+
+* Version:        2014.4 (Build 1071461 on Tue Nov 18 16:42:57 PM 2014)
+* Project:        correlation_accel_v4
+* Solution:       solution
+* Product family: zynq
+* Target device:  xc7z020clg484-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +---------+-------+----------+------------+
+    |  Clock  | Target| Estimated| Uncertainty|
+    +---------+-------+----------+------------+
+    |default  |   8.50|      9.65|        1.06|
+    +---------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-----+-----+-----+-----+----------+
+    |  Latency  |  Interval | Pipeline |
+    | min | max | min | max |   Type   |
+    +-----+-----+-----+-----+----------+
+    |    ?|    ?|    ?|    ?| dataflow |
+    +-----+-----+-----+-----+----------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-------+--------+-------+
+|       Name      | BRAM_18K| DSP48E|   FF   |  LUT  |
++-----------------+---------+-------+--------+-------+
+|Expression       |        -|      -|       -|      -|
+|FIFO             |        -|      -|       -|      -|
+|Instance         |        -|      -|       -|      -|
+|Memory           |        -|      -|       -|      -|
+|Multiplexer      |        -|      -|       -|      -|
+|Register         |        -|      -|       -|      -|
++-----------------+---------+-------+--------+-------+
+|Total            |        0|      0|       0|      0|
++-----------------+---------+-------+--------+-------+
+|Available        |      280|    220|  106400|  53200|
++-----------------+---------+-------+--------+-------+
+|Utilization (%)  |        0|      0|       0|      0|
++-----------------+---------+-------+--------+-------+
+
++ Detail: 
+    * Instance: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    N/A
+
+    * Multiplexer: 
+    N/A
+
+    * Register: 
+    N/A
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
+N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 1
+ResetActiveHigh: 1
+IsCombinational: 2
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states: 6
+* Pipeline: 0
+* Dataflow Pipeline: 1
+  DF-Pipeline-0: Size = 6, States = { 1 2 3 4 5 6 }
+
+* FSM state transitions: 
+1 --> 
+	2  / true
+2 --> 
+	3  / true
+3 --> 
+	4  / true
+4 --> 
+	5  / true
+5 --> 
+	6  / true
+6 --> 
+* FSM state operations: 
+
+ <State 1>: 1.86ns
+ST_1: number_of_indices_read [1/1] 0.00ns
+:0  %number_of_indices_read = call i32 @_ssdm_op_Read.ap_auto.i32(i32 %number_of_indices)
+
+ST_1: number_of_days_read [1/1] 0.00ns
+:1  %number_of_days_read = call i32 @_ssdm_op_Read.ap_auto.i32(i32 %number_of_days)
+
+ST_1: number_of_indices20_channel [1/1] 0.00ns
+:2  %number_of_indices20_channel = alloca i32, align 4
+
+ST_1: number_of_days19_channel [1/1] 0.00ns
+:3  %number_of_days19_channel = alloca i32, align 4
+
+ST_1: number_of_indices18_channel [1/1] 0.00ns
+:4  %number_of_indices18_channel = alloca i32, align 4
+
+ST_1: number_of_indices17_channel [1/1] 0.00ns
+:5  %number_of_indices17_channel = alloca i32, align 4
+
+ST_1: number_of_days16_channel [1/1] 0.00ns
+:6  %number_of_days16_channel = alloca i32, align 4
+
+ST_1: number_of_days15_channel [1/1] 0.00ns
+:7  %number_of_days15_channel = alloca i32, align 4
+
+ST_1: ln_returnA_c1_V [1/1] 0.00ns
+:26  %ln_returnA_c1_V = alloca float, align 4
+
+ST_1: weight_returnSquareA_c1_V [1/1] 0.00ns
+:29  %weight_returnSquareA_c1_V = alloca float, align 4
+
+ST_1: weight_returnA_c1_V [1/1] 0.00ns
+:32  %weight_returnA_c1_V = alloca float, align 4
+
+ST_1: ln_returnA_c2_V [1/1] 0.00ns
+:35  %ln_returnA_c2_V = alloca float, align 4
+
+ST_1: weight_returnSquareA_c2_V [1/1] 0.00ns
+:38  %weight_returnSquareA_c2_V = alloca float, align 4
+
+ST_1: weight_returnA_c2_V [1/1] 0.00ns
+:41  %weight_returnA_c2_V = alloca float, align 4
+
+ST_1: sum_weight_c1_V [1/1] 0.00ns
+:44  %sum_weight_c1_V = alloca float, align 4
+
+ST_1: ln_returnB_c1_V [1/1] 0.00ns
+:47  %ln_returnB_c1_V = alloca float, align 4
+
+ST_1: weight_returnSquareB_c1_V [1/1] 0.00ns
+:50  %weight_returnSquareB_c1_V = alloca float, align 4
+
+ST_1: weight_returnB_c1_V [1/1] 0.00ns
+:53  %weight_returnB_c1_V = alloca float, align 4
+
+ST_1: weight_returnA_returnB_c1_V [1/1] 0.00ns
+:56  %weight_returnA_returnB_c1_V = alloca float, align 4
+
+ST_1: sum_weight_c2_V [1/1] 0.00ns
+:59  %sum_weight_c2_V = alloca float, align 4
+
+ST_1: ln_returnB_c2_V [1/1] 0.00ns
+:62  %ln_returnB_c2_V = alloca float, align 4
+
+ST_1: weight_returnSquareB_c2_V [1/1] 0.00ns
+:65  %weight_returnSquareB_c2_V = alloca float, align 4
+
+ST_1: weight_returnB_c2_V [1/1] 0.00ns
+:68  %weight_returnB_c2_V = alloca float, align 4
+
+ST_1: weight_returnA_returnB_c2_V [1/1] 0.00ns
+:71  %weight_returnA_returnB_c2_V = alloca float, align 4
+
+ST_1: sum_weight_stage2_c1_V [1/1] 0.00ns
+:74  %sum_weight_stage2_c1_V = alloca float, align 4
+
+ST_1: sum_return_stage2_c1_V [1/1] 0.00ns
+:77  %sum_return_stage2_c1_V = alloca float, align 4
+
+ST_1: sum_weight_returnSquare_stage2 [1/1] 0.00ns
+:80  %sum_weight_returnSquare_stage2 = alloca float, align 4
+
+ST_1: sum_weight_return_stage2_c1_V [1/1] 0.00ns
+:83  %sum_weight_return_stage2_c1_V = alloca float, align 4
+
+ST_1: sum_weight_returnA_returnB_sta [1/1] 0.00ns
+:86  %sum_weight_returnA_returnB_sta = alloca float, align 4
+
+ST_1: sum_returnA_stage2_c1_V [1/1] 0.00ns
+:89  %sum_returnA_stage2_c1_V = alloca float, align 4
+
+ST_1: sum_weight_returnSquareA_stage [1/1] 0.00ns
+:92  %sum_weight_returnSquareA_stage = alloca float, align 4
+
+ST_1: sum_weight_returnA_stage2_c1_V [1/1] 0.00ns
+:95  %sum_weight_returnA_stage2_c1_V = alloca float, align 4
+
+ST_1: sum_weight_stage2_c2_V [1/1] 0.00ns
+:98  %sum_weight_stage2_c2_V = alloca float, align 4
+
+ST_1: sum_return_stage2_c2_V [1/1] 0.00ns
+:101  %sum_return_stage2_c2_V = alloca float, align 4
+
+ST_1: sum_weight_returnSquare_stage2_1 [1/1] 0.00ns
+:104  %sum_weight_returnSquare_stage2_1 = alloca float, align 4
+
+ST_1: sum_weight_return_stage2_c2_V [1/1] 0.00ns
+:107  %sum_weight_return_stage2_c2_V = alloca float, align 4
+
+ST_1: sum_weight_returnA_returnB_sta_1 [1/1] 0.00ns
+:110  %sum_weight_returnA_returnB_sta_1 = alloca float, align 4
+
+ST_1: sum_returnA_stage2_c2_V [1/1] 0.00ns
+:113  %sum_returnA_stage2_c2_V = alloca float, align 4
+
+ST_1: sum_weight_returnSquareA_stage_1 [1/1] 0.00ns
+:116  %sum_weight_returnSquareA_stage_1 = alloca float, align 4
+
+ST_1: sum_weight_returnA_stage2_c2_V [1/1] 0.00ns
+:119  %sum_weight_returnA_stage2_c2_V = alloca float, align 4
+
+ST_1: stg_47 [2/2] 1.86ns
+:126  call fastcc void @correlation_accel_v4_frontEnd(i32 %number_of_days_read, i32 %number_of_indices_read, i32* %in_indices_data_V, i4* %in_indices_keep_V, i4* %in_indices_strb_V, i1* %in_indices_user_V, i1* %in_indices_last_V, i1* %in_indices_id_V, i1* %in_indices_dest_V, float* %ln_returnA_c1_V, float* %weight_returnSquareA_c1_V, float* %weight_returnA_c1_V, float* %ln_returnA_c2_V, float* %weight_returnSquareA_c2_V, float* %weight_returnA_c2_V, float* %sum_weight_c1_V, float* %ln_returnB_c1_V, float* %weight_returnSquareB_c1_V, float* %weight_returnB_c1_V, float* %weight_returnA_returnB_c1_V, float* %sum_weight_c2_V, float* %ln_returnB_c2_V, float* %weight_returnSquareB_c2_V, float* %weight_returnB_c2_V, float* %weight_returnA_returnB_c2_V, i32* %number_of_days15_channel, i32* %number_of_days16_channel, i32* %number_of_indices17_channel, i32* %number_of_indices18_channel)
+
+
+ <State 2>: 0.00ns
+ST_2: stg_48 [1/2] 0.00ns
+:126  call fastcc void @correlation_accel_v4_frontEnd(i32 %number_of_days_read, i32 %number_of_indices_read, i32* %in_indices_data_V, i4* %in_indices_keep_V, i4* %in_indices_strb_V, i1* %in_indices_user_V, i1* %in_indices_last_V, i1* %in_indices_id_V, i1* %in_indices_dest_V, float* %ln_returnA_c1_V, float* %weight_returnSquareA_c1_V, float* %weight_returnA_c1_V, float* %ln_returnA_c2_V, float* %weight_returnSquareA_c2_V, float* %weight_returnA_c2_V, float* %sum_weight_c1_V, float* %ln_returnB_c1_V, float* %weight_returnSquareB_c1_V, float* %weight_returnB_c1_V, float* %weight_returnA_returnB_c1_V, float* %sum_weight_c2_V, float* %ln_returnB_c2_V, float* %weight_returnSquareB_c2_V, float* %weight_returnB_c2_V, float* %weight_returnA_returnB_c2_V, i32* %number_of_days15_channel, i32* %number_of_days16_channel, i32* %number_of_indices17_channel, i32* %number_of_indices18_channel)
+
+
+ <State 3>: 0.00ns
+ST_3: stg_49 [2/2] 0.00ns
+:131  call fastcc void @correlation_accel_v4_midEnd(i32* %number_of_days15_channel, i32* %number_of_indices17_channel, float* %ln_returnA_c1_V, float* %weight_returnSquareA_c1_V, float* %weight_returnA_c1_V, float* %sum_weight_c1_V, float* %ln_returnB_c1_V, float* %weight_returnSquareB_c1_V, float* %weight_returnB_c1_V, float* %weight_returnA_returnB_c1_V, float* %sum_weight_stage2_c1_V, float* %sum_return_stage2_c1_V, float* %sum_weight_returnSquare_stage2, float* %sum_weight_return_stage2_c1_V, float* %sum_weight_returnA_returnB_sta, float* %sum_returnA_stage2_c1_V, float* %sum_weight_returnSquareA_stage, float* %sum_weight_returnA_stage2_c1_V, i32* %number_of_days19_channel, i32* %number_of_indices20_channel)
+
+ST_3: stg_50 [2/2] 0.00ns
+:136  call fastcc void @correlation_accel_v4_midEnd.1(i32* %number_of_days16_channel, i32* %number_of_indices18_channel, float* %ln_returnA_c2_V, float* %weight_returnSquareA_c2_V, float* %weight_returnA_c2_V, float* %sum_weight_c2_V, float* %ln_returnB_c2_V, float* %weight_returnSquareB_c2_V, float* %weight_returnB_c2_V, float* %weight_returnA_returnB_c2_V, float* %sum_weight_stage2_c2_V, float* %sum_return_stage2_c2_V, float* %sum_weight_returnSquare_stage2_1, float* %sum_weight_return_stage2_c2_V, float* %sum_weight_returnA_returnB_sta_1, float* %sum_returnA_stage2_c2_V, float* %sum_weight_returnSquareA_stage_1, float* %sum_weight_returnA_stage2_c2_V)
+
+
+ <State 4>: 0.00ns
+ST_4: stg_51 [1/2] 0.00ns
+:131  call fastcc void @correlation_accel_v4_midEnd(i32* %number_of_days15_channel, i32* %number_of_indices17_channel, float* %ln_returnA_c1_V, float* %weight_returnSquareA_c1_V, float* %weight_returnA_c1_V, float* %sum_weight_c1_V, float* %ln_returnB_c1_V, float* %weight_returnSquareB_c1_V, float* %weight_returnB_c1_V, float* %weight_returnA_returnB_c1_V, float* %sum_weight_stage2_c1_V, float* %sum_return_stage2_c1_V, float* %sum_weight_returnSquare_stage2, float* %sum_weight_return_stage2_c1_V, float* %sum_weight_returnA_returnB_sta, float* %sum_returnA_stage2_c1_V, float* %sum_weight_returnSquareA_stage, float* %sum_weight_returnA_stage2_c1_V, i32* %number_of_days19_channel, i32* %number_of_indices20_channel)
+
+ST_4: stg_52 [1/2] 0.00ns
+:136  call fastcc void @correlation_accel_v4_midEnd.1(i32* %number_of_days16_channel, i32* %number_of_indices18_channel, float* %ln_returnA_c2_V, float* %weight_returnSquareA_c2_V, float* %weight_returnA_c2_V, float* %sum_weight_c2_V, float* %ln_returnB_c2_V, float* %weight_returnSquareB_c2_V, float* %weight_returnB_c2_V, float* %weight_returnA_returnB_c2_V, float* %sum_weight_stage2_c2_V, float* %sum_return_stage2_c2_V, float* %sum_weight_returnSquare_stage2_1, float* %sum_weight_return_stage2_c2_V, float* %sum_weight_returnA_returnB_sta_1, float* %sum_returnA_stage2_c2_V, float* %sum_weight_returnSquareA_stage_1, float* %sum_weight_returnA_stage2_c2_V)
+
+
+ <State 5>: 0.00ns
+ST_5: stg_53 [2/2] 0.00ns
+:141  call fastcc void @correlation_accel_v4_backEnd(i32* %number_of_days19_channel, i32* %number_of_indices20_channel, float* %sum_weight_stage2_c1_V, float* %sum_return_stage2_c1_V, float* %sum_weight_returnSquare_stage2, float* %sum_weight_return_stage2_c1_V, float* %sum_weight_returnA_returnB_sta, float* %sum_returnA_stage2_c1_V, float* %sum_weight_returnSquareA_stage, float* %sum_weight_returnA_stage2_c1_V, float* %sum_weight_stage2_c2_V, float* %sum_return_stage2_c2_V, float* %sum_weight_returnSquare_stage2_1, float* %sum_weight_return_stage2_c2_V, float* %sum_weight_returnA_returnB_sta_1, float* %sum_returnA_stage2_c2_V, float* %sum_weight_returnSquareA_stage_1, float* %sum_weight_returnA_stage2_c2_V, i32* %out_correlation_data_V, i4* %out_correlation_keep_V, i4* %out_correlation_strb_V, i1* %out_correlation_user_V, i1* %out_correlation_last_V, i1* %out_correlation_id_V, i1* %out_correlation_dest_V)
+
+
+ <State 6>: 6.08ns
+ST_6: stg_54 [1/1] 0.00ns
+:8  call void (...)* @_ssdm_op_SpecDataflowPipeline(i32 -1, [1 x i8]* @p_str) nounwind
+
+ST_6: stg_55 [1/1] 0.00ns
+:9  call void (...)* @_ssdm_op_SpecBitsMap(i32 %number_of_days), !map !7
+
+ST_6: stg_56 [1/1] 0.00ns
+:10  call void (...)* @_ssdm_op_SpecBitsMap(i32 %number_of_indices), !map !13
+
+ST_6: stg_57 [1/1] 0.00ns
+:11  call void (...)* @_ssdm_op_SpecBitsMap(i32* %in_indices_data_V), !map !17
+
+ST_6: stg_58 [1/1] 0.00ns
+:12  call void (...)* @_ssdm_op_SpecBitsMap(i4* %in_indices_keep_V), !map !23
+
+ST_6: stg_59 [1/1] 0.00ns
+:13  call void (...)* @_ssdm_op_SpecBitsMap(i4* %in_indices_strb_V), !map !27
+
+ST_6: stg_60 [1/1] 0.00ns
+:14  call void (...)* @_ssdm_op_SpecBitsMap(i1* %in_indices_user_V), !map !31
+
+ST_6: stg_61 [1/1] 0.00ns
+:15  call void (...)* @_ssdm_op_SpecBitsMap(i1* %in_indices_last_V), !map !35
+
+ST_6: stg_62 [1/1] 0.00ns
+:16  call void (...)* @_ssdm_op_SpecBitsMap(i1* %in_indices_id_V), !map !39
+
+ST_6: stg_63 [1/1] 0.00ns
+:17  call void (...)* @_ssdm_op_SpecBitsMap(i1* %in_indices_dest_V), !map !43
+
+ST_6: stg_64 [1/1] 0.00ns
+:18  call void (...)* @_ssdm_op_SpecBitsMap(i32* %out_correlation_data_V), !map !47
+
+ST_6: stg_65 [1/1] 0.00ns
+:19  call void (...)* @_ssdm_op_SpecBitsMap(i4* %out_correlation_keep_V), !map !53
+
+ST_6: stg_66 [1/1] 0.00ns
+:20  call void (...)* @_ssdm_op_SpecBitsMap(i4* %out_correlation_strb_V), !map !57
+
+ST_6: stg_67 [1/1] 0.00ns
+:21  call void (...)* @_ssdm_op_SpecBitsMap(i1* %out_correlation_user_V), !map !61
+
+ST_6: stg_68 [1/1] 0.00ns
+:22  call void (...)* @_ssdm_op_SpecBitsMap(i1* %out_correlation_last_V), !map !65
+
+ST_6: stg_69 [1/1] 0.00ns
+:23  call void (...)* @_ssdm_op_SpecBitsMap(i1* %out_correlation_id_V), !map !69
+
+ST_6: stg_70 [1/1] 0.00ns
+:24  call void (...)* @_ssdm_op_SpecBitsMap(i1* %out_correlation_dest_V), !map !73
+
+ST_6: stg_71 [1/1] 0.00ns
+:25  call void (...)* @_ssdm_op_SpecTopModule([21 x i8]* @str) nounwind
+
+ST_6: empty [1/1] 0.00ns
+:27  %empty = call i32 (...)* @_ssdm_op_SpecChannel([16 x i8]* @str17, i32 1, [1 x i8]* @str18, [1 x i8]* @str18, i32 2, i32 2, float* %ln_returnA_c1_V, float* %ln_returnA_c1_V)
+
+ST_6: stg_73 [1/1] 0.00ns
+:28  call void (...)* @_ssdm_op_SpecInterface(float* %ln_returnA_c1_V, [8 x i8]* @str19, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @str20, [1 x i8]* @str20, [8 x i8]* @str19)
+
+ST_6: empty_12 [1/1] 0.00ns
+:30  %empty_12 = call i32 (...)* @_ssdm_op_SpecChannel([26 x i8]* @str21, i32 1, [1 x i8]* @str22, [1 x i8]* @str22, i32 2, i32 2, float* %weight_returnSquareA_c1_V, float* %weight_returnSquareA_c1_V)
+
+ST_6: stg_75 [1/1] 0.00ns
+:31  call void (...)* @_ssdm_op_SpecInterface(float* %weight_returnSquareA_c1_V, [8 x i8]* @str23, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @str24, [1 x i8]* @str24, [8 x i8]* @str23)
+
+ST_6: empty_13 [1/1] 0.00ns
+:33  %empty_13 = call i32 (...)* @_ssdm_op_SpecChannel([20 x i8]* @str25, i32 1, [1 x i8]* @str26, [1 x i8]* @str26, i32 2, i32 2, float* %weight_returnA_c1_V, float* %weight_returnA_c1_V)
+
+ST_6: stg_77 [1/1] 0.00ns
+:34  call void (...)* @_ssdm_op_SpecInterface(float* %weight_returnA_c1_V, [8 x i8]* @str27, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @str28, [1 x i8]* @str28, [8 x i8]* @str27)
+
+ST_6: empty_14 [1/1] 0.00ns
+:36  %empty_14 = call i32 (...)* @_ssdm_op_SpecChannel([16 x i8]* @str29, i32 1, [1 x i8]* @str30, [1 x i8]* @str30, i32 2, i32 2, float* %ln_returnA_c2_V, float* %ln_returnA_c2_V)
+
+ST_6: stg_79 [1/1] 0.00ns
+:37  call void (...)* @_ssdm_op_SpecInterface(float* %ln_returnA_c2_V, [8 x i8]* @str31, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @str32, [1 x i8]* @str32, [8 x i8]* @str31)
+
+ST_6: empty_15 [1/1] 0.00ns
+:39  %empty_15 = call i32 (...)* @_ssdm_op_SpecChannel([26 x i8]* @str33, i32 1, [1 x i8]* @str34, [1 x i8]* @str34, i32 2, i32 2, float* %weight_returnSquareA_c2_V, float* %weight_returnSquareA_c2_V)
+
+ST_6: stg_81 [1/1] 0.00ns
+:40  call void (...)* @_ssdm_op_SpecInterface(float* %weight_returnSquareA_c2_V, [8 x i8]* @str35, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @str36, [1 x i8]* @str36, [8 x i8]* @str35)
+
+ST_6: empty_16 [1/1] 0.00ns
+:42  %empty_16 = call i32 (...)* @_ssdm_op_SpecChannel([20 x i8]* @str37, i32 1, [1 x i8]* @str38, [1 x i8]* @str38, i32 2, i32 2, float* %weight_returnA_c2_V, float* %weight_returnA_c2_V)
+
+ST_6: stg_83 [1/1] 0.00ns
+:43  call void (...)* @_ssdm_op_SpecInterface(float* %weight_returnA_c2_V, [8 x i8]* @str39, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @str40, [1 x i8]* @str40, [8 x i8]* @str39)
+
+ST_6: empty_17 [1/1] 0.00ns
+:45  %empty_17 = call i32 (...)* @_ssdm_op_SpecChannel([16 x i8]* @str41, i32 1, [1 x i8]* @str42, [1 x i8]* @str42, i32 2, i32 2, float* %sum_weight_c1_V, float* %sum_weight_c1_V)
+
+ST_6: stg_85 [1/1] 0.00ns
+:46  call void (...)* @_ssdm_op_SpecInterface(float* %sum_weight_c1_V, [8 x i8]* @str43, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @str44, [1 x i8]* @str44, [8 x i8]* @str43)
+
+ST_6: empty_18 [1/1] 0.00ns
+:48  %empty_18 = call i32 (...)* @_ssdm_op_SpecChannel([16 x i8]* @str45, i32 1, [1 x i8]* @str46, [1 x i8]* @str46, i32 2, i32 2, float* %ln_returnB_c1_V, float* %ln_returnB_c1_V)
+
+ST_6: stg_87 [1/1] 0.00ns
+:49  call void (...)* @_ssdm_op_SpecInterface(float* %ln_returnB_c1_V, [8 x i8]* @str47, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @str48, [1 x i8]* @str48, [8 x i8]* @str47)
+
+ST_6: empty_19 [1/1] 0.00ns
+:51  %empty_19 = call i32 (...)* @_ssdm_op_SpecChannel([26 x i8]* @str49, i32 1, [1 x i8]* @str50, [1 x i8]* @str50, i32 2, i32 2, float* %weight_returnSquareB_c1_V, float* %weight_returnSquareB_c1_V)
+
+ST_6: stg_89 [1/1] 0.00ns
+:52  call void (...)* @_ssdm_op_SpecInterface(float* %weight_returnSquareB_c1_V, [8 x i8]* @str51, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @str52, [1 x i8]* @str52, [8 x i8]* @str51)
+
+ST_6: empty_20 [1/1] 0.00ns
+:54  %empty_20 = call i32 (...)* @_ssdm_op_SpecChannel([20 x i8]* @str53, i32 1, [1 x i8]* @str54, [1 x i8]* @str54, i32 2, i32 2, float* %weight_returnB_c1_V, float* %weight_returnB_c1_V)
+
+ST_6: stg_91 [1/1] 0.00ns
+:55  call void (...)* @_ssdm_op_SpecInterface(float* %weight_returnB_c1_V, [8 x i8]* @str55, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @str56, [1 x i8]* @str56, [8 x i8]* @str55)
+
+ST_6: empty_21 [1/1] 0.00ns
+:57  %empty_21 = call i32 (...)* @_ssdm_op_SpecChannel([28 x i8]* @str57, i32 1, [1 x i8]* @str58, [1 x i8]* @str58, i32 2, i32 2, float* %weight_returnA_returnB_c1_V, float* %weight_returnA_returnB_c1_V)
+
+ST_6: stg_93 [1/1] 0.00ns
+:58  call void (...)* @_ssdm_op_SpecInterface(float* %weight_returnA_returnB_c1_V, [8 x i8]* @str59, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @str60, [1 x i8]* @str60, [8 x i8]* @str59)
+
+ST_6: empty_22 [1/1] 0.00ns
+:60  %empty_22 = call i32 (...)* @_ssdm_op_SpecChannel([16 x i8]* @str61, i32 1, [1 x i8]* @str62, [1 x i8]* @str62, i32 2, i32 2, float* %sum_weight_c2_V, float* %sum_weight_c2_V)
+
+ST_6: stg_95 [1/1] 0.00ns
+:61  call void (...)* @_ssdm_op_SpecInterface(float* %sum_weight_c2_V, [8 x i8]* @str63, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @str64, [1 x i8]* @str64, [8 x i8]* @str63)
+
+ST_6: empty_23 [1/1] 0.00ns
+:63  %empty_23 = call i32 (...)* @_ssdm_op_SpecChannel([16 x i8]* @str65, i32 1, [1 x i8]* @str66, [1 x i8]* @str66, i32 2, i32 2, float* %ln_returnB_c2_V, float* %ln_returnB_c2_V)
+
+ST_6: stg_97 [1/1] 0.00ns
+:64  call void (...)* @_ssdm_op_SpecInterface(float* %ln_returnB_c2_V, [8 x i8]* @str67, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @str68, [1 x i8]* @str68, [8 x i8]* @str67)
+
+ST_6: empty_24 [1/1] 0.00ns
+:66  %empty_24 = call i32 (...)* @_ssdm_op_SpecChannel([26 x i8]* @str69, i32 1, [1 x i8]* @str70, [1 x i8]* @str70, i32 2, i32 2, float* %weight_returnSquareB_c2_V, float* %weight_returnSquareB_c2_V)
+
+ST_6: stg_99 [1/1] 0.00ns
+:67  call void (...)* @_ssdm_op_SpecInterface(float* %weight_returnSquareB_c2_V, [8 x i8]* @str71, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @str72, [1 x i8]* @str72, [8 x i8]* @str71)
+
+ST_6: empty_25 [1/1] 0.00ns
+:69  %empty_25 = call i32 (...)* @_ssdm_op_SpecChannel([20 x i8]* @str73, i32 1, [1 x i8]* @str74, [1 x i8]* @str74, i32 2, i32 2, float* %weight_returnB_c2_V, float* %weight_returnB_c2_V)
+
+ST_6: stg_101 [1/1] 0.00ns
+:70  call void (...)* @_ssdm_op_SpecInterface(float* %weight_returnB_c2_V, [8 x i8]* @str75, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @str76, [1 x i8]* @str76, [8 x i8]* @str75)
+
+ST_6: empty_26 [1/1] 0.00ns
+:72  %empty_26 = call i32 (...)* @_ssdm_op_SpecChannel([28 x i8]* @str77, i32 1, [1 x i8]* @str78, [1 x i8]* @str78, i32 2, i32 2, float* %weight_returnA_returnB_c2_V, float* %weight_returnA_returnB_c2_V)
+
+ST_6: stg_103 [1/1] 0.00ns
+:73  call void (...)* @_ssdm_op_SpecInterface(float* %weight_returnA_returnB_c2_V, [8 x i8]* @str79, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @str80, [1 x i8]* @str80, [8 x i8]* @str79)
+
+ST_6: empty_27 [1/1] 0.00ns
+:75  %empty_27 = call i32 (...)* @_ssdm_op_SpecChannel([23 x i8]* @str81, i32 1, [1 x i8]* @str82, [1 x i8]* @str82, i32 2, i32 2, float* %sum_weight_stage2_c1_V, float* %sum_weight_stage2_c1_V)
+
+ST_6: stg_105 [1/1] 0.00ns
+:76  call void (...)* @_ssdm_op_SpecInterface(float* %sum_weight_stage2_c1_V, [8 x i8]* @str83, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @str84, [1 x i8]* @str84, [8 x i8]* @str83)
+
+ST_6: empty_28 [1/1] 0.00ns
+:78  %empty_28 = call i32 (...)* @_ssdm_op_SpecChannel([23 x i8]* @str85, i32 1, [1 x i8]* @str86, [1 x i8]* @str86, i32 2, i32 2, float* %sum_return_stage2_c1_V, float* %sum_return_stage2_c1_V)
+
+ST_6: stg_107 [1/1] 0.00ns
+:79  call void (...)* @_ssdm_op_SpecInterface(float* %sum_return_stage2_c1_V, [8 x i8]* @str87, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @str88, [1 x i8]* @str88, [8 x i8]* @str87)
+
+ST_6: empty_29 [1/1] 0.00ns
+:81  %empty_29 = call i32 (...)* @_ssdm_op_SpecChannel([36 x i8]* @str89, i32 1, [1 x i8]* @str90, [1 x i8]* @str90, i32 2, i32 2, float* %sum_weight_returnSquare_stage2, float* %sum_weight_returnSquare_stage2)
+
+ST_6: stg_109 [1/1] 0.00ns
+:82  call void (...)* @_ssdm_op_SpecInterface(float* %sum_weight_returnSquare_stage2, [8 x i8]* @str91, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @str92, [1 x i8]* @str92, [8 x i8]* @str91)
+
+ST_6: empty_30 [1/1] 0.00ns
+:84  %empty_30 = call i32 (...)* @_ssdm_op_SpecChannel([30 x i8]* @str93, i32 1, [1 x i8]* @str94, [1 x i8]* @str94, i32 2, i32 2, float* %sum_weight_return_stage2_c1_V, float* %sum_weight_return_stage2_c1_V)
+
+ST_6: stg_111 [1/1] 0.00ns
+:85  call void (...)* @_ssdm_op_SpecInterface(float* %sum_weight_return_stage2_c1_V, [8 x i8]* @str95, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @str96, [1 x i8]* @str96, [8 x i8]* @str95)
+
+ST_6: empty_31 [1/1] 0.00ns
+:87  %empty_31 = call i32 (...)* @_ssdm_op_SpecChannel([39 x i8]* @str97, i32 1, [1 x i8]* @str98, [1 x i8]* @str98, i32 2, i32 2, float* %sum_weight_returnA_returnB_sta, float* %sum_weight_returnA_returnB_sta)
+
+ST_6: stg_113 [1/1] 0.00ns
+:88  call void (...)* @_ssdm_op_SpecInterface(float* %sum_weight_returnA_returnB_sta, [8 x i8]* @str99, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @str100, [1 x i8]* @str100, [8 x i8]* @str99)
+
+ST_6: empty_32 [1/1] 0.00ns
+:90  %empty_32 = call i32 (...)* @_ssdm_op_SpecChannel([24 x i8]* @str101, i32 1, [1 x i8]* @str102, [1 x i8]* @str102, i32 2, i32 2, float* %sum_returnA_stage2_c1_V, float* %sum_returnA_stage2_c1_V)
+
+ST_6: stg_115 [1/1] 0.00ns
+:91  call void (...)* @_ssdm_op_SpecInterface(float* %sum_returnA_stage2_c1_V, [8 x i8]* @str103, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @str104, [1 x i8]* @str104, [8 x i8]* @str103)
+
+ST_6: empty_33 [1/1] 0.00ns
+:93  %empty_33 = call i32 (...)* @_ssdm_op_SpecChannel([37 x i8]* @str105, i32 1, [1 x i8]* @str106, [1 x i8]* @str106, i32 2, i32 2, float* %sum_weight_returnSquareA_stage, float* %sum_weight_returnSquareA_stage)
+
+ST_6: stg_117 [1/1] 0.00ns
+:94  call void (...)* @_ssdm_op_SpecInterface(float* %sum_weight_returnSquareA_stage, [8 x i8]* @str107, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @str108, [1 x i8]* @str108, [8 x i8]* @str107)
+
+ST_6: empty_34 [1/1] 0.00ns
+:96  %empty_34 = call i32 (...)* @_ssdm_op_SpecChannel([31 x i8]* @str109, i32 1, [1 x i8]* @str110, [1 x i8]* @str110, i32 2, i32 2, float* %sum_weight_returnA_stage2_c1_V, float* %sum_weight_returnA_stage2_c1_V)
+
+ST_6: stg_119 [1/1] 0.00ns
+:97  call void (...)* @_ssdm_op_SpecInterface(float* %sum_weight_returnA_stage2_c1_V, [8 x i8]* @str111, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @str112, [1 x i8]* @str112, [8 x i8]* @str111)
+
+ST_6: empty_35 [1/1] 0.00ns
+:99  %empty_35 = call i32 (...)* @_ssdm_op_SpecChannel([23 x i8]* @str113, i32 1, [1 x i8]* @str114, [1 x i8]* @str114, i32 2, i32 2, float* %sum_weight_stage2_c2_V, float* %sum_weight_stage2_c2_V)
+
+ST_6: stg_121 [1/1] 0.00ns
+:100  call void (...)* @_ssdm_op_SpecInterface(float* %sum_weight_stage2_c2_V, [8 x i8]* @str115, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @str116, [1 x i8]* @str116, [8 x i8]* @str115)
+
+ST_6: empty_36 [1/1] 0.00ns
+:102  %empty_36 = call i32 (...)* @_ssdm_op_SpecChannel([23 x i8]* @str117, i32 1, [1 x i8]* @str118, [1 x i8]* @str118, i32 2, i32 2, float* %sum_return_stage2_c2_V, float* %sum_return_stage2_c2_V)
+
+ST_6: stg_123 [1/1] 0.00ns
+:103  call void (...)* @_ssdm_op_SpecInterface(float* %sum_return_stage2_c2_V, [8 x i8]* @str119, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @str120, [1 x i8]* @str120, [8 x i8]* @str119)
+
+ST_6: empty_37 [1/1] 0.00ns
+:105  %empty_37 = call i32 (...)* @_ssdm_op_SpecChannel([36 x i8]* @str121, i32 1, [1 x i8]* @str122, [1 x i8]* @str122, i32 2, i32 2, float* %sum_weight_returnSquare_stage2_1, float* %sum_weight_returnSquare_stage2_1)
+
+ST_6: stg_125 [1/1] 0.00ns
+:106  call void (...)* @_ssdm_op_SpecInterface(float* %sum_weight_returnSquare_stage2_1, [8 x i8]* @str123, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @str124, [1 x i8]* @str124, [8 x i8]* @str123)
+
+ST_6: empty_38 [1/1] 0.00ns
+:108  %empty_38 = call i32 (...)* @_ssdm_op_SpecChannel([30 x i8]* @str125, i32 1, [1 x i8]* @str126, [1 x i8]* @str126, i32 2, i32 2, float* %sum_weight_return_stage2_c2_V, float* %sum_weight_return_stage2_c2_V)
+
+ST_6: stg_127 [1/1] 0.00ns
+:109  call void (...)* @_ssdm_op_SpecInterface(float* %sum_weight_return_stage2_c2_V, [8 x i8]* @str127, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @str128, [1 x i8]* @str128, [8 x i8]* @str127)
+
+ST_6: empty_39 [1/1] 0.00ns
+:111  %empty_39 = call i32 (...)* @_ssdm_op_SpecChannel([39 x i8]* @str129, i32 1, [1 x i8]* @str130, [1 x i8]* @str130, i32 2, i32 2, float* %sum_weight_returnA_returnB_sta_1, float* %sum_weight_returnA_returnB_sta_1)
+
+ST_6: stg_129 [1/1] 0.00ns
+:112  call void (...)* @_ssdm_op_SpecInterface(float* %sum_weight_returnA_returnB_sta_1, [8 x i8]* @str131, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @str132, [1 x i8]* @str132, [8 x i8]* @str131)
+
+ST_6: empty_40 [1/1] 0.00ns
+:114  %empty_40 = call i32 (...)* @_ssdm_op_SpecChannel([24 x i8]* @str133, i32 1, [1 x i8]* @str134, [1 x i8]* @str134, i32 2, i32 2, float* %sum_returnA_stage2_c2_V, float* %sum_returnA_stage2_c2_V)
+
+ST_6: stg_131 [1/1] 0.00ns
+:115  call void (...)* @_ssdm_op_SpecInterface(float* %sum_returnA_stage2_c2_V, [8 x i8]* @str135, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @str136, [1 x i8]* @str136, [8 x i8]* @str135)
+
+ST_6: empty_41 [1/1] 0.00ns
+:117  %empty_41 = call i32 (...)* @_ssdm_op_SpecChannel([37 x i8]* @str137, i32 1, [1 x i8]* @str138, [1 x i8]* @str138, i32 2, i32 2, float* %sum_weight_returnSquareA_stage_1, float* %sum_weight_returnSquareA_stage_1)
+
+ST_6: stg_133 [1/1] 0.00ns
+:118  call void (...)* @_ssdm_op_SpecInterface(float* %sum_weight_returnSquareA_stage_1, [8 x i8]* @str139, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @str140, [1 x i8]* @str140, [8 x i8]* @str139)
+
+ST_6: empty_42 [1/1] 0.00ns
+:120  %empty_42 = call i32 (...)* @_ssdm_op_SpecChannel([31 x i8]* @str141, i32 1, [1 x i8]* @str142, [1 x i8]* @str142, i32 2, i32 2, float* %sum_weight_returnA_stage2_c2_V, float* %sum_weight_returnA_stage2_c2_V)
+
+ST_6: stg_135 [1/1] 0.00ns
+:121  call void (...)* @_ssdm_op_SpecInterface(float* %sum_weight_returnA_stage2_c2_V, [8 x i8]* @str143, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @str144, [1 x i8]* @str144, [8 x i8]* @str143)
+
+ST_6: stg_136 [1/1] 0.00ns
+:122  call void (...)* @_ssdm_op_SpecLatency(i32 1, i32 65535, [1 x i8]* @p_str) nounwind
+
+ST_6: stg_137 [1/1] 0.00ns
+:123  call void (...)* @_ssdm_op_SpecInterface(i32* %out_correlation_data_V, i4* %out_correlation_keep_V, i4* %out_correlation_strb_V, i1* %out_correlation_user_V, i1* %out_correlation_last_V, i1* %out_correlation_id_V, i1* %out_correlation_dest_V, [5 x i8]* @p_str1, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str)
+
+ST_6: stg_138 [1/1] 0.00ns
+:124  call void (...)* @_ssdm_op_SpecInterface(i32* %in_indices_data_V, i4* %in_indices_keep_V, i4* %in_indices_strb_V, i1* %in_indices_user_V, i1* %in_indices_last_V, i1* %in_indices_id_V, i1* %in_indices_dest_V, [5 x i8]* @p_str1, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str)
+
+ST_6: stg_139 [1/1] 0.00ns
+:125  call void (...)* @_ssdm_op_SpecInterface(i32 0, [11 x i8]* @p_str2, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str) nounwind
+
+ST_6: empty_43 [1/1] 0.00ns
+:127  %empty_43 = call i32 (...)* @_ssdm_op_SpecChannel([25 x i8]* @str166, i32 1, [1 x i8]* @str167, [1 x i8]* @str167, i32 1, i32 0, i32* %number_of_days15_channel, i32* %number_of_days15_channel)
+
+ST_6: stg_141 [1/1] 0.00ns
+:128  call void (...)* @_ssdm_op_SpecInterface(i32* %number_of_days15_channel, [8 x i8]* @str168, i32 0, i32 0, i32 0, i32 0, [8 x i8]* @str168, [8 x i8]* @str168, [8 x i8]* @str168)
+
+ST_6: empty_44 [1/1] 0.00ns
+:129  %empty_44 = call i32 (...)* @_ssdm_op_SpecChannel([28 x i8]* @str172, i32 1, [1 x i8]* @str173, [1 x i8]* @str173, i32 1, i32 0, i32* %number_of_indices17_channel, i32* %number_of_indices17_channel)
+
+ST_6: stg_143 [1/1] 0.00ns
+:130  call void (...)* @_ssdm_op_SpecInterface(i32* %number_of_indices17_channel, [8 x i8]* @str174, i32 0, i32 0, i32 0, i32 0, [8 x i8]* @str174, [8 x i8]* @str174, [8 x i8]* @str174)
+
+ST_6: empty_45 [1/1] 0.00ns
+:132  %empty_45 = call i32 (...)* @_ssdm_op_SpecChannel([25 x i8]* @str169, i32 1, [1 x i8]* @str170, [1 x i8]* @str170, i32 1, i32 0, i32* %number_of_days16_channel, i32* %number_of_days16_channel)
+
+ST_6: stg_145 [1/1] 0.00ns
+:133  call void (...)* @_ssdm_op_SpecInterface(i32* %number_of_days16_channel, [8 x i8]* @str171, i32 0, i32 0, i32 0, i32 0, [8 x i8]* @str171, [8 x i8]* @str171, [8 x i8]* @str171)
+
+ST_6: empty_46 [1/1] 0.00ns
+:134  %empty_46 = call i32 (...)* @_ssdm_op_SpecChannel([28 x i8]* @str175, i32 1, [1 x i8]* @str176, [1 x i8]* @str176, i32 1, i32 0, i32* %number_of_indices18_channel, i32* %number_of_indices18_channel)
+
+ST_6: stg_147 [1/1] 0.00ns
+:135  call void (...)* @_ssdm_op_SpecInterface(i32* %number_of_indices18_channel, [8 x i8]* @str177, i32 0, i32 0, i32 0, i32 0, [8 x i8]* @str177, [8 x i8]* @str177, [8 x i8]* @str177)
+
+ST_6: empty_47 [1/1] 0.00ns
+:137  %empty_47 = call i32 (...)* @_ssdm_op_SpecChannel([25 x i8]* @str178, i32 1, [1 x i8]* @str179, [1 x i8]* @str179, i32 1, i32 0, i32* %number_of_days19_channel, i32* %number_of_days19_channel)
+
+ST_6: stg_149 [1/1] 0.00ns
+:138  call void (...)* @_ssdm_op_SpecInterface(i32* %number_of_days19_channel, [8 x i8]* @str180, i32 0, i32 0, i32 0, i32 0, [8 x i8]* @str180, [8 x i8]* @str180, [8 x i8]* @str180)
+
+ST_6: empty_48 [1/1] 0.00ns
+:139  %empty_48 = call i32 (...)* @_ssdm_op_SpecChannel([28 x i8]* @str181, i32 1, [1 x i8]* @str182, [1 x i8]* @str182, i32 1, i32 0, i32* %number_of_indices20_channel, i32* %number_of_indices20_channel)
+
+ST_6: stg_151 [1/1] 0.00ns
+:140  call void (...)* @_ssdm_op_SpecInterface(i32* %number_of_indices20_channel, [8 x i8]* @str183, i32 0, i32 0, i32 0, i32 0, [8 x i8]* @str183, [8 x i8]* @str183, [8 x i8]* @str183)
+
+ST_6: stg_152 [1/2] 6.08ns
+:141  call fastcc void @correlation_accel_v4_backEnd(i32* %number_of_days19_channel, i32* %number_of_indices20_channel, float* %sum_weight_stage2_c1_V, float* %sum_return_stage2_c1_V, float* %sum_weight_returnSquare_stage2, float* %sum_weight_return_stage2_c1_V, float* %sum_weight_returnA_returnB_sta, float* %sum_returnA_stage2_c1_V, float* %sum_weight_returnSquareA_stage, float* %sum_weight_returnA_stage2_c1_V, float* %sum_weight_stage2_c2_V, float* %sum_return_stage2_c2_V, float* %sum_weight_returnSquare_stage2_1, float* %sum_weight_return_stage2_c2_V, float* %sum_weight_returnA_returnB_sta_1, float* %sum_returnA_stage2_c2_V, float* %sum_weight_returnSquareA_stage_1, float* %sum_weight_returnA_stage2_c2_V, i32* %out_correlation_data_V, i4* %out_correlation_keep_V, i4* %out_correlation_strb_V, i1* %out_correlation_user_V, i1* %out_correlation_last_V, i1* %out_correlation_id_V, i1* %out_correlation_dest_V)
+
+ST_6: stg_153 [1/1] 0.00ns
+:142  ret void
+
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A
